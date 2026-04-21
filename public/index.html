@@ -684,6 +684,170 @@
   .saved-indicator.visible { opacity: 1; }
 
   .hidden { display: none !important; }
+
+  /* ---------- Profile button + modal + variants ---------- */
+  .profile-btn {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .profile-btn:hover { background: var(--surface-2); }
+  .profile-btn .role-pill {
+    background: var(--surface-2);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 1px 8px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .profile-btn.profile-set .role-pill {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  #profile-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    overflow-y: auto;
+  }
+  #profile-modal[hidden] { display: none; }
+  #profile-modal .profile-box {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-width: 540px;
+    width: 100%;
+    padding: 28px 28px 22px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  #profile-modal h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  #profile-modal .profile-intro {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  #profile-modal .pf-group { margin-bottom: 18px; }
+  #profile-modal .pf-group > .pf-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  #profile-modal .pf-hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 6px 0 0;
+  }
+  #profile-modal .pf-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  #profile-modal .pf-option {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 13px;
+    font-size: 13px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    user-select: none;
+  }
+  #profile-modal .pf-option:hover { background: var(--surface-2); }
+  #profile-modal .pf-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #profile-modal .pf-option.checked {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+  #profile-modal input[type="text"] {
+    width: 100%;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  #profile-modal input[type="text"]:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 1px;
+  }
+  #profile-modal .pf-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 14px;
+  }
+  #profile-modal .pf-actions .pf-clear {
+    margin-right: auto;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 0;
+    text-decoration: underline;
+  }
+  #profile-modal button.pf-btn {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  #profile-modal button.pf-btn:hover { background: var(--surface-2); }
+  #profile-modal button.pf-btn.primary {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+  #profile-modal button.pf-btn.primary:hover { opacity: 0.9; }
+
+  /* Variant actions — hidden by default; client-side filter reveals the matching one. */
+  .action[data-variant] { display: none; }
+  .action[data-variant].variant-active { display: block; }
+
   .empty-state {
     padding: 48px 24px;
     text-align: center;
@@ -869,6 +1033,9 @@
   <button id="jump-btn" type="button" aria-expanded="false" aria-controls="jump-panel">
     Jump to<span class="caret">▾</span>
   </button>
+  <button id="profile-btn" type="button" class="profile-btn" aria-haspopup="dialog" aria-controls="profile-modal">
+    Your profile<span class="role-pill" id="profile-role-label">set up</span>
+  </button>
   <button id="reset-btn" type="button">Reset</button>
 </div>
 <div id="jump-panel" class="jump-panel" role="region" aria-label="Jump to day or category" hidden>
@@ -1026,13 +1193,31 @@
           <p class="summary">Canva rolled out Canva AI 2.0 as a research preview on April 16, rebuilding its platform around conversational design, agentic orchestration, and object-level edits. The bigger story is the Connectors layer — the assistant now reads Slack, Notion, Zoom, Gmail, Google Drive, and Calendar to pull emails, transcripts, and meetings into briefs, decks, and newsletters. Canva also shipped a scheduling feature that runs design tasks in the background, Brand Intelligence for automatic brand application, Sheets AI, and Canva Code 2.0 with HTML import.</p>
           <p class="why"><strong>Why this matters for you:</strong> this is a real end-to-end agentic design surface — connectors plus scheduling means Canva can watch a channel and produce a deck on a cadence. Even if your team lives in Figma, it's worth stress-testing Canva AI 2.0 on a recurring visual job (social assets from a weekly brief, for example). The connectors pattern is also what every serious design tool will look like by year-end.</p>
           <p class="source"><a href="https://www.canva.com/newsroom/news/canva-create-2026-ai/" target="_blank" rel="noopener">Source — Canva Newsroom</a></p>
-          <section class="action" data-skills="agent-orchestration,automation" data-time="90">
-            <h6 class="action-title">Try this — 90 min</h6>
-            <p class="action-text">Pick one recurring visual job your team does weekly (social posts from a digest, a status deck, an internal newsletter). Wire up Canva AI 2.0 with the Slack + Drive connectors and automate it end to end. Time the first run, then bring the workflow to your next team meeting as a 3-minute live demo. If you can't automate it, write down exactly where the tool broke — those are your team's genuine design bottlenecks.</p>
+          <section class="action" data-variant="ic-designer" data-skills="agent-orchestration,automation" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one recurring visual job on {focus} your team does weekly — a status post, a release note, a social asset. Wire up Canva AI 2.0 with the Slack + Drive connectors and automate it end to end. Time the first run, then at your next stand-up demo it in three minutes. If you can't automate it, write down exactly where the tool broke — those are your team's genuine design bottlenecks, not tool gaps.</p>
             <div class="action-meta">
               <span class="skill-chip">Agent orchestration</span>
               <span class="skill-chip">Automation</span>
-              <span class="time-chip">~90 min</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Map the three or four recurring production-design jobs your team does weekly — status decks, social, newsletters, release notes. For each, mark whether Canva AI 2.0's connectors could absorb it in principle. Share the map in your next 1:1s and ask each designer: "If this went agentic, what's the designerly thing you'd spend the freed time on?" Write up the answers as a one-pager and bring it to your next product review. That's your team's craft charter for the agentic era.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo to your head of product arguing whether {domain} teams should invest in a Canva AI 2.0 + Slack + Drive pipeline for {focus}-adjacent work. Name three jobs it could absorb and one it shouldn't. If the case is "not yet," say what specifically needs to be true before it is. Brevity and a clear recommendation matter more than comprehensiveness — the memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
             </div>
           </section>
         </article>
@@ -1293,6 +1478,56 @@
 
 <!-- ARCHIVE_END -->
 
+<div id="profile-modal" hidden role="dialog" aria-modal="true" aria-labelledby="profile-modal-title">
+  <div class="profile-box">
+    <h2 id="profile-modal-title">Make this briefing yours</h2>
+    <p class="profile-intro">Each entry has three framings of the "Try this" exercise. Tell us who you are and you'll see the one that fits your work. You can change this anytime.</p>
+    <form id="profile-form" autocomplete="off">
+      <div class="pf-group">
+        <span class="pf-label">What's your role?</span>
+        <div class="pf-options" data-field="role">
+          <label class="pf-option"><input type="radio" name="role" value="ic-designer"><span>IC designer</span></label>
+          <label class="pf-option"><input type="radio" name="role" value="design-lead"><span>Design lead</span></label>
+          <label class="pf-option"><input type="radio" name="role" value="strategist"><span>Strategist / PM</span></label>
+        </div>
+      </div>
+      <div class="pf-group">
+        <span class="pf-label">Seniority</span>
+        <div class="pf-options" data-field="seniority">
+          <label class="pf-option"><input type="radio" name="seniority" value="junior"><span>Junior</span></label>
+          <label class="pf-option"><input type="radio" name="seniority" value="mid"><span>Mid</span></label>
+          <label class="pf-option"><input type="radio" name="seniority" value="senior"><span>Senior</span></label>
+          <label class="pf-option"><input type="radio" name="seniority" value="lead"><span>Lead</span></label>
+        </div>
+      </div>
+      <div class="pf-group">
+        <span class="pf-label">Where do you work?</span>
+        <div class="pf-options" data-field="domain">
+          <label class="pf-option"><input type="radio" name="domain" value="consumer"><span>Consumer</span></label>
+          <label class="pf-option"><input type="radio" name="domain" value="b2b-saas"><span>B2B SaaS</span></label>
+          <label class="pf-option"><input type="radio" name="domain" value="enterprise"><span>Enterprise</span></label>
+          <label class="pf-option"><input type="radio" name="domain" value="agency"><span>Agency</span></label>
+        </div>
+      </div>
+      <div class="pf-group">
+        <label class="pf-label" for="pf-stack">Primary stack</label>
+        <input type="text" id="pf-stack" name="stack" placeholder="e.g. Figma, Linear, Notion">
+        <p class="pf-hint">Tools you use most. Comma-separated.</p>
+      </div>
+      <div class="pf-group">
+        <label class="pf-label" for="pf-focus">Current focus area</label>
+        <input type="text" id="pf-focus" name="focus" placeholder="e.g. onboarding, dashboards, design systems">
+        <p class="pf-hint">One thing you're working on right now. Gets dropped into exercises.</p>
+      </div>
+      <div class="pf-actions">
+        <button type="button" class="pf-clear" id="pf-clear">Clear profile</button>
+        <button type="button" class="pf-btn" id="pf-skip">Skip for now</button>
+        <button type="submit" class="pf-btn primary" id="pf-save">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <div class="empty-state hidden" id="empty-state">
   No entries match your filters. Try clearing them.
 </div>
@@ -1358,8 +1593,14 @@
   function initEntry(article) {
     var id = article.getAttribute('data-id');
     if (!id) return;
-    var action = article.querySelector('.action');
-    if (!action) return;
+    var actions = article.querySelectorAll('.action');
+    if (!actions.length) return;
+
+    // Multi-variant entries attach controls at the article level so the
+    // controls stay visible when a non-matching variant is hidden. Legacy
+    // single-action entries keep the old behavior (controls inside the block).
+    var hasVariants = article.querySelector('.action[data-variant]') !== null;
+    var controlsHost = hasVariants ? article : actions[0];
 
     // Build controls
     var controls = document.createElement('div');
@@ -1373,13 +1614,13 @@
       btn.addEventListener('click', function() { setStatus(id, s); });
       controls.appendChild(btn);
     });
-    action.appendChild(controls);
+    controlsHost.appendChild(controls);
 
     // Reflection
     var label = document.createElement('div');
     label.className = 'reflection-label';
     label.innerHTML = 'Reflection <span class="saved-indicator">Saved</span>';
-    action.appendChild(label);
+    controlsHost.appendChild(label);
     var ta = document.createElement('textarea');
     ta.className = 'reflection';
     ta.placeholder = 'What did you learn? What worked, what didn\'t? (saved automatically)';
@@ -1396,7 +1637,7 @@
         setTimeout(function() { ind.classList.remove('visible'); }, 1200);
       }, 400);
     });
-    action.appendChild(ta);
+    controlsHost.appendChild(ta);
 
     renderEntryStatus(article);
   }
@@ -1439,7 +1680,10 @@
       var id = a.getAttribute('data-id');
       var s = (state[id] && state[id].status) || 'todo';
       counts[s]++;
-      var skills = (a.querySelector('.action') && a.querySelector('.action').getAttribute('data-skills') || '').split(',').filter(Boolean);
+      // Read skills from the active variant if the entry has variants, else the
+      // first (legacy single-action) block.
+      var actionEl = a.querySelector('.action.variant-active') || a.querySelector('.action');
+      var skills = (actionEl && actionEl.getAttribute('data-skills') || '').split(',').filter(Boolean);
       skills.forEach(function(skill) {
         if (!skillProgress[skill]) skillProgress[skill] = { tried: 0, done: 0 };
         if (s === 'trying' || s === 'done') skillProgress[skill].tried++;
@@ -1460,7 +1704,9 @@
     });
     if (tryingEntry) {
       var headline = tryingEntry.querySelector('.headline').textContent;
-      var action = tryingEntry.querySelector('.action-text').textContent;
+      var activeActionText = tryingEntry.querySelector('.action.variant-active .action-text') ||
+                              tryingEntry.querySelector('.action-text');
+      var action = activeActionText ? activeActionText.textContent : '';
       focusText.innerHTML = 'You\'re working on <strong>' + escapeHtml(headline) + '</strong>. ' + escapeHtml(action.substring(0, 140)) + (action.length > 140 ? '…' : '');
     } else {
       // Suggest next based on skills with least progress
@@ -1768,16 +2014,228 @@
     el.addEventListener('change', maybeRefreshJump);
   });
 
+  // --- Profile (first-visit personalization) ---------------------------
+  var PROFILE_KEY = 'whetstone.profile.v1';
+  function loadProfile() {
+    if (!storageAvailable) return null;
+    try {
+      var raw = localStorage.getItem(PROFILE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+  function saveProfile(p) {
+    if (!storageAvailable) return;
+    try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) {}
+  }
+  function clearProfile() {
+    if (!storageAvailable) return;
+    try { localStorage.removeItem(PROFILE_KEY); } catch (e) {}
+  }
+
+  var profile = loadProfile();
+
+  var DOMAIN_PHRASES = {
+    'consumer': 'consumer',
+    'b2b-saas': 'B2B SaaS',
+    'enterprise': 'enterprise',
+    'agency': 'agency work'
+  };
+  var ROLE_SHORT = {
+    'ic-designer': 'IC',
+    'design-lead': 'Lead',
+    'strategist': 'Strategist'
+  };
+
+  function substituteTokens(text) {
+    if (!text) return text;
+    var hasProfile = profile && (profile.role || profile.domain || profile.focus || profile.stack);
+    var domain = (profile && profile.domain && DOMAIN_PHRASES[profile.domain]) || 'your';
+    var focus = (profile && profile.focus && profile.focus.trim()) || 'a current project';
+    var stack = (profile && profile.stack && profile.stack.trim()) || 'your main tool';
+    return text
+      .replace(/\{domain\}/g, domain)
+      .replace(/\{focus\}/g, focus)
+      .replace(/\{stack\}/g, stack);
+  }
+
+  function applyVariantFilter() {
+    var role = (profile && profile.role) || null;
+    document.querySelectorAll('article.entry').forEach(function(article) {
+      var variants = article.querySelectorAll('.action[data-variant]');
+      if (!variants.length) return; // Legacy single-action entry.
+      variants.forEach(function(v) { v.classList.remove('variant-active'); });
+      var matched = null;
+      variants.forEach(function(v) {
+        if (v.getAttribute('data-variant') === role) matched = v;
+      });
+      if (!matched) {
+        // Fallback: prefer ic-designer, else the first variant.
+        for (var i = 0; i < variants.length; i++) {
+          if (variants[i].getAttribute('data-variant') === 'ic-designer') { matched = variants[i]; break; }
+        }
+        if (!matched) matched = variants[0];
+      }
+      matched.classList.add('variant-active');
+    });
+  }
+
+  function applyTemplateSubstitution() {
+    document.querySelectorAll('.action-text').forEach(function(el) {
+      var original = el.getAttribute('data-template');
+      if (original === null) {
+        original = el.textContent;
+        el.setAttribute('data-template', original);
+      }
+      el.textContent = substituteTokens(original);
+    });
+  }
+
+  function updateProfileButton() {
+    var btn = document.getElementById('profile-btn');
+    var pill = document.getElementById('profile-role-label');
+    if (!btn || !pill) return;
+    if (profile && profile.role) {
+      pill.textContent = ROLE_SHORT[profile.role] || profile.role;
+      btn.classList.add('profile-set');
+    } else {
+      pill.textContent = 'set up';
+      btn.classList.remove('profile-set');
+    }
+  }
+
+  function updateOptionStates() {
+    document.querySelectorAll('#profile-modal .pf-option').forEach(function(label) {
+      var input = label.querySelector('input');
+      if (input) label.classList.toggle('checked', input.checked);
+    });
+  }
+
+  function openProfileModal() {
+    var modal = document.getElementById('profile-modal');
+    if (!modal) return;
+    var form = document.getElementById('profile-form');
+    // Reset then pre-fill.
+    form.reset();
+    if (profile) {
+      ['role', 'seniority', 'domain'].forEach(function(field) {
+        var val = profile[field];
+        if (!val) return;
+        var input = form.querySelector('input[name="' + field + '"][value="' + val + '"]');
+        if (input) input.checked = true;
+      });
+      form.querySelector('#pf-stack').value = profile.stack || '';
+      form.querySelector('#pf-focus').value = profile.focus || '';
+    }
+    updateOptionStates();
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    // Focus the first unchecked role option, or the first input.
+    var firstRole = form.querySelector('input[name="role"]:checked') ||
+                    form.querySelector('input[name="role"]');
+    if (firstRole) firstRole.focus();
+  }
+
+  function closeProfileModal() {
+    var modal = document.getElementById('profile-modal');
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  function wireProfile() {
+    var btn = document.getElementById('profile-btn');
+    if (btn) btn.addEventListener('click', openProfileModal);
+
+    var form = document.getElementById('profile-form');
+    if (form) {
+      form.addEventListener('change', updateOptionStates);
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var fd = new FormData(form);
+        profile = {
+          role: fd.get('role') || null,
+          seniority: fd.get('seniority') || null,
+          domain: fd.get('domain') || null,
+          stack: (fd.get('stack') || '').trim(),
+          focus: (fd.get('focus') || '').trim(),
+          updatedAt: new Date().toISOString()
+        };
+        saveProfile(profile);
+        closeProfileModal();
+        applyVariantFilter();
+        applyTemplateSubstitution();
+        updateProfileButton();
+        renderTracker();
+      });
+    }
+
+    var skip = document.getElementById('pf-skip');
+    if (skip) {
+      skip.addEventListener('click', function() {
+        if (!profile || !profile.role) {
+          profile = { dismissed: true, updatedAt: new Date().toISOString() };
+          saveProfile(profile);
+        }
+        closeProfileModal();
+        updateProfileButton();
+      });
+    }
+
+    var clearBtn = document.getElementById('pf-clear');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function() {
+        if (!confirm('Clear your profile? Exercises will show the default (IC designer) framing.')) return;
+        clearProfile();
+        profile = null;
+        var form = document.getElementById('profile-form');
+        if (form) form.reset();
+        updateOptionStates();
+        closeProfileModal();
+        applyVariantFilter();
+        applyTemplateSubstitution();
+        updateProfileButton();
+        renderTracker();
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var modal = document.getElementById('profile-modal');
+        if (modal && !modal.hidden) closeProfileModal();
+      }
+    });
+
+    var modal = document.getElementById('profile-modal');
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeProfileModal();
+      });
+    }
+  }
+
+  function maybeShowProfileOnFirstVisit() {
+    // Open if never seen and never dismissed — and only if there's at least
+    // one variant entry on the page (no point asking otherwise).
+    if (profile && (profile.role || profile.dismissed)) return;
+    if (!document.querySelector('.action[data-variant]')) return;
+    openProfileModal();
+  }
+
   // --- Init -------------------------------------------------------------
   function initAll() {
     document.querySelectorAll('.day-section').forEach(tagSection);
+    applyVariantFilter();
+    applyTemplateSubstitution();
     document.querySelectorAll('article.entry').forEach(initEntry);
+    updateProfileButton();
     renderTracker();
     applyFilters();
   }
   initAll();
   wireJump();
   wireBackToTop();
+  wireProfile();
+  maybeShowProfileOnFirstVisit();
 })();
 </script>
 </body>
