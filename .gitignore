@@ -1,0 +1,17 @@
+# deps
+node_modules/
+# next
+.next/
+out/
+# env
+.env
+.env.local
+.env.*.local
+# os
+.DS_Store
+# editors
+.vscode/
+.idea/
+# logs
+*.log
+npm-debug.log*

@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Tools Comparison — AI Design and Product Daily</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --surface-2: #f3f1ea;
+    --text: #1a1a1a;
+    --muted: #5f5f5f;
+    --border: #e6e4dd;
+    --accent: #1a1a2e;
+    --link: #3b4b8b;
+    --pros: #2c6b3e;
+    --pros-bg: #eaf6ee;
+    --cons: #8a2e26;
+    --cons-bg: #fbeae8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414;
+      --surface: #1c1c1c;
+      --surface-2: #242424;
+      --text: #f1efe9;
+      --muted: #a0a0a0;
+      --border: #2e2e2e;
+      --accent: #f1efe9;
+      --link: #9ab0ff;
+      --pros: #9cd1ab;
+      --pros-bg: #18311f;
+      --cons: #ef9b92;
+      --cons-bg: #3a1c19;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 96px;
+  }
+  nav.pages {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  nav.pages a {
+    padding: 10px 14px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  nav.pages a.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+  nav.pages a:hover { color: var(--text); }
+
+  header.masthead {
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  header.masthead h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 4px;
+  }
+  header.masthead .tagline {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  /* Filter */
+  .filter-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .filter-bar { grid-template-columns: 2fr 1fr auto; align-items: end; }
+  }
+  .filter-field { display: flex; flex-direction: column; gap: 6px; }
+  .filter-field label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .filter-field input,
+  .filter-field select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  .filter-field input:focus,
+  .filter-field select:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 1px;
+  }
+  #reset-btn {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    height: 36px;
+  }
+  #reset-btn:hover { background: var(--border); }
+  .filter-status {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 24px;
+    min-height: 20px;
+  }
+
+  /* Quick jump */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+  }
+  .toc h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .toc a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid var(--border);
+  }
+  .toc a:hover { background: var(--border); }
+
+  /* Category sections */
+  section.category {
+    margin-bottom: 56px;
+  }
+  section.category > h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    padding-top: 12px;
+  }
+  section.category > .category-summary {
+    color: var(--muted);
+    margin: 0 0 20px;
+    font-size: 14px;
+  }
+
+  /* Tool cards */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  article.tool {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+  }
+  article.tool header {
+    margin-bottom: 12px;
+  }
+  article.tool h3 {
+    margin: 0 0 4px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  article.tool .what {
+    margin: 0 0 14px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  @media (min-width: 640px) {
+    .pros-cons { grid-template-columns: 1fr 1fr; gap: 14px; }
+  }
+  .pros, .cons {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+  .pros {
+    background: var(--pros-bg);
+  }
+  .cons {
+    background: var(--cons-bg);
+  }
+  .pros h4, .cons h4 {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+  .pros h4 { color: var(--pros); }
+  .cons h4 { color: var(--cons); }
+  .pros ul, .cons ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .pros li, .cons li { margin-bottom: 4px; }
+  .pros li:last-child, .cons li:last-child { margin-bottom: 0; }
+
+  .tool-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .tool-meta strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .tool-meta a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .tool-meta a:hover { text-decoration: underline; }
+
+  .hidden { display: none !important; }
+  .empty-state {
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+  }
+
+  footer.site-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 48px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  a { color: var(--link); }
+</style>
+</head>
+<body>
+<main>
+
+<nav class="pages">
+  <a href="/">Daily News</a>
+  <a href="/tools" class="active">Tools Comparison</a>
+</nav>
+
+<header class="masthead">
+  <h1>AI Tools Comparison</h1>
+  <p class="tagline">A working shortlist of AI tools for designers and PMs, with honest pros and cons. Organised by category; last updated April 19, 2026.</p>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-field">
+    <label for="q">Search tools</label>
+    <input type="search" id="q" placeholder="e.g. figma, video, open source, free tier">
+  </div>
+  <div class="filter-field">
+    <label for="cat">Category</label>
+    <select id="cat">
+      <option value="">All categories</option>
+      <option value="prototyping">Prototyping &amp; UI Generation</option>
+      <option value="design-systems">Design Systems</option>
+      <option value="mcps">MCP Servers</option>
+      <option value="image">Image Generation</option>
+      <option value="video">Video Generation</option>
+      <option value="3d">3D Generation</option>
+      <option value="coding">Coding Agents</option>
+      <option value="pm">PM &amp; Product Tools</option>
+      <option value="research">UX Research</option>
+    </select>
+  </div>
+  <button id="reset-btn" type="button">Reset</button>
+</div>
+<p class="filter-status" id="filter-status"></p>
+
+<div class="toc">
+  <h2>Jump to category</h2>
+  <ul>
+    <li><a href="#prototyping">Prototyping &amp; UI</a></li>
+    <li><a href="#design-systems">Design Systems</a></li>
+    <li><a href="#mcps">MCP Servers</a></li>
+    <li><a href="#image">Image Generation</a></li>
+    <li><a href="#video">Video Generation</a></li>
+    <li><a href="#3d">3D Generation</a></li>
+    <li><a href="#coding">Coding Agents</a></li>
+    <li><a href="#pm">PM &amp; Product Tools</a></li>
+    <li><a href="#research">UX Research</a></li>
+  </ul>
+</div>
+
+<!-- ============================== -->
+<!-- Prototyping & UI Generation -->
+<!-- ============================== -->
+<section class="category" data-category="prototyping" id="prototyping">
+  <h2>Prototyping &amp; UI Generation</h2>
+  <p class="category-summary">Take an idea or prompt and get working screens, flows, or front-end code. Each tool sits at a different point on the "vibe to production" spectrum.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="prototyping" data-tags="figma,make,design-tool,anthropic,mcp">
+      <header>
+        <h3>Figma Make</h3>
+        <p class="what">Prompt-driven prototype and mini-app generator built inside Figma, with Make Kits and Make Attachments pulling in real components and context.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Lives inside the file you already work in — no tool-switch tax.</li>
+            <li>Make Kits let you start from your real design system rather than generic output.</li>
+            <li>Agent + MCP support means AI can write back to the canvas, not just suggest.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Output quality still drops off for anything more than landing-page complexity.</li>
+            <li>Plan tiering for Make is confusing; seats and usage caps hit fast on teams.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> designers who want AI inside Figma, not a separate tab</span>
+        <span><strong>Pricing:</strong> Included in Figma paid plans; Make quotas vary</span>
+        <span><a href="https://www.figma.com/ai/" target="_blank" rel="noopener">figma.com/ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="prototyping" data-tags="v0,vercel,react,code,production">
+      <header>
+        <h3>v0 by Vercel (v0.app)</h3>
+        <p class="what">Chat-driven React and Next.js component generator. Rebranded from v0.dev to v0.app in January 2026 as a full-stack development surface.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Output is production-quality React — components integrate with real codebases.</li>
+            <li>Strong at Tailwind + shadcn/ui patterns used across modern front-ends.</li>
+            <li>Tight loop with Vercel deploys and Next.js conventions.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Assumes you know React — not a no-code tool despite the chat interface.</li>
+            <li>Opinionated on stack; swimming against Tailwind or shadcn is painful.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> designers who code, or designers handing off to React teams</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $20/mo</span>
+        <span><a href="https://v0.app" target="_blank" rel="noopener">v0.app</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="prototyping" data-tags="lovable,full-stack,no-code,supabase">
+      <header>
+        <h3>Lovable</h3>
+        <p class="what">Prompt your way to a deployed, full-stack web app with a backend, auth, and database. Reached $20M ARR in two months — fastest growth in European startup history.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Goes from idea to a live, working product without writing code.</li>
+            <li>Includes backend, auth, and database out of the box (Supabase integration).</li>
+            <li>Great for internal tools, MVPs, and founder-mode prototypes.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Output is harder to own and migrate off than v0's plain React.</li>
+            <li>Design polish is generic — you'll need to push styling to match brand.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> non-technical builders shipping working products</span>
+        <span><strong>Pricing:</strong> Free starter + paid from $20/mo</span>
+        <span><a href="https://lovable.dev" target="_blank" rel="noopener">lovable.dev</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="prototyping" data-tags="bolt,stackblitz,speed,mobile">
+      <header>
+        <h3>Bolt.new</h3>
+        <p class="what">Fast prompt-to-app builder from StackBlitz, with particular strength in mobile-first prototypes.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Fastest first result among the "prompt an app" tools.</li>
+            <li>Solid mobile and responsive output.</li>
+            <li>In-browser dev environment — no local setup.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Less opinionated than v0 or Lovable — you'll need to steer the architecture.</li>
+            <li>Iteration on complex apps can get brittle over long sessions.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> rapid prototypes, especially mobile</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $20/mo</span>
+        <span><a href="https://bolt.new" target="_blank" rel="noopener">bolt.new</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="prototyping" data-tags="google,stitch,vibe-design,free,canvas">
+      <header>
+        <h3>Google Stitch (v2)</h3>
+        <p class="what">Google's AI-native infinite canvas with voice input. The closest tool to the "describe a vibe, get a direction" promise.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Free — great for exploratory work before tool commitment.</li>
+            <li>Voice canvas feels native, not bolted on.</li>
+            <li>Genuinely good at early-stage visual exploration when you don't know what you want.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Not built for production-quality output or code.</li>
+            <li>Handoff to Figma or code is still manual.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> 20-minute "vibe passes" at the start of any project</span>
+        <span><strong>Pricing:</strong> Free</span>
+        <span><a href="https://stitch.withgoogle.com" target="_blank" rel="noopener">stitch.withgoogle.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="prototyping" data-tags="claude,anthropic,design,prototyping">
+      <header>
+        <h3>Claude Design (Anthropic)</h3>
+        <p class="what">Visual design surface from Anthropic, launched April 17 2026 on top of Claude Opus 4.7. Generates prototypes, slide decks, and marketing assets from prompts.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Tightly coupled to Claude's reasoning — good at following detailed briefs.</li>
+            <li>Useful for quick stakeholder-facing artefacts (decks, one-pagers) that normally steal design hours.</li>
+            <li>Backed by the 1M-token context window — you can feed it a full brand book.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Brand-new; features and export paths are still rough.</li>
+            <li>Positioned at non-designers — serious designers may find the primitives thin.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> PMs and founders making design without designers</span>
+        <span><strong>Pricing:</strong> Included with Claude paid plans</span>
+        <span><a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="prototyping" data-tags="framer,website,no-code,animation">
+      <header>
+        <h3>Framer AI</h3>
+        <p class="what">Prompt-to-website builder with strong animation and interaction primitives baked in.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best-in-class for marketing sites with polished motion.</li>
+            <li>Direct publish to a real domain, no export step.</li>
+            <li>CMS and localisation built in for content-heavy pages.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Not ideal for apps — strength is in websites.</li>
+            <li>Lock-in risk: exporting to plain code is not Framer's strong suit.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> marketing sites, portfolios, landing pages</span>
+        <span><strong>Pricing:</strong> Free + paid from $5/mo (site) / $20/mo (pro)</span>
+        <span><a href="https://www.framer.com" target="_blank" rel="noopener">framer.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="prototyping" data-tags="magic-patterns,components,shadcn">
+      <header>
+        <h3>Magic Patterns</h3>
+        <p class="what">Generates React + Tailwind UI patterns from prompts with strong component-library coverage.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Good at generating individual components rather than whole apps.</li>
+            <li>Integrates with popular libraries (shadcn, MUI, Chakra).</li>
+            <li>Export to code is cleaner than most.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Smaller team, less polish than v0 or Lovable.</li>
+            <li>Best for component-sized work, not full flows.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> generating individual UI patterns during design</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $20/mo</span>
+        <span><a href="https://www.magicpatterns.com" target="_blank" rel="noopener">magicpatterns.com</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- Design Systems -->
+<!-- ============================== -->
+<section class="category" data-category="design-systems" id="design-systems">
+  <h2>Design Systems</h2>
+  <p class="category-summary">Tools that generate, audit, or extend a design system rather than individual screens. The frontier here is generative tokens and auto-documentation.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="design-systems" data-tags="relume,sitemap,components,webflow">
+      <header>
+        <h3>Relume</h3>
+        <p class="what">AI-generated sitemaps and wireframes that produce ready-to-use components for Webflow, Figma, and Framer.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Huge library of pre-built, accessible components.</li>
+            <li>Goes from brief to full site structure in minutes.</li>
+            <li>Excellent for agency work and client-facing IA proposals.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Aesthetic converges on a "Relume look" if you don't override it.</li>
+            <li>Subscription is on the pricier side for individual designers.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> agencies pitching site structures fast</span>
+        <span><strong>Pricing:</strong> Paid from $30/mo</span>
+        <span><a href="https://www.relume.io" target="_blank" rel="noopener">relume.io</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="design-systems" data-tags="subframe,component-library,react,code">
+      <header>
+        <h3>Subframe</h3>
+        <p class="what">Component design tool that outputs production-ready React and Tailwind, positioned as "Figma for engineers."</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Output is clean React code — not screenshots or traced markup.</li>
+            <li>Tight visual-to-code parity; no design-dev drift.</li>
+            <li>Strong prop and variant model.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Learning curve if you're coming from pure Figma.</li>
+            <li>Smaller ecosystem; fewer plugins and community templates.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> design-system teams shipping React components</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $19/mo</span>
+        <span><a href="https://www.subframe.com" target="_blank" rel="noopener">subframe.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="design-systems" data-tags="figma,design-systems-generator,make">
+      <header>
+        <h3>Figma AI Design Systems Generator</h3>
+        <p class="what">Figma Make's design-system-aware mode — produces tokens, components, and documentation starters from a brand brief.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Generates tokens and components that follow your brand constraints.</li>
+            <li>Saves days of naming and documentation grunt work.</li>
+            <li>Sits inside Figma where your team already works.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Works best starting from scratch — retrofitting an existing system is clunky.</li>
+            <li>Output still needs a human pass for tokenisation discipline.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> new design systems or system audits</span>
+        <span><strong>Pricing:</strong> Included in Figma paid plans</span>
+        <span><a href="https://www.figma.com/solutions/ai-design-systems-generator/" target="_blank" rel="noopener">figma.com/solutions/ai-design-systems-generator</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="design-systems" data-tags="motiff,ai-native,autolayout">
+      <header>
+        <h3>Motiff</h3>
+        <p class="what">AI-native design tool marketed as a Figma alternative, with emphasis on smart auto-layout and component suggestions.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>AI suggestions for spacing, alignment, and component usage are genuinely useful.</li>
+            <li>Free for personal use, lower ceiling for teams.</li>
+            <li>Fast rendering on large files.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Ecosystem is still small — fewer plugins, less community material.</li>
+            <li>Moving an established team off Figma is a real cost.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> small teams willing to try a Figma challenger</span>
+        <span><strong>Pricing:</strong> Free + paid from $8/mo/editor</span>
+        <span><a href="https://motiff.com" target="_blank" rel="noopener">motiff.com</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- MCP Servers -->
+<!-- ============================== -->
+<section class="category" data-category="mcps" id="mcps">
+  <h2>MCP Servers</h2>
+  <p class="category-summary">Model Context Protocol servers expose tool-specific data and actions to AI assistants. A good MCP is the difference between an AI that guesses and one that works with your actual files and systems.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="mcps" data-tags="figma,mcp,dev-mode,tokens">
+      <header>
+        <h3>Figma MCP (official)</h3>
+        <p class="what">Exposes live Figma selection structure — hierarchy, auto-layout, variants, text styles, spacing tokens, component references — to any MCP-compatible AI.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Turns design handoff from screenshot-guessing into structured code generation.</li>
+            <li>AI can read and now write back to files through agent mode.</li>
+            <li>Maintained by Figma — updates track platform changes.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Requires Dev Mode seats for full capability.</li>
+            <li>Performance on very large files still drops.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> any design-to-code workflow</span>
+        <span><strong>Pricing:</strong> Included in Figma Dev Mode</span>
+        <span><a href="https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server" target="_blank" rel="noopener">Figma MCP Guide</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="mcps" data-tags="aidesigner,ui-generation,mcp">
+      <header>
+        <h3>AIDesigner MCP</h3>
+        <p class="what">Community MCP server focused on AI-powered UI generation tasks, often paired with Claude Code and Cursor.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Purpose-built for design-adjacent prompts and tasks.</li>
+            <li>Pairs well with a coding agent to turn prompts into working UI.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Community-maintained — reliability varies with upstream changes.</li>
+            <li>Less useful if you're already fluent with Figma MCP.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> designers prototyping inside a coding agent</span>
+        <span><strong>Pricing:</strong> Free (self-hosted)</span>
+        <span><a href="https://www.aidesigner.ai/blog/best-mcp-servers" target="_blank" rel="noopener">aidesigner.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="mcps" data-tags="github,mcp,repo,code">
+      <header>
+        <h3>GitHub MCP</h3>
+        <p class="what">Lets an AI read PRs, issues, commits, and code across your repos — the connective tissue for any design-to-code workflow.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Gives the AI real context on implementation, not just design intent.</li>
+            <li>Maintained by GitHub — well-behaved auth and rate limits.</li>
+            <li>Essential for any designer collaborating with engineers via code.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Overlaps with built-in tooling in Cursor/Windsurf — sometimes redundant.</li>
+            <li>Permissions sprawl if you give the agent write access.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> designers reviewing implementation against designs</span>
+        <span><strong>Pricing:</strong> Free</span>
+        <span><a href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener">github.com/github/github-mcp-server</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="mcps" data-tags="playwright,mcp,browser,automation">
+      <header>
+        <h3>Playwright MCP</h3>
+        <p class="what">Browser automation exposed to AI. Lets an agent open a page, take screenshots, inspect DOM, and click through flows.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Unlocks visual QA and accessibility audits from a chat prompt.</li>
+            <li>Works with any web property — not tool-specific.</li>
+            <li>Pairs beautifully with design-review workflows.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Setup is more involved than most MCPs — Playwright dependencies to manage.</li>
+            <li>Slow compared to DOM-API tooling for quick checks.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> visual QA, accessibility audits, design review</span>
+        <span><strong>Pricing:</strong> Free (open source)</span>
+        <span><a href="https://github.com/microsoft/playwright-mcp" target="_blank" rel="noopener">github.com/microsoft/playwright-mcp</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="mcps" data-tags="supabase,mcp,database,backend">
+      <header>
+        <h3>Supabase MCP</h3>
+        <p class="what">Gives an AI read/write access to a Supabase project — rows, schema, migrations, edge functions.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Designer can ask real-data questions ("how many users actually use this feature?") without a PM or analyst.</li>
+            <li>Great for data-driven design reviews.</li>
+            <li>First-party, maintained.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Assumes your backend is Supabase.</li>
+            <li>Write access is risky in shared projects — scope carefully.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> designers on Supabase-backed products</span>
+        <span><strong>Pricing:</strong> Free (Supabase plan separate)</span>
+        <span><a href="https://supabase.com/docs/guides/getting-started/mcp" target="_blank" rel="noopener">supabase.com/docs</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- Image Generation -->
+<!-- ============================== -->
+<section class="category" data-category="image" id="image">
+  <h2>Image Generation</h2>
+  <p class="category-summary">Specialised tools have split the space: pick by the job (aesthetic direction, brand, text-in-image, vectors, speed).</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="image" data-tags="midjourney,v8,aesthetic,art-direction">
+      <header>
+        <h3>Midjourney V8</h3>
+        <p class="what">Still the reference point for aesthetic art direction. V8 added native 2K output and is 5x faster than V6.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best for "wow" output that doesn't look generic.</li>
+            <li>Strong style references and sref system for brand consistency.</li>
+            <li>Large prompt vocabulary built up over years of use.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Text rendering is still its weak spot.</li>
+            <li>Discord-first UX is clunky for production workflows.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> moodboards, hero imagery, editorial</span>
+        <span><strong>Pricing:</strong> Paid from $10/mo</span>
+        <span><a href="https://www.midjourney.com" target="_blank" rel="noopener">midjourney.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="image" data-tags="flux,black-forest-labs,photorealism,character-consistency">
+      <header>
+        <h3>Flux 2 (Black Forest Labs)</h3>
+        <p class="what">32-billion-parameter model focused on photorealism — depth of field, lens distortion, chromatic aberration, film grain.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best-in-class skin textures and realistic lighting.</li>
+            <li>Strong character consistency across variations.</li>
+            <li>Available via multiple API providers at reasonable cost (~$0.03/image).</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Less controllable than Midjourney for stylised art.</li>
+            <li>Open-weight provenance creates brand caution in some orgs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> photorealistic stock, character scenes, product shots</span>
+        <span><strong>Pricing:</strong> ~$0.03/image via API providers</span>
+        <span><a href="https://blackforestlabs.ai" target="_blank" rel="noopener">blackforestlabs.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="image" data-tags="gpt-image,openai,text-in-image,brand">
+      <header>
+        <h3>GPT Image 1.5 (OpenAI)</h3>
+        <p class="what">OpenAI's image model with strong prompt adherence and the best text-in-image rendering on the market.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best at following detailed, multi-constraint prompts.</li>
+            <li>Text rendering is reliable enough for production brand work.</li>
+            <li>Available inside ChatGPT and via API.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Aesthetic ceiling is lower than Midjourney's.</li>
+            <li>Content moderation is stricter — some legitimate prompts get flagged.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> complex prompts, text in images, brand-accurate output</span>
+        <span><strong>Pricing:</strong> Included with ChatGPT Plus, API priced per image</span>
+        <span><a href="https://platform.openai.com/docs/guides/images" target="_blank" rel="noopener">platform.openai.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="image" data-tags="recraft,logos,vectors,svg,brand">
+      <header>
+        <h3>Recraft V4</h3>
+        <p class="what">The best AI model for logos and vector work in 2026. Exports SVG and has built-in brand styling.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Native SVG export — scalable, editable, production-ready.</li>
+            <li>Top of HuggingFace benchmarks for logo generation.</li>
+            <li>Brand style memory lets you keep consistent looks across assets.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Narrower use case — not a general-purpose image tool.</li>
+            <li>Still produces "AI logo" tells on close inspection.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> logo exploration, icon systems, vector illustration</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $12/mo</span>
+        <span><a href="https://www.recraft.ai" target="_blank" rel="noopener">recraft.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="image" data-tags="ideogram,text-rendering,posters,typography">
+      <header>
+        <h3>Ideogram 3.0</h3>
+        <p class="what">Specialised in text inside images, with 90–95% typography rendering accuracy. Strong for posters, social graphics, branded content.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Near-perfect typography inside generated images.</li>
+            <li>Good for social content, quote cards, event posters.</li>
+            <li>Reasonable pricing, friendly UI.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Aesthetic range narrower than Midjourney or Flux.</li>
+            <li>Less powerful for purely photographic output.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> posters, social graphics, anything with text baked in</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $7/mo</span>
+        <span><a href="https://ideogram.ai" target="_blank" rel="noopener">ideogram.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="image" data-tags="google,nano-banana,gemini,speed">
+      <header>
+        <h3>Nano Banana 2 (Gemini 3.1 Flash Image)</h3>
+        <p class="what">Google's fastest image model — ~1–3 seconds per image. Part of the Gemini family.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Fastest generation on the market — useful for iteration and UI embeds.</li>
+            <li>Strong editing capabilities (inpainting, object removal).</li>
+            <li>Integrated into Gemini and Firefly's model picker.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Quality ceiling is lower than Midjourney or Flux for hero imagery.</li>
+            <li>Priced higher than expected for bulk use (~$0.08/image).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> speed-sensitive workflows, in-product image features</span>
+        <span><strong>Pricing:</strong> ~$0.08/image via API</span>
+        <span><a href="https://deepmind.google" target="_blank" rel="noopener">deepmind.google</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- Video Generation -->
+<!-- ============================== -->
+<section class="category" data-category="video" id="video">
+  <h2>Video Generation</h2>
+  <p class="category-summary">The field moved fast: native 4K, synchronised audio, and multi-shot storyboards are table stakes in 2026. OpenAI announced Sora's web and app would shut down — Veo and Kling are eating the market.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="video" data-tags="sora,openai,cinematic,shutdown">
+      <header>
+        <h3>Sora 2 (OpenAI)</h3>
+        <p class="what">OpenAI's cinematic-quality video model with realistic physics and synchronised audio. Note: OpenAI announced in April 2026 it will discontinue the Sora web and app experiences, with API access ending September 2026.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Still unmatched for narrative coherence and realism.</li>
+            <li>Prompt adherence is exceptional for complex scenes.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Sunsetting — not a tool to build a new workflow around.</li>
+            <li>Access is already being throttled as the shutdown approaches.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> one-off use only while it's still around</span>
+        <span><strong>Pricing:</strong> Included with ChatGPT Pro (access limited)</span>
+        <span><a href="https://openai.com/sora" target="_blank" rel="noopener">openai.com/sora</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="video" data-tags="veo,google,4k,cinematic">
+      <header>
+        <h3>Google Veo 3.1</h3>
+        <p class="what">Native 4K (3840×2160) video at up to 60fps, with synchronised audio and strong character consistency across longer clips (up to 30 seconds).</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Highest-resolution output on the market.</li>
+            <li>Character consistency is the best of any current model.</li>
+            <li>Audio is generated in sync, not bolted on.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Access gated through Google — workflows can be clunky.</li>
+            <li>Pricey for bulk commercial use.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> product launch videos, brand films, any 4K deliverable</span>
+        <span><strong>Pricing:</strong> Via Gemini paid tiers / Vertex AI</span>
+        <span><a href="https://deepmind.google/technologies/veo/" target="_blank" rel="noopener">deepmind.google/technologies/veo</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="video" data-tags="kling,multi-shot,storyboard,affordable">
+      <header>
+        <h3>Kling 3.0</h3>
+        <p class="what">Released February 4, 2026. Headline feature is Multi-Shot Storyboard — define a whole sequence with individual prompts and camera angles in one pass.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best value-for-money in AI video — Standard plan starts at $6.99/mo.</li>
+            <li>Multi-shot storyboard is a unique, genuinely useful feature.</li>
+            <li>High-volume social output without breaking the budget.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Resolution tops out below Veo's native 4K.</li>
+            <li>Fewer camera-control primitives than Runway.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> social content, storyboarded sequences, volume work</span>
+        <span><strong>Pricing:</strong> From $6.99/mo</span>
+        <span><a href="https://kling.kuaishou.com" target="_blank" rel="noopener">kling.kuaishou.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="video" data-tags="runway,gen-4,filmmaking,camera-control">
+      <header>
+        <h3>Runway Gen-4.5</h3>
+        <p class="what">The filmmaker's pick. Prioritises direct creator control over camera moves, lighting shifts, and scene transitions.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best granular control over motion, camera, and transitions.</li>
+            <li>Deep editing suite alongside the generator.</li>
+            <li>Trusted by film and ad agencies.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Pricing gets steep at production volume.</li>
+            <li>Learning curve — not a prompt-and-go experience.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> filmmakers, VFX, directed video work</span>
+        <span><strong>Pricing:</strong> Paid from $15/mo, enterprise tiers above</span>
+        <span><a href="https://runwayml.com" target="_blank" rel="noopener">runwayml.com</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- 3D Generation -->
+<!-- ============================== -->
+<section class="category" data-category="3d" id="3d">
+  <h2>3D Generation</h2>
+  <p class="category-summary">No single winner — tools specialise by output type. Pick by whether you need game-ready topology, photoreal visualisation, or interactive scenes for the web.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="3d" data-tags="meshy,text-to-3d,fast,iteration">
+      <header>
+        <h3>Meshy</h3>
+        <p class="what">Fast text- and image-to-3D with a solid editing workflow. Strong for iteration.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Fastest generation loop for iterating on shapes.</li>
+            <li>Best features-per-dollar in the category.</li>
+            <li>Commercial rights on paid plans.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Topology is OK but not always game-ready.</li>
+            <li>Photorealism lags behind Rodin.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> concept 3D, AR, fast iteration</span>
+        <span><strong>Pricing:</strong> Free tier + Pro from $14.50/mo</span>
+        <span><a href="https://www.meshy.ai" target="_blank" rel="noopener">meshy.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="3d" data-tags="tripo,game-topology,quads">
+      <header>
+        <h3>Tripo</h3>
+        <p class="what">Generates clean quad-based topology — the format games and real-time engines actually want.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Game-ready topology out of the box.</li>
+            <li>Cheapest paid option at $12/mo.</li>
+            <li>Works well with Blender, Unity, Unreal pipelines.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Aesthetic ceiling is lower than Rodin for hero renders.</li>
+            <li>Smaller community; fewer tutorials than Meshy.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> game assets, real-time 3D, AR/VR</span>
+        <span><strong>Pricing:</strong> From $12/mo</span>
+        <span><a href="https://www.tripo3d.ai" target="_blank" rel="noopener">tripo3d.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="3d" data-tags="rodin,photorealism,visualization">
+      <header>
+        <h3>Rodin</h3>
+        <p class="what">Top of the category for photorealistic object generation. Aimed at professional visualisation work.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best photoreal output in AI 3D.</li>
+            <li>Strong material and texture fidelity.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Expensive ($120/mo Business tier) — only justifies for pro visualisation.</li>
+            <li>Overkill for concept work or games.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> product visualisation, e-commerce hero renders</span>
+        <span><strong>Pricing:</strong> Business from $120/mo</span>
+        <span><a href="https://hyperhuman.deemos.com" target="_blank" rel="noopener">hyperhuman.deemos.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="3d" data-tags="luma,scans,3d-capture,free-tier">
+      <header>
+        <h3>Luma AI</h3>
+        <p class="what">Strong at scene captures from video and photos. Generous free tier makes it a great entry point.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best in class for capturing real-world scenes as 3D.</li>
+            <li>Generous free tier for learning.</li>
+            <li>Great for AR and spatial content.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Generated (vs captured) 3D is not its strength.</li>
+            <li>Output resolution varies with capture quality.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> capturing real objects and scenes, AR content</span>
+        <span><strong>Pricing:</strong> Free + paid tiers</span>
+        <span><a href="https://lumalabs.ai" target="_blank" rel="noopener">lumalabs.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="3d" data-tags="spline,interactive,web-3d,collaboration">
+      <header>
+        <h3>Spline AI</h3>
+        <p class="what">Real-time 3D editor with collaboration, physics, and interactive behaviours — built for the web.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Real-time collaboration like Figma, but for 3D.</li>
+            <li>Export and embed straight into web projects.</li>
+            <li>AI features for generating materials and simple scenes.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Not a generation-first tool — more of a 3D design tool with AI features.</li>
+            <li>Can't match dedicated generators for scene fidelity.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> interactive 3D on websites, onboarding animations</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $9/mo</span>
+        <span><a href="https://spline.design" target="_blank" rel="noopener">spline.design</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- Coding Agents -->
+<!-- ============================== -->
+<section class="category" data-category="coding" id="coding">
+  <h2>Coding Agents</h2>
+  <p class="category-summary">Designers increasingly ship code. These agents are how you go from Figma to a working implementation — or audit existing code against a design.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="coding" data-tags="cursor,ide,editor,agent">
+      <header>
+        <h3>Cursor</h3>
+        <p class="what">AI-first IDE. The default choice for designer-developers in 2026.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Best-in-class editor experience with deep AI integration.</li>
+            <li>Works with Figma MCP and other design MCPs out of the box.</li>
+            <li>Strong at long multi-file refactors.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Subscription stacks on top of API costs if you use premium models.</li>
+            <li>Not a design tool — no canvas.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> designers shipping real code</span>
+        <span><strong>Pricing:</strong> Free tier + Pro $20/mo</span>
+        <span><a href="https://cursor.com" target="_blank" rel="noopener">cursor.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="coding" data-tags="claude-code,cli,anthropic,terminal">
+      <header>
+        <h3>Claude Code</h3>
+        <p class="what">Anthropic's CLI-native coding agent. Runs in the terminal and works on real projects.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Built on Opus 4.7 with the 1M-token window — can hold a whole codebase in mind.</li>
+            <li>Excellent at autonomous multi-step tasks.</li>
+            <li>Unix-philosophy fit — composes with shell tools and MCPs.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Terminal-first UX is a step up for many designers.</li>
+            <li>Can burn tokens fast on exploratory sessions.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> experienced designers comfortable in a terminal</span>
+        <span><strong>Pricing:</strong> Included with Claude Pro or pay-per-use via API</span>
+        <span><a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">claude.com/product/claude-code</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="coding" data-tags="replit,agent,browser,cloud">
+      <header>
+        <h3>Replit Agent</h3>
+        <p class="what">Browser-based coding agent that builds and deploys apps without leaving the tab.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Zero local setup — works anywhere there's a browser.</li>
+            <li>Includes hosting and deploy out of the box.</li>
+            <li>Great for PMs and designers who want to ship without a dev env.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Less suitable for complex or long-lived codebases.</li>
+            <li>Egress to your own infra can be painful later.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> quick prototypes, internal tools, zero-setup work</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $20/mo</span>
+        <span><a href="https://replit.com" target="_blank" rel="noopener">replit.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="coding" data-tags="windsurf,codeium,ide,agent">
+      <header>
+        <h3>Windsurf (Codeium)</h3>
+        <p class="what">Cursor's main competitor — AI-native IDE with strong autonomous mode ("Cascade").</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Cascade mode handles multi-file agentic tasks well.</li>
+            <li>Competitive pricing and often better enterprise controls.</li>
+            <li>Good inline completion quality.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Smaller community than Cursor; fewer third-party integrations.</li>
+            <li>Changing IDEs is a real switching cost.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> teams with stricter compliance or enterprise needs</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $15/mo</span>
+        <span><a href="https://windsurf.com" target="_blank" rel="noopener">windsurf.com</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- PM & Product Tools -->
+<!-- ============================== -->
+<section class="category" data-category="pm" id="pm">
+  <h2>PM &amp; Product Tools</h2>
+  <p class="category-summary">If you partner with PMs, the artefacts they hand you are changing. These tools generate PRDs, synthesise feedback, and manage roadmaps with AI.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="pm" data-tags="chatprd,prd,specs,pm">
+      <header>
+        <h3>ChatPRD</h3>
+        <p class="what">AI assistant specialised for writing, reviewing, and iterating on product specs and PRDs.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Tuned specifically for PM workflows — better structure than generic LLMs.</li>
+            <li>Generates acceptance criteria, user stories, and success metrics.</li>
+            <li>Integrates with common PM stacks.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Narrower than a general AI — not useful outside PM docs.</li>
+            <li>Template-driven output can feel uniform across teams.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> PMs drafting and reviewing specs</span>
+        <span><strong>Pricing:</strong> Paid from $5/mo</span>
+        <span><a href="https://www.chatprd.ai" target="_blank" rel="noopener">chatprd.ai</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="pm" data-tags="linear,ai,issue-tracking,triage">
+      <header>
+        <h3>Linear AI</h3>
+        <p class="what">AI features baked into Linear — triage, draft issue descriptions, suggest owners, auto-link PRs.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Integrated — no tool-switching.</li>
+            <li>Reduces triage load meaningfully on busy teams.</li>
+            <li>Linear's pace of improvement is fast.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Only useful if you already live in Linear.</li>
+            <li>AI suggestions occasionally mis-assign complex threads.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> teams already on Linear</span>
+        <span><strong>Pricing:</strong> Included with Linear paid plans</span>
+        <span><a href="https://linear.app" target="_blank" rel="noopener">linear.app</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="pm" data-tags="notion,ai,docs,wiki">
+      <header>
+        <h3>Notion AI</h3>
+        <p class="what">AI layer across your Notion workspace — summarise, draft, Q&amp;A across pages, database fills.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Useful for synthesising long-lived workspace knowledge.</li>
+            <li>Database AI fills are quietly transformative for structured work.</li>
+            <li>Cheap add-on for existing Notion users.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Output quality lags behind dedicated tools like ChatPRD for specs.</li>
+            <li>Q&amp;A across pages is only as good as your workspace organisation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> teams with a big Notion workspace</span>
+        <span><strong>Pricing:</strong> $10/user/mo add-on</span>
+        <span><a href="https://www.notion.so" target="_blank" rel="noopener">notion.so</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="pm" data-tags="productboard,feedback,roadmap,ai">
+      <header>
+        <h3>Productboard AI</h3>
+        <p class="what">Ingests feedback from tickets, sales calls, and interviews; analyses trends; suggests what to build next.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Genuine feedback-to-roadmap consolidation.</li>
+            <li>Trend detection flags themes before humans would notice.</li>
+            <li>Strong integrations with common CX and support tools.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Enterprise-priced — out of reach for smaller teams.</li>
+            <li>Automation can over-flatten nuance; needs human review.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> mid-market and enterprise product teams</span>
+        <span><strong>Pricing:</strong> Enterprise tiers; contact sales</span>
+        <span><a href="https://www.productboard.com" target="_blank" rel="noopener">productboard.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="pm" data-tags="granola,meetings,transcription,notes">
+      <header>
+        <h3>Granola</h3>
+        <p class="what">Meeting intelligence — joins calls silently, transcribes, produces structured notes and action items.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>The notes actually reflect what mattered, not just a transcript.</li>
+            <li>Native Mac app; no bot joining the call.</li>
+            <li>Searchable meeting history becomes a real resource.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Mac-only currently.</li>
+            <li>Privacy posture varies by company; check with legal.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> PMs and designers drowning in meetings</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $18/mo</span>
+        <span><a href="https://www.granola.ai" target="_blank" rel="noopener">granola.ai</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- UX Research -->
+<!-- ============================== -->
+<section class="category" data-category="research" id="research">
+  <h2>UX Research</h2>
+  <p class="category-summary">88% of UX researchers list AI-assisted analysis as a top trend for 2026. The split is between real-user research platforms adding AI features and AI-native platforms launched post-ChatGPT.</p>
+
+  <div class="tool-grid">
+
+    <article class="tool" data-category="research" data-tags="dovetail,synthesis,research-repository">
+      <header>
+        <h3>Dovetail AI</h3>
+        <p class="what">Research repository with AI-powered synthesis across interviews, transcripts, and notes.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Mature repository — your research becomes a living asset.</li>
+            <li>Synthesis and theme detection save days per project.</li>
+            <li>Good export paths for stakeholder reports.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Priced for teams, not individual researchers.</li>
+            <li>AI synthesis can paper over tension that matters — always review.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> research teams with ongoing studies</span>
+        <span><strong>Pricing:</strong> Paid from $30/user/mo</span>
+        <span><a href="https://dovetail.com" target="_blank" rel="noopener">dovetail.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="research" data-tags="maze,usability,testing,ai-moderator">
+      <header>
+        <h3>Maze AI</h3>
+        <p class="what">Usability testing platform with AI-moderated interviews and auto-generated test reports.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>AI moderator conducts unmoderated-style sessions that still adapt to responses.</li>
+            <li>Fast turnaround from test to report.</li>
+            <li>Integrations with Figma prototypes.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>AI moderation misses the subtle probing a human researcher would do.</li>
+            <li>Quant leans are real — qual depth is shallower than a human-led study.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> fast directional usability testing</span>
+        <span><strong>Pricing:</strong> Free tier + paid from $99/mo</span>
+        <span><a href="https://maze.co" target="_blank" rel="noopener">maze.co</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="research" data-tags="synthetic-users,simulated-research,ai-first">
+      <header>
+        <h3>Synthetic Users</h3>
+        <p class="what">Runs research with AI-simulated users. Lets you explore directional insights before committing to real recruitment.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Useful for early exploration when real recruits aren't worth the cost.</li>
+            <li>Helps stress-test interview guides before running them live.</li>
+            <li>Fast — directional findings in hours, not weeks.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Not a substitute for real users — known failure modes around surprise and nuance.</li>
+            <li>Easy to mistake confident-sounding output for truth.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> directional validation, interview-guide testing</span>
+        <span><strong>Pricing:</strong> Paid from $75/mo</span>
+        <span><a href="https://www.syntheticusers.com" target="_blank" rel="noopener">syntheticusers.com</a></span>
+      </div>
+    </article>
+
+    <article class="tool" data-category="research" data-tags="usertesting,ai-insights,panel">
+      <header>
+        <h3>UserTesting AI Insights</h3>
+        <p class="what">UserTesting's AI layer over its real-user panel — auto-generates highlights, themes, and clips from sessions.</p>
+      </header>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Real users, real qualitative data — AI layer accelerates synthesis.</li>
+            <li>Very large panel for targeted recruiting.</li>
+            <li>Good at generating shareable clips for stakeholders.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Expensive — enterprise pricing.</li>
+            <li>Auto-themes sometimes miss the actual problem; researcher review needed.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tool-meta">
+        <span><strong>Best for:</strong> large organisations with formal research practices</span>
+        <span><strong>Pricing:</strong> Enterprise; contact sales</span>
+        <span><a href="https://www.usertesting.com" target="_blank" rel="noopener">usertesting.com</a></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="empty-state hidden" id="empty-state">
+  No tools match your filters. Try clearing them.
+</div>
+
+<footer class="site-footer">
+  <p>Pros and cons reflect April 2026 state. Prices and features change fast — always verify on the vendor site before committing. Nothing here is paid placement.</p>
+</footer>
+
+</main>
+
+<script>
+(function() {
+  var q = document.getElementById('q');
+  var cat = document.getElementById('cat');
+  var reset = document.getElementById('reset-btn');
+  var status = document.getElementById('filter-status');
+  var emptyState = document.getElementById('empty-state');
+
+  function applyFilters() {
+    var qVal = (q.value || '').trim().toLowerCase();
+    var catVal = cat.value;
+    var tools = document.querySelectorAll('article.tool');
+    var visibleCount = 0;
+
+    tools.forEach(function(el) {
+      var toolCat = el.getAttribute('data-category') || '';
+      var tags = (el.getAttribute('data-tags') || '').toLowerCase();
+      var text = ((el.textContent || '') + ' ' + tags).toLowerCase();
+
+      var matchesQ = !qVal || text.indexOf(qVal) !== -1;
+      var matchesCat = !catVal || toolCat === catVal;
+
+      var show = matchesQ && matchesCat;
+      el.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    // Hide empty category sections
+    document.querySelectorAll('section.category').forEach(function(sec) {
+      var anyVisible = sec.querySelectorAll('article.tool:not(.hidden)').length > 0;
+      sec.classList.toggle('hidden', !anyVisible);
+    });
+
+    var total = tools.length;
+    var filtering = qVal || catVal;
+    if (filtering) {
+      status.textContent = 'Showing ' + visibleCount + ' of ' + total + ' tools';
+    } else {
+      status.textContent = total + ' tools total';
+    }
+    emptyState.classList.toggle('hidden', visibleCount !== 0);
+  }
+
+  [q, cat].forEach(function(el) {
+    el.addEventListener('input', applyFilters);
+    el.addEventListener('change', applyFilters);
+  });
+
+  reset.addEventListener('click', function() {
+    q.value = '';
+    cat.value = '';
+    applyFilters();
+  });
+
+  applyFilters();
+})();
+</script>
+</body>
+</html>

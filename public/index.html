@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Design and Product Daily</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --surface-2: #f3f1ea;
+    --text: #1a1a1a;
+    --muted: #5f5f5f;
+    --border: #e6e4dd;
+    --accent: #1a1a2e;
+    --link: #3b4b8b;
+    --cat-tools: #e8f1fb;
+    --cat-tools-fg: #1f4a7a;
+    --cat-models: #f1ebfb;
+    --cat-models-fg: #5a3f8c;
+    --cat-case: #eaf6ee;
+    --cat-case-fg: #2c6b3e;
+    --cat-industry: #fdf1e4;
+    --cat-industry-fg: #8a4a17;
+    --cat-research: #fbeae8;
+    --cat-research-fg: #8a2e26;
+    --action-bg: #fff9ec;
+    --action-border: #f0e3bf;
+    --action-fg: #6a4d10;
+    --status-todo: #5f5f5f;
+    --status-trying: #8a4a17;
+    --status-done: #2c6b3e;
+    --status-trying-bg: #fdf1e4;
+    --status-done-bg: #eaf6ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414;
+      --surface: #1c1c1c;
+      --surface-2: #242424;
+      --text: #f1efe9;
+      --muted: #a0a0a0;
+      --border: #2e2e2e;
+      --accent: #f1efe9;
+      --link: #9ab0ff;
+      --cat-tools: #14273a;
+      --cat-tools-fg: #a6c7ea;
+      --cat-models: #261d36;
+      --cat-models-fg: #c3a8ed;
+      --cat-case: #18311f;
+      --cat-case-fg: #9cd1ab;
+      --cat-industry: #3a2615;
+      --cat-industry-fg: #ecbf8a;
+      --cat-research: #3a1c19;
+      --cat-research-fg: #ef9b92;
+      --action-bg: #2a2410;
+      --action-border: #4a3d14;
+      --action-fg: #f0dfa8;
+      --status-todo: #a0a0a0;
+      --status-trying: #ecbf8a;
+      --status-done: #9cd1ab;
+      --status-trying-bg: #3a2615;
+      --status-done-bg: #18311f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 96px;
+  }
+
+  /* Page navigation */
+  nav.pages {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  nav.pages a {
+    padding: 10px 14px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  nav.pages a.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+  nav.pages a:hover { color: var(--text); }
+
+  /* Masthead */
+  header.masthead {
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  header.masthead h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 4px;
+  }
+  header.masthead .tagline {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+  }
+  header.masthead .today-anchor {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--link);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  header.masthead .today-anchor:hover { background: var(--surface); }
+
+  /* Practice tracker */
+  .practice {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 24px;
+  }
+  .practice-frame {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 16px;
+    font-style: italic;
+  }
+  .practice-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .practice-header h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .practice-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .stat {
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .stat .num {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .stat .lbl {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+  .stat.done .num { color: var(--status-done); }
+  .stat.trying .num { color: var(--status-trying); }
+
+  .focus {
+    background: var(--action-bg);
+    border: 1px solid var(--action-border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+  .focus strong { color: var(--action-fg); }
+  .focus a { color: var(--link); font-weight: 600; }
+
+  .skills-built {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .skills-built .chip {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .skills-built .chip.earned {
+    background: var(--status-done-bg);
+    color: var(--status-done);
+    border-color: var(--status-done);
+  }
+  .skills-built .chip.progress {
+    background: var(--status-trying-bg);
+    color: var(--status-trying);
+    border-color: var(--status-trying);
+  }
+
+  .practice-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .practice-actions button {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .practice-actions button:hover { background: var(--border); }
+
+  .storage-warning {
+    background: var(--cat-industry);
+    color: var(--cat-industry-fg);
+    border: 1px solid var(--cat-industry-fg);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    display: none;
+  }
+  .storage-warning.visible { display: block; }
+
+  /* Filter bar */
+  .filter-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+    position: sticky;
+    top: 8px;
+    z-index: 40;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  }
+  .filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1 1 160px;
+    min-width: 0;
+  }
+  .filter-field--search { flex: 2 1 220px; }
+  .filter-field--date { flex: 1 1 150px; }
+  .filter-field label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .filter-field input,
+  .filter-field select {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: inherit;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .filter-field input:focus,
+  .filter-field select:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 1px;
+  }
+  #reset-btn {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    height: 36px;
+    flex: 0 0 auto;
+    align-self: flex-end;
+    white-space: nowrap;
+  }
+  #reset-btn:hover { background: var(--border); }
+  @media (max-width: 520px) {
+    .filter-field,
+    .filter-field--search,
+    .filter-field--date { flex: 1 1 100%; }
+    #reset-btn { width: 100%; }
+  }
+  .filter-status {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 24px;
+    min-height: 20px;
+  }
+
+  /* Jump-to nav */
+  #jump-btn {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    height: 36px;
+    flex: 0 0 auto;
+    align-self: flex-end;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  #jump-btn:hover { background: var(--border); }
+  #jump-btn[aria-expanded="true"] {
+    background: var(--accent);
+    color: var(--surface);
+    border-color: var(--accent);
+  }
+  #jump-btn .caret { font-size: 10px; opacity: 0.7; }
+  .jump-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin: -8px 0 16px;
+    position: sticky;
+    top: 64px;
+    z-index: 39;
+    max-height: 60vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .jump-panel[hidden] { display: none; }
+  .jump-panel__day {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .jump-panel__day:last-child { border-bottom: none; }
+  .jump-panel__day-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 2px 0;
+    align-self: center;
+  }
+  .jump-panel__day-label:hover { color: var(--link); }
+  .jump-panel__cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .jump-chip {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: var(--text);
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.4;
+  }
+  .jump-chip:hover {
+    background: var(--accent);
+    color: var(--surface);
+    border-color: var(--accent);
+  }
+  .jump-chip .count {
+    opacity: 0.6;
+    margin-left: 4px;
+    font-size: 11px;
+  }
+  .jump-hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 8px;
+  }
+  @media (max-width: 520px) {
+    .jump-panel__day {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+
+  /* Back-to-top FAB */
+  #back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--surface);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 50;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    pointer-events: none;
+    font-family: inherit;
+  }
+  #back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  #back-to-top:hover { filter: brightness(1.1); }
+
+  /* Jump target highlight */
+  .jump-target {
+    animation: jump-flash 1.4s ease-out;
+    scroll-margin-top: 96px;
+  }
+  @keyframes jump-flash {
+    0%   { box-shadow: 0 0 0 3px var(--link); background: var(--surface-2); }
+    100% { box-shadow: 0 0 0 0 transparent; background: transparent; }
+  }
+  .day-section, .category-group {
+    scroll-margin-top: 120px;
+  }
+
+  /* Archive structure */
+  .year-section { margin-bottom: 56px; }
+  .year-section > h2.year {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .month-section { margin-bottom: 40px; }
+  .month-section > h3.month {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .day-section { margin-bottom: 40px; }
+  .day-section > h4.day {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: var(--accent);
+  }
+  .day-section > h4.day .day-date {
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  .category-group { margin-bottom: 24px; }
+  .category-group > h5.category-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+
+  article.entry {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  article.entry.status-trying { border-color: var(--status-trying); }
+  article.entry.status-done { border-color: var(--status-done); }
+  article.entry .head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  article.entry h6.headline {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .badge.tools { background: var(--cat-tools); color: var(--cat-tools-fg); }
+  .badge.models { background: var(--cat-models); color: var(--cat-models-fg); }
+  .badge.case-studies { background: var(--cat-case); color: var(--cat-case-fg); }
+  .badge.industry { background: var(--cat-industry); color: var(--cat-industry-fg); }
+  .badge.research { background: var(--cat-research); color: var(--cat-research-fg); }
+  article.entry .meta {
+    margin: 0 0 10px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  article.entry .summary {
+    margin: 0 0 12px;
+    font-size: 15px;
+    color: var(--text);
+  }
+  article.entry .why {
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: var(--muted);
+    border-left: 3px solid var(--border);
+    padding-left: 12px;
+  }
+  article.entry .why strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  article.entry .source a {
+    color: var(--link);
+    text-decoration: none;
+    font-size: 13px;
+  }
+  article.entry .source a:hover { text-decoration: underline; }
+
+  /* Action block */
+  .action {
+    margin-top: 16px;
+    background: var(--action-bg);
+    border: 1px solid var(--action-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .action-title {
+    margin: 0 0 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--action-fg);
+    font-weight: 700;
+  }
+  .action-text {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .action-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .skill-chip {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 9px;
+    font-size: 11px;
+  }
+  .time-chip {
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .action-controls {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .status-btn {
+    background: var(--bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .status-btn:hover { background: var(--surface-2); }
+  .status-btn.active[data-status="todo"] {
+    background: var(--surface-2);
+    color: var(--text);
+    border-color: var(--text);
+  }
+  .status-btn.active[data-status="trying"] {
+    background: var(--status-trying-bg);
+    color: var(--status-trying);
+    border-color: var(--status-trying);
+  }
+  .status-btn.active[data-status="done"] {
+    background: var(--status-done-bg);
+    color: var(--status-done);
+    border-color: var(--status-done);
+  }
+  .reflection {
+    width: 100%;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.5;
+    min-height: 50px;
+    resize: vertical;
+  }
+  .reflection:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 1px;
+  }
+  .reflection-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 4px;
+    font-weight: 600;
+  }
+  .saved-indicator {
+    font-size: 11px;
+    color: var(--status-done);
+    margin-left: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .saved-indicator.visible { opacity: 1; }
+
+  .hidden { display: none !important; }
+  .empty-state {
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--muted);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+  }
+
+  footer.site-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 48px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  a { color: var(--link); }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 640px) {
+    main { padding: 24px 16px 64px; }
+
+    /* Page nav scrolls horizontally if it gets crowded */
+    nav.pages {
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      flex-wrap: nowrap;
+    }
+    nav.pages a {
+      padding: 10px 12px;
+      white-space: nowrap;
+    }
+
+    /* Masthead */
+    header.masthead h1 { font-size: 24px; }
+    header.masthead .tagline { font-size: 14px; }
+    header.masthead .today-anchor {
+      font-size: 12px;
+      padding: 7px 12px;
+    }
+
+    /* Practice tracker */
+    .practice { padding: 16px 18px; }
+    .practice-frame { font-size: 12.5px; line-height: 1.55; }
+    .practice-header h2 { font-size: 15px; }
+    .practice-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .stat { padding: 10px 8px; }
+    .stat .num { font-size: 20px; }
+    .focus { font-size: 12.5px; padding: 10px 12px; }
+    .practice-actions { flex-wrap: wrap; }
+    .practice-actions button { flex: 1 1 140px; }
+
+    /* Archive headings */
+    .year-section { margin-bottom: 40px; }
+    .month-section > h3.month { font-size: 18px; }
+    .day-section > h4.day { font-size: 16px; }
+    .day-section > h4.day .day-date {
+      display: block;
+      margin-left: 0;
+      margin-top: 2px;
+      font-size: 13px;
+    }
+
+    /* Entries */
+    article.entry { padding: 16px 18px; }
+    article.entry .head { gap: 10px; }
+    article.entry h6.headline {
+      font-size: 16px;
+      min-width: 0;
+      word-break: break-word;
+    }
+    article.entry .summary { font-size: 14.5px; }
+    article.entry .why {
+      font-size: 13.5px;
+      padding-left: 10px;
+    }
+    article.entry .source a {
+      word-break: break-word;
+    }
+
+    /* Action block */
+    .action { padding: 12px 14px; }
+    .action-text { font-size: 13.5px; }
+    .action-controls { width: 100%; }
+    .status-btn {
+      flex: 1 1 auto;
+      text-align: center;
+      min-height: 36px;
+    }
+
+    .empty-state { padding: 32px 16px; }
+
+    footer.site-footer { font-size: 12.5px; }
+  }
+
+  /* Very narrow phones */
+  @media (max-width: 380px) {
+    main { padding: 20px 12px 56px; }
+    article.entry { padding: 14px 14px; }
+    .practice { padding: 14px 14px; }
+    header.masthead h1 { font-size: 22px; letter-spacing: -0.015em; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<nav class="pages">
+  <a href="/" class="active">Daily News</a>
+  <a href="/tools">Tools Comparison</a>
+</nav>
+
+<header class="masthead">
+  <h1>AI Design and Product Daily</h1>
+  <p class="tagline">A morning briefing for designers who want to stay ahead of AI in product and design work.</p>
+  <a class="today-anchor" href="#today">Today — Monday, April 20, 2026</a>
+</header>
+
+<section class="practice" aria-label="Your practice tracker">
+  <p class="practice-frame">Reading won't keep you ahead. Practice will. Designers who thrive in 2026 aren't the ones who read the most news — they're the ones with a portfolio of experiments that prove taste, judgment, and systems thinking the models can't replicate. Each entry below has a concrete exercise. Do the work, track what you learn.</p>
+  <div class="practice-header">
+    <h2>Your practice tracker</h2>
+  </div>
+  <div class="storage-warning" id="storage-warning">
+    Your browser is blocking persistent storage for local files, so status and reflections won't survive a reload. Open this file from a local server, or use the Export button to keep a backup.
+  </div>
+  <div class="practice-stats">
+    <div class="stat"><div class="num" id="stat-total">0</div><div class="lbl">Total exercises</div></div>
+    <div class="stat"><div class="num" id="stat-todo">0</div><div class="lbl">To try</div></div>
+    <div class="stat trying"><div class="num" id="stat-trying">0</div><div class="lbl">Trying</div></div>
+    <div class="stat done"><div class="num" id="stat-done">0</div><div class="lbl">Done</div></div>
+  </div>
+  <div class="focus" id="focus-card">
+    <strong>This week's focus:</strong> <span id="focus-text">Open an exercise and mark it "Trying" to set your focus.</span>
+  </div>
+  <div>
+    <div class="reflection-label" style="margin-bottom: 8px;">Skills you're building</div>
+    <div class="skills-built" id="skills-built"></div>
+  </div>
+  <div class="practice-actions">
+    <button id="export-btn" type="button">Export progress (JSON)</button>
+    <button id="import-btn" type="button">Import progress</button>
+    <input type="file" id="import-file" accept="application/json" hidden>
+  </div>
+</section>
+
+<div class="filter-bar">
+  <div class="filter-field filter-field--search">
+    <label for="q">Search</label>
+    <input type="search" id="q" placeholder="e.g. figma, agents, adobe">
+  </div>
+  <div class="filter-field">
+    <label for="cat">Category</label>
+    <select id="cat">
+      <option value="">All</option>
+      <option value="tools">Tools</option>
+      <option value="models">Models</option>
+      <option value="case-studies">Case Studies</option>
+      <option value="industry">Industry</option>
+      <option value="research">Research</option>
+    </select>
+  </div>
+  <div class="filter-field">
+    <label for="statusf">Status</label>
+    <select id="statusf">
+      <option value="">All</option>
+      <option value="todo">To try</option>
+      <option value="trying">Trying</option>
+      <option value="done">Done</option>
+    </select>
+  </div>
+  <div class="filter-field filter-field--date">
+    <label for="from">Published from</label>
+    <input type="date" id="from">
+  </div>
+  <div class="filter-field filter-field--date">
+    <label for="to">Published to</label>
+    <input type="date" id="to">
+  </div>
+  <button id="jump-btn" type="button" aria-expanded="false" aria-controls="jump-panel">
+    Jump to<span class="caret">▾</span>
+  </button>
+  <button id="reset-btn" type="button">Reset</button>
+</div>
+<div id="jump-panel" class="jump-panel" role="region" aria-label="Jump to day or category" hidden>
+  <p class="jump-hint">Click a day to jump to the top of its briefing, or a category chip to jump straight to that section. Press <kbd>J</kbd> anywhere to reopen this menu, <kbd>Esc</kbd> to close.</p>
+  <div id="jump-panel-body"></div>
+</div>
+<p class="filter-status" id="filter-status"></p>
+<button id="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- ARCHIVE_START -->
+
+<section class="year-section" data-year="2026">
+  <h2 class="year">2026</h2>
+
+  <section class="month-section" data-month="2026-04">
+    <h3 class="month">April 2026</h3>
+
+    <section class="day-section" id="today" data-date="2026-04-20">
+      <h4 class="day">Monday, April 20 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry" data-id="2026-04-20-canva" data-category="tools" data-published="2026-04-16" data-tags="canva,agentic,connectors,ai-2.0">
+          <div class="head">
+            <h6 class="headline">Canva AI 2.0 turns the platform into an agentic work OS with Slack, Notion, and Drive connectors</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-16">Published April 16, 2026</time></p>
+          <p class="summary">Canva rolled out Canva AI 2.0 as a research preview on April 16, rebuilding its platform around conversational design, agentic orchestration, and object-level edits. The bigger story is the Connectors layer — the assistant now reads Slack, Notion, Zoom, Gmail, Google Drive, and Calendar to pull emails, transcripts, and meetings into briefs, decks, and newsletters. Canva also shipped a scheduling feature that runs design tasks in the background, Brand Intelligence for automatic brand application, Sheets AI, and Canva Code 2.0 with HTML import.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is a real end-to-end agentic design surface — connectors plus scheduling means Canva can watch a channel and produce a deck on a cadence. Even if your team lives in Figma, it's worth stress-testing Canva AI 2.0 on a recurring visual job (social assets from a weekly brief, for example). The connectors pattern is also what every serious design tool will look like by year-end.</p>
+          <p class="source"><a href="https://www.canva.com/newsroom/news/canva-create-2026-ai/" target="_blank" rel="noopener">Source — Canva Newsroom</a></p>
+          <section class="action" data-skills="agent-orchestration,automation" data-time="90">
+            <h6 class="action-title">Try this — 90 min</h6>
+            <p class="action-text">Pick one recurring visual job your team does weekly (social posts from a digest, a status deck, an internal newsletter). Wire up Canva AI 2.0 with the Slack + Drive connectors and automate it end to end. Time the first run, then bring the workflow to your next team meeting as a 3-minute live demo. If you can't automate it, write down exactly where the tool broke — those are your team's genuine design bottlenecks.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="skill-chip">Automation</span>
+              <span class="time-chip">~90 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry" data-id="2026-04-20-notion" data-category="tools" data-published="2026-04-14" data-tags="notion,agents,pm-tools,slack">
+          <div class="head">
+            <h6 class="headline">Notion 3.4 part 2: Custom Agents get 35–50% cheaper and finally reach private Slack channels</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-14">Published April 14, 2026</time></p>
+          <p class="summary">Notion shipped the second half of its 3.4 release on April 14. Custom Agents — launched in February — are now 35–50% cheaper to run across the board, and drop further when you point them at GPT-5.4 Mini/Nano, Haiku 4.5, or MiniMax M2.5. The bigger functional unlock: agents can now access private Slack channels, AI Autofill brings them directly into databases for automatic enrichment, and you can author "skills" that teach an agent a specific workflow. Custom Agents stay free to try until May 3, after which they move to Notion Credits.</p>
+          <p class="why"><strong>Why this matters for you:</strong> two things to try this week. First, set up an AI Autofill column that pulls status, owner, or summary from your project database — it replaces a lot of the manual upkeep that kills Notion systems. Second, if you work with PMs, flag the May 3 pricing cutover now so your teams don't get surprised when a pilot starts costing credits.</p>
+          <p class="source"><a href="https://www.notion.com/releases/2026-04-14" target="_blank" rel="noopener">Source — Notion Releases</a></p>
+          <section class="action" data-skills="tool-mastery,judgement" data-time="45">
+            <h6 class="action-title">Try this — 45 min setup, 1 week run</h6>
+            <p class="action-text">Add an AI Autofill column to one project database you already maintain. Let it generate status summaries or owner flags for a week. On Friday, compare: did it save real upkeep time, or did it create new upkeep? Write one sentence on each row where you'd have summarised differently. Those sentences are what your taste buys you that the tool can't replicate — save them.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">45 min + 1 week</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry" data-id="2026-04-20-figma-stock" data-category="industry" data-published="2026-04-17" data-tags="figma,anthropic,stock,board,krieger">
+          <div class="head">
+            <h6 class="headline">Figma stock drops 7%, Mike Krieger exits the board three days before Claude Design ships</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-17">Published April 17, 2026</time></p>
+          <p class="summary">Mike Krieger — Anthropic's chief product officer and a Figma board member — resigned from Figma's board on April 14, the same day The Information reported Anthropic's next model would ship with a design surface. Three days later Claude Design launched, and Figma (NYSE: FIG) dropped 7.28% to $18.84. Adobe fell 2.7%, Wix 4.7%, and GoDaddy 3%. BTIG initiated coverage of both Figma and Adobe the same day with cautious ratings, citing AI monetization uncertainty and platform competition. The post hit #1 on Hacker News with 817 upvotes.</p>
+          <p class="why"><strong>Why this matters for you:</strong> the market is now pricing "foundation-model vendor ships design tool" as an existential event for the incumbents. That doesn't mean Figma loses, but it does mean your design leadership will be asked hard questions this quarter about tool strategy, lock-in, and where the team's skills should bet. Worth thinking through your own answer before someone asks you for one.</p>
+          <p class="source"><a href="https://sherwood.news/tech/anthropic-launches-claude-design-sending-shares-of-figma-down/" target="_blank" rel="noopener">Source — Sherwood News</a></p>
+          <section class="action" data-skills="strategy,advocacy" data-time="90">
+            <h6 class="action-title">Try this — 90 min</h6>
+            <p class="action-text">Write a 500-word internal POV on your team's tool strategy for the next 12 months. Cover three things: Figma commitment and why, when you'd bring in Claude Design or other foundation-vendor tools, and the skills you're investing in regardless of which tool wins. Share with one peer for feedback. Designers who can articulate tool strategy get trusted with direction; those who only execute get assigned to the tool the company picks.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~90 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry" data-id="2026-04-20-microsoft-mai" data-category="models" data-published="2026-04-01" data-tags="microsoft,azure,mai,voice,image,marketing">
+          <div class="head">
+            <h6 class="headline">Microsoft unveils MAI-Transcribe-1, MAI-Voice-1, and MAI-Image-2 on Azure AI Foundry</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-01">Published early April 2026</time></p>
+          <p class="summary">Microsoft's AI Foundry now hosts three in-house models aimed squarely at product and design teams: MAI-Transcribe-1 for meeting transcription, MAI-Voice-1 for synthetic voice, and MAI-Image-2 for marketing visuals. The framing is explicitly about letting customers build copilots and agents that go from meeting to brief to rendered asset without stitching external APIs together.</p>
+          <p class="why"><strong>Why this matters for you:</strong> if your org runs on Azure, you can now build a full research-to-visual pipeline in one cloud — interview transcripts in, moodboard or hero image out, audited by the enterprise. Worth sketching that pipeline even if you don't ship it; it's the shape of the commoditised "AI creative stack" every enterprise IT team will offer by end of year.</p>
+          <p class="source"><a href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">Source — LLM Stats AI News</a></p>
+          <section class="action" data-skills="systems-thinking" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Sketch on paper or a Figma frame a full research-to-asset pipeline: meeting transcript → synthesised brief → generated visual → shipped asset. At each handoff, label where a human designer still has to intervene for the output to be credible. Keep it — that map is where your craft lives inside an otherwise automated stack. Review it quarterly; the human-intervention points will shrink, and you want to know where yours are.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+
+        <article class="entry" data-id="2026-04-20-stanford-index" data-category="research" data-published="2026-04-16" data-tags="stanford,ai-index,productivity,adoption">
+          <div class="head">
+            <h6 class="headline">Stanford AI Index 2026: marketing output up 50%, generative AI reaches 53% adoption faster than internet or PC</h6>
+            <span class="badge research">Research</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-16">Published April 16, 2026</time></p>
+          <p class="summary">Stanford HAI released the 2026 AI Index on April 16. Numbers worth remembering: marketing and creative teams that integrated AI report a 50% productivity gain on visual and content output, organisational adoption hit 88%, and generative AI crossed 53% consumer adoption in three years — faster than the PC or the internet. SWE-bench Verified jumped from 60% to near 100% of human baseline in a single year. Consumer value from gen AI tools is now estimated at $172B annually in the US alone, with median per-user value tripling from 2025 to 2026.</p>
+          <p class="why"><strong>Why this matters for you:</strong> these are the numbers you'll cite in every AI-related slide or pitch for the next year. The "50% marketing productivity" stat is especially useful when you need to justify AI budget or headcount changes on a creative team — it's credible, it's from Stanford, and it's specific to your domain.</p>
+          <p class="source"><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">Source — Stanford HAI</a></p>
+          <section class="action" data-skills="advocacy,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick three numbers from the report that apply to your specific work. Build a single slide titled "Why we should invest in AI tooling next quarter" with those numbers and one concrete ask. Post it in a design or leadership channel — even if no one acts on it, you've become the designer who read the research first. That reputation compounds.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-04-19">
+      <h4 class="day">Sunday, April 19 <span class="day-date">— briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry" data-id="2026-04-19-opus-47" data-category="models" data-published="2026-04-16" data-tags="anthropic,claude,opus,context-window">
+          <div class="head">
+            <h6 class="headline">Anthropic releases Claude Opus 4.7 with a 1M-token context window</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-16">Published April 16, 2026</time></p>
+          <p class="summary">Anthropic pushed Opus 4.7 out on April 16. The headline numbers are a 1M-token context window, 87.6% on SWE-bench Verified, and better image understanding at higher resolution — all at the same pricing as Opus 4.6. It rolled out immediately across Anthropic's own products, its API, and AWS, Azure, and GCP.</p>
+          <p class="why"><strong>Why this matters for you:</strong> a larger context window means you can feed a full design system, PRD, and codebase into one session for genuinely grounded output — the kind of thing that makes AI stop hallucinating component names. Worth rewiring your workflow to take advantage of it rather than chopping inputs into fragments.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/04/16/anthropic-claude-opus-4-7-model-mythos.html" target="_blank" rel="noopener">Source — CNBC</a></p>
+          <section class="action" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Load your full design system docs, brand book, and one real PRD into a single Claude Opus 4.7 session. Ask it to critique three live screens against that system. Where it calls something fine that you'd push back on — that's where your taste still beats the model. Save that list; re-run it in 6 months. Closing gaps is a useful signal of where the model is catching up, and where your judgment is still the moat.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry" data-id="2026-04-19-claude-design" data-category="tools" data-published="2026-04-17" data-tags="anthropic,claude,design-tool">
+          <div class="head">
+            <h6 class="headline">Anthropic launches Claude Design</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-17">Published April 17, 2026</time></p>
+          <p class="summary">Two days after the Opus 4.7 model release, Anthropic followed up with Claude Design — a visual design surface built directly on top of the new model. It's aimed at letting non-designers generate prototypes, slide decks, and marketing assets from prompts, but the underlying capability is interesting for anyone doing early-stage UI exploration.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is the clearest signal yet that the foundation-model vendors want to own the design canvas, not just the code editor. Try it on a real brief this week — the output quality sets a new baseline you'll be asked to beat or defend in design reviews.</p>
+          <p class="source"><a href="https://help.apiyi.com/en/claude-design-anthropic-beginners-guide-2026-en.html" target="_blank" rel="noopener">Source — Claude Design Guide (Apiyi)</a></p>
+          <section class="action" data-skills="differentiation,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Take a design you finished in the last 30 days. Re-brief Claude Design on the exact same problem. Put both outputs side by side and write 200 words on what you did that the tool didn't — micro decisions, user context, tradeoffs, taste calls. Post it internally in a design channel. You just made your value legible. Do this once a month; the delta is your résumé.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry" data-id="2026-04-19-firefly-assistant" data-category="tools" data-published="2026-04-15" data-tags="adobe,firefly,creative-cloud,agents">
+          <div class="head">
+            <h6 class="headline">Adobe Firefly AI Assistant goes agentic across Creative Cloud</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-15">Published April 15, 2026</time></p>
+          <p class="summary">Adobe announced Firefly AI Assistant on April 15. It's a conversational agent that orchestrates multi-step workflows across Photoshop, Premiere, Lightroom, Express, Illustrator, and Firefly itself — you describe an outcome, it executes the steps. It also picks up your habits over time so it adapts to your tools and style. Public beta lands in the coming weeks.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is Adobe's answer to Claude and ChatGPT taking over creative workflows, and it runs inside the tools you probably already use. Get on the beta waitlist and start thinking about which of your repetitive multi-app tasks (export pipelines, batch retouching, social asset variants) you'd hand to an agent.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/04/15/adobes-new-firefly-ai-assistant-can-use-creative-cloud-apps-to-complete-tasks/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+          <section class="action" data-skills="agent-orchestration,strategy" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">List the three most repetitive multi-app tasks you do each week (export variants, retouch batches, recolour systems, whatever). For each, draft the prompt you'd hand an agent when beta access opens. Save the list somewhere you'll find it. When beta drops you're first in line with a ready workflow — and you'll be surprised how many of your "creative" hours are actually re-doable.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry" data-id="2026-04-19-figma-mcp" data-category="tools" data-published="2026-04-01" data-tags="figma,mcp,agents,design-system">
+          <div class="head">
+            <h6 class="headline">Figma opens up AI agents to write directly to files via MCP</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-01">Published April 2026 (exact date approximate)</time></p>
+          <p class="summary">Figma's April update lets AI agents create and modify real design files through an MCP server, using existing components, variables, and tokens. Teams can write Markdown "skills" that constrain how agents behave — essentially instruction sets that keep the agent inside your design system. Make kits and Make attachments also let you drop a PRD, brand guide, or SVGs directly into a Figma Make prompt for richer context.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is the first serious version of "agents on the design canvas." Being the person on your team who writes the skills files — who defines how an agent uses your tokens, what it's allowed to touch, where it has to ask — is a new, load-bearing design ops role. Worth learning the MCP + skills pattern now.</p>
+          <p class="source"><a href="https://www.figma.com/release-notes/" target="_blank" rel="noopener">Source — Figma Release Notes</a></p>
+          <section class="action" data-skills="design-ops,agent-orchestration" data-time="90">
+            <h6 class="action-title">Try this — 90 min</h6>
+            <p class="action-text">Write a skills.md for your design system. Define three rules an agent must follow (e.g. "never use colours outside the token set", "never break auto-layout", "always flag a component deviation in a comment"). Test it with the Figma MCP + Claude Code or Cursor on one real file. Most designers at your company haven't tried this yet — being fluent in agent governance is a role nobody has scoped, which is exactly the kind of role you want.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="time-chip">~90 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry" data-id="2026-04-19-stitch" data-category="tools" data-published="2026-03-01" data-tags="google,stitch,vibe-design,prototyping">
+          <div class="head">
+            <h6 class="headline">Google Stitch 2.0 formalises "vibe design"</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-03-01">Published March 2026 (rolling update)</time></p>
+          <p class="summary">Google rebuilt Stitch around an AI-native infinite canvas and added a voice canvas for conversational design. The March/April update is also when Google explicitly used the term "vibe design" — the parallel to "vibe coding," aimed at letting you describe a mood or direction and iterate before you know what you want. It's free and positioned as the most exploratory end of the AI design tool market (v0, Lovable, Bolt, Stitch).</p>
+          <p class="why"><strong>Why this matters for you:</strong> Stitch is where early-stage exploration is moving. Running a 20-minute "vibe pass" at the start of a project — before any frame gets made — is becoming a legitimate phase of the design process. Worth adding to your own workflow and teaching to your team.</p>
+          <p class="source"><a href="https://www.nxcode.io/resources/news/vibe-design-tools-compared-stitch-v0-lovable-2026" target="_blank" rel="noopener">Source — Vibe Design Tools 2026 (NxCode)</a></p>
+          <section class="action" data-skills="divergent-thinking,craft" data-time="20">
+            <h6 class="action-title">Try this — 20 min per project</h6>
+            <p class="action-text">At your next project kickoff, do a 20-minute vibe pass on Stitch before opening Figma. Capture three directions you wouldn't have explored otherwise. Compare against what you end up shipping. Add "vibe pass" as a named phase on your project template so it doesn't get skipped. Exploration is a skill; skipping it is how you end up shipping the obvious answer.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~20 min / project</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry" data-id="2026-04-19-productboard" data-category="tools" data-published="2026-02-01" data-tags="productboard,pm-tools,feedback,research">
+          <div class="head">
+            <h6 class="headline">Productboard adds AI that consolidates feedback from tickets, sales calls, and interviews</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-02-01">Published early 2026 (ongoing rollout)</time></p>
+          <p class="summary">Productboard's 2026 AI update ingests feedback from support tickets, sales call transcripts, and user interviews, then analyses it for trends and suggests what to build next. It's the clearest example yet of PM tools collapsing the research-to-roadmap loop into a single surface.</p>
+          <p class="why"><strong>Why this matters for you:</strong> if you partner with PMs, the data they'll bring to a design kickoff is about to change — synthesised themes and ranked pain points instead of a deck of quotes. Know what the tool produces so you can push back on the synthesis when it papers over real user tension.</p>
+          <p class="source"><a href="https://www.chatprd.ai/learn/best-ai-tools-for-product-managers" target="_blank" rel="noopener">Source — ChatPRD 2026 PM Tools</a></p>
+          <section class="action" data-skills="cross-functional,critique" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Schedule 30 min with your PM. Ask them to walk you through Productboard's AI theme detection on a real feedback pool. Ask two specific questions: "what did it miss?" and "what tension did it flatten?" Bring the answers to your next design critique. Being the designer who sees what the tool can't see — the weird quote, the edge case, the pattern that contradicts the theme — is a durable edge.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="case-studies">
+        <h5 class="category-label">Case Studies</h5>
+
+        <article class="entry" data-id="2026-04-19-phenomenon" data-category="case-studies" data-published="2026-04-10" data-tags="generative-ui,design-systems,accessibility,wcag">
+          <div class="head">
+            <h6 class="headline">Phenomenon Studio: one design system, five regional brands, 18% conversion lift</h6>
+            <span class="badge case-studies">Case Studies</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-10">Published April 2026</time></p>
+          <p class="summary">Phenomenon Studio published a case study on using generative UI components that adapt colour and imagery per regional brand, all managed by one developer in half the usual time. Regional conversion rates went up 18% on average within 90 days. Their ArtSpace marketplace project shipped a trilingual design system from day one and onboarded 1,200 artists in six months. They also flagged that AI contrast and alt-text auditing is collapsing accessibility work from days to minutes — useful with the WCAG 2.1 AA deadline this month.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is a rare concrete number on generative UI ROI. When you pitch AI-native design system work internally, this is the kind of case you cite. Also: if you haven't run an AI-assisted accessibility pass this quarter, do it before the deadline pressure hits.</p>
+          <p class="source"><a href="https://signalscv.com/2026/04/phenomenon-studio-how-generative-ui-and-ai-design-systems-are-redefining-website-redesign-services-in-2026/" target="_blank" rel="noopener">Source — Phenomenon Studio (Signals SCV)</a></p>
+          <section class="action" data-skills="case-making,advocacy" data-time="90">
+            <h6 class="action-title">Try this — 90 min</h6>
+            <p class="action-text">Pick one component in your design system. Prototype three regional or brand variants using Figma Make or Claude Design. Measure: time taken vs manual, quality gaps, what you had to fix by hand. Write up your own mini case study with the real numbers. You now have an internal citation to bring when you pitch AI-native design system work — and a proof you've actually done the thing, not just read about it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~90 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+  </section>
+</section>
+
+<!-- ARCHIVE_END -->
+
+<div class="empty-state hidden" id="empty-state">
+  No entries match your filters. Try clearing them.
+</div>
+
+<footer class="site-footer">
+  <p>Updated daily at 7:00 AM by a scheduled task. Archive preserves every day; newest briefing appears first. Publication dates reflect the original source. Your status and reflections are stored in your browser — use Export to back them up.</p>
+</footer>
+
+</main>
+
+<script>
+(function() {
+  // --- Storage ----------------------------------------------------------
+  var STORAGE_KEY = 'ai-design-news:v1';
+  var storageAvailable = (function() {
+    try {
+      var k = '__test__';
+      localStorage.setItem(k, k);
+      localStorage.removeItem(k);
+      return true;
+    } catch (e) { return false; }
+  })();
+
+  if (!storageAvailable) {
+    document.getElementById('storage-warning').classList.add('visible');
+  }
+
+  var memoryStore = {};
+  function loadState() {
+    if (!storageAvailable) return memoryStore;
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+  function saveState(state) {
+    if (!storageAvailable) { memoryStore = state; return; }
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+    catch (e) { memoryStore = state; }
+  }
+
+  var state = loadState();
+
+  // --- Skill ontology ---------------------------------------------------
+  var SKILL_LABELS = {
+    'judgement': 'Judgement',
+    'critique': 'Critique',
+    'systems-thinking': 'Systems thinking',
+    'strategy': 'Strategy',
+    'advocacy': 'Advocacy',
+    'agent-orchestration': 'Agent orchestration',
+    'design-ops': 'Design ops',
+    'differentiation': 'Differentiation',
+    'divergent-thinking': 'Divergent thinking',
+    'cross-functional': 'Cross-functional',
+    'automation': 'Automation',
+    'case-making': 'Case-making',
+    'tool-mastery': 'Tool mastery',
+    'craft': 'Craft'
+  };
+
+  // --- Per-entry wiring -------------------------------------------------
+  function initEntry(article) {
+    var id = article.getAttribute('data-id');
+    if (!id) return;
+    var action = article.querySelector('.action');
+    if (!action) return;
+
+    // Build controls
+    var controls = document.createElement('div');
+    controls.className = 'action-controls';
+    ['todo', 'trying', 'done'].forEach(function(s) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'status-btn';
+      btn.setAttribute('data-status', s);
+      btn.textContent = s === 'todo' ? 'To try' : s === 'trying' ? 'Trying' : 'Done';
+      btn.addEventListener('click', function() { setStatus(id, s); });
+      controls.appendChild(btn);
+    });
+    action.appendChild(controls);
+
+    // Reflection
+    var label = document.createElement('div');
+    label.className = 'reflection-label';
+    label.innerHTML = 'Reflection <span class="saved-indicator">Saved</span>';
+    action.appendChild(label);
+    var ta = document.createElement('textarea');
+    ta.className = 'reflection';
+    ta.placeholder = 'What did you learn? What worked, what didn\'t? (saved automatically)';
+    ta.value = (state[id] && state[id].reflection) || '';
+    var saveTimer;
+    ta.addEventListener('input', function() {
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(function() {
+        if (!state[id]) state[id] = {};
+        state[id].reflection = ta.value;
+        saveState(state);
+        var ind = label.querySelector('.saved-indicator');
+        ind.classList.add('visible');
+        setTimeout(function() { ind.classList.remove('visible'); }, 1200);
+      }, 400);
+    });
+    action.appendChild(ta);
+
+    renderEntryStatus(article);
+  }
+
+  function setStatus(id, status) {
+    if (!state[id]) state[id] = {};
+    if (state[id].status === status) {
+      delete state[id].status;
+    } else {
+      state[id].status = status;
+      if (status === 'done') state[id].completedAt = new Date().toISOString();
+    }
+    saveState(state);
+    var article = document.querySelector('article.entry[data-id="' + id + '"]');
+    renderEntryStatus(article);
+    renderTracker();
+    applyFilters();
+  }
+
+  function renderEntryStatus(article) {
+    if (!article) return;
+    var id = article.getAttribute('data-id');
+    var status = state[id] && state[id].status;
+    article.classList.remove('status-trying', 'status-done');
+    if (status === 'trying') article.classList.add('status-trying');
+    if (status === 'done') article.classList.add('status-done');
+    article.querySelectorAll('.status-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-status') === status);
+    });
+  }
+
+  // --- Tracker ----------------------------------------------------------
+  function renderTracker() {
+    var articles = document.querySelectorAll('article.entry');
+    var total = articles.length;
+    var counts = { todo: 0, trying: 0, done: 0 };
+    var skillProgress = {};
+
+    articles.forEach(function(a) {
+      var id = a.getAttribute('data-id');
+      var s = (state[id] && state[id].status) || 'todo';
+      counts[s]++;
+      var skills = (a.querySelector('.action') && a.querySelector('.action').getAttribute('data-skills') || '').split(',').filter(Boolean);
+      skills.forEach(function(skill) {
+        if (!skillProgress[skill]) skillProgress[skill] = { tried: 0, done: 0 };
+        if (s === 'trying' || s === 'done') skillProgress[skill].tried++;
+        if (s === 'done') skillProgress[skill].done++;
+      });
+    });
+
+    document.getElementById('stat-total').textContent = total;
+    document.getElementById('stat-todo').textContent = counts.todo;
+    document.getElementById('stat-trying').textContent = counts.trying;
+    document.getElementById('stat-done').textContent = counts.done;
+
+    // Focus
+    var focusText = document.getElementById('focus-text');
+    var tryingEntry = Array.from(articles).find(function(a) {
+      var id = a.getAttribute('data-id');
+      return state[id] && state[id].status === 'trying';
+    });
+    if (tryingEntry) {
+      var headline = tryingEntry.querySelector('.headline').textContent;
+      var action = tryingEntry.querySelector('.action-text').textContent;
+      focusText.innerHTML = 'You\'re working on <strong>' + escapeHtml(headline) + '</strong>. ' + escapeHtml(action.substring(0, 140)) + (action.length > 140 ? '…' : '');
+    } else {
+      // Suggest next based on skills with least progress
+      var suggest = null;
+      articles.forEach(function(a) {
+        var id = a.getAttribute('data-id');
+        if (state[id] && state[id].status) return;
+        if (!suggest) suggest = a;
+      });
+      if (suggest) {
+        var h = suggest.querySelector('.headline').textContent;
+        focusText.innerHTML = 'Suggested next exercise: <strong>' + escapeHtml(h) + '</strong>. Mark it "Trying" to commit.';
+      } else {
+        focusText.textContent = 'Everything tried. Time for a new day.';
+      }
+    }
+
+    // Skills chips
+    var skillsEl = document.getElementById('skills-built');
+    skillsEl.innerHTML = '';
+    Object.keys(SKILL_LABELS).forEach(function(skill) {
+      var label = SKILL_LABELS[skill];
+      var prog = skillProgress[skill] || { tried: 0, done: 0 };
+      var chip = document.createElement('span');
+      chip.className = 'chip';
+      if (prog.done > 0) chip.classList.add('earned');
+      else if (prog.tried > 0) chip.classList.add('progress');
+      chip.textContent = label + (prog.done > 0 ? ' · ' + prog.done : '');
+      skillsEl.appendChild(chip);
+    });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, function(c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c];
+    });
+  }
+
+  // --- Filters ----------------------------------------------------------
+  var q = document.getElementById('q');
+  var cat = document.getElementById('cat');
+  var statusf = document.getElementById('statusf');
+  var from = document.getElementById('from');
+  var to = document.getElementById('to');
+  var reset = document.getElementById('reset-btn');
+  var fstatus = document.getElementById('filter-status');
+  var emptyState = document.getElementById('empty-state');
+
+  function parseDate(s) { return s ? new Date(s + 'T00:00:00') : null; }
+
+  function applyFilters() {
+    var qVal = (q.value || '').trim().toLowerCase();
+    var catVal = cat.value;
+    var statusVal = statusf.value;
+    var fromDate = parseDate(from.value);
+    var toDate = parseDate(to.value);
+
+    var entries = document.querySelectorAll('article.entry');
+    var visibleCount = 0;
+
+    entries.forEach(function(el) {
+      var id = el.getAttribute('data-id');
+      var entryCat = el.getAttribute('data-category') || '';
+      var entryPub = el.getAttribute('data-published') || '';
+      var entryTags = el.getAttribute('data-tags') || '';
+      var entryStatus = (state[id] && state[id].status) || 'todo';
+      var text = (el.textContent || '') + ' ' + entryTags;
+      text = text.toLowerCase();
+
+      var pubDate = entryPub ? new Date(entryPub + 'T00:00:00') : null;
+
+      var matchesQ = !qVal || text.indexOf(qVal) !== -1;
+      var matchesCat = !catVal || entryCat === catVal;
+      var matchesStatus = !statusVal || entryStatus === statusVal;
+      var matchesFrom = !fromDate || (pubDate && pubDate >= fromDate);
+      var matchesTo = !toDate || (pubDate && pubDate <= toDate);
+
+      var show = matchesQ && matchesCat && matchesStatus && matchesFrom && matchesTo;
+      el.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    document.querySelectorAll('.category-group').forEach(function(g) {
+      g.classList.toggle('hidden', g.querySelectorAll('article.entry:not(.hidden)').length === 0);
+    });
+    document.querySelectorAll('.day-section').forEach(function(d) {
+      d.classList.toggle('hidden', d.querySelectorAll('article.entry:not(.hidden)').length === 0);
+    });
+    document.querySelectorAll('.month-section').forEach(function(m) {
+      m.classList.toggle('hidden', m.querySelectorAll('article.entry:not(.hidden)').length === 0);
+    });
+    document.querySelectorAll('.year-section').forEach(function(y) {
+      y.classList.toggle('hidden', y.querySelectorAll('article.entry:not(.hidden)').length === 0);
+    });
+
+    var total = entries.length;
+    var filtering = qVal || catVal || statusVal || fromDate || toDate;
+    fstatus.textContent = filtering
+      ? 'Showing ' + visibleCount + ' of ' + total + ' entries'
+      : total + ' entries total';
+    emptyState.classList.toggle('hidden', visibleCount !== 0);
+  }
+
+  [q, cat, statusf, from, to].forEach(function(el) {
+    el.addEventListener('input', applyFilters);
+    el.addEventListener('change', applyFilters);
+  });
+
+  reset.addEventListener('click', function() {
+    q.value = ''; cat.value = ''; statusf.value = ''; from.value = ''; to.value = '';
+    applyFilters();
+  });
+
+  // --- Export / Import --------------------------------------------------
+  document.getElementById('export-btn').addEventListener('click', function() {
+    var blob = new Blob([JSON.stringify(state, null, 2)], {type: 'application/json'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'ai-design-news-progress-' + new Date().toISOString().slice(0, 10) + '.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+
+  document.getElementById('import-btn').addEventListener('click', function() {
+    document.getElementById('import-file').click();
+  });
+  document.getElementById('import-file').addEventListener('change', function(e) {
+    var f = e.target.files[0];
+    if (!f) return;
+    var reader = new FileReader();
+    reader.onload = function(evt) {
+      try {
+        var data = JSON.parse(evt.target.result);
+        if (typeof data !== 'object' || data === null) throw new Error('Invalid file');
+        state = data;
+        saveState(state);
+        initAll();
+      } catch (err) {
+        alert('Could not import: ' + err.message);
+      }
+    };
+    reader.readAsText(f);
+  });
+
+  // --- Jump-to navigation ----------------------------------------------
+  var CATEGORY_LABELS = {
+    'tools': 'Tools',
+    'models': 'Models',
+    'case-studies': 'Case studies',
+    'industry': 'Industry',
+    'research': 'Research',
+    'design-tools': 'Design tools',
+    'design-systems': 'Design systems',
+    'generative-ui': 'Generative UI',
+    'mcp': 'MCP',
+    'image-gen': 'Image gen',
+    'video-gen': 'Video gen',
+    '3d-gen': '3D gen',
+    'coding-agents': 'Coding agents',
+    'pm-tools': 'PM tools',
+    'ux-research': 'UX research',
+    'policy': 'Policy',
+    'jobs-industry': 'Jobs & industry'
+  };
+
+  function tagSection(sec) {
+    // Ensure every day-section and category-group has an id we can scroll to.
+    var date = sec.getAttribute('data-date');
+    if (date && !sec.id) sec.id = 'day-' + date;
+    sec.querySelectorAll('.category-group').forEach(function(g) {
+      var c = g.getAttribute('data-category') || 'misc';
+      if (!g.id) g.id = 'cat-' + date + '-' + c;
+    });
+  }
+
+  function formatDayLabel(dateStr) {
+    if (!dateStr) return '';
+    var parts = dateStr.split('-');
+    if (parts.length !== 3) return dateStr;
+    var d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return months[d.getMonth()] + ' ' + d.getDate();
+  }
+
+  function buildJumpMenu() {
+    var body = document.getElementById('jump-panel-body');
+    if (!body) return;
+    var days = Array.prototype.slice.call(document.querySelectorAll('.day-section'));
+    // Only include days that currently have at least one visible entry.
+    days = days.filter(function(d) { return !d.classList.contains('hidden'); });
+    if (!days.length) {
+      body.innerHTML = '<p class="jump-hint" style="margin:0">Nothing matches your filters right now.</p>';
+      return;
+    }
+    var html = '';
+    days.forEach(function(d) {
+      tagSection(d);
+      var date = d.getAttribute('data-date') || '';
+      var label = formatDayLabel(date);
+      // Distinguish today.
+      if (d.id === 'today') label += ' · today';
+      var groups = Array.prototype.slice.call(d.querySelectorAll('.category-group'))
+        .filter(function(g) { return !g.classList.contains('hidden'); });
+      var chips = groups.map(function(g) {
+        var cat = g.getAttribute('data-category') || '';
+        var count = g.querySelectorAll('article.entry:not(.hidden)').length;
+        var catLabel = CATEGORY_LABELS[cat] || (cat.charAt(0).toUpperCase() + cat.slice(1));
+        return '<button type="button" class="jump-chip" data-jump="' + g.id + '">' +
+               catLabel + '<span class="count">' + count + '</span></button>';
+      }).join('');
+      html += '<div class="jump-panel__day">' +
+              '<button type="button" class="jump-panel__day-label" data-jump="' + d.id + '">' +
+              label + '</button>' +
+              '<div class="jump-panel__cats">' + chips + '</div>' +
+              '</div>';
+    });
+    body.innerHTML = html;
+  }
+
+  function scrollToEl(el) {
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Flash highlight on the jumped-to element.
+    el.classList.remove('jump-target');
+    // Force reflow so the animation restarts on repeat clicks.
+    void el.offsetWidth;
+    el.classList.add('jump-target');
+    window.setTimeout(function() { el.classList.remove('jump-target'); }, 1600);
+  }
+
+  function closeJump() {
+    var btn = document.getElementById('jump-btn');
+    var panel = document.getElementById('jump-panel');
+    if (!btn || !panel) return;
+    btn.setAttribute('aria-expanded', 'false');
+    panel.hidden = true;
+  }
+
+  function openJump() {
+    var btn = document.getElementById('jump-btn');
+    var panel = document.getElementById('jump-panel');
+    if (!btn || !panel) return;
+    buildJumpMenu();
+    btn.setAttribute('aria-expanded', 'true');
+    panel.hidden = false;
+  }
+
+  function wireJump() {
+    var btn = document.getElementById('jump-btn');
+    var panel = document.getElementById('jump-panel');
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function() {
+      if (panel.hidden) openJump(); else closeJump();
+    });
+    panel.addEventListener('click', function(e) {
+      var t = e.target;
+      if (t && t.getAttribute && t.getAttribute('data-jump')) {
+        var id = t.getAttribute('data-jump');
+        var target = document.getElementById(id);
+        closeJump();
+        // Delay so the layout settles before scrolling.
+        window.setTimeout(function() { scrollToEl(target); }, 40);
+      }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !panel.hidden) closeJump();
+      // "j" hotkey — ignore if user is typing into an input/textarea/select.
+      if (e.key === 'j' || e.key === 'J') {
+        var tag = (e.target && e.target.tagName) || '';
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        e.preventDefault();
+        if (panel.hidden) openJump(); else closeJump();
+      }
+    });
+  }
+
+  // --- Back-to-top ------------------------------------------------------
+  function wireBackToTop() {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function() {
+        btn.classList.toggle('visible', window.scrollY > 600);
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
+  // Rebuild the jump menu whenever filters change, so it matches what's visible.
+  // The original applyFilters listeners are already wired above; we just piggy-
+  // back with a lightweight hook that only does work if the panel is open.
+  function maybeRefreshJump() {
+    var panel = document.getElementById('jump-panel');
+    if (panel && !panel.hidden) buildJumpMenu();
+  }
+  [q, cat, statusf, from, to].forEach(function(el) {
+    el.addEventListener('input', maybeRefreshJump);
+    el.addEventListener('change', maybeRefreshJump);
+  });
+
+  // --- Init -------------------------------------------------------------
+  function initAll() {
+    document.querySelectorAll('.day-section').forEach(tagSection);
+    document.querySelectorAll('article.entry').forEach(initEntry);
+    renderTracker();
+    applyFilters();
+  }
+  initAll();
+  wireJump();
+  wireBackToTop();
+})();
+</script>
+</body>
+</html>
