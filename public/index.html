@@ -886,8 +886,133 @@
   <section class="month-section" data-month="2026-04">
     <h3 class="month">April 2026</h3>
 
-    <section class="day-section" id="today" data-date="2026-04-20">
-      <h4 class="day">Monday, April 20 <span class="day-date">— today's briefing</span></h4>
+    <section class="day-section" id="today" data-date="2026-04-21">
+      <h4 class="day">Tuesday, April 21 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry" data-id="2026-04-21-figma-make-sonnet-45" data-category="design-tools" data-published="2026-04-18" data-tags="figma,make,claude,sonnet,roundtrip">
+          <div class="head">
+            <h6 class="headline">Dylan Field ships Claude Sonnet 4.5 in Figma Make, pitching a tighter design-to-prototype roundtrip</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-18">Published April 18, 2026</time></p>
+          <p class="summary">Days after Anthropic launched Claude Design, Figma CEO Dylan Field posted on LinkedIn that Figma Make now runs on Claude Sonnet 4.5. He emphasised the Figma Design ↔ Make roundtrip: copy frames into Make, Sonnet generates a working prototype, results land back on the canvas for side-by-side comparison. Field called Sonnet 4.5 "a very impressive model" that "can plan ahead" and "reason about complex codebases." Notably, Make runs on Sonnet 4.5 while Anthropic's own Claude Design runs on Opus 4.7 — Figma is one model generation behind its new competitor by design.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Figma is publicly pivoting from "design tool with AI inside" to "design harness on top of someone else's foundation model" — and that someone else is now its direct competitor. The model-tier gap is the leading indicator: if Anthropic won't grant parity access on Opus 4.7, Figma's strategic dependency becomes a structural weakness. Worth thinking about before your next vendor conversation.</p>
+          <p class="source"><a href="https://www.linkedin.com/posts/dylanfield_spent-the-last-few-days-exploring-the-capabilities-activity-7378474821879341056-h54Z" target="_blank" rel="noopener">Source — Dylan Field on LinkedIn</a></p>
+          <section class="action" data-skills="strategy,critique" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one screen of an in-flight feature. Build it once in Figma Make on Sonnet 4.5 and once in Claude Design on Opus 4.7 from the same one-paragraph brief. Write a 1-page critique comparing the two outputs across hierarchy, accessibility, microcopy, and brand fit — naming the specific thing each missed that a senior designer would catch. Send the critique to your design lead. The critique itself, not the prototypes, is the artefact that demonstrates the judgement layer foundation models still don't have.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="case-studies">
+        <h5 class="category-label">Case studies</h5>
+
+        <article class="entry" data-id="2026-04-21-claude-design-day-review" data-category="case-studies" data-published="2026-04-18" data-tags="claude-design,review,hands-on,quality">
+          <div class="head">
+            <h6 class="headline">Hands-on review: Claude Design is "good enough" for internal work, not yet for client-facing sites</h6>
+            <span class="badge case-studies">Case studies</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-18">Published April 18, 2026</time></p>
+          <p class="summary">BSWEN's hands-on review put Claude Design through a full site redesign and drew a clean quality line. Internal prototypes, business sites, and early-stage product mockups came out near-production-quality with light cleanup. Client-facing and marketing-critical work still needed manual intervention after export. The reviewer singles out the Claude Design → Claude Code handoff as the genuinely new piece — one connected workflow from "I have an idea" to a deployed page. Heavy iteration burns through token quotas fast.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is one of the first independent quality lines on Claude Design, and it lines up with the historical pattern: AI design tools clear the bar for low-stakes work and get brittle on anything depending on brand nuance, accessibility edge cases, or content systems. The vendor case studies (Datadog: "week of briefs collapsed into one conversation") apply at one zoom level. Your job is to find your team's actual line.</p>
+          <p class="source"><a href="https://docs.bswen.com/blog/2026-04-18-claude-design-quality-professional/" target="_blank" rel="noopener">Source — BSWEN</a></p>
+          <section class="action" data-skills="critique,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one user-facing screen you've shipped to production. Recreate it in Claude Design from a 3-sentence brief, no extra context. Then write a structured critique listing five things only a designer who knows the product would catch — empty-state logic, edge cases, brand-system alignment, microcopy, accessibility hand-offs. That five-item list is your tangible answer to "what does the human designer add?" Save it; you'll need it the next time someone asks why design headcount is needed.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry" data-id="2026-04-21-claude-design-non-designers" data-category="industry" data-published="2026-04-20" data-tags="claude-design,figma,non-designers,market,unit-economics">
+          <div class="head">
+            <h6 class="headline">Analysis: Claude Design isn't aimed at designers — it's aimed at the non-designers Figma was banking on for growth</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-20">Published April 20, 2026</time></p>
+          <p class="summary">A Web And IT analysis published April 20 argues Claude Design's real target isn't pro designers — it's the PMs, founders, marketers, and ops folks who form Figma's fastest-growing user segment. That cohort drove the FigJam, Slides, and Make expansions; losing it to a conversational tool would shut off the top of Figma's growth funnel. The piece also flags a structural unit-economics gap: Claude Design runs Opus 4.7 inference at no marginal cost to Anthropic, while Figma Make pays Anthropic for Sonnet 4.5 tokens.</p>
+          <p class="why"><strong>Why this matters for you:</strong> the cross-functional users who currently touch Figma at your company — the PM who builds quick wireframes, the marketer who edits a one-pager, the ops lead in FigJam — are exactly the people about to drift to Claude Design. That sounds like relief, but it means you'll lose visibility into what non-designers ship, and the coordination cost of un-reviewed visual work will land back in design's lap.</p>
+          <p class="source"><a href="https://www.webanditnews.com/2026/04/20/claude-design-hits-figma-where-it-hurts-ai-eats-into-non-designer-users/" target="_blank" rel="noopener">Source — Web And IT News</a></p>
+          <section class="action" data-skills="systems-thinking,cross-functional" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">List the top five non-designer roles at your company who currently work in Figma (PM, marketing, ops, eng, support). For each, write one sentence answering: what they make today, what they'll likely make in Claude Design instead, and who reviews the output before it ships. Send as a 1-page memo to your design manager titled "What happens when our PMs use Claude Design." Most teams haven't thought about the review-and-coordination gap yet — being early on it is design leadership.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry" data-id="2026-04-21-anthropic-gov-design" data-category="policy" data-published="2026-04-20" data-tags="anthropic,government,fedramp,dod,strategy">
+          <div class="head">
+            <h6 class="headline">Anthropic pairs Claude Design push with $1 government access across all three branches</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-20">Published April 20, 2026</time></p>
+          <p class="summary">The AI Insider's April 20 piece reads Claude Design and Anthropic's deepening government engagement as one strategy. On the consumer side: Claude Design takes on Figma, Adobe, and Canva. On the enterprise side: Anthropic is offering Claude for Enterprise and Claude for Government to all three branches of the federal government for $1, has a $200M ceiling deal with the Department of Defense's Chief Digital and AI Office, and its models are now FedRAMP High certified — the strictest unclassified data tier.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Anthropic is going after both the highest-margin enterprise buyer (US federal) and the broadest creative consumer market at once. Federal-grade design constraints — Section 508 accessibility, plain-language rules, FedRAMP audit trails — will quietly leak into Anthropic's consumer products. Designers who already understand those standards become the obvious people to lead AI-assisted UI work for any regulated buyer, not just government.</p>
+          <p class="source"><a href="https://theaiinsider.tech/2026/04/20/anthropic-expands-into-ai-design-tools-while-deepening-u-s-government-engagement/" target="_blank" rel="noopener">Source — The AI Insider</a></p>
+          <section class="action" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Spend 20 minutes skimming the Section 508 accessibility refresh and the FedRAMP High control baseline. Then write a one-page risk list: three design patterns your current product would need to rethink if AI features rolled out to a regulated buyer (auth flows, audit logging UI, accessible forms, content moderation transparency, etc.). Share with one engineering lead and ask for one thing missing from your list. You've just turned a policy story into a concrete advocacy artefact — and put yourself on the design-strategy map for the next regulated-customer conversation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry" data-id="2026-04-21-watershed-agents-fellowship" data-category="tools" data-published="2026-04-21" data-tags="watershed,vertical-agents,sustainability,fellowship">
+          <div class="head">
+            <h6 class="headline">Watershed launches vertical AI agents for sustainability teams plus an 8-week customer fellowship</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-21">Published April 21, 2026</time></p>
+          <p class="summary">At SF Climate Week today, Watershed shipped two things: a set of vertical AI agents that automate ESG data cleaning and analysis (one pilot customer compressed a 5-hour data cleaning job to 20 minutes; an 80% average reduction in time-to-actionable-data across pilots), and the Watershed AI Fellowship — an 8-week cohort program that turns sustainability leaders at customer accounts into advanced AI operators of the platform. First cohort to be announced in May.</p>
+          <p class="why"><strong>Why this matters for you:</strong> two patterns worth stealing. (1) Vertical AI agents that encode domain rules will appear in every specialised ops function this year — the agent does the rote cleanup, the domain expert keeps the judgement calls. (2) A customer-cohort fellowship is a smart moat against foundation-model commoditisation: train your buyers to be power users and your tool stops being swappable. Both apply directly to design ops and design leadership programmes.</p>
+          <p class="source"><a href="https://www.manilatimes.net/2026/04/21/tmt-newswire/globenewswire/watershed-launches-new-ai-agents-and-sustainability-ai-fellowship/2324598" target="_blank" rel="noopener">Source — The Manila Times / GlobeNewswire</a></p>
+          <section class="action" data-skills="systems-thinking,differentiation" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">On paper, sketch a "design ops AI agent" for your specific team. Pick one repetitive process it would own (accessibility QA on staging builds, design token drift detection across files, microcopy consistency audits across surfaces). List the three judgement calls that still require a human designer. That list is the seed of a pitch for why design ops needs specialised humans, not just generalist agents — and you can hand it to your manager next 1:1.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-04-20">
+      <h4 class="day">Monday, April 20 <span class="day-date">— briefing</span></h4>
 
       <div class="category-group" data-category="tools">
         <h5 class="category-label">Tools</h5>
