@@ -1053,8 +1053,223 @@
   <section class="month-section" data-month="2026-04">
     <h3 class="month">April 2026</h3>
 
-    <section class="day-section" id="today" data-date="2026-04-22">
-      <h4 class="day">Wednesday, April 22 <span class="day-date">— today's briefing</span></h4>
+    <section class="day-section" id="today" data-date="2026-04-23">
+      <h4 class="day">Thursday, April 23 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+
+        <article class="entry" data-id="2026-04-23-deep-research-max" data-category="research" data-published="2026-04-21" data-tags="google,gemini,deep-research,mcp,agents,benchmarks">
+          <div class="head">
+            <h6 class="headline">Google ships Deep Research Max on Gemini 3.1 Pro — 93% on DeepSearchQA, MCP for private data, native charts</h6>
+            <span class="badge research">Research</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-21">Published April 21, 2026</time></p>
+          <p class="summary">On April 21 Google launched Deep Research and Deep Research Max in public preview, both built on Gemini 3.1 Pro. Max is the "take a long time and come back with something" tier: extended reasoning, MCP hooks into private corporate data, in-line charts and infographics generated via HTML or Nano Banana, and collaborative research plans you can edit before the agent runs. Benchmark numbers Google is willing to stand behind: DeepSearchQA 93.3% (up from 66.1% in December) and Humanity's Last Exam 54.6% (up from 46.4%). Available through the Gemini API via paid Interactions tiers, with Google Cloud rollout imminent.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is the first mainstream research agent with a credible MCP story for private data, which is the part that was holding back enterprise research synthesis. The research-adjacent work many designers and PMs already do — interview read-throughs, competitive scans, survey coding — is shifting from "I do it manually" to "I direct an agent and critique its output." The leverage moves to the planning step and the critique step; both are judgement work.</p>
+          <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noopener">Source — Google Blog</a></p>
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="90">
+            <h6 class="action-title">Try this — 90 min</h6>
+            <p class="action-text">Take a research synthesis you already did by hand in the last month (interview summary, competitive teardown, support-ticket theming for {focus}). Re-run it through Deep Research Max with the same sources. Write a three-column delta doc: "what it found that I missed," "what it got wrong or shallow," "what it skipped entirely because the sources needed context." That critique doc — not the agent's output — is your evidence of where your judgement still beats the machine on {domain} work.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~90 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Before your team's next major research synthesis, spend 45 min with your researcher or PM partner to decide — in writing — which sub-tasks the agent handles and which a human owns. Explicitly assign a "critique the agent" role to one person, with time budgeted. The artefact is a one-page split of responsibilities you can reuse next quarter. Without that split, the agent silently takes over and you lose the teachable hand-offs inside {domain}.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-page memo to your head of product or research: "Should we buy Deep Research Max access now, wait for Google Cloud GA, or standardise on a different agent?" Name the three research workstreams in {domain} where Max would move the needle first, one concrete risk (private-data leakage, hallucinated citations, decision-skipping), and a recommendation with a reviewable trigger ("revisit if Q3 research hours drop below X"). Keep it one page — the decision is the deliverable, not the analysis.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry" data-id="2026-04-23-gemini-enterprise-agent-platform" data-category="pm-tools" data-published="2026-04-22" data-tags="google,cloud-next,gemini-enterprise,agents,agent-designer,inbox">
+          <div class="head">
+            <h6 class="headline">Google Cloud Next: Gemini Enterprise Agent Platform bundles Studio, Designer, Registry, Gateway, and an agent Inbox</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-22">Published April 22, 2026</time></p>
+          <p class="summary">At Cloud Next 2026 on April 22, Google rolled the Vertex AI agent toolchain and a raft of new pieces — Agent Studio, Agent Designer (no/low-code flow builder), Agent-to-Agent Orchestration, Agent Registry, Agent Identity, Agent Gateway, Agent Observability — into a single Gemini Enterprise Agent Platform. The Gemini Enterprise app gains an Inbox for agent work, long-running agents (Google claims "up to days at a time"), Skills, and Projects. Partner agents now available inside the platform include Adobe, Atlassian, Deloitte, Lovable, Oracle, Replit, Salesforce, ServiceNow, and Workday. Google also announced TPU 8i and a $750M partner fund to push the whole ecosystem.</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is Google's pitch that shipping agents is a governance problem, not a model problem — and it's where PMs and design leads will spend the next year arguing about ownership. If your company uses Gemini Enterprise, "who designs the agent Inbox UX?" and "what does registry review look like?" are about to be real work. The Inbox in particular is a load-bearing UX pattern no vendor has yet gotten right — nearest prior art is email, and we all know how that turned out.</p>
+          <p class="source"><a href="https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development" target="_blank" rel="noopener">Source — Google Cloud Blog</a></p>
+          <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Sketch an Inbox redesign — on paper or in Figma — for a single agent doing {focus} work. Decide the three hardest questions upfront: what statuses the agent can be in, which ones require a human decision vs. a human review, and how a user triages 50 agent items without drowning. Write three one-line captions a senior PM could read in 30 seconds. The sketch and captions together are the artefact; they force decisions that every "AI inbox" demo handwaves.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Run a 45-min team conversation with one question on the wall: "What's the most dangerous agent we could ship in {domain} without a human review step, and what specific review step would fix it?" Don't let anyone off with "we need a human in the loop" — pin down which human, at which point, reviewing what output. Capture two decisions: one agent that needs blocking review, one that doesn't. Send to your PM partner the same day.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a one-page memo: "If our org standardises on Gemini Enterprise Agent Platform, what three design/PM decisions do we lock in this quarter?" Cover Inbox UX ownership, agent registry review criteria, and the observability dashboard. For each, name the decider and a fallback if the tooling disappoints. Close with one sentence on the risk of locking in before the category settles. The memo is the conversation-starter, not the final answer.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry" data-id="2026-04-23-chatgpt-workspace-agents" data-category="tools" data-published="2026-04-22" data-tags="openai,chatgpt,workspace-agents,codex,teams,slack">
+          <div class="head">
+            <h6 class="headline">OpenAI replaces custom GPTs with Codex-powered workspace agents — cloud-resident, Slack-aware, credit-priced after May 6</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-22">Published April 22, 2026</time></p>
+          <p class="summary">On April 22 OpenAI launched workspace agents in ChatGPT: shared, Codex-backed agents that handle repeatable team work (reports, code, message triage) within org-level permissions. They run in the cloud, survive the user closing the tab, and surface results in ChatGPT or Slack. OpenAI is explicit that workspace agents are the evolution of — and will replace — custom GPTs. Available in research preview on ChatGPT Business, Enterprise, Edu, and Teachers; free until May 6, 2026, then credit-priced. The canonical example OpenAI highlighted is an internal Slack agent that answers employee questions, links docs, and files tickets for unknowns.</p>
+          <p class="why"><strong>Why this matters for you:</strong> custom GPTs were the spiritual cousin of unused internal Notion templates — mostly forgotten, briefly owned by whoever set them up. Workspace agents are chasing the Zapier shape, which means they'll succeed or fail on *ownership model*, not model quality. If your org already has a team quietly maintaining internal tooling, this is going to land on their plate whether anyone plans for it or not. The credit-pricing cut-over on May 6 will force the ownership conversation anyway.</p>
+          <p class="source"><a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/" target="_blank" rel="noopener">Source — OpenAI</a></p>
+          <section class="action" data-variant="ic-designer" data-skills="automation,judgement" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one weekly task you'd happily delegate — PR summarisation, competitor monitoring, research-notes tagging, {focus} standup digest. Build it as a workspace agent this week before the free tier ends. Write a one-page run-log: where it broke, which judgement call you had to override, and what specifically you would never delegate even if the agent got better. The run-log is the part worth keeping — the agent itself is disposable.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Automation</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Run a 30-min team retro around one question: "Which custom GPTs did we actually use this year?" Most teams will find the honest answer is "one or two, and only while the author was around." Use that data to set a rule for which workspace agents to even try: each one needs a named owner, a review cadence, and an honest reason someone will notice if it breaks. Ship the rule to your team before May 6 when pricing changes.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-page memo to your head of ops: "Who owns workspace agents across {domain} once OpenAI switches to credit pricing on May 6?" Name the accountable person, the budget line, the review cadence, and the kill criteria (what evidence closes an agent down). This ownership decision — not the agent capability — is what determines whether any of this produces ROI. Send it before May 6 so the conversation happens before the bill does.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry" data-id="2026-04-23-maps-imagery-grounding" data-category="generative-ui" data-published="2026-04-22" data-tags="google,maps,street-view,veo,imagery-grounding,agentic-ui">
+          <div class="head">
+            <h6 class="headline">Google Maps Imagery Grounding: text-prompt new buildings into real Street View locations, animate with Veo</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-22">Published April 22, 2026</time></p>
+          <p class="summary">On April 22 at Cloud Next, Google Maps Platform launched Maps Imagery Grounding in private preview — prompt-driven generative imagery anchored to real-world Street View locations. Enterprise users describe a structure (a planned construction project, a film set, a new storefront), have Google's image model render it inside the actual Street View panorama of a U.S. address, and optionally animate the result via Veo. Alongside, the Maps Agentic UI Toolkit renders structured place data directly inside chat interfaces. It's Google's first serious pitch for "generative UI tied to real-world coordinates."</p>
+          <p class="why"><strong>Why this matters for you:</strong> this is one of the first generative-UI surfaces where ground truth matters — if the model invents a sidewalk that isn't there, someone's architect brief is broken. It's also the first time "is this photo real?" is a product-surface question for every location-based product. If {focus} touches addresses, listings, inspections, or maps, your verification flow is about to need a new layer that honestly says "this part is generated."</p>
+          <p class="source"><a href="https://mapsplatform.google.com/resources/blog/powering-the-next-era-of-agentic-experiences-announcing-new-grounding-capabilities/" target="_blank" rel="noopener">Source — Google Maps Platform</a></p>
+          <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one location-based feature in {focus} (or sketch a fictional one for {domain}) and design a five-signal trust checklist: how does the UI tell a user "this image is generated, anchored to a real place"? Caption, corner badge, provenance popover, toggle-to-real, subtle motion, watermark — pick five and sketch them on one screen. The sketch makes the trust contract concrete instead of waving at "we'll label it clearly."</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Run a 30-min team conversation with legal or trust-and-safety in the room: "If a user generates Street-View imagery of a property they don't own, who's liable — the platform or the user?" Force the team past "it depends" to three specific design constraints (e.g. watermark required, consent checkbox, export disabled, exif preserved). Capture them as a one-page constraint brief. Share with your PM — this is the kind of thing that gets legislated if designers don't name it first.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-page memo: "How does generative imagery grounded to real addresses change the trust contract in {domain}?" Pick the two verticals most exposed (real estate, insurance, construction, travel, media), name one new review step each should adopt, and one differentiator your product could own if you move before Google expands the private preview. End with a single clear recommendation — "we pilot," "we watch," "we avoid" — and the trigger for revisiting.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry" data-id="2026-04-23-google-tpu8i-partner-fund" data-category="industry" data-published="2026-04-22" data-tags="google,tpu-8i,infrastructure,cloud-next,partners,fund">
+          <div class="head">
+            <h6 class="headline">Google Cloud Next: TPU 8i inference pods (1,152 chips, 3x SRAM) plus $750M fund to arm 120,000 partners with agentic AI</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-22">Published April 22, 2026</time></p>
+          <p class="summary">At Cloud Next 2026 on April 22, Google announced TPU 8i — its 8th-generation TPU, inference-optimised, with 1,152 chips per pod and 3x the on-chip SRAM of the previous generation. Separately, Google Cloud committed $750M to its 120,000-partner ecosystem to accelerate joint customers' agentic AI work. The two announcements together are a bet that low-latency inference plus partner distribution is the path to making enterprise agents sticky — essentially mirroring Amazon's Trainium-plus-capital approach in the Anthropic deal, but aimed at partner flywheels instead of a single model lab.</p>
+          <p class="why"><strong>Why this matters for you:</strong> you read yesterday's Amazon–Anthropic $25B story. Today's announcement is the inverse playbook: buy distribution and lower inference cost rather than buy model access. The signal for designers and PMs: AI product economics over the next 18 months are going to be shaped by which cloud won your stack, not which model scored highest on a benchmark. If you're still evaluating AI tooling by "which model is best today," you're picking the wrong axis for {domain} decisions.</p>
+          <p class="source"><a href="https://www.googlecloudpresscorner.com/2026-04-22-Google-Cloud-Commits-750-Million-to-Accelerate-Partners-Agentic-AI-Development" target="_blank" rel="noopener">Source — Google Cloud Press</a></p>
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,cross-functional" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Write a ten-line brief for {focus}: (a) which cloud your current AI features run on, (b) the worst latency users would notice during a regional outage on that cloud, (c) one specific UX change that would make your product feel less broken under provider failure. If you don't know (a) or (b), book a 15-min chat with your nearest infra engineer — that conversation is the real artefact. It reframes "AI risk" from press-release abstraction to something a user would actually feel.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Bring the TPU-8i / Trainium story to your next ops sync and ask one question: "If inference cost halves in 12 months on our primary provider, what AI features in {domain} would we unlock that we're quietly deprioritising today because they're too slow or too expensive?" The list of "surprises we stopped asking for" is the artefact. It tells you where the roadmap is already quietly constrained by infra economics you didn't name out loud.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a one-page memo: "Should we design our roadmap assuming a Google+AWS cloud duopoly lock-in for the next three years?" Name two product decisions for {domain} that should shift today under that assumption (region coverage, latency SLA, fallback provider pilot), and one specific risk if the bet is wrong (regulatory intervention, Anthropic going all-AWS, a new entrant). End with a single recommendation and one sentence on the review trigger. This is a memo worth surfacing to whoever writes your annual plan.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-04-22">
+      <h4 class="day">Wednesday, April 22 <span class="day-date">— briefing</span></h4>
 
       <div class="category-group" data-category="image-gen">
         <h5 class="category-label">Image gen</h5>
