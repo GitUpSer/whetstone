@@ -1053,8 +1053,210 @@
   <section class="month-section" data-month="2026-04">
     <h3 class="month">April 2026</h3>
 
-    <section class="day-section" id="today" data-date="2026-04-23">
-      <h4 class="day">Thursday, April 23 <span class="day-date">— today's briefing</span></h4>
+
+    <section class="day-section" id="today" data-date="2026-04-24">
+      <h4 class="day">Friday, April 24 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-04-24-gpt-55-launch"
+                 data-category="models"
+                 data-published="2026-04-23"
+                 data-tags="openai,gpt-5-5,codex,agentic,frontier-models,benchmarks">
+          <div class="head">
+            <h6 class="headline">OpenAI releases GPT-5.5 — first fully retrained base model since GPT-4.5, benchmarks at 82.7% on Terminal-Bench 2.0</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-23">Published April 23, 2026</time></p>
+          <p class="summary">OpenAI released GPT-5.5 on April 23, its first fully retrained base model since GPT-4.5 — not a fine-tune of GPT-5.4, but a ground-up rebuild with an agentic workload as the primary design target. The model scores 82.7% on Terminal-Bench 2.0 and 84.9% on GDPval; GPT-5.5 Pro scores 39.6% on FrontierMath Tier 4, nearly double Anthropic's Claude Opus 4.7. It browses, runs code, edits files, and moves across tools until a task is complete. Available April 23 to Plus, Pro, Business, and Enterprise ChatGPT users; GPT-5.5 Pro for Pro/Business/Enterprise. Priced at $5/1M input tokens and $30/1M output tokens — double GPT-5.4. This is the sixth OpenAI model release in roughly four months.</p>
+          <p class="why"><strong>Why this matters for you:</strong> the six-week cadence from 5.4 to 5.5 is the story, not the benchmark numbers. OpenAI is shipping models faster than product teams can absorb them, which means the skill being tested right now is judgement about which capabilities to actually build on vs. which to wait out. GPT-5.5's agentic design also resets what "completion" means in a product: the model finishes multi-step work unsupervised, which raises hard questions about where humans stay in the loop and what oversight UX needs to look like.</p>
+          <p class="source"><a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener">Source — OpenAI</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Pick one user flow in {focus} where an agent completing steps unsupervised would go wrong in a way users wouldn't immediately notice. Write a one-page failure mode analysis: name the exact step, the failure mode, and the oversight UI intervention that would catch it before it causes harm. This is not a theoretical exercise — sketch the intervention in Figma or on paper. The artefact is the sketch plus a one-paragraph rationale a PM could act on for {domain} work.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="strategy,design-ops" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Run a 30-min team sync with one agenda item: "Which features are we holding back from building until the model stabilises, and which are we building now — and why?" Force the team to commit in writing to at least two specific decisions. The point is not the answer but the discipline: without explicit decisions, teams default to building everything at once and then scrambling when the model changes under them. Share the decision log with your PM that day.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-page memo: "The model release cadence is now six weeks. What is our upgrade policy?" Address three decisions: how quickly the team moves to each new model, who owns the regression testing, and what the policy is when a new model changes existing behavior in {domain}. Close with one paragraph on the compounding risk of staying on an older model vs. the compounding risk of constant migration. The memo forces an organizational decision that most teams are avoiding.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-04-24-figma-chatgpt-images-2"
+                 data-category="design-tools"
+                 data-published="2026-04-21"
+                 data-tags="figma,openai,chatgpt-images,image-gen,figjam,enterprise">
+          <div class="head">
+            <h6 class="headline">Figma swaps in ChatGPT Images 2.0 across all apps and ships enterprise AI credit management by billing group</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-21">Published April 21, 2026</time></p>
+          <p class="summary">On April 21, Figma updated the default image model in Make Image and Edit Image to ChatGPT Images 2.0 across Figma Design, Draw, Slides, Buzz, FigJam, and Figma Weave. The new model produces cleaner infographics, better multilingual text rendered inside images, stronger face consistency across edits, and more reliable in-context editing. The same release also gave Enterprise admins a credit management dashboard: per-billing-group credit assignment, flexible over-assignment or hard caps, and consumption monitoring. An org-level subscription model for AI credits is coming to Professional plan in May 2026. The image toolkit expansion (Expand, Erase, Isolate, Vectorize) also arrived in FigJam, Slides, and Buzz in beta.</p>
+          <p class="why"><strong>Why this matters for you:</strong> the credit management dashboard is the more significant signal. It's Figma acknowledging that AI usage at enterprise scale is a governance problem, not just a feature. The immediate practical question for design leaders is who owns the credit budget, what counts as waste, and whether generative image usage needs any review gate before it lands in shipped assets. Most orgs haven't answered those questions yet.</p>
+          <p class="source"><a href="https://releasebot.io/updates/figma" target="_blank" rel="noopener">Source — Figma Release Notes via Releasebot</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Generate five variations of a hero illustration for a current or hypothetical {focus} feature using ChatGPT Images 2.0 in Figma. Then write a one-paragraph critique of each: what specifically is wrong or unconvincing about the visual, and why. The critique should name the design principle being violated — not "it looks off" but "the hierarchy is wrong because X" or "the face is inconsistent with the brand because Y." The five critiques together are the artefact, and they reveal where your taste is still ahead of the model's output for {domain} work.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Before your org hits the credit management controls, draft a one-page AI asset policy for your team: what types of AI-generated images are approved for production without human review, what require a named reviewer, and what are banned outright regardless of quality. This is not a legal document — it's a working agreement you can revise quarterly. Ship a first draft to your team and give it two weeks to collect objections. The practice of having the policy matters more than the specific rules at the start.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="systems-thinking,case-making" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Map the full AI content supply chain for your {domain} product: from prompt to generated asset to review to production to user-facing screen. Identify two chokepoints where the chain currently has no oversight and two where oversight exists but is redundant. Write a one-paragraph recommendation for each chokepoint: remove the redundant gate, add a lightweight one where nothing exists. The map and four paragraphs are the deliverable — this is the kind of design-ops infrastructure analysis that rarely gets done until something goes wrong.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-04-24-ada-wcag-deadline-extension"
+                 data-category="policy"
+                 data-published="2026-04-20"
+                 data-tags="accessibility,wcag,ada,doj,compliance,government">
+          <div class="head">
+            <h6 class="headline">DOJ extends ADA Title II WCAG 2.1 AA deadline four days before it was supposed to land — large-population governments get until April 2027</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-20">Published April 20, 2026</time></p>
+          <p class="summary">Today — April 24, 2026 — was the original ADA Title II compliance deadline requiring all state and local governments serving populations over 50,000 to meet WCAG 2.1 Level AA across their web content and mobile apps. On April 20, four days before the deadline, the Department of Justice published an Interim Final Rule extending the compliance date for those large-population entities to April 26, 2027, and to April 26, 2028 for smaller entities and special districts. The IFR was triggered by widespread non-readiness among courts, educational institutions, and government agencies. Requirements cover all web content, online forms, documents, student portals, and mobile applications — they are not limited to the public-facing homepage.</p>
+          <p class="why"><strong>Why this matters for you:</strong> the last-minute extension is a credibility data point that accessibility mandates are hard to enforce, which makes internal urgency arguments harder to make. The counter-case is stronger: private companies under ADA Title III did not get an extension, and accessibility litigation against them is unchanged. If you work on consumer or B2B products, the enforcement floor is still the courts, and WCAG 2.1 AA remains the standard a judge will reach for. The extension also exposes how much accessibility debt governments accumulated despite years of notice — which is a useful benchmark for internal design-ops conversations.</p>
+          <p class="source"><a href="https://robbins-schwartz.com/news/law-alerts/2026/04/20/doj-extends-ada-title-ii-wcag-web-accessibility-deadlines/" target="_blank" rel="noopener">Source — Robbins Schwartz</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Run a WCAG 2.1 AA spot-audit on the {focus} flow you're currently shipping. Use axe DevTools or Figma's A11y Annotations plugin — don't self-assess from memory. Write a triage list: issues that break the flow entirely, issues that create friction, issues that are cosmetic. For each blocking issue, sketch the smallest fix that satisfies WCAG and the smallest fix that also improves the design. The gap between those two answers is where accessibility and craft intersect, and it's worth documenting for {domain} work.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="advocacy,cross-functional" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Government entities with years of notice still couldn't meet the April 24 deadline — use that as a conversation opener with your engineering and PM counterparts. In 30 min, align on three things: which WCAG 2.1 AA criteria your current sprint is most likely to violate, who is responsible for catching them (designer, engineer, or QA), and what the review gate looks like before shipping. If no one can name a specific person, that's the thing to fix first. Write the alignment down and share it with the group.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-page memo framing accessibility compliance as a risk management question, not a design quality argument: what is the litigation exposure from your current state, what would a WCAG 2.1 AA audit cost vs. a settlement, and what is the reputational cost of a public complaint in {domain}. Include one specific structural recommendation — a design review gate, an automated CI check, or a quarterly audit cadence — and a concrete owner. The memo is meant to be sent to a legal or product-ops stakeholder, not your design team. Accessibility investment arguments framed in risk terms move faster in {domain} organizations.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-04-24-apple-wwdc-siri-ios27"
+                 data-category="industry"
+                 data-published="2026-04-20"
+                 data-tags="apple,wwdc,siri,ios27,conversational-ui,delegative-ui">
+          <div class="head">
+            <h6 class="headline">Apple's WWDC 2026 teaser hints at ambient Siri redesign for iOS 27 — Gemini-powered, multi-step tasks, Dynamic Island integration</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-20">Published April 20, 2026</time></p>
+          <p class="summary">Apple's WWDC 2026 keynote is scheduled for June 8 in Cupertino. The official teaser artwork — layered luminous gradients and continuous motion depth — strongly suggests a Siri redesign moving from the existing modal full-screen invocation to a persistent Dynamic Island-integrated presence. Bloomberg reported that Apple's next-generation Foundation Models will run on Google Gemini infrastructure, giving the new Siri access to long-horizon reasoning. If delivered, iOS 27 Siri would handle multi-step commands in a single request — "book dinner somewhere near my meeting, message the group, and add it to the calendar" — without step-by-step user confirmation. Apple has said nothing officially; WWDC will be the first public confirmation of scope.</p>
+          <p class="why"><strong>Why this matters for you:</strong> if iOS 27 Siri becomes the primary interface for multi-step tasks on iPhone, native app designers face a two-surface problem: flows designed for direct tap interaction, and flows that need to work when an AI agent calls them with no screen visible. That's not a UI detail — it's a core architecture question about what actions expose to the system, what side effects are acceptable when triggered headlessly, and how confirmation UX works when there's no modal to show. The designers who work this out early will have a head start on every app that needs to survive Siri integration.</p>
+          <p class="source"><a href="https://macdailynews.com/2026/04/20/apples-wwdc-2026-teaser-hints-at-a-major-siri-redesign-in-ios-27/" target="_blank" rel="noopener">Source — MacDailyNews</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Take one existing flow in your {focus} product — onboarding, core action, settings — and map every step that requires a user decision vs. every step that could be completed headlessly by an agent that knows the user's context. For the headlessly-completable steps, sketch what confirmation looks like in a Dynamic Island surface (16px of height, no modal). The constraint is the point: it forces you to decide which decisions are genuinely user-owned vs. which you've just been making users click through out of habit in {domain}.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="strategy,cross-functional" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Before WWDC in June, run a 45-min session with your mobile engineering lead and PM to answer two questions: which of your app's core actions are worth registering with iOS SiriKit or App Intents, and what would break in {domain} if Siri completed those actions with no human confirmation? The output is a short list of "Siri-safe" and "Siri-unsafe" actions, and a plan for what to build for WWDC vs. wait and see. Getting that list agreed before June means you won't be scrambling in July.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,case-making" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a pre-WWDC memo to your leadership: "Three scenarios for how iOS 27 Siri could affect our {domain} product, and one pre-emptive investment for each." Scenarios might include Siri completing your core user journey before users open the app (threat), Siri driving qualified users deeper into your app via ambient suggestions (opportunity), or Siri misinterpreting your product's actions and causing data errors (risk requiring hardening). Each scenario gets one specific investment you could start now. The memo is useful regardless of what Apple ships — it forces clarity about what in your product is actually defensible.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-04-23">
+      <h4 class="day">Thursday, April 23 <span class="day-date">— briefing</span></h4>
 
       <div class="category-group" data-category="research">
         <h5 class="category-label">Research</h5>
