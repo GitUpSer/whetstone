@@ -1054,7 +1054,212 @@
     <h3 class="month">April 2026</h3>
 
 
-    <section class="day-section" id="today" data-date="2026-04-24">
+
+    <section class="day-section" id="today" data-date="2026-04-25">
+      <h4 class="day">Saturday, April 25 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-04-25-google-40b-anthropic"
+                 data-category="industry"
+                 data-published="2026-04-24"
+                 data-tags="google,anthropic,investment,infrastructure,compute,valuation">
+          <div class="head">
+            <h6 class="headline">Google commits up to $40 billion to Anthropic — $10B now, $30B contingent on milestones, at $380B valuation</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-24">Published April 24, 2026</time></p>
+          <p class="summary">Google announced on April 24 that it will invest up to $40 billion in Anthropic: $10 billion in cash now at a $380 billion valuation, with the remaining $30 billion contingent on performance milestones. Anthropic will also receive up to 5 gigawatts of compute from Google's infrastructure. The deal follows Amazon's $25 billion commitment, giving Anthropic two hyperscaler backers with overlapping compute contracts. Anthropic's annual run-rate revenue has crossed $30 billion — up from $9 billion at end of 2025 — driven in large part by Claude Code adoption among enterprise developers. Google's prior stake in Anthropic reportedly stood at roughly 14% before this round.</p>
+          <p class="why"><strong>Why this matters for you:</strong> when two of the three largest cloud providers are each committed to $25–40B in one AI lab, that lab's models become the default substrate for enterprise product teams, not a considered choice. Designers who build on Claude or Gemini are now building on infrastructure that is explicitly designed to stay competitive — but also infrastructure where vendor lock-in risk is real and worth naming in product decisions.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,differentiation" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Pick one AI-powered feature in {focus} that relies on a specific model or API. Write a half-page vendor dependency audit: which capabilities are model-specific, which are portable, and what would break if your team had to switch providers in 90 days. The artefact is a table with three columns — capability, portability (high/low), and mitigation — plus a one-sentence verdict on whether the current architecture is defensible for {domain} work.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="strategy,cross-functional" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Run a 30-minute structured conversation with your engineering lead using this framing: "If Google and Amazon are both all-in on Anthropic, what does that mean for our AI stack in 18 months?" Prepare three specific questions in advance about model lock-in, compute costs, and what an exit ramp would look like. Write up a one-page summary of what you learned and one decision or question to escalate. The artefact is the written summary, not the conversation itself.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a 300-word internal memo titled "What Google's $40B Anthropic bet means for {domain} product teams." The memo must take a position on one of these: (a) this accelerates commoditisation of AI features and your differentiation must be elsewhere, (b) this creates a stable enough platform to build deeper on Claude, or (c) the concentration risk means you should be hedging now. State which thesis you hold, the two strongest counter-arguments, and one concrete recommendation for your product org.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="design-systems">
+        <h5 class="category-label">Design systems</h5>
+
+        <article class="entry"
+                 data-id="2026-04-25-design-md-open-source"
+                 data-category="design-systems"
+                 data-published="2026-04-23"
+                 data-tags="google,stitch,design-md,design-systems,open-source,mcp">
+          <div class="head">
+            <h6 class="headline">Google open-sources DESIGN.md — a portable spec format that makes brand rules readable by any AI agent</h6>
+            <span class="badge design-systems">Design systems</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-23">Published April 23, 2026</time></p>
+          <p class="summary">Google Labs open-sourced the DESIGN.md draft specification on April 23 under Apache 2.0. The format is a markdown file that encodes a design system's reasoning — colour palettes, typography, spacing, component patterns, interaction rules — in a way that is both human-readable and machine-readable by AI agents. When committed to a repository, it functions as persistent context: Claude Code, Cursor, Copilot, and Stitch's own Gemini-powered agent automatically read the file and apply brand rules without requiring per-prompt repetition. The spec can be authored by hand in any editor and connects to development tools through Stitch's MCP server and SDK. The draft is open for community contribution.</p>
+          <p class="why"><strong>Why this matters for you:</strong> DESIGN.md is the first serious attempt to make a design system machine-readable at the reasoning layer, not just the token layer. If it gets traction, the practice of documenting design decisions — which designers have always done poorly — suddenly has a functional audience that acts on it. The skill gap this creates is knowing how to write system intent in prose that an agent can operationalise, not just a variables file it can parse.</p>
+          <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-design-md/" target="_blank" rel="noopener">Source — Google Blog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Take one component from your current design system — a button, a card, or a form field — and write its DESIGN.md entry by hand. Don't just list token values: write the reasoning. Why this corner radius and not smaller? Why this colour on disabled state? What interaction principle does the hover state express? The artefact is a 200–400 word DESIGN.md block for that one component. Then give it to Claude Code or Cursor and ask it to implement the component — note where the agent got it right vs. where it ignored your intent.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Map your team's current design system documentation against what DESIGN.md expects. Score each section (colour, typography, spacing, components, interaction principles) as: well-reasoned and written in prose, token-only with no reasoning, or missing entirely. Write a one-page gap analysis for {domain} work: which sections an AI agent could act on today, and which it would misuse because the reasoning is absent. The artefact is the scored map plus a prioritised list of three sections to write first.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">DESIGN.md makes design intent portable across tools. Write a 250-word strategic brief answering: does a portable, open design-system spec format help or hurt your team's competitive position in {domain}? Consider: if any agent can read your brand rules, what is left that is proprietary? If your competitors' design systems are also machine-readable, does quality of reasoning in the spec become a differentiator? State a clear position and name one action — adopt, contribute to, or ignore DESIGN.md — with the rationale.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-04-25-figma-weave-community"
+                 data-category="design-tools"
+                 data-published="2026-04-24"
+                 data-tags="figma,weave,workflows,community,ai-native,generative">
+          <div class="head">
+            <h6 class="headline">Figma Weave launches 20+ workflow templates on Figma Community — image-to-video, 3D gen, and multi-model pipelines</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-24">Published April 24, 2026</time></p>
+          <p class="summary">Figma introduced Figma Weave workflows as a new resource type on Figma Community, shipping 20+ templates built by the Weave team. The templates cover image-to-video conversion, 3D model generation, reference style combination, multi-model comparisons, and illustration set generation. Each workflow runs on a visual canvas where every pipeline step and intermediate result is visible, reproducible, and shareable. Teams can duplicate and customise workflows without rebuilding pipelines from scratch. DoorDash, Lyft, and NVIDIA are among early adopters. A full integration of Weave into the main Figma product is planned for later in 2026.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Weave turns generative AI from a one-shot prompt into a repeatable, auditable pipeline — which is the shift that makes it usable in professional production work rather than just exploration. The catch is that building good workflows requires understanding what each model in the chain is optimised for, which is a new kind of tool literacy that sits between design craft and prompt engineering.</p>
+          <p class="source"><a href="https://www.figma.com/blog/five-figma-weave-workflows/" target="_blank" rel="noopener">Source — Figma Blog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one of the 20+ Weave community templates — image-to-video or style combination are good starting points — and run it on an asset from {focus}. Then write a one-page critique of the output: what the pipeline got right, where it introduced visual inconsistencies, and what you would need to add or change to make the output production-ready for {domain} work. The artefact is the critique, not the generated asset. The goal is building a vocabulary for evaluating pipeline quality, not just prompting for a result.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,agent-orchestration" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Map one recurring asset-production task in your team's workflow — marketing imagery, UI illustrations, or brand photography variants — and write a one-page Weave workflow spec for it: what the input is, which pipeline steps are needed, what the acceptance criteria are for each step's output, and who reviews it before it ships. The artefact is the spec, not the workflow itself. The goal is to see whether the task is actually automatable or whether it contains judgment calls that break pipelines.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="systems-thinking,case-making" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Weave makes generative pipelines shareable on a public marketplace. Write a 200-word brief answering: in {domain}, which asset types does this commoditise first, and what is the resulting impact on your team's headcount or scope? Name one type of generative work your team currently does that will likely move to a shared Weave template within 12 months, and one type that won't — and explain the difference.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="mcp">
+        <h5 class="category-label">MCP</h5>
+
+        <article class="entry"
+                 data-id="2026-04-25-figma-mcp-write-access"
+                 data-category="mcp"
+                 data-published="2026-04-24"
+                 data-tags="figma,mcp,agents,write-access,components,automation">
+          <div class="head">
+            <h6 class="headline">Figma's MCP server gains write access — agents can now create and modify design files using existing components and variables</h6>
+            <span class="badge mcp">MCP</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-24">Published April 24, 2026</time></p>
+          <p class="summary">Figma updated its MCP server to support write operations, allowing AI agents connected via MCP to create layers, place components, update variables, and modify real Figma files — not just read them. Agents now respect existing component libraries and design tokens when writing, so outputs land in the correct structure rather than generating freeform shapes. The update also introduces Skills, which give teams control over which agent actions are permitted within a given project. This makes Figma the first major design tool to offer agent write-access through the standard MCP protocol, meaning any MCP-compatible client — Claude Code, Cursor, or custom tooling — can drive design file changes programmatically.</p>
+          <p class="why"><strong>Why this matters for you:</strong> read-only MCP let agents understand a design; write access lets them act on it. That is a qualitative shift. The immediate practical question is not "what can an agent build?" but "what should a designer review before an agent-written frame ships?" — which means the skill being tested is designing good review gates, not avoiding agent use entirely.</p>
+          <p class="source"><a href="https://releasebot.io/updates/figma" target="_blank" rel="noopener">Source — Figma Release Notes via Releasebot</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,agent-orchestration" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Set up a Claude Code or Cursor session with Figma MCP write access enabled. Ask it to create a simple screen in {focus} using components from your library. Don't guide it step by step — give the task and let it run. Then write a one-page review: which decisions the agent made correctly, which it got wrong, and what review criteria you would add to a checklist before allowing agent-written frames to enter a shared file. The artefact is the checklist plus a rationale for each item.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-page policy for your team on agent write access to shared Figma files. The policy must answer: which file types are off-limits for agent writes (e.g. the design system source file), what the approval flow is before agent-created frames enter a shared page, and who is accountable for agent-introduced regressions. Frame it as a team norm, not a technical restriction — something you could present at a team meeting and get buy-in on within 20 minutes.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="systems-thinking,strategy" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Figma MCP write access means agents can now participate in the design file, not just read it. Write a 200-word brief mapping the second-order effects for {domain} product teams: if agents can write Figma files, what changes about how design reviews work, how version history is used, and how design quality is defined? Identify one process in your current workflow that will need to change within six months and name the specific change needed.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-04-24">
       <h4 class="day">Friday, April 24 <span class="day-date">— today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
