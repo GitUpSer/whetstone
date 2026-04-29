@@ -1058,7 +1058,209 @@
 
 
 
-    <section class="day-section" id="today" data-date="2026-04-28">
+    <section class="day-section" id="today" data-date="2026-04-29">
+      <h4 class="day">Wednesday, April 29 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-04-29-msft-openai-restructure"
+                 data-category="industry"
+                 data-published="2026-04-27"
+                 data-tags="microsoft,openai,azure,aws,exclusivity,agi-clause">
+          <div class="head">
+            <h6 class="headline">Microsoft and OpenAI rewrite their deal: exclusivity ends, AGI clause dissolved, revenue cap added</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-27">Published April 27, 2026</time></p>
+          <p class="summary">Microsoft and OpenAI restructured their commercial agreement on April 27, ending Microsoft's exclusive license to OpenAI's IP and clearing OpenAI to ship its products through AWS and Google Cloud. The license still runs through 2032, but is now non-exclusive. The infamous AGI clause — which would have let OpenAI walk away from Microsoft if it declared AGI — has been removed entirely; in exchange, Microsoft gets a guaranteed (but capped) 20% revenue share through 2030. OpenAI's $250B Azure commitment stays in place, and Microsoft retains right of first refusal on hosting new OpenAI products.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The cloud each company defaults to has shaped which AI features land first in which products for two years. With OpenAI now portable across AWS and GCP, procurement and integration choices reset — and design teams building on OpenAI APIs lose one stable assumption about latency, region availability, and vendor lock-in.</p>
+          <p class="source"><a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" target="_blank" rel="noopener">Source — Microsoft Official Blog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Pick one feature in your {focus} work that depends on an OpenAI model (or assume it does, if you don't currently ship one). Write a 1-paragraph assessment of what changes if the model could now run on AWS or GCP instead of Azure: latency story, data residency, cost variance, and the one design assumption you've been making that this breaks. The artefact is the assessment, not a model swap.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Vendor portability is now a procurement question your design team gets to weigh in on. Set up a 30-minute conversation with your platform/infra counterpart in {domain} engineering. Walk in with three specific questions: (1) does our AI feature stack assume Azure-hosted OpenAI, (2) what would it cost to abstract the provider behind a routing layer, (3) which design decisions ride on regional availability we currently take for granted. Capture three findings and one decision the team will own.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">The dissolved AGI clause is a tell about how both companies now think about frontier model risk — speculative upside traded for predictable revenue. Write a 200-word memo for your {domain} leadership that: (1) names what the new deal signals about how OpenAI plans to compete with Anthropic, (2) identifies one product bet your team has been making that quietly assumed OpenAI stays Azure-exclusive, and (3) states whether AWS- or GCP-hosted OpenAI changes which models you should be evaluating in the next two quarters.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-04-29-big-tech-q1-earnings-capex"
+                 data-category="industry"
+                 data-published="2026-04-29"
+                 data-tags="earnings,capex,microsoft,meta,alphabet,amazon,hyperscalers">
+          <div class="head">
+            <h6 class="headline">Microsoft, Meta, Alphabet, Amazon report Q1 today with combined AI capex tracking near $700B</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-29">Published April 29, 2026</time></p>
+          <p class="summary">All four hyperscalers report Q1 earnings after the close on April 29. Combined 2026 capex guidance now sits near $700B: Meta $115–135B, Alphabet $175–185B, Amazon ~$200B, Microsoft tracking $29.88B in just one quarter (up 89% YoY). Cloud growth rates for AWS, Azure, and Google Cloud are the metric the market is watching most closely; analysts at Barclays project Meta's free cash flow could fall almost 90% YoY, and Amazon's free cash flow may turn negative for the year. Today's prints will be the first major test of whether the AI infrastructure cycle is producing revenue at the rate it's consuming cash.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When hyperscaler cash flow tightens, the first things to get re-scoped are speculative R&D bets — including AI tooling experiments and design infrastructure projects that don't yet have a clear ROI story. Designers shipping AI features inside one of these orgs (or vendors selling into them) should expect a sharper "what's the metric?" conversation in the next two quarters.</p>
+          <p class="source"><a href="https://www.morningstar.com/markets/get-ready-major-big-tech-earnings-releases-april-29" target="_blank" rel="noopener">Source — Morningstar</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="case-making,judgement" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Pick one AI-powered feature you've shipped or are designing in {focus}. Write a 1-paragraph "ROI defence" of that feature your skip-level could read: what specific behavior it changes, how you would measure that behavior, and the smallest signal that would let you say it's working at six weeks. If you can't write that paragraph, that's the artefact — note exactly which piece is missing and what would unblock it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">If hyperscaler capex is being scrutinized, design infra spend (research tools, AI subscriptions, prototyping platforms) is on the same gradient. Audit your team's current AI tool stack for {domain} work — list every paid SaaS, what it produces, and roughly what it costs per designer per month. Then write a 1-page "what we'd cut first" memo that ranks tools by ROI defensibility. The artefact is the ranked list with reasoning, not just the audit.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a 250-word memo titled "What hyperscaler Q1 prints mean for our AI roadmap." Cover: (1) which capex constraints (cloud cost inflation, throttled compute, slower model velocity) you should plan for in the next two quarters of {domain} work, (2) one strategic bet that becomes more defensible if hyperscaler returns disappoint, and (3) one bet that becomes harder to justify. Cite at least one specific company's number to make it concrete.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-04-29-amazon-join-the-chat"
+                 data-category="generative-ui"
+                 data-published="2026-04-28"
+                 data-tags="amazon,audio,conversational-ui,product-pages,multimodal,e-commerce">
+          <div class="head">
+            <h6 class="headline">Amazon ships "Join the chat" — real-time AI audio Q&amp;A on product pages</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-28">Published April 28, 2026</time></p>
+          <p class="summary">Amazon launched a feature in its app on April 28 that overlays product pages with a conversational audio layer. Customers tap "Hear the highlights" to get a podcast-style overview spoken by AI hosts, then tap "Join the chat" to ask follow-up questions by voice or text — with real-time spoken responses grounded in product details, reviews, and other public data. Audio continues playing as users keep browsing. It builds on Rufus and Amazon's existing "Help me decide" and "Interests" AI tools, but is the first time Amazon has put a multi-turn voice agent directly on the product detail page itself.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The product detail page is one of the most studied surfaces in commerce design, and Amazon just added a parallel conversational interface that competes with the page's own information architecture. If Amazon validates this pattern at scale, every e-commerce product team will be asked the same question within a year: "where's our audio Q&amp;A?" — even when the answer should probably be "nowhere."</p>
+          <p class="source"><a href="https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Find one Amazon product page in the app that has "Hear the highlights" enabled (or pick a comparable {domain} surface and imagine the equivalent). Spend 10 minutes using it for a real shopping decision. Then write a 1-paragraph critique covering three things: (1) one piece of information audio surfaced faster than the page would have, (2) one piece audio garbled or under-cited compared to the static page, (3) one design call only a human reviewing both modes could make about which interactions belong in voice vs. visual. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">"Where's our audio Q&amp;A?" is the kind of executive ask that lands on a design lead's desk after a launch like this. Pre-empt it. Write a 1-page brief for {domain} leadership that: (1) names the two highest-traffic surfaces in your product where users currently re-read the same information, (2) describes which of those would actually benefit from a conversational layer vs. which would be cargo-culting Amazon, and (3) proposes one cheap experiment your team could run to test the highest-leverage candidate. Lead with the negative recommendations.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Amazon owns the product page; conversational AI is now its second front in that real estate. Write a 200-word memo answering: in {domain}, what is the equivalent surface where you own the relationship and the data, and what would a multi-turn voice layer specifically unlock there that text alone wouldn't? Then list two things this pattern threatens — and the one durable design contribution Amazon's audio hosts cannot make that your team still can.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-04-29-anthropic-sydney-office"
+                 data-category="jobs-industry"
+                 data-published="2026-04-28"
+                 data-tags="anthropic,sydney,anz,enterprise,apac,expansion">
+          <div class="head">
+            <h6 class="headline">Anthropic opens Sydney office, names Theo Hourmouzis ANZ general manager</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-28">Published April 28, 2026</time></p>
+          <p class="summary">Anthropic officially opened its Sydney office on April 28 — its fourth Asia-Pacific location after Tokyo, Bengaluru, and Seoul — and appointed former Snowflake ANZ &amp; ASEAN VP Theo Hourmouzis as general manager for Australia and New Zealand. Anthropic cited its Economic Index showing Australia and New Zealand rank fourth and eighth globally in Claude.ai usage relative to population. Existing customers in the region include Canva, Quantium, and Commonwealth Bank of Australia. The company also flagged plans to explore expanding compute capacity inside Australia.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Anthropic putting a regional GM in Sydney signals that ANZ is now an enterprise account market, not just a developer-led one. Designers in the region working with AI features should expect more direct partner motion — and the hiring signal also tells you where Anthropic is investing applied teams (specifically: enterprise, not consumer).</p>
+          <p class="source"><a href="https://www.anthropic.com/news/sydney-fourth-office-asia-pacific" target="_blank" rel="noopener">Source — Anthropic</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Anthropic naming Canva, Quantium, and Commonwealth Bank as flagship ANZ customers tells you which {domain} use cases they think convert. Write a 1-paragraph critique: from those three names, what enterprise pattern is Anthropic prioritizing in design and product surfaces (creative tools? analytics co-pilots? regulated chat?), and what doesn't fit that pattern in your own work? Be specific about the gap, not generic.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Frontier-lab regional offices change the support cadence for enterprise customers — earlier access to features, more direct partner motion, faster feedback loops. Spend 20 minutes drafting an outreach email to your nearest Anthropic, OpenAI, or Google account contact. Ask three specific questions: (1) which roadmap items are open to design partner input, (2) whether your team can join a structured feedback program, (3) what the typical lag is between APAC GA and US GA. Send it. The sent email is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Map the AI vendor footprint in {domain}: which frontier labs have local enterprise teams, which ship through resellers only, which haven't shown up at all. Write a 200-word memo for procurement covering: (1) which vendor's regional motion best matches your team's adoption stage, (2) one concession or partnership term you'd ask for given a lab opening a regional office, and (3) the one risk of betting on the most local vendor — i.e. what happens if that office gets cut in a downturn?</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="day-section" data-date="2026-04-28">
       <h4 class="day">Tuesday, April 28 <span class="day-date">— today's briefing</span></h4>
 
       <div class="category-group" data-category="tools">
