@@ -1053,12 +1053,204 @@
   <section class="month-section" data-month="2026-04">
     <h3 class="month">April 2026</h3>
 
+    <section class="day-section" id="today" data-date="2026-04-30">
+      <h4 class="day">Thursday, April 30 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-04-30-microsoft-q3-azure-capex"
+                 data-category="industry"
+                 data-published="2026-04-29"
+                 data-tags="microsoft,azure,q3-earnings,capex,openai,revenue-share">
+          <div class="head">
+            <h6 class="headline">Microsoft Q3: Azure guides 39–40%, Q4 capex to top $40B, OpenAI revenue share ends</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-29">Published April 29, 2026</time></p>
+          <p class="summary">Microsoft reported Q3 FY26 after the close on April 29. Microsoft Cloud revenue was $54.5B (+29%), Azure grew 38% in constant currency, and management guided Azure to 39–40% for Q4 — above the 37% Street consensus. Q3 capex hit $31.9B, up 49% YoY, and the company now expects Q4 capex to exceed $40B, putting FY26 capex near $190B (up 61% from FY25). The call also confirmed the restructured OpenAI deal: Microsoft no longer pays OpenAI a revenue share, the IP license remains through 2032 but is no longer exclusive, and any cloud provider can now host OpenAI models under the new terms.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Azure capacity has been the rate-limiter on OpenAI feature rollouts for over a year. Microsoft's +40% Q4 capex push is what unlocks new model availability, longer-context features, and faster regional rollouts — and the end of revenue-share exclusivity means OpenAI's economics now favour pushing the same models through AWS Bedrock or GCP at parity.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html" target="_blank" rel="noopener">Source — CNBC</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,judgement" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Pick one AI feature in your {focus} work that depends on Azure-hosted OpenAI today. Write a 1-paragraph "what changes if our team runs the same model on Bedrock or GCP" assessment: pricing surprise, latency story, region availability you'd gain or lose, and the design pattern (streaming, fallback, retry) that quietly assumed Azure under the hood. The assessment is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Set up a 30-minute conversation with your platform/infra counterpart in {domain}. Walk in with the Microsoft capex number ($190B FY26) and three questions: (1) does our roadmap assume Azure-hosted OpenAI quotas keep loosening at this pace, (2) which features in flight would benefit if we routed via Bedrock or GCP instead, (3) what's the design cost of multi-provider abstraction vs. the cost of getting throttled. Capture three findings and one decision the team will own.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a 200-word memo for {domain} leadership answering: with Microsoft's exclusivity gone and OpenAI revenue share ended, how should our two-year vendor strategy change? Cover (1) one feature bet that becomes more defensible if we can swap providers, (2) one bet that gets harder because Microsoft's incentive to subsidize OpenAI features for Azure customers just dropped, and (3) the contract concession you'd ask for at the next Azure renewal given this news.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-04-30-meta-capex-145b"
+                 data-category="industry"
+                 data-published="2026-04-29"
+                 data-tags="meta,capex,earnings,ai-infrastructure,stock">
+          <div class="head">
+            <h6 class="headline">Meta raises 2026 capex to $125–145B, stock falls 7% in after-hours despite earnings beat</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-29">Published April 29, 2026</time></p>
+          <p class="summary">Meta beat on the top and bottom lines in Q1: revenue $56.31B vs. $55.45B expected, EPS $7.31 adj. vs. $6.79 expected, revenue +33% YoY. But the company raised 2026 capex guidance to $125–145B (from $115–135B), citing higher component pricing and additional data-center costs to support future-year capacity. Shares fell about 7% in extended trading. Mark Zuckerberg framed the spend as required to keep pace on training compute; analysts at Barclays continue to project Meta's 2026 free cash flow could fall almost 90% YoY.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Meta's 2025 capex story was already aggressive; today's $10B revision tells you compute scarcity is still binding even at this scale. Inside any AI-feature org, that pressure rolls downhill — design teams should expect tighter scrutiny on tools-line spending and more "what's the metric?" conversations about features that don't have a clean ROI story.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/04/29/meta-q1-earnings-report-2026.html" target="_blank" rel="noopener">Source — CNBC</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="case-making,craft" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Pick one AI-infused screen you're shipping in {focus}. Time how long it takes to render in production today, then write a 1-paragraph "compute budget" sketch: what's the per-render token/inference cost, which interactions on the screen are the most expensive, and which one could be re-shaped (caching, smaller model, deferred call) to cut cost without obviously degrading the experience. The 1-paragraph sketch is the artefact, not a refactor.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Meta's stock reaction is a preview of the conversation your finance counterpart is about to start. Pre-empt it: audit your team's AI feature roadmap in {domain} against three questions — which features have a clear behavior they're trying to change, which are "we want one because everyone has one," and which have a measurable next-step that would let leadership defend continued spend in three months. Output: a 1-page categorization and one feature you're recommending to deprioritize.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a 250-word memo titled "If hyperscaler free cash flow keeps compressing in {domain}, what becomes durable?" Cover: (1) which AI features in your roadmap depend on continued cost-per-token decline, (2) which are defensible even if model APIs get more expensive in 2027, (3) one "boring" design investment (latency, error handling, cache behavior, fallback UX) that gets disproportionately valuable in a tightened-compute world. Cite Meta's $145B number to make it concrete.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-04-30-anthropic-900b-valuation"
+                 data-category="industry"
+                 data-published="2026-04-29"
+                 data-tags="anthropic,funding,valuation,openai,ai-economy">
+          <div class="head">
+            <h6 class="headline">Anthropic weighs $50B funding round at over $900B valuation — would top OpenAI</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-29">Published April 29, 2026</time></p>
+          <p class="summary">Bloomberg and TechCrunch reported on April 29 that Anthropic has received multiple preemptive investor offers to raise around $50B at a valuation between $850B and $900B, which would make it the most valuable AI startup — overtaking OpenAI's most recent ~$850B valuation. Anthropic raised $30B at a $380B valuation just two months ago, in February 2026; the company says revenue is now at a $30B annualized run rate. A definitive decision is expected at a board meeting in May. Anthropic declined to comment.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Valuation drives behaviour. A $900B Anthropic with $50B fresh in the bank can afford to keep aggressively expanding into the application layer (Claude Design, Claude Code, Cowork, Mythos) instead of staying a model-API company. Designers should expect more direct competition with Figma, Canva, and Notion-class products from Anthropic over the next 12–18 months.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Spend 20 minutes inside Claude Design or Claude Code building one piece of the {focus} surface you'd otherwise build in your normal stack. Write a 1-paragraph critique covering: (1) one capability where Anthropic's vertical integration produced a noticeably better outcome than your normal tools, (2) one place where it generated something Figma or your IDE would have caught, (3) the design judgement only you could supply on top of either. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="strategy,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Run a 30-minute structured conversation with your team in {domain}: "Which of our incumbent SaaS contracts are most exposed if Anthropic ships an application-layer competitor in the next 12 months?" Map your team's tools (design, prototyping, docs, research, knowledge base) into three buckets — durable, exposed, already-replaceable. Output: the bucket map plus one explicit decision about a tool you'd start de-risking now.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a 200-word memo for {domain} leadership: "What does an Anthropic-bigger-than-OpenAI mean for our AI vendor strategy?" Cover (1) one Anthropic surface you should pilot in the next 60 days specifically because the company is now under-pricing while it grabs share, (2) one durable risk of consolidating workloads on Anthropic, (3) the negotiation lever a $900B-valuation Anthropic is least likely to give your account team — and what you'd ask for instead.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-04-30-google-tv-gemini-create"
+                 data-category="generative-ui"
+                 data-published="2026-04-29"
+                 data-tags="google,gemini,google-tv,nano-banana,veo,tv-os,generative-ui">
+          <div class="head">
+            <h6 class="headline">Google TV ships a "Create" button: Nano Banana and Veo land on the living-room screen</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-04-29">Published April 29, 2026</time></p>
+          <p class="summary">Google announced on April 29 that the Gemini tab on Google TV now includes a "Create" button that opens Nano Banana (image) and Veo (video) directly inside the TV interface, letting users transform their own photos and short clips with text prompts and play the result back on the same screen. It rolls out first on Gemini-enabled TCL TVs in the U.S., with broader device support to follow. Separately on April 28, Google began testing Gemini Proactive Assistance on Android — context-aware suggestions drawn from notifications, on-screen content, and selected apps like Gmail and Calendar.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Generative tools are now landing on lean-back surfaces (TV, ambient, glanceable) that have no precedent for prompt-driven UI. The interaction model designers have spent two years refining — sidebar chat, inline preview, prompt history — doesn't map cleanly to a 10-foot UI. This is one of the rare cases where existing UX patterns genuinely don't transfer.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,divergent-thinking" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Sketch three prompt-input patterns for a 10-foot UI in {focus} that would not require a keyboard: voice-only (with confirmation), remote-driven menu of canned starting prompts, and a hybrid where the phone becomes the prompt surface and the TV is the canvas. For each, name one specific failure mode (mis-recognition, latency, awkward correction step) and how the design accommodates it. The three sketches plus the failure-mode notes are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,advocacy" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Walk your {domain} team through Google's TV Create button and Proactive Assistance demo, then run a 20-minute conversation around one question: "Where in our product is generative AI currently bolted on as a sidebar chat that should arguably be ambient, proactive, or moved to a different surface entirely?" Output: a list of three specific surfaces in your product and one experiment owner per surface.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a 200-word memo: in {domain}, which surfaces does our product own that resemble a "lean-back" experience — places where the user is not actively typing into a chat box? List three. For each, name the one generative capability that would change behavior on that surface, and the one capability that would obviously be cargo-culted from a desktop chat UX. End with: which surface is most worth a 6-week experiment, and why that one rather than the obvious flagship surface.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+    </section>
 
 
 
-
-
-    <section class="day-section" id="today" data-date="2026-04-29">
+    <section class="day-section" data-date="2026-04-29">
       <h4 class="day">Wednesday, April 29 <span class="day-date">— today's briefing</span></h4>
 
       <div class="category-group" data-category="industry">
