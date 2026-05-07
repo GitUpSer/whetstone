@@ -1053,7 +1053,204 @@
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
 
-    <section class="day-section" id="today" data-date="2026-05-06">
+    <section class="day-section" id="today" data-date="2026-05-07">
+      <h4 class="day">Thursday, May 7 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-07-anthropic-spacex-colossus-compute"
+                 data-category="industry"
+                 data-published="2026-05-06"
+                 data-tags="anthropic,spacex,colossus,compute,gpus,memphis,claude-code">
+          <div class="head">
+            <h6 class="headline">Anthropic signs SpaceX for all of Colossus 1 — 220,000+ GPUs, 300 MW, doubles Claude Code limits the same day</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-06">Published May 6, 2026</time></p>
+          <p class="summary">At the Code with Claude event in San Francisco, Anthropic announced it has signed for the entire compute capacity of SpaceX's Colossus 1 data center in Memphis — more than 300 megawatts and over 220,000 NVIDIA GPUs landing within the month. The two companies also "expressed interest" in jointly developing multi-gigawatt compute capacity in space. Hours after the announcement, Anthropic doubled five-hour rate limits across Claude Code Pro, Max, Team, and Enterprise plans, removed peak-hours throttling on Pro and Max, and "considerably" raised Opus API rate limits. Both Anthropic ($1.2T implied valuation) and SpaceX ($1.75T target) are reportedly preparing IPO filings this year. Terms of the deal weren't disclosed.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The compute story has stopped being a footnote and become the product feature. Rate-limit ceilings have shaped what designers can actually try with these tools — when those ceilings move, your team's experimentation budget moves with them. The bigger signal is that frontier labs are now contracting capacity in gigawatts, which means the next 24 months of "what's possible in production" will be governed by which lab struck which compute deal, not which model benchmarked half a point higher.</p>
+          <p class="source"><a href="https://www.anthropic.com/news/higher-limits-spacex" target="_blank" rel="noopener">Source — Anthropic</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Open whatever AI coding/design assistant you use most in {domain} (Claude Code, Cursor, Figma's AI tools, ChatGPT) and run a deliberate "ceiling test": pick one task you've previously aborted because the tool ran out of context, hit a rate limit, or got too slow, and try it again now. Time-box it to 30 minutes. Then write a 150-word note on what's actually different and what's still hopeless. The note is the artefact — circulate it inside your team so nobody else burns the same hour relearning the new ceiling.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Run a 20-minute conversation with your eng-lead and finance/ops counterparts in {domain}: "If lab compute is the new bottleneck and capacity gets contracted in gigawatts, what's our policy on which AI vendor we lock into?" Map your current dependencies — which workflows would break if Anthropic, OpenAI, or Google had a 30-day capacity crunch — and walk away with one named owner for "AI vendor concentration risk" and a single 3-bullet rule for adding a new AI dependency to a critical workflow.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a 350-word memo for {domain} leadership: "Compute is now a strategic moat. What does that mean for our product roadmap?" Cover (1) which planned AI features depend on a model class only one or two labs can afford to run at scale and what our fallback is if that vendor reprices, (2) whether we should sign a multi-year usage commitment now to lock in capacity vs. stay flexible, and (3) one differentiation angle that doesn't depend on having the biggest model — proprietary data, taste, regulatory expertise, or workflow depth. Make a clear call on the single biggest capacity bet you'd take in the next two quarters and what you'd cut to fund it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-07-claude-code-routines"
+                 data-category="coding-agents"
+                 data-published="2026-05-06"
+                 data-tags="anthropic,claude-code,routines,automation,scheduling,github,api">
+          <div class="head">
+            <h6 class="headline">Claude Code Routines: scheduled, API-triggered, and GitHub-event-triggered agents that run while your laptop is closed</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-06">Published May 6, 2026</time></p>
+          <p class="summary">Anthropic introduced Routines at Code with Claude — a packaged Claude Code configuration (prompt, repos, connectors) that runs on Anthropic-managed cloud infrastructure rather than your machine. Each routine attaches one or more triggers: a recurring schedule (hourly, nightly, weekly, or one-shot in the future), a per-routine HTTP endpoint authenticated by bearer token, or GitHub events (pull requests, releases, issue activity). Anthropic's framing was "wake up to PRs that are ready to merge." Routines is in research preview alongside the broader Outcomes feature for rubric-based agent grading and multi-agent orchestration, both in public beta.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Routines turn a coding agent from a tool you summon into a teammate that has its own to-do list. The design surface that suddenly matters is the inbox-style review of work the agent did overnight: surfacing what was changed, what was risky, what needs human judgement, and what should be silently merged. Most teams will let engineering wing this UX and end up with a noisy mess. The product designers who treat overnight-agent review as a first-class flow will set the bar for the rest of 2026.</p>
+          <p class="source"><a href="https://claude.com/blog/introducing-routines-in-claude-code" target="_blank" rel="noopener">Source — Anthropic</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,automation" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Design the "morning review" surface for a hypothetical {focus} workspace where 4–8 agent runs completed overnight. Required elements: a scannable list ordered by reviewer-priority (not chronologically), a one-line "what changed and why it might be wrong" summary for each run, a clear "merge / request changes / discard" affordance, a place where the agent can flag "I made an assumption you should verify," and an audit trail. Mock it for one breakpoint. Then write a 150-word critique of the existing GitHub or Linear inbox UX and where it would fail under this load. The mock plus critique are the artefacts.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Automation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Run a 30-min working session with your eng manager and PM in {domain}: "If our most senior coding agents are running on a schedule by Q3, what changes about how a designer is staffed?" Map a normal sprint against the assumption that agents handle 50–70% of bug-fix and refactor work overnight. Identify which design rituals (weekly review, sprint planning, design QA) still apply, which break, and which need to be replaced with new ones — async overnight-work review, agent-trust calibration, escalation criteria. Walk away with one named owner for "agent-output review" and a 3-bullet rewrite of one existing ritual.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a 250-word memo for {domain} leadership: "Routines turn agents into employees with calendars. What's our policy?" Cover (1) which existing recurring work — weekly metrics digests, on-call summaries, daily release notes, churn-risk alerts — should move to a scheduled agent vs. stay human, (2) what the kill criteria are for a routine that produces noise instead of signal, and (3) the single biggest organisational risk of letting routines proliferate without governance (forgotten routines burning compute, conflicting outputs, audit gaps). Make a clear call on whether to centralise routine ownership in a platform team or let product squads own their own.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-07-claude-code-outcomes-multiagent"
+                 data-category="coding-agents"
+                 data-published="2026-05-06"
+                 data-tags="anthropic,claude-code,outcomes,rubrics,multiagent,managed-agents,grading">
+          <div class="head">
+            <h6 class="headline">Anthropic ships Outcomes — rubric-based agent grading — and multi-agent orchestration in public beta</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-06">Published May 6, 2026</time></p>
+          <p class="summary">Alongside Routines, Anthropic launched Outcomes for Managed Agents in public beta — a feature that lets developers define what "success" looks like for an agent (a rubric, a structured target file, a passing test) and lets the agent iterate against that definition until it converges or gives up. In Anthropic's internal testing on structured file-generation tasks, Outcomes-based runs improved task success by up to 10 points over a standard prompting loop, with the largest gains on the hardest problems. Multi-agent orchestration — running specialised sub-agents in parallel against a shared rubric — is also in public beta. Anthropic cited Shopify and Mercado Libre (23,000 engineers) as targeting "90% autonomous coding by Q3."</p>
+          <p class="why"><strong>Why this matters for you:</strong> The hardest part of designing for agents has been the lack of a clear "done" — agents drift, return early, or produce technically-correct-but-wrong output. Rubric-based outcomes shift that responsibility from the agent's behaviour to the rubric you write — which makes "writing a good rubric" the new product-spec skill. For designers this is huge: the people who can specify success criteria precisely (not just describe a feature) become the bottleneck input to autonomous teams.</p>
+          <p class="source"><a href="https://blakecrosley.com/blog/code-with-claude-sf-2026-recap" target="_blank" rel="noopener">Source — Code with Claude SF recap</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one screen or component from a current {focus} project and write the agent rubric for it: 6–10 testable success criteria a non-human reviewer could grade pass/fail without seeing your design. Examples: "the empty state has a primary action that doesn't repeat the page title," "all error states surface a recovery path within one tap," "loading states longer than 800ms show progress, not a spinner." Then run the rubric against three real examples in your product. Note which criteria were ambiguous, which were too easy, and which you couldn't actually verify. The rubric plus the audit notes are the artefacts.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Run a 30-min session with three designers in {domain}: each person picks one component they own and writes a 5-line rubric for it. Then the group critiques each rubric against one question — "could a smart non-designer use this rubric to spot a regression next sprint?" Capture the patterns in what makes a rubric specific enough to test vs. vague enough to be aspirational. Walk away with a 1-page "rubric writing" template the team agrees to use the next time anyone proposes a new component or pattern. The template is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a 250-word memo for {domain} leadership: "Mercado Libre is targeting 90% autonomous coding by Q3. What's our equivalent number for design?" Pick one design workflow (component states, copy variants, accessibility audits, visual QA, prototype generation) and put a number on it: what percent should be autonomous in 12 months, what evidence would tell you the number is realistic, and what investments — rubrics, evals, harnesses, taste-keepers — get you there. Make the case for why a specific number is more useful than a vague "we'll use AI more" goal, and name the single hire or policy you'd defend to make the number credible.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-07-figma-may-release-mcp-images"
+                 data-category="design-tools"
+                 data-published="2026-05-05"
+                 data-tags="figma,mcp,use_figma,chatgpt-images,enterprise,ai-credits,release-notes">
+          <div class="head">
+            <h6 class="headline">Figma's May release: a use_figma MCP tool for agents, ChatGPT Images 2.0 inside the canvas, and shared-pool AI credits for enterprise</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-05">Published May 5, 2026</time></p>
+          <p class="summary">Figma's May Release Notes event on Tuesday shipped three changes worth noting. (1) A use_figma MCP tool lets external AI agents create or edit designs directly on the Figma canvas using real components from a connected library — an agent can now build a layout in your file rather than producing detached output. A companion create_new_file tool generates designs into new Figma files. (2) OpenAI's ChatGPT Images 2.0 is now available across Make Image and Edit Image in Figma Design, Draw, Slides, Buzz, and FigJam, alongside a new "Add reference" affordance that lets you turn any node on the canvas into an image reference. (3) Enterprise admins can now allocate and monitor AI credits by billing group, drawing from a shared pool — the first credible cost-control surface for AI in design ops.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The use_figma MCP is the more interesting story than the image model. Once external agents can act on the real component tree, your design system is no longer a file your team uses — it becomes the API surface that every other agent in your stack reaches into. That changes what "design system maintainer" means. The ChatGPT Images 2.0 integration is table stakes; the enterprise AI credit pooling is what unblocks design ops from saying yes to AI rollouts at scale.</p>
+          <p class="source"><a href="https://help.figma.com/hc/en-us/articles/40219873508247-Release-notes-roundup-May-2026" target="_blank" rel="noopener">Source — Figma Help Center</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Connect a Claude or other MCP-capable client to Figma and try use_figma on a real {focus} task: ask the agent to generate three layout variants of one screen using only components from your published library. Document what worked and what didn't — did it pick the right components, did it use auto-layout correctly, did it invent variants that don't exist? Then write a 200-word note for your team titled "what your design system needs to look like for an agent to use it well." Specific gaps you found are the artefact, not the variants.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Run a 30-min audit of your published Figma library with your design-systems lead: how many components have descriptions, semantic names, and meaningful prop labels that an AI agent could use without context from a human? Pick the five most-used components and rate each on agent-readability. Walk away with one named owner for "design system as agent surface" and a 3-bullet rewrite of one existing component naming or documentation rule. The audit doc plus the rule rewrite are the artefacts.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a 250-word memo for {domain} leadership: "Figma just made our component library an agent API. Should we treat it like one?" Cover (1) which agents (internal or third-party) we'd want to allow into our Figma workspace and what governance we need before saying yes, (2) the single biggest risk of an agent quietly shipping off-system patterns at scale and how we'd detect it, and (3) whether design-system investment should now be measured by component adoption or by agent-readability. Make a clear call on whether the next quarter's design-systems budget should fund human-readable docs, agent-readable metadata, or both, and what you'd cut to pay for it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-05-06">
       <h4 class="day">Wednesday, May 6 <span class="day-date">— today's briefing</span></h4>
 
       <div class="category-group" data-category="case-studies">
