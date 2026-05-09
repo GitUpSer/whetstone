@@ -1053,7 +1053,208 @@
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
 
-    <section class="day-section" id="today" data-date="2026-05-07">
+    <section class="day-section" id="today" data-date="2026-05-09">
+      <h4 class="day">Saturday, May 9 <span class="day-date">— today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-09-anthropic-50b-round-trillion"
+                 data-category="industry"
+                 data-published="2026-05-08"
+                 data-tags="anthropic,funding,valuation,openai,ipo,dragoneer,lightspeed">
+          <div class="head">
+            <h6 class="headline">Anthropic explores a $50B round at a near-$1T valuation, eclipsing OpenAI on revenue if not yet on price</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-08">Published May 8, 2026</time></p>
+          <p class="summary">The Financial Times and Fortune reported on Friday that Anthropic is in early talks to raise as much as $50 billion at a roughly $900B&ndash;$1T valuation, with Dragoneer, General Catalyst and Lightspeed among the suitors and a close targeted within two months. The figure would put Anthropic ahead of OpenAI's March round (valued at $852B). Annualized revenue is approaching $45 billion &mdash; up from about $9 billion at the end of 2025 &mdash; driven by Claude Code and Cowork, with the SpaceX/Colossus compute deal and a separate $200B Google Cloud commitment underwriting the next phase. Both Anthropic and SpaceX are reportedly preparing IPO filings this year. Terms aren't final and there is no guarantee a deal closes.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The frontier-lab oligopoly is consolidating around two players whose pricing power, capacity, and compliance posture will shape every AI product roadmap in 2026&ndash;27. For designers and PMs, the practical question stops being "which model is best" and becomes "which lab's contract terms, rate limits, and policy stance can our team actually live with." That's a different conversation, and most product orgs aren't having it explicitly yet.</p>
+          <p class="source"><a href="https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/" target="_blank" rel="noopener">Source &mdash; Fortune</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI-powered feature in {focus} that depends on a frontier model. Write a 200-word "vendor failure mode" critique covering: which prompts/responses would change if the lab raised prices 3x, capped your rate limit, or restricted a category your feature relies on. Include three specific UX consequences (loading states get longer, certain output types disappear, a fallback model produces visibly worse results) and one mitigation that doesn't require backend work. The note is the artefact &mdash; circulate it inside your team so the dependency is visible before it bites.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Schedule a 25-minute conversation with your eng-lead and finance/procurement counterparts in {domain}: "If Anthropic and OpenAI become a duopoly priced like AWS and Azure, what is our policy on lab concentration?" Map your top three AI workflows by which lab they depend on, where the contract sits, and who would be paged if the vendor changed terms. Walk away with one named owner for "AI vendor concentration risk," a 3-bullet rule for adding a new lab dependency, and one workflow that gets a deliberate second-vendor fallback this quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 350-word memo for {domain} leadership: "If the lab market consolidates into a $1T duopoly, what does that mean for our differentiation?" Cover (1) which features we currently sell that any team with a Claude or GPT key could replicate inside six months, (2) the proprietary input &mdash; data, distribution, taste, regulatory expertise, workflow depth &mdash; we'd need to defend that wouldn't be commoditised by a frontier-model upgrade, and (3) one specific bet you'd make in the next two quarters that compounds value as the underlying models get cheaper rather than getting wiped out by them. Make a clear call on the single biggest investment.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-09-cursor-3-3-pr-review-parallel"
+                 data-category="coding-agents"
+                 data-published="2026-05-07"
+                 data-tags="cursor,pr-review,parallel-agents,build-in-parallel,split-pr,quick-actions">
+          <div class="head">
+            <h6 class="headline">Cursor 3.3 ships a full PR review surface, parallel plan execution with subagents, and a "split into PRs" quick action</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-07">Published May 7, 2026</time></p>
+          <p class="summary">Cursor released 3.3 on Thursday with three changes worth noticing. (1) The PR review experience now lives inside the IDE &mdash; Reviews/Commits/Changes tabs with inline review threads, file tree, reviewer status banners, and quick-action pills for taking the next step. (2) "Build in Parallel" can identify independent parts of a plan and dispatch them to async subagents simultaneously, instead of running tasks sequentially. (3) A built-in quick action splits a working change into multiple PRs, using chat context to identify logical slices and proposing the split for approval. Skills can also be pinned as quick-action pills for faster access.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Two of the three features change the design surface of an IDE in ways that matter beyond engineering. Parallel subagents shift the question from "what is the agent doing" to "what are the agents collectively doing and which one needs me first" &mdash; that's a notification, attention, and trust UX problem, not a code problem. PR review-in-IDE plus "split into PRs" formalises the idea that a single working session should produce several reviewable units, which means the artefact you ship to a reviewer is now also a designed object. The teams that take both seriously will set the bar.</p>
+          <p class="source"><a href="https://cursor.com/changelog" target="_blank" rel="noopener">Source &mdash; Cursor changelog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Mock the "active parallel agents" panel for an IDE working in {focus}: 3&ndash;6 subagents running simultaneously, each with a one-line status, an estimated time-to-decision, and a clear "needs your attention" affordance. Required: a sort order that isn't chronological, a way to silence agents producing low-value pings, an audit trail of what each agent has touched, and a single "consolidate into one PR" action. Then run Cursor 3.3's Build in Parallel on a real task and write a 150-word critique of where its current panel succeeds and where your version goes further. The mock plus critique are the artefacts.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-min working session with your eng manager and tech lead in {domain}: "If a single working session now produces 3&ndash;5 PRs, what changes about how we review design work?" Map the current handoff &mdash; design ticket &rarr; engineering PR &rarr; designer QA &mdash; against the assumption that one ticket spawns multiple parallel PRs. Identify which of your design-QA rituals still apply, which need to be replaced (a single design review can no longer happen at "the" PR), and where designers should weigh in on the "split into PRs" boundary itself. Walk away with one named owner for "design review under parallel-PR work" and a 3-bullet rewrite of one existing ritual.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="systems-thinking,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a 250-word memo for {domain} leadership: "Parallel agents collapse the unit of work. What does our process need to look like in six months?" Cover (1) which existing process artefacts &mdash; the ticket, the PR, the design review &mdash; assumed sequential single-author work and need to be rethought when 4&ndash;8 agents work concurrently, (2) the single biggest cultural risk (reviewer fatigue, regression-by-volume, audit gaps) and how you'd detect it, and (3) whether to centralise "agent fleet management" with a platform team or push it down to product squads. Make a clear call on the one process change you'd ship next quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-09-snyk-claude-ai-security"
+                 data-category="tools"
+                 data-published="2026-05-08"
+                 data-tags="snyk,anthropic,claude,security,vulnerability,dev-tools,ai-generated-code">
+          <div class="head">
+            <h6 class="headline">Snyk integrates Claude into its AI Security Platform &mdash; vulnerability discovery, prioritisation, and developer-ready fixes for AI-generated code</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-08">Published May 8, 2026</time></p>
+          <p class="summary">Snyk announced an integration of Anthropic's Claude models into the Snyk AI Security Platform on Friday, available to joint customers immediately and rolling out broadly through 2026. Claude powers two ends of the workflow: sharper detection of vulnerabilities across code, dependencies, containers, and AI-generated artefacts, and higher-confidence remediation suggestions developers can apply directly. The framing is explicitly about AI-generated code volume: as agents produce more output, security review has to scale with them or become the bottleneck.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Most teams have not yet designed the surface where a developer (or a coding agent) sees a vulnerability, decides whether the fix is correct, and merges it. Today that flow is buried in Snyk dashboards, GitHub annotations, and PR comments. As AI-generated code volume grows, every product designer working near the dev workflow ends up touching this surface &mdash; and the question is whether security review becomes a wall that blocks shipping or a quiet rail underneath it. The judgement call about how loud to make security signals is a craft problem, not a Snyk-config problem.</p>
+          <p class="source"><a href="https://www.helpnetsecurity.com/2026/05/08/snyk-ai-security-platform/" target="_blank" rel="noopener">Source &mdash; Help Net Security</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Design the "in-PR security review" surface for {focus} where a Claude-powered analysis returns six findings on a single agent-generated PR: two critical, two informational, two false positives. Required: a reading order that respects the reviewer's attention, a way to mute or accept a finding with reasoning captured, a "this is the agent's third try at this fix" indicator, and an audit trail visible to a future reviewer. Mock it for one breakpoint. Then write a 200-word note titled "what makes a security signal earn its interruption" that future-you can hand to anyone shipping a similar surface. The mock plus note are the artefacts.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Set up a 30-min conversation with your security lead and one staff engineer in {domain}: "If 50% of our merged code next quarter is agent-generated, where does security review live?" Walk through three real PRs from the past two weeks, classify which findings would have been caught by an in-IDE Claude/Snyk pass and which still needed human judgement, and identify where the existing review queue would break under 3x volume. Walk away with one named owner for "security review surface for agent code," a single decision on whether security findings appear in-IDE or in-PR (or both), and one ritual you'll cut to fund the new surface.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a 250-word memo for {domain} leadership: "Security tools are now agents that read agent output. What's our buy-vs-build call?" Cover (1) which security-review work &mdash; vulnerability detection, fix suggestion, compliance evidence collection &mdash; should be a bought product (Snyk + Claude, GitHub Advanced Security, etc.) vs. an internal capability we own, (2) the single risk of buying a vendor whose pricing is tied to AI-generated code volume that you have no incentive to control, and (3) one differentiation angle for our product if security review becomes commodity (proprietary policy, audit posture, regulator relationships). Make a clear call.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+
+        <article class="entry"
+                 data-id="2026-05-09-mythos-replicated-older-models"
+                 data-category="research"
+                 data-published="2026-05-08"
+                 data-tags="anthropic,mythos,cybersecurity,research,vulnerabilities,older-models,replication">
+          <div class="head">
+            <h6 class="headline">Researchers say older models can replicate Anthropic Mythos's vulnerability findings &mdash; the panic was about deployment, not capability</h6>
+            <span class="badge research">Research</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-08">Published May 8, 2026</time></p>
+          <p class="summary">A CNBC report on Friday quoted cybersecurity researchers saying the software vulnerabilities Anthropic's Mythos model surfaced last month can be reproduced using existing models &mdash; including older Claude and OpenAI releases &mdash; given enough time and the right scaffolding. Mythos was kept on a tight whitelist (Apple, Amazon, JPMorgan, Palo Alto Networks among them) precisely because the offensive uplift was real, but the experts argue that nation-state hackers in North Korea, China, and Russia "know how to do this, with or without Anthropic." JPMorgan's Jamie Dimon publicly noted that defensive AI tools lag offensive ones &mdash; vulnerabilities are being discovered faster than they're being fixed.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Two useful lessons. First, "the new model unlocked X" is often a marketing-and-deployment story, not a capability story &mdash; a frontier model's headline demo can usually be replicated by older models with enough prompting effort, which means the news cycle systematically over-attributes change to model releases. Second, the offensive/defensive lag is a product opportunity: every consumer or B2B product that handles credentials, payments, or sensitive data is now operating in an environment where vulnerabilities outpace patches. The product designers who treat AI-era security UX as a first-class flow &mdash; not a settings page &mdash; will earn trust their competitors won't.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html" target="_blank" rel="noopener">Source &mdash; CNBC</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one user-facing flow in {focus} that touches credentials, payments, or sensitive data. Audit it against three offensive scenarios an attacker with a frontier model could now run cheaply: (1) phishing copy that mimics your tone perfectly, (2) automated credential-stuffing that reads your error messages and adapts, (3) social-engineering scripts targeted at your support team. For each, write a 75-word note on what the user actually sees, what would tip them off, and whether your current UX would let them recover. The audit note plus one specific copy or affordance change are the artefacts.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 45-min working session with your security counterpart and one senior IC in {domain}: "If offence outpaces defence in AI-era cyber, what should our product visibly do that our competitors don't?" Map three real customer-facing decisions (login, payment confirmation, account recovery) against the assumption that adversaries have frontier-model assistance. Identify which of your current safeguards depend on user attention (and would fail under a sophisticated prompt) vs. which are structural. Walk away with one named owner for "AI-era trust UX," and a single new flow change scoped for next sprint that demonstrates the difference to a customer.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="systems-thinking,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a 250-word memo for {domain} leadership: "Press cycles overstate model releases. How do we read AI news without trading on noise?" Cover (1) one product decision in the last six months that you'd have made differently if you'd discounted a model-release headline by 50%, (2) a 3-bullet test for whether a new model announcement is a real capability shift or a deployment/UX shift dressed up as one, and (3) one specific competitive risk where the noise/signal ratio is currently working in your favour and you should move before others tune in. Make a clear call on what your team should change about how it consumes AI news.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-05-07">
       <h4 class="day">Thursday, May 7 <span class="day-date">— today's briefing</span></h4>
 
       <div class="category-group" data-category="industry">
