@@ -1053,7 +1053,205 @@
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
 
-    <section class="day-section" id="today" data-date="2026-05-11">
+    <section class="day-section" id="today" data-date="2026-05-12">
+      <h4 class="day">Tuesday, May 12 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-12-claude-platform-aws-ga"
+                 data-category="industry"
+                 data-published="2026-05-11"
+                 data-tags="anthropic,aws,claude-platform,managed-agents,iam,billing">
+          <div class="head">
+            <h6 class="headline">Claude Platform on AWS goes GA &mdash; Anthropic's native API, console, and Managed Agents now run inside customer AWS accounts with IAM auth and AWS billing</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-11">Published May 11, 2026</time></p>
+          <p class="summary">AWS announced general availability of Claude Platform on AWS, distinct from the Bedrock-hosted Claude that has been around for a year. Customers now get the full native Anthropic stack &mdash; Messages API, Files API, Message Batches, Managed Agents, Agent Skills, code execution, web search and fetch, the Console, and access to early-access betas &mdash; authenticated through AWS IAM and billed through an existing AWS account, with no separate Anthropic contract. Claude Opus 4.7, Sonnet 4.6, and Haiku 4.5 ship at launch, and new Anthropic models will land on this surface as they release. AWS is the first cloud provider to offer this; customer data is processed by Anthropic outside the AWS security boundary, which is in the fine print.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Procurement friction was the last meaningful drag on Claude landing inside large companies, and AWS just removed it. Expect a wave of "we already use AWS, just turn on Claude" deals to compress the previous "stand up a separate Anthropic contract" timeline by months. The design problem this creates is the data-boundary footnote: a buyer can now legitimately believe their prompts stay inside their AWS perimeter when in fact Anthropic is processing them outside it. If your product surfaces a "your data stays in your cloud" promise, it needs an honest update this week.</p>
+          <p class="source"><a href="https://aws.amazon.com/about-aws/whats-new/2026/05/claude-platform-aws/" target="_blank" rel="noopener">Source &mdash; AWS</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Find every place in {focus} where you currently say something like "your data is processed securely" or "powered by AI" near a Claude or model-based feature. Rewrite each one for the world in which Claude Platform sits inside the customer's AWS account but Anthropic still processes the data outside the AWS security boundary. The new copy should not lie, should not be longer than two sentences, and should give a curious user a single clear next step (link, doc, contact). Show the rewrites to your security or legal counterpart and get one named correction. The marked-up copy is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 45-minute working session with your eng lead, security, and procurement counterparts on a single page comparing three deployment paths for Claude in {domain}: (1) Claude direct, (2) Claude via Amazon Bedrock, (3) Claude Platform on AWS. Score each on data residency, billing model, IAM/identity story, model availability cadence, audit logging, and the one thing that breaks for your specific buyers. Don't leave the room without a recommendation and a named owner for the integration write-up. The one-pager plus the recommendation is the artefact, shared up the chain by end of week.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a 300-word memo for {domain} leadership: "Should our product surface which cloud is running the model in the path?" Cover (1) the segment that actually cares (regulated industries, public-sector buyers, security-led enterprise), (2) what we say today vs what is actually true now that Claude is available through AWS billing, (3) whether a "deploy on your cloud" landing page becomes table stakes, and (4) the risk that promising too much creates a contractual hole when an enterprise customer asks for it in writing. End with a recommendation and the exec sign-off you need before publishing anything.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-12-pixel-gemini-intelligence-luminous-design"
+                 data-category="industry"
+                 data-published="2026-05-11"
+                 data-tags="google,pixel,android-17,gemini-intelligence,luminous-design,apple-intelligence,branding">
+          <div class="head">
+            <h6 class="headline">Confidential Pixel video leak: Google appears to be rebranding Android's AI as "Gemini Intelligence," with a translucent "Luminous Design" visual system that lifts from Apple's Liquid Glass</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-11">Published May 11, 2026</time></p>
+          <p class="summary">Notebookcheck and Digital Trends published a leaked confidential Pixel video on Monday showing what appears to be Google's answer to the "Apple Intelligence" brand: "Gemini Intelligence." The leaked UI uses a transparent, blurred visual language reportedly called "Luminous Design," visually adjacent to Apple's Liquid Glass system introduced in 2024. The leak surfaces the day before The Android Show: I/O Edition (May 12, 10am PT), where Google is expected to preview Android 17, deeper Gemini integration across the OS, and the rumoured Aluminum OS that unifies Android and ChromeOS. Google has not confirmed any of the leaked branding; final names may differ. The Pixel 11 series is expected to ship the production version around August.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Naming and visual language are two of the only honest competitive levers left when the underlying capabilities converge. "Gemini Intelligence" deliberately echoes "Apple Intelligence" &mdash; Google is conceding Apple won the framing fight and is going for adjacency, not novelty. The "Luminous Design" angle matters more for product designers: OS-level translucent surfaces have a short half-life before both platforms ship them and the differentiation evaporates. The interesting craft question right now is which of your surfaces actually benefit from glass, and which become unreadable mush. The answer is rarely "all of them."</p>
+          <p class="source"><a href="https://www.notebookcheck.net/Confidential-Pixel-video-leaks-Gemini-Intelligence-and-Luminous-Design-Android-17-s-answer-to-Apple-Intelligecne-and-Liquid-Glass.1291465.0.html" target="_blank" rel="noopener">Source &mdash; Notebookcheck</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pull 5 product screens from {focus} that currently use solid surfaces, cards, or panels. Build a quick variant of each that swaps the solid surface for a translucent, blurred treatment in the style of Liquid Glass / Luminous Design. For each, note (a) what becomes harder to read against the underlying content, (b) which surfaces actually gain depth without losing clarity, (c) where WCAG contrast minimums break for low-vision users or in bright-light conditions. Write 200 words on where the glass aesthetic earns its place in {domain} and where it actively makes the product worse. The 5 paired screens plus the critique is the artefact &mdash; not a recommendation to ship.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="judgement,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-minute team crit on the question "How long should we wait before adopting a translucent design language in {domain}?" Map four trade-offs explicitly: trend half-life (how soon does it stop reading as fresh), accessibility risk (low-vision users, glare conditions, dynamic backgrounds), engineering cost of blur rendering at the scale you ship, and the meaning the aesthetic carries in your specific category. End with one team-level decision &mdash; ignore, evaluate in Q3, controlled experiment now &mdash; and the person who owns the next check-in. The decision log is the artefact, not a moodboard.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write 300 words: "Is naming our AI as a branded entity worth the marketing and legal cost in {domain}?" Compare three live patterns &mdash; Apple Intelligence, the presumed Gemini Intelligence, and Anthropic/OpenAI keeping the raw model name on the wrapper. Cover (1) what brand-level naming buys that "AI" alone does not, (2) what it costs you the moment the underlying model gets swapped or deprecated, (3) trademark and disclosure friction in your geography, and (4) the one company in {domain} that nails this today, and what they do differently. End with a recommendation and the cheapest test that would prove you wrong.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-12-figma-make-skills"
+                 data-category="design-tools"
+                 data-published="2026-05-11"
+                 data-tags="figma,figma-make,skills,slash-commands,prd,prompt-engineering,figjam">
+          <div class="head">
+            <h6 class="headline">Figma Make ships Skills &mdash; Markdown files invoked by slash commands (/insert-sample-data, /build-from-prd) turn the team's prompts into a shared, versioned library</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-11">Published May 11, 2026</time></p>
+          <p class="summary">Figma released Skills for Make on Monday. A Skill is a Markdown file that captures conventions and workflows you reuse, imported into Make or written inline, then called from any prompt with a slash command. The launch examples are concrete: /insert-sample-data drops in company-approved test data; /build-from-prd, paired with a Notion or Confluence connector, turns a PRD into a prototype that follows your standards. FigJam-specific Skills (e.g. figma-use-figjam) read and write directly to a FigJam board, and workflow Skills like /generate-project-plan turn docs, codebases, or conversations into visual boards. Today each user manages their own Skills; team and org publishing is "coming soon." This builds on April's Markdown "skills" pattern Figma introduced for their MCP server.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Skills move Figma Make from "type a long prompt every time and hope the output respects your system" to "your team's prompt library is now a first-class object inside the tool." That changes what design ops actually owns &mdash; not just components and tokens, but the slash-command vocabulary the team reaches for when prototyping with AI. It also gives leads a real lever for enforcing conventions without enforcement meetings: if /build-from-prd embeds your accessibility checklist and density rules, designers will use them whether they read the rules or not.</p>
+          <p class="source"><a href="https://www.figma.com/release-notes/" target="_blank" rel="noopener">Source &mdash; Figma release notes</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write one Skill for {focus} you'd actually call more than once a week &mdash; /map-user-journey, /generate-empty-states, /add-loading-states, /critique-this-screen, whatever you find yourself re-prompting for. Use it inside Figma Make on a current project. Then write a 1-paragraph critique: where the Skill saved time, where it ran past your judgement and produced something you had to throw out anyway, and the one rule you'd add for v2. Don't share the Skill until you've shipped v2 &mdash; v1 is a draft, the critique is the work.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Spend 30 minutes auditing the prompts your team writes most often into Make or Claude Design. Pick the three that show up the most and the most variation between people. Sketch them as Skills, including the constraint paragraphs that lock in {domain} design system rules (spacing, type scale, accessibility minimums, brand tone). Run a 15-minute crit with two designers to pressure-test the wording. Get one Skill ready to ship the moment team publishing opens up. The three drafted Skills plus the crit notes are the artefact &mdash; you don't need to ship them today.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write 300 words: "Should we run all PRDs through /build-from-prd by default in {domain}?" Cover (1) what a Skills-first prototyping workflow does to PRD authorship &mdash; PMs write tighter PRDs because the AI uses them more literally, (2) what it does to the design-PM division of labour and whose name ends up on the prototype, (3) the risk of locking in mediocre PRD templates that the org never revisits, and (4) the one signal that would tell you in a quarter that this was a net loss for design quality. Make a recommendation and propose the smallest version of the experiment.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-12-notion-plan-mode-agent-directory"
+                 data-category="pm-tools"
+                 data-published="2026-05-11"
+                 data-tags="notion,custom-agents,plan-mode,meeting-notes,api,agent-directory">
+          <div class="head">
+            <h6 class="headline">Notion ships Plan Mode for agents, a Custom Agent Directory in Library, and a meeting-notes query endpoint &mdash; the workspace becomes an agent host with discoverability</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-11">Published May 11, 2026</time></p>
+          <p class="summary">Notion's May 11 release adds three pieces. Plan Mode forces agents to ask clarifying questions and produce a written plan before touching pages or databases &mdash; the user can edit the plan before the agent acts. A Custom Agent Directory in Library lets workspace members browse, pin, and create agents without hunting through pages. A new developer endpoint (POST /v1/blocks/meeting_notes/query) returns AI meeting notes with filtering, sorting, and normalised attendee aliases, alongside a new 10,000-result pagination cap on data source and view query endpoints. The release lands a week after Notion started charging credits ($10 per 1,000) for Custom Agents on May 4, 2026.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The "agent" pattern is splitting in two: invisible co-pilots that just do things, and named agents users find, pin, and reuse. Plan Mode is the first widely-shipped surface where the agent's plan is itself the design artefact &mdash; a visible, editable middle step between intent and action. Anyone shipping agentic features will eventually need both surfaces: "show your work before you act" and "browse the agents your team has built." Notion just published a working reference for both, and the pricing change makes the agent directory load-bearing &mdash; teams now have a financial reason to know which agents are running and which are dormant.</p>
+          <p class="source"><a href="https://www.notion.com/releases/2026-05-11" target="_blank" rel="noopener">Source &mdash; Notion release notes</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one agentic feature in {focus} that currently acts immediately on the user's instruction. Design a Plan Mode variant: what does the plan look like on screen, how does the user edit it, what does the agent commit to before executing, and how does the user kill it mid-run with the work-so-far preserved? Sketch the screens plus the microcopy for "Approve plan," "Edit," "Cancel," and the moment things go wrong. Then write a 1-paragraph critique: which kinds of user requests get worse with Plan Mode in the way &mdash; fast retrievals, simple toggles, trusted recurring tasks &mdash; and how you'd let users skip it. The paired design plus the critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-minute working session with your team on {domain}: "Which of our AI features should have a Custom Agent Directory and which should stay invisible?" Map every AI surface against (a) frequency of use, (b) whether the user wants to name and reuse the instruction, (c) whether other teammates would benefit from the same agent. Walk away with a one-page house rule for when an AI feature graduates from "in-flow co-pilot" to "named agent in a directory." The rule is the artefact &mdash; share it with your PM counterpart and your eng lead and get one named challenge to it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write 400 words: "Do our {domain} customers want a directory of AI agents in our product, or do they want fewer named agents and more invisible help?" Cover (1) which user segment would actually browse and pin agents (power users, admins, less-experienced ICs), (2) the discovery cost of hiding everything behind in-flow co-pilots, (3) the cognitive cost of surfacing too many named agents, and (4) the one specific decision Notion got right with this release and the one you'd second-guess. Make a recommendation, name the trigger that flips it, and the cheapest signal you can read in one quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+
+    <section class="day-section" data-date="2026-05-11">
       <h4 class="day">Monday, May 11 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="case-studies">
