@@ -1053,8 +1053,206 @@
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
 
-    <section class="day-section" id="today" data-date="2026-05-12">
-      <h4 class="day">Tuesday, May 12 <span class="day-date">&mdash; today's briefing</span></h4>
+    <section class="day-section" id="today" data-date="2026-05-13">
+      <h4 class="day">Wednesday, May 13 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-13-claude-for-legal-launch"
+                 data-category="industry"
+                 data-published="2026-05-12"
+                 data-tags="anthropic,claude-for-legal,mcp-connectors,plugins,verticalization,legaltech">
+          <div class="head">
+            <h6 class="headline">Anthropic launches Claude for Legal &mdash; 12 practice-area plugins and 20+ MCP connectors hook Claude into Westlaw, Harvey, Ironclad, Relativity, iManage and the rest of the legal software stack</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-12">Published May 12, 2026</time></p>
+          <p class="summary">Anthropic shipped Claude for Legal on May 12: 12 plugins tailored to Commercial, Corporate (with M&amp;A diligence and closing-checklist workflows), Employment, Privacy, Product, Regulatory, AI Governance, IP, and Litigation work, plus more than 20 new MCP connectors for Thomson Reuters CoCounsel, DocuSign, Ironclad, Definely, iManage, NetDocuments, Relativity, Everlaw, Consilio, Harvey, Box, Midpage, Trellis, and others. The plugins run inside Claude Cowork &mdash; Anthropic says lawyers are already the most engaged Cowork users of any knowledge-work function. The launch also includes Courtroom5 and BoardWise connectors aimed at people who can't afford counsel, via partnerships with the Free Law Project and the Justice Technology Association. This builds on the February legal-plugin preview Anthropic shipped to Cowork.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the first time a foundation-model company has gone vertical at this scale, and the shape of the move is what designers should pay attention to: plugins (workflow logic) plus MCP connectors (data plumbing), not a separate legal product. Anthropic is betting the future of vertical AI is composable on top of a horizontal chat surface, not bolted-on as a specialised app &mdash; which is the same bet your enterprise customers will weigh when they decide whether to keep paying for category-specific AI software. If your product sits in any regulated vertical (legal, health, finance, ops), you now have a working reference for what "we let customers extend us" looks like at GA quality.</p>
+          <p class="source"><a href="https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html" target="_blank" rel="noopener">Source &mdash; LawSites</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick the single highest-volume workflow in {focus} that touches multiple external systems. Sketch what a Claude-for-Legal-style plugin would look like for that workflow: name it, list the 3&ndash;5 MCP connectors it would need (be specific about which systems), specify the structured output it should produce, and write 4 example prompts a user would type to invoke it. Then write a 1-paragraph critique of your own sketch: where does the plugin pattern make the experience worse than the dedicated UI you ship today, and where does it actually help? The sketch plus the self-critique is the artefact &mdash; do not skip the critique.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-minute working session with your PM and a senior engineer on {domain}: "If a Claude plugin marketplace existed for our category tomorrow, which of our features would still earn their seat in the product?" Map your current feature set against three buckets: (a) safe &mdash; needs proprietary data or UI that won't fit in a plugin, (b) at risk &mdash; can be reproduced by a horizontal-AI plugin with one MCP connector, (c) already commodity. Leave with one named feature you'd cut, one you'd double down on, and one you'd defensively redesign this quarter. The bucket map plus the three decisions is the artefact, circulated up the chain.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 400-word memo for {domain} leadership: "Should we build a Claude plugin for our product before our competitors do?" Cover (1) which user job a plugin actually serves better than our native UI, (2) the strategic risk of training our buyers to do this category of work outside our walls, (3) the cost of not being on the shelf when an enterprise IT team browses available plugins for their workflow, and (4) the one company in our category whose plugin we'd be most worried to see ship first. End with a recommendation, a named owner, and the smallest possible plugin you could ship in 30 days as a probe.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-13-deepmind-magic-pointer"
+                 data-category="design-tools"
+                 data-published="2026-05-12"
+                 data-tags="google,deepmind,magic-pointer,cursor,gemini,interaction-design,chrome">
+          <div class="head">
+            <h6 class="headline">DeepMind reimagines the mouse pointer &mdash; Magic Pointer brings Gemini-powered semantic context to the cursor on Googlebook and Chrome, and you can wiggle it to summon contextual AI prompts</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-12">Published May 12, 2026</time></p>
+          <p class="summary">Google DeepMind detailed Magic Pointer on May 12 alongside the Googlebook announcement. The cursor captures the visual and semantic context around itself so Gemini can act on the specific word, paragraph, image region, or code block you're hovering over &mdash; no need to type the context into a prompt. A "wiggle" gesture summons contextual prompts; selecting multiple images surfaces actions like "compare items" or "visualise together." DeepMind framed the principle as "AI meets users across all the tools they use, without interrupting their flow" &mdash; explicitly the opposite of dragging context into an AI window. Magic Pointer ships in Chrome starting today and rolls out to Googlebook hardware (Acer, ASUS, Dell, HP, Lenovo) in the fall.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The cursor hasn't been redesigned in 50 years and Google just made it agentic. This is more than a feature &mdash; it's an interaction-pattern reset that other OS vendors will respond to, and it puts an addressable AI surface on every pixel of every screen. The design problem it creates is global: every hover state, tooltip, right-click menu, and selection treatment in your product now has to coexist with an OS-level AI cursor that also has opinions about that content. Your "select to highlight" pattern may already be conflicting with "wiggle to ask Gemini" on a user's machine.</p>
+          <p class="source"><a href="https://deepmind.google/blog/ai-pointer/" target="_blank" rel="noopener">Source &mdash; Google DeepMind</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Open 5 dense screens in {focus} &mdash; tables, forms, documents, anything with text and selectable regions. For each, list every cursor-driven interaction you ship today: hover tooltips, drag-to-select, right-click menus, double-click to edit, link cursors. Imagine Magic Pointer is now overlaid on top of every one of these surfaces. Identify the three biggest conflicts: where your interaction is now ambiguous with "wiggle to ask Gemini," where users will accidentally trigger AI in moments of focused work, and where your tooltip is now redundant with what the OS-level cursor will offer. Write 200 words on what you'd redesign first. The annotated screens plus the priorities are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-minute crit with your team on {domain}: "What does our interaction model do when the user's cursor is itself an AI agent?" Map the team's reaction across three axes: (a) which of our patterns are now obsolete (e.g. "highlight text and get a definition tooltip"), (b) which become more valuable as the user's primary in-product affordance (e.g. specialised editing surfaces the OS-level cursor can't reach into), (c) which are at risk of fighting the OS cursor for the same gesture vocabulary. Walk away with one team-level decision about what to test in the next sprint. The decision and the rationale is the artefact &mdash; not a moodboard.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write 300 words: "If the OS-level cursor becomes a free AI surface, which of our paid AI features in {domain} stop being defensible?" Cover (1) the specific AI tasks our users do inside our product that Magic Pointer or its iOS/macOS equivalent will subsume within 18 months, (2) the tasks where the value is the proprietary data or UI we control, not the model, (3) whether our pricing page leans on capabilities that are about to be table stakes, and (4) the one thing we should be charging for that we currently give away. End with a recommendation, the trigger event that would force the change, and the cheapest signal we can read in one quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-05-13-create-my-widget-vibe-coded"
+                 data-category="generative-ui"
+                 data-published="2026-05-12"
+                 data-tags="google,android,gemini,vibe-coded,widgets,home-screen,generative-ui">
+          <div class="head">
+            <h6 class="headline">Android's "Create My Widget" puts vibe-coded generative UI on the home screen &mdash; Gemini turns a one-line description into a working, resizable widget pulling from Gmail, Calendar, and the web</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-12">Published May 12, 2026</time></p>
+          <p class="summary">At The Android Show: I/O Edition on May 12, Google demoed Create My Widget &mdash; users describe a widget in natural language ("Suggest three high-protein meal prep recipes every week"; "Track my Berlin trip flights, hotel, and reservations with a countdown") and Gemini generates a functional, resizable home-screen widget that can pull from Gmail, Calendar, and the open web. It ships first on the latest Samsung Galaxy and Pixel devices this summer, with broader rollout later in the year. This sits inside the larger "Gemini Intelligence" framing that now positions Gemini as the OS-level intelligence layer, and it lands alongside Magic Pointer and Googlebook in the same announcement.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the first credible mass-market shipment of generative UI at the OS layer &mdash; not "AI inside an app" but "AI generates the app surface." That changes the unit of design from "screens we draw" to "components users compose with words." Two craft consequences worth sitting with: (1) the design system stops being something only designers touch, because the user's prompt is now the new top of the design funnel, and (2) the half-life of a custom widget on a user's home screen becomes much shorter, which puts pressure on how products earn permanent surface area instead of being assembled on demand.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/05/12/googles-create-my-widget-feature-will-let-you-vibe-code-your-own-widgets/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,divergent-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write the 10 most useful widget prompts a real user of {focus} might type into Create My Widget tomorrow. Be specific: actual data sources, actual triggers, actual outputs. Then for each one, sketch what the generated widget would probably look like at 2x2, 4x2, and 4x4 sizes &mdash; what data shows up, what gets dropped, what is hierarchy. Mark the three prompts that produce a widget that competes directly with a screen we already ship. Write a 1-paragraph critique of what the widget will do worse than our screen, and the one thing it will do better. The 10 prompts plus the marked-up critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 45-minute working session with your team and one PM on {domain}: "What does our design system need to do differently if users will start composing UI from our components with one-line prompts?" Map four implications: (a) which tokens and components are stable enough to be "promptable" without breaking the system, (b) which need stronger constraints so Gemini doesn't ship something off-brand on a user's home screen, (c) which data sources we'd want exposed first, (d) the governance model &mdash; who approves what gets vibe-coded against our system, and who is on the hook when it goes wrong. The four answers and the named owner per area is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write 300 words: "In a world where users vibe-code their own widgets, what does our product still need a permanent app icon for?" Cover (1) the user jobs where a generated widget is genuinely better than our app (quick reads, ambient awareness), (2) the jobs where an installed app still wins (deep work, multi-step flows, regulated data), (3) the risk that our category becomes a stack of OS-level widgets nobody installs apps for, and (4) the one feature we'd build first to make our app un-vibe-codable in {domain}. End with a recommendation and the cheapest experiment that would tell you you're wrong.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-13-agent-ui-standards-mcp-a2ui"
+                 data-category="generative-ui"
+                 data-published="2026-05-12"
+                 data-tags="generative-ui,mcp-apps,a2ui,google,anthropic,openai,standards">
+          <div class="head">
+            <h6 class="headline">Two camps form for agent-driven UI: MCP Apps (Anthropic, OpenAI) load mini-web-apps in a sandbox; Google's A2UI generates native components from your design system &mdash; the standards war that decides who controls generative UI</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-12">Published May 12, 2026</time></p>
+          <p class="summary">The New Stack laid out the agent-UI standards split this week. The MCP Apps approach &mdash; backed by Anthropic and OpenAI, riding on the existing Model Context Protocol &mdash; treats UI as a resource the agent loads, typically prefab HTML rendered inside a sandbox. Google's A2UI v0.9, shipped in April, takes a "native-first" path: the agent declares UI intent in a portable format and the host renders it using your existing component catalog (a shared web core plus official React, Flutter, Lit, and Angular renderers, with a Python Agent SDK and Go/Kotlin coming). Anthropic is involved in the MCP Apps project, and Google has positioned A2UI as the deeper-integration alternative. Both approaches are real and being deployed; neither is dominant yet.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Generative UI is no longer a research demo &mdash; it's a standards fight, which means the design pattern your product picks in the next six months will lock you into one of two very different worlds. Mini-web-apps are easier to ship and easier to govern (the agent can't reach into your design system or your data store), but they always look like ads injected into your UI. Native-first looks and behaves like your product but requires you to harden your component catalog as a public API and accept that an external agent now composes screens against it. Pick wrong now and the integration cost in 2027 will be brutal.</p>
+          <p class="source"><a href="https://thenewstack.io/agent-ui-standards-multiply-mcp-apps-and-googles-a2ui/" target="_blank" rel="noopener">Source &mdash; The New Stack</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one feature in {focus} that today is a single hand-designed screen and that an external agent might plausibly want to render. Mock it two ways: (1) MCP-Apps style &mdash; a self-contained mini web app rendered inside an iframe-shaped slot in someone else's product, no access to your design system, no shared state; (2) A2UI-style &mdash; an intent declaration ("show invoice list with filter X and a 'pay' action") that someone else's host app renders using their components. For each, list what gets lost in translation, what you can't enforce anymore, and the worst-case bad-actor scenario. The two mocks plus the trade-off list is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Spend 30 minutes auditing your design system for "agent-readiness": do components have stable semantic names? Are tokens externally addressable? Is there a public schema for the data each component expects? Then run a 30-minute working session with your eng lead and one PM on {domain}: "If we had to publish either an MCP-Apps surface or an A2UI surface tomorrow, which would we ship and what would we have to harden first?" Leave with three concrete things to fix in the design system this quarter (naming, contracts, tokens), and a named owner per item. The audit plus the three fixes is the artefact, circulated to design-ops and platform eng.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write 400 words: "Which generative-UI standard do we bet on in {domain}, and what does picking force us to give up?" Cover (1) the buyer in our category &mdash; do they live inside the Anthropic/OpenAI ecosystem (likely MCP Apps wins) or the Google ecosystem (A2UI wins), (2) what the choice does to our partnerships and to which clouds our product is rendered inside, (3) the risk of trying to support both at GA quality with a small team, and (4) the one feature we'd build first that would only make sense under the standard we chose. End with a recommendation, a named exec to socialise it with, and the trigger event that would force us to switch.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+
+    <section class="day-section" data-date="2026-05-12">
+      <h4 class="day">Tuesday, May 12</h4>
 
       <div class="category-group" data-category="industry">
         <h5 class="category-label">Industry</h5>
