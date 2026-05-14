@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://whetstone.io/$1",
+      "destination": "https://www.whetstone.io/$1",
       "has": [{ "type": "host", "value": "whetstone-beta.vercel.app" }],
       "permanent": true
     }
