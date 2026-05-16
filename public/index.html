@@ -1052,8 +1052,201 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
+    <section class="day-section" id="today" data-date="2026-05-16">
+      <h4 class="day">Saturday, May 16 <span class="day-date">&mdash; today's briefing</span></h4>
 
-    <section class="day-section" id="today" data-date="2026-05-15">
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-16-codex-mobile-anywhere"
+                 data-category="coding-agents"
+                 data-published="2026-05-14"
+                 data-tags="openai,codex,mobile,chatgpt,coding-agents,async-review,approval-workflow">
+          <div class="head">
+            <h6 class="headline">OpenAI ships Codex inside the ChatGPT mobile app &mdash; review diffs, switch models, approve commands, and kick off new tasks from your phone while the work runs on your laptop</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-14">Published May 14, 2026</time></p>
+          <p class="summary">On May 14 OpenAI brought Codex into the ChatGPT iOS and Android apps. When the app pairs with a machine where Codex is already running (Mac today, Windows soon), it loads the live session state &mdash; active threads, files, credentials, plugin context &mdash; so you can review diffs, approve commands, switch models, or start new tasks remotely. Code, keys, and local setups stay on the connected machine. The capability is in preview for every plan including Free and the new Go tier, across iOS and Android. OpenAI says more than 4 million people use Codex weekly.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the asynchronous-agent UX getting normalised &mdash; the user is no longer at the keyboard while the work happens, just gated at approval points. Two implications for designers. First, the role of an approval surface (a card, a diff, a confirm button) is now load-bearing in ways it wasn't when a human typed the work; bad approval UI now means bad shipped code. Second, your buyers will start expecting the same shape in non-coding domains &mdash; a marketing manager watching a brand asset get generated while they're in a meeting, an analyst nudging a report from a phone. Whichever discipline you're in, the pattern to study right now is "the artefact moves while I'm not looking, and I review when I'm ready."</p>
+          <p class="source"><a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank" rel="noopener">Source &mdash; OpenAI</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one place in {focus} where a human currently approves a piece of agent or automation output (a draft email, a generated layout, a queued change, a price update). Design the mobile-first approval surface for it from scratch: a single card the reviewer sees on their phone, the minimum diff/preview that makes the decision safe, the affordances for "approve," "reject with reason," and "ask for a different version." Build it in Figma in 40 minutes. In the last 20, write a 200-word critique of your own design: which decisions did you defer to the desktop version, which approval gate did you make too low-friction, and what would a regulated environment force you to add back? The Figma frame plus the critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pull your PM, a senior engineer, and one CS or support lead into a 30-minute working session. Question: "If our product worked like Codex-on-phone &mdash; user not at the keyboard, agent shipping work in the background, human reviews only at the gates &mdash; which of our flows would feel native and which would break?" Walk three real flows from {domain}. For each, identify the natural approval moments (today they may not exist), what state a mobile reviewer would need loaded, and the failure mode if the reviewer hits "approve" without looking. Leave with a list of three approval surfaces that don't exist today but probably should, and one flow that should never go async because the stakes are too high. The list plus the named "do not go async" flow is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 500-word memo for {domain} leadership: "What an async-agent product looks like for us, and the three places we'd build it first." Cover (1) what specifically Codex-on-phone changes about user expectations &mdash; the work happens while they're not watching, and approval is a phone-sized act &mdash; and which of our buyer personas now expect that shape; (2) the three flows in our product where we could ship an async-approval surface in one quarter and the one flow where we absolutely shouldn't; (3) the data and audit trail we'd need to make async approvals defensible in a regulated industry (if we're in one) or to support a customer dispute (if we're not); (4) the smallest probe that proves the demand &mdash; not the build, the probe. End with a single named exec sponsor and a Go/No-Go date.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-16-xai-grok-build-cli"
+                 data-category="coding-agents"
+                 data-published="2026-05-14"
+                 data-tags="xai,grok-build,coding-agents,cli,grok-4-3,supergrok-heavy,plan-mode">
+          <div class="head">
+            <h6 class="headline">xAI joins the coding-agent race with Grok Build &mdash; terminal-native CLI, mandatory "plan mode" before code changes, up to 8 concurrent sub-agents, Grok 4.3 beta with a 2M-token context, locked behind SuperGrok Heavy at $300/month</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-14">Published May 14, 2026</time></p>
+          <p class="summary">xAI launched Grok Build in early beta on May 14: an agentic command-line interface that plans projects, writes and edits files, executes shell commands, and ships applications from natural-language prompts. The headline feature is a plan mode where the human reviews, edits, and approves a plan before the agent touches any code. Grok Build can spawn up to 8 concurrent agents that simultaneously plan, search docs, and write &mdash; underlying it is Grok 4.3 beta, what xAI calls a 16-agent "Heavy" architecture, and a 2M-token context window. Access is locked to SuperGrok Heavy subscribers at $300/month, on Linux/macOS first. Musk acknowledged that xAI has fallen behind on coding tools; the launch is explicitly a Claude Code competitor.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Three serious coding-agent CLIs now exist alongside the IDE-based crowd &mdash; Claude Code, OpenAI's Codex CLI, and Grok Build. Each is staking a different differentiator: Claude Code on agent skills and plugin marketplace, Codex on the cloud-and-mobile loop, Grok on plan-then-execute with high concurrency at a premium price. For designers and PMs, this means the choice of "which coding agent does my team standardise on" pulls in different defaults for engineering UX, code-review cadence, and how design handoff lands. Don't assume one wins; assume your engineers will run 2&ndash;3 in parallel through 2026, and any tool you build for them should not bake in a single agent's mental model.</p>
+          <p class="source"><a href="https://www.engadget.com/2173482/xai-coding-agent-grok-build/" target="_blank" rel="noopener">Source &mdash; Engadget</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">If you have access to Grok Build, install it and re-run a task you've already shipped with Claude Code or Codex CLI &mdash; rebuilding one screen, refactoring one component, generating a small piece of {focus}. Run it twice: once accepting the default plan, once editing the plan before execution. Spend the last 20 minutes writing a 300-word side-by-side critique: where plan mode made you catch something the silent agents would have shipped, where the 16-agent Heavy architecture produced better-or-worse output than a single-agent run, and which engineer on your team should and shouldn't be using this tool. If you don't have SuperGrok Heavy, do the same exercise against Claude Code's plan-then-execute mode and write what you'd expect Grok Build's differentiator to be &mdash; then ask an engineer who does have it to validate or kill the hypothesis. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Get your eng manager and tech lead into a 30-minute conversation. Question on the table: "If our engineers end up running Claude Code, Codex CLI, and Grok Build in parallel through the rest of 2026, what design-side artefacts have to change?" Walk through (a) how design handoff currently lands &mdash; Figma files, Storybook entries, Make outputs &mdash; and whether each tool reads them well, (b) the design-system docs we'd need to rewrite so they survive being ingested by three different agents with different attention patterns, (c) the cadence and shape of code review on agent-generated PRs, and what designers need to see in that review to catch regressions. Leave with one named handoff artefact to rewrite, one design-system doc to revise, and a calendar item to revisit in 8 weeks once a tool of choice has actually emerged.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a 1-page memo for {domain} product leadership: "Should our product behave differently when the user is running Claude Code, Codex, or Grok Build?" Cover (1) the three or four signals in our telemetry that already tell us which agent a user has wired into our docs/MCP/API surface, (2) the differentiators each agent offers (skills, mobile gates, plan-mode + concurrency) and which of those our product could lean into vs ignore, (3) one concrete experience that should change when we detect a specific agent &mdash; not three, not a whole roadmap, just the single best one, (4) the risk of building agent-specific behaviour in a market that hasn't picked a winner yet. End with "we will / won't / will only if X" and a date when that decision gets revisited. The memo is the artefact, not the implementation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-16-hubspot-aeo-sensor"
+                 data-category="industry"
+                 data-published="2026-05-14"
+                 data-tags="hubspot,aeo-sensor,answer-engines,chatgpt,gemini,perplexity,seo,visibility">
+          <div class="head">
+            <h6 class="headline">HubSpot ships AEO Sensor &mdash; a free public dashboard tracking how ChatGPT, Gemini, and Perplexity treat brands by industry, launched alongside HubSpot's own disclosure of a 27% year-over-year drop in organic traffic</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-14">Published May 14, 2026</time></p>
+          <p class="summary">HubSpot launched AEO Sensor on May 14 as a free public dashboard with three data streams: daily answer-engine volatility scores (mention rate, citation rate, citation type), weekly AI-referred traffic trends modelled from anonymised HubSpot customer data, and weekly industry visibility benchmarks comparing representative brands across ChatGPT, Gemini, and Perplexity. The launch comes with HubSpot publicly disclosing that its own organic traffic has fallen 27% year-over-year as of the April AEO product launch. The dashboard is positioned as a "public good" instrument; it sits alongside a paid AEO product stack and the AEO Grader tool that does brand-specific scoring.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If any part of your product, your company's revenue, or your team's discovery loop sits downstream of Google traffic, the substrate just shifted under it &mdash; and AEO Sensor is the first decent public read on how fast that's happening by industry. For designers specifically: the empty states, onboarding emails, first-screen copy, and in-product upsell flows you write all carry an implicit model of what the visitor already knew when they arrived. When answer engines mediate more of the discovery, that "they arrived knowing our brand and the problem we solve" assumption breaks. The bet to make in the next two quarters is not on more SEO; it's on the surfaces that have to do more work because the visitor arrives knowing less and trusting less. Bookmark the dashboard even if you never touch marketing.</p>
+          <p class="source"><a href="https://www.hubspot.com/aeo-sensor" target="_blank" rel="noopener">Source &mdash; HubSpot</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pull up three first-impression surfaces in {focus} that pre-AEO traffic would have hit: your landing page hero, the empty state for your highest-traffic feature, and the first onboarding email. For each one, write the line of copy or the visual decision that quietly assumes the visitor already knew what we do. Then rewrite it for a visitor who arrived from a ChatGPT or Perplexity answer where our brand was one of three options, with no follow-through on which one to actually click. Write a 200-word note on which of the three surfaces shifted the most, and which one was already AEO-friendly without anyone telling it to be. The annotated copy plus the note is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Set a 30-minute meeting with your marketing or growth lead this week. Bring AEO Sensor's industry view for {domain} on screen. Two questions to work through: (1) which of our current top-of-funnel content surfaces is most exposed to the AEO shift &mdash; and which of our in-product surfaces (onboarding, dashboard, empty states) is implicitly downstream of that exposure? (2) If AI-referred traffic keeps growing while branded organic shrinks, what's the one in-product change design should ship in Q3 that we'd otherwise put off &mdash; an inline "how this works" pattern, a new empty-state strategy, a "you found us via X, here's why we're a fit" first-run flow? Leave with one named change and a 6-week owner. The change plus owner is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 600-word memo for {domain} leadership: "Designing for a buyer who arrived through an answer engine." Cover (1) the specific numbers from AEO Sensor for our industry today &mdash; volatility, AI-referred traffic share, citation rate &mdash; with the date, so a re-read in three months has a baseline; (2) the implicit assumption in our current product copy, onboarding, and empty states about what the visitor knew before they arrived, and which of those assumptions is now wrong for what share of traffic; (3) one strategic shift you'd recommend &mdash; not five, one &mdash; in how the product introduces itself, e.g. an inline trust pattern, a "we are the answer to this question" first-screen, a structured-data overhaul, or a clearer differentiation page that an answer engine can quote; (4) the smallest probe that would prove or disprove the bet inside one quarter. End with a recommendation, a named exec sponsor, and the trigger that would force re-examination (e.g. AI-referred share of qualified signups crosses 25%).</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-16-recursive-superintelligence-650m"
+                 data-category="industry"
+                 data-published="2026-05-13"
+                 data-tags="recursive-superintelligence,richard-socher,self-improving-ai,funding,gv,greycroft,nvidia,amd">
+          <div class="head">
+            <h6 class="headline">Recursive Superintelligence emerges from stealth with $650M at a $4.65B valuation &mdash; Richard Socher and Tim Rocktäschel pitch a "Level 1 autonomous training system" where the model proposes the next experiment and humans exit the loop</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-13">Published May 13, 2026</time></p>
+          <p class="summary">Recursive Superintelligence came out of stealth on May 13 with $650M at a $4.65B valuation, led by GV (Google Ventures) and Greycroft, with AMD Ventures and Nvidia participating. The founding team: Richard Socher (ex-Salesforce CSO), Tim Rocktäschel (ex-DeepMind), Alexey Dosovitskiy, Josh Tobin, Caiming Xiong, Yuandong Tian, Tim Shi, and Jeff Clune &mdash; with Peter Norvig as advisor. The thesis: AI systems will improve themselves by analysing their own performance and proposing the next experiment, automating ideation, implementation, and validation. The company has targeted a "Level 1" autonomous training system and a public launch in mid-2026. This is a recursive self-improvement bet stated more bluntly than any well-funded lab has stated it.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Recursive self-improvement has been the safety-researcher bogey for a decade; a Tier-1 team with $650M is now executing on it explicitly. Two short-term things this changes for designers. First, the implicit story we tell stakeholders &mdash; "AI capability today is what we should design for over the next 18 months" &mdash; now competes with a louder counter-story that capability could compound faster than your roadmap. You don't have to believe the counter-story; you do have to know how your plan looks under both. Second, the bottleneck on AI-enabled product work is shifting from "can we ship the screen" to "can we write the constraints, evals, and judgement calls that a self-improving system will get subtly wrong." Treat your evaluation rubric as a craft, not a sidecar.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Take the last shipped flow in {focus}. Spend 40 minutes turning it into a written evaluation rubric: 8&ndash;12 specific, scoreable judgements a reviewer would apply to a candidate AI-generated version of the same flow. Force yourself to write the failure-mode criteria you'd never put in a spec &mdash; e.g. "the helper text fails when the user's name is three characters or contains an apostrophe," "the empty state breaks if the connected account has zero rows but non-zero pending invites," "the success animation reads as celebratory when the underlying action triggers a deletion." In the last 20 minutes, run a real AI-generated version of the screen (Claude Design, Make, v0, your in-house agent) against the rubric and score it. The rubric and the scored screen is the artefact. The point is not the screen &mdash; the point is the rubric.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 45-minute working session with two senior designers on your team. Topic: "If our team's job in 2027 is mostly to write the rubrics that judge AI-generated work, what does that team and that hiring rubric look like?" Walk through (a) the three rubrics you'd want every senior designer on the team to be able to author from scratch by next quarter (accessibility, brand fit, regulatory edge cases, micro-interaction polish &mdash; you pick), (b) the work that disappears or shrinks if model capability compounds &mdash; pixel-pushing, baseline component creation, first-pass copy &mdash; and which of your team's current calendar that frees up, (c) what you'd change in the design-IC interview loop to test for rubric-writing judgement rather than craft alone. Leave with one named hiring-bar change and one calendar block you're protecting starting next sprint for rubric work. The two named decisions are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 600-word "two-roadmap" memo for {domain} leadership. Roadmap A assumes capability progresses linearly through 2027; Roadmap B assumes a Recursive-Superintelligence-style breakthrough compounds capability roughly 2x faster. For each, name (1) the single bet your product is making that gets stronger under that world, (2) the single bet that becomes worthless, (3) one architectural decision your team would make differently today knowing which roadmap is live in 12 months. Then write the trigger event that would flip you from Roadmap A to Roadmap B &mdash; the named benchmark, the named launch, the named pricing change &mdash; so you don't have to argue the case again from scratch in six months. End with a one-line recommendation about which roadmap to plan the next quarter around, and a named exec sponsor. The memo is the artefact, not the bet.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+
+    <section class="day-section" data-date="2026-05-15">
       <h4 class="day">Friday, May 15 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="industry">
