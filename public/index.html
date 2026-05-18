@@ -1052,8 +1052,208 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-17">
-      <h4 class="day">Sunday, May 17 <span class="day-date">&mdash; today's briefing</span></h4>
+    <section class="day-section" id="today" data-date="2026-05-18">
+      <h4 class="day">Monday, May 18 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-18-gemini-spark-leak"
+                 data-category="pm-tools"
+                 data-published="2026-05-14"
+                 data-tags="google,gemini,spark,agent,task-scheduler,io-2026,personal-ai,productivity">
+          <div class="head">
+            <h6 class="headline">Gemini Spark leaks 48 hours before Google I/O &mdash; a two-tab Chat+Agent layout, a persistent task scheduler, and a behaviour model that learns which tools you reach for and when</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-14">Published May 14, 2026</time></p>
+          <p class="summary">Between May 14 and May 17, code-analysis pieces in 9to5Google, Android Authority, Android Headlines, and Yahoo News Singapore surfaced "Gemini Spark" &mdash; an always-on agent that Google is preparing to ship inside the Gemini app, almost certainly to be announced at Google I/O on May 19. Spark adds a second tab to the Gemini navigation drawer ("Chat" and "Agent"), with the Agent tab showing a list of active tasks and tasks scheduled to run at specified times. Example capabilities pulled from leaked strings include inbox decluttering (summarise newsletters, archive, unsubscribe), pre-meeting briefs, and custom news digests. The behaviour-model framing &mdash; Spark builds a persistent model of which tools you use, when, and what decisions you repeat &mdash; positions it as a direct response to Claude Cowork rather than just a Gemini upgrade. Spark can read screen context across Android and reportedly drive Chrome for Android via the agentic browsing path Google previewed at the Android Show on May 12.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The two-tab Chat-and-Agent navigation is the second major AI surface this year to bet on splitting "talk to me now" from "do work for me on a schedule." OpenAI's Codex and Anthropic's Cowork pushed in the same direction; with Google now confirming it, this is the emerging shape of personal-AI navigation, not a one-vendor choice. If your product still treats AI as one chat box with no concept of scheduled or background work, the affordance gap is about to show up in customer feedback. Watch how Spark handles three load-bearing micro-moments: (1) the consent screen that grants the behavior-modelling permission, (2) the "what is my agent doing right now and can I stop it" view, (3) the failure mode where a scheduled task ran while you weren't watching and quietly did the wrong thing.</p>
+          <p class="source"><a href="https://9to5google.com/2026/05/14/gemini-spark-insight/" target="_blank" rel="noopener">Source &mdash; 9to5Google</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pull screenshots from the three leak write-ups (9to5Google, Android Authority, Android Headlines) and spend 20 minutes annotating the Spark Chat-and-Agent navigation: where exactly does "scheduled work" live versus "live conversation", how does the agent surface its current task, how does it announce a completed action, and what visual language separates "this is a draft" from "this just shipped to my inbox." In the remaining 40 minutes, take one screen in {focus} where AI shows up today and sketch (paper or Figma) two redesigns: (a) the same screen if you had to split "chat now" from "agent doing work later" without growing the navigation, (b) the failure-mode screen for "the agent did something while you weren't watching and you want to undo it." Write a 200-word note naming the one Spark pattern you'd steal and the one you'd refuse to copy. The sketches plus the 200 words is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Schedule a 30-minute conversation with your PM and your top IC on {focus}. Anchor question: "If our customers start spending half their day inside Spark or Cowork or Codex, what's the smallest piece of work in {domain} that has to happen in our product UI rather than as an agent task in someone else's app?" Walk three flows. For each, name (a) the trust ceiling &mdash; the point past which a customer wouldn't let a general-purpose agent act without our specific affordances, (b) the integration shape required &mdash; do we need a Spark/Cowork action, an MCP server, or a deeper embed, (c) the one signal that would tell us our product is being skipped by the agent rather than used through it. Leave with a named flow that stays "in our walls," a named flow we'll expose as an agent action, and one experiment to run in the next 30 days. The named pair plus the experiment is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 600-word memo for {domain} leadership: "Personal AI agents are converging on Chat+Agent navigation &mdash; what we lean into and what we don't." Cover (1) the concrete pattern emerging across Spark (leaked May 14&ndash;17), Anthropic Cowork, and OpenAI's Codex/agent surfaces &mdash; persistent task scheduling, behaviour modelling, cross-app actions, a separate "what's the agent doing right now" view, (2) three plausible postures for our product in {domain} &mdash; become an agent action surface (others' agents do work in our app), become a vertical agent (our own scheduler inside our app), or stay agent-adjacent (no scheduler, just deep integrations), (3) the customer evidence we'd need in 90 days to choose, (4) one explicit thing we will NOT do &mdash; e.g. ship a half-baked scheduler just to match the I/O news cycle. End with a named sponsor and the trigger that flips the choice. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-18-anthropic-meter-agents-june-15"
+                 data-category="industry"
+                 data-published="2026-05-14"
+                 data-tags="anthropic,claude,pricing,agents,sdk,credits,monetization,openclaw,github-actions">
+          <div class="head">
+            <h6 class="headline">Anthropic puts agentic Claude on a meter &mdash; from June 15, programmatic usage (Agent SDK, GitHub Actions, OpenClaw, third-party frameworks) bills out of a separate monthly credit pool that roughly mirrors the user's subscription price</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-14">Published May 14, 2026</time></p>
+          <p class="summary">InfoWorld, The Register, and Axios reported on May 14 that Anthropic will separate programmatic Claude usage from interactive subscription limits starting June 15. Programmatic usage &mdash; the Agent SDK, GitHub Actions, OpenClaw, and third-party agent frameworks &mdash; will be billed out of a dedicated monthly credit pool that mirrors the user's subscription price: Pro gets $20 in credits, Max 5x gets $100, and Max 20x gets $200. Once the pool is exhausted, billing converts to API rates. Interactive Claude Code and chat use stay on their existing rate limits, which Anthropic doubled on May 6 after the SpaceX Colossus 1 compute deal. The change is being framed as fairness ("agents shouldn't ride for free on a flat-rate subscription") but its practical effect is to convert any customer whose agents are useful enough to run often onto metered billing.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Combine this with Figma's Q1 result (75% of users who blew through the AI credit cap kept paying) and the shape of the AI business model is now visible. Inside two months, the two most-watched AI billing announcements both ended the all-you-can-eat era for the most valuable surface of their product. If you've been arguing internally that "AI features will stay free because the competition gives them away" &mdash; that argument is now load-bearing on an ever-thinner shelf. The interesting design question isn't whether to gate, it's how to make the gating legible: what does a credit meter inside a chat conversation look like when the user is mid-task; what's the failure mode when an agent runs out of budget halfway through a 12-step plan; what's the difference between "you're approaching your limit" and "your agent just stopped because you're out."</p>
+          <p class="source"><a href="https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html" target="_blank" rel="noopener">Source &mdash; InfoWorld</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI-driven flow in {focus} that today is unmetered (autofill, suggestions, agent runs, draft generation, summarisation, anything). Sketch three UI states the customer will need if you metered it tomorrow: (a) the "you're at 60% of your monthly budget" state, where the user is mid-task and you want to inform without scaring them off &mdash; copy, visual, placement, (b) the "your agent stopped at step 7 of 12 because budget is exhausted" state, where the user needs to know what got done, what didn't, and what their cheapest recovery is, (c) the "you've upgraded mid-month and the new budget is X" state, where you need to reset trust. Write 150 words on what micro-copy you'd use for the moment the budget is fully exhausted &mdash; the difference between a banner that drives churn and one that drives an upgrade. The three sketches plus the micro-copy is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pull your eng lead and your billing or pricing partner into a 30-minute working session. Anchor question: "If Anthropic just split programmatic from interactive billing, what's the equivalent line in {domain} and where does it sit in our UI?" Walk three flows that involve AI today. For each, name (a) the natural billing unit &mdash; tokens, generations, agent runs, tool calls, (b) the surface where the customer first sees the unit being counted (it must be in-flow, not in settings), (c) one trust trap to avoid &mdash; e.g. counting attempts that failed, counting retries silently, hiding the meter inside an admin console. Leave with a single billing-disclosure pattern your team will use across all AI features, an owner, and a date by which it'll be in the design-system library. The pattern plus the design-system commitment is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 600-word memo for {domain} leadership: "The all-you-can-eat AI era ended in May &mdash; here's what changes for our pricing and our roadmap." Cover (1) the two anchors &mdash; Figma's Q1 25 figure (75% of cap-hit users paid for overages) and Anthropic's June 15 split (Pro $20, Max 5x $100, Max 20x $200 in dedicated agent credits), (2) the specific AI feature in our product whose unit-economics are most exposed if usage doubles, and what we'd do if it tripled, (3) three options on a spectrum &mdash; raise the floor (move free AI under a paid tier), meter the heavy users (Anthropic-style overages), or hybrid (Figma-style cap + buy-more), with one customer segment each option wins and one it loses, (4) a recommended option with the metric at 90 days that flips the call. End with a named sponsor and one thing we'll explicitly NOT do (e.g. surprise mid-contract repricing). The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="case-studies">
+        <h5 class="category-label">Case studies</h5>
+
+        <article class="entry"
+                 data-id="2026-05-18-anthropic-gates-foundation-200m"
+                 data-category="case-studies"
+                 data-published="2026-05-14"
+                 data-tags="anthropic,gates-foundation,global-health,vaccine-screening,life-sciences,beneficial-deployments,polio,hpv">
+          <div class="head">
+            <h6 class="headline">Anthropic and the Gates Foundation commit $200M over four years to global health, life sciences, education and economic mobility &mdash; initial work on polio surveillance, HPV vaccine screening, eclampsia/preeclampsia detection</h6>
+            <span class="badge case-studies">Case studies</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-14">Published May 14, 2026</time></p>
+          <p class="summary">Anthropic announced on May 14 a $200 million, four-year partnership with the Bill &amp; Melinda Gates Foundation, combining grant funding, Claude usage credits, and engineering support. The stated scope covers global health, life sciences, education, and economic mobility, with the most concrete initial deployments inside global health: Anthropic and the Gates Foundation will work with health ministries on outbreak detection, vaccine candidate screening, and supply-chain management, initially focused on polio, HPV (which causes roughly 350,000 deaths annually, 90% in low- and middle-income countries), and eclampsia/preeclampsia. Anthropic is framing this as the largest concrete instantiation of its "beneficial deployments" thesis. It sits alongside the PwC alliance (May 14), Claude for Small Business (May 13), and Claude for Legal (May 12) in a deliberate two-week run of named, tier-1 deployment stories on the way to the $30B funding round close at the end of May.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Two practical implications. First, "beneficial deployments" is moving from a press-page paragraph to an actual product surface &mdash; the people designing for ministries of health, vaccine-screening teams, and supply-chain operators are now working inside Claude. The design of "AI is supporting a high-stakes clinical or public-health decision" is no longer a hypothetical brief, it's somebody's Q3. Second, watch the framing carefully. Pairing a $900B-valuation fundraise with a $200M Gates partnership is also positioning &mdash; "Anthropic ships AI safely" works as a counter-narrative to the next regulator, the next critical report, and the next labour-market panic. The work is real; the framing is also doing work. Both can be true.</p>
+          <p class="source"><a href="https://www.anthropic.com/news/gates-foundation-partnership" target="_blank" rel="noopener">Source &mdash; Anthropic</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one screen in {focus} where AI output is used to support a decision a real human will act on &mdash; not "buy this product" but a decision with downstream consequence (a recommendation, a draft, a diagnosis-adjacent reading, a flagged transaction). Spend 30 minutes writing down what a "this AI output is supporting a high-stakes decision" affordance would actually look like on that screen: a label, a confidence indicator, a "show the sources" expander, a different visual treatment, an explicit "we cannot do X" boundary in the spirit of OpenAI's "no money movement" language from last week. In the remaining 30 minutes, sketch the screen with and without the affordance, and write 200 words on the failure mode the affordance is designed to catch. The two sketches plus the 200 words is the artefact &mdash; the discipline is that if you can't name the failure mode, the affordance is decoration.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Schedule a 30-minute conversation with a non-design partner you don't usually pull in &mdash; safety, trust, support, legal, clinical, or the equivalent for {domain}. Anchor question: "If we had to ship one AI feature in {focus} this quarter to a buyer whose use case has real downstream stakes (regulator, clinician, ops manager), what's the smallest design change that would make it sign-offable, and who has to bless it before launch?" Walk three candidate features. Leave with (a) one feature your team will scope this quarter with that partner in the loop, (b) one feature you'll explicitly de-scope or delay because the sign-off path isn't real, (c) one ritual change &mdash; e.g. an "AI-touched flow" checklist that anyone outside design can read in 90 seconds. The named feature plus the ritual is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 600-word memo for {domain} leadership: "What the Anthropic&ndash;Gates partnership tells us about how AI vendors will compete in 2026&ndash;2027 &mdash; and what it means for our buyer story." Cover (1) the specific facts &mdash; $200M, 4-year, polio/HPV/eclampsia initial focus, paired in the same week with PwC, small business, and a $900B fundraise, (2) what this signals about the buyer Anthropic is trying to reassure (regulators, ministries, large enterprise risk committees) and how that buyer increasingly shapes the product roadmap, (3) the parallel for {domain} &mdash; what's our equivalent "beneficial deployment" story, do we have one, can we credibly build one, or is the better differentiation an explicit "we don't pretend to do this" boundary, (4) one recommendation and the trigger to revisit. End with a named sponsor and one specific story we will NOT tell about our product (because it'd be marketing, not work). The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-18-babuschkin-new-lab-1b"
+                 data-category="jobs-industry"
+                 data-published="2026-05-15"
+                 data-tags="xai,babuschkin,fundraise,frontier-labs,talent,general-catalyst,research,splintering">
+          <div class="head">
+            <h6 class="headline">xAI co-founder Igor Babuschkin reportedly raising up to $1B at a $5B valuation for a new AI research lab, with General Catalyst possibly leading &mdash; senior frontier-lab talent splintering accelerates</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-15">Published May 15, 2026</time></p>
+          <p class="summary">Forbes reported this week that Igor Babuschkin, an xAI co-founder and previously a DeepMind researcher, is in early talks to raise up to $1 billion at a valuation of up to $5 billion for a new AI research startup, with General Catalyst named as a possible lead. The round is unsigned. The story sits alongside Ilya Sutskever's SSI, Mira Murati's Thinking Machines, and the trickle of senior researchers leaving OpenAI, Anthropic, Google DeepMind, and xAI to start their own ventures over the last 18 months. The pattern is no longer noise &mdash; it's the structural reshape of frontier AI research from a four-lab oligopoly into a wider field of well-capitalised independent labs, each picking a different bet on architecture, alignment, or domain specialisation.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Two things to internalise. First, the "the frontier is Anthropic, OpenAI, Google, xAI" mental model is getting stale fast. By the end of 2026, the list of labs whose model releases shift your product roadmap will likely include three or four names you don't yet know how to spell. Plan the next two quarters as if vendor concentration is decreasing, not increasing. Second, this is what AI-driven labour-market change actually looks like in practice for senior researchers &mdash; not "AI took my job," but "the option value of starting my own thing got so high I left." The same dynamic will eventually arrive in design, PM, and engineering at scale, and the question to ask yourself isn't "will I be replaced?" but "what's the equivalent independent move for someone in my craft, and what's the option value of taking it now versus in 18 months?"</p>
+          <p class="source"><a href="https://www.forbes.com/sites/iainmartin/2026/05/15/xai-cofounder-babuschkin-new-ai-research-startup-1b-raise/" target="_blank" rel="noopener">Source &mdash; Forbes</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="divergent-thinking,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a 500-word personal note (not for sharing) titled "If I were starting a research-grade independent thing in design, what would I bet on?" Cover (a) one specific belief you hold about {focus} or {domain} that you think most of the field is wrong about &mdash; not a hot take, a belief you've held for at least six months and have evidence for, (b) one capability AI will commoditise inside 18 months that you'd happily watch disappear, (c) one capability AI will not commoditise that you'd build a practice or a product around, (d) the smallest version of that thing you could ship in 30 days as a portfolio piece or a public note. The point isn't to actually leave your job &mdash; it's to clarify the bet your craft is making, in a market where senior people in the next-door discipline are leaving to make theirs in public. The note is the artefact &mdash; keep it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="advocacy,cross-functional" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Schedule three 15-minute conversations this week, one with each of: the IC on your team you'd be most worried to lose, the IC on a partner team whose work most overlaps yours, and one external person you respect who left a job in the last 12 months. One question for each: "What would have to be true about your work in the next six months for you to stay?" Take notes. Then write 250 words synthesising (a) the one structural change you can make at your level that addresses at least two of the three answers, (b) the one thing you cannot fix from inside &mdash; and what you'll do with that information (escalate, advocate, accept). The notes plus the 250 words is the artefact. This is a retention exercise, but it's also a calibration exercise &mdash; you find out how thin the ground under your team actually is.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a 700-word memo for {domain} leadership: "Vendor and talent concentration in AI is decreasing &mdash; here's what that does to our 18-month plan." Cover (1) the named pattern with specifics &mdash; Babuschkin's reported $1B raise (May 15), Sutskever's SSI, Thinking Machines, and the general thinning of frontier labs into a wider field of independent labs, (2) the implication for vendor strategy &mdash; if "the frontier" is four labs today and ten labs in 18 months, do we currently make any commitments (model lock-in, single-vendor MCP, exclusive partnerships) that would look obviously wrong in that world, (3) the implication for buy-vs-build &mdash; cheaper, more specialised models will keep arriving, which features we built around capability assumptions deserve a quarterly re-examination, (4) one structural change to propose &mdash; e.g. a model-portability checklist in our design system, a vendor-diversification policy, an internal capability map. End with a named sponsor and one explicit non-action. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+    <section class="day-section" data-date="2026-05-17">
+      <h4 class="day">Sunday, May 17</h4>
 
       <div class="category-group" data-category="design-tools">
         <h5 class="category-label">Design tools</h5>
