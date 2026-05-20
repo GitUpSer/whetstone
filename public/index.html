@@ -1052,8 +1052,303 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-19">
-      <h4 class="day">Tuesday, May 19 <span class="day-date">&mdash; today's briefing</span></h4>
+    <section class="day-section" id="today" data-date="2026-05-20">
+      <h4 class="day">Wednesday, May 20 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-20-figma-agent-rollout"
+                 data-category="design-tools"
+                 data-published="2026-05-20"
+                 data-tags="figma,ai-agent,design-system,beta,canvas">
+          <div class="head">
+            <h6 class="headline">Figma's AI design agent starts rolling out today &mdash; beta to Professional, Organization, and Enterprise plans, free of AI credits during beta, edits in your file instead of next to it</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-20">Published May 20, 2026</time></p>
+          <p class="summary">Figma began rolling out its purpose-built AI design agent to Professional, Organization, and Enterprise customers today, May 20, with the agent staying in beta while Figma collects feedback. The agent lives on the canvas itself &mdash; designers prompt it in natural language to generate new designs, edit existing ones, run bulk edits, apply the team's design system, and fill in realistic content. Figma is keeping the agent free of AI credits during beta; standard credit consumption kicks in at GA. Internal testing puts the agent's design-system fidelity at roughly 70% across a dozen projects. Unlike Anthropic's Claude Design or Google's Stitch, Figma is positioning the agent as a co-pilot inside the file you already work in rather than a parallel canvas you have to leave your workflow for.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The "stays in your file, respects your tokens" pitch is the one designers actually want, and the one Figma's incumbents (Claude Design, Stitch) cannot match without rebuilding their canvas. The risk is that "inside the canvas" is also where junior work used to happen, and an agent that hits 70% on the first pass quietly removes the floor that the next IC hire was supposed to stand on. Use this week to write down what you want the agent to do and not do in your file, before your team adopts it ad-hoc and your design system starts drifting one prompt at a time.</p>
+          <p class="source"><a href="https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/" target="_blank" rel="noopener">Source &mdash; Figma Blog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Get into the beta if you can, or use the closest agent-in-canvas tool you have access to, and run a real edit task from your {focus} work &mdash; not a sandbox file. Pick something with real opinionated tokens (spacing, type ramp, semantic colour). Document the three places the agent broke your system, the one place it surprised you, and the single instruction you would add to your file's "agent rules" if you could write one. The artefact is the bug list + the rule, not the screenshots.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Convene a 30-minute team conversation this week titled "Rules of the road for the Figma agent." Agenda: when do we use it, when do we not, who reviews agent-generated work before it ships, and how do we tell from a glance whether a frame came from a person or the agent. Capture the answers in a short doc pinned to your design-ops channel. The point is to set a team norm before drift starts, not to anticipate every edge case.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo to your design or product leadership answering: "Does an agent that hits 70% of our design system the first time change our hiring plan for IC designers in the next two quarters?" Pick a stance, defend it, and include the specific roles you would or would not open, the specific work you would or would not give to the agent, and the {domain} risk you are pricing in. Not a panic memo &mdash; a planning memo.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-20-stitch-realtime-multiplayer"
+                 data-category="design-tools"
+                 data-published="2026-05-19"
+                 data-tags="google,stitch,design-md,multiplayer,cursor,claude-code">
+          <div class="head">
+            <h6 class="headline">Google relaunches Stitch as a real-time agentic design canvas &mdash; streaming generation, multiplayer editing, voice critique, and DESIGN.md export to Cursor and Claude Code</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-19">Published May 19, 2026</time></p>
+          <p class="summary">Google used its I/O 2026 keynote on May 19 to relaunch Stitch as a full AI-native software design platform. The new Stitch Agent renders UI directly onto an infinite canvas as the designer types or speaks &mdash; a streaming model that replaces the prior turn-based prompt-and-wait cycle &mdash; and Stitch now supports simultaneous multi-user editing, the feature reviewers had repeatedly named as the biggest gap versus Figma. The update also adds a Manager surface for orchestrating multiple agents in parallel, design-system extraction from any URL, an Agent that critiques designs by voice, and import/export of the DESIGN.md format Google open-sourced under Apache 2.0 in April. DESIGN.md exports work with Cursor, GitHub Copilot, and Claude Code, which makes Stitch the first design tool to ship a "one file, every agent" design-system handoff that lives outside any single vendor.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Stitch has been the most coherent counter-position to Figma since it launched &mdash; instead of grafting an agent onto a canvas, it built the canvas around the agent. The multiplayer + DESIGN.md combination is the part to study, because it removes the two reasons design teams gave for staying on Figma: collaboration and design-system fidelity. The question to hold is not "will I switch to Stitch" but "what does my workflow look like the day a teammate, a contractor, or a coding agent shows up with a DESIGN.md generated somewhere else and expects my file to consume it."</p>
+          <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/" target="_blank" rel="noopener">Source &mdash; Google Blog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,tool-mastery" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Sign up for Stitch, point its URL extractor at your live product, and let it pull a design system from it. Then prompt the Stitch Agent to build one screen from your current {focus} backlog. Put the Stitch screen and your hand-built version side by side and write a one-page critique: what Stitch got that you missed, what it missed that you would never have, and the one piece of your design system that did not survive the extraction. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Tool mastery</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Read the DESIGN.md spec and write a half-page note for your team answering one question: "Could our design system be expressed in this format today, or are there things in it (motion specs, behaviour rules, accessibility contracts) that don't fit?" The artefact is the note, with a list of what would have to change in how the team documents the system to make DESIGN.md a viable export path. Share it with your engineering counterpart the same week.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo titled "Do we need a point of view on AI-native design canvases in the next two quarters?" Cover three things: the {domain} risk if your team stays on Figma and bets on the agent inside it, the cost of running a pilot on Stitch in parallel, and the single criterion that would force a switch decision. Pick a stance &mdash; pilot, watch, or commit &mdash; and defend it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="image-gen">
+        <h5 class="category-label">Image gen</h5>
+
+        <article class="entry"
+                 data-id="2026-05-20-google-pics-nano-banana-2"
+                 data-category="image-gen"
+                 data-published="2026-05-19"
+                 data-tags="google,pics,nano-banana,canva,workspace,marketing-design">
+          <div class="head">
+            <h6 class="headline">Google launches Pics &mdash; an AI-powered design app inside Workspace aimed squarely at Canva and Claude Design, running on the new Nano Banana 2 model</h6>
+            <span class="badge image-gen">Image gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-19">Published May 19, 2026</time></p>
+          <p class="summary">Pics is Google's new AI design app, built directly into Google Workspace and shipping first to a testers cohort at I/O, with Google AI Ultra subscribers getting access this summer. It is positioned squarely at Canva and Anthropic's Claude Design for the everyday-design audience &mdash; social posts, invites, marketing collateral, simple mock-ups &mdash; using natural-language prompts. Pics runs on Google's new Nano Banana 2 model, which the company says is tuned for accurate text rendering, real-world knowledge, and detailed visual output. Editing happens via click-and-comment on specific elements instead of a regenerate-everything loop, and the app sits inline with Docs and Slides for collaboration. Crucially, Google is not pricing Pics separately &mdash; it is bundled with Workspace, which means it will reach the installed base before Canva or Claude Design can finish their distribution push.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The "marketing design" tier is the place AI will commoditise first, because the briefs are short, the audiences are forgiving, and the production volume is huge. If Pics ships well to Workspace's installed base, it eats the bottom of Canva's market before Canva can finish wiring its own AI in. For product designers this matters because the people doing design-adjacent work inside companies &mdash; marketers, ops, PMs &mdash; are about to stop asking you for help. That changes what "design support" inside a company looks like in 12 months, and it changes where junior designers find their first hour of practice every day.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/05/19/ai-design-tools-are-the-next-big-battleground-and-google-is-going-all-in-at-io-2026/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one design-adjacent asset you've produced in the last month that wasn't really design work &mdash; a slide template, a banner, a social card &mdash; and reproduce it with Pics (or the nearest available substitute: Canva Magic Studio, Claude Design, Figma Make). Then write a one-paragraph critique of what about the AI version feels off, and a one-paragraph critique of what your hand-made version did unnecessarily. The two paragraphs together are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Audit the design-adjacent requests your team has fielded in the last month from marketing, sales, ops, or PMs. List the three you would actively stop owning if Pics-class tools became standard in your stack, and the one you would never give up no matter how good the tools get. Share the list with your manager the same day. The artefact is the list; the conversation it forces is the value.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo answering: "Is the marketing-design workload our team currently shoulders a moat or a tax?" Frame it for your CPO or design VP. Identify three pieces of {domain} work that get commoditised by Pics-class tools and one piece that becomes more valuable as the commodity tier expands. End with a single staffing or operating decision you want validated this quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-20-antigravity-2-launch"
+                 data-category="coding-agents"
+                 data-published="2026-05-19"
+                 data-tags="google,antigravity,coding-agents,manager-surface,gemini-api">
+          <div class="head">
+            <h6 class="headline">Google ships Antigravity 2.0 as a standalone agent-first dev platform &mdash; desktop app, CLI, SDK, Managed Agents in the Gemini API, and a Manager surface for orchestrating parallel coding agents</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-19">Published May 19, 2026</time></p>
+          <p class="summary">Antigravity graduated at I/O 2026 from an editor add-on into a full agent-first development platform. The 2.0 release includes a standalone desktop app built around agent orchestration, an Antigravity CLI for terminal-first workflows, an SDK for building custom agents, Managed Agents in the Gemini API, and enterprise deployment via the Gemini Enterprise Agent Platform. The platform's signature surface is the Manager &mdash; a dedicated view where developers spawn, observe, and coordinate multiple agents working asynchronously across editor, terminal, and browser. Pricing is folded into the new AI Ultra tier at $100/month (5x AI Pro limits), with Google's legacy top-tier Ultra plan cut from $250 to $200/month and offering 20x Pro limits.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Antigravity is Google's answer to Cursor + Claude Code + Codex CLI rolled into one product, with Google's distribution and pricing leverage layered on top. The agent-first framing is the part that matters for designers: when an engineer's primary surface is a Manager that spawns multiple coding agents, the handoff from design to engineering stops being "a Figma file an engineer reads" and starts being "a spec multiple agents implement in parallel." Your prototypes, design tokens, and acceptance criteria become the input format, and your review surface has to assume the diff in front of you was written by three things at once.</p>
+          <p class="source"><a href="https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/" target="_blank" rel="noopener">Source &mdash; Google Developers Blog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pull up the last handoff doc or Figma file you sent to engineering on {focus}. Rewrite it from scratch as if three coding agents would implement it in parallel: explicit acceptance criteria, named edge cases, design tokens called out by their semantic role, and a list of things that must be the same across all three implementations. Don't worry whether your team works this way today &mdash; the exercise is to see what your handoff has been quietly leaving implicit.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Book a 30-minute conversation with your engineering lead this week and bring this question: "If our team's coding surface starts looking like the Antigravity Manager &mdash; multiple agents working in parallel &mdash; what does our design review cadence have to look like to keep up?" Capture the answers in a shared doc, with at least one concrete change you'll trial in the next sprint. The artefact is the doc; the value is being the first person in the org to put a structured frame on the question.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled "Should the next hire on our team be a designer or a design engineer?" The constraint: assume your engineers' primary surface in 12 months is an agent-orchestration platform like Antigravity, Cursor, or Claude Code. Defend a stance in three paragraphs &mdash; what the design engineer unblocks that an IC designer cannot, what the IC designer protects that gets eroded if you skip the role, and the single signal that would change your answer this quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-20-gemini-search-agentic"
+                 data-category="industry"
+                 data-published="2026-05-19"
+                 data-tags="google,gemini-3-5-flash,ai-mode,agentic-booking,search,widgets">
+          <div class="head">
+            <h6 class="headline">Gemini 3.5 Flash becomes the default in AI Mode globally &mdash; Google Search adds agentic booking that calls businesses, background information agents, and user-coded result widgets</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-19">Published May 19, 2026</time></p>
+          <p class="summary">Google made Gemini 3.5 Flash the default model in the Gemini app and in AI Mode in Search worldwide on May 19, pitching it as frontier intelligence at roughly half the price of comparable frontier models ($1.50/$9 per million input/output tokens, 1M-token context, four times faster than peers on Google's tests). The Search-side product changes are more interesting than the model spec. Agentic booking now extends from restaurants to local experiences, home repair, beauty, and pet care &mdash; and Google will place the actual call to the business to schedule the appointment on the user's behalf. Background "information agents" operate 24/7 on a user's ongoing task or project. And users can now code their own Search-result widgets directly inside Search, powered by Antigravity and Gemini 3.5 Flash, customising how a result or answer should look and behave for them.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Two pieces are worth tracking. First, the agentic booking flow is the closest a major vendor has come to shipping a real cross-app transaction agent at consumer scale &mdash; not a research demo, but live on Google Search for hundreds of millions of users. Second, "code your own Search result widget" is Google quietly turning Search into a UI surface where the end user (not the publisher, not the business) decides what gets shown. If that pattern sticks, distribution in {domain} stops being "rank for a query" and starts being "be a component a user tells their agent to render." Plan as if both of those are five-year shifts that started this week.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="divergent-thinking,judgement" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Watch a recorded demo of the new Search agentic booking flow (or run one yourself if you're in the rollout). Write down three product decisions in your own {focus} work that would have to change if this UX became the baseline for users &mdash; specifically, what assumptions about "the user comes to our app to start the task" stop being true. The artefact is the three decisions, not a brainstorm list.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="advocacy,cross-functional" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Send a short brief (under 300 words) to your marketing or growth counterpart this week answering one question: "Given Google's new background information agents and user-coded Search widgets, what are the three SEO and content assumptions our {domain} funnel makes that need revisiting before Q3?" The artefact is the brief. The skill is forcing the cross-functional conversation before the data tells you it's late.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled "Do we need an opinion on Search-as-a-distribution-surface for agent-rendered widgets?" Cover what changes for {domain} when users compose their own Search experience, the realistic timeline for the pattern to matter for your traffic, and the one thing your team would need to ship in the next two quarters to be ready if Google's bet pays off. Pick a stance &mdash; commit, hedge, or ignore &mdash; and defend it in three paragraphs.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-20-gemini-spark-ultra"
+                 data-category="tools"
+                 data-published="2026-05-19"
+                 data-tags="google,gemini-spark,ai-ultra,personal-agent,pricing">
+          <div class="head">
+            <h6 class="headline">Google launches Gemini Spark as a 24/7 personal agent inside the new $100/month AI Ultra tier &mdash; rolling out to US subscribers next week</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-19">Published May 19, 2026</time></p>
+          <p class="summary">Gemini Spark is Google's persistent personal AI agent, framed as a "24/7 agent" that takes actions on the user's behalf across Gmail, Calendar, and the rest of the Google surface. It launches next week to Google AI Ultra subscribers in the US, with Ultra repriced as a $100/month tier (5x the AI Pro limits) alongside a legacy top-tier Ultra dropped from $250 to $200. Spark moves Gemini from "assistant you ask questions" to "agent that does work in the background" &mdash; the same always-on frame Anthropic, OpenAI, and Apple have all gestured at, but Spark is the first to ship as a packaged consumer product with a public price tag. The Gemini app reorganises around two tabs &mdash; Chat for talking to it, Agent for telling it to do something while you go do something else.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The interesting variable here is the price point. $100/month is roughly the cost of a family Netflix plus Spotify plus YouTube Premium &mdash; Google is telling consumers their personal AI assistant is worth more than any single entertainment subscription. Whether or not the price holds, watch what happens to your design assumptions when "always-on agent acting on the user's behalf" becomes the default frame for users buying premium AI. Most product UIs are still designed for a user who opens an app, performs an action, and leaves. Spark-class users do not open the app. The work in {domain} is figuring out what your product looks like to its agent, and what part of the interface you keep for the human anyway.</p>
+          <p class="source"><a href="https://qz.com/google-gemini-spark-personal-ai-agent-io-051926" target="_blank" rel="noopener">Source &mdash; Quartz</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="divergent-thinking,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one screen in your {focus} work and sketch how it would change if the user never opened it &mdash; their agent did. Force yourself to list the three things that must remain visible to a human anyway (consent, trust, exception state, money decisions). The artefact is the sketch plus the three-item list. Don't redesign for the agent's convenience; design for what the human still needs to see when the agent is in front of them.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Run a 30-minute team session this week titled "What gets harder when our users have a Spark-class agent in front of them." Pick three flows in your {domain} product and identify the failure mode for each &mdash; what does the agent get wrong, what does the user get blamed for, and what does your product owe in either case. Capture the answers in a shared doc and assign one of them to a designer to prototype next sprint.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo answering: "Is a $100/month consumer AI plan a one-off Google bet, or a new tier of consumer software pricing our product should plan against?" Frame for your CPO. Cover what would have to be true for this price point to stick (utility, switching costs, network effects), what {domain} categories get pulled up if it does, and the one strategic move your product should make this quarter on each scenario. Don't predict &mdash; commit to a stance.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-05-19">
+      <h4 class="day">Tuesday, May 19</h4>
 
       <div class="category-group" data-category="industry">
         <h5 class="category-label">Industry</h5>
