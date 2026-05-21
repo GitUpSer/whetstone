@@ -1052,7 +1052,302 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-20">
+    <section class="day-section" id="today" data-date="2026-05-21">
+      <h4 class="day">Thursday, May 21 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-21-cursor-35-automations-multi-repo"
+                 data-category="coding-agents"
+                 data-published="2026-05-20"
+                 data-tags="cursor,automations,multi-repo,agents-window,no-repo">
+          <div class="head">
+            <h6 class="headline">Cursor 3.5 pulls Automations into the Agents Window, ships multi-repo and no-repo agent runs, and bundles five non-coding templates &mdash; Slack digest, product analytics, FAQ, finance, customer health</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-20">Published May 20, 2026</time></p>
+          <p class="summary">Cursor 3.5 rolled out on May 20 and quietly broke the assumption that "agent" and "repo" are the same thing. Automations &mdash; Cursor's scheduled/triggered agent runs &mdash; now appear in the Agents Window alongside interactive sessions, so the same surface holds both the agent you're babysitting and the agents running in the background. The release adds multi-repo context (agents reason across several codebases for cross-cutting tasks like a feature that spans frontend + backend + infra) and, more interestingly, no-repo automations. Cursor shipped five no-repo templates in the marketplace: a Slack digest agent, a product analytics agent, a product FAQ agent, a product finance agent, and a customer health agent. All new automation runs are 50% off for the next seven days while Cursor pushes adoption.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The no-repo templates are the tell. Cursor is no longer positioning itself as a coding tool &mdash; it's positioning the Agents Window as the place a PM or designer would run any agent, code or not. If that lands, the "AI workspace" is no longer ChatGPT or Notion; it's the IDE you already had open. The risk for designers and PMs is that the team's automation surface drifts to engineering's chosen tool by default, and you wake up next quarter to find the customer-health agent that defines your priorities was written by a backend engineer with no design input.</p>
+          <p class="source"><a href="https://cursor.com/changelog/05-20-26" target="_blank" rel="noopener">Source &mdash; Cursor Changelog</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="automation,tool-mastery" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one of the no-repo templates &mdash; the product analytics or customer health one is most relevant to {focus} work &mdash; and configure it against your team's actual Slack or ticketing data, not a sandbox. Run it for a week. Then write a one-page critique: what useful signal it surfaced, what it surfaced that was noise, and the one prompt change that would have made the difference. The critique is the artefact; "I tried Cursor automations" is not.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Automation</span>
+              <span class="skill-chip">Tool mastery</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Walk your engineering counterpart through one no-repo Cursor template and ask: "What's already running on this surface that I don't know about, and what should design own a piece of?" Capture the answer as a short list of three automations you'd want a design voice in (e.g. customer-health, FAQ tone, analytics dashboards). The artefact is the list plus the agreement on which one you co-own first. The conversation is the value, not the templates.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo to your head of product or ops answering: "Where does the team's agent automation surface live, and is that the right answer?" Cover three things: which {domain} workflows are already running on Cursor / Notion / Zapier / a homegrown script, the cost of letting that drift settle, and the one principle you'd write down to govern it (e.g. "any automation that decides which customer we call gets a non-engineering reviewer"). Pick a stance and defend it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-05-21-cohere-command-a-plus-apache"
+                 data-category="models"
+                 data-published="2026-05-20"
+                 data-tags="cohere,command-a-plus,apache-2,open-source,sovereign-ai,multimodal">
+          <div class="head">
+            <h6 class="headline">Cohere releases Command A+ under Apache 2.0 &mdash; a 218B-parameter MoE with 128K context, native citations, 48-language coverage and multimodal input, aimed at sovereign deployments</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-20">Published May 20, 2026</time></p>
+          <p class="summary">Cohere released Command A+ on May 20 under a full Apache 2.0 licence &mdash; its first model that anyone can use, modify, and ship commercially without paying Cohere a cent. The model is a 218-billion-parameter Mixture-of-Experts with a 128K context window, native citations baked into outputs, multimodal input (text and image), and language coverage expanded from 23 to 48 languages. Cohere is positioning Command A+ for "sovereign critical infrastructure" &mdash; governments, regulated banks, defence &mdash; that cannot send data to OpenAI or Anthropic. The technical headline is lossless quantization (Cohere claims the quantised model is statistically indistinguishable from the full-precision one), which is what makes 218B parameters cheap enough to self-host. Independent verification of the quantisation claim has not yet appeared.</p>
+          <p class="why"><strong>Why this matters for you:</strong> "Open model that's actually open" is rare &mdash; Llama, Gemma, and Cohere's own Command R+ all shipped under licences with non-compete clauses or non-commercial restrictions. Apache 2.0 means an enterprise can fine-tune Command A+, ship a product on top, and never tell Cohere. That changes the calculus for product teams who couldn't justify Claude or GPT pricing on margin-thin features, and it gives design and PM teams a real option for "the model lives inside our walls." Watch whether the citation behaviour holds up &mdash; if it does, RAG-heavy product surfaces (search, support, research) get a credible offline alternative.</p>
+          <p class="source"><a href="https://cohere.com/blog/command-a-plus" target="_blank" rel="noopener">Source &mdash; Cohere</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one assistant or RAG surface in {focus} and run the same five real user queries against Claude, GPT-5.5, and Command A+ (via Cohere's playground or a hosted copy). Score each on three things you actually care about: correctness of citation, voice fit to your product, and refusal behaviour on edge cases. Write a short table of results and the single answer that surprised you most. The table + the surprise is the artefact, not "Cohere is open."</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Sit down with your engineering and security counterparts for 45 minutes and answer one question: "If Command A+ ran inside our environment for the {focus} use case, what changes about the design?" Cover three things: latency budget, what you'd dare show in the UI that you currently won't (e.g. raw model output, multi-step reasoning), and the failure modes that get harder to detect with a self-hosted model nobody at the vendor sees. The artefact is the meeting notes, shared with both teams within 24 hours.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo for your CTO or head of product titled "Should we pilot an open-weights model for one production surface in the next two quarters?" Cover {domain} context, the surface most likely to benefit (margin pressure, data sensitivity, or regulatory pressure), what would have to be true for the pilot to count as a win, and the off-ramp if it doesn't. Pick a stance &mdash; pilot, watch, or skip &mdash; and defend it with specifics, not "open-source is good."</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-21-nvidia-nemotron-labs-diffusion"
+                 data-category="models"
+                 data-published="2026-05-20"
+                 data-tags="nvidia,nemotron,diffusion,language-model,throughput,inference">
+          <div class="head">
+            <h6 class="headline">NVIDIA ships Nemotron-Labs-Diffusion &mdash; a tri-mode language model that switches between autoregressive, diffusion, and self-speculation decoding, claiming 5.9x tokens-per-forward over Qwen3-8B</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-20">Published May 20, 2026</time></p>
+          <p class="summary">NVIDIA Research released Nemotron-Labs-Diffusion on May 20, an open family of 3B, 8B, and 14B language models trained with a joint autoregressive-plus-diffusion objective. The 8B model decodes 5.9x more tokens per forward pass than Qwen3-8B at comparable accuracy, which translates to roughly 4x higher throughput on SPEED-Bench when running on a GB200 GPU under SGLang. The model switches modes per request: pure autoregressive when you need quality on a hard prompt, diffusion when you want bulk generation, and a self-speculation mode where the diffusion draft is verified by the AR pass &mdash; the same pattern as speculative decoding, but with one model instead of two. Weights are on Hugging Face, with base, instruct, and vision-language variants.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Latency is the design constraint people stop noticing once they've shipped a chat surface, and it's the one most likely to flip the experience from "feels like magic" to "feels broken." A 4x throughput improvement at the model level reshuffles what product surfaces are viable &mdash; live transcript rewriting, generative UI that updates faster than a user can read, multi-step agent loops that don't drop out of conversation cadence. The catch: diffusion-mode generations don't stream the way users expect (text doesn't appear left-to-right), which is a UX problem most teams won't notice until they ship and the typing animation looks wrong.</p>
+          <p class="source"><a href="https://research.nvidia.com/publication/2026-05_nemotron-labs-diffusion-tri-mode-language-model-unifying-autoregressive" target="_blank" rel="noopener">Source &mdash; NVIDIA Research</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick the slowest AI surface in {focus} &mdash; the one users have complained about latency on &mdash; and mock up three streaming patterns side by side: classic left-to-right typing, diffusion-style "fade in everywhere at once," and a hybrid where structure appears first and detail fills in. Use a prototype tool (Figma, Codepen, anything) and record a 10-second loop of each. Then write one paragraph on which feels right for your {domain} and why. The three videos plus the paragraph are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Open your team's design-system documentation and find the "loading and streaming" pattern. If it doesn't have one, add a 1-page note to your design ops channel arguing that it should &mdash; and propose the three states it must cover (single completion, streaming token-by-token, parallel/diffusion fill). Tag your engineering counterpart. The artefact is the note, not the spec.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="systems-thinking,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo to your engineering lead asking one question: "If our model serving cost dropped 3-4x in the next two quarters because of diffusion-LM throughput improvements, which {focus} feature gets unblocked first?" Don't speculate widely &mdash; name the feature, the constraint that's blocking it today, and the user value of shipping it. The memo plus the named feature is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+
+        <article class="entry"
+                 data-id="2026-05-21-openai-erdos-discrete-geometry"
+                 data-category="research"
+                 data-published="2026-05-20"
+                 data-tags="openai,erdos,reasoning,research,co-discovery,mathematics">
+          <div class="head">
+            <h6 class="headline">OpenAI says an internal general-purpose reasoning model disproved a central conjecture in discrete geometry &mdash; a result on the planar unit-distance problem that mathematicians had assumed settled for 80 years</h6>
+            <span class="badge research">Research</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-20">Published May 20, 2026</time></p>
+          <p class="summary">OpenAI announced on May 20 that an internal reasoning model had produced a counterexample to a long-standing conjecture about the planar unit-distance problem &mdash; the question, first posed by Paul Erdős in 1946, of how many unit-distance pairs can be drawn between n points in the plane. The community consensus had been that the optimal arrangement was a square grid; the model found an infinite family of point configurations that beats the grid by a polynomial factor, using ingredients from algebraic number theory. External mathematicians have verified the construction. OpenAI is being careful with the framing &mdash; the model is described as "general-purpose," not a math-specialist system, and the result is positioned as AI-as-co-discoverer rather than AI-as-replacement-for-mathematicians.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the first time a major lab has put a verifiable, novel mathematical result on the table from a general-purpose model. For product work, the implication isn't "AI does research now" &mdash; it's that the floor of what counts as "novel synthesis" just moved. The instinct to dismiss AI output as "stochastic parroting" gets weaker every time a result like this lands. For design and PM work that depends on AI generating things that look new but are actually shallow, the differentiation gets harder. The honest test is becoming: would a knowledgeable human in your domain say "yes, this is new" &mdash; not "yes, this is plausible."</p>
+          <p class="source"><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" target="_blank" rel="noopener">Source &mdash; OpenAI</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one design decision from your last sprint where you suspect AI could have produced a version that looked plausible. Ask Claude or GPT to do exactly that &mdash; produce the design rationale, the trade-offs memo, the next-step list. Read the output side by side with your own. Write a half-page critique answering: "Is this novel, or is it plausible?" Underline the sentences where the AI sounded right but said nothing. The critique is the artefact, and the underlines are the part to study.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="critique,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Run a 30-minute crit with your team using one AI-generated design rationale and one human-generated one, both for the same {focus} problem. Don't tell the team which is which. After the crit, reveal sources and ask: "Which one would we have approved? Which one moved the work forward?" Capture the team's answers and the disagreements. The artefact is the meeting notes; the surprise is the point.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo answering: "What do we still buy when we hire a senior designer or PM, now that AI can produce plausible novelty?" Frame it for your CPO or head of design. List three things AI cannot yet do that a senior {domain} hire can &mdash; be specific, not abstract &mdash; and the one capability that's eroding fastest. End with a hiring or development principle you'd commit to this quarter. No hype, no hand-wringing; the memo is a decision tool.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-21-sap-sapphire-autonomous-enterprise"
+                 data-category="industry"
+                 data-published="2026-05-20"
+                 data-tags="sap,joule,sapphire-2026,autonomous-enterprise,anthropic,enterprise-ai">
+          <div class="head">
+            <h6 class="headline">SAP Sapphire 2026: SAP launches the "autonomous enterprise" with 50 Joule Assistants, 200 specialised agents, Joule Studio 2.0, and Anthropic, AWS, Google, and Microsoft as foundation-model partners</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-20">Published May 20, 2026</time></p>
+          <p class="summary">At Sapphire 2026 in Orlando on May 20, SAP CEO Christian Klein launched what SAP is calling the "autonomous enterprise" &mdash; a strategic repositioning where the SAP suite executes business processes on its own, rather than supplying screens for humans to drive. The architecture has three layers: a unified Business AI Platform underneath, an autonomous suite that bundles over 50 domain-specific Joule Assistants (finance, supply chain, procurement, HCM, customer experience) orchestrating more than 200 specialised agents, and a new user experience surface called Joule Work (combining Joule conversations, Joule spaces, and Joule Studio 2.0). All customers and partners get 12 months of free Joule Studio access. Foundation models from Anthropic, AWS Bedrock, Google Cloud, and Microsoft will sit beneath Joule agents, with bidirectional agent-to-agent interoperability with Google and Microsoft platforms.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When SAP &mdash; the company whose UX has been the punchline for two decades &mdash; ships an "agents-do-the-work, humans-supervise" suite for finance and HR, the question for product designers stops being "will agentic UX happen in enterprise" and starts being "what does the supervisory layer look like when 200 agents are doing the work." Most existing enterprise products were designed for direct manipulation. They're going to need a layer no one has standardised yet: how a human reads what a fleet of agents did, decides what to roll back, and trains the fleet to do it differently next time. If you work in enterprise SaaS, that layer is now on someone's roadmap, and it's worth being the one who shapes it.</p>
+          <p class="source"><a href="https://news.sap.com/2026/05/sap-sapphire-keynote-business-ai-platform-power-autonomous-enterprise/" target="_blank" rel="noopener">Source &mdash; SAP News</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Sketch one screen for your own product (or a {focus} flow if your work is enterprise-adjacent) that answers: "An agent did 17 things in the last hour. What does the user see, and what's the single most important affordance on this screen?" Draw it three ways &mdash; timeline, queue, summary &mdash; and write a paragraph on which one fails worst and why. The three sketches plus the paragraph are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick a part of your product that already has multiple automations running in the background &mdash; even if you don't call them agents. Map them on a whiteboard with three columns: what they do, who reviews the output, and where the user finds out something happened. Identify the column with the biggest gap. Share the map with your PM and engineering lead and ask whose roadmap that gap belongs on. The map and the answer are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled "What's our position on the supervisory UX for agents?" Frame it for your CPO. Cover three things: which {domain} workflows in your product are likely to go agent-driven in the next 18 months, who currently owns the design of the screens that supervise them (probably nobody), and the single hiring or staffing move you would make now to ensure that supervisory layer doesn't get designed by engineers under duress. Pick a stance and defend it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-05-21-eu-ai-act-high-risk-guidelines"
+                 data-category="policy"
+                 data-published="2026-05-19"
+                 data-tags="eu,ai-act,high-risk,consultation,classification,article-6">
+          <div class="head">
+            <h6 class="headline">European Commission publishes 148-page draft guidance on what counts as a "high-risk AI system" under the EU AI Act &mdash; public consultation open through June 23</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-19">Published May 19, 2026</time></p>
+          <p class="summary">On May 19 the European Commission published draft guidelines under Article 6(5) of the EU AI Act, setting out how providers, deployers, and market-surveillance authorities should decide whether a given AI system is "high-risk." The guidance is three documents totalling 148 pages: a general principles document, one covering the Annex I "product safety" route (AI inside regulated physical products), and one covering the Annex III "use case" route (AI in employment decisions, credit, education, biometric ID, law enforcement, etc.). Public consultation closes June 23, 2026; the guidance itself is non-binding, but in practice it is what regulators and courts will reach for first. The political "AI Omnibus" deal reached May 7 also pushed the national-sandbox deadline from August 2, 2026 to August 2, 2027, and added two new prohibited practices around non-consensual intimate imagery and CSAM.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If your product touches hiring, performance management, credit, education, or anything employees use to evaluate other humans, your design choices are about to be regulated &mdash; meaningfully &mdash; in the EU. The high-risk classification triggers documentation, monitoring, human-oversight, and explainability requirements that affect what the UI must show, what logs must exist behind it, and how the user can challenge an outcome. The 148 pages are dry, but the consultation is open and it's a rare moment to actually file feedback. Read the Annex III document at minimum; that's where most product surfaces will land.</p>
+          <p class="source"><a href="https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems" target="_blank" rel="noopener">Source &mdash; European Commission</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Read the Annex III section of the guidance (skim the general principles, dwell on use-case classification). Pick one screen in {focus} that you'd flag as plausibly high-risk under the rules. Write a half-page critique of what the current UI does well, what it does badly, and the one design change you would make this month if the guidance were already binding. The critique is the artefact &mdash; not "EU regulation is coming."</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Get your legal or trust-and-safety counterpart on a 45-minute call. Bring three product surfaces. Ask one question per surface: "Under the draft guidance, would this be high-risk? If yes, what changes about how we design the human-oversight affordances?" Take notes. Share the notes back with your team within 24 hours. The artefact is the notes plus the one decision you and legal made jointly &mdash; not a generic regulatory briefing.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo for your CPO and head of legal: "What's our position on EU high-risk AI classification, and who at the company actually owns it?" Cover three things: the {domain} surfaces most likely to be classified, the documentation and oversight gap the guidance creates for our current product, and a single recommendation &mdash; file a consultation response, change the roadmap, or commission a compliance audit. Pick a stance and defend it before June 23.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-05-20">
       <h4 class="day">Wednesday, May 20 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="design-tools">
