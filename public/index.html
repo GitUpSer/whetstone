@@ -1127,7 +1127,331 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-21">
+    <section class="day-section" id="today" data-date="2026-05-27">
+      <h4 class="day">Wednesday, May 27 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-27-anthropic-compliance-api-28-integrations"
+                 data-category="industry"
+                 data-published="2026-05-25"
+                 data-tags="anthropic,claude-compliance-api,enterprise,governance,security,dlp">
+          <div class="head">
+            <h6 class="headline">Anthropic wires Claude Enterprise into 28 security and compliance platforms in one drop &mdash; CrowdStrike, Palo Alto, Okta, Wiz, SailPoint, Microsoft Purview, and the rest of the IT-governance stack now read Claude conversation and activity data via the Claude Compliance API</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-25">Published May 25, 2026</time></p>
+          <p class="summary">Anthropic announced 28 enterprise integrations on May 25 that plug Claude Enterprise and the Claude Platform into the existing IT-governance stack: data loss prevention (Forcepoint, Proofpoint, Netskope, Zscaler), SIEM and observability (Datadog, Sumo Logic, Cribl), identity (Okta, SailPoint, Microsoft Purview), cloud security (Wiz, CrowdStrike, Palo Alto Networks, Fortinet), eDiscovery (Relativity, Smarsh, Theta Lake), and AI observability. The wiring runs through the new Claude Compliance API, which exposes two data streams: conversation content from Claude Enterprise (chats, files, projects) and activity events from both Claude Enterprise and the Claude Platform (logins, admin actions, configuration changes). SailPoint's connector goes further and treats Claude AI agents as identities that get inventoried alongside human accounts. Wiz, CrowdStrike, and several others are in private preview.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Until this drop, the answer to &quot;can we ship Claude in production?&quot; at any regulated employer was usually &quot;not without a six-month security review.&quot; That excuse is dying. Once IT can pipe Claude into the same DLP/SIEM/identity tools they already use, the gating question moves from &quot;can we deploy AI?&quot; to &quot;what's it doing once we do?&quot; &mdash; which means product and design teams are about to inherit a lot of AI features they spent a year arguing for, plus a lot of governance expectations they did not.</p>
+          <p class="source"><a href="https://www.helpnetsecurity.com/2026/05/25/anthropic-security-compliance-integrations-claude/" target="_blank" rel="noopener">Source &mdash; Help Net Security</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The &quot;we can't ship that AI feature for compliance reasons&quot; objection just got harder to use. If your {focus} backlog has parked AI ideas behind a security review, this is the moment to pull them out and start designing for the governance surface, not against it.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team is about to be on the hook for designing the parts of an AI feature that show up inside DLP and SIEM dashboards &mdash; redaction states, audit trails, agent-identity badges. That used to be IT's problem; now it's a design surface.</p>
+              <p class="impact-variant" data-variant="strategist">The compliance unlock changes the buying motion: enterprise pilots that stalled on governance reviews can move forward. Pricing, packaging, and the sales story for regulated buyers need a refresh inside the next quarter.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at regulated employers are already getting asked to design &quot;what the security team sees&quot; for AI features &mdash; logging UI, consent disclosures, agent attribution. The brief is no longer just the end-user screen.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are forming new working relationships with security, identity, and compliance functions. The &quot;design partners with engineering&quot; model now includes a third leg, whether teams want it or not.</p>
+              <p class="impact-variant" data-variant="strategist">Vendors with a clean governance story are winning enterprise deals where the model quality differences are small. The governance layer is becoming a product feature, not a procurement checkbox.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&quot;AI feature design&quot; is splitting into the user-facing surface and the governance surface. ICs who can hold both will be far rarer than the ones who can only hold the first.</p>
+              <p class="impact-variant" data-variant="design-lead">Within 12 months, every enterprise AI feature will ship with a parallel governance-surface design. Teams that treat that surface as an afterthought will lose deals their product won.</p>
+              <p class="impact-variant" data-variant="strategist">The &quot;AI assistant&quot; market is bifurcating: consumer-grade tools win on capability; enterprise-grade tools win on the governance layer. The craft of selling to regulated buyers is reshaping around that split.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your product's AI surface needs a story for &quot;where the activity logs go.&quot; If the answer is &quot;nowhere,&quot; you're behind the new default that Anthropic just set.</p>
+              <p class="impact-variant" data-variant="design-lead">Product roadmaps now need a &quot;governance integrations&quot; lane. The list of partners customers expect you to integrate with grew by 28 names this week.</p>
+              <p class="impact-variant" data-variant="strategist">Product strategy in B2B AI is about to be judged on integrations and audit posture, not just model choice. Build the case for the governance layer before sales has to invent it deal by deal.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Take one AI feature in {focus} that has any chance of touching regulated data and design the &quot;what the security admin sees&quot; surface for it. Three artefacts: a wireframe of the audit log row (what fields, what's redacted, how an agent is identified), the dialog a user sees when an admin has flagged their conversation, and a one-screen policy-config view (who can use which model, with which data). Pin them next to your end-user screens for your next crit. The point is not the visual polish &mdash; it's whether you can hold both surfaces in your head at once.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Book a 45-minute working session with your security or IT counterpart this week with one question: &quot;Of the 28 platforms Anthropic just wired up, which three are already in our stack, and which AI feature in our roadmap is gated on a connector that now exists?&quot; Walk out with a shared list of the three highest-leverage unblocks. Send it to product within 24 hours. The artefact is the list and the explicit &quot;who owns the unblock&quot; column &mdash; not a vague promise to follow up.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;What our enterprise AI story looks like now that Claude is plumbed into 28 governance platforms.&quot; Cover three things: which two integrations are most likely to come up in your next five {domain} sales conversations, the explicit gap between what your product logs today and what a SIEM customer will expect to see, and the one principle you would write down to govern AI features going forward (e.g. &quot;every AI surface ships with an admin view before GA&quot;). Pick a stance and defend it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-05-27-glasswing-10k-flaws-patching-bottleneck"
+                 data-category="industry"
+                 data-published="2026-05-26"
+                 data-tags="anthropic,mythos,glasswing,vulnerabilities,oss-maintainers,patching">
+          <div class="head">
+            <h6 class="headline">Project Glasswing update: Claude Mythos has surfaced 23,019 issues across 1,000+ open-source projects in a month &mdash; 6,202 high or critical, 90% true-positive on independent review, and patching is now the bottleneck</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-26">Published May 26, 2026</time></p>
+          <p class="summary">Anthropic published a Project Glasswing progress update on May 22 that landed in security press through May 26. Mythos Preview &mdash; the unreleased model Anthropic has been distributing through Glasswing partners since April &mdash; scanned more than 1,000 open-source projects and surfaced 23,019 issues, of which 6,202 were high or critical severity. Six independent security firms reviewed 1,752 of those high/critical findings and validated 90%+ as true positives. Cloudflare and Mozilla previously confirmed hundreds of flaws apiece. The report's quieter headline: patching is now the rate-limiter. Open-source maintainers can't process incoming reports at AI scan speed. Anthropic is partnering with OpenSSF's Alpha-Omega project on triage, made Claude Security generally available to Enterprise customers, and admitted in writing that no one &mdash; including Anthropic &mdash; has built safeguards strong enough to release Mythos broadly yet.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The &quot;AI finds bugs faster than humans fix them&quot; story is not abstract anymore &mdash; it's a public number. Every product that depends on an open-source library (i.e. every product) now has a downstream dependency on whether maintainers can patch at Mythos pace. For designers and PMs, the response surface is unglamorous but real: dependency disclosures in product, &quot;vulnerability acknowledgement&quot; UIs in admin tools, and a serious rethink of what the words &quot;responsible disclosure&quot; mean when the disclosure firehose comes from a model.</p>
+          <p class="source"><a href="https://www.helpnetsecurity.com/2026/05/26/anthropic-project-glasswing-update/" target="_blank" rel="noopener">Source &mdash; Help Net Security</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If {focus} ships anything that pulls open-source dependencies, &quot;what does the user see when a CVE drops in our stack?&quot; is now a real design question. Most products treat that surface as a 404 or a Slack message; it should be neither.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's working relationship with security needs a recurring slot, not an incident-only meeting. Maintainers are a bottleneck, customers will notice, and the comms surface lives in product.</p>
+              <p class="impact-variant" data-variant="strategist">&quot;Time to patch&quot; is becoming a product attribute customers will ask about. The teams that bake it into a feature comparison sheet now will look ready when the procurement question shows up.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs in security-adjacent products are drafting &quot;vulnerability disclosed in your stack&quot; UIs that didn't exist a year ago. The pattern is migrating from infrastructure tools to general SaaS.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads in enterprise companies are starting to receive customer questionnaires asking about dependency vulnerability response time. The answer needs a designed surface, not a sales-engineer email.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the open-source maintainer model strain in real time. Products that build on heavy OSS dependencies need an explicit position on what they do when a maintainer can't keep up.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&quot;Patching transparency&quot; is becoming a product surface. Expect &quot;what we patched last week&quot; pages, status feeds, and admin-facing CVE dashboards within six months at every serious B2B vendor.</p>
+              <p class="impact-variant" data-variant="design-lead">Open-source vulnerability discovery has gone from a slow, sporadic process to a high-throughput pipeline. Teams that treat it as a one-off response will be visibly behind teams that designed for it.</p>
+              <p class="impact-variant" data-variant="strategist">The OSS dependency model survives, but the unpaid-maintainer assumption is the brittle bit. Strategy that depends on a long tail of OSS without a contribution or sponsorship story is taking on real risk.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your product roadmap probably has nothing about &quot;what we do when a dependency CVE drops.&quot; Add a small surface for it this quarter, even if it's just a banner pattern and a doc.</p>
+              <p class="impact-variant" data-variant="design-lead">Product strategy needs an explicit &quot;we contribute back to the OSS we depend on&quot; story. Customers will start asking, especially in regulated industries.</p>
+              <p class="impact-variant" data-variant="strategist">&quot;AI-assisted vulnerability discovery&quot; is no longer a research story; it's a market force. Product strategy should treat OSS dependency posture as a competitive variable, not boilerplate.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one library {focus} depends on and design the in-product surface for &quot;a high-severity vulnerability has been disclosed in this dependency, here's what we did.&quot; Three sketches: the customer-facing notice (one screen, no panic), the admin-facing detail (what was vulnerable, when we patched, what to verify), and the empty state when there's nothing to disclose this week. The artefact is the three sketches plus a one-line rationale for each &quot;do not say this&quot; you avoided. The discipline is in what you cut.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Pull your security lead and one engineer into a 30-minute conversation and ask: &quot;If a Glasswing-style finding dropped in our top three OSS dependencies tomorrow, who designs the customer-facing response, and where does it live?&quot; Write a single page that names the three dependencies, the owner of each, and the surface the response would go on. Send it to product and security within 24 hours. The artefact is the named owners; &quot;we should think about this&quot; is not the answer.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;Our OSS dependency posture in a Mythos-speed world.&quot; Cover three things: the five most load-bearing OSS dependencies in {domain} work and what we'd do if any of them had an unaddressed critical CVE for 30+ days, the explicit choice between &quot;absorb the risk&quot;, &quot;fund the maintainer&quot;, and &quot;swap the dependency&quot;, and the principle you'd write down for new dependencies going forward. Pick a stance and defend it with the actual project names, not &quot;we'll evaluate.&quot;</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-27-hadrian-openhack-mit-license"
+                 data-category="coding-agents"
+                 data-published="2026-05-25"
+                 data-tags="hadrian,openhack,open-source,mit-license,claude-code,codex,cursor,vulnerability-research">
+          <div class="head">
+            <h6 class="headline">Hadrian open-sources OpenHack under MIT &mdash; a file-based, scenario-first AI vulnerability-research workflow that runs inside Claude Code, Codex, or Cursor, with a built-in &quot;proposer cannot also approve&quot; guardrail</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-25">Published May 25, 2026</time></p>
+          <p class="summary">Dutch security firm Hadrian released OpenHack on May 25 &mdash; an MIT-licensed package that turns its internal vulnerability-research methodology into a workflow any coding agent can run. The design choices are the interesting bit: durable state is kept in plain files (cloned source, recon items, scenario prompts, scenario results, finding candidates, triage decisions, findings, logs) so any harness can pick up where another left off; reviews are &quot;scenario-first,&quot; with each unit of work scoped to exactly one routing decision, one expert step, and one proof question; and there's an explicit separation of duties &mdash; the agent that proposes a finding cannot be the agent that approves it. OpenHack runs inside Claude Code, Codex, and Cursor out of the box. Hadrian's own team used a pre-release version to find hundreds of vulnerabilities in a dozen government open-source apps in hours, including a critical that exposed Azure DB credentials.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The interesting move here is not the security research &mdash; it's the architecture. &quot;Plain files as durable state&quot; plus &quot;proposer is not the approver&quot; is a pattern any agent workflow should steal, and most do not. If you're designing a product surface where an agent generates work that a human or another agent must approve (which is increasingly every product), the OpenHack pattern is closer to right than the &quot;one model, one chat&quot; pattern most products ship today.</p>
+          <p class="source"><a href="https://www.helpnetsecurity.com/2026/05/25/openhack-open-source-ai-powered-vulnerability-research/" target="_blank" rel="noopener">Source &mdash; Help Net Security</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The &quot;proposer is not the approver&quot; rule is a design pattern as much as a security one. Bring it to your next {focus} review and ask which screens implicitly let the same actor propose and approve &mdash; you'll find more than you expect.</p>
+              <p class="impact-variant" data-variant="design-lead">OpenHack's file-based, resumable-by-any-harness state is a usefully concrete reference for designing agent workflows in your own product. Pull it into a team learning session before someone else does.</p>
+              <p class="impact-variant" data-variant="strategist">Hadrian releasing internal methodology as open source is a positioning move &mdash; they're betting the moat is the people, not the code. Look at the agent products in your roadmap and ask whether the same logic applies.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs working on agent UIs are starting to treat &quot;agent state&quot; as a first-class artefact &mdash; visible, inspectable, editable &mdash; not a hidden context window. OpenHack is a clean example of that pattern in the wild.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams that already had &quot;agent + human approver&quot; patterns are now seeing them codified in open-source tooling. Treat it as a chance to align your team's vocabulary, not as an external reference.</p>
+              <p class="impact-variant" data-variant="strategist">The &quot;agent that proposes is not the agent that approves&quot; rule is becoming a quiet industry assumption. Strategy that ignores it will collide with the security teams holding the procurement line.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&quot;Multiple agents with explicit roles&quot; is replacing &quot;one big agent with many tools&quot; as the default mental model. The new question to ask in any agent design is: which roles, and who can override whom?</p>
+              <p class="impact-variant" data-variant="design-lead">Within a year, &quot;your agent system architecture&quot; will be a real review artefact, the way &quot;your service-oriented architecture&quot; became one in the 2010s. Get ahead of it.</p>
+              <p class="impact-variant" data-variant="strategist">Open-source reference implementations &mdash; OpenHack, Mastra, AutoGen Studio &mdash; are doing for agents what early Linux distros did for servers. The vendor moat is going to be elsewhere; pick where.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your product's agent flows probably collapse &quot;do&quot; and &quot;decide&quot; into one model. Sketch the version that separates them and see what UI changes.</p>
+              <p class="impact-variant" data-variant="design-lead">Product roadmaps for any agent-enabled feature need to call out the approval / dispute / undo surfaces explicitly. They are not nice-to-haves anymore.</p>
+              <p class="impact-variant" data-variant="strategist">Product strategy for agent products should treat &quot;explicit role separation&quot; and &quot;durable, inspectable state&quot; as competitive features. Both will be in customer security questionnaires within two quarters.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Take one agent-driven flow in {focus} (a draft, a recommendation, a categorisation &mdash; anything an agent currently does end-to-end) and redesign it with two explicit roles: the proposer agent and the approver. Sketch three screens: the proposer's output, the approver's review surface, and the audit trail showing both. Add one constraint Hadrian's pattern enforces &mdash; the proposer cannot edit the approver's decision &mdash; and figure out where in your UI that boundary needs to be visible. The artefact is the three sketches plus one paragraph on what changed about the user's mental model.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Walk an engineer through OpenHack's README and the &quot;proposer is not the approver&quot; idea (45 min, in person if you can). Then ask one question: &quot;Which of our shipping agent flows would fail that rule today, and what would it take to fix the worst one?&quot; Walk out with a single named flow, a named owner, and a date by which the team revisits it. The conversation is the artefact, not the OpenHack tour.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo to your head of product titled &quot;Our agent architecture, in one page.&quot; Use three sections: which roles exist (proposer / approver / executor / reviewer &mdash; pick the ones that fit), where state lives and who can read it, and the one principle that governs the system (e.g. &quot;every agent action is reversible by a named human within 24 hours&quot;). Compare what you wrote to OpenHack's design. Where you diverge, explain why &mdash; in {domain} context, not in generalities.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-27-anthropic-kiyoung-choi-korea"
+                 data-category="jobs-industry"
+                 data-published="2026-05-26"
+                 data-tags="anthropic,korea,seoul,kiyoung-choi,asia-pacific,localization">
+          <div class="head">
+            <h6 class="headline">Anthropic names KiYoung Choi as Representative Director for Korea ahead of a Seoul office opening &mdash; the third Asia-Pacific hub after Tokyo and Bengaluru, in a market where Claude already ranks top-five globally on per-capita usage</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-26">Published May 26, 2026</time></p>
+          <p class="summary">Anthropic announced KiYoung Choi as Representative Director of Korea on May 26, the country-manager appointment that typically precedes a physical office opening by weeks. Seoul becomes Anthropic's third APAC hub after Tokyo and Bengaluru. The framing in Anthropic's own write-up is unusually direct: Korean users rank in the top five globally both on total Claude usage and on per-capita usage according to Anthropic's Economic Index, and the Seoul team's brief is to recruit local talent and partner with Korean startups and large corporates. The Mythos deployment to Japan's three megabanks earlier in May was the previous APAC signal; Korea is the next one. Anthropic has said it intends to triple its international workforce in 2026.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Three signals are worth tracking in this single hire. One, Anthropic is willing to point at where Claude is used most heavily and act on that data &mdash; useful counter-evidence to the assumption that frontier AI adoption is US-centric. Two, &quot;country manager&quot; appointments are leading indicators for enterprise deployment intensity; expect Korean banking, automotive, and telco case studies in the next six to twelve months. Three, the international expansion is happening in parallel with the Mythos restricted-access ramp &mdash; pay attention to which geographies get safety regimes first, because that's where the next round of governance norms gets written.</p>
+          <p class="source"><a href="https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea" target="_blank" rel="noopener">Source &mdash; Anthropic</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If {focus} ships in Korean or Japanese, the assumption that &quot;we'll localise after the English version stabilises&quot; is getting more expensive. Frontier AI features now ship multilingually from day one at the platform level.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's localisation backlog probably treats English as the source and other languages as translations. With Claude-native flows in Korean, that hierarchy collapses; design needs a model for it.</p>
+              <p class="impact-variant" data-variant="strategist">APAC enterprise AI is becoming a distinct competitive zone, not a US-spillover market. Strategy that treats it as &quot;international&quot; rather than its own category will leave money on the table.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at multinational employers are getting more requests for non-English AI flows than a year ago. The bar for &quot;feels native in Korean&quot; is rising.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads with APAC headcount are renegotiating which language is &quot;source of truth&quot; for AI prompts and copy. The instinct to treat English as canonical is becoming a measurable disadvantage.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are seeing AI-vendor land-grabs intensify in specific APAC markets &mdash; Japan, Korea, India, increasingly Indonesia. Pick which two your product will be credible in.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&quot;AI = US-centric tooling&quot; is a 2024 frame and increasingly wrong. Adjust mental defaults rather than building a whole methodology around the trend &mdash; this part of the shift will normalise within 18 months.</p>
+              <p class="impact-variant" data-variant="design-lead">Frontier-AI vendor expansion into APAC accelerates over the next year, then normalises. The window to be visibly multilingual-native rather than retrofitted is narrow but real.</p>
+              <p class="impact-variant" data-variant="strategist">Country-manager appointments are noisy in 2026 but will be table stakes by 2027. The signal value is highest right now; act on it while it's still rare.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your product's &quot;AI features&quot; probably default to English-first behaviour. Find one place that assumption is hardcoded and write down what it would take to undo it.</p>
+              <p class="impact-variant" data-variant="design-lead">Product roadmaps should specify which two non-English markets get first-class AI behaviour, not &quot;we support 30 languages.&quot; Specificity beats breadth here.</p>
+              <p class="impact-variant" data-variant="strategist">Product strategy for AI features needs an explicit position on which markets get the canonical experience. &quot;We'll figure it out per region&quot; is no longer a strategy that survives a board question.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one AI-powered flow in {focus} and run it end-to-end in a non-English locale (Korean if you can, otherwise the one closest to your real users). Where does the prompt template leak English assumptions? Where do error messages or empty states fall back to English? Where does the model's tone shift in a way the localised UI does not anticipate? Write a punch list of the five worst breaks, in order of how visible they are to the user. The list is the artefact; &quot;translate the strings&quot; is not the answer.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Pull your localisation lead (or whoever owns non-English markets) into a 30-minute conversation with one question: &quot;If Anthropic is investing this hard in Korea, what's our top APAC market and what does our AI product look like there in 12 months?&quot; Walk out with a named market, a named owner, and one concrete change you'll make to the next sprint. The artefact is the named owner and the change &mdash; not &quot;we should think about it.&quot;</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;Our APAC AI position.&quot; Cover three things: which one or two APAC markets {domain} actually competes in (be honest &mdash; &quot;all of them&quot; is not an answer), what would have to be true for our AI features to feel native rather than translated there, and the one local partnership or hire that would change the slope of that work. Pick a stance &mdash; invest, watch, or skip &mdash; and defend it. The point is not to predict; the point is to have a real position before sales has to invent one.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-05-21">
       <h4 class="day">Thursday, May 21 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="coding-agents">
