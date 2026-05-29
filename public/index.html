@@ -1127,7 +1127,257 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-28">
+    <section class="day-section" id="today" data-date="2026-05-29">
+      <h4 class="day">Friday, May 29 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-05-29-claude-opus-4-8-launch"
+                 data-category="models"
+                 data-published="2026-05-28"
+                 data-tags="anthropic,claude,opus-4-8,mythos,benchmarks,honesty">
+          <div class="head">
+            <h6 class="headline">Anthropic ships Claude Opus 4.8 just 41 days after 4.7 &mdash; 88.6% on SWE-bench Verified, 74.6% on Terminal-Bench 2.1, lowest hallucination rate of any frontier model on every benchmark tested, same price as 4.7, and a written promise that Mythos-class lands &quot;in the coming weeks&quot;</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-28">Published May 28, 2026</time></p>
+          <p class="summary">Anthropic released Claude Opus 4.8 on May 28, 41 days after Opus 4.7. Benchmarks: 88.6% on SWE-bench Verified (vs. 87.6% for 4.7), 69.2% on SWE-bench Pro (vs. 64.3%), 74.6% on Terminal-Bench 2.1 (vs. 66.1%). Knowledge-work score climbs from 1753 to 1890. The two quieter wins: 4.8 had the lowest incorrect-rate of the six models tested on every benchmark Anthropic ran &mdash; it gets there mostly by abstaining when uncertain rather than by guessing better &mdash; and it is roughly 4x less likely than 4.7 to let flaws in its own code pass unremarked. Pricing is unchanged from 4.7. Simon Willison called it &quot;a modest but tangible improvement&quot; and noted the rarity of an AI lab framing a release that way out loud. Anthropic also teased Mythos-class models for &quot;the coming weeks.&quot;</p>
+          <p class="why"><strong>Why this matters for you:</strong> The honesty delta is the part that changes daily work. A model that abstains when it doesn't know lets you trust the answers it gives and re-route the ones it skips &mdash; instead of designing a UI that has to assume every output might be confidently wrong. If your AI surface still adds a &quot;double-check this&quot; caveat to every response, 4.8 is the cue to design two paths: high-confidence outputs you let through, and abstentions you route to a human or a search.</p>
+          <p class="source"><a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">Source &mdash; Anthropic</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one AI surface in {focus} and design the &quot;I don't know&quot; state. Three sketches: what the surface looks like when the model returns a confident answer, what it looks like when the model abstains (no spinner, no apology, no &quot;I'm still learning&quot;), and the fallback &mdash; the human or non-AI path the user gets routed to instead. The hard discipline is making abstention feel like a feature, not a failure. Paste the three sketches in a doc with one sentence per screen explaining what changes about the user's next action. The doc is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pull design, PM, and one engineer into a 45-minute working session on a single question: &quot;Across {domain}, which AI surfaces would benefit most from an explicit abstention path, and what would the model need to expose for us to build it?&quot; Walk out with one ranked list of three surfaces, the API signal you'd need from each provider to route on abstention, and an owner who'll prototype the top one inside this sprint. The list plus owner is the artefact &mdash; &quot;we'll think about how to use this&quot; doesn't count.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;If the frontier models keep getting more honest in {domain}, what does our product own that they don't?&quot; Cover three things: the workflows where our value used to be &quot;we hide model uncertainty behind UI confidence&quot; (and which of those evaporate when the model just admits it doesn't know), the workflows where our value is the routing layer above the model (and what we have to invest in to keep that), and one product principle you'd put in writing this quarter on how we handle abstentions. Pick a stance; &quot;wait and see&quot; is not a stance.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-29-claude-code-dynamic-workflows"
+                 data-category="coding-agents"
+                 data-published="2026-05-28"
+                 data-tags="anthropic,claude-code,dynamic-workflows,subagents,orchestration,jarred-sumner">
+          <div class="head">
+            <h6 class="headline">Claude Code opens Dynamic Workflows in research preview &mdash; Claude writes a JavaScript orchestration script that spins up as many as 1,000 coordinated subagents in parallel, with Jarred Sumner reporting 750,000 lines of code in 11 days while keeping 99.8% of the existing test suite green</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-28">Published May 28, 2026</time></p>
+          <p class="summary">Alongside Opus 4.8, Anthropic opened Dynamic Workflows in research preview on May 28 across every paid Claude Code tier. The mechanic is unusual: instead of the agent deciding turn-by-turn which subagent to spawn, Claude writes a JavaScript orchestration script for the task, hands it to a runtime, and that runtime executes the script in the background &mdash; spinning up coordinated subagents (capped at 1,000), keeping intermediate state in variables that live outside the conversation, and applying conditional and loop logic to decide what runs next. On by default on Max and Team; admin-gated on Enterprise; opt-in on Pro via /config. Triggered with the word &quot;workflow&quot; in a prompt. Jarred Sumner reported using it to generate roughly 750,000 lines of code in eleven days while keeping 99.8% of the existing test suite green.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The interesting design problem isn't &quot;the agent does more in parallel&quot; &mdash; it's that the plan is now a readable JavaScript artefact a human can inspect, edit, and re-run. That changes the conversation about agent trust: instead of asking &quot;do I trust the agent's judgement,&quot; you can ask &quot;do I trust this specific script.&quot; Any product that exposes agents to users now has a reference for what &quot;show me what you're about to do&quot; can actually look like.</p>
+          <p class="source"><a href="https://www.marktechpost.com/2026/05/28/anthropic-ships-claude-opus-4-8-alongside-dynamic-workflows-and-cheaper-fast-mode-with-workflows-capped-at-1000-subagents/" target="_blank" rel="noopener">Source &mdash; MarkTechPost</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Trigger one Dynamic Workflow on a real task in {focus} (e.g. &quot;workflow: audit every page in our component library for missing aria-labels and write the fix&quot;). Then read the JavaScript script Claude generated before letting it run. Annotate the script with three things: one step you'd remove, one step you'd add, and one place where the script makes an implicit assumption the user can't see. The annotated script is the artefact &mdash; bring it to your next design crit as &quot;what a transparent agent plan should look like.&quot;</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="agent-orchestration,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute working session with PM and the most agent-skeptical engineer on the team. The question: &quot;If a user could see the agent's plan as readable code before it ran in {domain}, what would we have to change about our current AI surface?&quot; Walk out with one in-product surface where &quot;preview the plan&quot; would be the right pattern, one where it'd be overkill, and an owner who'll spec the first one this sprint. The two-list-plus-owner is the artefact; nodding agreement that &quot;transparency is good&quot; isn't.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;Who is allowed to spawn 1,000 parallel agents on our infra in {domain}, and what stops them?&quot; Cover three things: the user tiers (or job functions) for whom subagent parallelism would unlock real value, the cost ceiling above which a runaway workflow becomes a P1 incident, and the one guardrail you'd defend at the next architecture review (rate limits, approval gates, billing alerts &mdash; pick one). The Jarred Sumner anecdote is the marketing version; this memo is the version your CFO needs.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-29-figma-make-local-codebase-pr"
+                 data-category="design-tools"
+                 data-published="2026-05-28"
+                 data-tags="figma,figma-make,github,pull-requests,design-to-code,mcp">
+          <div class="head">
+            <h6 class="headline">Figma Make goes two-way with production codebases &mdash; designers can now import an existing Git repo into the Mac beta, edit it visually on the canvas, and open a real GitHub pull request without ever opening a terminal, with the agent toggling between Claude Sonnet, Claude Opus, and Gemini and anchoring edits to the team's design system</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-28">Published May 28, 2026</time></p>
+          <p class="summary">Figma launched a limited beta of Figma Make's local-codebase workflow on May 28, Mac desktop only, free of credit consumption during beta. The change: Make is no longer a one-way export to a fresh repo. You connect Make to your real repository, highlight a UI element on the canvas, prompt the agent in chat or annotations, and the agent edits the surrounding code &mdash; toggling between Claude Sonnet, Claude Opus, and Gemini, anchored to the team's design system guidelines. Changes accumulate as local commits; when the designer is ready, Make creates a branch and opens a GitHub pull request from inside the app. The reverse direction is also wired: code changes in the repo prompt Make to pull them back into the design file, closing the design-to-code-to-design loop. VentureBeat's framing &mdash; &quot;are designers the new SWEs?&quot; &mdash; is the question the release is designed to provoke.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The interesting boundary here is governance, not capability. Engineering teams are not going to accept &quot;designers commit straight to main&quot; &mdash; but they will, eventually, accept &quot;designers open PRs that review like any other PR.&quot; Your design system, your code-review culture, and your branch-protection rules just became part of the design tool. If those don't hold up, the designer-as-SWE pitch fails on day three.</p>
+          <p class="source"><a href="https://venturebeat.com/technology/are-designers-the-new-swes-figma-makes-new-two-way-github-integration-turns-designs-into-live-production-code-with-built-in-governance" target="_blank" rel="noopener">Source &mdash; VentureBeat</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,craft" data-time="90">
+            <h6 class="action-title">Try this &mdash; 90 min</h6>
+            <p class="action-text">Pick one small, isolated screen in {focus} (a settings row, an empty state, one button group). Wire Figma Make to your team's real repo on the Mac beta, make the visual edit on the canvas, and push a PR end-to-end. Before merging, write a 200-word note in the PR description answering two questions: which of your engineering team's review criteria did the agent satisfy without prompting, and which one would have failed silently if a human hadn't read the diff. That PR description &mdash; not the diff &mdash; is the artefact; staple it to your team's next design-to-engineering sync.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~90 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Convene design, engineering, and one staff engineer for a 60-minute conversation on one question: &quot;If a designer on our team opens a Figma Make PR tomorrow against {domain}, what does our review pipeline have to do differently &mdash; if anything?&quot; Walk out with three explicit decisions: which directories are in-bounds for designer PRs, which reviewers must approve them, and the one CI check we'd add that catches the failure mode an engineer would care about most. The three decisions are the artefact &mdash; write them in the team handbook, not a Slack thread that'll scroll off in a week.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;If our designers can open production PRs in {domain} starting next quarter, what changes about how we hire, scope, and stage work?&quot; Cover three things: which design hires we'd raise the bar on (and which we'd lower), the work that should move from engineering's backlog to design's because the round-trip cost just dropped, and the one organisational risk you'd flag to your VP this month. Pick a position on each &mdash; &quot;it depends on the team&quot; is the answer Figma is hoping you give, not a leadership stance.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-05-29-openai-frontier-governance-framework"
+                 data-category="policy"
+                 data-published="2026-05-28"
+                 data-tags="openai,governance,frontier,california,sb-53,eu-ai-act,preparedness">
+          <div class="head">
+            <h6 class="headline">OpenAI publishes a Frontier Governance Framework that maps its existing safety practices onto California's SB 53 Transparency in Frontier AI Act and the EU AI Act's Code of Practice for General Purpose AI &mdash; cyber offense, CBRN, harmful manipulation, loss of control, plus model reporting, incident response, and external review all named explicitly</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-28">Published May 28, 2026</time></p>
+          <p class="summary">OpenAI published its Frontier Governance Framework on May 28 as a public-facing companion to its internal Preparedness Framework. The new document maps how OpenAI's existing safety practices align with two newly binding regimes: California's Transparency in Frontier AI Act (SB 53) and the EU AI Act's Code of Practice for General Purpose AI. The framework names the risk categories it covers &mdash; cyber offense, CBRN, harmful manipulation, loss of control &mdash; and the governance commitments around each: risk assessment and mitigation, model reporting, security risk management, incident response, external expert input, and a published update cadence. OpenAI says the framework will continue to evolve as model capabilities, evaluations, and regulatory requirements develop.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The framework is the dress rehearsal for what every AI product team will be asked to ship a version of in the next 18 months &mdash; not just labs. If your product is downstream of OpenAI, your enterprise buyers will start asking how your safety practices map onto OpenAI's framework, which now maps onto SB 53 and the EU CoP. The work of writing your own one-pager is the work of finding out which of those commitments you can actually keep.</p>
+          <p class="source"><a href="https://openai.com/index/openai-frontier-governance-framework/" target="_blank" rel="noopener">Source &mdash; OpenAI</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI feature in {focus} and write a one-page &quot;what we promise the user&quot; doc covering three commitments only: what the AI is and is not allowed to do in this surface, how we tell the user when it's wrong or uncertain, and what the user can do to escalate. No legalese, no &quot;responsible AI&quot; padding &mdash; write it the way you'd write a help article. The page is the artefact; if your team can't sign off on every sentence as something we currently deliver, that's the gap worth raising in the next product review.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Read OpenAI's Frontier Governance Framework once, then run a 60-minute working session with PM, legal (or trust + safety), and one engineer on a single question: &quot;If a {domain} enterprise buyer asked us to map our AI practices onto this framework next week, where exactly are we strong, where are we silent, and where would we have to bluff?&quot; Walk out with three named gaps and one owner per gap. The gap list plus owners is the artefact &mdash; &quot;we follow industry best practices&quot; is the kind of answer that gets your deal stuck in procurement for two months.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;Which of the four risk categories in OpenAI's framework &mdash; cyber offense, CBRN, harmful manipulation, loss of control &mdash; are live exposures for our product in {domain}, and which are pure compliance theatre?&quot; Cover three things: the single category most likely to surface in our actual incident data, the category our enterprise contracts most likely already cover us on, and the one specific commitment you'd want to publish before a regulator (or customer) asks for it. Pick a stance &mdash; &quot;all four matter equally&quot; is not a stance, it's an excuse to not prioritise.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-29-openai-rosalind-biodefense"
+                 data-category="industry"
+                 data-published="2026-05-29"
+                 data-tags="openai,gpt-rosalind,biodefense,life-sciences,public-health,white-house">
+          <div class="head">
+            <h6 class="headline">OpenAI opens GPT-Rosalind to biodefense developers under a new Rosalind Biodefense Program &mdash; sponsored access plus launch support for epidemiological modelling, early detection, screening, preparedness, and non-pharmaceutical interventions, with the White House and federal public-health agencies briefed</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-29">Published May 29, 2026</time></p>
+          <p class="summary">Axios reported on May 29 that OpenAI is launching a Rosalind Biodefense Program that opens GPT-Rosalind &mdash; OpenAI's frontier reasoning model for life-sciences research, optimised for biology, drug discovery, protein engineering, and genomics &mdash; to a set of trusted developers building biodefense tools. The company says it will sponsor model access and provide launch support across epidemiological modelling, early detection, screening, preparedness, non-pharmaceutical interventions, and medical-countermeasure development. OpenAI confirmed it has briefed the White House and is in the process of involving federal public-health agencies. The program lands a day after the Frontier Governance Framework named CBRN as one of four covered risk categories &mdash; pairing tighter restrictions on one side with sponsored access on the other for vetted public-good use cases.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The pattern &mdash; restrict broadly, sponsor narrowly through a vetted-developer programme &mdash; is the template OpenAI and Anthropic will likely re-use for any domain where the same capability is dangerous in the wrong hands and life-saving in the right ones. If your product touches health, security, or critical infrastructure, your relationship to the frontier lab is about to look less like an API contract and more like an admissions process.</p>
+          <p class="source"><a href="https://www.axios.com/2026/05/29/openai-biodefense-program" target="_blank" rel="noopener">Source &mdash; Axios</a></p>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI surface in {focus} that touches a high-stakes domain (health, finance, security, infrastructure &mdash; whatever sits closest in {domain}). Sketch the surface as it would look if the underlying model required vetted-developer status to operate, and the user knew it. Three frames: the moment the user sees the &quot;this is a restricted capability&quot; cue, the access request flow they go through, and the in-product nudge that tells them when the answer is gated vs. open. The three frames plus one sentence each on what changes about user trust is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Convene design, PM, and one person from BD or partnerships for a 45-minute conversation on one question: &quot;If our {domain} model access shifts from purchase to admissions in the next year, what does our roadmap look like differently?&quot; Walk out with a list of the three features most exposed to model-access gating, the one workflow we'd build a fallback for first, and the named person who'd own the lab relationship if it becomes a recurring conversation. The list-plus-owner is the artefact; &quot;we'll keep an eye on it&quot; is what teams say right before they get caught flat-footed.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo titled &quot;If frontier labs move toward admissions-style access for high-stakes domains, where does our {domain} product sit on the spectrum, and what do we do about it?&quot; Cover three things: whether our use case is more likely to be restricted or sponsored under this pattern, the specific lab relationships we'd need to invest in this year to stay on the right side of the line, and the one positioning shift you'd make in next quarter's sales deck. Pick a stance; the labs are not asking for our opinion &mdash; they're setting the terms.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="day-section" data-date="2026-05-28">
       <h4 class="day">Thursday, May 28 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="case-studies">
