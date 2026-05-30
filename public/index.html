@@ -1127,7 +1127,335 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-29">
+    <section class="day-section" id="today" data-date="2026-05-30">
+      <h4 class="day">Saturday, May 30 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-30-cursor-36-auto-review"
+                 data-category="coding-agents"
+                 data-published="2026-05-29"
+                 data-tags="cursor,auto-review,run-mode,sandbox,classifier,agents">
+          <div class="head">
+            <h6 class="headline">Cursor 3.6 ships Auto-review Run Mode &mdash; allowlisted shell/MCP/fetch calls run instantly, sandboxable calls run in a sandbox, and everything else routes to a classifier subagent that decides allow, retry, or ask &mdash; one week after Composer 2.5 and the 3.5 Automations push</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-29">Published May 29, 2026</time></p>
+          <p class="summary">Cursor released 3.6 on May 29 with a new Auto-review Run Mode for Shell, MCP, and Fetch tool calls. The mechanism is three-tiered: allowlisted calls execute immediately, calls that can be sandboxed execute in a sandbox, and every other action goes to a classifier subagent that decides whether to allow it, try a different approach, or escalate to the human for approval. Run Mode lives in Settings &gt; Cursor Settings &gt; Agents &gt; Run Mode, and you can steer the classifier with custom instructions. This lands six days after Cursor 3.5's Automations and multi-repo push, and two weeks after Composer 2.5. The pattern Cursor is settling on: more autonomy, but routed through a smaller model that decides what's safe to run rather than a flat allow/deny list.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The interesting design surface is no longer "should the agent ask first?" but "what does the classifier need to know to make that call without you?" The agents you design for {focus} need an explicit policy for what runs silently, what runs sandboxed, and what triggers a human prompt &mdash; and a UI that explains which path was taken. Cursor just shipped the reference implementation; if your tool still uses a binary approval modal, you're behind.</p>
+          <p class="source"><a href="https://cursor.com/changelog/auto-review" target="_blank" rel="noopener">Source &mdash; Cursor</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your approval-modal patterns in {focus} need a third state: "auto-routed to a sandbox." Two-state allow/deny doesn't survive contact with a tiered run mode.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's pattern library probably has one "permission modal." It needs to grow into a small system: allowlist, sandbox, classifier, human &mdash; each with its own visual treatment.</p>
+              <p class="impact-variant" data-variant="strategist">The agent-permission model is becoming a competitive surface, not just a safety feature. Strategists need a position on how aggressive your product's defaults are vs. competitors in {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs in IDE-adjacent products are pulling apart their permission modals and asking "what would a classifier need to see here?" The answers are reshaping the modal copy and the post-action receipts.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at agentic-product teams are running design jams on a single question: which actions in our product should never need approval, and which should always? The middle bucket is where the design work is.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are starting to benchmark competing products on "how often does the agent interrupt the user." It's becoming a measurable axis of competition.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Tiered run modes are reshaping the craft of agent UX. The flat approval modal is becoming the floppy disk &mdash; recognisable but obsolete.</p>
+              <p class="impact-variant" data-variant="design-lead">Your design system needs a tiered-permission pattern this quarter. It's no longer a one-off; it's the default shape of an agent product.</p>
+              <p class="impact-variant" data-variant="strategist">Permission UX is moving from a safety checkbox to a product differentiator. The teams that get the defaults right will look noticeably less annoying than the teams that don't.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for an agent now means designing for the classifier too. The classifier's prompt is part of your UX, even if no user ever sees it.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps need a workstream for the classifier policy &mdash; what it sees, how it decides, how it explains itself to the user. Treat it as a feature, not infrastructure.</p>
+              <p class="impact-variant" data-variant="strategist">Strategic positioning has to account for autonomy-as-a-feature. The product that interrupts the user least &mdash; without breaking trust &mdash; wins the daily-use slot.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one agent action in {focus} that currently triggers an approval modal. Design three variants for the same flow: the allowlisted version (silent, with a post-action receipt the user can audit), the sandboxed version (visible to the user but non-blocking), and the classifier-escalation version (a tighter, more contextual approval modal than today's generic one). Paste the three side by side in a single doc with one sentence each explaining what the user sees and why. The doc is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute working session with design, PM, and one engineer. Single question: "Across our agent actions in {domain}, draw a 2x2 of risk vs. user-clarity, and put each action in a quadrant." The exercise forces a real conversation about which actions belong on the allowlist, which need a sandbox, and which need a classifier prompt &mdash; instead of treating every action as equally dangerous. Walk out with the populated 2x2 and an owner for the highest-friction quadrant. The 2x2 plus owner is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: "Our agent's autonomy default should be X." Pick a specific position &mdash; conservative (every action prompts), aggressive (most actions run silently), or tiered (Cursor-style classifier). Defend it with two competitor comparisons and one user-research signal you'd want to validate. The memo is the artefact; the discipline is making the call concrete enough that someone could disagree with it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-05-30-gemini-spark-ultra-us-rollout"
+                 data-category="tools"
+                 data-published="2026-05-29"
+                 data-tags="google,gemini-spark,ultra,personal-agent,price-cut,beta">
+          <div class="head">
+            <h6 class="headline">Gemini Spark rolls out to Google AI Ultra in the US &mdash; Google's 24/7 personal agent now lives in a dedicated tab on web, Android, and iOS, and the Ultra tier was simultaneously cut from $250 to $100/month to drive adoption</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-29">Published May 29, 2026</time></p>
+          <p class="summary">Google began rolling out Gemini Spark on May 29 to Google AI Ultra subscribers in the US. Spark sits in its own tab in the Gemini side panel on web (opposite "Chat") and between "Search chats" and "Daily brief" on Android and iOS. It taps Workspace and Connected Apps, Personal Intelligence, signed-in websites, location, and a remote browser with auto-saved credentials. The pricing move is the part that signals intent: Ultra was cut from $250 to $100/month at the same time, which prices Spark roughly at parity with ChatGPT Pro and well below its original positioning. The agentic harness underneath is the same one Antigravity uses.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Spark is the first mass-market personal agent that lives in a dedicated tab instead of a chat. The shape of that surface &mdash; what it shows when the user opens it cold, how it explains an action it took at 3am, how it handles a failed task &mdash; is now a reference design competitors will study. If you're building any "agent that runs in the background" surface in {focus}, the design questions Google had to answer first are the ones you'll face next.</p>
+          <p class="source"><a href="https://9to5google.com/2026/05/29/gemini-spark-ultra-us/" target="_blank" rel="noopener">Source &mdash; 9to5Google</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Personal-agent UX is its own surface, not a chat variant. Your design process for {focus} needs an explicit "agent home" pattern &mdash; cold open, recent activity, action receipts &mdash; that's distinct from your chat UI.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team probably has chat patterns but not personal-agent patterns. The two are not interchangeable; treat the agent home as a separate design problem this quarter.</p>
+              <p class="impact-variant" data-variant="strategist">Personal-agent positioning is now a real product axis, not a feature flag. Strategy in {domain} needs a stance on whether you have an agent surface or whether you live inside someone else's.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at companies with a personal-agent ambition are quietly studying the Spark tab, ChatGPT Pulse, and Apple Intelligence side by side &mdash; pulling the cold-open and the action-receipt screens into shared boards.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are commissioning short comparative audits of "what the user sees when an agent has done something without them." The team that ships a good answer first defines the convention.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are revising agent-tier pricing memos in light of Google halving Ultra. The $100 floor is the new gravity for personal-agent pricing in the US.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The personal-agent surface is reshaping the craft of dashboard and inbox design. The default frame for "what happened while I was away" is being rewritten by these tabs in real time.</p>
+              <p class="impact-variant" data-variant="design-lead">Build a personal-agent reference into your design system this quarter, even if you don't ship one. Your team will see the patterns at every competitor and need shared language.</p>
+              <p class="impact-variant" data-variant="strategist">Personal agents will be a category, not a feature, by end of 2026. Position now: build, partner with one of the four major surfaces, or stay out.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Background-action UX needs a real review pass in {focus}. Users will start expecting an audit-style "Spark did X for you" pattern; if you don't have it, the agent feels invisible in the bad way.</p>
+              <p class="impact-variant" data-variant="design-lead">Product roadmaps need a "background-agent reporting" workstream. It's not glamorous, but it's the trust layer that makes everything else feasible.</p>
+              <p class="impact-variant" data-variant="strategist">Strategy has to absorb that personal-agent pricing just compressed by 60%. Margin assumptions for adjacent products in {domain} need a refresh.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Open Spark (or watch a walkthrough video if you don't have Ultra access) and screen-record the first 90 seconds of the cold-open experience. Write a short critique &mdash; three sentences each on three questions: what does the empty state assume the user already knows, how does it explain what an agent action looks like, and what does it do well that you'd steal for {focus}? The critique is the artefact. The discipline is judging Spark on the same bar you'd hold your own work to.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pull your team into a 45-minute working session with one prompt: "If we shipped a Spark-style personal agent for {domain} next quarter, what three patterns would have to be in our design system that aren't today?" Constrain the answer to three. Walk out with a one-page list, an owner for each pattern, and a target sprint for the first one. The list plus owners is the artefact &mdash; "we'd need to think about it" doesn't count.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo: "Given Google halved Ultra to $100/month, our personal-agent strategy in {domain} should be X." Pick one of three positions &mdash; build our own agent surface, integrate into Spark/ChatGPT/Apple as a tool provider, or refuse the agent layer entirely. Defend the choice with one sentence on pricing, one on distribution, and one on what we'd give up. The memo is the artefact; share it with one cross-functional partner.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-05-30-california-ai-bills-crossover"
+                 data-category="policy"
+                 data-published="2026-05-29"
+                 data-tags="california,legislation,crossover,ai-bills,compliance,sb53">
+          <div class="head">
+            <h6 class="headline">Nearly all of California's 30 AI-related bills clear the May 29 crossover deadline &mdash; the surviving bills now move to the second chamber with a July 2 adjournment in sight, setting up the most consequential month for US state AI law in 2026</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-29">Published May 29, 2026</time></p>
+          <p class="summary">May 29 was California's crossover deadline &mdash; the procedural cutoff where every non-fiscal bill must pass its house of origin to stay alive for the session. Nearly all 30 of the legislature's AI-related bills made it through, which is unusual; in most years a third would die at this stage. The surviving bills now cross to the second chamber, where the process restarts June 1, and legislators have until the July 2 summer adjournment to send anything to the Governor. Bills that miss May 29 are effectively dead for the cycle. The surviving set spans automated decision-making in employment, deepfake disclosure, training-data transparency, and high-risk-system audits &mdash; touching almost every product surface where AI ships.</p>
+          <p class="why"><strong>Why this matters for you:</strong> "AI policy" still feels like a Twitter-thread topic, but the next four weeks decide which disclosure, audit, and training-data rules ship into the products you design. If your team in {focus} doesn't have a single person tracking the California crossover, the AI features you're shipping in Q3 will either need a quiet rework or a loud apology. Build the disclosure UX before the law forces it.</p>
+          <p class="source"><a href="https://www.transparencycoalition.ai/news/ai-legislative-update-may29-2026" target="_blank" rel="noopener">Source &mdash; Transparency Coalition</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Disclosure UX is now load-bearing in your design process for {focus}. Any AI feature you ship into California needs an explicit "this is automated" surface; design it before legal asks.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a disclosure pattern library this quarter. Lay down the patterns now &mdash; AI-generated content, automated decisions, training-data sources &mdash; so feature teams aren't reinventing each one under deadline.</p>
+              <p class="impact-variant" data-variant="strategist">Compliance isn't a backstop anymore; it's a design input. Strategists need to fold California's surviving bills into the next-quarter planning cycle in {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at California-shipping companies are quietly sketching disclosure-modal patterns that look less like cookie banners. The good ones are designing for trust, not just compliance.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at AI-product companies are pulling legal and design into the same room earlier than ever &mdash; the teams that wait for July will be doing it in a panic.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are commissioning "what's in our product the California bills would touch" audits. The output is becoming a real planning artefact, not a memo.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">AI-disclosure UX is reshaping the craft. It's not a one-off modal; it's a layer that has to exist everywhere automated decisions touch the user in {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">Disclosure is becoming a design-system primitive, not a feature. Add it to your roadmap this quarter or you'll add it under deadline in Q3.</p>
+              <p class="impact-variant" data-variant="strategist">The states are setting the AI-disclosure floor, not the federal government. Position your product for the strictest state's rules now and you avoid 50 small reworks later.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Product features in {focus} need a "disclosure surface" review the same way they get a "loading state" review. Bake it into the spec template.</p>
+              <p class="impact-variant" data-variant="design-lead">Product roadmaps need a compliance-design workstream by Q3. The teams that treat it as design will ship calmer than the teams that treat it as paperwork.</p>
+              <p class="impact-variant" data-variant="strategist">Compliance-as-craft is a real positioning angle in {domain}. The product that handles disclosure with taste, not with legalese, will earn measurable trust margin.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI-powered feature in {focus} that ships to California users. Sketch three disclosure patterns: a passive label (small text near the AI output), an interstitial (one-time modal on first use), and a persistent badge (always-visible, dismissible). Paste them in a doc with one sentence each on what the user actually understands after seeing it. The doc is the artefact; the discipline is judging your sketches against "would a non-designer reading this know an AI is involved?"</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Set up a 60-minute working session with design, PM, and legal counsel for {domain}. Single brief: "Which of California's surviving AI bills would affect features we plan to ship in Q3, and which UX patterns would we need by August?" Walk out with a one-page list of affected features, the disclosure pattern type each would need, and an owner. The list plus owners is the artefact &mdash; "we'll wait and see" is not an outcome.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo to leadership in {domain}: "Our default disclosure posture for AI features should be X." Pick a position &mdash; California-floor (meet the strictest surviving bill's bar everywhere), per-jurisdiction (different surfaces per state), or proactive (above the legal bar by default). Defend it in three sentences on cost, trust, and competitive positioning. The memo is the artefact; the discipline is committing to a stance before the law forces one.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-30-mark-read-prompt-conference"
+                 data-category="jobs-industry"
+                 data-published="2026-05-29"
+                 data-tags="mark-read,prompt,conference,london-tech-week,ai-startups,wpp">
+          <div class="head">
+            <h6 class="headline">Former WPP CEO Mark Read launches Prompt &mdash; an invitation-only conference for AI startups, business leaders, and investors at London's Design Museum on June 9, timed with London Tech Week and explicitly modelled on VivaTech</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-29">Published May 29, 2026</time></p>
+          <p class="summary">Mark Read, who left WPP a year ago after publicly warning that "AI will upend the advertising workforce," announced Prompt on May 29 &mdash; an invitation-only conference at London's Design Museum on June 9. The lineup includes Debbie Weinstein (VP, Google EMEA) and James Wise (chair of the UK's new Sovereign AI investment unit). Read described the model as VivaTech-style: AI startups in one room with the brand-side executives and investors who'd actually buy or fund them. The signal is less about the conference itself and more about who's pulling it together &mdash; a former agency-holding-company CEO building the matchmaking layer for AI in marketing, design, and brand work in Europe.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The institutional matchmaking layer for AI in design and marketing is being built in real time, and it's being built by the people who used to run the agencies you'd have pitched. If you're at a startup in {focus}, the conferences that get invites from this circle are now the ones that matter for distribution. If you're at an established team, the people your CMO and CEO are listening to are increasingly people like Read, not the engineering-led AI press.</p>
+          <p class="source"><a href="https://www.campaignlive.co.uk/article/mark-read-launches-prompt-conference-ai-start-ups-mix-industry-chiefs/1959564" target="_blank" rel="noopener">Source &mdash; Campaign UK</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Industry events are part of your design process now &mdash; not because you attend, but because the language your stakeholders use comes from them. Read the Prompt agenda the week after the event to track what's becoming the brief in {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's external read on AI in {domain} should include the agency-side conferences, not just the engineering ones. The framing diverges noticeably, and your stakeholders skew agency.</p>
+              <p class="impact-variant" data-variant="strategist">The matchmaking layer is institutionalising. Strategists in {domain} need to be on the invite list for one of these events, or know someone who is.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs aren't going to Prompt &mdash; but they're reading the recap posts and tracking which startups got named on stage. The recap is the artefact for the rest of us.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are putting one budget line toward AI-and-brand industry events in 2026 that didn't exist in 2025. The networks form fast.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are tracking who the agency-holding-company alumni are funding and advising. That network is shaping which AI tools the Fortune 500 adopts next.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">A specific conference is a passing trend &mdash; but the matchmaking-layer formation isn't. Note the event, ignore the hype.</p>
+              <p class="impact-variant" data-variant="design-lead">Don't restructure team rituals around one conference. Do put it on the radar so you spot the next two or three that emerge.</p>
+              <p class="impact-variant" data-variant="strategist">Prompt itself is a passing trend; the underlying institutional realignment is real. Position on the realignment, not on this event.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Product thinking in {focus} should account for "what the CMO heard at a conference last week." That's increasingly the source of the brief.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps need a "stakeholder-perception" lane that tracks what your buyers are hearing externally. The lag between event and brief is shrinking.</p>
+              <p class="impact-variant" data-variant="strategist">Strategy has to absorb that the AI-in-brand narrative is being shaped by ex-agency leadership, not by Anthropic or OpenAI. Pick your conference attendance accordingly.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="cross-functional,critique" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Find one writeup of an agency-side AI conference from the last 60 days (Cannes Lions AI track, VivaTech, or wait for Prompt's recap). Read it specifically as "what would my CMO take from this?" Write three sentences in a doc: one on the framing of AI you spotted, one on which startup got disproportionate airtime, and one on what brief you'd expect to land on your desk in 90 days as a result. The doc is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Set up a 30-minute coffee with someone on your marketing or comms team who attends one of these AI-in-brand conferences. One question: "What's the AI framing or vendor your senior leadership is hearing about most this quarter, and where did it come from?" Take notes. Pull out one specific design-or-product implication for {domain} and share it in your team's next sync. The note plus the team-share is the artefact; the discipline is reaching outside the design discipline before the brief lands.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo: "Our AI-in-{domain} strategy needs to account for the agency-side narrative, and here's how." Identify the two or three agency-alumni voices (Read, Wendy Clark, Lévy network, etc.) whose framing is showing up in CMO and CEO conversations adjacent to your product. Pick a specific stance &mdash; lean in, push back, or build a counter-narrative &mdash; and defend it in three sentences. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+    <section class="day-section" data-date="2026-05-29">
       <h4 class="day">Friday, May 29 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
