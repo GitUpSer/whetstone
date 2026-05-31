@@ -1127,8 +1127,337 @@
 
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-30">
-      <h4 class="day">Saturday, May 30 <span class="day-date">&mdash; today's briefing</span></h4>
+    <section class="day-section" id="today" data-date="2026-05-31">
+      <h4 class="day">Sunday, May 31 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-05-31-anthropic-mythos-public-imminent"
+                 data-category="models"
+                 data-published="2026-05-28"
+                 data-tags="anthropic,mythos,cybersecurity,frontier-model,public-release,safeguards">
+          <div class="head">
+            <h6 class="headline">Anthropic says Mythos-class models will release publicly &ldquo;in the coming weeks&rdquo; &mdash; the cyber-grade flagship that's been gated to vetted partners since April will graduate to general access alongside Opus 4.8, after Anthropic claims it cleared internal safeguard milestones</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-28">Published May 28, 2026</time></p>
+          <p class="summary">Alongside the Opus 4.8 launch and a $65B funding round at a $965B valuation on May 28, Anthropic told Bloomberg, Fortune, and The Register that Mythos &mdash; the model it has kept restricted since early April because of its vulnerability-finding capability &mdash; will go into wide release in the coming weeks. The company says it has made &ldquo;swift progress&rdquo; on stronger safeguards that make general availability acceptable, and that more than 10,000 high- or critical-severity vulnerabilities have already been surfaced by Mythos through the Glasswing partner program in its first month. Opus 4.8 still trails Mythos on the internal benchmarks Anthropic cites.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A model that beats every public frontier model on tasks designers actually do &mdash; reasoning over long context, agentic computer use, evaluating its own output &mdash; is about to land in the hands of every Pro and Enterprise customer. The design surfaces you build in {focus} that currently lean on Opus 4.7/4.8 quality assumptions are about to be evaluated against something stronger, and any UX choice that exists only because the model couldn't be trusted to think for itself is now a tech debt item.</p>
+          <p class="source"><a href="https://fortune.com/2026/05/29/anthropic-raises-65-billion-at-record-965-billion-valuation-promises-mythos-ai-model-in-wide-release-in-coming-weeks-releases-claude-opus-4-8/" target="_blank" rel="noopener">Source &mdash; Fortune</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Any prompt or system message you've written in {focus} to compensate for model weakness &mdash; &ldquo;double-check your math,&rdquo; &ldquo;don't invent citations&rdquo; &mdash; needs a re-test once Mythos lands. Half of those guardrails will be redundant; the other half will start hiding new failure modes.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's prompt library and evaluation harnesses for {domain} need a refresh date pinned to the Mythos GA window. Treat it as a planned migration, not an opportunistic upgrade.</p>
+              <p class="impact-variant" data-variant="strategist">A stronger default model compresses your differentiation around &ldquo;we wrote really good prompts.&rdquo; The strategy conversation needs to move toward data, workflow integration, or interface depth &mdash; somewhere the model itself can't close the gap.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at Anthropic-shop teams are already pulling Opus 4.8 onto their staging branches and writing the migration notes for Mythos before it ships. The ones who waited for the last frontier release are running behind by a sprint.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are budgeting a designer-week per quarter for &ldquo;model upgrade response&rdquo; &mdash; auditing flows, re-running evals, retiring guardrails. The ones who aren't are watching their UX drift below what the model can support.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are stripping &ldquo;we use the best model&rdquo; out of decks. Once everyone has Mythos, the question becomes what your product does with it that the next team can't.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">A faster cadence of frontier-model releases is reshaping how you design: the assumption that your prompts ship and stay shipped is dead. Designing for {focus} now means designing the upgrade ritual, not just the v1.</p>
+              <p class="impact-variant" data-variant="design-lead">The craft of leading a design team now includes operating a model-migration playbook. Teams that don't have one will look slower and slower over the next year.</p>
+              <p class="impact-variant" data-variant="strategist">Cybersecurity-grade models becoming routine raises the floor on what's available to every competitor in {domain}. Strategy moves from &ldquo;access to capability&rdquo; toward &ldquo;orchestration of capability,&rdquo; which is a structural reshape of how product moats work.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your acceptance criteria for AI features in {focus} need a model-version field, not just a date. &ldquo;Works well on Opus 4.7&rdquo; and &ldquo;works well on Mythos&rdquo; can be opposite design decisions.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps need a recurring &ldquo;model upgrade&rdquo; column, not a one-off swimlane. Plan for two to three of these a year and you'll be staffed for the actual cadence.</p>
+              <p class="impact-variant" data-variant="strategist">If the underlying model is improving faster than your product surface, your strategy is implicitly waiting for someone to wrap it better. Mythos is a forcing function to put a date on that.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one AI feature you shipped in {focus} in the last three months. Pull the exact system prompt and three real user transcripts. Now write a one-paragraph critique for each transcript answering: &ldquo;If the underlying model were one notch stronger, which line of my prompt becomes unnecessary, and which line becomes actively harmful?&rdquo; The critique is the artefact; the discipline is admitting which of your guardrails are about the model's weakness vs. the user's needs.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute working session with design, PM, and one ML engineer in {domain}. Single question: &ldquo;What's our model-migration playbook?&rdquo; Walk out with a one-page doc that names an owner, an eval refresh ritual, a prompt-audit checklist, and a calendar slot. If your team can't agree on who owns &ldquo;our prompts after a model upgrade,&rdquo; that's the artefact &mdash; surface the gap and assign it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;Three things our product does today that Mythos-class models will make commodity within six months, and the one thing only our team can defend.&rdquo; Be specific about features, not abstractions. The memo is the artefact; the test is whether it would change any roadmap decision next quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-05-31-microsoft-build-waf-open-source"
+                 data-category="industry"
+                 data-published="2026-05-29"
+                 data-tags="microsoft,build-2026,windows-agent-framework,open-source,mit,copilot">
+          <div class="head">
+            <h6 class="headline">Microsoft Build 2026 previews leak: Windows Agent Framework will open-source under MIT on June 2, Copilot becomes a meta-agent that designs its own sub-agent swarms, and Visual Studio 2026 ships first-class agent project templates</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-29">Published May 29, 2026</time></p>
+          <p class="summary">Build kicks off in San Francisco on June 2, and session abstracts surfacing in the last 72 hours line up the announcements: Microsoft will open-source the Windows Agent Framework (WAF) under MIT, including the Agent Registration Service, a declarative agent.json manifest, a gRPC-based cross-agent bus, and an encrypted Memory Service. Copilot gets an &ldquo;Agent Mode&rdquo; where the user describes a workflow and Copilot designs, provisions, and supervises the sub-agent swarm to execute it. A new Agent SDK plugs into Copilot Studio; Visual Studio 2026 (17.12) will ship agent project templates with F5-to-local-sandbox. The framing is the maturation year &mdash; moving Windows from &ldquo;runs apps&rdquo; to &ldquo;runs agents.&rdquo;</p>
+          <p class="why"><strong>Why this matters for you:</strong> If Microsoft pulls this off, the cheapest way to ship an agent on a Windows desktop becomes &ldquo;publish an agent.json,&rdquo; not &ldquo;build a custom runtime.&rdquo; That collapses a category of infra work and pushes the design surface up the stack &mdash; toward the manifest copy, the permission UI, the cross-agent handoff, and the discovery experience inside the Windows Agent Store. The design questions you'll be asked in {focus} are about to look more like &ldquo;what does our agent advertise about itself?&rdquo; than &ldquo;what does our chat UI look like.&rdquo;</p>
+          <p class="source"><a href="https://windowsnews.ai/article/microsoft-build-2026-windows-becomes-the-platform-for-ai-agents.420503" target="_blank" rel="noopener">Source &mdash; Windows News</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">A manifest file becomes a design artefact. The capabilities, name, description, and permission scopes you write into agent.json for {focus} are what other agents and humans see first &mdash; treat that text the way you'd treat an App Store description.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's design reviews need a new column: &ldquo;what does our agent look like when a different agent is the user?&rdquo; That's a real surface now, not a thought experiment.</p>
+              <p class="impact-variant" data-variant="strategist">Discoverability inside the Windows Agent Store becomes a marketing and design problem at once. Strategists need to decide whether {domain} ships its agent there at all, and if so, what differentiates it from the next ten in the same category.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at Microsoft-adjacent shops are mocking up agent-to-agent handoff screens this week, ahead of Build. The ones who wait for the announcement to start are going to ship six weeks behind.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are quietly scheduling a designer to attend Build sessions remotely on June 2&ndash;3 and write a one-pager on what changes for the team. That's the cheapest way to convert a keynote into a planning input.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading the leaked session abstracts as a signal about where Microsoft thinks the moat is &mdash; OS-level agent infrastructure &mdash; and deciding whether to compete, ride, or ignore.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&ldquo;Designing an app&rdquo; and &ldquo;designing an agent that's discoverable to other agents&rdquo; are different jobs. This is a structural reframe, not a UI refresh &mdash; what you're designing now is a participant in a system, not a screen.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team still treats the agent as a feature of the app, you'll miss this. The agent is becoming the unit of distribution; leads need to reorganise around that idea.</p>
+              <p class="impact-variant" data-variant="strategist">An OS-level agent runtime under MIT is the kind of move that changes which categories of company exist three years from now. Strategy work in {domain} should now ask: are we a destination, or are we an agent in someone else's runtime?</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Product specs in {focus} need a section on the agent manifest, the same way they need a section on screens. The manifest is where most agents will fail or succeed before anyone clicks.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's definition of &ldquo;done&rdquo; for an agent feature should include a published manifest, a sandbox run, and a discoverability check &mdash; not just a working chat thread.</p>
+              <p class="impact-variant" data-variant="strategist">Product strategy now has to plan for cross-agent revenue paths and substitution risk. If your product can be replaced by an agent another team published last week, that's a strategic problem, not a tactical one.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write the agent.json manifest for one product surface in {focus} as if you were publishing it to the Windows Agent Store. Include the agent name, a one-sentence description, three capabilities, the data contracts it expects, and the permission scopes it asks for. Then write a 100-word user-facing &ldquo;What this agent does&rdquo; card. The manifest plus card is the artefact; the test is whether a stranger would understand what it does without opening the product.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute working session with design, PM, and platform engineering. Single question: &ldquo;If Microsoft ships WAF on June 2, what's the smallest version of our product that becomes an installable Windows agent by end of Q3?&rdquo; Walk out with a one-page brief: what we'd publish, what we'd cut, what we'd need from platform. The brief is the artefact; the discipline is producing something specific enough to argue with.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a two-paragraph memo for leadership in {domain}: &ldquo;Are we a destination app or an agent in someone else's runtime?&rdquo; Take a specific position. Defend it with one observation about competitor distribution, one observation about our user's daily entry points, and one assumption you'd test in the next quarter. The memo is the artefact; the test is whether the answer would change next year's headcount plan.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-05-31-github-copilot-ai-credits-eve"
+                 data-category="coding-agents"
+                 data-published="2026-05-30"
+                 data-tags="github,copilot,billing,ai-credits,usage-based,tokens">
+          <div class="head">
+            <h6 class="headline">GitHub Copilot's flat pricing dies tomorrow &mdash; on June 1 every plan moves to token-metered AI Credits, with overages billed per-token at API rates, and heavy agent users on Copilot Pro+ already reporting projected 3&ndash;5x monthly bills</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-30">Published May 30, 2026</time></p>
+          <p class="summary">The switch goes live tomorrow. Premium Request Units retire; AI Credits replace them. Each plan ships with a monthly credit allocation, and anything beyond it is billed per-token at the model's listed API rate. Copilot Pro stays $10/month with a smaller bundle, Pro+ stays $39 with a larger one, Business and Enterprise get organisational pooling. The shape that's making the discussion threads spicy: agentic and CLI usage burns credits faster than chat-completion, and developers running Copilot Coding Agent or Copilot CLI at scale through May are pre-modelling June bills at 3&ndash;5x their prior flat fee. GitHub is shipping a usage dashboard the same day. The change was announced April 27; the &ldquo;what actually happens to my invoice&rdquo; conversation is happening now.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The cost of agentic coding stops being a flat-rate background expense and starts being a per-action question. Every design decision in {focus} that &ldquo;just calls the model again&rdquo; &mdash; auto-retry, speculative pre-fetch, agent-loops without an explicit budget &mdash; now shows up in a finance dashboard the user can see. Surfaces that show the user what each action costs, before they commit, are about to become a category of UX, not a nice-to-have.</p>
+          <p class="source"><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/" target="_blank" rel="noopener">Source &mdash; The GitHub Blog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Every screen in {focus} that triggers a model call needs a cost-awareness layer &mdash; not necessarily a dollar amount, but a sense of weight. The user opening their bill at the end of the month is now a moment in your flow.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's design system needs a &ldquo;metered action&rdquo; pattern: a way to show that a button costs something. If you don't have one by end of Q3, you'll ship surprise bills, and users will blame the product.</p>
+              <p class="impact-variant" data-variant="strategist">Pricing UX becomes a moat. Strategists in {domain} need to decide whether your product absorbs token costs, passes them through transparently, or builds usage tiers that hide them &mdash; each is a different positioning bet.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs on Copilot-adjacent products are already mocking up the &ldquo;you've used X% of this month's credits&rdquo; banner and arguing about when to surface it. The dial they're tuning: helpful nudge vs. anxiety-driver.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are pulling finance into design reviews for the first time. The artefact that comes out is a shared opinion on what users should and shouldn't see about cost &mdash; before engineering writes the meter.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching whether Copilot's transparent meter retains heavy users or chases them to flat-rate competitors. Whatever they learn shapes the pricing surface every other agent product will copy.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Metered-by-token billing reshapes the craft of agent UX. Every &ldquo;and then call the model again&rdquo; in {focus} is now a designed moment, not invisible plumbing.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's pattern library should have a billing-meter component by Q4. It will be as standard as the loading spinner within a year.</p>
+              <p class="impact-variant" data-variant="strategist">Token economics are reshaping which agentic products can exist. The teams that ignore the meter will lose to the teams that price and surface it well.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria for any AI feature in {focus} now need a per-action cost estimate, not just a latency budget. &ldquo;Works fast&rdquo; and &ldquo;costs little&rdquo; can be opposite design decisions.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps need a recurring &ldquo;cost-awareness UX&rdquo; workstream. Treat it as ongoing platform work, not a one-off feature.</p>
+              <p class="impact-variant" data-variant="strategist">Product strategy now has to model usage curves and pricing elasticity in {domain}. If your product's value depends on heavy use, your pricing surface is the most important thing you ship this year.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one agentic flow in {focus} that triggers multiple model calls. Sketch three versions of how the user sees cost: (1) a passive meter in the corner that never blocks, (2) a budget gate that asks before any call above a threshold, (3) a post-action receipt that explains what each step cost and why. Annotate each with the one user it serves best and the one it fails. The three-up sketch plus annotations is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 60-minute working session with design, PM, and finance for {domain}. Single question: &ldquo;What does the user need to see about cost &mdash; before, during, and after &mdash; for our top three agent actions?&rdquo; Walk out with a one-page matrix: action / pre-state / in-flight state / receipt. The matrix is the artefact; the discipline is finance and design agreeing on the surface area before engineering builds it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;Our pricing posture for AI features should be transparent pass-through, opaque flat-rate, or tiered usage &mdash; and here's why.&rdquo; Pick one and defend it with one competitor's choice you'd copy, one you'd reject, and one customer signal you'd validate before shipping. The memo is the artefact; the test is whether it would change a pricing decision in the next quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="mcp">
+        <h5 class="category-label">MCP</h5>
+
+        <article class="entry"
+                 data-id="2026-05-31-snowflake-natoma-ai-control-plane"
+                 data-category="mcp"
+                 data-published="2026-05-30"
+                 data-tags="snowflake,natoma,mcp,aws,enterprise,agent-governance,control-plane">
+          <div class="head">
+            <h6 class="headline">Snowflake makes a public bid for the enterprise AI control plane &mdash; acquires MCP-gateway startup Natoma, signs a $6B multi-year AWS commitment, and starts pitching Cortex Agents + Snowflake Intelligence as the governed surface between every enterprise tool and every model</h6>
+            <span class="badge mcp">MCP</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-30">Published May 30, 2026</time></p>
+          <p class="summary">Within 48 hours on May 27&ndash;28, Snowflake signed a definitive agreement to acquire Natoma &mdash; an enterprise MCP gateway that enforces identity, policy, and audit at the tool-call level &mdash; and committed $6B in multi-year spend to AWS to accelerate enterprise agentic AI. SiliconANGLE's May 30 analysis frames the moves together: Snowflake is positioning Cortex Agents, Snowflake Intelligence, and Cortex Code as the governed control plane through which any AI agent reaches any enterprise system, with Natoma as the missing identity and audit layer. Databricks is running a parallel play with Agent Bricks and a GPT-5.5 integration through Unity Catalog. The thesis: the data cloud isn't the storage layer anymore; it's the agent runtime.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If the data cloud becomes the place where agents are catalogued, authenticated, and audited, the design surface for &ldquo;our AI feature&rdquo; in {focus} starts to include an MCP server, an admin policy view, and an audit trail UI that an enterprise security reviewer can sign off on. That's a different design job from chat. The shops that learn to design the agent-governance surface &mdash; consents, scopes, audit drilldowns &mdash; will be ahead of the shops still polishing the chat bubble.</p>
+          <p class="source"><a href="https://siliconangle.com/2026/05/30/personal-agents-light-fuse-snowflake-databricks-move-ai-stack/" target="_blank" rel="noopener">Source &mdash; SiliconANGLE</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your design surface in {focus} grows by two screens you probably don't have today: the admin scope-and-policy view, and the per-call audit drilldown. Both are dull to design and load-bearing for whether the feature ships in enterprise.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs at least one designer who's comfortable inside an enterprise admin console. If everyone in {domain} only designs the end-user chat, you'll lose deals on the governance surface.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists need a clear answer on whether your product is its own destination or an MCP server inside a Snowflake / Databricks control plane. That positioning question shapes everything downstream.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at enterprise-AI startups are spending half their week designing admin and audit surfaces that no end user ever sees. The work is invisible until a security review, and then it's the only thing that matters.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at infrastructure-adjacent teams are running &ldquo;admin console health checks&rdquo; alongside their end-user UX reviews. The teams that don't are getting blocked at procurement.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are mapping the enterprise control-plane landscape &mdash; Snowflake, Databricks, Microsoft Foundry, Atlassian Rovo &mdash; and deciding which platforms to publish into vs. compete with.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The agent-as-feature mental model is the wrong frame for enterprise. The right frame is agent-as-published-service-with-identity, and that's a structural reframe for how you design it.</p>
+              <p class="impact-variant" data-variant="design-lead">Design teams that still treat governance UI as &ldquo;something IT does&rdquo; will lose the enterprise market. Owning that surface is the new craft frontier in {domain}.</p>
+              <p class="impact-variant" data-variant="strategist">Data clouds becoming agent runtimes is one of the bigger platform shifts of the year. Strategy in {domain} needs to position against it explicitly &mdash; ride it, route around it, or compete with it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Product specs in {focus} now need an &ldquo;MCP surface&rdquo; section: what tools the agent exposes, what scopes it requests, what audit events it emits. Treat it as a first-class part of the design, not a backend concern.</p>
+              <p class="impact-variant" data-variant="design-lead">Definitions of done for AI features now include published MCP tool definitions and a working admin view. If those aren't in the ticket, enterprise will block the launch.</p>
+              <p class="impact-variant" data-variant="strategist">Product strategy needs a position on which control plane your product lives inside vs. which it competes with. Pretending the control plane doesn't matter is the dominant mistake right now.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Design a one-screen admin view for {focus} that lets an enterprise security reviewer see: which MCP tools your agent exposes, which scopes each tool requests, who in the org has consented to each, and the last 10 tool-calls with timestamps and outcomes. Pick a real product in {focus}, mock it in your tool of choice, and write three sentences below explaining the trade-offs you made about default-open vs. default-closed. The screen plus rationale is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute working session with design, PM, and security in {domain}. Single question: &ldquo;What would a Snowflake / Databricks security reviewer need to see in our admin console before approving our agent for production?&rdquo; Walk out with a checklist of five required surfaces. If security can't articulate them clearly, that's the artefact &mdash; the gap surfaces what design needs to spec before the next enterprise pitch.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;Are we publishing an MCP server into Snowflake / Databricks / Microsoft Foundry, or are we the destination our customers leave those platforms to reach?&rdquo; Pick one of the three platforms to lead with, name the trade-off, and propose one concrete commitment for next quarter. The memo is the artefact; the test is whether the answer would change a hiring or partnership decision in the next 90 days.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-05-30">
+      <h4 class="day">Saturday, May 30</h4>
 
       <div class="category-group" data-category="coding-agents">
         <h5 class="category-label">Coding agents</h5>
