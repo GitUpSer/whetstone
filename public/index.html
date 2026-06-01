@@ -1125,9 +1125,337 @@
 <section class="year-section" data-year="2026">
   <h2 class="year">2026</h2>
 
+  <section class="month-section" data-month="2026-06">
+    <h3 class="month">June 2026</h3>
+    <section class="day-section" id="today" data-date="2026-06-01">
+      <h4 class="day">Monday, June 1 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-01-nvidia-rtx-spark-dgx-windows"
+                 data-category="industry"
+                 data-published="2026-06-01"
+                 data-tags="nvidia,rtx-spark,dgx-station,windows,local-ai,grace-blackwell,arm,microsoft">
+          <div class="head">
+            <h6 class="headline">NVIDIA's RTX Spark superchip lands on Windows: Jensen Huang uses the COMPUTEX/GTC Taipei keynote on June 1 to commit a Grace Blackwell + Arm laptop and desktop class for fall 2026, plus a DGX Station for Windows for deskside frontier agents</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-01">Published June 1, 2026</time></p>
+          <p class="summary">In his June 1 keynote in Taipei, NVIDIA CEO Jensen Huang revealed RTX Spark &mdash; an N1X-class superchip co-designed with MediaTek that pairs an Arm CPU with a Blackwell GPU and up to 128 GB of unified CPU/GPU memory, large enough to run 120B-parameter LLMs locally on a Windows machine. RTX Spark laptops and compact desktops will ship this fall from Asus, Dell, HP, Lenovo, Microsoft Surface, and MSI, with Acer and GIGABYTE to follow. Alongside it, NVIDIA and Microsoft announced DGX Station for Windows &mdash; a deskside Blackwell box for enterprise developers building frontier agents &mdash; and committed to assembling a single Grace Blackwell rack in five minutes through a redesigned Vera Rubin production line.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If a 120B-parameter model can run on a laptop in {focus}, the design assumption that &ldquo;AI features live in the cloud&rdquo; collapses for a meaningful slice of your users. Latency, privacy, offline behaviour, and pricing all get rewritten when the model is in the room with the user &mdash; and the UX of &ldquo;your data stays on this machine&rdquo; becomes a strategy lever, not a checkbox.</p>
+          <p class="source"><a href="https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark" target="_blank" rel="noopener">Source &mdash; NVIDIA Newsroom</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your prototyping defaults in {focus} need a &ldquo;runs locally&rdquo; column now. Latency budgets, offline states, and on-device fallbacks shift from edge cases to mainline flows when a real chunk of users sit on RTX Spark hardware this fall.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a working hypothesis on which of your AI features ship cloud-only, which ship hybrid, and which can be local-first by 2027. Without it, three designers will independently invent three different answers for {domain}.</p>
+              <p class="impact-variant" data-variant="strategist">A local-AI Windows tier creates a real privacy-and-cost differentiation lane for {domain}. The strategic question is whether you lead with that positioning, follow it, or ignore it &mdash; pick one consciously.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at Windows-heavy shops are already mocking up the &ldquo;running locally / cloud / hybrid&rdquo; indicator and trust copy. The ones who wait for Spark hardware to land are going to ship that decision under deadline pressure.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are getting one designer paired with one ML engineer for a week to map which of their inference paths could move on-device &mdash; not all of them, just enough to know the menu.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are quietly redoing AI infra cost models with a 30&ndash;50% on-device offload assumption to see whether the margin math changes the product they should be building.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&ldquo;Where does this model run?&rdquo; becomes a design question, not an infra one. Drawing the same screen for cloud and local inference is a real reshaping of the craft of {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">Leading a design team in 2026 means owning a decision matrix for inference location, not just for layout. That's a craft addition, not a passing trend.</p>
+              <p class="impact-variant" data-variant="strategist">The strategy of &ldquo;our moat is access to capability&rdquo; weakens as capability moves on-device. Differentiation shifts to data integration, workflow depth, and trust &mdash; a reshape of where competition lives in {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria for AI features in {focus} need an inference-location field and an offline-behaviour spec, not just a happy-path screenshot.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs a quarterly &ldquo;on-device candidates&rdquo; review. Treat it like accessibility &mdash; a recurring audit, not a one-time push.</p>
+              <p class="impact-variant" data-variant="strategist">If pricing in {domain} is built on per-token economics, RTX Spark forces a re-pricing conversation within 12 months. Better to lead that conversation than to be late to it.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one AI feature in {focus} you'd be embarrassed to ship cloud-only in 18 months. Sketch the same flow three ways &mdash; cloud, local, hybrid &mdash; on a single canvas. For each version, write the one sentence the trust-copy in the UI would say, and the one failure mode the QA team would catch first. The three sketches plus six sentences are the artefact; the point is to discover which version your team can actually defend.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute working session with design, engineering, and one infra/ML lead in {domain}. Walk through your three highest-traffic AI features and rank each as &ldquo;cloud-only forever,&rdquo; &ldquo;cloud-now-but-on-device-candidate,&rdquo; or &ldquo;local-first when hardware allows.&rdquo; The ranked list is the artefact; the discipline is forcing a category for each, not letting any feature sit undeclared.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;If RTX Spark ships at 5% of our user base by Q1 2027, what changes about our AI pricing, our privacy positioning, and our cloud-infra spend?&rdquo; Name a specific decision the company should make in the next quarter to be ready, not a list of considerations. The recommendation is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-06-01-wwdc-2026-gemini-siri-preview"
+                 data-category="industry"
+                 data-published="2026-05-30"
+                 data-tags="apple,wwdc-2026,siri,gemini,ios-27,private-cloud-compute,assistant">
+          <div class="head">
+            <h6 class="headline">WWDC 2026 previews converge: Apple is expected to relaunch Siri on June 8 running a custom model derived from Google's Gemini, processed through Private Cloud Compute, replacing Spotlight and adding a Camera-app Siri mode in iOS 27</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-30">Published May 30, 2026</time></p>
+          <p class="summary">Multiple WWDC previews published in the last week &mdash; from Tom's Guide, TechTimes, Marketing Code, and Digitimes &mdash; line up on the same story: Apple's June 8 keynote will reveal its biggest Siri overhaul in nearly 15 years. The new assistant is reported to run on a custom model based on Google's Gemini, with inference routed through Apple's Private Cloud Compute infrastructure for sensitive requests. The previews also point to Siri replacing Spotlight as the primary system entry point and a new Camera-app Siri mode for visual queries. Apple registered the &ldquo;genai.apple.com&rdquo; subdomain two weeks before the keynote; iOS 27 developer beta is expected to drop the same day.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If Apple ships a Gemini-powered Siri to two billion devices in the fall, the &ldquo;assistant&rdquo; surface in {focus} stops being your product's home screen and starts being a layer above it. The design question shifts from &ldquo;how does the user open our app?&rdquo; to &ldquo;what does Siri say about us when the user asks?&rdquo; That's a different brief.</p>
+          <p class="source"><a href="https://www.tomsguide.com/phones/iphones/wwdc-2026" target="_blank" rel="noopener">Source &mdash; Tom's Guide</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If your product in {focus} ships on iPhone, you need to design a &ldquo;what Siri sees&rdquo; surface alongside your screens. App Intents copy, action metadata, and intent disambiguation become user-facing typography, not engineering plumbing.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's design review should add a &ldquo;Siri-mediated path&rdquo; check. If your feature in {domain} can be invoked by voice without opening the app, the screens you've designed may not be the primary surface anymore.</p>
+              <p class="impact-variant" data-variant="strategist">Strategy in {domain} needs a position on whether you compete with Siri, plug into it, or both. Picking &ldquo;ignore it&rdquo; is itself a choice with consequences.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs on iOS-first products are auditing their App Intents and Shortcuts coverage now, before the keynote. The ones who wait are going to do that audit under launch-week pressure in September.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are scheduling a designer to take notes on the keynote and write a one-page &ldquo;what changed for our app&rdquo; brief by June 9. That's the cheapest way to convert a 90-minute keynote into a planning input.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the Gemini-Apple framing for what it signals about Apple's appetite to build models in-house. If Apple is licensing the brain, the platform's value is the distribution and the privacy story, not the model.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&ldquo;Designing an app&rdquo; and &ldquo;designing a thing Siri can talk about&rdquo; are different jobs. This is a structural reframe of the unit of design in {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">Leading design when the OS assistant is the front door &mdash; not your icon &mdash; is a different craft. The team's job is now also to define how a third-party assistant describes their product.</p>
+              <p class="impact-variant" data-variant="strategist">If the platform-level assistant becomes the discovery surface for {domain}, marketing, search, and product strategy collapse into one conversation about &ldquo;what Siri says about us.&rdquo; That's a new way of thinking, not a feature update.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your acceptance criteria in {focus} need a &ldquo;Siri-invoked&rdquo; path now, not just a tap-from-home-screen path. If only half of your feature works through voice, that's a feature gap, not a polish bug.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs an iOS-27 App Intents readiness sprint queued for late Q3. Treat it like the launch of a new OS, because that's what it is for AI-mediated discovery.</p>
+              <p class="impact-variant" data-variant="strategist">If Siri becomes the front door, the company's product strategy in {domain} needs a paragraph on what we offer the assistant &mdash; data, actions, or content &mdash; that the assistant can't get elsewhere.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick your top three flows in {focus}. For each, write the single Siri utterance a user would say to trigger it, the response Siri should give if the action succeeds, and the response if it fails. Now read it back to yourself out loud. The script is the artefact; the test is whether the spoken version exposes any UX choice that only made sense when the user could see the screen.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pull together a one-page &ldquo;assistant-readiness audit&rdquo; for {domain}: which top flows are exposed as App Intents today, which are not, and which would be ambiguous to a third-party assistant. Assign each gap an owner with a date. Walk the doc to your engineering counterpart before WWDC. The walked-and-acknowledged doc is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;If Siri-with-Gemini becomes the default way half our iOS users discover and invoke us within 12 months, what's the one capability we offer the assistant that competitors can't?&rdquo; Be concrete about data, actions, or content &mdash; not abstractions. The memo is the artefact; the test is whether it points to a real moat or surfaces that we don't have one yet.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-06-01-microsoft-project-polaris-copilot"
+                 data-category="models"
+                 data-published="2026-05-29"
+                 data-tags="microsoft,project-polaris,mai,github-copilot,gpt-4-replacement,build-2026,maia,mixture-of-experts">
+          <div class="head">
+            <h6 class="headline">Project Polaris is the Microsoft MAI coding model: Reuters and The Information confirm Microsoft will use the Build 2026 keynote on June 2 to reveal an in-house mixture-of-experts model that replaces GPT-4 Turbo as the default in GitHub Copilot starting August 2026</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-29">Published May 29, 2026</time></p>
+          <p class="summary">Pre-Build reporting from Reuters, The Information, and Cybernews lines up on the same lineup: Microsoft's MAI team, led by Mustafa Suleyman, will unveil multiple homegrown AI models &mdash; including a coding-specialised model code-named Project Polaris &mdash; at Build 2026 on June 2. Polaris uses a mixture-of-experts architecture with sub-modules tuned per language and framework, runs on Microsoft's Maia AI accelerators in Azure, and is positioned to replace GPT-4 Turbo as the Copilot default starting August 2026 with an optional three-month GPT-4 fallback. Microsoft's framing in source reports is unusually direct: the move is a response to Claude Code overtaking Copilot in enterprise developer adoption.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When Microsoft replaces GPT-4 in Copilot, every AI feature you've built in {focus} that targets Copilot users gets a model swap underneath it &mdash; possibly without you noticing until evals drift. The design question is no longer just &ldquo;does this work on the model we picked?&rdquo; but &ldquo;does this work when the model swaps beneath us mid-quarter?&rdquo;</p>
+          <p class="source"><a href="https://finance.yahoo.com/sectors/technology/articles/microsoft-release-coding-model-next-160503080.html" target="_blank" rel="noopener">Source &mdash; Reuters via Yahoo Finance</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Any feature in {focus} that's calibrated against Copilot output needs a re-eval slot booked for August. The voice, the verbosity, and the failure modes of Polaris won't be GPT-4's, and your prompts may have absorbed GPT-4 mannerisms.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a model-swap drill on the calendar before Copilot's swap lands. If you can't dry-run a vendor changing the model under you for {domain}, you'll learn the hard way when it happens.</p>
+              <p class="impact-variant" data-variant="strategist">A second major vendor publicly bringing models in-house signals that the model layer is consolidating to the platform vendors. The strategic question is whether {domain} should still be designing as if model choice is independent &mdash; or as if it comes packaged with the cloud you bought.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at enterprise-Microsoft shops are already pulling Copilot logs from the last 30 days to baseline behaviour before the swap. The ones who don't will have no &ldquo;before&rdquo; to compare the &ldquo;after&rdquo; to.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are tagging which of their AI features in {domain} are model-coupled vs. model-portable. The model-coupled ones need owners assigned now for the August transition.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading the &ldquo;response to Claude Code&rdquo; framing closely &mdash; Microsoft naming a competitor in its own pre-conference briefings is a tell about how seriously they're taking the loss.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The craft now includes designing through silent model swaps. &ldquo;Our AI feature works&rdquo; in {focus} is not a deliverable &mdash; &ldquo;our AI feature works across the models our vendor will swap into it&rdquo; is.</p>
+              <p class="impact-variant" data-variant="design-lead">Operating a design team is reshaped by vendor-controlled model migrations. You need playbooks for model swaps you didn't initiate &mdash; that's a new operational craft.</p>
+              <p class="impact-variant" data-variant="strategist">As cloud vendors close the model layer, the strategy of building &ldquo;on top of GPT-4&rdquo; or &ldquo;on top of Claude&rdquo; weakens. Strategy moves toward building on top of a vendor's whole stack, with all the lock-in that implies.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria in {focus} need a &ldquo;survives a model swap&rdquo; clause. If your feature can only be defined against a specific model's behaviour, it's not really a defined feature.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs a recurring &ldquo;vendor model migration&rdquo; ritual. Plan for two of these a year from Microsoft alone, more if you're on Anthropic and Google too.</p>
+              <p class="impact-variant" data-variant="strategist">If the model is now a vendor commodity beneath your product in {domain}, the strategy conversation moves up the stack &mdash; to workflow, data, and integration depth where vendors can't swap you out.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one AI feature in {focus} that uses a hosted model your vendor controls. Pull five real user transcripts. For each, write a short note answering: &ldquo;If the model behind this swapped to a different vendor's MoE tomorrow, which line of my prompt or UX text becomes wrong, and which becomes brittle in a way I can't predict?&rdquo; The critique is the artefact; the practice is locating which bits of your design are absorbing a specific model's mannerisms.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 60-minute working session with design, engineering, and your AI lead in {domain}. Single deliverable: a one-page &ldquo;vendor swap rehearsal&rdquo; doc &mdash; what triggers a re-eval, who owns the eval set, who signs off on rollback, and what the user-facing communication is if behaviour changes. If you can't fill the doc in 60 minutes, the gaps are the artefact &mdash; surface them and assign owners.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;If our cloud vendors keep bringing models in-house, what part of our product stack stays defensible in 18 months, and what becomes a feature of someone else's roadmap?&rdquo; Name two features you'd cut investment in and one you'd double down on as a result. The two cuts and the one doubling are the artefact &mdash; not a list of options.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-06-01-cursor-windsurf-ide-pricing-shakeup"
+                 data-category="coding-agents"
+                 data-published="2026-05-30"
+                 data-tags="cursor,windsurf,composer,devin,coding-agents,ide,pricing,ai-credits">
+          <div class="head">
+            <h6 class="headline">The AI IDE pricing wars settle into a shape: Cursor ships Composer 2.5 with an in-house long-horizon model at $0.50/$2.50 per M tokens, Windsurf raises Pro to $20 and bundles Devin Cloud + Devin Terminal CLI, and GitHub Copilot's usage-based AI Credits billing flips live today</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-05-30">Published May 30, 2026</time></p>
+          <p class="summary">Three pricing moves in the AI coding-IDE category have converged into a clearer competitive picture. Cursor shipped Composer 2.5 in May 2026 &mdash; an in-house long-horizon model the company says matches Opus 4.7 and GPT-5.5 on benchmarks at $0.50/M input and $2.50/M output tokens, with Build in Parallel and PR review features at the $20 sticker. Windsurf raised Pro from $15 to $20 and bundled Devin Cloud agent and Devin Terminal CLI at no extra charge. GitHub Copilot's usage-based AI Credits billing model &mdash; previewed on May 31 &mdash; is generally live today, June 1, with all paid plans now metering input, output, and cached tokens against a monthly Credits allowance ($1 USD = 100 credits).</p>
+          <p class="why"><strong>Why this matters for you:</strong> The IDE you and your engineers use to ship product in {focus} is no longer a fixed-cost commodity &mdash; it's a metered AI surface where prompt choices, agent runs, and tool calls show up on the invoice. The design and PM job is no longer just to design the feature; it's to know what the feature costs to run, and to design with that in view.</p>
+          <p class="source"><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/" target="_blank" rel="noopener">Source &mdash; GitHub Blog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your design-to-code loop in {focus} now has a metered tail. Each Cursor agent run or Copilot fan-out costs measurable money &mdash; the design choice to &ldquo;just try a few variants&rdquo; is now a budget decision, not a free move.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's tooling allowance for {domain} needs a line item, not a vibes-based number. The shift from seat licences to metered usage means your team's velocity has a cost slope your finance partner will start asking about.</p>
+              <p class="impact-variant" data-variant="strategist">As IDE vendors split into &ldquo;in-house model&rdquo; (Cursor Composer) vs. &ldquo;bundle a third-party agent&rdquo; (Windsurf + Devin) vs. &ldquo;meter the platform&rdquo; (Copilot), {domain}'s buy-vs-build calculus for AI-assisted development changes meaningfully.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are watching the &ldquo;Build in Parallel&rdquo; and Devin Cloud workflows turn agent runs into a habit. The honest observation is that some are racking up cost without producing better output &mdash; the tools are faster than people's discipline around using them.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are pulling Cursor and Copilot usage reports for their teams in {domain} and writing one-line norms (&ldquo;don't open a parallel agent unless you can explain the bet&rdquo;) before finance comes asking.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are using the IDE shakeup as a forcing function to decide whether their company standardises on one vendor or maintains optionality &mdash; both are valid, but most companies haven't picked.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing under a metered IDE is a real craft change. Latency, cost, and quality become a tri-axis trade-off that touches every screen in {focus}, not just the AI ones.</p>
+              <p class="impact-variant" data-variant="design-lead">Leading a design team that ships in metered IDEs is operationally different from leading one with seat licences. Cost reviews, usage norms, and tooling experiments enter the design-leadership job description.</p>
+              <p class="impact-variant" data-variant="strategist">The IDE category is settling into three distinct strategic patterns at once &mdash; vertically integrated, bundled, and metered platform. That's a reshape of how the tools layer below {domain} competes, not a passing trend.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria for AI features in {focus} need a per-task token-cost ceiling, not just a quality bar. If the feature works but costs $0.40 a run, that's a product fact, not a footnote.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs a quarterly &ldquo;tools we use vs. what we pay&rdquo; review. Treat the IDE bill the way you treat the cloud bill &mdash; a category that benefits from explicit ownership.</p>
+              <p class="impact-variant" data-variant="strategist">If your competitors in {domain} are quietly ratcheting development cost down by picking the right metered IDE, &ldquo;same product, lower COGS&rdquo; becomes a strategic lane &mdash; one you can either lead or be left out of.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick the AI feature you've used most in {focus} this week (Cursor agent, Copilot Workspace, Claude Code, whichever). Track the next ten invocations: prompt size, output size, whether the result was kept or thrown away. At the end, write a one-paragraph critique of your own usage &mdash; where you spent tokens without producing value, and one rule you'll apply next week. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Tool mastery</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pull last month's Cursor, Copilot, or Claude Code usage for your team in {domain}. Write a one-page &ldquo;team tooling norms&rdquo; doc: which tools we standardise on, when parallel agents are worth the cost, what's a green-light experiment and what's not. Walk it to engineering and to finance. The walked doc &mdash; with both sign-offs &mdash; is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;Of the three IDE strategies emerging this quarter &mdash; vertically integrated (Cursor), bundled-agent (Windsurf+Devin), platform-metered (Copilot) &mdash; which one is our team on, and is that a deliberate choice or an accident?&rdquo; Recommend either a standardisation play or an explicit option-keeping policy with a review date. The recommendation is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+  </section>
+
   <section class="month-section" data-month="2026-05">
     <h3 class="month">May 2026</h3>
-    <section class="day-section" id="today" data-date="2026-05-31">
+    <section class="day-section" data-date="2026-05-31">
       <h4 class="day">Sunday, May 31 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
