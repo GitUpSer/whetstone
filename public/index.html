@@ -1127,7 +1127,412 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-01">
+    <section class="day-section" id="today" data-date="2026-06-03">
+      <h4 class="day">Wednesday, June 3 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-06-03-github-copilot-app-canvases"
+                 data-category="coding-agents"
+                 data-published="2026-06-02"
+                 data-tags="github,copilot,agents,canvases,multi-agent,vs-code,worktrees">
+          <div class="head">
+            <h6 class="headline">GitHub ships a standalone Copilot app built around &ldquo;Canvases&rdquo; &mdash; bidirectional surfaces where humans and parallel agents edit the same plan, PR, or terminal</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-02">Published June 2, 2026</time></p>
+          <p class="summary">At Microsoft Build on June 2, GitHub launched a dedicated Copilot desktop app (technical preview for Windows, Mac, and Linux) that replaces scattered chat windows with a single control center for multiple agents running in parallel. Its core construct is the Canvas &mdash; a shared work surface showing a plan, pull request, browser session, terminal, or deployment that agents update as they work and that developers can edit, reorder, approve, or redirect on the same surface. A &ldquo;My Work&rdquo; view consolidates agent sessions, issues, PRs, and background automations; each agent session runs in its own isolated Git worktree so parallel agents don't collide; and an Agent Merge feature can carry a PR through review, CI, and merge with developer-set autonomy levels. Requires a paid Copilot subscription.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The Canvas is a genuinely new interaction primitive &mdash; not a chat thread and not a static doc, but a live surface co-edited by people and agents. If that pattern wins, the screens you design in {focus} stop being end-states and start being shared workspaces an agent is also touching.</p>
+          <p class="source"><a href="https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/" target="_blank" rel="noopener">Source &mdash; The GitHub Blog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You now have to design for a state where a screen in {focus} is being edited by a person and an agent at the same time &mdash; provenance, conflict, and &ldquo;who changed this&rdquo; become first-class UI, not afterthoughts.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared definition of what a &ldquo;canvas&rdquo; is in {domain} before three designers ship three incompatible versions of human-agent co-editing.</p>
+              <p class="impact-variant" data-variant="strategist">A new interaction primitive validated by GitHub gives you cover to fund a co-editing surface in {domain} &mdash; or a reason to argue it's premature. Decide which.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are screen-recording the Copilot app's Canvas and annotating exactly where the human-vs-agent edit signals are legible and where they're confusing, instead of just reading the launch post.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are pulling the Canvas pattern into the next design-system discussion to decide whether co-editing surfaces deserve their own component family.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching whether developers actually adopt parallel-agent workflows or retreat to single-threaded chat &mdash; the answer decides how much to bet on the pattern.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing a surface that a human and an agent both write to is a different job than designing a screen a human reads &mdash; the unit of design in {focus} shifts from output to shared workspace.</p>
+              <p class="impact-variant" data-variant="design-lead">Leading design when agents are co-authors, not tools, reframes review: you're choreographing two kinds of actor on one canvas, not just laying out pixels.</p>
+              <p class="impact-variant" data-variant="strategist">If the canvas becomes the dominant agent interface, &ldquo;chat with AI&rdquo; was the transitional form and co-editing is the real one &mdash; a structural reframe for {domain}, not a feature.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria in {focus} need an &ldquo;agent is also editing this&rdquo; path: what the user sees mid-edit, on conflict, and on agent failure.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs a stance on whether your product exposes a co-editing surface at all, and if so, on which object &mdash; the doc, the plan, or the deploy.</p>
+              <p class="impact-variant" data-variant="strategist">Isolated worktrees per agent is an architecture choice with UX consequences in {domain}; product and infra need one shared model of how parallel work reconciles.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Open the Copilot app (or its launch screenshots) and pick one Canvas state. Redesign the &ldquo;who is editing this right now&rdquo; layer for {focus}: draw how a human edit, an agent edit, and a conflict each read differently at a glance. Then write a three-bullet critique of where GitHub's version is ambiguous. The redrawn states plus the critique are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute session with your team in {domain}: map every object in your product a user might want an agent to co-edit, and rank each as &ldquo;canvas candidate,&rdquo; &ldquo;agent-suggests-human-approves,&rdquo; or &ldquo;humans only.&rdquo; The ranked map is the artefact; the discipline is forcing a category for each, not declaring everything a canvas.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;Is the human-agent canvas a primitive we should build toward in the next two quarters, or a GitHub-specific bet we can ignore?&rdquo; Name one concrete product object you'd pilot it on and the one metric that would tell you it's working. The recommendation is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-06-03-copilot-sdk-ga"
+                 data-category="coding-agents"
+                 data-published="2026-06-02"
+                 data-tags="github,copilot-sdk,agents,embedding,platform,build-vs-buy">
+          <div class="head">
+            <h6 class="headline">GitHub's Copilot SDK hits general availability, letting any product embed Copilot's agentic engine behind a stable API</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-02">Published June 2, 2026</time></p>
+          <p class="summary">Announced in the GitHub Changelog on June 2 alongside the Copilot app, the Copilot SDK is now generally available with a stable API and production support. It lets teams embed Copilot's agentic engine &mdash; the planning, tool-calling, and execution loop &mdash; into their own applications, services, and developer tools rather than building an agent runtime from scratch. For product teams this turns &ldquo;add an agent&rdquo; into a build-vs-buy decision instead of a multi-quarter infrastructure project.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When the agent runtime is a dependency you import, the differentiator in {focus} stops being &ldquo;we have an agent&rdquo; and becomes the surface, the guardrails, and the taste around it. That's squarely design's job.</p>
+          <p class="source"><a href="https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/" target="_blank" rel="noopener">Source &mdash; GitHub Changelog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If engineering can stand up an agent in days using the SDK, your design work in {focus} moves earlier and matters more: the agent's behaviour ships only as well as the surface you wrap it in.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a reusable pattern library for embedded-agent surfaces in {domain}, because the SDK makes agents cheap to add and easy to add badly.</p>
+              <p class="impact-variant" data-variant="strategist">When agent runtimes are commodity, design and trust become the moat in {domain} &mdash; that's a positioning argument worth making to leadership now.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are inventorying the parts of their product where a teammate might bolt on an SDK agent, so they design the guardrails before the demo, not after.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are getting ahead of &ldquo;we added an agent over the weekend&rdquo; by drafting a one-page review checklist for any agent feature.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reframing the agent roadmap around what only their product can do, since the engine itself is now buyable by competitors too.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Agents becoming an importable dependency doesn't change what design is, but it changes when design enters in {focus} &mdash; the constraint shifts from feasibility to experience.</p>
+              <p class="impact-variant" data-variant="design-lead">The craft of leading shifts toward setting agent-surface standards fast, because the cost of adding agents just dropped to near zero.</p>
+              <p class="impact-variant" data-variant="strategist">Commodity runtimes reshape where competition lives in {domain}: away from &ldquo;do we have AI&rdquo; toward workflow depth, data, and trust.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Spec the agent's failure and refusal states in {focus} as carefully as its happy path &mdash; a cheap-to-add agent that misbehaves is a cheap way to lose trust.</p>
+              <p class="impact-variant" data-variant="design-lead">Build-vs-buy on the agent engine becomes a recurring roadmap question; treat the SDK as a default and reserve custom runtimes for where they earn it.</p>
+              <p class="impact-variant" data-variant="strategist">If the engine is bought, product strategy in {domain} has to articulate the proprietary context or actions you feed it that rivals can't.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="differentiation,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">List three things the Copilot SDK makes commodity for an agent in {focus} &mdash; planning, tool-calling, retries. Then write the one thing only a designer with taste can still contribute to that agent experience, in a single concrete sentence tied to a real screen. The list plus that sentence are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft a one-page &ldquo;embedded agent review checklist&rdquo; for {domain}: the five questions any agent feature must answer (refusal behaviour, provenance, undo, escalation, cost visibility) before it ships. Walk it to one engineer building with the SDK. The acknowledged checklist is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;If our competitors can buy the same agent engine we can, what is the one capability &mdash; data, workflow, or trust &mdash; that we offer it that they can't?&rdquo; End with a clear recommendation on where to invest design effort next quarter. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-03-microsoft-scout-autopilots"
+                 data-category="industry"
+                 data-published="2026-06-02"
+                 data-tags="microsoft,scout,autopilots,openclaw,agents,entra,governance,m365">
+          <div class="head">
+            <h6 class="headline">Microsoft introduces &ldquo;Autopilots&rdquo; &mdash; always-on agents with their own identity &mdash; and Scout, an OpenClaw-based personal agent that acts across Teams, Outlook, and the Windows desktop</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-02">Published June 2, 2026</time></p>
+          <p class="summary">At Build on June 2, Microsoft announced Autopilots: a new category of always-on agents that work autonomously and act on a user's behalf. The first is Scout, an experimental personal agent built on the OpenClaw automation framework that operates across Teams, Outlook, OneDrive, SharePoint, and the Windows desktop &mdash; reading email, filling desktop forms, and running multi-step tasks. Each agent runs under its own governed Entra identity (not a shared service account), sensitive actions can require human sign-off, and Microsoft Purview policies are enforced inline. Scout is in private preview now, with an Insider beta expected late 2026 and general availability likely 2027 &mdash; so the governance and reliability claims are not yet independently verified at scale.</p>
+          <p class="why"><strong>Why this matters for you:</strong> An always-on agent that acts across apps reframes the &ldquo;front door&rdquo; question again: if Scout does the task without opening your product in {focus}, your UI competes with an agent's summary of it. Designing for the agent's view, and for the human sign-off moment, becomes part of the brief.</p>
+          <p class="source"><a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/" target="_blank" rel="noopener">Source &mdash; Microsoft 365 Blog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You need to design the &ldquo;human sign-off&rdquo; moment in {focus} &mdash; the screen where a person approves an autonomous action &mdash; as carefully as any primary flow, because that's where trust is won or lost.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team should add an &ldquo;agent-mediated path&rdquo; check to review: which tasks in {domain} an Autopilot could complete without a human opening your product at all.</p>
+              <p class="impact-variant" data-variant="strategist">An always-on agent layer forces a position in {domain}: do you integrate with Autopilots, compete with them, or treat them as a distribution channel?</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at M365-heavy shops are sketching what their product's data looks like when an agent &mdash; not a person &mdash; reads it, because the agent's summary becomes the new first impression.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are auditing which workflows are safe to automate vs. which must keep a human in the loop, and writing that line down before the beta lands.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading the per-agent Entra identity and Purview enforcement as a signal that enterprise agent governance, not raw capability, is the 2027 battleground.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for &ldquo;a user opens my app&rdquo; and &ldquo;an agent acts on the user's behalf&rdquo; are different jobs; the second reframes the unit of design in {focus} from screens to delegated actions.</p>
+              <p class="impact-variant" data-variant="design-lead">Leading design when an OS-level agent is the actor means owning how delegation, approval, and accountability look &mdash; a structural reframe, not a new screen.</p>
+              <p class="impact-variant" data-variant="strategist">If autonomous agents with their own identity become normal, the org chart of &ldquo;who did this work&rdquo; in {domain} changes &mdash; that's a new way of thinking about product and liability, not a passing trend.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria in {focus} need an &ldquo;agent acted, awaiting human approval&rdquo; state and a clear audit trail, not just success and error.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs a governance lane: which actions in {domain} require sign-off, which are reversible, which are logged &mdash; designed, not bolted on.</p>
+              <p class="impact-variant" data-variant="strategist">Treat agent identity and accountability as product surface in {domain}; &ldquo;who authorized this&rdquo; is becoming a feature, not a compliance footnote.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Design the single &ldquo;approve this autonomous action&rdquo; screen for one real task in {focus}: what the agent proposes, the evidence it shows, the one-tap approve, and the undo. Then write the worst-case sentence a user would say if this screen got it wrong. The screen plus that sentence are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a working session with design, eng, and a security or IT partner in {domain}: list your top tasks an Autopilot might perform and tag each &ldquo;auto-ok,&rdquo; &ldquo;needs sign-off,&rdquo; or &ldquo;humans only.&rdquo; The tagged list, with a rationale per &ldquo;needs sign-off,&rdquo; is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;If always-on agents act across our users' apps by 2027, do we integrate with Autopilots, compete, or treat them as a channel?&rdquo; Pick one, name the first concrete step, and state the risk of doing nothing. The recommendation is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-06-03-microsoft-iq-web-grounding"
+                 data-category="tools"
+                 data-published="2026-06-02"
+                 data-tags="microsoft,microsoft-iq,web-iq,work-iq,grounding,copilot,foundry">
+          <div class="head">
+            <h6 class="headline">Microsoft IQ debuts as a unified &ldquo;intelligence layer&rdquo; &mdash; Work IQ, Foundry IQ, Fabric IQ, and a new Web IQ for live web grounding &mdash; across Copilot and Foundry</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-02">Published June 2, 2026</time></p>
+          <p class="summary">At Build on June 2, Microsoft introduced Microsoft IQ, a unified context-and-grounding layer that agents draw on across GitHub Copilot, Microsoft Foundry, and Copilot Studio. It bundles Work IQ (how a person actually works &mdash; their emails, documents, meetings, and the relationships among them), Foundry IQ (knowledge), Fabric IQ Ontology (business semantics), and a new Web IQ for live web grounding. The pitch is that an agent's answers improve when it's grounded in real organizational and live context rather than a static model; the practical effect for builders is a standard way to feed agents context instead of wiring it by hand.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Grounding quality is becoming a design variable in {focus}: the same agent feels trustworthy or hollow depending on what context it can cite. Designing how an agent shows its sources and its confidence is now part of the experience, not an engineering detail.</p>
+          <p class="source"><a href="https://www.aguidetocloud.com/blog/microsoft-build-2026-recap/" target="_blank" rel="noopener">Source &mdash; A Guide to Cloud (Build 2026 recap)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You need to design how an agent in {focus} shows what it's grounded in &mdash; the source chip, the &ldquo;based on your last meeting&rdquo; line &mdash; because grounded answers and ungrounded ones should not look identical.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared pattern for citing and surfacing grounding context in {domain}, or every agent feature will explain itself differently.</p>
+              <p class="impact-variant" data-variant="strategist">If grounding is a layer competitors can also buy, the design of trust and transparency around it becomes a differentiator in {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are studying how the best assistants reveal their sources and collecting patterns for &ldquo;here's why I said that&rdquo; before they design their own.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are pushing for a grounding-and-citation component in the design system so trust signals are consistent across features.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are weighing how much proprietary context (Work IQ-style) their product can offer agents that a generic web grounding can't.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing &ldquo;how the agent shows what it knows&rdquo; is a new sub-skill within {focus}, but it sits inside existing UX craft rather than replacing it.</p>
+              <p class="impact-variant" data-variant="design-lead">Leading design now includes owning trust-and-provenance patterns, a real addition to the team's remit, not a passing fad.</p>
+              <p class="impact-variant" data-variant="strategist">As grounding layers commoditize, the craft of presenting context and confidence in {domain} reshapes where users decide to trust a product.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria in {focus} should require an agent answer to expose its grounding, and to degrade visibly when it has none.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs a &ldquo;grounding sources&rdquo; review: what each agent feature is allowed to cite, and how that's shown.</p>
+              <p class="impact-variant" data-variant="strategist">Product strategy in {domain} should treat proprietary grounding context as an asset to invest in, since the grounding plumbing itself is now generic.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one agent response in {focus} and design two versions of it: one that shows its grounding (sources, freshness, confidence) and one that doesn't. Write three sentences on which you'd trust and why. The two designs plus the verdict are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Sketch a single &ldquo;grounding &amp; citation&rdquo; component spec for {domain}: the states it must cover (well-grounded, partially grounded, ungrounded, stale). Note where each agent feature would use it. The component spec and its usage map are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;What proprietary context can we feed agents that a generic grounding layer like Microsoft IQ can't replicate?&rdquo; Name the data, the source, and one feature it would make defensibly better. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-06-03-anthropic-cyber-threats-report"
+                 data-category="policy"
+                 data-published="2026-06-03"
+                 data-tags="anthropic,security,ai-threats,policy,trust,agents">
+          <div class="head">
+            <h6 class="headline">Anthropic publishes what it learned mapping a year of AI-enabled cyber threats, as it expands Claude Security access</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-03">Published June 3, 2026</time></p>
+          <p class="summary">On June 3, Anthropic published a policy write-up synthesizing a year of observing AI-enabled cyber threats &mdash; how attackers are actually using models and what defenses held up. It lands a day after the June 2 expansion of its Project Glasswing / Claude Mythos preview to roughly 150 more organizations, adding Claude Security for codebase scans and patch suggestions across sectors including power, water, healthcare, and communications. The throughline: as agents gain the ability to act, the security and trust surface of every AI product widens, and vendors are starting to treat that as a first-class product concern.</p>
+          <p class="why"><strong>Why this matters for you:</strong> &ldquo;Can this agent be tricked into acting against the user?&rdquo; is now a design question in {focus}, not just a security one. The way you surface permissions, confirmations, and an agent's reasoning is part of the product's threat model.</p>
+          <p class="source"><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Source &mdash; Anthropic Newsroom</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You should design the permission and confirmation moments in {focus} as adversarial: assume someone is trying to make the agent act against the user, and make the risky action visible and reversible.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's review in {domain} needs a &ldquo;how could this agent be abused&rdquo; pass, not just a usability and accessibility pass.</p>
+              <p class="impact-variant" data-variant="strategist">Treating AI security as a product surface, not a back-office concern, is a positioning choice in {domain} worth making deliberately.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are starting to red-team their own agent flows &mdash; writing the prompt an attacker would use &mdash; before handing designs to engineering.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are inviting a security partner into design reviews for any feature where an agent can take a consequential action.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading vendors' move to ship security products as a sign that &ldquo;safe agents&rdquo; is becoming a buying criterion, not a nice-to-have.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Adversarial thinking joining the designer's toolkit reshapes how you design agent flows in {focus}, but it extends existing craft rather than replacing the frame.</p>
+              <p class="impact-variant" data-variant="design-lead">Leading design now means making threat-modeling a normal review step, a durable addition to the team's process.</p>
+              <p class="impact-variant" data-variant="strategist">As agents act in the world, security-by-design becomes table stakes in {domain} &mdash; a reshaping of what &ldquo;done&rdquo; means, not a passing concern.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Acceptance criteria in {focus} should include an abuse case per agent action, alongside the happy path and the error path.</p>
+              <p class="impact-variant" data-variant="design-lead">Your roadmap needs a recurring agent-safety review, treated like an accessibility audit &mdash; ongoing, not one-time.</p>
+              <p class="impact-variant" data-variant="strategist">If &ldquo;safe agents&rdquo; becomes a buying criterion in {domain}, product strategy should make trust and auditability explicit selling points.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one agent action in {focus}. Write the three prompts an attacker might use to make the agent act against the user, then redesign the confirmation step so each attempt is caught or made obvious. The attack list plus the redesigned step are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Add a &ldquo;how could this be abused?&rdquo; step to your team's design review for {domain}, and write the three standing questions it must ask. Bring one security or eng partner into the next review to pressure-test it. The review-step doc is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for leadership in {domain}: &ldquo;If &lsquo;safe, auditable agents&rsquo; becomes a buying criterion in 12 months, what do we ship now to be credible &mdash; and what do we say in sales?&rdquo; End with one concrete investment and one positioning line. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+    <section class="day-section" data-date="2026-06-01">
       <h4 class="day">Monday, June 1 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="industry">
