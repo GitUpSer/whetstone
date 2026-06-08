@@ -1127,7 +1127,336 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-07">
+    <section class="day-section" id="today" data-date="2026-06-08">
+      <h4 class="day">Monday, June 8 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-08-apple-intelligence-model-choice"
+                 data-category="industry"
+                 data-published="2026-06-08"
+                 data-tags="apple,wwdc,siri,gemini,claude,model-choice">
+          <div class="head">
+            <h6 class="headline">Apple makes you pick your AI: iOS 27 lets users choose Claude, ChatGPT, or Gemini to power Apple Intelligence</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-08">Published June 8, 2026</time></p>
+          <p class="summary">At WWDC on June 8, Apple shipped a rebuilt Siri running on a custom 1.2-trillion-parameter Gemini model licensed from Google for roughly $1B/year, and &mdash; the bigger product story &mdash; an Extensions system in iOS 27, iPadOS 27, and macOS 27 that lets users choose which model powers Apple Intelligence: ChatGPT, Gemini (default), or Anthropic's Claude. Each model keeps its own distinct voice so users know which one answered. Heavy reasoning runs on Apple's Private Cloud Compute rather than Google's servers. iOS 27 Beta 1 shipped the same afternoon; full rollout lands with the September release.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A platform-level &ldquo;pick your model&rdquo; choice turns the AI engine into a user-selectable setting with its own personality &mdash; a new interaction pattern you'll have to design around, where your product can't assume a single underlying model's tone, latency, or refusals.</p>
+          <p class="source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank" rel="noopener">Source &mdash; Build Fast with AI (WWDC 2026 recap)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When the user can swap the model behind your {focus} feature, you can no longer tune copy and microcopy to one model's voice &mdash; you have to design prompts and empty states that hold up across three different personalities.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared rule for how {domain} behaves when the model is user-chosen and unknown; bake model-agnostic guardrails into the component library instead of letting each designer guess.</p>
+              <p class="impact-variant" data-variant="strategist">Model-as-a-setting means your {domain} differentiation can't live in the model anymore &mdash; plan for the layer above it (workflow, data, taste) to carry the advantage.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are starting to test their flows against multiple models side by side, because shipping to one and hoping is no longer safe when the platform hands the choice to users.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are adding &ldquo;which models do we support&rdquo; to spec reviews and pushing for regression checks across providers before launch.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading Apple's move as the start of model commoditization at the OS layer and repositioning roadmaps around proprietary context and distribution rather than raw model quality.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for a user-swappable model is a genuine reframe for {focus}: the &ldquo;assistant&rdquo; you're styling isn't one entity anymore, and that breaks the single-persona assumption most chat UIs were built on.</p>
+              <p class="impact-variant" data-variant="design-lead">For team process this reframes ownership &mdash; someone now has to own cross-model behavior the way someone owns cross-browser, and that role didn't exist last quarter.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level, model-choice at the OS layer reframes where value accrues in {domain}; the company that owns the interface and the data wins over the company that owns the model.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You start treating the model like a configurable dependency in {focus} &mdash; design the seams, not the engine.</p>
+              <p class="impact-variant" data-variant="design-lead">Product planning for {domain} now needs a compatibility matrix, not a single happy path.</p>
+              <p class="impact-variant" data-variant="strategist">The strategic question shifts from &ldquo;which model do we bet on&rdquo; to &ldquo;what do we build that survives any model&rdquo; in {domain}.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} chat or assistant flow you've designed and run the same three prompts through Claude, ChatGPT, and Gemini. Write a one-page critique of where your copy, empty states, or error handling break when the model's voice and refusals change &mdash; the critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 60-minute working session with your team to draft a &ldquo;model-agnostic behavior&rdquo; rule for {domain}: which guarantees your UI must hold regardless of the underlying model, and where in the component library they live. Output a one-page team standard.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo answering: if the model becomes a user-selected setting, where does our {domain} product's durable advantage actually live? Name one moat that survives model-choice and one that doesn't, and make a recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-06-08-chatgpt-superapp-redesign"
+                 data-category="tools"
+                 data-published="2026-06-07"
+                 data-tags="openai,chatgpt,superapp,apps,canva,redesign">
+          <div class="head">
+            <h6 class="headline">OpenAI is rebuilding ChatGPT into a &ldquo;superapp&rdquo; that steers users toward apps, image gen, and coding</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-07">Published June 7, 2026</time></p>
+          <p class="summary">The Financial Times reported on June 7 that OpenAI is planning the largest ChatGPT redesign since launch, codenamed Aria, ahead of a likely IPO. The overhaul reframes ChatGPT from a chat box into a platform: a redesigned interface with prompts and surfaces that push users toward coding tools, image generation, AI agents, and third-party apps built by partners like Canva and Booking.com. It rolls out &ldquo;in the coming weeks,&rdquo; starting with web and mobile, though partner app integrations are not initially available in the UK, EEA, or Switzerland. This is a report, not a shipped product &mdash; treat specifics as subject to change.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When a chat interface becomes an app platform, the design problem shifts from &ldquo;answer the question&rdquo; to &ldquo;route the user to the right surface&rdquo; &mdash; the same discovery, navigation, and entry-point problems you already know, now inside a conversation.</p>
+          <p class="source"><a href="https://www.engadget.com/2189038/openai-reportedly-has-a-major-chatgpt-overhaul-in-store/" target="_blank" rel="noopener">Source &mdash; Engadget (reporting FT)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If users reach {focus} through a conversation instead of a nav bar, you have to design entry points that surface inside chat &mdash; suggestion chips, inline app cards, handoffs &mdash; not just screens.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's IA work for {domain} now has to account for conversational discovery; the &ldquo;where does this feature live&rdquo; question gets answered in prompts, not menus.</p>
+              <p class="impact-variant" data-variant="strategist">A superapp surface is a new distribution channel for {domain}; decide whether you're building inside it as a partner app or competing with it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are studying how Canva-style partner apps render inside ChatGPT to understand the constraints before they're handed an integration brief.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are asking whether their product should be a destination or a callable surface inside someone else's assistant, and staffing accordingly.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the EEA/UK carve-out as a signal that regulatory geography now shapes where conversational distribution is even available for {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Conversational entry points reshape how you design discovery for {focus} &mdash; it's still navigation and onboarding, done inside a chat thread rather than a screen.</p>
+              <p class="impact-variant" data-variant="design-lead">For the team this reshapes the IA conversation rather than replacing it; the patterns are familiar even though the container is new.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level a chat-as-platform shift reshapes the channel mix for {domain} without inventing a new business; treat it as a major new surface, not a new world.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You begin sketching {focus} as something that can be invoked mid-conversation, not just opened.</p>
+              <p class="impact-variant" data-variant="design-lead">Product planning for {domain} adds a &ldquo;callable surface&rdquo; track alongside the standalone app.</p>
+              <p class="impact-variant" data-variant="strategist">The platform question &mdash; build on it, beside it, or against it &mdash; becomes a real {domain} roadmap fork.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="divergent-thinking,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} feature you own and sketch how it would surface inside a chat thread: the trigger, the inline card, and the handoff back to conversation. Produce three rough frames and a note on what breaks versus a normal screen.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a short cross-functional conversation with PM and eng on one question: should {domain} be a destination or a callable surface inside an assistant? Capture the trade-offs and a provisional decision in a shared doc.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo: list three things a ChatGPT superapp makes commodity for {domain}, then name the one thing only your team's taste and judgement can still contribute. End with a build/partner/compete recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-06-08-gpt-5-5-instant-fewer-hallucinations"
+                 data-category="models"
+                 data-published="2026-06-05"
+                 data-tags="openai,gpt-5-5,hallucinations,reliability,generative-ui">
+          <div class="head">
+            <h6 class="headline">GPT-5.5 Instant adds in-chat writing and coding blocks and claims 52.5% fewer hallucinations</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-05">Published June 5, 2026</time></p>
+          <p class="summary">OpenAI updated GPT-5.5 Instant &mdash; the default model in ChatGPT &mdash; on June 5 with clearer, more natural responses and new in-chat writing and coding blocks that render structured output inline. OpenAI says internal evaluations show 52.5% fewer hallucinated claims than GPT-5.3 Instant on high-stakes prompts across medicine, law, and finance. These are OpenAI's own numbers on its own eval set, not independent benchmarks, so the real-world reduction is unverified until third parties test it.</p>
+          <p class="why"><strong>Why this matters for you:</strong> In-chat writing and coding blocks are generative UI &mdash; the model is now deciding when to render a structured component instead of prose, which means the model is making layout decisions you used to own.</p>
+          <p class="source"><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" rel="noopener">Source &mdash; OpenAI</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When the model renders its own writing and code blocks, your {focus} work shifts from drawing the component to defining when and how it should appear &mdash; you're designing the rules, not the pixels.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a point of view on model-generated layout in {domain}: which surfaces you let the model render and which stay hand-designed.</p>
+              <p class="impact-variant" data-variant="strategist">Lower hallucination rates change the risk math for shipping AI into high-stakes {domain} flows &mdash; but only if the numbers hold up independently, so don't reprice the risk on a vendor claim.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are stress-testing model-rendered blocks to see where the formatting falls apart on edge cases the model didn't anticipate.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are setting standards for when generative UI is acceptable versus when a flow needs a designed, predictable component.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating &ldquo;52.5% fewer&rdquo; as a claim to verify, not a fact to plan on, and asking for independent eval before betting {domain} on it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Model-rendered UI reshapes the craft of {focus}: you move from placing components to specifying the conditions under which the model places them.</p>
+              <p class="impact-variant" data-variant="design-lead">For the team this reshapes the design-system contract &mdash; tokens and rules now have to be legible to a model, not just to humans.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level generative UI reshapes how {domain} interfaces get built without overturning the goal; it's a new production method, not a new product category.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You start thinking about {focus} as a set of conditions and constraints the model fills in, not a fixed screen.</p>
+              <p class="impact-variant" data-variant="design-lead">Product planning for {domain} has to decide where determinism matters more than flexibility.</p>
+              <p class="impact-variant" data-variant="strategist">Reliability claims become a gating factor for which {domain} use cases are even on the table.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,tool-mastery" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Prompt GPT-5.5 Instant to produce three writing/coding blocks for a realistic {focus} task, then write a critique of where the model's auto-layout choices help and where they'd fail your design standards. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Tool mastery</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft a one-page team rule for {domain}: which surfaces may use model-rendered generative UI and which must use designed, deterministic components. Walk it through two real examples and capture the boundary.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo on whether a vendor's &ldquo;52.5% fewer hallucinations&rdquo; claim should change your {domain} risk posture. Specify what independent evidence you'd require before relying on it, and make a recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="image-gen">
+        <h5 class="category-label">Image gen</h5>
+
+        <article class="entry"
+                 data-id="2026-06-08-apple-on-device-generative-photo-editing"
+                 data-category="image-gen"
+                 data-published="2026-06-08"
+                 data-tags="apple,photos,generative-fill,cleanup,on-device,image-editing">
+          <div class="head">
+            <h6 class="headline">Apple bakes generative photo editing into the OS: Cleanup, generative background extension, and perspective reframing</h6>
+            <span class="badge image-gen">Image gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-08">Published June 8, 2026</time></p>
+          <p class="summary">Alongside the Siri rebuild at WWDC on June 8, Apple demonstrated AI-enhanced Photos editing in iOS 27 and macOS 27: generative background extension, perspective reframing, and AI-powered Cleanup, with Apple Intelligence features requiring iPhone 15 Pro or newer. These capabilities aren't new to the category &mdash; Google, Adobe, and Samsung have shipped similar tools &mdash; but putting them in the default Photos app on hundreds of millions of devices makes generative editing an ambient default rather than a pro-tool feature.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When generative fill and object removal become a tap in everyone's default photo app, &ldquo;is this image real&rdquo; stops being an edge case and becomes a baseline assumption you design content and trust signals around.</p>
+          <p class="source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank" rel="noopener">Source &mdash; Build Fast with AI (WWDC 2026 recap)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If user-supplied images in {focus} are now routinely AI-edited, you have to design for provenance &mdash; labels, source indicators, or verification cues &mdash; instead of assuming uploaded photos are unaltered.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team should decide how {domain} treats AI-edited media: disclosure standards, when to flag, and how that shows up consistently across the product.</p>
+              <p class="impact-variant" data-variant="strategist">Ambient generative editing raises the trust and authenticity stakes for {domain}; decide whether provenance becomes a feature you lead with.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are quietly using on-device generative tools for mockup filler and asset cleanup, which speeds work but blurs the line between placeholder and real content.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are revisiting content-authenticity guidelines now that any user can convincingly alter a photo in two taps.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching whether &ldquo;verified real&rdquo; becomes a product differentiator as generative editing goes mainstream in {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Generative editing as a default reshapes how you handle imagery in {focus}; the tools are familiar, but the assumption that photos are evidence is the thing that changes.</p>
+              <p class="impact-variant" data-variant="design-lead">For the team this reshapes content and trust standards rather than the whole craft; you're updating guidelines, not starting over.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level mainstreamed photo editing reshapes the authenticity conversation in {domain} without creating a new market overnight.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You start treating uploaded media in {focus} as potentially synthetic by default.</p>
+              <p class="impact-variant" data-variant="design-lead">Product planning for {domain} adds provenance and disclosure as first-class concerns.</p>
+              <p class="impact-variant" data-variant="strategist">Trust and authenticity move from compliance checkbox to potential {domain} differentiator.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map one {focus} flow where users upload images. Mark every point that silently assumes the photo is unaltered, then sketch a provenance or disclosure cue for each. Output the annotated flow.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Lead a working session to draft a content-authenticity standard for {domain}: when AI-edited media must be disclosed, how it's flagged, and where the rule lives. Produce a one-page team standard.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo: as generative photo editing becomes ambient, is &ldquo;verified authentic&rdquo; a real differentiator for {domain} or table stakes? Name the trade-off and make a recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-06-07">
       <h4 class="day">Sunday, June 7 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
