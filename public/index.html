@@ -1127,7 +1127,335 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-04">
+    <section class="day-section" id="today" data-date="2026-06-07">
+      <h4 class="day">Sunday, June 7 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-06-07-gemini-3-5-pro-nears-launch"
+                 data-category="models"
+                 data-published="2026-06-06"
+                 data-tags="google,gemini,context-window,reasoning,multimodal,frontier-models">
+          <div class="head">
+            <h6 class="headline">Google's Gemini 3.5 Pro nears June launch &mdash; 2M-token context and a Deep Think mode, but still unshipped</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-06">Published June 6, 2026</time></p>
+          <p class="summary">Gemini 3.5 Pro, unveiled at Google I/O on May 19, is still not generally available as of early June; Google now targets a June GA. It promises a 2-million-token context window, a &ldquo;Deep Think&rdquo; reasoning mode, and frontier multimodal understanding, and will reach Google's $20 Pro and $250 Ultra consumer plans first, with Ultra subscribers getting Deep Think. Pricing is expected at roughly ten times Flash &mdash; around $15 and $60 per million input and output tokens. Until it ships and independent testers can evaluate it, the headline specs remain Google's claims rather than verified performance.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A 2M-token window changes what you can hand a model as context &mdash; an entire design system, research corpus, or codebase at once. But the gap between &ldquo;announced at I/O&rdquo; and &ldquo;actually shipped&rdquo; is the real lesson: treat frontier specs as targets, not capabilities you can plan around yet.</p>
+          <p class="source"><a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm" target="_blank" rel="noopener">Source &mdash; Tech Times</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">A 2M-token window means you could drop your entire {focus} design system, past critiques, and research notes into one prompt instead of summarizing &mdash; but only once it ships, so plan the workflow without depending on it yet.</p>
+              <p class="impact-variant" data-variant="design-lead">If Deep Think lands behind the $250 Ultra tier, your team's access to the best reasoning becomes a budget line &mdash; decide now who actually needs it for {domain} and who is fine on a cheaper model.</p>
+              <p class="impact-variant" data-variant="strategist">Google announcing months ahead of shipping is a pattern worth pricing into roadmaps; don't commit {domain} bets to a frontier model that exists only in limited preview.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are testing whether huge context actually improves output or just lets them get lazy about what they include &mdash; the discipline of curating context still decides the result.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are holding off on retooling team workflows around 2M context until GA and independent benchmarks confirm the reasoning gains are real, not marketing.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading the Flash-versus-Pro split as a market signal: cheap-and-fast for volume work, expensive-and-deep for the hard calls, with budget routed accordingly.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Massive context reshapes the craft of prompting in {focus} &mdash; the skill shifts from compression to selection &mdash; but it's still the same job done with more room.</p>
+              <p class="impact-variant" data-variant="design-lead">For team process this is an incremental capability bump, not a reframe; the workflows you've built around AI mostly survive a bigger context window.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level this is steady frontier escalation in {domain}, not a discontinuity &mdash; plan for it as the next rung on the ladder, not a new ladder.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Longer context lets a product hold more of a user's history at once, which raises a sharper {focus} question: how much memory should the interface admit to having?</p>
+              <p class="impact-variant" data-variant="design-lead">When models can hold entire sessions, the team's job moves from managing context limits to deciding what the product should deliberately choose to forget.</p>
+              <p class="impact-variant" data-variant="strategist">Context-length leaps in {domain} commoditize &ldquo;the model remembers everything&rdquo;; differentiation moves to judgment about what's worth remembering.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take a real {focus} task you'd hand an AI today. Write down everything you'd include if you had a 2M-token window &mdash; every doc, every past decision. Then cut it to only what actually changes the output. The gap between the two lists is your evidence that curation, not capacity, is the bottleneck. Write a one-paragraph conclusion as the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map your team's AI access tiers against the likely Gemini 3.5 Pro pricing (Pro plan versus $250 Ultra for Deep Think). Decide and document: which roles in {domain} need frontier reasoning, which are fine on Flash-class models, and what you'll do if the best model sits behind a per-seat premium. Circulate the access policy this week.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: Google announced Gemini 3.5 Pro at I/O on May 19 and still hadn't shipped it three weeks later. What is your org's policy in {domain} for planning around announced-but-unshipped frontier models &mdash; wait for GA, build on the prior generation, or hedge across both? Pick one and defend the trade-offs.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry"
+                 data-id="2026-06-07-chatgpt-dreaming-memory"
+                 data-category="pm-tools"
+                 data-published="2026-06-04"
+                 data-tags="openai,chatgpt,memory,personalization,privacy,product-design">
+          <div class="head">
+            <h6 class="headline">OpenAI rebuilds ChatGPT's memory with &ldquo;Dreaming&rdquo;: automatic updates and 2x capacity for paid users</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-04">Published June 4, 2026</time></p>
+          <p class="summary">On June 4, OpenAI announced a rebuilt memory system &mdash; internally labelled Dreaming V3 &mdash; that updates ChatGPT's memory automatically, tracking the details it judges most important instead of waiting for users to save them, and doubles memory capacity for Plus and Pro users. OpenAI says it cut the compute needed to serve the feature by roughly 5x, which makes a rollout to Free and Go users feasible over the coming weeks. The work targets the staleness, correctness, and scalability problems that surface when memory is applied across hundreds of millions of users and multi-year histories.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Automatic, persistent memory changes the default contract between a product and its user &mdash; the system now decides what's worth remembering about you. That's a design and trust problem as much as a model upgrade, and it's a pattern you'll soon be asked to design into your own products.</p>
+          <p class="source"><a href="https://9to5mac.com/2026/06/04/openai-says-chatgpts-memory-feature-is-getting-smarter-and-coming-to-free-users/" target="_blank" rel="noopener">Source &mdash; 9to5Mac</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When the AI in your {focus} tooling remembers across sessions without being told, you have to design for what it has silently retained &mdash; every screen now carries invisible state behind it.</p>
+              <p class="impact-variant" data-variant="design-lead">Persistent memory means your team can't treat each AI interaction as stateless in {domain}; review has to account for accumulated context that users can't see.</p>
+              <p class="impact-variant" data-variant="strategist">Automatic memory makes personalization a default expectation in {domain}; the org question becomes governance &mdash; what the product remembers, for how long, and who can audit it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are auditing their own products for places a &ldquo;remembers automatically&rdquo; feature would help versus quietly creep users out, and sketching the consent affordances.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are pulling legal and privacy into memory-feature conversations early, because automatic retention turns a UX choice into a compliance one.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching OpenAI's 5x compute cut as the real story &mdash; cheaper memory is what makes persistent personalization a baseline rather than a premium.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Memory reshapes interaction design in {focus} &mdash; you're designing a relationship with state, not a series of independent sessions &mdash; within the same screens-and-flows craft.</p>
+              <p class="impact-variant" data-variant="design-lead">For teams this hardens an existing direction (personalization) rather than inventing a new one; the discipline that changes is how you handle invisible accumulated state.</p>
+              <p class="impact-variant" data-variant="strategist">Persistent memory in {domain} is the maturing of personalization, not a brand-new paradigm &mdash; but the org that handles &ldquo;what to forget&rdquo; well will out-trust competitors.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The hard {focus} question shifts from &ldquo;what does the user see&rdquo; to &ldquo;what does the product know, and should it admit it&rdquo; &mdash; surfacing memory becomes a first-class design problem.</p>
+              <p class="impact-variant" data-variant="design-lead">When memory is automatic, the team's product decisions center on forgetting and correction flows as much as capture &mdash; budget design time for the unwind path.</p>
+              <p class="impact-variant" data-variant="strategist">Automatic memory commoditizes recall in {domain}; the durable advantage is judgment about restraint &mdash; what a trustworthy product chooses not to remember.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Open ChatGPT's memory settings (or your own product's equivalent). List every piece of information you'd be uncomfortable having an AI silently retain about you. Then, for your own {focus} product, design the single affordance that would make automatic memory feel trustworthy rather than creepy &mdash; sketch it and write two sentences on why it works. The sketch plus rationale is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 30-minute working session with privacy or legal (or write the brief for one): if your {domain} product adopted automatic, persistent memory, what does it retain, for how long, and how does a user see and correct it? Produce a one-page memory policy with the three hardest edge cases named explicitly.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: OpenAI cut memory-serving compute roughly 5x and is making persistent memory a default, not a premium. What does it mean for {domain} when &ldquo;the product remembers you&rdquo; becomes table stakes &mdash; where do you match it and where do you deliberately remember less as a trust play? Recommend one position with trade-offs.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-06-07-claude-code-version-governance"
+                 data-category="coding-agents"
+                 data-published="2026-06-04"
+                 data-tags="claude-code,agents,governance,plugins,managed-settings,design-ops">
+          <div class="head">
+            <h6 class="headline">Claude Code adds version-pinning managed settings and a /plugin list command as agent governance tightens</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-04">Published June 4, 2026</time></p>
+          <p class="summary">Claude Code's 2.1.163 release on June 4 (with 2.1.165 following June 5 as bug fixes) added <code>requiredMinimumVersion</code> and <code>requiredMaximumVersion</code> managed settings: the tool now refuses to start if its version falls outside an org-approved range and points the user to an approved build. The same release added a <code>/plugin list</code> command with enabled/disabled filters and a &ldquo;c to copy&rdquo; shortcut for copying raw markdown answers. Each change is small, but together they point at organizations needing to control and inventory the agents their people run.</p>
+          <p class="why"><strong>Why this matters for you:</strong> As design and product teams adopt coding and design agents, the governance layer &mdash; which versions, which plugins, which permissions &mdash; becomes part of the operating model. This is the unglamorous infrastructure that decides whether agents are safe to standardize a team on.</p>
+          <p class="source"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Source &mdash; Claude Code changelog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Version-pinning won't touch your {focus} work directly, but it signals that the agents you lean on are becoming managed infrastructure &mdash; expect less freedom to run whatever build you like.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team uses Claude Code or similar in {domain}, you now have the controls to standardize versions and inventory plugins &mdash; which means you're now also responsible for doing it.</p>
+              <p class="impact-variant" data-variant="strategist">Agent version and plugin governance in {domain} is becoming an IT and security concern, which pulls design-tool decisions into procurement and compliance review.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designers using coding agents are starting to hit org-managed restrictions on which versions and plugins they can run, the same way they did with SaaS tools.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are building lightweight plugin allowlists so the team's agents share a known, reviewable set of capabilities rather than a free-for-all.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are noting that governance features are how vendors signal &ldquo;enterprise-ready,&rdquo; and pricing the operational cost of managing them at scale.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This reshapes the craft quietly: the agent in your {focus} loop becomes a governed dependency, like a build tool, not a personal toy.</p>
+              <p class="impact-variant" data-variant="design-lead">For teams, agent governance is the same maturation IDEs and CI went through &mdash; versioned, inventoried, locked down &mdash; a hardening of practice, not a reframe.</p>
+              <p class="impact-variant" data-variant="strategist">In {domain} this is steady enterprise plumbing: necessary, unglamorous, and a prerequisite for trusting agents with real work.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The lesson for your own {focus} product: any agent or AI capability you ship will eventually need version and capability controls customers can audit.</p>
+              <p class="impact-variant" data-variant="design-lead">When agents are governed dependencies, the team's roadmap has to include the admin surfaces &mdash; allowlists, version pins, audit logs &mdash; not just the magic.</p>
+              <p class="impact-variant" data-variant="strategist">Governance is becoming a feature, not a checkbox, in {domain}; the AI products that win enterprise will be the ones that are easiest to control.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List every AI agent or AI-powered tool in your current {focus} workflow. For each, note whether you control which version you run and whether your org could lock it down without breaking your work. Write a short note on the one dependency that would hurt most if it were suddenly version-pinned or restricted &mdash; that's your fragility map.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft a one-page agent governance policy for your team in {domain}: which coding and design agents are approved, who decides on plugins, and how you'll handle version updates. Name the criteria, not just the current list, so the next agent classifies itself. Circulate it before your next team sync.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo for security and product leadership: as your teams adopt design and coding agents, what governance does {domain} need &mdash; version control, plugin allowlists, audit logs &mdash; and what's the cost of not having it? Recommend a specific level of investment and name who owns it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="ux-research">
+        <h5 class="category-label">UX research</h5>
+
+        <article class="entry"
+                 data-id="2026-06-07-ai-design-quality-debate"
+                 data-category="ux-research"
+                 data-published="2026-06-07"
+                 data-tags="ai,design-quality,craft,judgement,critique,discourse">
+          <div class="head">
+            <h6 class="headline">Designers push back on AI output quality: the &ldquo;2&ndash;7 problem&rdquo; and &ldquo;design is the work&rdquo; arguments gain traction</h6>
+            <span class="badge ux-research">UX research</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-07">Published June 7, 2026</time></p>
+          <p class="summary">A cluster of essays circulating this week argues that AI accelerates design execution but not design judgment. Anton Sten's &ldquo;The 2&ndash;7 problem&rdquo; holds that AI output lands between 2 and 7 on a 1&ndash;10 quality scale &mdash; fine for most projects, but reaching a 9 still requires the messy, ugly iteration AI is bad at. Jake Albaugh's &ldquo;Design is the work&rdquo; argues design is the process, not the artifact, and that AI multiplies intent &mdash; so unclear intent, multiplied, is still nothing. Nathan Beck's &ldquo;The death of design&rdquo; contends prompt interfaces are poor affordances and AI output tends toward the uninspired average, leaving critical judgment as the durable skill. The three were curated together in Stephanie Walter's Pixels of the Week.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the clearest articulation yet of where your value sits in an AI workflow: not in producing mockups, but in defining intent, iterating past &ldquo;good enough,&rdquo; and pushing back. It's a useful frame to defend your role &mdash; and to avoid being treated as just a mockup machine.</p>
+          <p class="source"><a href="https://stephaniewalter.design/blog/pixels-of-the-week-june-7-2026/" target="_blank" rel="noopener">Source &mdash; Stephanie Walter, Pixels of the Week</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The 2&ndash;7 frame gives you a concrete checkpoint for {focus}: use AI to reach a fast 6, then spend your effort on the messy iteration from 7 to 9 that it can't do.</p>
+              <p class="impact-variant" data-variant="design-lead">&ldquo;Design is the work&rdquo; reframes what your team's process protects &mdash; clarity of intent before execution &mdash; so review should police the brief in {domain}, not just the pixels.</p>
+              <p class="impact-variant" data-variant="strategist">If AI output caps around a 7 in {domain}, the org's quality bar becomes a deliberate choice; &ldquo;good enough&rdquo; is now a strategy decision, not a default.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are using AI for first-pass exploration and divergence, then deliberately setting it aside to do the slow iteration themselves where quality actually lives.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are coaching teams to spend less time on AI-generatable production and more on framing and critique &mdash; the parts that move work from 6 to 9.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are using these essays as ammunition against &ldquo;replace designers with AI&rdquo; pressure, reframing designers as the intent-and-judgment layer, not mockup labor.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This is a reframe, not a tool tip: it relocates your value in {focus} from artifact to judgment, which changes what you practice and what you show.</p>
+              <p class="impact-variant" data-variant="design-lead">For teams it challenges the existing frame that output volume equals progress &mdash; the new frame measures clarity of intent and depth of iteration instead.</p>
+              <p class="impact-variant" data-variant="strategist">In {domain} this reframes the AI-versus-designer debate entirely: the question isn't whether AI makes mockups (it does) but whether your org can still do the messy 7-to-9 work.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Applied to product, the {focus} lesson is that AI-generated features cluster around the average &mdash; the differentiated, surprising work still needs a human pushing past it.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams that ship only AI-speed output risk a portfolio of competent 6s; budget the iteration time that separates a product from its commodity competitors.</p>
+              <p class="impact-variant" data-variant="strategist">If everyone's AI produces 6s in {domain}, the durable advantage is the organizational willingness to do the unglamorous iteration to a 9 &mdash; a culture bet, not a tooling one.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,divergent-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Generate an AI first draft of a real {focus} screen or flow. Rate it honestly on the 1&ndash;10 scale. Then do the messy, ugly iteration by hand to push it from its 6-ish toward a 9, keeping notes on every change AI wouldn't have made on its own. Write a short critique of what specifically human judgment added. The annotated before/after is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="advocacy,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page argument for your team or skip-level using the &ldquo;design is the work&rdquo; and 2&ndash;7 framing: where should your team in {domain} deliberately spend human iteration, and where is AI-speed &ldquo;good enough&rdquo; acceptable? Make it a usable decision rule, not a manifesto, and bring it to your next planning conversation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-paragraph memo answering the question these essays raise for leadership: if AI reliably produces 6s, what is your org's quality strategy in {domain} &mdash; compete on speed at 6, or invest in the iteration that reaches 9? Pick one explicitly, name the cost, and identify which products warrant which bar.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-06-04">
       <h4 class="day">Thursday, June 4 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="pm-tools">
