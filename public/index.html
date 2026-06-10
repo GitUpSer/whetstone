@@ -1127,7 +1127,332 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-08">
+    <section class="day-section" id="today" data-date="2026-06-09">
+      <h4 class="day">Tuesday, June 9 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-06-09-claude-fable-5-public"
+                 data-category="models"
+                 data-published="2026-06-09"
+                 data-tags="anthropic,claude,fable,mythos,guardrails,pricing">
+          <div class="head">
+            <h6 class="headline">Anthropic ships Claude Fable 5, its first Mythos-class model the public can use &mdash; with hard guardrails and double the price</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-09">Published June 9, 2026</time></p>
+          <p class="summary">On June 9 Anthropic launched Claude Fable 5, the first publicly available version of its frontier Mythos model, through the Claude API and consumption-based Enterprise plans. In high-risk areas &mdash; cybersecurity, biology, chemistry, distillation &mdash; the model blocks responses and falls back to Opus 4.8; Anthropic says at least 95% of sessions run entirely on Fable. Pricing is $10 per million input and $50 per million output tokens, double Opus 4.8. It's free in Pro, Max, Team, and Enterprise plans through June 22, then moves to usage credits on June 23. A new Mythos 5 ships to already-approved orgs, and all Fable/Mythos traffic now carries a mandatory 30-day retention even for zero-retention customers. Third-party testers Genspark (best on UI design and game coding) and Base44 (&ldquo;one-shotting full apps&rdquo;) flagged its build quality.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A model that testers rank best-in-class at UI design and one-shotting whole apps, but costs 2x and can silently downgrade or refuse, changes the cost-versus-quality math of every AI feature you spec.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When a model can one-shot a working {focus} screen, your hands-on job shifts from producing the first draft to judging and correcting it &mdash; the artefact you make is increasingly a critique, not a canvas.</p>
+              <p class="impact-variant" data-variant="design-lead">You'll have to decide where on your team's {domain} pipeline a 2x-price, top-quality model earns its keep, and write that rule down so designers aren't each guessing per task.</p>
+              <p class="impact-variant" data-variant="strategist">A premium model with silent guardrail fallbacks and forced retention turns &ldquo;which model&rdquo; into a procurement and risk decision, not just a quality one &mdash; plan {domain} around that constraint.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are quietly using top models to generate first-pass UI then spending their real time editing taste back in, because the model nails structure but misses nuance.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to budget AI spend per project and ask &ldquo;does this task actually need the expensive model&rdquo; in spec reviews.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading mandatory-retention-as-safety as a precedent and weighing it against enterprise data commitments before standardizing on a frontier model.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">A model that one-shots {focus} apps doesn't replace design judgement &mdash; it moves where you spend it, from making to discerning, which is a real shift in the day-to-day craft.</p>
+              <p class="impact-variant" data-variant="design-lead">For team process this reshapes review: the bottleneck becomes evaluating model output at speed, so leads need a faster, sharper critique ritual.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level it reshapes build-vs-generate economics for {domain}, but it doesn't yet upend who owns the product &mdash; the frame holds, the costs and speed change.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Per-output cost becomes a design variable: a flow that calls a $50/M model on every keystroke is a different product than one that calls it once, and that's now your concern.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams will start treating model choice as a product decision with its own owner, not an engineering default buried in config.</p>
+              <p class="impact-variant" data-variant="strategist">Premium-model economics push {domain} roadmaps toward features where autonomy clearly pays for itself, and away from sprinkling AI everywhere.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take a {focus} flow you own and have a top-tier model one-shot it from a single prompt. Then write a critique of exactly where its taste, hierarchy, or edge-case handling fails. The critique &mdash; not the generated screen &mdash; is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map your team's {domain} pipeline and mark every step where a 2x-price, best-quality model is worth it versus where a cheaper model wins. Write the one-page rule your designers will actually follow.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo deciding whether to adopt a premium model whose guardrails can silently downgrade answers and whose traffic carries mandatory 30-day retention. State the trade-off and a clear recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-06-08-shortcuts-ai-workflows"
+                 data-category="generative-ui"
+                 data-published="2026-06-08"
+                 data-tags="apple,shortcuts,automation,natural-language,ios27,no-code">
+          <div class="head">
+            <h6 class="headline">Apple rebuilds Shortcuts around natural language: describe an automation and Apple Intelligence assembles the steps</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-08">Published June 8, 2026</time></p>
+          <p class="summary">At WWDC on June 8, Apple showed an AI-upgraded Shortcuts in iOS 27 where users describe a workflow in plain language and Apple Intelligence figures out the required app actions and variables. The demo example &mdash; &ldquo;notify my partner with an ETA when I leave work&rdquo; &mdash; auto-assembles a location trigger, an Apple Maps ETA calculation, and a Messages alert, and users can edit it later by describing the change. Apple pitched it as removing the need for non-technical users to hunt for the right actions or variables. It ships with iOS 27 this fall.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is generative UI for logic, not pixels &mdash; the building blocks of an automation get composed by a model from plain intent, which is exactly the interaction pattern you may be asked to design next.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/06/08/apple-will-let-you-build-workflows-using-ai-in-its-new-shortcuts-app/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If users reach {focus} by describing it, you're no longer designing every screen &mdash; you're designing the prompt affordances, the preview of what the model assembled, and the repair path when it guesses wrong.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared pattern for &ldquo;describe it&rdquo; surfaces across {domain} so each generated flow stays legible and editable, not a black box.</p>
+              <p class="impact-variant" data-variant="strategist">Natural-language assembly can collapse a configuration-heavy product into a prompt box, so plan where {domain} keeps a visible structure users trust.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are prototyping &ldquo;type what you want&rdquo; entry points and discovering the hard part is the confirmation and edit UI, not the prompt.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are auditing which of their product's setup flows are really just natural-language candidates in disguise.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching Apple normalize prompt-to-workflow for mainstream users and asking what that does to their own onboarding moat.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing the intent-to-steps loop is a real change to {focus} work, but it sits inside the existing automation frame rather than throwing it out.</p>
+              <p class="impact-variant" data-variant="design-lead">For team process this reshapes where effort goes &mdash; from building action libraries to designing trust, preview, and error states around generated logic.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level it reshapes who your power-user features serve, opening {domain} automation to people who'd never touch a node editor.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The unit of design becomes the gap between what someone typed and what the model built &mdash; your job is making that gap visible and fixable.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams will need to think about failure modes of generated workflows as a first-class product surface, not an edge case.</p>
+              <p class="impact-variant" data-variant="strategist">Prompt-built automation shifts {domain} value from feature breadth toward how trustworthy and correctable the generated result is.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Take a multi-step {domain} flow in your product and write the single natural-language prompt a user would type to build it. Then list what the model would likely get wrong and what you'd still have to design to catch it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a team exercise mapping which of your product's flows could become &ldquo;describe it&rdquo; instead of &ldquo;build it,&rdquo; and what new error and confirmation states each one introduces. Produce the shortlist and the risks.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo on whether natural-language workflow-building commoditizes your product's configuration UI, and name the one place defensible value moves to instead.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-09-mangos-faang"
+                 data-category="industry"
+                 data-published="2026-06-09"
+                 data-tags="ipo,big-tech,mangos,faang,anthropic,openai">
+          <div class="head">
+            <h6 class="headline">FAANG gives way to &ldquo;MANGOS&rdquo; as AI-infrastructure players line up for record IPOs</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-09">Published June 9, 2026</time></p>
+          <p class="summary">With SpaceX, Anthropic, and OpenAI all moving toward potentially record-setting IPOs in summer 2026, a viral acronym is replacing FAANG: MANGOS &mdash; Meta, Anthropic, Nvidia, Google, OpenAI, SpaceX. Coined by developers on X and amplified by TechCrunch, it captures a power shift from consumer-internet incumbents (Netflix, Amazon's e-commerce) toward AI and agentic-infrastructure firms. TechCrunch is explicit that it's half-joke: Amazon and Netflix aren't dead, but the industry's center of gravity is moving. The label itself is froth; the underlying shift &mdash; AI labs and compute providers becoming the public-market platforms everyone builds on &mdash; is the real signal.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The companies whose models and platforms you design on top of are becoming the market's center of gravity, which sets the defaults, pricing, and constraints your product inherits whether you chose them or not.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The {focus} you ship inherits a model's tone, latency, and refusals from whichever platform you're on &mdash; worth knowing exactly which defaults you didn't choose.</p>
+              <p class="impact-variant" data-variant="design-lead">As platform power concentrates, your team's {domain} decisions get more tightly coupled to one vendor's roadmap, so surface that dependency in planning.</p>
+              <p class="impact-variant" data-variant="strategist">When the platforms become public-market giants, their pricing and policy shifts become your strategic risk &mdash; design {domain} bets with that leverage in mind.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs mostly aren't thinking about this yet &mdash; they pick whatever model the company already pays for and move on.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are beginning to ask which provider their product is locked to and what a price change would actually cost them.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are tracking the IPO wave as a signal that AI-infra leverage over downstream products is about to harden.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Ignore the cute acronym; the reframe is that the entities you build on top of for {focus} are becoming dominant platforms, which changes who you're really designing for.</p>
+              <p class="impact-variant" data-variant="design-lead">For team process the reframe is treating platform dependency as a standing risk to manage, the way you'd manage a critical supplier.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a genuine reframe of where value and leverage sit in {domain} &mdash; the meme is froth, the consolidation is structural.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Product choices quietly carry a platform's constraints into your UI, so it pays to know which ones are yours and which are inherited.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams should weigh portability &mdash; how locked your {domain} is to one provider &mdash; as a real product attribute, not a back-office concern.</p>
+              <p class="impact-variant" data-variant="strategist">Concentrated platform power pushes {domain} strategy toward owning the layer above the model: workflow, data, and taste.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,judgement" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List the three platform defaults &mdash; model, pricing tier, guardrails &mdash; your current {focus} work inherits from one &ldquo;MANGOS&rdquo; company, plus one thing you'd design differently if you could pick the platform. Write it as a short note to your team.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="strategy,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a short brief for your team on platform-dependency risk: which AI provider your {domain} is locked to, and what a 2x price hike or policy change would do to your product and timeline.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo separating which of the MANGOS shifts actually changes your {domain} roadmap from which is press-cycle froth, and commit to one concrete bet.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-06-07-tokenpocalypse-costs"
+                 data-category="industry"
+                 data-published="2026-06-07"
+                 data-tags="ai-costs,tokens,pricing,governance,copilot,enterprise">
+          <div class="head">
+            <h6 class="headline">The &ldquo;Tokenpocalypse&rdquo;: as AI labs eye IPOs, per-token pricing and usage caps start reshaping how teams build</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-07">Published June 7, 2026</time></p>
+          <p class="summary">On a June 7 TechCrunch Equity podcast, the hosts unpacked the &ldquo;Tokenpocalypse&rdquo; &mdash; a term developers coined after GitHub Copilot moved from flat-rate to token-based billing. Their argument: the AI ecosystem is heavily subsidized by investor money, so as Anthropic, OpenAI, and others head for IPOs and face profitability questions, more cost gets passed to customers through price hikes and usage limits. They cite Uber blowing through its AI budget in four months and then capping employee spend. Claude Fable 5's $10/$50-per-million pricing the same week underscores the direction. This is analysis and opinion, not a single announcement.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Per-token economics turn every generative feature you design into a visible line item, so your design choices now carry a direct cost that product and finance will scrutinize.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/06/07/is-this-the-dawn-of-the-tokenpocalypse/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing a {focus} interaction now means asking how many model calls it triggers, because a chatty flow is literally more expensive than a lean one.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared way to estimate the token cost of a {domain} feature during design, not after the bill arrives.</p>
+              <p class="impact-variant" data-variant="strategist">Cost-per-interaction becomes a design constraint you plan {domain} around, the way load time once was.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are quietly redesigning AI features to call the model less &mdash; batching, caching, defaulting to cheaper models &mdash; once they see the usage numbers.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are adding cost questions to design reviews and pushing back on &ldquo;AI everywhere&rdquo; specs.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are rewriting pricing and packaging so heavy AI features are metered or gated rather than bundled for free.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Cost-awareness doesn't change what design is, but it changes how you design {focus} &mdash; restraint and efficiency become craft virtues again.</p>
+              <p class="impact-variant" data-variant="design-lead">For team process this reshapes prioritization: the cheapest acceptable AI experience often beats the most impressive one.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it reshapes {domain} economics within the existing model &mdash; same products, newly disciplined about where intelligence is spent.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Every AI feature you propose now needs an implicit cost case, which sharpens what's actually worth a model call.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams will fold unit economics into product decisions earlier, killing AI features that can't justify their token bill.</p>
+              <p class="impact-variant" data-variant="strategist">Runaway-cost risk pushes {domain} toward AI where the value is legible and metered, and away from invisible always-on inference.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one AI feature you've designed, estimate its rough per-interaction token cost, then redesign it to roughly halve that cost without gutting the experience. Write down exactly what you traded.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Add a &ldquo;token cost&rdquo; row to your team's {domain} feature-spec template and run one real spec through it. Note what it changes about how you'd prioritize that feature.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a memo on how per-token pricing changes your product's pricing and packaging, and which AI features in {domain} should be gated, metered, or cut. End with one recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-06-08">
       <h4 class="day">Monday, June 8 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="industry">
