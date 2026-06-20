@@ -1127,7 +1127,417 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-19">
+    <section class="day-section" id="today" data-date="2026-06-20">
+      <h4 class="day">Saturday, June 20 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-06-18-gemini-flash-default-everywhere"
+                 data-category="models"
+                 data-published="2026-06-18"
+                 data-tags="google,gemini,flash,distribution,pricing,consumer-ai">
+          <div class="head">
+            <h6 class="headline">Google makes Gemini 2.5 Flash the default across every product</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-18">Published June 18, 2026</time></p>
+          <p class="summary">On June 18 Google set Gemini 2.5 Flash as the default model behind all its consumer surfaces &mdash; the Gemini app, Search, Workspace (Gmail, Docs, Sheets), and the Android assistant. Flash runs at roughly 284 tokens/sec with a 1M-token window at $1.50/$9 per million tokens, paired with a $4.99/month AI Plus tier that undercuts ChatGPT Plus. Google also pushed a quieter quality update to Gemini 2.5 Pro for paying users. The bet is explicit: win consumer AI on distribution and price, not benchmark wins.</p>
+          <p class="why"><strong>Why this matters for you:</strong> It's a clear signal that &ldquo;good enough, fast, and everywhere&rdquo; beats &ldquo;smartest&rdquo; for most product surfaces &mdash; a framing you'll have to defend or push back on when you pick the model behind a feature.</p>
+          <p class="source"><a href="https://medium.com/adi-insights-innovations-collective/ai-update-friday-june-19-2026-404d0b767ca7" target="_blank" rel="noopener">Source &mdash; Adi Insights (DevQuill)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When you design a feature on top of Gemini, the default is now a fast, cheap model rather than the frontier one &mdash; your {focus} flows have to feel good at Flash latency and Flash judgement, not Pro's.</p>
+              <p class="impact-variant" data-variant="design-lead">Tell your team to prototype against the default tier users actually hit; a {domain} flow that only shines on the premium model is a flow most users will never experience.</p>
+              <p class="impact-variant" data-variant="strategist">Google just made &ldquo;model tier&rdquo; a positioning lever; the org question is whether your differentiation rides on raw capability or on the experience you build around a commodity model.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are quietly re-testing prompts and flows against cheaper default models, finding where quality actually drops versus where it doesn't matter.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are setting per-feature model budgets and asking designers to justify when a premium model is worth the cost.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the $4.99 price floor and recalculating what &ldquo;premium AI&rdquo; can still charge for.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for a cheap, fast default changes your material constraints the way designing for mobile-data limits once did &mdash; same job, different envelope.</p>
+              <p class="impact-variant" data-variant="design-lead">For your team it shifts the planning question from &ldquo;which model is best&rdquo; to &ldquo;which model is good enough where,&rdquo; a real process change.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a margin and positioning shift, not a new paradigm &mdash; the frame of selling software on top of models holds.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">It pushes you to treat latency and cost as first-class design constraints, not afterthoughts you discover at launch.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team can plan features knowing the default cost curve, which makes &ldquo;ship AI everywhere&rdquo; financially honest for {domain}.</p>
+              <p class="impact-variant" data-variant="strategist">Cheap defaults expand where AI is viable but compress what you can charge &mdash; the strategy is choosing where premium-model spend actually changes user outcomes.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} feature, run it against both a Flash-class and a Pro-class model, and write a side-by-side critique of where the cheaper model's output is actually worse for the user &mdash; not just different. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft a one-page &ldquo;model tier policy&rdquo; for your team: for {domain}, which features must use the premium tier and why, and which default to cheap. One sentence of justification per feature.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,differentiation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a memo arguing whether your product's value survives if the underlying model becomes a $4.99 commodity. Name three things that become commodity and one thing only your product's judgement adds.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="video-gen">
+        <h5 class="category-label">Video gen</h5>
+
+        <article class="entry"
+                 data-id="2026-06-18-gemini-omni-flash-rollout"
+                 data-category="video-gen"
+                 data-published="2026-06-18"
+                 data-tags="google,gemini,omni-flash,multimodal,synthid,video-editing">
+          <div class="head">
+            <h6 class="headline">Google rolls out Gemini Omni Flash video generation to its consumer apps</h6>
+            <span class="badge video-gen">Video gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-18">Published June 18, 2026</time></p>
+          <p class="summary">Google began pushing Gemini Omni Flash &mdash; its multimodal model that generates and edits video from any mix of image, audio, video, and text &mdash; into the Gemini app, Google Flow, and YouTube Shorts. Generation is conversational: produce a clip, then use text prompts to swap camera angles, change lighting, or fix lip-sync. Flash-tier output is capped at 10-second 720p clips, and everything carries SynthID provenance watermarking. The developer API isn't live yet; Google says &ldquo;coming weeks.&rdquo;</p>
+          <p class="why"><strong>Why this matters for you:</strong> Conversational, physics-aware video editing inside consumer apps means motion stops being a specialist deliverable and becomes something you can direct in plain language &mdash; and something users will generate themselves inside your product.</p>
+          <p class="source"><a href="https://thenextweb.com/news/google-gemini-omni-flash-video-model-io-2026" target="_blank" rel="noopener">Source &mdash; The Next Web</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">For your {focus} work this makes short directed video something you spec and iterate in language rather than storyboard-and-wait &mdash; you describe the edit instead of handing it off.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team ships any motion for {domain}, conversational editing collapses the back-and-forth with video specialists for routine clips; decide what still needs a human director.</p>
+              <p class="impact-variant" data-variant="strategist">With provenance baked in via SynthID, the org question shifts from &ldquo;can we make video&rdquo; to &ldquo;where does generated video belong, and how do we disclose it.&rdquo;</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are using Omni-class tools for quick concept clips and prototype motion, not final brand work, because 10-second 720p caps real use.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are piloting it for internal comms and social while watching whether conversational edits hold continuity across a clip.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are tracking SynthID-as-default and what mandatory provenance does to brand and trust positioning.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Directing video by conversation changes how you make motion, but the goal &mdash; the right clip for the moment &mdash; is unchanged.</p>
+              <p class="impact-variant" data-variant="design-lead">For your team it folds basic video direction into the product-design skill set rather than keeping it a separate discipline.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it commoditizes short-form video production &mdash; a cost and speed shift, not a reinvention of why video matters.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">It nudges you to treat user-generated video as a real input to design, not an edge case &mdash; empty states and prompts now have to anticipate it.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team can test video-in-product hypotheses faster, tightening the loop on whether motion helps {focus} or just decorates it.</p>
+              <p class="impact-variant" data-variant="strategist">Cheap conversational video lowers the bar to putting generated motion everywhere; the risk is provenance and trust, so set disclosure rules before the volume arrives.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Generate a 10-second product clip with a conversational video tool, then write a critique of where the physics or lip-sync broke and whether a user would notice. End with a ship-quality / not-yet decision and the reason.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map where generated video could enter your {domain} product &mdash; onboarding, empty states, social &mdash; and mark which need provenance disclosure. Output the one-paragraph policy.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a memo on whether user-generated video belongs in your product, weighing the engagement upside against the trust cost of synthetic media, and end with a clear recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+
+        <article class="entry"
+                 data-id="2026-06-20-autojack-agent-rce"
+                 data-category="research"
+                 data-published="2026-06-20"
+                 data-tags="microsoft,security,mcp,agents,autojack,rce">
+          <div class="head">
+            <h6 class="headline">Microsoft's AutoJack research turns web-browsing AI agents into remote-code-execution vectors</h6>
+            <span class="badge research">Research</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-20">Published June 20, 2026</time></p>
+          <p class="summary">Microsoft published security research, dubbed AutoJack, showing that a malicious web page rendered by an AI browsing agent can reach local MCP services and execute arbitrary processes on the host machine. The finding: connecting agents to local tools and system APIs without strict isolation effectively exposes a hidden remote-code-execution surface. Microsoft's framing is that agents wired to local tools should be treated as high-privilege services, not harmless chatbots. (Specifics are from vendor research and secondary reporting, not yet independently verified.)</p>
+          <p class="why"><strong>Why this matters for you:</strong> As you design agentic features that browse and call tools via MCP, this turns a convenience pattern into a security-design problem &mdash; the threat model becomes part of the UX, not something engineering bolts on later.</p>
+          <p class="source"><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">Source &mdash; AI Agent Store</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">For your own agentic {focus} prototypes, the flows you sketch &mdash; &ldquo;let the agent browse, then act&rdquo; &mdash; carry a real attack surface you have to design around, not assume away.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team ships agent features for {domain}, security review of tool access has to move upstream into design, not stay a pre-launch gate.</p>
+              <p class="impact-variant" data-variant="strategist">It reframes agent permissions as a product decision; the org has to decide how much local capability an agent gets and who owns that risk.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs building agent demos are starting to scope tool access tightly and design explicit consent moments instead of silent tool calls.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are adding agent-specific threat modeling to design reviews and pairing designers with security earlier.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating &ldquo;trustworthy agent&rdquo; as a positioning axis, not just a compliance checkbox.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">You can't design an agent as a friendly chat surface; the right frame is &ldquo;a process with system access,&rdquo; and that changes every permission and consent decision.</p>
+              <p class="impact-variant" data-variant="design-lead">For your team it means the old chatbot-UX frame is the wrong frame &mdash; agent design and security design are now the same conversation.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it forces agents into the high-privilege-software risk category &mdash; a structural reclassification, not a tweak.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">It pushes you to make tool access and consent visible in the interface, designing the security model as part of the product.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team has to plan agent features assuming hostile inputs, which changes scope and timeline for {domain} agent work.</p>
+              <p class="impact-variant" data-variant="strategist">The upside is that demonstrable agent safety becomes a differentiator as buyers get burned by ungoverned agents.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one agentic flow you'd design and map every point where the agent touches an external page or a local tool. Write a short critique of where a malicious input could ride in, and the consent moment you'd add.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-minute structured conversation with an engineer or security partner about your {domain} agent's tool permissions. Output a one-paragraph &ldquo;least-privilege by default&rdquo; principle for the team.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a memo arguing whether &ldquo;provably safe agents&rdquo; is a differentiation angle for your product, weighing agent capability against trust, and end with a recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-06-20-estonia-ai-id-codes"
+                 data-category="policy"
+                 data-published="2026-06-20"
+                 data-tags="estonia,governance,agents,identity,eu,accountability">
+          <div class="head">
+            <h6 class="headline">Estonia assigns &ldquo;AI ID codes&rdquo; to govern autonomous agents</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-20">Published June 20, 2026</time></p>
+          <p class="summary">Estonia introduced &ldquo;AI ID codes&rdquo; for autonomous AI agents &mdash; a registry-style system that gives each agent an identity and links it to a responsible human or company operator. The government frames it as letting organizations automate more work without granting agents blanket access to data, while keeping a clear record of who is accountable when an agent acts. It's an early, concrete answer to the &ldquo;who is responsible for the agent&rdquo; question.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Agent accountability is becoming a real design constraint &mdash; if every agent needs an identity and an owner, that surfaces in onboarding, permissions, and the audit trails you design around agentic features.</p>
+          <p class="source"><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">Source &mdash; AI Agent Store</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">For your {focus} work this means an agent isn't an anonymous helper &mdash; you may have to design surfaces that show which agent acted and on whose authority.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team builds agent features for {domain}, accountability and audit trails become design requirements, not back-end details.</p>
+              <p class="impact-variant" data-variant="strategist">It signals that agent governance is going regulatory; the org should design for identity and accountability now rather than retrofit it under a future mandate.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are starting to add &ldquo;who did this&rdquo; affordances to agent actions instead of presenting agents as faceless automation.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mapping where their products would need an agent-accountability layer if EU-style rules spread.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading Estonia as a template and pricing in agent-registry compliance for EU markets.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing agent accountability into the interface is new work, but it extends existing patterns &mdash; audit logs, permissions &mdash; rather than replacing them.</p>
+              <p class="impact-variant" data-variant="design-lead">For your team it adds a governance dimension to agent UX that you'll plan around going forward.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a compliance and trust shift; the frame of building agents responsibly is intact, the requirements are just sharper.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">It makes &ldquo;show the user who acted and why&rdquo; a product feature, not a nicety, for any agentic surface.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team has to plan for agent identity and accountability as scope in {domain}, which affects what an MVP can ship.</p>
+              <p class="impact-variant" data-variant="strategist">Early, clear agent-accountability design becomes a market-entry advantage in regulated regions.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Sketch how you'd show &ldquo;which agent did this, on whose authority&rdquo; inside one agentic {focus} flow, and decide where that disclosure lives without cluttering the interface. The annotated sketch is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map where your {domain} product would need an agent-identity / accountability layer, then write the one-paragraph recommendation on what to build before any mandate lands.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a memo on whether building agent accountability ahead of regulation is worth the cost, weighing speed against future-proofing, and end with a clear recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-18-fable-5-restored-restrictions"
+                 data-category="industry"
+                 data-published="2026-06-18"
+                 data-tags="anthropic,fable-5,reliability,access-controls,governance,cloud-ai">
+          <div class="head">
+            <h6 class="headline">Anthropic restores Claude Fable 5 &mdash; but with nationality-based access controls and tighter classifiers</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-18">Published June 18, 2026</time></p>
+          <p class="summary">Anthropic brought Claude Fable 5 back on June 18, ending a six-day government-forced shutdown. The restored model isn't the one that went offline: it adds nationality-based access controls and identity verification in some jurisdictions, tighter safety classifiers that fall back to Opus 4.8 more often, and a mandatory 30-day data-retention policy even for prior zero-retention customers. The covert capability-downgrade for AI-research users was removed, with a commitment to make future restrictions visible. Mythos 5 stays restricted to Project Glasswing. (Developer reports and figures are from secondary reporting, not independently confirmed by Anthropic.)</p>
+          <p class="why"><strong>Why this matters for you:</strong> For anyone building on cloud AI, this is the clearest case yet that your most capable tool can change or vanish overnight for reasons outside your control &mdash; a reliability and trust factor you now have to design and plan around.</p>
+          <p class="source"><a href="https://medium.com/adi-insights-innovations-collective/ai-update-friday-june-19-2026-404d0b767ca7" target="_blank" rel="noopener">Source &mdash; Adi Insights (DevQuill)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">For your {focus} work it's a reminder that the model behind your feature can shift under you &mdash; design flows that degrade gracefully when the model changes or falls back, rather than assuming a fixed capability.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team depends on a specific model for {domain}, build in a fallback plan; single-model dependence is now an operational risk.</p>
+              <p class="impact-variant" data-variant="strategist">It reframes model choice as a continuity-and-governance decision, not just a quality one &mdash; the org needs a position on vendor and jurisdiction risk.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs who got burned are designing model-agnostic flows and testing how features behave on the fallback model.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are documenting which features are pinned to which models and what breaks if one disappears.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reassessing concentration risk and whether multi-model support is now table stakes.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&ldquo;The model is a stable dependency&rdquo; is the wrong frame; treat capability as something that can be revoked, and design accordingly.</p>
+              <p class="impact-variant" data-variant="design-lead">For your team it shifts model selection from a one-time quality pick to an ongoing continuity discipline.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it forces AI dependence into the supply-chain-risk frame, which most product orgs haven't applied to a model before.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">It pushes you to design features that don't quietly break when a model degrades &mdash; visible fallbacks over silent failure.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team has to plan {domain} features with model-substitution in mind, which affects architecture and UX.</p>
+              <p class="impact-variant" data-variant="strategist">Resilience to model change becomes a strategic property of the product, not an afterthought.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} feature that leans on a specific model's capability and write a critique of how it would behave if that model were swapped for a weaker fallback overnight. The failure analysis is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Inventory which of your {domain} features are pinned to a single model and what degrades if it changes. Output a one-paragraph continuity recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a memo treating model dependence as supply-chain risk &mdash; name the single points of failure and recommend whether multi-model support is worth the cost.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-06-19">
       <h4 class="day">Friday, June 19 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="video-gen">
