@@ -1127,7 +1127,411 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-21">
+    <section class="day-section" id="today" data-date="2026-06-25">
+      <h4 class="day">Thursday, June 25 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+
+        <article class="entry"
+                 data-id="2026-06-24-figma-code-layers"
+                 data-category="design-tools"
+                 data-published="2026-06-24"
+                 data-tags="figma,config,code-layers,design-to-code,github">
+          <div class="head">
+            <h6 class="headline">Figma Config 2026: code layers turn any design layer into live, editable code on the canvas</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-24">Published June 24, 2026</time></p>
+          <p class="summary">At Config 2026 (June 23&ndash;25, Moscone Center), Figma introduced &ldquo;code layers&rdquo; &mdash; convert any design layer into an interactive, code-backed element with one click or a prompt. Teams can clone a GitHub-linked repository onto the canvas, extract editable design frames from code, and sync changes back to the repo inside the same multiplayer file. Early access begins in July via figma.com/config-betas. Figma's framing is blunt: &ldquo;code is material for design,&rdquo; which puts it in more direct competition with code-first tools like Cursor.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The design-to-code handoff is where you lose the most fidelity and time. If a layer and its code become the same object, your leverage moves from producing pixel specs to making the judgement calls about structure, state, and interaction that a repo can't infer on its own.</p>
+          <p class="source"><a href="https://www.figma.com/blog/config-2026-recap/" target="_blank" rel="noopener">Source &mdash; Figma Blog (Config 2026 recap) &amp; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You stop drawing a {focus} state and then re-describing it in a handoff doc &mdash; you wire the real behavior on the canvas, so your job becomes deciding what the component actually does, not just how it looks at rest.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's &ldquo;definition of done&rdquo; for a {domain} screen can now include working code, which means you have to decide where the design file ends and the codebase begins before people start syncing changes both ways.</p>
+              <p class="impact-variant" data-variant="strategist">If the canvas and the repo converge, the org question is whether design and engineering still need two separate sources of truth for the same {domain} &mdash; and who owns the merged one.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still hand-specifying interaction in comments; the ones ahead are already prototyping real component logic and treating the visual mock as a byproduct.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are quietly nervous about two-way sync clobbering production code, and are setting rules about which files connect to which branches before they let the team near it.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching whether code-on-canvas actually shrinks the design-eng cycle or just relocates the merge conflict, and holding off on reorg talk until the July beta proves out.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This reshapes the craft: the deliverable stops being a static {focus} artifact and becomes something that runs, so &ldquo;can you spec it&rdquo; gives way to &ldquo;can you build the behavior.&rdquo;</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reshapes how work flows through the team &mdash; review shifts from pixel critique to reviewing structure and state, which most design crits aren't set up to do yet.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a reshape, not a reframe: design and code stay distinct disciplines, but the artifact boundary between them dissolves for {domain} work.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can test a real {focus} interaction before a ticket exists, so you carry more of the &ldquo;does this actually work&rdquo; burden earlier in the process.</p>
+              <p class="impact-variant" data-variant="design-lead">Sprints can compress the design-then-build sequence into one loop, which forces you to rethink how estimation and review map onto a merged artifact.</p>
+              <p class="impact-variant" data-variant="strategist">If prototyping cost drops to near zero, the constraint on shipping {domain} features becomes judgement and prioritization, not production capacity &mdash; plan headcount accordingly.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} component you'd normally hand off as a static spec. Rebuild it as a working interactive prototype (real states, real transitions), then write a 5-line note on the structural decisions a developer could no longer make for you. The note is the artefact &mdash; it shows what judgement moved onto your plate.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Draft a one-page rule of the road for code layers on your team: which files may connect to which branches, who can sync back, and what review a {domain} change needs before it touches the repo. Run it past one engineer for holes. The document is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo answering: if design files and our codebase merge for {domain}, do we still fund two sources of truth? State the trade-off (speed vs. control), pick a side, and name the one metric you'd watch in the July beta to confirm or kill the bet.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-06-24-figma-motion-timeline"
+                 data-category="design-tools"
+                 data-published="2026-06-24"
+                 data-tags="figma,motion,animation,timeline,handoff,export">
+          <div class="head">
+            <h6 class="headline">Figma ships a native Motion timeline with keyframes, presets, and code export</h6>
+            <span class="badge design-tools">Design tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-24">Published June 24, 2026</time></p>
+          <p class="summary">Figma added a built-in Motion tool &mdash; a timeline with keyframes, presets, transitions, and 3D transforms &mdash; so designers can build animation inside Figma instead of jumping to After Effects, Rive, or Principle. Motion exports to CSS, JSON, React, animated SVG, and MP4/WebM/GIF. The Figma agent can also generate a starting animation from a prompt, which you then refine by hand.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Motion is the discipline most often &ldquo;specced in words&rdquo; and rebuilt by engineers from scratch. Owning timing and easing as exportable code removes a translation step &mdash; and removes the excuse for hand-waving on motion craft.</p>
+          <p class="source"><a href="https://www.cmswire.com/digital-experience/figma-launches-code-layers-motion-at-config-2026/" target="_blank" rel="noopener">Source &mdash; CMSWire &amp; Figma Config 2026</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can specify the exact easing and timing of a {focus} transition and export it as code, so &ldquo;make it feel snappy&rdquo; becomes a curve you own rather than a vibe an engineer guesses at.</p>
+              <p class="impact-variant" data-variant="design-lead">Motion stops being a separate tool with a separate file your team forgets to update &mdash; it lives in the same {domain} source, so you can actually review it in crit.</p>
+              <p class="impact-variant" data-variant="strategist">If motion specs become exportable artifacts, your org can finally hold a consistent motion language across {domain} instead of every team reinventing easing.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs still describe motion in a Loom or a comment; the few who use Rive or Lottie are the ones who'll adopt this fastest because they already think in keyframes.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are realizing motion has been an invisible quality gap &mdash; nobody reviewed it because nobody could see it in the file &mdash; and are debating whether to add it to design standards.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists rarely tracked motion at all; the ones paying attention see it as a cheap differentiation lever now that it's no longer locked behind specialist tooling.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping: motion design moves from a niche specialty into baseline expectation for any IC working on {focus}, the way prototyping did a decade ago.</p>
+              <p class="impact-variant" data-variant="design-lead">For leads it reshapes the bar &mdash; &ldquo;we don't do motion&rdquo; stops being defensible when it's one tool away inside files you already own.</p>
+              <p class="impact-variant" data-variant="strategist">Org-wide it's a reshape: motion becomes part of the standard {domain} deliverable, not a line item you outsource to a motion specialist.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can prove a {focus} animation feels right before it's built, catching &ldquo;this is janky&rdquo; in design rather than in QA.</p>
+              <p class="impact-variant" data-variant="design-lead">Motion handoff stops costing a rebuild cycle, so the team's velocity on polished {domain} interactions goes up without adding engineers.</p>
+              <p class="impact-variant" data-variant="strategist">Polish that used to require a specialist now scales across the product, which changes how you weigh &ldquo;quality bar&rdquo; against headcount in {domain} planning.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick a {focus} transition in your product that currently feels off. Rebuild it in Figma Motion with deliberate easing, export the code, then write a short critique of what the AI-generated starting animation got wrong before you fixed it. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 30-minute team conversation on whether motion now belongs in your definition of done for {domain}. Come out with a written decision: in or out, and if in, what three motion checks every review must cover. The decision doc is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List three motion behaviors in {domain} that competitors do generically, then name one motion signature only a team with taste could make recognizably yours. Write the one-paragraph case for investing in it now that the tooling cost is gone.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-06-24-figma-generative-plugins-shaders"
+                 data-category="generative-ui"
+                 data-published="2026-06-24"
+                 data-tags="figma,plugins,shaders,generative,agent,gpu">
+          <div class="head">
+            <h6 class="headline">Figma lets you describe a plugin or a shader and have the agent build it</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-24">Published June 24, 2026</time></p>
+          <p class="summary">Two Config releases collapse the build step for custom tooling. Generative plugins let you create a plugin by describing its behavior, controls, and parameters in plain language &mdash; no plugin API knowledge or local dev environment required. Separately, GPU shaders can now be generated by chatting with the Figma design agent (open beta from June 24, Full seat on a paid plan): you describe the visual effect and the agent writes the shader. Both turn &ldquo;can you code it&rdquo; into &ldquo;can you specify it.&rdquo;</p>
+          <p class="why"><strong>Why this matters for you:</strong> The barrier to custom tooling and rich visual effects used to be whether you (or a developer) could code it. Now it's whether you can describe the behavior precisely. That rewards designers who can articulate exact intent and quietly commoditizes the ones whose edge was knowing the plugin API.</p>
+          <p class="source"><a href="https://thenextweb.com/news/figma-config-code-layers-ai-skills-plugins-animations" target="_blank" rel="noopener">Source &mdash; The Next Web &amp; Figma Config 2026</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When you hit a repetitive {focus} task, you can now describe the tool you wish you had and get it, so your bottleneck becomes how precisely you can state what you actually want.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team can spin up bespoke {domain} tooling without a plugin developer, which means the constraint on automation shifts from engineering time to clear specification.</p>
+              <p class="impact-variant" data-variant="strategist">Custom tooling stops being a budgeted project and becomes an everyday act, which changes what &ldquo;tooling investment&rdquo; even means for {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs still file feature requests and wait; the early adopters are generating throwaway plugins to unblock a single task and discarding them after.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are seeing a flood of one-off generated tools and starting to worry about a sprawl problem &mdash; lots of bespoke {domain} plugins, no shared standard.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reframing &ldquo;build vs buy&rdquo; for internal tooling now that &ldquo;describe it yourself&rdquo; is a third option with near-zero marginal cost.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This is a reframe: the maker relationship flips from &ldquo;I build the tool&rdquo; to &ldquo;I specify the tool,&rdquo; so the prized skill for {focus} becomes precise articulation, not implementation.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead the frame changes &mdash; you're no longer staffing tool-builders, you're cultivating people who can describe a workflow exactly enough to be generated.</p>
+              <p class="impact-variant" data-variant="strategist">At org level the old &ldquo;tooling needs engineers&rdquo; frame is simply wrong now; the question becomes governance of self-generated tools, which is a new problem class.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can prototype a {focus} interaction with a bespoke control panel in minutes, so your exploration space widens to ideas you'd have skipped as too fiddly to mock.</p>
+              <p class="impact-variant" data-variant="design-lead">If anyone can generate a tool, the team's leverage moves to deciding which generated tools are worth keeping and standardizing for {domain}.</p>
+              <p class="impact-variant" data-variant="strategist">Near-free custom tooling means the differentiator in {domain} is taste in what to build, not capacity to build it &mdash; plan for curation, not production.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,divergent-thinking" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Name the most repetitive manual step in your current {focus} workflow. Write the precise spec for a plugin that would kill it &mdash; behavior, inputs, controls, edge cases &mdash; in enough detail that a generator couldn't guess wrong. The spec is the artefact, whether or not you build it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write the team's policy for generated plugins before sprawl sets in: when a one-off is fine, when something gets promoted to a shared {domain} tool, and who reviews it. Circulate it as a short doc. The policy is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List three things generative plugins now make commodity for {domain}, then write one paragraph on the single capability a designer with taste still contributes that no generator can. End with a recommendation on where to stop spending on internal tool-building.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="mcp">
+        <h5 class="category-label">MCP</h5>
+
+        <article class="entry"
+                 data-id="2026-06-24-figma-agent-connectors-skills"
+                 data-category="mcp"
+                 data-published="2026-06-24"
+                 data-tags="figma,agent,connectors,skills,notion,github">
+          <div class="head">
+            <h6 class="headline">Figma's design agent gains reusable skills and connectors to Notion, GitHub, Slack, and Atlassian</h6>
+            <span class="badge mcp">MCP</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-24">Published June 24, 2026</time></p>
+          <p class="summary">Figma's agent now supports &ldquo;skills&rdquo; &mdash; packaged, reusable instructions exposed as slash commands that capture a workflow or convention, built by you, shared by your team, or pulled from the community. It also gains &ldquo;connectors&rdquo; that let the agent read from and write back to external tools including Notion, Slack, Granola, Hex, GitHub, and Atlassian. Together they push Figma from a canvas toward an orchestration surface that reaches across your stack.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Once the agent can reach your tickets, docs, and repo, &ldquo;design work&rdquo; stops ending at the file boundary. The skill that gains value is encoding your team's conventions clearly enough that an agent can apply them &mdash; which is design-ops work, not pixel work.</p>
+          <p class="source"><a href="https://www.figma.com/blog/agent-custom-tools-context-skills/" target="_blank" rel="noopener">Source &mdash; Figma Blog (Agent: custom tools, context, skills)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The prompts you keep retyping for {focus} can become a saved skill, so your process shifts from re-explaining yourself to codifying yourself once and reusing it.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's conventions can be packaged as shared skills the agent enforces, which turns &ldquo;please follow the {domain} guidelines&rdquo; from a hope into a tool.</p>
+              <p class="impact-variant" data-variant="strategist">When the design agent reaches your whole stack, the process question becomes which {domain} decisions you're comfortable letting an agent act on across systems.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs keep their best prompts in a personal notes file; the early movers are starting to package them as skills and noticing how vague their own instructions actually were.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are realizing that a skill library is only as good as the conventions behind it, and that fuzzy team standards become obvious the moment you try to encode them.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are eyeing connectors warily &mdash; an agent that writes back to Jira and GitHub is powerful, and they want guardrails before it touches production {domain} systems.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping: a chunk of your value moves from doing the {focus} task to writing the skill that does it well and reliably for everyone.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reshapes the role &mdash; codifying team conventions into agent skills becomes a core part of running {domain}, not a side project.</p>
+              <p class="impact-variant" data-variant="strategist">Org-wide it reshapes where design sits: connected to tickets, docs, and code, the design surface becomes an orchestration point, raising real questions about permissions and ownership.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can have the agent pull the relevant {focus} context from Notion or a ticket as you design, so you start work with less manual gathering and fewer stale assumptions.</p>
+              <p class="impact-variant" data-variant="design-lead">Cross-tool skills can keep design, docs, and tickets in sync for {domain}, which removes a class of &ldquo;the spec and the design drifted&rdquo; bugs.</p>
+              <p class="impact-variant" data-variant="strategist">If the design layer can act across the toolchain, the org has to decide whether that consolidates workflow ownership under design or demands a new cross-functional contract.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="agent-orchestration,judgement" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Take the prompt you reuse most for {focus} and rewrite it as an explicit, reusable skill &mdash; preconditions, steps, output format, failure cases. Then list every place your old wording was ambiguous. The rewritten skill plus the ambiguity list is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one team convention for {domain} that lives only in people's heads. Try to write it as a skill specification precise enough for an agent to enforce. Where you can't, you've found a real gap in your standards &mdash; document those gaps. The spec and gap list is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on which connectors you'd allow the design agent to write back to for {domain} and which stay read-only, with the trade-off named (speed vs. blast radius). Send the open question to an eng or ops counterpart and record their answer.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-24-deepmind-talent-exodus"
+                 data-category="jobs-industry"
+                 data-published="2026-06-23"
+                 data-tags="google,deepmind,anthropic,openai,talent,gemini">
+          <div class="head">
+            <h6 class="headline">Google DeepMind loses Jumper to Anthropic and Shazeer to OpenAI in one week</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-23">Published June 23, 2026</time></p>
+          <p class="summary">Within a single week, Nobel laureate John Jumper (AlphaFold lead) announced he is leaving Google DeepMind for Anthropic, and Gemini co-lead Noam Shazeer &mdash; co-author of &ldquo;Attention Is All You Need&rdquo; &mdash; said he is moving to OpenAI. Alphabet shares fell roughly 5&ndash;6% on June 22 as markets read the departures as a signal about Google's ability to retain top AI talent, with other DeepMind researchers reportedly following.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The labs whose models power your design and product tools are reshuffling their best people. Capability leadership can move faster than your tooling decisions &mdash; a reminder not to hard-wire your workflow to whichever vendor happens to lead this quarter.</p>
+          <p class="source"><a href="https://fortune.com/2026/06/23/google-deepmind-ai-researcher-departures-raise-doubts-about-ability-to-win-the-ai-race-shazeer-jumper-eye-on-ai/" target="_blank" rel="noopener">Source &mdash; Fortune</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">It doesn't change your {focus} work today, but it's a nudge to keep your prompts and workflows portable rather than tuned to one model's quirks.</p>
+              <p class="impact-variant" data-variant="design-lead">For your team it argues against standardizing the whole {domain} process on a single vendor's current best model, since the lead can shift with the people behind it.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's input to vendor-risk planning: capability is partly carried by individuals, and that should temper any all-in bet on one lab for {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs aren't changing anything; the model in their tool is whatever the tool ships, and that's the right level of attention for this news.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads who got burned by a model regression are already keeping a fallback provider configured, and this reinforces that habit more than it starts a new one.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are noting the churn as one more data point on concentration risk, not rewriting roadmaps over a personnel headline.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Passing trend for your craft: individual lab moves are noise at the level of daily {focus} work &mdash; file it and move on.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it's passing in practice; the durable lesson is portability, which you should already have, not a reaction to this specific exodus.</p>
+              <p class="impact-variant" data-variant="strategist">Even at org level it's a passing signal, not a structural shift &mdash; the underlying point (capability concentrates in people and can move) was already true before this week.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">It's a reminder to design {focus} features around capabilities you can get from more than one provider, not a single model's signature behavior.</p>
+              <p class="impact-variant" data-variant="design-lead">For the team it supports an abstraction layer between your {domain} product and any one model API, so a vendor wobble doesn't become a rebuild.</p>
+              <p class="impact-variant" data-variant="strategist">At the org level it strengthens the case for multi-model architecture in {domain} so your roadmap isn't hostage to one lab's talent retention.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Audit one {focus} workflow you rely on: list the steps that would break if the underlying model changed vendors tomorrow. Write a two-line note on how to make the most fragile step model-agnostic. The note is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="strategy,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a short conversation with your team to map which {domain} tools are single-vendor-locked. Produce a one-page list ranked by switching cost, with one mitigation per high-risk item. The ranked list is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on your org's model-concentration risk for {domain}: name the dependency, the realistic failure mode, and a recommendation on whether multi-model investment is worth its cost now or later. Pick a side &mdash; don't hedge.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="day-section" data-date="2026-06-21">
       <h4 class="day">Sunday, June 21 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="ux-research">
