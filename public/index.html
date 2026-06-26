@@ -1127,7 +1127,411 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-25">
+    <section class="day-section" id="today" data-date="2026-06-26">
+      <h4 class="day">Friday, June 26 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-06-23-mistral-ocr-4"
+                 data-category="tools"
+                 data-published="2026-06-23"
+                 data-tags="mistral,ocr,document-ai,multimodal,rag">
+          <div class="head">
+            <h6 class="headline">Mistral OCR 4 returns bounding boxes, block types, and confidence scores &mdash; not just text</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-23">Published June 23, 2026</time></p>
+          <p class="summary">Mistral released OCR 4 on June 23, an OCR model that does more than turn images into a text blob. For each page it returns bounding boxes (where text sits), typed-block classification (title, table, equation), and per-reading confidence scores, across 170 languages. It runs in a single self-hosted container and is priced at $4 per 1,000 pages ($2 with the batch discount). Mistral reports a 72% average win rate against leading OCR systems and the top score on OlmOCRBench (85.20) &mdash; vendor-reported, not yet independently confirmed.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Structure-aware extraction is the upstream that decides whether an agent can reason about a document or just paraphrase it. If layout, type, and confidence come for free, the design question shifts to how you surface uncertainty &mdash; a confidence score is only useful if the interface does something honest with it.</p>
+          <p class="source"><a href="https://mistral.ai/news/ocr-4/" target="_blank" rel="noopener">Source &mdash; Mistral AI &amp; VentureBeat</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When the model hands you a confidence score per field, your {focus} screen has to decide what low-confidence looks like &mdash; a flag, a re-check prompt, a greyed value &mdash; instead of pretending every extracted value is equally true.</p>
+              <p class="impact-variant" data-variant="design-lead">You can push your team to design document {domain} flows around typed blocks and confidence, which means your component library needs states for &ldquo;uncertain&rdquo; and &ldquo;needs review,&rdquo; not just &ldquo;filled.&rdquo;</p>
+              <p class="impact-variant" data-variant="strategist">Self-hosted, structure-aware extraction lets you plan {domain} products that touch regulated or private documents without shipping data to a third party &mdash; a positioning lever, not just a feature.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs still design document tools as if extraction is perfect; the sharper ones are already mocking the &ldquo;the AI isn't sure&rdquo; state because that's where users lose trust.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to treat confidence and provenance as first-class design tokens for data-heavy products, and asking engineers what the model actually returns before specs get drawn.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are using on-prem OCR as a wedge into compliance-sensitive buyers who couldn't adopt cloud-only document AI.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: designing for {focus} stops being &ldquo;show the answer&rdquo; and becomes &ldquo;show the answer plus how sure we are,&rdquo; which is a real design skill most teams haven't built.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead this reshapes review &mdash; uncertainty and source-citation become things you critique, the same way you critique hierarchy today.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it reshapes which {domain} markets are reachable, but it's not a new frame &mdash; document AI was always coming; this just makes it accurate enough to trust.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can prototype a real document {focus} flow against actual extracted structure, so &ldquo;what does the bad case look like&rdquo; becomes a thing you test early, not patch late.</p>
+              <p class="impact-variant" data-variant="design-lead">Sprints for document features can plan around confidence thresholds and human-review fallbacks as core scope, not afterthoughts.</p>
+              <p class="impact-variant" data-variant="strategist">If extraction is commodity, the differentiation in {domain} moves to what you do with the structured output &mdash; the workflow, not the parsing.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Design three states for a single extracted {focus} field: high confidence, low confidence, and conflicting reads. Sketch each, then write two sentences on what user action each state should invite. The annotated states are the artefact &mdash; they prove you've designed for the model being wrong.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Map your team's document {domain} flow end to end and mark every point where extraction confidence should change what the user sees or does. Hand the map to one engineer and ask where the model's real output doesn't match your assumptions. The corrected map is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: now that accurate, self-hosted extraction is cheap, what in our {domain} product is suddenly commodity, and what's the one workflow only we can build on top of it? Name the trade-off and pick the bet.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry"
+                 data-id="2026-06-24-claude-tag-slack"
+                 data-category="pm-tools"
+                 data-published="2026-06-24"
+                 data-tags="anthropic,claude,slack,agents,collaboration">
+          <div class="head">
+            <h6 class="headline">Anthropic puts an async @Claude teammate inside Slack channels</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-24">Published June 24, 2026</time></p>
+          <p class="summary">Anthropic launched Claude Tag on Slack, a beta that lets Enterprise and Team customers tag @Claude into a channel, hand it a task, and let it work asynchronously &mdash; including scheduling its own follow-ups over hours or days. Admins scope which tools and data Claude can reach per channel, and it carries context memory across the thread. It runs on Opus 4.8.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The unit of collaboration is shifting from &ldquo;a person you @&rdquo; to &ldquo;an agent you @,&rdquo; inside the tool where product decisions already happen. How a non-human teammate announces what it's doing, asks permission, and reports back is an interaction-design problem, and right now it's being designed by infra teams, not designers.</p>
+          <p class="source"><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Source &mdash; Anthropic Newsroom</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can offload a slice of {focus} grunt-work to an agent in your own channel, but you now have to judge its output as a reviewer &mdash; the skill becomes writing the brief and catching what it got wrong, not doing every step.</p>
+              <p class="impact-variant" data-variant="design-lead">Async agents in your team's channels change how work is assigned; you have to decide what a &ldquo;good @Claude task&rdquo; looks like for {domain} and where a human still has to sign off.</p>
+              <p class="impact-variant" data-variant="strategist">If agents become standing members of working channels, the org question is how you govern what they can see and do across {domain} &mdash; access design becomes product design.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">A few ICs are already delegating research summaries and first-draft copy to channel agents and treating the result as a starting point, not a deliverable.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are nervous about agents acting on stale context in shared channels and are writing norms for when to tag one versus do it yourself.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching whether async agents actually reduce coordination cost or just add a new thing to supervise.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">New way of thinking: if a teammate can be an agent you @, the frame &ldquo;design screens for a user&rdquo; misses half the picture &mdash; you're now designing how an agent behaves in a shared {focus} space.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reframes the team itself &mdash; capacity and review have to account for non-human members working {domain} tasks overnight.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a structural reframe: collaboration tools become agent-orchestration surfaces, and whoever designs that interaction owns the {domain} workflow.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your {focus} prototypes increasingly need to show an agent's state &mdash; working, waiting, blocked &mdash; not just static screens.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps now have to budget for &ldquo;how does the agent communicate&rdquo; as real {domain} scope, not a label on a chatbot.</p>
+              <p class="impact-variant" data-variant="strategist">If agents become teammates, the moat in {domain} is trust and control design, not raw model access &mdash; everyone has the same model.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,agent-orchestration" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Tag an agent (Claude Tag if you have it, any channel agent if not) with one real {focus} task. Save its output, then write a critique of how it communicated &mdash; did it confirm scope, flag uncertainty, over-promise? The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-minute conversation with your team to define what a &ldquo;good @agent task&rdquo; is for your {domain} and what always needs a human sign-off. Write the three rules you agree on. The shared rule-set is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo arguing where design should own the agent-collaboration experience in your {domain} before infra teams default it. Name one concrete interaction (permission, status, handoff) and why getting it wrong costs trust.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-24-openai-broadcom-jalapeno"
+                 data-category="industry"
+                 data-published="2026-06-24"
+                 data-tags="openai,broadcom,jalapeno,inference,chips">
+          <div class="head">
+            <h6 class="headline">OpenAI and Broadcom unveil Jalapeño, OpenAI's first custom inference chip</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-24">Published June 24, 2026</time></p>
+          <p class="summary">OpenAI and Broadcom revealed Jalapeño, a reticle-sized inference ASIC designed end to end in nine months &mdash; with help from OpenAI's own models &mdash; and built specifically for serving LLMs rather than training them. Engineering samples are already running production workloads in the lab, including GPT-5.3-Codex-Spark, with initial deployment planned by end of 2026. OpenAI claims performance-per-watt &ldquo;substantially better&rdquo; than current state of the art; that figure is vendor-reported. It's a direct move at Nvidia's margins and at OpenAI's own inference costs.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Inference cost is the invisible constraint behind every AI feature you design &mdash; it's why some interactions are instant and others are rationed. If serving gets meaningfully cheaper, the &ldquo;too expensive to ship&rdquo; line moves, and interactions you've been told to cut become viable.</p>
+          <p class="source"><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/" target="_blank" rel="noopener">Source &mdash; OpenAI &amp; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Cheaper inference quietly widens what you're allowed to put in a {focus} flow &mdash; more model calls, richer responses &mdash; so the constraint you design against shifts from cost to latency and quality.</p>
+              <p class="impact-variant" data-variant="design-lead">You can revisit {domain} ideas your team shelved as &ldquo;too token-expensive,&rdquo; which means keeping a running list of cost-killed concepts is now worth doing.</p>
+              <p class="impact-variant" data-variant="strategist">If your model provider owns its own silicon, your {domain} cost curve and roadmap get tied to their hardware bets &mdash; a dependency worth tracking at the planning level.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs design around current rate limits without knowing the cost math; the ones ahead ask engineers &ldquo;what would we do if this were 5x cheaper&rdquo; before scoping.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to treat inference economics as a design input, not just an infra detail, when prioritising {domain} bets.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the custom-silicon race because it decides whether AI features stay premium-priced or become table stakes.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping the craft indirectly: you won't touch the chip, but the economics it sets quietly redraw what a &ldquo;reasonable&rdquo; {focus} interaction can cost to run.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reshapes prioritisation &mdash; the line between &ldquo;ship it&rdquo; and &ldquo;too expensive&rdquo; for {domain} moves, and your backlog should move with it.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a reshape, not a reframe &mdash; the AI product game stays the same; the cost floor under it drops.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can design {focus} interactions that lean on the model more freely, but you still own whether more model calls actually make the experience better or just busier.</p>
+              <p class="impact-variant" data-variant="design-lead">Cheaper serving lets you plan {domain} features that were uneconomic, so sprint planning should revisit shelved ideas, not just new ones.</p>
+              <p class="impact-variant" data-variant="strategist">When inference is commodity-cheap, differentiation in {domain} returns to judgement and taste &mdash; everyone can afford to call the model.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,divergent-thinking" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List three {focus} interactions you'd add if every model call were free, then cross out the one that would actually make the experience worse (more calls, more noise). The kept two plus the reasoning for the cut are the artefact &mdash; cost isn't the only constraint.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Ask an engineer for the rough per-interaction cost of your team's main {domain} AI feature, then run a short session listing what you'd build if that number halved. Capture the top three. The prioritised list is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on the risk and upside of betting your {domain} roadmap on a provider that controls its own inference silicon. State one upside (cost), one risk (lock-in), and your recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-06-25-dylan-field-design-ai"
+                 data-category="industry"
+                 data-published="2026-06-25"
+                 data-tags="figma,dylan-field,design,strategy,craft">
+          <div class="head">
+            <h6 class="headline">Dylan Field: AI is a tailwind for design, and craft is the new moat</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-25">Published June 25, 2026</time></p>
+          <p class="summary">In a Stratechery interview (recorded June 22, published around Config), Figma CEO Dylan Field argued the market reads AI as a headwind for Figma but he sees it as a tailwind, with the canvas sitting at the natural intersection of design and AI. He framed 2026 as the year design, creativity, media, art, and advertising are visibly merging, and insisted models stay swappable. Context worth noting: Figma IPO'd in 2025 near a $56B valuation and has since fallen below $10B, so this is a CEO making a case under pressure, not a neutral forecast.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When the leading design-tool CEO says craft and taste are the moat in an AI world, it's both reassuring and a sales pitch. The useful move is to separate the claim you can act on &mdash; judgement is the durable skill &mdash; from the part that's talking his own book.</p>
+          <p class="source"><a href="https://stratechery.com/2026/an-interview-with-figma-ceo-dylan-field-about-design-and-ai/" target="_blank" rel="noopener">Source &mdash; Stratechery (Ben Thompson)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If craft is the moat, the part of your {focus} work that survives is the taste call no model makes for you &mdash; so it's worth being deliberate about where you're adding judgement versus just operating a tool.</p>
+              <p class="impact-variant" data-variant="design-lead">The &ldquo;disciplines are merging&rdquo; claim means your team's {domain} process may need to absorb motion, copy, and media work that used to belong to other roles.</p>
+              <p class="impact-variant" data-variant="strategist">Field is making a positioning argument; at org level the question is whether you actually believe craft is defensible in {domain}, or whether that's a story you'd be buying from a vendor.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Some ICs are leaning hard into taste and editorial judgement as their differentiator; others are quietly worried that &ldquo;craft is the moat&rdquo; is cope.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are using lines like this to reassure teams, while privately re-checking whether their {domain} headcount math still holds.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading vendor optimism skeptically and looking at Figma's own valuation drop as the real signal about how the market prices design tools right now.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">New way of thinking, if true: the value of a {focus} designer moves from production to judgement, which reframes what &ldquo;getting better at design&rdquo; even means.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reframes hiring and growth &mdash; you'd promote for taste and decision quality in {domain}, not output volume.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a genuine reframe of where design value sits, but treat it as a hypothesis to test against your own {domain} results, not a settled fact a CEO handed you.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If production is cheap, the scarce input into a {focus} product is knowing what's worth building &mdash; which puts more product thinking on the designer's plate.</p>
+              <p class="impact-variant" data-variant="design-lead">Merging disciplines means {domain} teams may get smaller and broader, so plan for people who span design, copy, and motion rather than deep specialists.</p>
+              <p class="impact-variant" data-variant="strategist">If craft is the differentiator, your {domain} strategy has to define what &ldquo;craft&rdquo; concretely means and how you'd measure it &mdash; otherwise it's a slogan.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Take one recent {focus} project and list three things AI did the production for, then name the single decision that made the result good and that no model made for you. Write why. That decision is your evidence for &mdash; or against &mdash; the &ldquo;craft is the moat&rdquo; claim.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="advocacy,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 30-minute conversation with your team on what &ldquo;craft&rdquo; concretely means for your {domain} &mdash; reach three specific, observable behaviors, not adjectives. Write them down. The definition is the artefact, and it's how you'd actually grow people.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo stress-testing &ldquo;craft is the moat&rdquo; for your {domain}: where is it true, where is it wishful, and what would have to be measurable for you to bet headcount on it? Separate the actionable claim from the vendor pitch.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-06-24-anthropic-alibaba-distillation"
+                 data-category="policy"
+                 data-published="2026-06-24"
+                 data-tags="anthropic,alibaba,distillation,ip,policy">
+          <div class="head">
+            <h6 class="headline">Anthropic accuses Alibaba of illicitly distilling its models</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-24">Published June 24, 2026</time></p>
+          <p class="summary">Anthropic publicly accused Alibaba of running a campaign to &ldquo;brazenly&rdquo; and &ldquo;illicitly&rdquo; extract its AI capabilities &mdash; the practice known as distillation, where one model is used to train a cheaper competitor. The claim is unproven and contested, but it raises the question of how model behavior, and the design patterns built on top of it, can be copied. For now it's an allegation, not a finding.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If model behavior can be cloned, so can the experiences you build on a specific model's quirks. The defensible part of your work isn't the model output &mdash; it's the judgement, brand, and workflow around it that a distilled copy can't reproduce.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" target="_blank" rel="noopener">Source &mdash; CNBC</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a competitor can copy the model under your {focus} feature, your defensibility lives in the parts they can't scrape &mdash; the flow, the copy, the judgement calls &mdash; so design those deliberately, not as wrappers.</p>
+              <p class="impact-variant" data-variant="design-lead">You should pressure-test which of your team's {domain} advantages actually depend on a specific model versus on your own design and data.</p>
+              <p class="impact-variant" data-variant="strategist">Model-cloning risk means your {domain} moat can't be &ldquo;we use the best model&rdquo; &mdash; that's the most copyable thing you have.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs don't think about model provenance at all; the few who do are designing experiences that don't break if the underlying model is swapped or matched.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to ask which {domain} features would survive a competitor having an equivalent model next quarter.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating distillation risk as a reason to invest in proprietary data and workflow, not just model access.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: if model capability is copyable, designing the {focus} experience around it &mdash; not the raw capability &mdash; becomes where your value actually sits.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reshapes what you defend &mdash; reviews start asking &ldquo;what here is ours&rdquo; about {domain} work, not just &ldquo;does it work.&rdquo;</p>
+              <p class="impact-variant" data-variant="strategist">At org level it reshapes moat thinking, but the underlying IP fight is older than AI &mdash; it's a sharper version of a known problem, not a new frame.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You design {focus} features assuming the model edge is temporary, which pushes you to invest in the experience layer that lasts.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps for {domain} should weight proprietary data, workflow, and brand over features that ride a single model's behavior.</p>
+              <p class="impact-variant" data-variant="strategist">If models converge through distillation, the durable {domain} differentiation is everything around the model &mdash; plan and fund accordingly.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="differentiation,judgement" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List three things in your {focus} feature that a competitor with the same model could copy in a week, then name one thing only your team's judgement or context can produce. The contrast is the artefact &mdash; it tells you where to invest design effort.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Audit your team's main {domain} feature for model-dependence: mark each part as &ldquo;breaks if the model is matched&rdquo; or &ldquo;ours regardless.&rdquo; Hand the audit to one PM for a reality check. The marked-up audit is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: if our model edge in {domain} were copied tomorrow, what still differentiates us, and what should we fund now to make that true? Name the trade-off and a clear recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="day-section" data-date="2026-06-25">
       <h4 class="day">Thursday, June 25 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="design-tools">
