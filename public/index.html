@@ -1127,7 +1127,335 @@
 
   <section class="month-section" data-month="2026-06">
     <h3 class="month">June 2026</h3>
-    <section class="day-section" id="today" data-date="2026-06-26">
+    <section class="day-section" id="today" data-date="2026-06-30">
+      <h4 class="day">Tuesday, June 30 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="image-gen">
+        <h5 class="category-label">Image gen</h5>
+
+        <article class="entry"
+                 data-id="2026-06-30-layered-image-gen"
+                 data-category="image-gen"
+                 data-published="2026-06-27"
+                 data-tags="image-generation,qwen,reve,editable-layers,open-weight">
+          <div class="head">
+            <h6 class="headline">Image generation splits into editable layers: Qwen-Image-Layered and Reve 2.0 make pixels behave like design files</h6>
+            <span class="badge image-gen">Image gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-27">Published June 27, 2026</time></p>
+          <p class="summary">Two June releases push generated images from flat output toward editable structure. Alibaba's open-weight Qwen-Image-Layered, posted on Hugging Face, decomposes any image into a variable number of RGBA layers you can recolour, move, replace, or freeze, then recomposes them &mdash; decomposition can even run recursively. Reve 2.0, built on a &ldquo;Large Layout Model&rdquo; that derives an explicit layout before rendering pixels, currently sits second on the human-preference Text-to-Image Arena behind GPT Image 2. Both attack the same problem: generated images have been take-it-or-leave-it, and these make them iterable. (Arena rankings and benchmark claims are vendor- or community-reported, not independently verified.)</p>
+          <p class="why"><strong>Why this matters for you:</strong> &ldquo;Editable layers&rdquo; is the difference between a slot machine and a tool you can art-direct. The skill that gains value is knowing what a good layer structure is &mdash; decomposition, naming, what stays frozen &mdash; which is exactly the judgement you already apply in a real design file.</p>
+          <p class="source"><a href="https://qwen.ai/blog?id=qwen-image-layered" target="_blank" rel="noopener">Source &mdash; Qwen (Alibaba) &amp; Reve</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When a generated image arrives as RGBA layers, your {focus} work shifts from re-prompting until it's close to editing the one layer that's wrong &mdash; the same move you make in a real design file.</p>
+              <p class="impact-variant" data-variant="design-lead">You can ask your team to standardise how layered generations get named and handed off, so a generated asset enters {domain} as a structured file, not a flattened PNG someone has to rebuild.</p>
+              <p class="impact-variant" data-variant="strategist">Layer-level editability lets generated imagery sit inside a governed {domain} pipeline &mdash; brand-locked layers, swappable content &mdash; turning gen-AI from a one-off into a repeatable production step.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">The sharper ICs have stopped treating image models as final-output machines and started using them for first drafts they decompose and finish by hand.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are beginning to write asset specs that assume layers &mdash; which parts must stay consistent across variants, which are free to regenerate.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching whether layered open-weight models like Qwen let them bring image production in-house instead of renting a closed API.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: art direction over generated images becomes possible at the layer level, so taste and composition matter again instead of prompt-roulette.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reshapes review &mdash; you critique a generated asset's layer structure the way you'd critique a file's organisation.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it reshapes which {domain} content is worth producing with AI, but the frame is unchanged: editable, art-directable assets beat flat ones.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can prototype image-heavy {focus} flows with assets you can actually adjust, so the bad case &mdash; the model got the logo wrong &mdash; becomes fixable in-product, not a regenerate-and-pray loop.</p>
+              <p class="impact-variant" data-variant="design-lead">Sprints for content features can plan around layered output and consistency constraints rather than budgeting for endless regeneration.</p>
+              <p class="impact-variant" data-variant="strategist">If flat image generation is commodity, the differentiation in {domain} moves to the editing and brand-control layer on top &mdash; the workflow, not the render.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one generated image for a {focus} surface, decompose it into layers (manually or with a layered model), and rebuild a brand-consistent variant by editing a single layer. Write three sentences on what the layer structure let you do that re-prompting couldn't. The variant plus note is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write an asset spec for one {domain} content type that assumes layered generation: name the layers that must stay frozen, the ones free to regenerate, and the handoff format. Walk one designer and one engineer through it and capture where it breaks. The revised spec is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: now that generated images can be decomposed into editable layers, what in our {domain} image pipeline is commodity, and what's the one brand-control capability only we can build on top? Name the trade-off and pick the bet.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-06-30-gemini-35-pro-july"
+                 data-category="models"
+                 data-published="2026-06-27"
+                 data-tags="google,gemini,delay,frontier-model,roadmap">
+          <div class="head">
+            <h6 class="headline">Google confirms Gemini 3.5 Pro slips to July, missing a second straight I/O commitment</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-27">Published June 27, 2026</time></p>
+          <p class="summary">Alphabet confirmed on June 24 that Gemini 3.5 Pro will not reach general availability in June, slipping past Sundar Pichai's &ldquo;give us until next month&rdquo; pledge at Google I/O on May 19 &mdash; the second consecutive I/O commitment Google has missed on schedule. The model stays in limited Vertex AI enterprise preview, with confirmed specs of a 2-million-token context window, a &ldquo;Deep Think&rdquo; reasoning mode expected to be gated to the $250/month Ultra tier, and multimodal coverage across text, image, audio, and video. The delay lands in a brutal week for Google: four senior DeepMind researchers left for Anthropic and OpenAI, and roughly $269B in market cap evaporated. (Leaked internal eval results cited in coverage are non-official.)</p>
+          <p class="why"><strong>Why this matters for you:</strong> The model behind your design tools is a planning dependency, not a given. When a frontier model you'd build a feature around slips by a month &mdash; twice &mdash; &ldquo;design around announced-but-unshipped models&rdquo; becomes a real judgement call you have to make on purpose.</p>
+          <p class="source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-27-2026" target="_blank" rel="noopener">Source &mdash; Build Fast with AI</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a {focus} feature you mocked assumes Gemini 3.5 Pro's 2M context or Deep Think, the delay means you design twice &mdash; once for what ships today, once for what's promised &mdash; or you stop designing against vapour.</p>
+              <p class="impact-variant" data-variant="design-lead">You can set a team rule for which {domain} work is allowed to depend on unshipped models, so your designers aren't building flows that can't be tested for a month.</p>
+              <p class="impact-variant" data-variant="strategist">Repeated frontier-model slips turn model availability into a roadmap risk you have to price, not assume &mdash; especially if a competitor ships on the model you were waiting for.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs burned by earlier slips are designing against the current shipped model and treating the next one as upside, not foundation.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are asking for a &ldquo;what if it slips&rdquo; answer in any spec that leans on an unreleased model.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are hedging across providers so a single lab's delay doesn't stall a {domain} launch.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Passing trend: one model's schedule slip doesn't change how you design &mdash; it's a reminder to design for what exists, which was always the right discipline.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it's a planning-hygiene issue, not a craft shift; the fix is process, not new skills.</p>
+              <p class="impact-variant" data-variant="strategist">At org level the specific delay passes, but the underlying volatility &mdash; frontier models as moving, gated targets &mdash; is the durable signal worth planning around.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can't prototype a {focus} flow on a model you can't call, so the delay pushes you to validate the idea on today's model and note what improves if the new one lands.</p>
+              <p class="impact-variant" data-variant="design-lead">Sprints planning around Gemini 3.5 Pro need an explicit fallback to the shipped model or they carry hidden schedule risk.</p>
+              <p class="impact-variant" data-variant="strategist">If a key model is a month late, the question is whether the {domain} bet still holds on current capability &mdash; if it only works on the unshipped model, it's not a plan yet.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Take one {focus} concept you've been imagining on a next-gen model (huge context, deeper reasoning). Redesign it to work on a model that ships today, and list the two things that genuinely need the unshipped capability. The two-version sketch is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Audit your team's in-flight {domain} specs and flag every one that depends on an unreleased model. For each, write the fallback to a shipped model. Share the flagged list as a one-page risk note.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: Google has now missed two straight I/O ship commitments. What's our policy for planning {domain} roadmaps around announced-but-unshipped frontier models &mdash; wait for GA, build on the prior generation, or hedge across providers? Pick one and defend the trade-off.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-06-30-ai-cost-routing"
+                 data-category="industry"
+                 data-published="2026-06-27"
+                 data-tags="enterprise,cost,model-routing,deepseek,efficiency">
+          <div class="head">
+            <h6 class="headline">The &ldquo;tokenmaxxing&rdquo; era ends: enterprises move from spend-at-all-costs to model routing</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-27">Published June 27, 2026</time></p>
+          <p class="summary">CNBC's late-June reporting documents a structural shift in enterprise AI spending. Tokenmaxxing &mdash; maximising token use on agentic tasks without cost limits &mdash; drove the revenue that made OpenAI and Anthropic trillion-dollar-scale companies; now the crackdown is on. Uber imposed per-employee spend tiers (about $1,500/month, escalation above that) after burning its annual AI budget in four months, and Lindy's CEO moved 100% of traffic off Claude to DeepSeek to crash costs. The emerging pattern is the &ldquo;advisor model&rdquo; technique: route bulk tasks to cheap open-weight models and escalate only the hardest subset to a frontier model, cutting effective per-token cost an estimated 70&ndash;90%. (Figures are from CNBC and company statements, not independently audited.)</p>
+          <p class="why"><strong>Why this matters for you:</strong> Cost discipline is now a design constraint, not just a finance one. Which interactions justify a frontier model and which can run on a cheap one is becoming a product decision &mdash; and the person who understands where quality is actually perceived should be in that conversation.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html" target="_blank" rel="noopener">Source &mdash; CNBC</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When the model behind a {focus} feature can be cheap for routine steps and frontier only for the hard step, you have to design the seams &mdash; where the handoff happens and whether the user should ever notice the quality tier.</p>
+              <p class="impact-variant" data-variant="design-lead">You can push your team to map which {domain} interactions are quality-critical (worth frontier spend) and which aren't, so design choices and cost choices line up instead of fighting.</p>
+              <p class="impact-variant" data-variant="strategist">Model routing turns unit economics into a design surface &mdash; the {domain} experiences you protect at full quality are a positioning decision, not just an infra one.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">The ICs paying attention are learning where users actually feel model quality, so they can argue for spend where it matters and concede it where it doesn't.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to sit in the model-routing conversation that used to be eng-and-finance-only, because routing decides perceived quality.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating cost-per-interaction as a competitive lever &mdash; cheaper routing funds more usage, which can beat a pricier, &ldquo;better&rdquo; rival.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: designing AI features now includes designing for tiered quality &mdash; graceful behaviour when a cheap model handles a step &mdash; which most designers have never had to think about.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reshapes review to include &ldquo;what runs on which model and where does the user feel it,&rdquo; a question that didn't exist two years ago.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it reshapes how {domain} margins and experience trade off, working within the existing frame rather than replacing it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can prototype a {focus} flow that degrades gracefully when a cheap model is used, making cost a first-class part of the experience instead of a hidden eng setting.</p>
+              <p class="impact-variant" data-variant="design-lead">Sprints can scope &ldquo;frontier vs cheap model&rdquo; per feature as a design decision with a quality bar, not a back-end afterthought.</p>
+              <p class="impact-variant" data-variant="strategist">If frontier capability is something you ration, the differentiation in {domain} is choosing the few moments worth the premium &mdash; and making them unmistakably better.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI {focus} flow. Mark each step as &ldquo;users would feel a cheaper model here&rdquo; or &ldquo;they wouldn't.&rdquo; Then critique your own marks: where are you guessing versus where do you have evidence? The annotated flow plus the honesty note is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 30-minute session with an engineer to map which steps of one {domain} feature could run on a cheap model and which need a frontier one. Capture the perceived-quality risk for each. The shared routing map is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: if we route most {domain} work to cheap models and reserve frontier spend for a few moments, which moments do we pick and why? Name the trade-off between margin and perceived quality, and make the call.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-06-30-mythos5-restored"
+                 data-category="policy"
+                 data-published="2026-06-27"
+                 data-tags="anthropic,claude-mythos,export-control,access,continuity">
+          <div class="head">
+            <h6 class="headline">US government partially lifts the Claude Mythos 5 ban for critical-infrastructure defenders</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-06-27">Published June 27, 2026</time></p>
+          <p class="summary">Anthropic said on June 27 that the US government will let it redeploy Claude Mythos 5 &mdash; its strongest cybersecurity model &mdash; to a set of US organisations that operate and defend critical infrastructure, two weeks after an emergency export-control directive forced it offline on June 12. Per Commerce Secretary Lutnick's June 26 letter, only &ldquo;Annex A&rdquo; entities (roughly 100 companies and federal agencies, plus national labs) are exempt from needing an export license; all other Pro, Max, Team, Enterprise, and API users still require one. The general-purpose Fable 5 model remains fully banned. (Details are from Anthropic, CNBC, and the Lutnick letter as reported.)</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the clearest sign yet that frontier-model access is becoming a gated, geopolitical variable &mdash; a model you build on can go offline in 24 hours by directive. For anyone designing on top of frontier models, provider-availability is now a real design and continuity constraint.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html" target="_blank" rel="noopener">Source &mdash; CNBC</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a {focus} feature leans on a single frontier model, &ldquo;what does this screen do when the model is unavailable&rdquo; stops being an edge case and becomes a state you actually have to design.</p>
+              <p class="impact-variant" data-variant="design-lead">You can require that {domain} flows built on frontier models ship with a documented degraded mode, so a sudden access loss doesn't blank the product.</p>
+              <p class="impact-variant" data-variant="strategist">Model access as a regulated, revocable thing means single-provider dependency is now a continuity risk you weigh when choosing what to build in {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs in AI products are starting to design the &ldquo;model unavailable / restricted&rdquo; state the way they once learned to design offline and error states.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are asking which {domain} features would simply stop working if a provider went dark, and treating that as a design gap, not just an infra one.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are designing multi-provider fallback into product architecture so a directive against one lab can't halt a launch.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">New way of thinking: &ldquo;the model might be legally pulled&rdquo; is a constraint designers never had &mdash; availability becomes part of the experience you own, not just a backend SLA.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead it reframes resilience reviews to include geopolitical and regulatory model risk alongside the usual uptime questions.</p>
+              <p class="impact-variant" data-variant="strategist">At org level it's a genuine reframe: frontier models are dual-use, export-controlled inputs, so {domain} planning has to treat them like regulated supply, not commodity software.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can prototype a {focus} flow that survives losing its primary model &mdash; falling back to a weaker one or a non-AI path &mdash; instead of assuming the model is always there.</p>
+              <p class="impact-variant" data-variant="design-lead">Sprints should treat provider-continuity as scope for frontier-dependent features, not a someday concern.</p>
+              <p class="impact-variant" data-variant="strategist">If access can be revoked, the {domain} differentiation shifts toward products that stay useful through provider disruption &mdash; resilience as a feature.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Design the &ldquo;primary model unavailable&rdquo; state for one AI {focus} feature: what the user sees, what still works, what's gracefully removed. Sketch it and write two sentences on the trust message. The state design is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">List every {domain} feature your team ships that depends on a single frontier model. For the top three, write the one-line degraded-mode plan. Share the inventory as a continuity gap note.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: a government directive took a frontier model offline in 24 hours. What's our policy on single-provider dependency for {domain} &mdash; multi-provider by default, accept the risk, or build a non-AI fallback for critical paths? Pick one and defend it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-06-26">
       <h4 class="day">Friday, June 26 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="tools">
