@@ -1127,7 +1127,411 @@
 
   <section class="month-section" data-month="2026-07">
     <h3 class="month">July 2026</h3>
-    <section class="day-section" id="today" data-date="2026-07-03">
+    <section class="day-section" id="today" data-date="2026-07-04">
+      <h4 class="day">Saturday, July 4 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry"
+                 data-id="2026-07-04-notion-external-agents"
+                 data-category="pm-tools"
+                 data-published="2026-07-01"
+                 data-tags="notion,agents,claude,cursor,mcp,orchestration">
+          <div class="head">
+            <h6 class="headline">Notion 3.6 turns Claude and Cursor into assignable teammates with External Agents</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-01">Published July 1, 2026</time></p>
+          <p class="summary">Notion shipped version 3.6 on July 1 with External Agents: agents that live in other tools &mdash; Claude and Cursor are the first two &mdash; can now be assigned tasks from a shared board, @-mentioned like teammates, and watched as they run, all inside Notion. The release also adds agent-built interactive HTML blocks (calculators, quizzes, org charts that live in docs), agents that read and write PPTX/XLSX/DOCX and drive Outlook, five new MCP connections for Custom Agents (Mercury, Mixpanel, Miro, Box, ClickHouse), model choice including Opus 4.8, Grok 4.3, and GLM 5.2, and Custom Agent actions in the Enterprise audit log.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The agents you run in Claude or Cursor stop being solo work nobody sees &mdash; they become visible, assignable units on the same board as your team's tasks. That makes agent orchestration a team workflow design problem, which is squarely a design and PM skill, not an engineering one.</p>
+          <p class="source"><a href="https://www.notion.com/releases/2026-07-01" target="_blank" rel="noopener">Source &mdash; Notion Releases</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your {focus} research digests, spec updates, and asset handoffs can now run as agent tasks your teammates see on the board instead of scripts only you know about &mdash; which means the work you delegate to agents becomes visible and reviewable.</p>
+              <p class="impact-variant" data-variant="design-lead">The board becomes the single view of what humans and agents on your team are each doing; you can start assigning recurring design-ops chores to an agent lane and reserve critique time for the work that needs taste.</p>
+              <p class="impact-variant" data-variant="strategist">Agent work is now legible to the org: dashboards can show what share of {domain} process steps run autonomously, which turns automation coverage into something you can plan and report on rather than anecdote.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are mostly still running agents in one-off chats and pasting results into docs by hand; the ones ahead of the curve keep a small set of named, repeatable agent tasks that teammates can trigger without them.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are quietly auditing which team rituals (status roundups, research synthesis, ticket triage) are already half-automated by individuals, and formalizing the good ones before the tooling makes ad-hoc automation invisible again.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the audit-log angle: enterprises that blocked agent tools on governance grounds now have an activity trail to point at, which is unblocking procurement conversations that stalled in spring.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This isn't a feature, it's a frame shift: the unit of work stops being &ldquo;my chat with an agent&rdquo; and becomes &ldquo;a task anyone or anything on the team can pick up&rdquo; &mdash; your craft expands to include designing those tasks.</p>
+              <p class="impact-variant" data-variant="design-lead">Team design now includes non-human members with different failure modes than people; the frame of &ldquo;who does what&rdquo; becomes &ldquo;who or what does what, and who checks it&rdquo; &mdash; that is a new management surface, not a faster old one.</p>
+              <p class="impact-variant" data-variant="strategist">The orchestration layer &mdash; not the model &mdash; is becoming the locus of lock-in; whoever owns the board where agents get assigned owns the workflow, and that reframes build-vs-buy decisions across {domain} tooling.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Features you design will increasingly be consumed by agents acting for users, not just users &mdash; task boards, statuses, and @-mentions are becoming an API surface for non-human teammates, and your UI decisions shape what agents can do.</p>
+              <p class="impact-variant" data-variant="design-lead">Sprint planning has to answer a new question: which backlog items are agent-shaped (well-specified, verifiable) and which are human-shaped (ambiguous, taste-dependent)? Teams that sort deliberately will out-ship teams that don't.</p>
+              <p class="impact-variant" data-variant="strategist">Cross-tool agent hand-offs make workflow integration the new moat; product strategy in {domain} should assume competitors' agents can reach into shared surfaces, and differentiate on the steps that resist delegation.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,automation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">List every recurring task in your {focus} workflow you've ever handed to an agent in a one-off chat (research summaries, copy variants, audit passes). Pick the three most repeated and write each one up as a formal task card a teammate &mdash; or an External Agent &mdash; could run without you: inputs, definition of done, and what a reviewer must check. The three task cards are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Automation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,agent-orchestration" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Map your team's board for one sprint and mark every item as agent-shaped (specified, verifiable), human-shaped (ambiguous, taste-dependent), or hybrid. Then run a 20-minute conversation with the team on the two most contested labels. The artefact is the annotated board plus a one-paragraph note on what your team disagreed about and why.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo answering: if agents from Claude, Cursor, and future tools all report into a shared orchestration surface, where should our {domain} org's orchestration layer live &mdash; Notion, our own tooling, or the vendor's? Name the lock-in risk, the audit requirement, and one trade-off you'd accept. End with a recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-04-tesla-ai-spend-cap"
+                 data-category="industry"
+                 data-published="2026-07-02"
+                 data-tags="tesla,ai-costs,tokens,enterprise,governance">
+          <div class="head">
+            <h6 class="headline">Tesla caps employee AI spending at $200 a week &mdash; with an exemption for xAI's own tools</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-02">Published July 2, 2026</time></p>
+          <p class="summary">Starting July 6, Tesla will limit employee AI-tool spending to $200 per week, with manager sign-off required to exceed it, according to an internal memo first reported by The Information. Some software engineers had been consuming thousands of dollars in tokens weekly. The cap notably excludes beta versions of xAI products like Grok and Composer &mdash; even though reporting suggests many Tesla engineers prefer Claude. It follows a pattern: Uber capped spending at $1,500/month after exhausting its 2026 AI budget by April, and Meta, Amazon, and Walmart have introduced caps or steered workers to cheaper models.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Per-seat AI budgets are arriving at design orgs too, and the tools you reach for will increasingly be shaped by finance policy, not just capability. Knowing which of your AI-assisted tasks actually justify frontier-model prices is becoming a working skill.</p>
+          <p class="source"><a href="https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/" target="_blank" rel="noopener">Source &mdash; Electrek</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Expect a budget line on your own AI usage soon; the practical change is learning which {focus} tasks need a frontier model and which run fine on a mid-tier one at a tenth of the cost.</p>
+              <p class="impact-variant" data-variant="design-lead">You'll be asked to justify your team's AI spend the way you justify headcount; a lead who can map spend to shipped outcomes will defend budgets that a lead with anecdotes will lose.</p>
+              <p class="impact-variant" data-variant="strategist">Tool policy is becoming cost policy: the models your org sanctions will be chosen partly by finance, and the Tesla memo shows vendor politics (the xAI exemption) can override worker preference in that choice.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs have no idea what their AI usage costs; the few who route drafts through cheaper models and reserve expensive ones for final passes are the ones who will barely notice caps when they land.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to see the first &ldquo;why is this team's token bill 4x that team's&rdquo; questions from ops, and mostly don't yet have an answer better than &ldquo;different work styles.&rdquo;</p>
+              <p class="impact-variant" data-variant="strategist">Strategists at larger orgs are writing model-routing policies &mdash; default cheap, escalate deliberately &mdash; and treating the Uber budget blowout as the cautionary tale in every deck.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Cost-aware model choice is joining the craft the way performance budgets joined front-end work: not glamorous, but the practitioners who internalize it get trusted with more autonomy.</p>
+              <p class="impact-variant" data-variant="design-lead">This reshapes how you run a team &mdash; AI spend becomes a managed resource like contractor hours &mdash; but it doesn't change what design work is; the frame holds, the economics inside it shift.</p>
+              <p class="impact-variant" data-variant="strategist">Token budgeting will look as normal as cloud cost management within a year; the durable question is whether caps get set from usage data or from vendor politics, as Tesla's xAI carve-out hints.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If you design AI features, your users' orgs may be metering them; flows that assume unlimited generation (endless variants, always-on agents) will hit budget walls you should design visible limits for.</p>
+              <p class="impact-variant" data-variant="design-lead">Uncapped agentic features create invisible cost liabilities for customers; teams that surface predicted cost before a run &mdash; the way CI shows build minutes &mdash; will win enterprise trust.</p>
+              <p class="impact-variant" data-variant="strategist">Usage-based AI pricing pushes the cost-of-goods question into product strategy for {domain}: margins now depend on routing work to the cheapest model that clears the quality bar, which is a design decision as much as an infrastructure one.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Take yesterday's AI-assisted work and reconstruct it as a cost ledger: each task, which model you used, and whether a cheaper tier would have produced an acceptable result. Write a three-line personal routing rule (&ldquo;default X, escalate to Y when&hellip;&rdquo;) you'll actually follow next week. The ledger plus the rule is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Tool mastery</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Draft the AI spend policy you'd want imposed on your team before finance imposes one for you: a default weekly budget, the escalation path, and the two task types that justify frontier-model cost. Pressure-test it in a 15-minute chat with one engineer or PM. The artefact is the one-page policy with their objection recorded and addressed.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a memo on the Tesla xAI exemption as a case study: when an org exempts its own vendor's tools from cost controls, what does that do to tool quality, worker trust, and output? Apply the lesson to your {domain} org &mdash; name one place where internal politics rather than fitness is currently picking your tools, and recommend a correction.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-07-04-together-ai-aramco"
+                 data-category="industry"
+                 data-published="2026-07-01"
+                 data-tags="together-ai,funding,open-source,infrastructure,resilience">
+          <div class="head">
+            <h6 class="headline">Together AI raises $800M at $8.3B as the Fable 5 outage validates multi-provider infrastructure</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-01">Published July 1, 2026</time></p>
+          <p class="summary">Together AI closed an $800 million round led by Saudi Aramco's Prosperity7 Ventures on July 1, valuing the open-model hosting platform at $8.3 billion with $1.3 billion raised in total. Together hosts open-weight models &mdash; Llama, Mistral, DeepSeek, and others &mdash; behind a single API. Reports say its traffic spiked during the 18-day Fable 5 export-control outage in June as teams scrambled for fallbacks; that spike figure comes from the company's ecosystem and isn't independently verified, but the strategic logic is plain either way.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The June outage taught product teams that a single-provider AI dependency is a product risk, not just an infrastructure one. If your product's AI features die when one vendor goes dark, that's now a design problem &mdash; fallback behavior is UX.</p>
+          <p class="source"><a href="https://aiweekly.co/alerts/together-ai-raises-800m-at-8-3b-valuation" target="_blank" rel="noopener">Source &mdash; AI Weekly</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If the AI features in your {focus} designs assume one specific model's behavior &mdash; its tone, its latency, its formatting &mdash; a provider swap breaks your design silently; designing to a capability level rather than a vendor is the new discipline.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's design specs for AI features should now include degraded-mode states: what the experience looks like on the fallback model, not just the primary one.</p>
+              <p class="impact-variant" data-variant="strategist">Provider diversity is entering {domain} product requirements the way multi-region redundancy entered infrastructure; expect it in enterprise RFPs within two quarters.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs found out during the June outage which of their daily tools quietly depended on one model; the pragmatic ones now keep a tested second tool for each critical task rather than a bookmark they've never opened.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads who lost days of team throughput in June are writing tool-redundancy notes into onboarding docs &mdash; boring, effective, and mostly happening at teams that got burned.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are re-reading vendor contracts for availability language and discovering AI providers promise far less than the cloud SLAs they're used to; some are negotiating, most are just diversifying.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Multi-model literacy &mdash; knowing how two or three models differ on the tasks you care about &mdash; is becoming a working skill, the way cross-browser testing once was; the craft's frame doesn't change, its checklist grows.</p>
+              <p class="impact-variant" data-variant="design-lead">Redundancy planning is folding into design ops as a standing practice rather than a crisis response; teams will resist it until the next outage makes the case again.</p>
+              <p class="impact-variant" data-variant="strategist">Sovereign capital funding model-hosting neutrality (Aramco here, others following) says infrastructure diversity is now a state-level priority; for org planning, treat single-provider AI dependency as a risk with a named owner.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The interesting design brief hiding in this story: what should a product do, visibly, when its model provider goes down mid-task? Almost nobody has designed that state well, and it's a differentiator waiting to be claimed.</p>
+              <p class="impact-variant" data-variant="design-lead">Model abstraction layers change how teams spec AI features &mdash; acceptance criteria must be written against behaviors any qualifying model can pass, which forces sharper, more testable specs.</p>
+              <p class="impact-variant" data-variant="strategist">The 18-day outage created a durable buyer preference for portability in {domain} tooling; products that make switching providers cheap will win deals against technically superior single-vendor offerings.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,divergent-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Design the outage state nobody designs: pick one AI feature in your {focus} product (or a product you use daily) and sketch the full experience of its model provider going down mid-task &mdash; the moment of failure, what's preserved, the fallback, and the recovery. Annotate each decision. The annotated flow is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a tabletop exercise on paper: your team's primary AI tool goes dark for two weeks starting Monday. List the five workflows that stop, which have a tested fallback, and which have only an untested assumption. The artefact is a one-page continuity note you could actually circulate, with the single weakest dependency named at the top.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write the build-vs-hedge memo: should your {domain} product commit deeper to one frontier provider (better integration, more risk) or invest in an abstraction layer (portability, integration tax)? Use the June outage as your evidence base, quantify one cost on each side, and end with a recommendation you'd defend to engineering leadership.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-04-june-jobs-report"
+                 data-category="jobs-industry"
+                 data-published="2026-07-02"
+                 data-tags="jobs,labor-market,ai-displacement,economy,bls">
+          <div class="head">
+            <h6 class="headline">June jobs report: 57,000 payrolls, and the AI-displacement debate gets its first weak national print</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-02">Published July 2, 2026</time></p>
+          <p class="summary">The BLS reported just 57,000 jobs added in June, well below the ~115,000 Dow Jones consensus, with unemployment steady at 4.2% and April and May revised down by a combined 74,000. Leisure and hospitality fell 61,000 on weak seasonal hiring. How much of the softness is attributable to AI is genuinely contested: advocacy groups cite AI-displaced roles, tech layoffs total 142,000 year-to-date, and Stanford/ADP tracking shows AI-exposed entry-level jobs for 22-to-25-year-olds shrinking &mdash; but the BLS data itself makes no AI attribution, and one month is not a trend.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The entry-level roles shrinking fastest &mdash; production design, content, junior research &mdash; are the traditional on-ramps into your field. That reshapes who you'll hire, who you'll mentor, and what &ldquo;junior designer&rdquo; even means in two years.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/07/02/jobs-report-june-2026-.html" target="_blank" rel="noopener">Source &mdash; CNBC</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The production-layer tasks that once trained juniors &mdash; asset cleanup, spec documentation, first-pass research synthesis &mdash; are the tasks you now hand to AI; your own {focus} process quietly stops generating teaching opportunities unless you rebuild them deliberately.</p>
+              <p class="impact-variant" data-variant="design-lead">If your pipeline of juniors thins, your team's process must metabolize feedback and grow skill without the apprenticeship structure it was built around &mdash; that's a process redesign, not an HR problem.</p>
+              <p class="impact-variant" data-variant="strategist">Workforce planning for {domain} design orgs now has to model a shrinking entry-level intake against a growing need for senior judgement &mdash; the pyramid is inverting and hiring plans built on the old shape will miss.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Early-career designers are compensating by shipping public proof-of-judgement work &mdash; teardowns, case studies with real decisions &mdash; because the portfolio-of-production-craft that got people hired in 2022 no longer differentiates.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are converting would-be junior headcount into fewer, more senior hires plus AI tooling &mdash; and mostly not yet grappling with where their next senior generation comes from.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the Fed reaction and budget season: soft labor prints strengthen the internal case for AI-driven efficiency, which means more pressure on design orgs to demonstrate leverage, not headcount.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">One weak month proves nothing, but the entry-level data has pointed the same direction for a year: the on-ramp into the craft is being rebuilt around judgement-first rather than production-first, and that changes how you grow whether or not June was noise.</p>
+              <p class="impact-variant" data-variant="design-lead">Team structure is what's being reshaped &mdash; the classic 1-senior-to-3-junior studio ratio is quietly inverting, and leads who redesign mentorship for that shape early will hold onto talent others lose.</p>
+              <p class="impact-variant" data-variant="strategist">Labor-market softness plus AI productivity claims is a politically volatile mix; expect policy responses (training mandates, disclosure rules) that land on {domain} employers within a few quarters, whatever June's print really meant.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Products aimed at early-career knowledge workers are aiming at a shrinking, anxious segment &mdash; if that's your user base, the jobs data is user research, and it says their core need is proving judgement, not producing output.</p>
+              <p class="impact-variant" data-variant="design-lead">The &ldquo;AI makes teams more productive&rdquo; pitch gets harder to sell internally when it coincides with hiring freezes; product cases built on capacity-freed-for-better-work will land better than cases built on headcount avoided.</p>
+              <p class="impact-variant" data-variant="strategist">If AI productivity narratives start carrying labor-market blame, enterprise buyers in {domain} will want adoption stories framed around augmentation with evidence &mdash; product marketing and product design need that evidence built in, not bolted on.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="differentiation,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Audit your own value the way a hiring manager would in 2027: list ten things you did last month, mark each as production (AI-substitutable) or judgement (you decided something under ambiguity). If the ratio scares you, write the three-sentence plan for shifting it. The marked list plus the plan is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Design the apprenticeship your process no longer provides for free: pick the three judgement skills your seniors have that your process used to teach through production work, and write one deliberate practice ritual for each (shadowing a critique, owning a small decision with review). The artefact is a one-page mentorship plan you could start next sprint.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write the memo your exec team will need this budget season: given the labor data, should your {domain} org's design capacity plan for next year buy senior judgement, junior potential, or AI leverage &mdash; and in what ratio? Commit to numbers, name the risk your ratio accepts (including where your 2029 seniors come from), and recommend.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-07-04-un-ai-commission"
+                 data-category="policy"
+                 data-published="2026-07-01"
+                 data-tags="un,governance,policy,geneva,regulation">
+          <div class="head">
+            <h6 class="headline">UN launches AI for Good Global Commission as Geneva becomes AI governance capital for a week</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-01">Published July 1, 2026</time></p>
+          <p class="summary">The UN and ITU launched the AI for Good Global Commission on July 1 &mdash; the first UN-level governance body to seat the leaders of the companies building frontier AI. Salesforce's Marc Benioff and Rwandan President Paul Kagame co-chair; members include Nvidia's Jensen Huang, Amazon's Andy Jassy, Microsoft's Brad Smith, Anthropic co-founder Jack Clark, and Cohere's Aidan Gomez. Its first meeting is July 8 in Geneva, sandwiched between the inaugural UN Global Dialogue on AI Governance (July 6&ndash;7) and the ITU AI for Good Summit (July 7&ndash;10), which together draw 11,000+ participants from 169 countries. Stated aims: responsible AI, closing the access gap for the 2.2 billion people without reliable internet, and standards that survive political divides.</p>
+          <p class="why"><strong>Why this matters for you:</strong> After June proved a single government can switch off the model your workflow depends on, multilateral governance stopped being abstract. What Geneva produces &mdash; or fails to &mdash; shapes how predictably you'll have access to the tools your practice now assumes.</p>
+          <p class="source"><a href="https://www.axios.com/2026/07/01/un-ai-commission-ceos-world-leaders" target="_blank" rel="noopener">Source &mdash; Axios</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Nothing in your {focus} workflow changes this week; what's at stake is whether tool access stays predictable enough that you can build a practice on it without a June-style rug-pull.</p>
+              <p class="impact-variant" data-variant="design-lead">Governance outcomes will trickle into your team as procurement criteria &mdash; certified models, audit trails, access guarantees &mdash; so the vocabulary being set in Geneva will show up in your tool approval forms.</p>
+              <p class="impact-variant" data-variant="strategist">If multilateral norms emerge, {domain} orgs get a more stable planning horizon for AI investment; if they don't, every tool decision keeps carrying unpriced geopolitical risk.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Honestly: almost no working designer is following this, and the ones who are treat it as background risk &mdash; the June outage taught practitioners to keep fallbacks, and that lesson matters more day-to-day than any communiqu&eacute;.</p>
+              <p class="impact-variant" data-variant="design-lead">A few leads at multinational orgs are being asked by legal to inventory which team workflows depend on models subject to which jurisdiction &mdash; tedious, and suddenly a real question.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists at global companies are tracking Geneva for one thing: any signal that export-control decisions will get multilateral consultation, which would make the Fable 5 scenario less likely to repeat without warning.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">For your daily craft, this is a passing trend: commissions produce language, not tooling, and no plausible Geneva outcome changes what you make or how &mdash; file it, keep your fallbacks, move on.</p>
+              <p class="impact-variant" data-variant="design-lead">Tag it passing for team practice too, with one caveat: if Geneva yields even informal export-consultation norms, the tail risk your team carried in June shrinks &mdash; worth a calendar note, not a process change.</p>
+              <p class="impact-variant" data-variant="strategist">The commission itself is likely symbolic, but the underlying current &mdash; AI access as diplomatic infrastructure &mdash; is durable; watch the export-control agenda item, ignore the group photo.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The access-gap framing is a real product brief: 2.2 billion people lack reliable internet, and AI products designed for offline-first or low-bandwidth {domain} contexts remain rare &mdash; a differentiation space most teams ignore.</p>
+              <p class="impact-variant" data-variant="design-lead">Products with global user bases should expect regulatory divergence to persist; teams that architect regional capability tiers deliberately will handle it better than teams that discover it in a launch blocker.</p>
+              <p class="impact-variant" data-variant="strategist">Whether Geneva produces interoperable rules or 169 incompatible ones determines whether global {domain} AI products face one compliance surface or many &mdash; that single variable moves roadmap cost more than any model release this quarter.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="divergent-thinking,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take the commission's access-gap brief seriously as a design constraint: sketch how one AI feature you use daily would work for a user with intermittent connectivity and a low-end device. What degrades, what's cached, what's cut entirely? The constraint-annotated sketch is the artefact &mdash; and a portfolio piece almost nobody else has.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Message someone in your legal, compliance, or policy function with one specific question: which of our AI tools are subject to export-control or jurisdiction risk, and who owns tracking that? Write down what you learn &mdash; including &ldquo;nobody owns it,&rdquo; if that's the answer. The recorded answer and its implication for your team is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a pre-mortem dated July 11: Geneva ended with only aspirational language, and separately, Geneva produced a real export-consultation framework. For each scenario, one paragraph on what your {domain} org should do differently starting Monday. If both paragraphs say the same thing, that's your finding &mdash; the governance outcome doesn't change your plan, and you can stop tracking it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="day-section" data-date="2026-07-03">
       <h4 class="day">Friday, July 3 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="design-tools">
