@@ -1127,7 +1127,412 @@
 
   <section class="month-section" data-month="2026-07">
     <h3 class="month">July 2026</h3>
-    <section class="day-section" id="today" data-date="2026-07-08">
+    <section class="day-section" id="today" data-date="2026-07-10">
+      <h4 class="day">Friday, July 10 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-07-10-gpt-56-family"
+                 data-category="models"
+                 data-published="2026-07-09"
+                 data-tags="openai,gpt-5.6,model-tiers,pricing,multi-agent">
+          <div class="head">
+            <h6 class="headline">OpenAI ships GPT-5.6 as a three-tier family &mdash; Sol, Terra, Luna &mdash; plus an "ultra" mode that runs four agents in parallel</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-09">Published July 9, 2026</time></p>
+          <p class="summary">OpenAI released the GPT-5.6 family on July 9 across ChatGPT, Codex, ChatGPT Work, and the API: Sol is the flagship for advanced coding and research ($5/$30 per million tokens), Terra matches GPT-5.5-generation performance at roughly half the cost ($2.50/$15), and Luna is the high-throughput budget tier ($1/$6). The notable interaction change is the new "ultra" setting, which coordinates four agents across parallel workstreams by default, trading token spend for stronger results on complex work. The models landed in GitHub Copilot the same day.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Model choice is now a three-way cost/latency/capability decision your product has to surface or hide, and "ultra" makes multi-agent orchestration a one-toggle default. When software decides for the user &mdash; and how parallel agent work is made legible &mdash; just became a mainstream design problem.</p>
+          <p class="source"><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">Source &mdash; OpenAI</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Parallel agent runs mean your {focus} explorations can fan out &mdash; four directions at once instead of one thread &mdash; but reviewing four concurrent streams of output is a new attention problem you will feel immediately.</p>
+              <p class="impact-variant" data-variant="design-lead">Tier selection becomes a team budget decision; expect to write guidance on which design work justifies flagship tokens and which runs fine on Luna, because individuals will otherwise default to the most expensive option.</p>
+              <p class="impact-variant" data-variant="strategist">Terra at half the cost of the previous generation resets AI feature unit economics again; any {domain} pricing model built on 2025 token costs is due a re-run this quarter.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are re-running yesterday's prompts across all three tiers to find where quality actually drops &mdash; the practical question is which daily tasks Luna handles fine, not which benchmark Sol wins.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are quietly auditing team spend now that a half-price Terra exists, and mostly finding that day-to-day usage never needed the flagship in the first place.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading "ultra" as a template: orchestration sold as a setting rather than a skill &mdash; and asking what that does to anyone currently charging for agent-architecture expertise.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Multi-agent parallelism as a default toggle reshapes how you work &mdash; you become a reviewer of concurrent streams &mdash; without changing what the work is.</p>
+              <p class="impact-variant" data-variant="design-lead">Team process absorbs this the way it absorbed CI: a new default in the pipeline and a new line in the budget, not a new discipline.</p>
+              <p class="impact-variant" data-variant="strategist">Tiered model families are now table stakes across every vendor; the craft-level change is real but the frame &mdash; pick capability, pay accordingly &mdash; is familiar procurement logic.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If OpenAI needs four parallel agents to lift quality on hard tasks, single-shot output has a ceiling worth designing around &mdash; build review moments into {focus} flows rather than assuming one good answer.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps should treat model tier as a product variable: which features get flagship intelligence and which degrade gracefully to the cheap tier is a UX decision, not an infrastructure one.</p>
+              <p class="impact-variant" data-variant="strategist">Price-performance is collapsing on a curve every vendor rides; durable {domain} advantage has to come from proprietary data, workflow lock-in, or taste &mdash; not from model access.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one real task from your current {focus} work and run it through all three GPT-5.6 tiers (or your vendor's equivalent tiers). Write a half-page verdict: where Luna was fine, where Terra broke, what only Sol got right &mdash; and which tier your product's own AI features should therefore default to. The comparison plus verdict is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft a one-page model-tier policy for your team: which categories of design work default to the cheap tier, which justify flagship tokens, and who signs off on parallel "ultra"-style runs. Circulate it and collect objections in an async thread. The policy with objections noted is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-paragraph memo re-running your product's AI unit economics at Terra prices ($2.50/$15 per million tokens, roughly half the previous generation): which {domain} feature that was too expensive in January is now viable, and what you would cut to fund it. End with a clear recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-07-10-grok-45-cursor"
+                 data-category="models"
+                 data-published="2026-07-08"
+                 data-tags="xai,grok,cursor,co-training,benchmarks">
+          <div class="head">
+            <h6 class="headline">SpaceXAI launches Grok 4.5, a 1.5T-parameter model trained alongside Cursor and claiming Opus-class performance</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-08">Published July 8, 2026</time></p>
+          <p class="summary">SpaceXAI released Grok 4.5 on July 8, built on its 1.5-trillion-parameter V9 foundation and positioned for coding, agentic tasks, and knowledge work. The company says the model was trained alongside Cursor, tuning it against real agentic coding workflows rather than generic benchmarks, and claims Opus-class performance. Public access rolled out this week via the Grok apps and API; note that the benchmark comparisons published so far are SpaceXAI's own.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A model co-trained with a specific tool signals where things are heading &mdash; models tuned to workflows, not leaderboards. The launch itself matters less than the pattern; the performance claims are vendor-reported until independent evals land.</p>
+          <p class="source"><a href="https://www.axios.com/2026/07/08/spacexai-grok-new-model" target="_blank" rel="noopener">Source &mdash; Axios</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If you work in Cursor, a model trained against your exact tool's workflows should reduce the prompt-translation tax in {focus} work; everywhere else, expect nothing to change until independent evals arrive.</p>
+              <p class="impact-variant" data-variant="design-lead">Model churn is now quarterly; the process cost is not evaluating Grok 4.5 specifically, it is lacking a standing way to evaluate any new model without derailing a sprint.</p>
+              <p class="impact-variant" data-variant="strategist">Co-training between model labs and tool vendors is a new coupling &mdash; when you standardize on a {domain} tool you are increasingly also picking its model partner.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are ignoring the launch and waiting for their tool of choice to expose it as a dropdown option &mdash; which is the honest measure of how commoditized model launches have become.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are asking one question: does anything in our stack actually get better this week? For teams outside Cursor the answer so far is no.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are tracking the vendor-benchmark pattern &mdash; every launch now ships with self-reported frontier-class claims, and the gap between claim and third-party eval is where procurement mistakes happen.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Another frontier-class launch changes little in your hands this week; capability parity between vendors is the norm now, and your tools will swap models under you either way.</p>
+              <p class="impact-variant" data-variant="design-lead">Unless your team runs on Cursor this is file-and-move-on; the co-training angle deserves a note in your tooling doc, the launch itself does not change process.</p>
+              <p class="impact-variant" data-variant="strategist">Frontier launches have stopped being strategic events in themselves; the co-training pattern is the signal worth tracking, and a signal is not yet a plan.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The Cursor co-training is the interesting product idea: tune the model to the surface rather than the surface to the model &mdash; worth stealing for any {focus} AI feature you design.</p>
+              <p class="impact-variant" data-variant="design-lead">If model quality converges, a product's edge lives in the workflow data it can tune against; that is a concrete argument for instrumenting your team's tools now.</p>
+              <p class="impact-variant" data-variant="strategist">Model-tool co-development deals will shape which products feel magical; expect exclusivity fights over workflow data in {domain} within the year.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Pick one vendor claim from the Grok 4.5 announcement (Opus-class performance, Cursor co-training gains) and write a half-page note on what evidence would actually verify it and what you would test in 30 minutes of hands-on use. Run the test if you have access. The verification plan plus findings is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write your team's standing model-evaluation checklist: three tasks from your real {domain} backlog that any new model must pass, who runs them, and what result triggers adoption. One page. This turns quarterly model churn from a recurring distraction into a routine process.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on model-tool co-training: if models are now tuned to specific tools' workflows, which of your org's workflow data would be worth a co-training partnership in {domain}, and what you would demand in return. End with a recommendation on whether to pursue one.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-07-10-chatgpt-work-sites"
+                 data-category="tools"
+                 data-published="2026-07-09"
+                 data-tags="openai,chatgpt-work,codex,prototyping,hosted-sites,agents">
+          <div class="head">
+            <h6 class="headline">OpenAI launches ChatGPT Work: Codex for non-coders, with hosted Sites turning prompts into shareable web apps</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-09">Published July 9, 2026</time></p>
+          <p class="summary">OpenAI launched ChatGPT Work on July 9, a desktop and mobile "super app" that combines ChatGPT with its Codex coding agent so non-coders can produce documents, presentations, and working software. Alongside it, Sites (public beta) turns outputs into hosted, shareable web apps &mdash; live dashboards, project trackers, prototypes, internal portals &mdash; delivered as a URL. Rollout started with Pro, Enterprise, and Edu users, expanding to Plus and Business; it runs on GPT-5.6 and lands squarely in the territory of Anthropic's Cowork.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Prompt-to-hosted-prototype means stakeholders can ship interactive artefacts without touching Figma or a repo. Your prototype's competition is no longer another designer's prototype &mdash; it is the PM's ChatGPT URL.</p>
+          <p class="source"><a href="https://money.usnews.com/investing/news/articles/2026-07-09/openai-launches-chatgpt-work" target="_blank" rel="noopener">Source &mdash; Reuters (via U.S. News)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Expect the artefacts you review in {focus} work to increasingly arrive as live URLs rather than static decks &mdash; and expect to make your own counter-proposals the same way, because a working thing beats a picture of one in any debate.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's intake will start receiving "here's a working version" instead of "here's a requirement"; triage needs an explicit lane for critique-of-built-things, which is a different skill from critique of mocks.</p>
+              <p class="impact-variant" data-variant="strategist">Internal tools that IT would have scoped over quarters can now appear in an afternoon; the design org's {domain} role shifts toward standards and guardrails for citizen-built software.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">The sharper ICs already run a two-track workflow &mdash; prompt-to-site tools for throwaway concept tests, Figma for what needs precision &mdash; and this launch mostly widens the first track.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are watching PMs demo ChatGPT-built prototypes in meetings this week and deciding whether to treat it as a threat or as free divergence to converge from.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are gaming out what happens to internal-tooling budgets when a hosted web app costs one prompt &mdash; and which vendor contracts that quietly bypasses.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">When anyone can produce a working interactive artefact, the frame shifts: your value is not producing the artefact but knowing which artefact is right &mdash; that is a reframe, not a speedup.</p>
+              <p class="impact-variant" data-variant="design-lead">The design team's monopoly on making things demo-able is over; teams need a new account of what design review is for when everything arrives already built.</p>
+              <p class="impact-variant" data-variant="strategist">Software creation is detaching from software teams; org design, procurement, and governance in {domain} all inherit a problem shaped like shadow IT with a URL.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">When built-and-hosted is the default fidelity, the discipline moves upstream: problem framing, flows, and deciding what not to build become the deliverables only you can produce.</p>
+              <p class="impact-variant" data-variant="design-lead">Definition-of-done needs updating &mdash; a working URL is no longer evidence of design intent, and teams need shared language for "functional but wrong."</p>
+              <p class="impact-variant" data-variant="strategist">OpenAI is bundling creation, hosting, and distribution into one subscription; every {domain} product that charges separately for one of those layers should re-check its moat this quarter.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Take a flow you recently designed in {focus} and rebuild it as a prompt-to-site artefact in ChatGPT Work or an equivalent. Then write the critique: what the generated version got structurally wrong that a stakeholder would not notice, and what that says about where your judgement is still load-bearing. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a half-page team position on prompt-built prototypes: when a PM's generated URL is welcome input, when it needs design review before user exposure, and how critique of built things differs from critique of mocks. Share it with your PM counterpart with one specific question, and log their response. The position plus reply is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-paragraph memo: ChatGPT Work turns every employee into a potential internal-tool builder in {domain}. Name the governance risk, the budget line it threatens, and the single policy you would ship this quarter in response. End with a clear recommendation and the trade-off it accepts.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="image-gen">
+        <h5 class="category-label">Image gen</h5>
+
+        <article class="entry"
+                 data-id="2026-07-10-seedream-5-pro"
+                 data-category="image-gen"
+                 data-published="2026-07-09"
+                 data-tags="bytedance,seedream,image-gen,layers,localization,infographics">
+          <div class="head">
+            <h6 class="headline">ByteDance's Seedream 5.0 Pro targets production design work: layer-separated editing, dense infographics, 10+ languages</h6>
+            <span class="badge image-gen">Image gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-09">Published July 9, 2026</time></p>
+          <p class="summary">ByteDance released Seedream 5.0 Pro on July 9, an image model aimed explicitly at professional design work rather than casual generation: interactive precision editing with layer separation, high-density infographics, native text rendering across more than ten languages, and photorealistic output tuned for video pipelines. fal shipped API access the same day. The pitch &mdash; ByteDance's own framing &mdash; is a model that "understands design," not just prompts.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Layer-separated editing and dense infographic generation attack the two things that kept generated imagery out of production files: you could not edit it structurally, and it could not handle information density. Both claims are worth testing against your real work before believing.</p>
+          <p class="source"><a href="https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro" target="_blank" rel="noopener">Source &mdash; ByteDance Seed</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Test whether "layer separation" means real structural control or marketing; if real, your {focus} comp-building starts from generated layers you rearrange rather than assets you place.</p>
+              <p class="impact-variant" data-variant="design-lead">Native multilingual text rendering could collapse your localization asset workflow from a vendor loop into an internal step &mdash; worth a scoped pilot before the next campaign cycle.</p>
+              <p class="impact-variant" data-variant="strategist">A credible dense-infographic generator touches data-viz, marketing, and documentation teams at once; evaluate it as {domain} infrastructure, not as a designer toy.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are throwing their hardest real briefs at it this week &mdash; a 40-datapoint infographic, a layered hero comp &mdash; because demos always work and the ninth revision is where image models break.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads with localization budgets are the most interested party: ten-language native text rendering is a line item, not a feature, if the accuracy holds.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists note ByteDance shipping pro-tool ambitions westward through API partners like fal &mdash; distribution first, brand later, the same route Seedance took in video.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">If layer separation holds up, generated images become editable material rather than final output &mdash; that changes your production workflow, not your job.</p>
+              <p class="impact-variant" data-variant="design-lead">Asset pipelines absorb another generation step; the team question is where human editing enters, and that is a workflow redesign rather than a reframe.</p>
+              <p class="impact-variant" data-variant="strategist">Image models competing on production editability rather than prettiness signals the market maturing into the existing design workflow, not around it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">"Understands design" is a claim about structure, not style &mdash; the test for any generative feature you build in {focus} is whether output arrives in the units users actually edit.</p>
+              <p class="impact-variant" data-variant="design-lead">If generated assets arrive layered and editable, review shifts from approve/reject to edit-in-place &mdash; plan tooling and rituals that support the latter.</p>
+              <p class="impact-variant" data-variant="strategist">The image-gen race is now about workflow fit; {domain} products that treat generation as an endpoint rather than editable material will feel dated within a year.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Take a real infographic or layered comp from recent {focus} work and rebuild it with Seedream 5.0 Pro (via fal's API or a playground). Write a half-page critique scoring the layer separation and text accuracy against your original &mdash; specifically what you could and could not fix without regenerating. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map your team's current localization-asset workflow end to end, then mark every step that native multilingual generation would remove or move. Write the one-paragraph verdict: pilot-worthy or not, and the quality gate a pilot must pass before touching real campaigns. The annotated map plus verdict is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a memo listing three asset categories in {domain} this commoditizes (with their current production cost), one thing it cannot touch, and where the saved design budget should be reinvested. Name the trade-offs and end with a recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-10-anthropic-30b-compute"
+                 data-category="industry"
+                 data-published="2026-07-09"
+                 data-tags="anthropic,revenue,compute,google,broadcom,enterprise">
+          <div class="head">
+            <h6 class="headline">Anthropic passes $30B run-rate and signs multi-gigawatt compute deal with Google and Broadcom</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-09">Published July 9, 2026</time></p>
+          <p class="summary">Anthropic announced on July 9 that run-rate revenue has passed $30 billion &mdash; up from roughly $9 billion at the end of 2025 &mdash; and that more than 1,000 business customers now spend over $1 million annually, a figure that doubled in under two months. Alongside the numbers, it expanded its partnership with Google and Broadcom for multiple gigawatts of next-generation compute, most of it sited in the US. The same day, OpenAI launched ChatGPT Work directly into Anthropic's enterprise territory.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The tools your practice runs on are funded by this enterprise race. Revenue concentration and gigawatt-scale compute deals determine which platforms are safe to build a workflow on &mdash; and whose roadmap will bend toward your kind of work.</p>
+          <p class="source"><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener">Source &mdash; Anthropic</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">No direct change to your hands-on work &mdash; but a vendor doubling million-dollar accounts in two months will keep shipping enterprise features first, which shapes what arrives in your {focus} tools and when.</p>
+              <p class="impact-variant" data-variant="design-lead">Vendor stability just became easier to defend in tooling proposals; cite the customer counts and the compute commitment, not the hype.</p>
+              <p class="impact-variant" data-variant="strategist">Compute deals at this scale are multi-year commitments to specific capability roadmaps; align your {domain} platform bets with where the gigawatts are going.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are not reading earnings news; the ones who are use it to pick which platform's skills compound &mdash; learning the tools of a growing vendor beats relearning after a shakeout.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are folding this into H2 tooling decisions, where "will this vendor exist and keep investing" is a scored criterion rather than a vibe.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading the same-day timing of OpenAI's ChatGPT Work launch as the real story: two vendors now openly fighting for the non-technical knowledge worker.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">A revenue milestone does not change what is in your hands this week; file it as context for tool-stability judgements and move on.</p>
+              <p class="impact-variant" data-variant="design-lead">Useful as a data point when someone questions whether the team's Claude-based workflow is a safe bet; not a reason to change anything.</p>
+              <p class="impact-variant" data-variant="strategist">The numbers feed vendor risk models, but enterprise-AI-grows-fast is already priced in; this confirms the trend rather than changing it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">A thousand companies paying seven figures for AI means the bar your product's AI features get compared against is set by well-funded tools your users touch at work every day.</p>
+              <p class="impact-variant" data-variant="design-lead">Enterprise revenue is funding rapid capability shifts; roadmap on the assumption that whatever AI feature differentiates you today is a commodity within two quarters.</p>
+              <p class="impact-variant" data-variant="strategist">The buyer landscape in {domain} is consolidating around a few compute-rich vendors; multi-vendor optionality is now a strategy worth costing rather than a slogan.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List the AI tools in your daily {focus} stack and, for each, note the vendor's position and what happens to your workflow if it disappears in 12 months. Mark the one dependency you would struggle to replace and write three sentences on your fallback. The dependency map is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="case-making,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft the vendor-stability section of your H2 tooling proposal: the two platform bets your team is making, the evidence for each vendor's durability, and the exit cost if you are wrong. Half a page, ready to paste into the next budget conversation. The draft is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-paragraph memo on single-vendor versus multi-vendor AI strategy for {domain}: what the concentration of enterprise spend implies, the real annual cost of maintaining optionality, and your recommendation with the trade-off named explicitly.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-07-08">
       <h4 class="day">Wednesday, July 8 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="image-gen">
