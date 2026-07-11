@@ -1127,7 +1127,336 @@
 
   <section class="month-section" data-month="2026-07">
     <h3 class="month">July 2026</h3>
-    <section class="day-section" id="today" data-date="2026-07-10">
+    <section class="day-section" id="today" data-date="2026-07-11">
+      <h4 class="day">Saturday, July 11 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-07-11-grok-45-verdict"
+                 data-category="models"
+                 data-published="2026-07-10"
+                 data-tags="grok,xai,benchmarks,hallucination,evaluation,model-routing">
+          <div class="head">
+            <h6 class="headline">Grok 4.5's first-day independent verdict: best agentic tool-use on the board, but hallucination rate doubles to 54%</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-10">Published July 10, 2026</time></p>
+          <p class="summary">Independent benchmarks landed 24 hours after Grok 4.5's launch, and they complicate the launch-day framing. Artificial Analysis ranks it fourth on its Intelligence Index (behind Claude Fable 5, GPT-5.5, and Opus 4.8) but with the single best agentic tool-use score of any model &mdash; while its hallucination rate jumped from 25% to 54% even as accuracy rose from 35% to 52%. Snorkel AI's GDPval+ evaluation on ~2,000 expert-authored professional tasks put Grok 4.5 first at 29% versus 22% for GPT-5.5 and 21% for Opus 4.8. xAI's claimed 4.2x token-efficiency advantage over Opus 4.8 is vendor math not yet independently reproduced, and reviewers flagged CursorBench scores as unreliable due to likely training-data overlap with Cursor session data.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The model that is best at taking actions is now also the model most confidently wrong when it generates text &mdash; picking a model per task is no longer a leaderboard read, it's a judgement about failure modes. Reading evaluations critically is becoming a working designer skill, not an ML-team luxury.</p>
+          <p class="source"><a href="https://www.eesel.ai/blog/grok-4-5-review" target="_blank" rel="noopener">Source &mdash; eesel AI (with Artificial Analysis and Snorkel AI data)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If you route agentic steps (file edits, tool calls) and text generation to the same model, this split verdict says stop: your {focus} workflow now needs a routing decision per step, with a validation pass wherever the output is prose you'll ship.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's tool guidance can no longer say "use model X" &mdash; it has to say which model for which class of work, and which outputs require a human check before they leave the team.</p>
+              <p class="impact-variant" data-variant="strategist">A 54% hallucination rate in a top-tier model resets the risk calculus for any {domain} feature that surfaces model-generated text directly to users; the cheapest model that acts well is not the safest model that writes well.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are quietly building personal routing habits &mdash; one model for scaffolding and tool-driven work, another for anything factual &mdash; and most are doing it from vibes rather than from held-out task sets of their own.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to treat benchmark releases like design reviews: reading the error categories, not the headline score, before letting a new model into team workflows.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are shifting procurement conversations from "which model is best" to "which failure profile can this workflow tolerate," and using independent evals like GDPval+ as the reference point instead of vendor decks.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Evaluation literacy is joining prototyping as table stakes: the designers who can read a hallucination-rate chart and change their workflow accordingly will outrun the ones who just switch to whatever topped the leaderboard.</p>
+              <p class="impact-variant" data-variant="design-lead">Model selection is becoming a recurring team ritual like design-system upkeep &mdash; not a one-time platform decision &mdash; and leads who build that muscle now will avoid whiplash every launch week.</p>
+              <p class="impact-variant" data-variant="strategist">The frame shifts from model loyalty to portfolio management; orgs that codify per-task routing will compound cost and quality advantages that single-vendor shops can't match.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Any screen you design that displays model output now needs an answer to "what does the user see when the model is confidently wrong?" &mdash; that's a design deliverable, not an edge case.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams should budget review capacity the way they budget QA: the models generating more also err with more confidence, so unreviewed output is accumulating silent risk.</p>
+              <p class="impact-variant" data-variant="strategist">Product bets that assumed model accuracy improves monotonically need revisiting; capability and reliability are diverging, and the roadmap has to price in verification infrastructure, not just API costs.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI-assisted workflow you ran this week in {focus}. Write a one-page routing card: for each step, name which model you'd use, why (action-heavy vs. accuracy-sensitive), and what the validation step is for any output where a confident hallucination would embarrass you. The card is the artefact &mdash; pin it where you work.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Tool mastery</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="critique,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Audit where your team currently ships model output without a human check &mdash; copy drafts, research summaries, generated components. Produce a one-page review-gate checklist: which output classes need validation, who validates, and what "validated" means. Share it at your next crit and note what the team pushes back on.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo recommending for or against adopting Grok 4.5 for a specific {domain} workflow, using the split evidence: best-in-class tool-use and GDPval+ lead versus a doubled hallucination rate and a contaminated coding benchmark. Name the trade-off you're accepting and the mitigation you'd require. Send it to one engineering or data counterpart for reaction.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-07-11-cowork-mobile-web"
+                 data-category="tools"
+                 data-published="2026-07-09"
+                 data-tags="anthropic,claude-cowork,mobile,agents,delegation">
+          <div class="head">
+            <h6 class="headline">Claude Cowork goes mobile and web: long-running agent sessions no longer need a desktop babysitter</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-09">Published July 9, 2026</time></p>
+          <p class="summary">Anthropic rolled Claude Cowork out to web, iOS, and Android on July 9 &mdash; the same day OpenAI launched ChatGPT Work &mdash; ending the requirement that an agentic session keep a desktop awake. Users can start a task at their desk, monitor it from a phone, and pick up the result in a browser; Chat and Cowork now share a single home screen, and projects and artifacts sync across platforms. Beta access rolls out gradually starting with Max subscribers, and Anthropic doubled Cowork usage limits through August 5 to mark the launch.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Supervising an agent from a phone is a genuinely new interaction surface &mdash; glanceable progress, interruption, and trust-at-a-distance are now live design problems, and you can study a shipping example first-hand instead of speculating.</p>
+          <p class="source"><a href="https://the-decoder.com/anthropics-claude-cowork-ai-agent-is-now-available-on-mobile-and-web/" target="_blank" rel="noopener">Source &mdash; The Decoder</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">You can now hand off a multi-hour {focus} task &mdash; audit, asset batch, research synthesis &mdash; and check on it between meetings from your phone, which changes what you delegate from "quick things" to "long things."</p>
+              <p class="impact-variant" data-variant="design-lead">The bottleneck moves from running agents to reviewing what they produced overnight; your team's process needs an explicit intake ritual for agent output, or it piles up unread.</p>
+              <p class="impact-variant" data-variant="strategist">Agentic work untethered from the desktop means design capacity planning starts to include machine-hours, and the org-level question becomes which recurring {domain} work gets standing delegation.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Early adopters are queueing agent tasks before lunch and commutes the way they used to queue file exports &mdash; and discovering that writing a good delegation brief is the actual skill.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are testing "agent standup" patterns: a fixed daily slot where the team reviews what delegated sessions produced, rather than letting async output interrupt focus time.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the Cowork/ChatGPT Work same-day launches as a category-formation moment and mapping which of their org's workflows both vendors are visibly racing to own.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Delegation-and-review is displacing do-it-live for a growing slice of production work; the craft doesn't disappear, it moves into the brief and the critique of what came back.</p>
+              <p class="impact-variant" data-variant="design-lead">Team rhythms built around synchronous work sessions will bend toward supervision rhythms &mdash; this reshapes rituals and staffing more than it reshapes any individual screen.</p>
+              <p class="impact-variant" data-variant="strategist">Mobile supervision removes the last practical excuse for keeping agentic work desktop-only; expect every serious productivity vendor to ship an equivalent within two quarters, making this a durable pattern rather than a feature.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If your product has any long-running process, study how Cowork communicates progress, partial results, and failure on a small screen &mdash; the patterns you need are being field-tested for you.</p>
+              <p class="impact-variant" data-variant="design-lead">Session-based engagement metrics undercount value when the work happens while the user is away; your team's success metrics for agentic features need rethinking before the dashboard misleads you.</p>
+              <p class="impact-variant" data-variant="strategist">Products competing for a user's active screen time are now also competing with products that work while the user is absent &mdash; a different value proposition that changes what "engagement" is worth in {domain}.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,agent-orchestration" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Delegate one real multi-step {focus} task to an agent (Cowork if you have access, Claude Code or equivalent otherwise), then deliberately check on it only from your phone. Write a half-page critique of the monitoring experience: what state information you needed and couldn't see, when you felt safe walking away, and the one screen you'd redesign. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map your team's recurring work into two columns: delegable to an unattended agent today vs. requires a human in the loop. For the delegable column, draft a short team norms doc &mdash; what gets delegated, what a good brief includes, and when the team reviews agent output. Bring it to your next team meeting as a proposal, not a policy.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on what ambient agentic work means for your {domain} product: if users increasingly delegate rather than operate, which of your current engagement metrics become misleading, and what would you measure instead? End with one concrete recommendation for the next planning cycle.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-11-openai-super-app"
+                 data-category="industry"
+                 data-published="2026-07-09"
+                 data-tags="openai,super-app,codex,plugins,consolidation,interaction-patterns">
+          <div class="head">
+            <h6 class="headline">OpenAI folds Codex and Atlas into one ChatGPT desktop app, with 15 @-mention plugins and an "Auto-Review" action gate</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-09">Published July 9, 2026</time></p>
+          <p class="summary">Alongside the GPT-5.6 and ChatGPT Work launches, OpenAI merged its standalone Codex desktop app into a single unified ChatGPT application and is sunsetting the Atlas browser, whose capabilities move into the unified app. ChatGPT Work ships with a plugins directory of 15 third-party integrations &mdash; Google Drive, SharePoint, Slack, Teams, Salesforce, Adobe, Canva, GitHub, and others &mdash; invoked explicitly via @ mention or auto-selected by the model. A new Auto-Review feature checks sensitive actions before they run; OpenAI claims it blocked 100% of data-extraction attempts in internal red-teaming, a vendor claim not yet independently validated.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The @-mention-a-tool pattern and the consolidation of chat, coding, and browsing into one surface are interaction decisions your stakeholders will now cite as precedent &mdash; better to have a formed opinion on where explicit invocation beats model auto-selection before someone asks for "the ChatGPT thing."</p>
+          <p class="source"><a href="https://thenewstack.io/openai-codex-work-atlas/" target="_blank" rel="noopener">Source &mdash; The New Stack</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">One app that chats, codes, browses, and reaches into 15 workplace tools compresses your context-switching &mdash; but it also means your {focus} work increasingly happens inside someone else's interaction model, not your own toolchain.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team standardizes on a super app, tool choices you used to make per-workflow get made once, upstream, by a vendor; the lead's job becomes auditing what that default costs you.</p>
+              <p class="impact-variant" data-variant="strategist">Consolidation raises switching costs deliberately; a {domain} org that adopts the unified surface is also adopting its plugin ecosystem, billing model, and action-review policy as a bundle.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are borrowing the @ mention pattern directly into their own product concepts &mdash; it's becoming the default answer to "how does the user point the AI at a data source" the way pull-to-refresh once spread.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are running side-by-side evaluations of ChatGPT Work and Claude Cowork for team workflows, and finding the real differentiator is integration quality, not model quality.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are re-reading the "full computing environment" framing as a platform land-grab and deciding now whether their product lives inside these surfaces, alongside them, or against them.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The unit of design is shifting from the app to the workflow that crosses apps; when the assistant is the surface, your product's UI is partly the quality of what it exposes to that assistant.</p>
+              <p class="impact-variant" data-variant="design-lead">Team output will increasingly be judged inside surfaces you don't control &mdash; leading design now includes designing your product's representation in other companies' agents.</p>
+              <p class="impact-variant" data-variant="strategist">"Chat interface to computing environment" is a structural reframe of where software value accrues; distribution through super-app plugin directories becomes a first-class channel strategy, not an integrations afterthought.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Auto-Review is a shipped example of the confirm-before-acting pattern at scale &mdash; worth dissecting for which actions it gates and how it avoids becoming a click-through nag.</p>
+              <p class="impact-variant" data-variant="design-lead">The explicit-vs-automatic tension (@ mention vs. model-picks-the-source) is the same control-vs-convenience trade-off your team faces in every agentic feature; this launch gives you a concrete reference to argue from.</p>
+              <p class="impact-variant" data-variant="strategist">A 100% internal red-team block rate is a marketing number until externally validated; product thinking in {domain} should treat vendor safety claims as inputs to your own risk assessment, never as substitutes for it.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one AI feature in your {focus} product (real or planned) and write a decision note on invocation: should the user explicitly point the AI at a source (@-mention style) or should the model auto-select? List three failure cases for each approach in your specific context, then commit to one and defend it in two sentences. The note is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Map every surface your product currently ships (app, web, extensions, integrations) on one page, then mark which would consolidate if you followed OpenAI's single-surface logic &mdash; and what breaks for users if you did. Share the map with one PM or engineer and capture their strongest objection in writing. The annotated map is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph positioning memo: if super apps become the default work surface, does your {domain} product plug into them, coexist beside them, or compete with them? Name what you'd gain and lose in the plugin-directory path specifically &mdash; distribution versus disintermediation &mdash; and end with a recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-07-11-fed-ai-taskforce"
+                 data-category="policy"
+                 data-published="2026-07-09"
+                 data-tags="federal-reserve,andreessen,ai-jobs,productivity,policy">
+          <div class="head">
+            <h6 class="headline">The Fed taps Marc Andreessen to co-lead a task force on AI's impact on productivity and jobs</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-09">Published July 9, 2026</time></p>
+          <p class="summary">Federal Reserve Chair Kevin Warsh announced five external task forces on July 9, including a Productivity and Jobs panel co-led by a16z co-founder Marc Andreessen, Stanford economist Charles I. Jones, and Microsoft's Asha Sharma. Its mandate: evaluate how AI and other emerging technologies are reshaping productivity, employment, and growth, with recommendations due by the end of 2026. Critics note the choice of one of Silicon Valley's most aggressive AI promoters to advise the central bank on AI's labor effects; supporters read it as the Fed finally treating AI-driven labor change as core to its dual mandate rather than a side topic.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The economics of design work &mdash; how much of it AI absorbs, what that does to headcount and wages &mdash; is now an official input to US monetary policy. The narratives this panel produces will shape how executives justify staffing decisions in your org.</p>
+          <p class="source"><a href="https://www.axios.com/2026/07/09/fed-warsh-task-force-andreessen" target="_blank" rel="noopener">Source &mdash; Axios</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Nothing in your daily {focus} workflow changes tomorrow, but the productivity story told about work like yours is being written at the policy level &mdash; knowing your own real numbers is the defense against someone else's narrative.</p>
+              <p class="impact-variant" data-variant="design-lead">Expect leadership to arrive with macro-level "AI productivity" talking points within quarters; leads who can answer with team-specific evidence will set their own terms instead of absorbing generic targets.</p>
+              <p class="impact-variant" data-variant="strategist">Official task-force findings become citation ammunition in budget and headcount debates; strategists should track what this panel publishes because it will surface in {domain} board decks by 2027.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Sharp ICs are keeping quiet personal logs of what AI actually saves them versus what it merely relocates &mdash; the honest ledger, not the demo reel.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are getting ahead of measurement mandates by defining their own productivity metrics before someone hands them a bad one from above.</p>
+              <p class="impact-variant" data-variant="strategist">Design-aware execs are positioning design as a discipline that redirects AI-freed capacity into quality and differentiation, rather than letting it be framed purely as a cost line to compress.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">A committee appointment doesn't change your craft; the underlying labor question is real, but this specific panel is one input among many &mdash; note it and get back to work.</p>
+              <p class="impact-variant" data-variant="design-lead">Task-force reports come and go; what persists is the expectation that leads can quantify AI's effect on their team, which predates and will outlast this panel.</p>
+              <p class="impact-variant" data-variant="strategist">The institutional signal &mdash; central banks formally modeling AI labor effects &mdash; matters more than the personnel; the panel itself is a headline, the normalization is the durable part.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If policy tailwinds accelerate enterprise AI adoption, more of what you design will be AI-assisted workflow tooling &mdash; the demand side of your own skill set is being subsidized.</p>
+              <p class="impact-variant" data-variant="design-lead">Products sold on "productivity gains" will face sharper scrutiny of that claim as official measurement frameworks emerge; teams should tighten how their {domain} products evidence the gains they promise.</p>
+              <p class="impact-variant" data-variant="strategist">Watch for the panel's framing &mdash; augmentation versus replacement &mdash; because whichever narrative wins will shape enterprise buying criteria and the positioning language your product needs.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a half-page honest inventory of your own productivity shift this year: which parts of your {focus} work have measurably compressed with AI, roughly by how much, and what you redeployed that time into. End with one line naming the contribution you make that the time savings didn't touch. Keep it &mdash; it's your counter-narrative document.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft the measurement framework you'd want used on your team before someone imposes one: three metrics that honestly capture AI's effect on your team's output and quality, and two vanity metrics you'd explicitly reject, with one sentence each on why. The framework doc is the artefact &mdash; share it with your manager as a preemptive proposal.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo taking a position: over the next two years, do AI productivity gains in {domain} show up as smaller teams or as more output per team? Cite one piece of evidence from your own org, name the strongest counter-argument, and state what your design organization should do differently in the next planning cycle if you're right.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+    </section>
+
+    <section class="day-section" data-date="2026-07-10">
       <h4 class="day">Friday, July 10 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
