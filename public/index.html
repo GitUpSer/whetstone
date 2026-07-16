@@ -1127,7 +1127,493 @@
 
   <section class="month-section" data-month="2026-07">
     <h3 class="month">July 2026</h3>
-    <section class="day-section" id="today" data-date="2026-07-15">
+    <section class="day-section" id="today" data-date="2026-07-16">
+      <h4 class="day">Thursday, July 16 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-07-16-gemini-rebuild-svg"
+                 data-category="models"
+                 data-published="2026-07-16"
+                 data-tags="google,gemini,model-quality,svg,tool-calling,evaluation">
+          <div class="head">
+            <h6 class="headline">Google scrapped Gemini 3.5 Pro's base model and rebuilt it from scratch &mdash; SVG generation was one of the three failures that forced the restart</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-16">Published July 16, 2026</time></p>
+          <p class="summary">Google scrapped the original Gemini 3.5 Pro &mdash; an evolution of the 2.5 Pro architecture &mdash; after Vertex AI enterprise testing surfaced structural failures in recursive tool-calling, complex SVG scene generation, and mathematical reasoning, and judged them architectural rather than fixable in post-training. The rebuilt model targets GA tomorrow, July 17. As of today there is no official API endpoint, model card, or benchmark; the circulating specs (2M-token context, Deep Think reasoning on the $250/month Ultra tier, roughly $15/$60 per million tokens) are third-party estimates, not confirmed figures.</p>
+          <p class="why"><strong>Why this matters for you:</strong> One of the three failures that made a frontier lab throw away a base model was SVG generation &mdash; structured visual output is now launch-gating, which tells you how central design artefacts have become to what these models are sold to do.</p>
+          <p class="source"><a href="https://aitoolsrecap.com/Blog/ai-news-july-16-2026" target="_blank" rel="noopener">Source &mdash; AIToolsRecap</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If the model ships tomorrow, its rebuilt tool-calling and SVG generation are exactly the capabilities you lean on for diagram, icon, and layout generation in {focus} &mdash; test them on your own tasks before trusting anyone's benchmark chart.</p>
+              <p class="impact-variant" data-variant="design-lead">Launch weeks like this are where teams burn sprint time chasing model swaps; a standing evaluation script built from your team's real {focus} tasks turns launch noise into a one-hour go/no-go decision.</p>
+              <p class="impact-variant" data-variant="strategist">Enterprise testing through Vertex AI is what forced the rebuild &mdash; org-level evaluation feedback now shapes frontier launches, which makes your evaluation programme leverage with vendors, not procurement paperwork.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs burned by the June delay have shifted to a wait-and-verify posture: running a small personal task suite within the first 48 hours of any launch instead of migrating workflows on day one.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are keeping a two-model policy &mdash; a default plus a vetted fallback &mdash; after a summer of outages and slips made single-vendor design workflows a visible operational risk.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating launch dates as soft until a model card exists, and writing roadmap dependencies against verified capabilities rather than announced ones.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Structured visual generation joining math and tool-calling as launch-gating capabilities changes what "model quality" means for daily design work &mdash; the craft frame holds, but the evaluation bar you apply inside it just moved.</p>
+              <p class="impact-variant" data-variant="design-lead">Model evaluation is becoming a recurring team ritual with owners and criteria, like design QA &mdash; a real process change, but still within the existing frame of running a design team.</p>
+              <p class="impact-variant" data-variant="strategist">Frontier vendors competing on design-output reliability is the market maturing around existing needs, not a reframe of what design tooling is for &mdash; plan for better tools, not a different game.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Google took an embarrassing six-week slip rather than ship a model weak at SVG and tool-calling &mdash; quality-gating over date-gating is a stance worth copying for your own {focus} feature launches.</p>
+              <p class="impact-variant" data-variant="design-lead">"Architectural, not fixable in post-training" is a distinction your team should learn to make about its own AI features: some failures need a redesign, and more prompt patching only delays admitting it.</p>
+              <p class="impact-variant" data-variant="strategist">When capability gaps are architectural, slips are non-negotiable &mdash; build model-dependency buffers into any {domain} plan that assumes a specific vendor ship date.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Build your launch-day audit today, before the model drops: pick three tasks from {focus} &mdash; one complex SVG scene, one multi-step tool chain, one long-document question &mdash; and run them on your current default model, recording the outputs. When Gemini 3.5 Pro ships, rerun the identical tasks and write a five-line pass/fail verdict per task. The scored comparison is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Draft your team's standing model-evaluation script: five recurring {focus} tasks, explicit pass criteria for each, who runs it, and the threshold that justifies a default-model switch. Circulate it as a one-page proposal so the next launch week costs the team one hour instead of a sprint of ad-hoc experiments. The proposal is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph vendor-dependency memo for {domain}: list which shipped or planned product capabilities silently assume one vendor's model behaviour, what the July delay season would have cost you at each point, and a clear recommendation for single- versus dual-vendor posture with the trade-offs named. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-16-ode-implementation"
+                 data-category="industry"
+                 data-published="2026-07-15"
+                 data-tags="anthropic,ode,enterprise-ai,implementation,services,workflows">
+          <div class="head">
+            <h6 class="headline">Anthropic-backed Ode launches: forward-deployed AI engineers bet the next trillion-dollar AI business is implementation, not models</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-15">Published July 15, 2026</time></p>
+          <p class="summary">Ode &mdash; the $1.5B Anthropic joint venture with Blackstone, Hellman &amp; Friedman, Goldman Sachs and others first announced in May &mdash; formally launched on July 15. Its model embeds AI engineers inside enterprise organisations to deploy Claude, wire it into real workflows, and leave behind infrastructure the client can maintain: not consulting decks, not SaaS seats. The thesis: roughly 95% of enterprise AI usage still runs on frontier models with no routing, task optimisation, or workflow integration, so the enterprise ROI gap is an implementation problem, not a capability problem.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If the constraint on AI value is workflow integration, the scarce skill is understanding how work actually flows through an organisation &mdash; which is a design-research skill currently wearing an engineering job title.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The forward-deployed engineer's first task &mdash; map how work actually flows before touching the model &mdash; is contextual inquiry by another name; your {focus} research skills transfer directly to the highest-leverage step of AI deployment.</p>
+              <p class="impact-variant" data-variant="design-lead">If implementation is where AI value gets created or lost, your team's workflow maps and service blueprints stop being research artefacts and become deployment specifications &mdash; treat them with that rigour.</p>
+              <p class="impact-variant" data-variant="strategist">The design function's claim on AI budgets strengthens: the 95% integration gap is precisely the territory design research owns, and Ode's launch prices what closing it is worth.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">A small number of ICs are already doing informal Ode work &mdash; mapping their own team's workflows and wiring agents into them &mdash; and finding it more valued than another polished mockup; most are still waiting for the brief to arrive.</p>
+              <p class="impact-variant" data-variant="design-lead">Forward leads are pairing designers with engineers on internal AI rollouts specifically for workflow mapping; laggard orgs are buying licences, skipping integration, and becoming the 95% statistic.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the labs verticalise into services &mdash; OpenAI's Deployment Company in May, Ode now &mdash; and asking whether their own {domain} implementation know-how is a moat or the next thing a lab bundles.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">"Better model wins" was the frame; "better-integrated model wins" is the replacement &mdash; the unit of progress in your work shifts from output quality to workflow fit, and that is a different discipline.</p>
+              <p class="impact-variant" data-variant="design-lead">Team value stops being measured by shipped screens and starts being measured by working, adopted workflows &mdash; a structural change in what a design team is for, not a process tweak.</p>
+              <p class="impact-variant" data-variant="strategist">When labs, PE firms, and banks jointly fund implementation as a standalone trillion-dollar category, the "capability race" frame for AI strategy is officially the wrong frame &mdash; deployment capacity is the race.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">"Leave behind infrastructure the client can maintain" is a product principle worth stealing for {focus}: design AI features whose value survives the expert who configured them leaving.</p>
+              <p class="impact-variant" data-variant="design-lead">The renewal logic &mdash; deployments with measurable ROI renew, underused licences churn &mdash; applies to internal tools too; instrument adoption and outcome, not seat counts, when your team ships AI workflows.</p>
+              <p class="impact-variant" data-variant="strategist">If enterprises are tightening AI budgets around visible ROI, {domain} products that make their own value measurable in the buyer's terms win renewals that feature-count competitors lose.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a one-person Ode engagement on your own team: pick one recurring workflow in {focus}, map it end-to-end as it actually happens (tools, handoffs, wait states), mark the two steps where an agent would remove the most friction, and sketch the integration &mdash; what it reads, what it writes, who approves. The annotated workflow map is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Audit your org against the 95% statistic: list every AI tool your team pays for, and for each one write a single honest line &mdash; integrated into a real workflow, or used as a smarter chatbot. Take the two worst offenders to your engineering counterpart with a specific integration proposal for one of them. The audit plus the proposal message is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo answering: if an Ode team walked into your {domain} org tomorrow, what would they build in 90 days, and what would that reveal about the gap between your AI spend and your AI value? End with a recommendation &mdash; buy that capability, build it internally, or accept the gap deliberately &mdash; with the trade-offs stated. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-07-16-meta-business-agents"
+                 data-category="industry"
+                 data-published="2026-07-15"
+                 data-tags="meta,agents,whatsapp,enterprise,distribution,compute">
+          <div class="head">
+            <h6 class="headline">Meta rolls out its Business Agent Platform globally &mdash; and starts renting out its data centers like a cloud provider</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-15">Published July 15, 2026</time></p>
+          <p class="summary">Meta is rolling out the Meta Business Agent Platform globally, giving enterprises infrastructure to build, customise, and deploy AI agents inside the billion-plus daily customer conversations flowing through WhatsApp, Messenger, and Instagram. Alongside it, the new Meta Compute business sells excess AI infrastructure to outside customers &mdash; backed by up to $145B in AI capex this year, a 14-gigawatt compute target for 2027, and a five-year $27B capacity deal with Nebius. The distribution pitch is the differentiator: no rival can put enterprise agents in front of customers inside messaging surfaces they already use daily.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The next mainstream agent-design brief is not a chat canvas you control &mdash; it is a brand agent living inside someone's WhatsApp thread, with the platform owning the surface, the conventions, and most of the guardrails.</p>
+          <p class="source"><a href="https://aibusiness.com/agentic-ai/meta-rolls-out-ai-agent-enterprises-globally" target="_blank" rel="noopener">Source &mdash; AI Business</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing an agent for a surface you don't own inverts your process: no layout, no custom components &mdash; the design material becomes conversation policy, tone, escalation rules, and failure behaviour inside {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's deliverables for messaging-surface agents look like decision trees, response guidelines, and red-line lists rather than screens &mdash; the review rituals built around mockups need an equivalent for behaviour specs.</p>
+              <p class="impact-variant" data-variant="strategist">Channel strategy becomes design strategy: choosing whether your {domain} brand meets customers in Meta's surfaces, your own app, or both now determines what your designers can actually control.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs who shipped support bots are dusting off conversation-design skills that spent five years unfashionable; the ones writing behaviour specs and eval rubrics are the ones getting staffed on agent work.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at consumer brands are already fielding "put an agent in WhatsApp" requests from commercial teams and discovering nobody owns agent behaviour quality &mdash; the gap is being filled ad hoc by whoever shows up.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are mapping the four-way enterprise-agent land grab &mdash; Meta, Google's Gemini Enterprise, Microsoft, and NVIDIA/ServiceNow &mdash; and betting distribution beats capability in this round.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Agent behaviour design inside platform-owned surfaces is a genuine new specialisation within the craft &mdash; conversation design's second act, with higher stakes and less pixel control.</p>
+              <p class="impact-variant" data-variant="design-lead">The team's skill mix shifts toward behaviour specification and evaluation, but the leadership frame &mdash; quality standards, review, ownership &mdash; carries over intact from screen-based work.</p>
+              <p class="impact-variant" data-variant="strategist">Agents as a distribution channel extends the platform playbook we already know from app stores and social feeds; consequential, but a familiar strategic shape rather than a new one.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">When the agent is the product, the spec is the design: acceptance criteria for {focus} agent features are behavioural (what it refuses, when it escalates) and you should be the one writing them.</p>
+              <p class="impact-variant" data-variant="design-lead">Meta monetising surplus compute is a reminder that AI products carry infrastructure economics; your team's agent ambitions should be scoped against inference cost per conversation, not just user value.</p>
+              <p class="impact-variant" data-variant="strategist">Distribution inside existing trusted surfaces beat feature depth in every prior platform cycle; assume it will again, and decide early whether {domain} rides Meta's rails or differentiates by owning the relationship.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page behaviour spec for a hypothetical {domain} brand agent living in WhatsApp: tone rules, the five most common intents with target responses, three hard red lines it must never cross, and the exact condition that hands off to a human. Then stress-test it by writing the two nastiest user messages you can and checking your spec covers them. The spec is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Before the "agent in WhatsApp" request reaches your team, write the half-page ownership proposal: who defines agent behaviour standards, who reviews them, what the quality bar is, and which existing design rituals extend to cover it. Send it to your product counterpart as a pre-emptive claim on the work. The proposal is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-paragraph channel memo for {domain}: what your product gains by meeting customers through a Meta-surface agent (reach, zero-install), what it surrenders (surface control, data position, differentiation), and a clear recommendation with the condition under which you would reverse it. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+
+        <article class="entry"
+                 data-id="2026-07-16-fli-safety-index"
+                 data-category="research"
+                 data-published="2026-07-15"
+                 data-tags="safety,governance,evaluation,vendors,trust,accountability">
+          <div class="head">
+            <h6 class="headline">Future of Life Institute grades the frontier labs &mdash; the best mark is a C+, and safety promises are quietly being walked back</h6>
+            <span class="badge research">Research</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-15">Published July 15, 2026</time></p>
+          <p class="summary">The Future of Life Institute released its 2026 AI Safety Index: Anthropic tops the table with a C+, OpenAI and Google DeepMind sit at C, Meta at D+, and xAI, DeepSeek, and Mistral effectively fail. The index scores risk management, transparency, governance, and whether labs honour their own stated safety commitments &mdash; and its bluntest finding is that several major labs have quietly softened promises made in earlier, more scrutinised moments. The valedictorian earning a C+ is the story.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Your product's trustworthiness inherits your model vendor's governance, whether you chose that or not &mdash; the governance column now belongs next to the benchmark column in every model decision your team makes.</p>
+          <p class="source"><a href="https://futureoflife.org/ai-safety-index/" target="_blank" rel="noopener">Source &mdash; Future of Life Institute</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The index's method &mdash; grade against stated commitments, not aspirations &mdash; is directly reusable for {focus}: audit your AI feature's actual behaviour against what your own product copy promises users.</p>
+              <p class="impact-variant" data-variant="design-lead">Model selection reviews your team runs should now include a governance line item with a named owner &mdash; someone has to be able to answer "what did our vendor walk back this year?"</p>
+              <p class="impact-variant" data-variant="strategist">Independent scorecards give you a citable, third-party input for vendor decisions that internal benchmarks can't provide &mdash; use them in {domain} procurement before a regulator or customer uses them on you.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs pick models on capability and price alone and treat safety posture as someone else's job; the few who read system cards are becoming the de facto trust experts on their teams.</p>
+              <p class="impact-variant" data-variant="design-lead">Almost no design teams track vendor governance; legal and security teams do it in parallel, with conclusions that never reach the people designing the AI-facing experience.</p>
+              <p class="impact-variant" data-variant="strategist">Enterprise buyers have started citing safety indices in RFPs the way they cite SOC 2 &mdash; strategists at AI-dependent companies are pre-writing their answers before the question arrives.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Vendor trust evaluation is becoming part of the designer's job the way accessibility did &mdash; an added responsibility inside the existing craft, with scorecards like this as the emerging tooling.</p>
+              <p class="impact-variant" data-variant="design-lead">Governance-aware model selection joins the team's process like any compliance-adjacent practice &mdash; real work, real ownership, but not a redefinition of what the team does.</p>
+              <p class="impact-variant" data-variant="strategist">Third-party safety grading is maturing into standard market infrastructure, like credit ratings &mdash; it reshapes vendor dynamics without changing the underlying strategic game.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The walked-back-promises finding is a design pattern warning: commitments your product makes in high-scrutiny moments (launch, crisis) get quietly diluted later unless someone owns keeping score in {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">If even frontier labs drift from stated commitments under delivery pressure, your team's AI principles doc will too &mdash; build a periodic self-audit into the roadmap, not just the launch checklist.</p>
+              <p class="impact-variant" data-variant="strategist">A C+ ceiling across the industry means safety leadership is cheap to claim and rare to hold &mdash; for {domain} products, demonstrable governance is an available differentiation few competitors will do the work to match.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run the FLI method on your own product: list every promise your AI feature's UI copy, marketing page, or onboarding makes about behaviour, privacy, or accuracy in {focus} &mdash; then grade each one A&ndash;F against what the feature actually does today. Write one sentence per grade defending it. The graded audit is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Message whoever owns vendor risk at your company &mdash; legal, security, or procurement &mdash; with one specific question: which of our AI vendors' safety commitments changed in the last year, and how would design find out? Turn the answer (or the silence) into a proposed one-line addition to your team's model-selection checklist. The checklist addition is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Draft the RFP answer before the question arrives: a one-page statement of how your {domain} product's AI governance would be graded by an FLI-style index &mdash; what you'd score well on, where you'd get the C, and the two cheapest moves that would raise the grade before a customer or regulator asks. The statement is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-07-16-state-federal-split"
+                 data-category="policy"
+                 data-published="2026-07-16"
+                 data-tags="regulation,anthropic,openai,state-law,preemption,ipo">
+          <div class="head">
+            <h6 class="headline">Anthropic endorses state AI safety laws while OpenAI pushes federal pre-emption &mdash; the deepest regulatory split in AI is also an IPO story</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-16">Published July 16, 2026</time></p>
+          <p class="summary">Politico reporting confirms Anthropic is backing a state-by-state push for tougher AI safety laws &mdash; endorsing California SB 53, the New York RAISE Act, Illinois SB 315, and the Massachusetts Transparency Bill &mdash; while OpenAI lobbies for a single federal standard that would pre-empt state rules. The commercial logic is blunt: Anthropic's Responsible Scaling Policy already meets what the state bills require, making them a moat; for OpenAI they are 50-state compliance overhead. Both companies are heading into Q4 IPOs, which turns regulatory strategy into an investor-relations disclosure.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Compliance-as-differentiation is a strategy your own product can run &mdash; if you already meet the standard a regulation would impose, that regulation is your moat, and someone on your team should know which pending rules fit that description.</p>
+          <p class="source"><a href="https://aitoolsrecap.com/Blog/anthropic-state-ai-laws-openai-federal-preemption-2026" target="_blank" rel="noopener">Source &mdash; AIToolsRecap (via Politico)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">State bills mandate documentation and disclosure &mdash; artefacts that mostly get designed: model cards users can read, risk notices, transparency flows in {focus} are design work arriving via legislation.</p>
+              <p class="impact-variant" data-variant="design-lead">If the state-law path wins, your team designs for the strictest state and ships it everywhere &mdash; the "California baseline" pattern from privacy design is about to repeat for AI features.</p>
+              <p class="impact-variant" data-variant="strategist">Which regulatory regime wins determines whether {domain} compliance is one design system or fifty variants &mdash; that uncertainty itself is a planning input for the next two roadmap cycles.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs who lived through GDPR and CCPA are recognising the shape early and templating disclosure patterns now; everyone else will design them under deadline when the first bill passes.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at AI-heavy companies are adding a regulatory-watch item to design ops &mdash; usually one person tracking two or three bills &mdash; so requirements arrive as briefs instead of emergencies.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are gaming both outcomes: a patchwork favours incumbents with compliance muscle, a federal standard favours speed &mdash; and positioning {domain} products to survive either is the current exercise.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Regulated-AI design &mdash; disclosures, audit trails, transparency UX &mdash; is becoming a standing part of the job, the way privacy design did after 2018; the craft absorbs it without being redefined.</p>
+              <p class="impact-variant" data-variant="design-lead">Compliance-aware design process is a real addition to how teams run, but it follows the playbook leads already learned from GDPR &mdash; new content, familiar frame.</p>
+              <p class="impact-variant" data-variant="strategist">Regulation-as-moat is one of the oldest strategic plays in regulated industries now arriving in AI &mdash; consequential for positioning, but not a new way of thinking about strategy.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Anthropic's move shows the cheapest compliance is the kind you already do &mdash; designing {focus} features to a high transparency bar now is buying future regulatory compliance at today's prices.</p>
+              <p class="impact-variant" data-variant="design-lead">The two labs' answers to "how does regulation affect you?" &mdash; "no change" versus "we're lobbying" &mdash; are the two answers your product will eventually give a customer; decide which one you're building toward.</p>
+              <p class="impact-variant" data-variant="strategist">When your practices already exceed a proposed rule, endorsing the rule raises rivals' costs at zero cost to you &mdash; scan {domain} for pending standards where your product could run Anthropic's play.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Read the disclosure requirements of one state bill (California SB 53 summaries are the most accessible) and design the artefact it would force: a user-facing transparency screen for an AI feature in {focus} &mdash; what the model does, its limits, where its data goes &mdash; written so a non-technical user actually understands it. The screen and its copy are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write the regulatory-watch proposal for your team: which two bills or standards most plausibly reach your {domain} product, who on the team owns tracking each, and what the trigger is for turning a bill's movement into a design brief. Send it to your manager as a half-page ops addition, not a policy essay. The proposal is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run Anthropic's play on paper for {domain}: identify one pending regulation or industry standard your product already substantially meets, and write a one-paragraph memo arguing for or against publicly endorsing it &mdash; naming what it costs competitors, what it costs you, and the reputational risk if the rule changes. The memo with a clear recommendation is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-16-mews-ai-layoffs"
+                 data-category="jobs-industry"
+                 data-published="2026-07-15"
+                 data-tags="layoffs,ai-efficiency,team-structure,labor,org-design">
+          <div class="head">
+            <h6 class="headline">Hotel-software unicorn Mews cuts 15% of staff and names the reason plainly: AI efficiency</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-15">Published July 15, 2026</time></p>
+          <p class="summary">Mews, the hotel-software unicorn, cut roughly 15% of its workforce &mdash; about 170 of 1,350 roles &mdash; and explicitly attributed the reduction to AI efficiency, saying individuals can now own end-to-end work that previously required teams. Most companies dress these decisions in restructuring euphemisms; Mews naming AI directly makes it one of the most candid corporate admissions yet that AI-driven headcount reduction is a present-tense line item, not a future risk. Notably, this is a healthy, growing company cutting because the work changed shape.</p>
+          <p class="why"><strong>Why this matters for you:</strong> "Individuals own end-to-end work that previously required teams" is a sentence about you &mdash; the defensible position is being the individual who can own the end-to-end work, and knowing which parts of it still require your judgement.</p>
+          <p class="source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-15-2026" target="_blank" rel="noopener">Source &mdash; Build Fast with AI</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">End-to-end ownership means your process must now span research, design, copy, and prototype in {focus} &mdash; the gaps between your skills are where a team used to be, and they are yours to close deliberately.</p>
+              <p class="impact-variant" data-variant="design-lead">If one person can own what a pod owned, your team's process built on handoffs between specialists is carrying structural overhead &mdash; redesign around fewer, broader owners before finance does it for you.</p>
+              <p class="impact-variant" data-variant="strategist">Org design is becoming a design problem: the ratio of specialists to end-to-end owners in {domain} teams is now a strategic variable with a visible cost line attached.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">The ICs thriving are quietly absorbing adjacent skills &mdash; shipping copy, running their own research, prototyping in code with AI help &mdash; and becoming the end-to-end owners the Mews memo describes.</p>
+              <p class="impact-variant" data-variant="design-lead">Honest leads are auditing which roles on their team exist because of coordination overhead AI now removes, and reshaping proactively; others are waiting for the budget review to do it to them.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching candour like Mews's become normal &mdash; and preparing for the second-order effect: retention risk among exactly the broad-skilled people the new structure depends on.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The career frame of "go deep in a specialty and a team covers the rest" is breaking &mdash; the unit of professional value is shifting from the specialist role to the end-to-end owner, which changes what you practice.</p>
+              <p class="impact-variant" data-variant="design-lead">Team design premised on specialist handoffs is the wrong frame when individuals can own whole workflows &mdash; leadership becomes designing ownership boundaries, not coordinating between roles.</p>
+              <p class="impact-variant" data-variant="strategist">Headcount stops being a proxy for capacity &mdash; when a growing company cuts 15% while output holds, workforce planning models built on the old ratio are structurally miscalibrated for {domain}.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Smaller teams owning whole products means your {focus} decisions get fewer reviews before shipping &mdash; the quality bar that reviewers used to enforce has to live in your own checklist now.</p>
+              <p class="impact-variant" data-variant="design-lead">Pods of two or three end-to-end owners ship faster but concentrate risk &mdash; product processes need lightweight peer review that catches errors without rebuilding the coordination overhead you just removed.</p>
+              <p class="impact-variant" data-variant="strategist">If your customers are running Mews-style reductions, products sold per-seat lose revenue as accounts shrink &mdash; {domain} pricing tied to outcomes rather than headcount is the hedge worth modelling now.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Map yourself against the Mews sentence: list the steps of one full project in {focus} from brief to ship, mark which you can own today, which AI covers with your supervision, and which still require someone else &mdash; then write three sentences on the single skill that would close the biggest gap and how you'll practice it this month. The map plus the plan is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run the audit before finance does: for each role type on your team, write one honest line on how much of its work is coordination overhead that AI-assisted end-to-end ownership would remove. Then sketch the two-years-out team shape you would defend in a budget review &mdash; and the reskilling path that gets your current people there. The team-shape sketch is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-page memo on what Mews-style candour would mean for {domain}: if your company (or your customers) cut 15% citing AI efficiency, which functions shrink first, what happens to per-seat revenue you sell or buy, and one concrete pricing or positioning move that hedges it. End with a recommendation, not a summary. The memo is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-07-15">
       <h4 class="day">Wednesday, July 15 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="tools">
