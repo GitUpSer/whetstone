@@ -1127,7 +1127,493 @@
 
   <section class="month-section" data-month="2026-07">
     <h3 class="month">July 2026</h3>
-    <section class="day-section" id="today" data-date="2026-07-16">
+    <section class="day-section" id="today" data-date="2026-07-17">
+      <h4 class="day">Friday, July 17 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-07-17-kimi-k3-launch"
+                 data-category="models"
+                 data-published="2026-07-16"
+                 data-tags="moonshot,kimi,open-weights,frontend-code,pricing,china">
+          <div class="head">
+            <h6 class="headline">Moonshot ships Kimi K3 — an open 2.8T model that now leads the Frontend Code arena</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-16">Published July 16, 2026</time></p>
+          <p class="summary">Moonshot AI released Kimi K3 on July 16: a 2.8-trillion-parameter MoE model with a 1M-token context window, with open weights promised by July 27. Artificial Analysis places it behind only Claude Fable 5 on long-horizon knowledge work, and it now tops Arena.ai's Frontend Code arena — ahead of Fable 5. Pricing is $3/$15 per million tokens, Sonnet-level and the most expensive Chinese-lab release to date; AI and semiconductor stocks fell Friday on the news.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The model that currently generates the best frontend code is open-weight and Chinese. If UI code generation is a commodity a $3 model wins at, the differentiated work moves further up the stack — into interaction models, taste, and system design.</p>
+          <p class="source"><a href="https://simonwillison.net/2026/Jul/16/kimi-k3/" target="_blank" rel="noopener">Source — Simon Willison's Weblog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">A top frontend-code model at half of Opus pricing means your prototype-in-code loop gets cheaper and probably better — worth an hour testing whether it renders your {domain} components more faithfully than your current default.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's tool defaults now have a credible open-weight challenger at the top of a public arena; the question isn't loyalty to a vendor, it's whether your design-to-code pipeline is portable enough to swap models when leaderboards flip.</p>
+              <p class="impact-variant" data-variant="strategist">Frontend generation quality is converging across labs and blocs; planning around any single model's advantage is now a weeks-long bet, not a yearly one.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are already routing UI-generation tasks through OpenRouter to A/B new models against their incumbent within hours of release — treating models as swappable engines, not platforms.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are quietly maintaining a two-model policy: a sanctioned default for shipped work plus a rotating challenger slot, so arena upsets like this get evaluated instead of ignored.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are tracking the cost curve more than the capability curve — Chinese open-weight models undercutting Western labs by 50-90% is showing up in tooling budget conversations, with procurement and compliance teams pulled in early.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Open-weight models reaching frontier quality on UI code doesn't change what design is, but it finishes the job of making "can produce clean frontend code" a commodity skill rather than a differentiator.</p>
+              <p class="impact-variant" data-variant="design-lead">The craft reshape for teams is evaluation: when the best model changes monthly, knowing how to test a model against your own bar becomes a core team competency.</p>
+              <p class="impact-variant" data-variant="strategist">Not a new way of thinking — the open-vs-closed and East-vs-West dynamics were already set — but K3 compresses the timeline on which code generation stops being a paid moat for anyone.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a $0.94-per-task model can build the screen, the scarce input in your product process is deciding which screen is worth building — sharpen the judgement artefacts (specs, critiques, tradeoff notes) that feed the model.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams should treat model choice like a dependency with a changelog: budget review time when a leaderboard flips, the same way you'd review a major framework upgrade.</p>
+              <p class="impact-variant" data-variant="strategist">Open weights arriving two weeks after the hosted launch means capability diffuses to competitors almost instantly — product moats built on "we use the best model" are now structurally unstable.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Run the same UI-generation prompt — a real component from your {domain} work, not a toy — through Kimi K3 (via OpenRouter) and your current default model. Ship nothing; instead write a 10-line critique comparing the two outputs on structure, accessibility, and fidelity to your design system. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Draft a one-page "model challenger" policy for your team: what triggers an evaluation (arena flip, 2x price gap), who runs it, what the pass bar is, and what data can legally touch an open-weight or Chinese-hosted model. Circulate it to one engineer and one legal/compliance contact for reaction.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo: list three capabilities in your {focus} product that K3-class code generation just made commodity, then name the one thing your team ships that a competitor with the same model still can't copy. If you can't name one, that's the finding — say so and propose where to build it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-07-14-bonsai-27b-iphone"
+                 data-category="models"
+                 data-published="2026-07-14"
+                 data-tags="on-device,prismml,bonsai,compression,mobile,privacy">
+          <div class="head">
+            <h6 class="headline">Bonsai 27B squeezes a 27B multimodal model into 3.9GB — and it runs on an iPhone</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-14">Published July 14, 2026</time></p>
+          <p class="summary">PrismML released Bonsai 27B, a 1-bit/ternary compression of Qwen3.6-27B that runs locally on an iPhone 17 Pro at about 11 tokens per second while keeping 90-95% of full-precision performance. It's multimodal, handles reasoning and agentic tasks, and is free under Apache 2.0. PrismML's CEO says Apple and others are evaluating it — the same week Apple cleared its China AI approval.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A capable model that runs on the user's phone changes the design constraints you've been working under: no per-token cost, no network dependency, privacy by default. Features you cut because inference was too expensive or too slow to round-trip may now be viable.</p>
+          <p class="source"><a href="https://9to5mac.com/2026/07/14/prismml-releases-bonsai-27b-claiming-first-major-ai-model-of-its-size-fit-for-iphone/" target="_blank" rel="noopener">Source — 9to5Mac</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing AI features no longer starts from "every call costs money and takes a second" — at 11 tok/s you design for streaming and progressive disclosure, but you can put AI behind interactions you'd never spend cloud tokens on.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared rubric for which features belong on-device (summarise, classify, draft) versus cloud (deep reasoning) — that routing decision is now a design decision, not just an infra one.</p>
+              <p class="impact-variant" data-variant="strategist">On-device capability resets the cost model for AI-heavy product lines: features with zero marginal inference cost can be free-tier defaults instead of premium upsells.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">A small number of ICs are prototyping with local models in LM Studio or Ollama to feel the latency and failure modes first-hand; most are still designing exclusively for cloud APIs and will be surprised by the constraint shift.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at mobile-first companies are starting to ask engineering for an honest on-device capability map — what actually runs on their user base's median device, not the demo phone.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching Apple's evaluation signals closely: if platform owners ship capable local models as OS features, third-party apps inherit AI capability for free — and lose it as a differentiator.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing local-first AI is a genuine reframe: offline states, privacy affordances, and zero-cost interactions invert assumptions the last three years of AI UX patterns were built on.</p>
+              <p class="impact-variant" data-variant="design-lead">The hybrid routing question — which tasks go where, and how the seams show up in UX — is a new problem space without established patterns; teams that develop them first will set the conventions.</p>
+              <p class="impact-variant" data-variant="strategist">If routine AI work migrates on-device, the token-metering economics that shaped every AI product's pricing page stop applying to a large slice of usage — that's a structural reframe, not an optimisation.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Start treating "does this need the cloud?" as a per-feature question in your specs — the answer changes the latency budget, the error states, and whether the feature works on a plane.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps built on "AI features cost money per use" need a review pass; some cut features come back, and some premium tiers lose their justification.</p>
+              <p class="impact-variant" data-variant="strategist">The caveat is real — 11 tok/s is usable, not fast, and 1-bit compression loses capability on hard tasks — so the strategic play is hybrid routing, not a wholesale bet on local.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,divergent-thinking" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Pick one AI feature in your {focus} product that was scoped down or cut for inference cost or latency. Redesign it on paper assuming a free, private, offline model at 11 tokens/second: sketch the streaming states, the offline affordance, and one interaction that only makes sense when every call is free. The annotated sketch is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Message your platform or mobile engineering lead with one specific question: "What's the largest model that runs acceptably on our median user's device today, and what would it take to ship one feature on it?" Log the answer next to your AI feature backlog — it's the routing constraint your next planning cycle needs.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a one-paragraph memo on what on-device AI does to your product's pricing architecture: which metered or premium AI features lose their cost justification if inference becomes free at the margin, and what you'd charge for instead. End with a clear recommendation and one trigger event that would make you act on it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+
+        <article class="entry"
+                 data-id="2026-07-17-pelican-benchmark-decay"
+                 data-category="research"
+                 data-published="2026-07-16"
+                 data-tags="evaluation,benchmarks,svg,willison,model-testing">
+          <div class="head">
+            <h6 class="headline">Willison: the pelican benchmark no longer tracks model quality — but personal evals still earn their keep</h6>
+            <span class="badge research">Research</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-16">Published July 16, 2026</time></p>
+          <p class="summary">Simon Willison, 21 months into his "pelican riding a bicycle" SVG test, concedes the correlation between a good pelican and a good model is "mostly severed" — GLM-5.2 out-draws GPT-5.6 and Claude Fable 5 without being a Fable-class model. His argument for keeping it anyway: a personal eval forces you to actually run every new model, reveals token pricing and hidden system prompts, and gives you a comparable trace across releases. What it can't measure is what now matters most — reliable agentic tool calling over long conversations.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Every designer evaluating AI tools has some version of a pelican — a pet prompt they judge models by. This is a clear-eyed account of when those smoke tests inform and when they mislead, from the person who ran the most famous one.</p>
+          <p class="source"><a href="https://simonwillison.net/2026/Jul/16/kimi-k3/" target="_blank" rel="noopener">Source — Simon Willison's Weblog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If your model-picking ritual is "generate a screen and eyeball it," you're running a decayed pelican — your process needs at least one eval that exercises tool calling and long-context behaviour, because that's where your agentic design tools actually live.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's informal model preferences are probably anchored on visual smoke tests from a year ago; the process fix is a small shared eval suite tied to real team tasks, refreshed when it stops discriminating.</p>
+              <p class="impact-variant" data-variant="strategist">Vendor benchmark claims and public arenas are diverging from workload fit — planning decisions need private evals on your own tasks, not leaderboard positions.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs still judge models on a favourite one-shot prompt; a growing minority keep a small folder of real past tasks — a component spec, a critique request, a redlines pass — and rerun them on each release.</p>
+              <p class="impact-variant" data-variant="design-lead">A few leads have started treating eval prompts like design tokens: versioned, shared, and owned — so "which model do we use" has an answer backed by evidence instead of whoever tried it last.</p>
+              <p class="impact-variant" data-variant="strategist">Analysts and strategists lean on third-party indices like Artificial Analysis while acknowledging their private task suites disagree with public arenas more every quarter.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Evaluation is becoming a designer's craft skill: knowing how to build a small honest test of a model against your own bar is now as practical as knowing your way around a component library.</p>
+              <p class="impact-variant" data-variant="design-lead">Team-level eval hygiene — shared suites, refresh cadence, decay awareness — is joining critique and design review as a standing ritual, not a one-off tooling decision.</p>
+              <p class="impact-variant" data-variant="strategist">Not a reframe of what evaluation is for, but a reshape of who does it: judgement about model fit is moving from ML teams into every discipline that consumes models daily.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The pelican lesson generalises to your product's AI features: any internal quality bar you set once will silently decay as models change underneath it — build the refresh into the process.</p>
+              <p class="impact-variant" data-variant="design-lead">When a benchmark stops discriminating, teams keep trusting it out of habit; put an owner and an expiry date on every quality gate your AI features ship through.</p>
+              <p class="impact-variant" data-variant="strategist">Products that surface model output need decay monitoring the way they need uptime monitoring — the model your {domain} feature was tuned against is not the model serving it six months later.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Build your own three-prompt eval from real {focus} work: one visual task, one tool-calling task, one long-context task (paste a full spec and ask for contradictions). Run it against two current models, score each 1-5, and write down what each prompt failed to reveal. The scored sheet plus the "blind spots" note is the artefact — rerun it on the next release.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Tool mastery</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,critique" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Audit how your team currently decides which AI tools and models to use: write down the actual last three decisions and what evidence drove each. Then draft a half-page team eval ritual — three shared prompts from real team tasks, who reruns them, and the signal that a prompt has decayed and needs replacing. Share it in your next design ops sync.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on benchmark risk in your org: identify one decision made in the last quarter on the strength of a public leaderboard or vendor benchmark, assess whether a private eval on your own {domain} tasks would have agreed, and recommend which decisions should require internal evidence going forward.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-07-15-codex-micro-keypad"
+                 data-category="tools"
+                 data-published="2026-07-15"
+                 data-tags="openai,codex,hardware,agents,interaction-design,ambient">
+          <div class="head">
+            <h6 class="headline">OpenAI's first hardware is a $230 keypad for supervising coding agents</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-15">Published July 15, 2026</time></p>
+          <p class="summary">OpenAI and keyboard maker Work Louder launched Codex Micro, a $230 limited-run macro pad for the Codex coding agent: six frosted keys whose LEDs show live agent status (white idle, blue thinking, green done, red error), command keys for accepting or rejecting code, a rotary dial that adjusts reasoning effort, and a joystick for switching workflows. Tap to select an agent, double-tap to bring it to the foreground.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Strip away the gadget and this is a shipped answer to an open interaction-design question: how do you supervise multiple agents without staring at chat windows? Ambient status, glanceable state, and dedicated accept/reject affordances are patterns you can use in software today.</p>
+          <p class="source"><a href="https://www.engadget.com/2215952/openai-launches-a-physical-keypad-for-controlling-agents/" target="_blank" rel="noopener">Source — Engadget</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The four-colour status vocabulary and tap/double-tap selection model are a compact reference for any multi-agent UI you're designing — steal the glanceability, not the hardware.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team is designing agent supervision surfaces, this is a rare shipped artefact to critique together — cheaper than running your own explorations from zero.</p>
+              <p class="impact-variant" data-variant="strategist">OpenAI externalising agent state into a physical object signals that agent supervision is becoming its own workflow category — worth a line in any plan that assumes chat remains the container.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designers running multiple coding agents today mostly juggle terminal tabs and notification noise — the pain this keypad targets is real and largely unsolved in software.</p>
+              <p class="impact-variant" data-variant="design-lead">Some leads are experimenting with dashboards and status bars for team agent fleets; almost nobody has settled patterns, which is why a keyboard vendor got there first.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists read this alongside OpenAI's Jony Ive acquisition and the Apple lawsuit: a software company practising hardware in public, with a niche accessory as the training run.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The keypad itself is a limited-run collectible most people will skip — but the interaction patterns it encodes (ambient status, physical accept/reject) will outlive it in software.</p>
+              <p class="impact-variant" data-variant="design-lead">Don't budget for desk hardware; do expect agent-supervision UI to become a recurring design request, because that demand is what this product is evidence of.</p>
+              <p class="impact-variant" data-variant="strategist">Honest call: dedicated AI peripherals are a passing trend for now — the durable signal is OpenAI rehearsing consumer hardware muscles ahead of the Ive-designed device.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Agent-heavy products need a supervision layer designed as deliberately as the agent itself — status, interruption, and approval are product surfaces, not implementation details.</p>
+              <p class="impact-variant" data-variant="design-lead">When your product runs agents for users, ask in every review: can the user tell what the agent is doing right now without opening a chat log?</p>
+              <p class="impact-variant" data-variant="strategist">The accept/reject affordance getting physical buttons is a reminder that human approval is the bottleneck agentic products compete on — whoever makes supervision effortless wins the workflow.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,divergent-thinking" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Design a software-only "Codex Micro" for your {focus} product: a glanceable agent-status surface using at most four states and two actions (accept/reject). Sketch it as a menu-bar widget or a persistent strip, annotate the state transitions, and note one thing the physical version does that your software version can't. The annotated sketch is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Divergent thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="critique,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Run a 30-minute team critique of Codex Micro from the product photos and spec: what does the four-colour status model get right, where does it break at ten agents instead of six, and which of its affordances belong in your product's agent UI? Capture the conclusions as three written design principles for agent supervision in your {domain}.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on where agent supervision sits in your product strategy: is it a feature, a surface, or a product? Use Codex Micro as evidence that a market is forming, name one competitor move that would force your hand, and recommend whether to invest now or fast-follow. Include the trade-off you're accepting.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-15-apple-china-qwen"
+                 data-category="industry"
+                 data-published="2026-07-15"
+                 data-tags="apple,alibaba,qwen,china,regulation,two-stacks">
+          <div class="head">
+            <h6 class="headline">Apple Intelligence clears China — running on Alibaba's Qwen, not Apple's models</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-15">Published July 15, 2026</time></p>
+          <p class="summary">Apple Intelligence has been registered with the Cyberspace Administration of China, the approval Apple needed to ship generative AI features in mainland China — powered by Alibaba's Qwen models, with Baidu contributing additional features. China requires every large model to be domestically registered, and foreign models don't clear that bar, so the world's most valuable company is renting a Chinese model for its second-largest market. No launch date yet.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If even Apple has to swap the model under its flagship AI features by geography, model-agnostic product design stops being a nice-to-have. Features that depend on one model's specific behaviour are now a portability liability.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If your {focus} product might ever serve China or model-restricted markets, design AI features to a behaviour contract (tone, format, refusal handling) rather than to one model's quirks — you may not control which engine runs underneath.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's AI design specs need a portability section: which behaviours are guaranteed by your prompts and evals, and which are accidental properties of the current model.</p>
+              <p class="impact-variant" data-variant="strategist">Geographic model swaps mean one product, two stacks — plan for duplicated eval suites, localisation-style QA for AI behaviour, and features that degrade gracefully across models.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs design against whichever model their company standardised on and have never tested their flows on a second model — the Apple deal is the argument for trying it once.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at global companies are starting to treat model behaviour like copy localisation: something that varies by market and needs review, not something that's identical everywhere.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are re-mapping the competitive landscape around market access rather than model quality — Alibaba just gained iPhone-scale validation without winning any benchmark.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The single global AI stack was the frame; it's now the wrong frame — designing for "which model is under this feature in this market" is a structurally new consideration, like RTL layouts or data residency before it.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams shipping globally need to internalise that AI behaviour is jurisdiction-dependent — that's a new axis in every design review, not a tweak to the current one.</p>
+              <p class="impact-variant" data-variant="strategist">Market access beating model quality as the deciding factor is a reframe of how the AI platform race is scored — the map is now regulatory, not just technical.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Write specs that separate the user promise ("summarises your notes accurately") from the implementation ("uses model X") — the promise has to survive a model swap the way Apple's features must survive Qwen.</p>
+              <p class="impact-variant" data-variant="design-lead">Product planning should tag every AI feature with its portability risk: what breaks, and how visibly, if the underlying model changes for cost, policy, or geography.</p>
+              <p class="impact-variant" data-variant="strategist">The two-stack world adds a standing question to every AI product bet: which bloc's models, regulators, and app stores does this depend on, and what's the cost of needing both?</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Take one AI feature you've designed and run its three most important prompts through a different model family than it ships on (e.g. Qwen via OpenRouter if you ship on Claude). Write a half-page "swap report": what held, what broke, and which parts of the experience were secretly load-bearing on one model's behaviour. The report is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Add a "model portability" row to your team's AI feature spec template: guaranteed behaviours, model-specific assumptions, and the degradation plan if the model changes. Then walk one recent spec through it with the engineer who owns the integration and record what you both didn't know.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a one-paragraph position memo: if your {domain} product had to enter a market where your current model is unavailable, what would you run instead, what would the switching cost be, and does that change any architecture decision being made this quarter? Name the trade-off and make a recommendation — hedge now or accept the lock-in explicitly.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-07-16-waico-founding"
+                 data-category="policy"
+                 data-published="2026-07-16"
+                 data-tags="waico,china,governance,shanghai,geopolitics">
+          <div class="head">
+            <h6 class="headline">29 countries sign China-led World AI Cooperation Organization in Shanghai</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-16">Published July 16, 2026</time></p>
+          <p class="summary">Twenty-nine countries — including Russia, Indonesia, Pakistan, Kazakhstan, and Laos — signed an agreement establishing the World Artificial Intelligence Cooperation Organization (WAICO), an intergovernmental body headquartered in Shanghai. Chinese Foreign Minister Wang Yi signed for China; UN Secretary-General Guterres attended. The signing opens the World AI Conference (July 17-20), which Xi Jinping is attending in person for the first time. No major Western economy is a founding member.</p>
+          <p class="why"><strong>Why this matters for you:</strong> AI governance is formalising into blocs, and standards bodies shape product requirements years later — the way GDPR reshaped consent UX. Where your product's markets sit relative to these blocs will eventually show up in your design constraints.</p>
+          <p class="source"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/29-nations-join-china-led-world-ai-cooperation-organization/" target="_blank" rel="noopener">Source — PYMNTS</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Nothing changes in your Figma file this week — but disclosure, labelling, and consent patterns for AI features will increasingly have two regulatory reference points instead of one, and you'll design to the stricter of the two.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team ships into WAICO-member markets, compliance-driven design requests (AI content labelling, data-handling disclosures) now have a second possible source — worth a standing line in your intake process.</p>
+              <p class="impact-variant" data-variant="strategist">Standards bodies move slowly then all at once; the design-process impact arrives when WAICO publishes technical standards, and the time to assign someone to watch for that is now.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Almost no ICs track intergovernmental AI bodies, and that's rational — the practical move is knowing which colleague does, so regulatory changes reach you as design requirements rather than surprises.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at global companies are adding regulatory-watch items to design ops the way accessibility compliance entered the process a decade ago: reluctantly, then permanently.</p>
+              <p class="impact-variant" data-variant="strategist">Policy-aware strategists are mapping which of their markets are WAICO members versus Western-aligned, because divergent AI rules mean divergent product requirements — the same split the Apple-Qwen deal shows commercially.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Honest call: founding declarations rarely change practice, and WAICO may stay symbolic — the durable trend is the bloc formation underneath it, which the Apple-Qwen story captures more concretely for your daily work.</p>
+              <p class="impact-variant" data-variant="design-lead">Treat the org itself as a watch item, not a workstream; commit team attention only if it starts publishing standards with member-state enforcement behind them.</p>
+              <p class="impact-variant" data-variant="strategist">The signature ceremony is likely a passing moment — but note the founding membership skews toward the Global South, which is where the next billion AI users are, so dismissing it entirely would be a mistake.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The lesson for product thinking is lead time: GDPR was four years from adoption to enforcement, and the teams that fared best had designed for it early — file this as the earliest possible signal, not a requirement.</p>
+              <p class="impact-variant" data-variant="design-lead">Multi-market products should already maintain a regulatory requirements matrix; WAICO is a new column header with empty cells, cheap to add now and expensive to retrofit.</p>
+              <p class="impact-variant" data-variant="strategist">Two competing governance blocs means compliance is becoming a market-selection criterion — some markets may simply cost too much to serve well, and that's a product strategy decision, not a legal one.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,judgement" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Map the regulatory surface of one AI feature you own: list every point where a regulator could plausibly demand disclosure, labelling, consent, or an off switch. Mark which of those your current design already handles and which would require rework. The gap list is the artefact — keep it next to the spec.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Find out who in your company actually owns AI regulatory watch — legal, policy, or nobody — and ask them one specific question: which upcoming AI rules could generate design requirements for your {domain} product in the next year? Write their answer (or the fact that nobody owns it) into your design ops notes and flag it to your manager if the seat is empty.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Build a one-page bloc map for your product: list your top markets, tag each as Western-aligned, WAICO-member, or unaligned on AI governance, and note which model stack you can legally run in each. End with one sentence on where the map forces a choice your roadmap hasn't acknowledged. The map is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-07-16">
       <h4 class="day">Thursday, July 16 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
