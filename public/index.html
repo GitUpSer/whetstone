@@ -1127,7 +1127,327 @@
 
   <section class="month-section" data-month="2026-07">
     <h3 class="month">July 2026</h3>
-    <section class="day-section" id="today" data-date="2026-07-18">
+    <section class="day-section" id="today" data-date="2026-07-19">
+      <h4 class="day">Sunday, July 19 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-07-19-gemini-slips-again"
+                 data-category="models"
+                 data-published="2026-07-17"
+                 data-tags="google,gemini,delay,alphabet,frontier-models,roadmap-risk">
+          <div class="head">
+            <h6 class="headline">Gemini 3.5 Pro slips again — Google&rsquo;s rebuilt flagship misses its July 17 window and Alphabet drops 4%</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-17">Published July 17, 2026</time></p>
+          <p class="summary">Gemini 3.5 Pro, widely expected to launch July 17, reportedly slipped again after the rebuilt model fell short on coding and long-horizon reasoning in internal testing; Alphabet shares fell about 4% on the reports. This is the second setback after Google scrapped the original base model in June and restarted pretraining. Google has published no model card, pricing, or benchmarks — every leaked spec, from the 2-million-token context window to the ~$15/$60 per-million pricing, remains unconfirmed.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If any part of your AI-feature roadmap was quietly waiting on a leaked model, it just slipped with it. Plans built on shipped capability survive weeks like this; plans built on rumored capability don&rsquo;t.</p>
+          <p class="source"><a href="https://techstartups.com/2026/07/17/top-tech-news-today-july-17-2026-anthropic-apple-google-meta-moonshot-ai-nvidia-more/" target="_blank" rel="noopener">Source — Tech Startups</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Any {focus} concept you prototyped against Gemini 3.5 Pro&rsquo;s leaked specs — the 2M context window especially — needs re-grounding in a model that actually exists; design explorations pinned to unshipped capability are fiction, not options.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team&rsquo;s design-review question changes from &ldquo;which model will we use?&rdquo; to &ldquo;which shipped capability does this depend on?&rdquo; — delays like this are why specs should name verified behaviour, not vendor roadmaps.</p>
+              <p class="impact-variant" data-variant="strategist">Planning design capacity around a vendor&rsquo;s launch calendar is now demonstrably risky; org-level AI bets need a shipped-capability floor and an explicit fallback when the flagship doesn&rsquo;t land.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs mostly aren&rsquo;t waiting: teams that needed long-context capability this month already routed around Google to Fable 5, GPT-5.6, or Kimi K3 — the honest pattern is that nobody&rsquo;s workflow pauses for a delayed launch anymore.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are quietly maintaining two-column tool plans — &ldquo;what we build on today&rdquo; versus &ldquo;what we&rsquo;d revisit if X ships&rdquo; — so a slipped launch reorders a backlog instead of blowing up a quarter.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading the 4% Alphabet drop as the market pricing model risk itself — and applying the same discount to any internal plan that assumes a specific frontier model arrives on schedule.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">A delayed launch doesn&rsquo;t change how you design; the durable lesson — verify capability before you build on it — was already true, and this is just its loudest recent example.</p>
+              <p class="impact-variant" data-variant="design-lead">The news cycle will move on within a week; what should persist on your team is the habit of treating unreleased models as rumors in planning documents, not dependencies.</p>
+              <p class="impact-variant" data-variant="strategist">Whether Google ships in September or December doesn&rsquo;t reshape the field&rsquo;s structure — the multipolar race and the open-weight offensive were already the story, and this delay only confirms the pace-setters have changed.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">&ldquo;Refusing to ship a flawed flagship&rdquo; is a product decision worth studying: Google took a 4% market-cap hit rather than ship below its bar — ask what your equivalent quality floor is on your {focus} work.</p>
+              <p class="impact-variant" data-variant="design-lead">Build roadmaps that degrade gracefully: each AI feature should name the capability it needs, the model that provides it today, and what ships anyway if the better model never arrives.</p>
+              <p class="impact-variant" data-variant="strategist">Being late is survivable; being late and behind is not — the same brutal calculus applies to your product&rsquo;s AI features, where a delayed differentiator can quietly become a delayed commodity.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Pull up one AI feature spec or prototype from your {domain} work and highlight every assumption tied to a model capability you haven&rsquo;t personally verified — context length, latency, reasoning depth, cost. Rewrite the two riskiest assumptions against a model you can use today, and note what the feature loses. The annotated spec is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Build a model-dependency table for your team&rsquo;s active AI features: feature, capability required, model assumed, and what happens if that model is delayed, degraded, or swapped. Mark the single most fragile dependency and draft one mitigation. Share the table at your next design crit — the table plus mitigation is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo taking a position: should your {domain} product commit deeply to one frontier lab&rsquo;s roadmap or stay deliberately model-agnostic? Use this week — Gemini slipping while Kimi K3 topped the coding arena — as your evidence base. Name the switching cost, the exclusivity upside, and close with a recommendation someone could act on this quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-07-19-apple-passes-nvidia"
+                 data-category="industry"
+                 data-published="2026-07-17"
+                 data-tags="apple,nvidia,market-cap,kimi-k3,distribution,commoditisation">
+          <div class="head">
+            <h6 class="headline">Apple briefly passes Nvidia as the world&rsquo;s most valuable company — the Kimi K3 shock reprices the AI trade</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-17">Published July 17, 2026</time></p>
+          <p class="summary">On Friday July 17, Apple closed in on a $4.88 trillion market cap and briefly unseated Nvidia, whose shares slid about 3.5% after Moonshot&rsquo;s open-weight Kimi K3 topped the Frontend Code Arena and rattled confidence in the compute trade. Nvidia reclaimed the top spot by the closing bell, so the crown is contested — but the rotation is real: investors are hedging from the company that sells AI hardware toward the one that puts AI in front of billions of users.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The market just voted on where AI value settles as models commoditise — distribution and experience, the layer designers own. That is a stronger argument for design&rsquo;s seat at the strategy table than any internal advocacy deck.</p>
+          <p class="source"><a href="https://www.forbes.com/sites/tylerroush/2026/07/17/apple-unseats-nvidia-as-worlds-largest-company/" target="_blank" rel="noopener">Source — Forbes</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If raw model capability is being repriced as a commodity, the differentiated part of your {focus} work is the experience wrapped around it — interaction quality, trust, and fit — which shifts where your craft hours should concentrate.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team&rsquo;s process should spend less time comparing models and more time on the parts no model swap can replace: the workflows, defaults, and product judgement that make an AI feature feel inevitable rather than bolted on.</p>
+              <p class="impact-variant" data-variant="strategist">Design investment now maps to where markets say value lives — the ecosystem layer; that reframes design headcount from cost centre to the function that builds the moat compute can&rsquo;t.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs at product companies are noticing their leverage quietly rising: when every competitor rents the same models, hiring conversations and portfolio reviews increasingly probe taste and product judgement, not tool checklists.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are borrowing the Apple argument in planning cycles — distribution and ecosystem beat raw capability — to defend experience work that was being deprioritised for model-chasing feature bets.</p>
+              <p class="impact-variant" data-variant="strategist">Design-aware execs are re-running the value-chain analysis: if open models like K3 keep topping charts days before their weights go free, paying frontier prices for undifferentiated capability becomes the position to explain, not the default.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">&ldquo;Which model is best?&rdquo; was the organising question of the last two years; &ldquo;who owns the experience once models are interchangeable?&rdquo; is the organising question now, and it puts your work at the centre rather than downstream.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams organised around model capability (prompt teams, model-eval rituals) are organised around a depreciating asset — the durable frame is organising around user problems that survive any backend swap.</p>
+              <p class="impact-variant" data-variant="strategist">The market cap inversion is an early signal of a structural reframe: value migrating from the picks-and-shovels layer to the distribution layer, the same arc the internet and mobile both followed.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If capability is abundant and cheap, shipping the tenth chatbot is a losing move — product thinking shifts to what your {domain} product knows about its users that a general model never will.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmap debates should move from &ldquo;can the model do it?&rdquo; (increasingly yes) to &ldquo;should we, and why us?&rdquo; — differentiation logic replaces feasibility logic as the gating question.</p>
+              <p class="impact-variant" data-variant="strategist">Apple&rsquo;s position — own the surface, rent the intelligence, keep the margin — is now the reference strategy; the product-thinking question for your org is which surface you own that agents and models must pass through.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="differentiation,critique" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Write a three-and-one list for your current {focus} project: three things commodity models now do for free that used to be differentiating work, and one thing only a designer with taste and user context can still contribute. For the one, write a short paragraph defending why no model swap erodes it. The list plus defence is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="advocacy,cross-functional" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Prepare a 15-minute conversation for your next team or leadership sync: where does your product&rsquo;s value sit if models are commodities — capability layer, experience layer, or distribution layer? Sketch your product&rsquo;s stack on one slide, mark where design effort currently goes versus where the durable value is, and end with one reallocation proposal. The slide and proposal are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo answering: if frontier capability becomes free within two years — the trajectory K3, DeepSeek, and Inkling suggest — what is your {domain} product&rsquo;s moat? Choose one: proprietary data, workflow lock-in, distribution surface, or brand trust. Name what you would stop investing in as a result, and make one recommendation with a named owner.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-07-19-anthropic-meta-compute"
+                 data-category="industry"
+                 data-published="2026-07-17"
+                 data-tags="anthropic,meta,compute,infrastructure,tool-economics">
+          <div class="head">
+            <h6 class="headline">Anthropic in early talks to lease about $10B of compute from Meta — rivals are becoming each other&rsquo;s landlords</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-17">Published July 17, 2026</time></p>
+          <p class="summary">CNBC reports Anthropic is in very preliminary talks to lease AI computing capacity from Meta in a deal worth roughly $10 billion. Meta is spending $125&ndash;145 billion on AI infrastructure this year and openly building a cloud business from its excess capacity; Anthropic, heading toward an IPO, wants predictable compute costs badly enough to rent from a direct frontier-model competitor. Both companies declined to comment, and the talks may not produce a deal.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The AI tools in your daily workflow are priced by landlord economics now. Capacity crunches upstream arrive at your desk as rate limits, throttled features, and surprise price changes — tool reliability has become something to plan for, not assume.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/07/17/anthropic-meta-ai-compute.html" target="_blank" rel="noopener">Source — CNBC</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your {focus} workflow now has a supply chain: the assistant you design with sits on rented capacity several deals deep, so latency spikes and rate limits are structural weather, not bugs — build slack into deadlines that assume AI throughput.</p>
+              <p class="impact-variant" data-variant="design-lead">Team process built on one AI tool inherits that tool&rsquo;s infrastructure politics; the resilient version names a fallback tool per critical workflow the same way you&rsquo;d name a backup vendor anywhere else.</p>
+              <p class="impact-variant" data-variant="strategist">Compute scarcity is now a design-planning input: the cost curve of the AI features you greenlight depends on deals like this one, which argues for designing features whose economics survive a 2x inference-price swing.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs treat their AI tools as utilities and get burned at each usage-limit change — this month&rsquo;s Fable 5 credit shuffles being the live example; the few who keep a second tool warm lose an afternoon instead of a sprint.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at AI-dependent teams have started tracking tool spend and limits the way eng leads track cloud spend — a monthly line item with an owner, not an invisible per-seat assumption.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading rival-to-rival leases as the tell that capacity, not capability, is the binding constraint — and negotiating multi-year AI vendor terms now, while providers still compete for enterprise anchor deals.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The craft itself doesn&rsquo;t change, but its operating conditions do: AI assistance becomes a metered utility with real supply dynamics, and working around its limits becomes as routine as working around a design system&rsquo;s.</p>
+              <p class="impact-variant" data-variant="design-lead">Tool budgeting, fallback planning, and usage governance are becoming standing design-ops work — a new operational layer under the craft that leads now own whether they asked for it or not.</p>
+              <p class="impact-variant" data-variant="strategist">Frontier labs renting from competitors marks a durable industry structure — compute landlords under capability tenants — that will shape AI tool pricing and reliability for years; this reshapes the terrain without reframing what products are for.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Every generous AI feature you spec has a metered cost underneath — product thinking now includes asking what the feature does when the budget behind it tightens mid-quarter.</p>
+              <p class="impact-variant" data-variant="design-lead">Degradation is a design surface: decide deliberately what your {domain} product&rsquo;s AI features do under cost pressure — shorter outputs, cheaper models, queued requests — rather than letting infra decide for you.</p>
+              <p class="impact-variant" data-variant="strategist">When your fiercest rival can be your largest vendor, partnership logic replaces purity logic; the product question is which dependencies are acceptable to ship on and which capabilities must stay sovereign.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,automation" data-time="30">
+            <h6 class="action-title">Try this — 30 min</h6>
+            <p class="action-text">Map your personal AI tool stack for {focus} work: every tool you touched this week, what it depends on, and what you&rsquo;d do tomorrow if it rate-limited you mid-project. Write a fallback line for each — even if it&rsquo;s &ldquo;no fallback exists, and here&rsquo;s the exposure.&rdquo; The one-page continuity map is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Automation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Take one question to your engineering counterpart this week: what happens to our {domain} product&rsquo;s AI features if inference costs double, and which would we degrade first? Capture the answer as a shared one-page risk note with a ranked degradation order. If nobody can answer, that finding is the artefact — write it up and flag the gap.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Write a one-paragraph build-vs-rent memo for your {domain} product&rsquo;s AI backbone: stay on frontier APIs, self-host open models, or hedge with both? Use this week&rsquo;s facts — a $10B rival-to-rival lease, Fireworks&rsquo; specialized-inference bet, open weights landing within days — as evidence. Name the trade-offs and close with a recommendation and a review date.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-07-19-fireworks-series-d"
+                 data-category="industry"
+                 data-published="2026-07-16"
+                 data-tags="fireworks,inference,specialized-models,open-models,funding">
+          <div class="head">
+            <h6 class="headline">Fireworks raises $1.5B at a $17.5B valuation — and says 95% of the tokens it serves come from specialized models</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-07-16">Published July 16, 2026</time></p>
+          <p class="summary">Inference provider Fireworks closed a $1.505 billion Series D at a $17.5 billion valuation, led by Atreides, Index Ventures, and TCV with Nvidia participating. The company passed $1 billion in annualized revenue (up 5x year over year) and nearly tripled daily token volume to over 40 trillion. The number that matters: Fireworks says 95% of tokens served come from models that have been specialized — fine-tuned for a narrow job — not general-purpose frontier models.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The AI features you design are increasingly backed by small, purpose-tuned models rather than one frontier brain. That makes model behaviour something a design team can actually specify — tone, scope, refusals, latency — instead of something inherited from a lab.</p>
+          <p class="source"><a href="https://www.cnbc.com/2026/07/16/fireworks-nvidia-cloud-ai-startup-value.html" target="_blank" rel="noopener">Source — CNBC</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for a specialized model changes your artefacts: instead of prompting around a general model&rsquo;s quirks, you can write a behaviour spec — scope, tone, refusal rules — that the model is literally tuned to meet, which makes your {focus} intent enforceable.</p>
+              <p class="impact-variant" data-variant="design-lead">Model behaviour becomes a design deliverable your team can own end to end; the process question is who writes and reviews the behaviour spec that fine-tuning targets — that seat should be a designer&rsquo;s.</p>
+              <p class="impact-variant" data-variant="strategist">A 95% specialization rate at the largest independent inference provider says the production pattern is many small models, not one big one — org design plans should assume a portfolio of tuned behaviours to govern, not a single vendor relationship.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Honestly, most ICs still prototype against general chatbots and never see the specialized model their feature ships on — the gap between the model designers test and the model users get is one of the quiet quality leaks in current practice.</p>
+              <p class="impact-variant" data-variant="design-lead">A few leads have started sitting in on fine-tuning data reviews, treating example curation the way they treat copy review — because the examples a model is tuned on are the spec, whether design wrote them or not.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are using numbers like Fireworks&rsquo; to challenge frontier-only vendor strategies: if 95% of production tokens are specialized, paying frontier prices for every workload is a decision that now needs defending.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The work is still defining how a product should behave — but the medium shifts from prompts begging a general model to specs a tuned model is built to satisfy; that is a real change in how design intent reaches users.</p>
+              <p class="impact-variant" data-variant="design-lead">Expect &ldquo;model behaviour design&rdquo; to become a named competency on AI product teams within a year, the way content design became one — leads who define the role early will set its standards.</p>
+              <p class="impact-variant" data-variant="strategist">Specialization is the production reality settling under the frontier-model headlines; it reshapes how AI products get built and costed without changing what they are for — craft-level shift, not a structural reframe.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Feature thinking shifts from &ldquo;add AI&rdquo; to &ldquo;define the narrow job&rdquo;: the best specialized features do one thing with total reliability, which is a design constraint before it is an engineering one.</p>
+              <p class="impact-variant" data-variant="design-lead">The build order inverts: define behaviour first, then tune a model to it — which means design specifications move upstream of model selection in your {domain} product&rsquo;s development sequence.</p>
+              <p class="impact-variant" data-variant="strategist">The value chain is settling into layers — chips, inference, specialized behaviour, experience — and the durable margin for product companies is in the top two; Fireworks just raised $1.5B on the layer directly beneath yours.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this — 60 min</h6>
+            <p class="action-text">Pick one AI feature in your {domain} product (or one you&rsquo;d propose) and write a behaviour spec as if a small model would be tuned to it: the narrow job, tone in two sentences, five things it must refuse, target latency, and the generalist ability you&rsquo;d deliberately give up. Then critique your own spec: which line would be hardest to enforce, and why? The spec plus critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Inventory your team&rsquo;s AI features (shipped and planned) into two columns: &ldquo;genuinely needs a frontier model&rdquo; versus &ldquo;a specialized small model would do.&rdquo; For each item in the second column, note what specializing would improve — cost, latency, consistency, or control. Take the inventory to your engineering lead and record their reaction. The two-column inventory with notes is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this — 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on specialization as differentiation for your {domain} product: if competitors rent the same frontier models, would a fleet of models tuned on your proprietary data and workflows be a defensible edge? Name the data you&rsquo;d tune on, the feature you&rsquo;d specialize first, and the cost trade-off, then close with a clear go/no-go recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-07-18">
       <h4 class="day">Saturday, July 18 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="tools">
