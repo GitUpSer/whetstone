@@ -1125,9 +1125,417 @@
 <section class="year-section" data-year="2026">
   <h2 class="year">2026</h2>
 
+  <section class="month-section" data-month="2026-09">
+    <h3 class="month">September 2026</h3>
+    <section class="day-section" id="today" data-date="2026-09-20">
+      <h4 class="day">Sunday, September 20 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-09-20-google-cc-family-agent"
+                 data-category="tools"
+                 data-published="2026-09-18"
+                 data-tags="google,gemini,agents,permissions,shared-memory,consumer-ai">
+          <div class="head">
+            <h6 class="headline">Google starts testing CC, an agent with its own account, its own memory, and permission to act for a household</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-18">Published September 18, 2026</time></p>
+          <p class="summary">Google is piloting CC, a Gemini-powered agent that coordinates schedules, email, documents, reminders and forms for up to six family members. Unlike a chat session, CC gets its own Google account, can be added to Google Chat, reads a shared Drive folder, generates a morning &ldquo;Your Day Ahead&rdquo; briefing, and builds persistent memory of household preferences &mdash; each deployment isolated on Google&rsquo;s Antigravity infrastructure running Gemini 3.8 Flash. Google says CC asks for confirmation before sending information outside the family group. It is waitlisted, US adults only, and none of the reliability claims are independently verified.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the clearest consumer example yet of an agent with identity, memory and scoped permissions instead of a prompt box &mdash; and every hard question it raises (who can see what, when does it ask before acting, how does a person correct a shared memory) is an interaction design problem nobody has a good pattern for yet.</p>
+          <p class="source"><a href="https://www.techrepublic.com/article/news-google-cc-ai-agent-families/" target="_blank" rel="noopener">Source &mdash; TechRepublic</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing a {focus} agent now means designing an identity and a permission surface, not a chat window &mdash; your artefacts shift toward consent flows, memory-correction affordances, and the exact moment an agent stops to ask.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared vocabulary for agent state before it needs more screens: what the agent remembers, what it can reach, and what it must confirm are three separate specs, and most teams are currently writing none of them.</p>
+              <p class="impact-variant" data-variant="strategist">Planning {domain} agent work around &ldquo;which model&rdquo; is the wrong axis; the binding constraint is the permissions and memory architecture, and that decision sits with design and legal as much as engineering.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Honestly, most ICs are still shipping chat interfaces with a send button because that is what the design system supports &mdash; multi-user agent state is being handled in engineering tickets, not in Figma.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads who saw this coming are borrowing patterns from access-control and shared-calendar products rather than from chatbots, because those are the only mature precedents for &ldquo;several people, one system, different visibility.&rdquo;</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching Google test whether a persistent household operator beats a better chatbot &mdash; a waitlisted experiment, but one that tells you where a company with distribution thinks the next interface is.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">A user with an account, memory and the ability to act on your behalf is not a feature inside a product &mdash; it is a second kind of user, and the frame you learned for designing single-user flows does not cover it.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team&rsquo;s mental model is still &ldquo;AI is a panel we add to the screen,&rdquo; the model is wrong; agents with identity change who the product has a relationship with and what a session even means.</p>
+              <p class="impact-variant" data-variant="strategist">Multi-party agents break the single-account assumption most consumer products are built on, from billing to privacy to support &mdash; that is an org-level reframe, not a roadmap item.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">The product question moves from &ldquo;what can it do&rdquo; to &ldquo;what should it do without asking&rdquo; &mdash; and in your {focus} work that threshold is a design decision with real consequences, not a setting to hand to engineering.</p>
+              <p class="impact-variant" data-variant="design-lead">Roadmaps for agentic features need an explicit trust budget: each new autonomous action spends user confidence that one bad send can wipe out, so sequencing matters more than surface area.</p>
+              <p class="impact-variant" data-variant="strategist">Owning the agent that sits between a household and a dozen services is a distribution position; if your {domain} product becomes something an agent calls rather than something a person opens, your interface stops being where value accrues.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one agentic feature in your {focus} work and write its permission contract on a single page: what it can read, what it can write, what it remembers between sessions, and the exact three moments it must stop and ask. Then mark which of those four you have actually designed a screen for. The contract plus the gaps list is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 45-minute working session with your team on one question: if two people share an agent in our {domain} product, who sees what? Map three scenarios where visibility is ambiguous, decide each one in the room, and write the decisions into your design system as a rule rather than leaving them to individual screens. The three decided rules are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo answering whether your {domain} product wants to be the agent or be called by one. Name the trade-off explicitly &mdash; owning the relationship and the support burden, versus becoming reliable plumbing with lower margin and no interface &mdash; and close with a recommendation and the first decision it forces this quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-09-20-plugin4shell-pinning-bypass"
+                 data-category="coding-agents"
+                 data-published="2026-09-18"
+                 data-tags="security,supply-chain,claude-code,codex,copilot,plugins">
+          <div class="head">
+            <h6 class="headline">Plugin4Shell breaks SHA pinning across four AI coding agents &mdash; and two of them still have no fix</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-18">Published September 18, 2026</time></p>
+          <p class="summary">Researchers at AIR disclosed Plugin4Shell, a zero-click remote code execution flaw shared by Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI. All four check out a plugin&rsquo;s pinned commit without verifying the checkout landed there, so a repository owner can swap in malicious code while the pin still looks intact &mdash; and because background auto-update re-runs the same checkout, the swap reaches already-installed plugins with no user action at all. Anthropic patched Claude Code in 2.1.179 and OpenAI patched Codex in 0.146.0; Microsoft has shipped nothing for Copilot, and Google deprecated Gemini CLI rather than patch it, leaving existing installs exposed indefinitely. AIR ties this to earlier work in which 925 hijacked skills reached roughly 134,000 agents.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Every plugin, skill and MCP server you have added to your workflow runs with your permissions &mdash; your repos, your credentials, your client files. Designers install these faster than anyone audits them, and the one safeguard people trusted turned out not to hold.</p>
+          <p class="source"><a href="https://www.helpnetsecurity.com/2026/09/18/plugin4shell-ai-coding-agents-vulnerability/" target="_blank" rel="noopener">Source &mdash; Help Net Security</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If your {focus} workflow runs through a coding agent with installed plugins, your tool list is now part of your threat surface &mdash; and updating those agents is a craft hygiene task, not an IT one.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team&rsquo;s AI tooling probably grew by accretion with no inventory; the process change is a named owner and a periodic review of what is installed, in the same way you review design system dependencies.</p>
+              <p class="impact-variant" data-variant="strategist">Agent tooling has become a supply chain, and supply chains need procurement thinking &mdash; who approves, who patches, what happens when a vendor deprecates instead of fixing.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">The honest observation is that almost nobody in design tracks which plugins their coding agent is running &mdash; installs happen mid-task and are never revisited, which is precisely the behaviour this attack assumes.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at larger orgs are starting to route agent plugins through the same approval path as any other third-party dependency; smaller teams are doing nothing, and the gap between the two is widening fast.</p>
+              <p class="impact-variant" data-variant="strategist">Design-aware execs are noting that Google&rsquo;s answer was deprecation rather than a patch &mdash; a reminder that a tool your team depends on can be abandoned mid-vulnerability, and that should price into which tools you standardise on.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This does not change what you design, but it permanently changes how you adopt tools: the era of installing whatever helps and forgetting about it is over for anyone working near real code.</p>
+              <p class="impact-variant" data-variant="design-lead">Tool governance is becoming part of running a design team, sitting alongside file hygiene and component ownership &mdash; unglamorous, and now clearly non-optional.</p>
+              <p class="impact-variant" data-variant="strategist">The frame still holds &mdash; agents are useful, extensions are how they scale &mdash; but the cost side of the ledger just became legible, and that is a reshaping of the calculation rather than a reason to abandon it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If your {domain} product has an extension or plugin story, this is a concrete case study in what a trust badge actually needs to guarantee &mdash; &ldquo;reviewed&rdquo; meant nothing here because the reviewed code could be swapped afterwards.</p>
+              <p class="impact-variant" data-variant="design-lead">Marketplace features look like growth work and behave like security work; any roadmap that adds third-party extensibility needs the revocation and update story designed before the submission flow.</p>
+              <p class="impact-variant" data-variant="strategist">Extensibility is the standard way to grow an agent ecosystem and it is also the standard way to inherit everyone else&rsquo;s risk &mdash; worth deciding deliberately rather than as a default growth move.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,judgement" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Inventory every AI plugin, skill and MCP server currently installed in your working setup. For each one, write who maintains it, when you last updated it, and what it can reach on your machine. Delete the ones you cannot justify in a sentence. The list plus the deletions is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Ask your security or platform counterpart one specific question: does anyone track which AI agent extensions the design and product teams have installed? Bring the Plugin4Shell patch status as context, and leave the conversation with a named owner and a review cadence, even if the cadence is quarterly. The agreed owner and cadence is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on whether your {domain} product should offer third-party extensibility. Use the four-agent split response as evidence &mdash; two patched, one silent, one deprecated the product &mdash; and name what you would commit to on revocation and forced updates before shipping a marketplace. Close with a recommendation someone could act on.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-09-20-claude-leads-quarter-rnd"
+                 data-category="industry"
+                 data-published="2026-09-18"
+                 data-tags="anthropic,automation,ai-rnd,delegation,measurement,agents">
+          <div class="head">
+            <h6 class="headline">Anthropic says Claude now leads 26% of its own model R&amp;D &mdash; up from effectively zero in February</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-18">Published September 18, 2026</time></p>
+          <p class="summary">Anthropic disclosed that by August, Claude was leading roughly 26% of its model research and development work &mdash; meaning it completed most of an assigned task end-to-end from a high-level prompt, under human supervision. That figure was effectively zero in February. About 90% of the company&rsquo;s R&amp;D now involves some collaboration with Claude, a much looser category, and roughly 30,000 agents were doing research and engineering work as of August. Anthropic says its models are not autonomously designing or training their successors, and has called for standardised industry metrics. These are company-reported numbers with no independent verification, from a company with an interest in the answer.</p>
+          <p class="why"><strong>Why this matters for you:</strong> &ldquo;Leads 26% of the work&rdquo; is the sharpest public number anyone has put on what delegating to an agent actually looks like at scale &mdash; and it is an uncomfortable but useful lens to turn on your own week.</p>
+          <p class="source"><a href="https://www.fastcompany.com/91609568/claude-anthropics-ai-model-helping-develop-next-version-itself" target="_blank" rel="noopener">Source &mdash; Fast Company</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The useful distinction here is between work an agent collaborates on and work it leads end-to-end &mdash; apply it to your {focus} tasks and you get an honest map of where you are directing versus where you are still typing.</p>
+              <p class="impact-variant" data-variant="design-lead">If a research org can measure delegation this precisely, a design team can too; the process change is defining what &ldquo;led by an agent&rdquo; means for a design task before anyone claims a number.</p>
+              <p class="impact-variant" data-variant="strategist">Capacity planning that assumes flat human throughput is already stale in engineering-adjacent orgs; the strategic question is what your {domain} team does with reclaimed hours, not how many hours get reclaimed.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most designers are using agents for collaboration, not leadership &mdash; drafting, summarising, generating variants &mdash; and very few have a task they hand over whole and only review at the end.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are discovering that delegation to agents fails for the same reason delegation to juniors fails: unclear success criteria, not insufficient capability, which makes this a briefing problem their teams already know how to solve.</p>
+              <p class="impact-variant" data-variant="strategist">Design-aware execs are treating self-reported automation figures with appropriate scepticism while still noting the direction &mdash; zero to a quarter in six months is a slope worth planning against even if the level is generous.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The craft stays recognisable &mdash; judgement, taste, knowing what to make &mdash; but the ratio of directing to executing shifts inside it, and that ratio is what your day feels like.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams will reorganise around review capacity rather than production capacity; the bottleneck moves from who can make it to who can tell whether it is good.</p>
+              <p class="impact-variant" data-variant="strategist">This is acceleration within the existing frame rather than a reframe &mdash; the interesting structural question, whether the loop tightens faster than oversight can keep up, is still open.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a product team can run more experiments per week, the constraint on your {focus} work becomes knowing which experiment is worth running &mdash; a taste problem, not a throughput problem.</p>
+              <p class="impact-variant" data-variant="design-lead">Shorter build cycles make weak problem definition more expensive, not less: you now ship the wrong thing faster and with more polish on it.</p>
+              <p class="impact-variant" data-variant="strategist">Anthropic&rsquo;s call for standardised measurement is itself a product-thinking move &mdash; defining the metric before competitors do shapes how the whole category gets judged, which is a play worth stealing for your own {domain}.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,automation" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Log your last five working days by task, then sort each into agent-led, agent-collaborated, or fully manual using Anthropic&rsquo;s definitions. Pick one task currently in the manual column that should be agent-led, hand it over whole, and write a short critique of what came back and why you would or would not ship it. The sorted log plus the critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Automation</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="agent-orchestration,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Rewrite one recurring team ritual &mdash; design crit, research readout, or spec review &mdash; on the assumption that the first draft always arrives agent-generated. What does the human half of the ritual become? Draft the new agenda, run it once, and note what got better and what got worse. The rewritten ritual plus notes is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo defining what &ldquo;agent-led&rdquo; would mean for your {domain} org &mdash; a specific, measurable threshold, not a vibe. Name the one function where reaching 25% agent-led within a year is realistic, name the one where it is not and explain why, and recommend which of the two you would instrument first.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-09-20-answer-engine-traffic-collapse"
+                 data-category="policy"
+                 data-published="2026-09-17"
+                 data-tags="copyright,publishers,answer-engines,microsoft,openai,traffic">
+          <div class="head">
+            <h6 class="headline">Unredacted filings show Microsoft&rsquo;s own data on Copilot cutting publisher click-throughs by as much as 93%</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-17">Published September 17, 2026</time></p>
+          <p class="summary">Newly unredacted material in The New York Times&rsquo; copyright case against Microsoft and OpenAI, surfaced by TechCrunch on September 17, includes a January 2024 internal Microsoft presentation warning that its Copilot answer engine was eroding the traffic it was built on top of &mdash; with click-through rates to Times pages falling by as much as 93% compared with traditional Bing search. The filings also attribute to Microsoft applied-science director Brent Hecht the phrase &ldquo;the largest theft of labor in human history&rdquo; about AI data practices; Microsoft says that reflects one employee&rsquo;s individual view and maintains training is transformative fair use. Much of this comes from the plaintiffs&rsquo; brief with exhibits still sealed, so the excerpts lack full context.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A 93% click-through collapse is the clearest number yet on what an answer layer does to everything sitting underneath it. If your product is downstream of someone else&rsquo;s answer surface, that figure is a forecast, not a lawsuit detail.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a model answers the question your {focus} page was designed to answer, the page needs a different job &mdash; designing for arrival by referral and designing for a user who never arrives are different problems.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team should know which of its surfaces exist to be found and which exist to be used; the first category is exposed to answer engines and deserves a different design brief than it is currently getting.</p>
+              <p class="impact-variant" data-variant="strategist">Any {domain} growth model with organic search as a load-bearing assumption needs an explicit stress test at the 90% level, because one company&rsquo;s internal data now says that is a plausible outcome rather than a worst case.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs on content-adjacent products are watching referral traffic fall and being asked to fix it with layout changes, which is the wrong lever for a problem happening one layer up.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are shifting effort from discovery surfaces toward retention and logged-in experience, on the reasoning that a relationship survives an answer layer and a landing page does not.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating direct relationships &mdash; apps, newsletters, accounts &mdash; as the hedge, and licensing negotiations as the fallback rather than the plan.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The open web as a place people navigate to is being replaced by a summary layer people ask &mdash; designing pages for humans who clicked through is increasingly designing for a shrinking case.</p>
+              <p class="impact-variant" data-variant="design-lead">Teams organised around funnels that start with search are organised around a channel that is structurally shrinking; the reframe is designing for a world where the first touch is someone else&rsquo;s interface.</p>
+              <p class="impact-variant" data-variant="strategist">The economic bargain that funded the web &mdash; content in exchange for traffic &mdash; is being unwound in public through discovery documents, and no replacement bargain has been agreed on.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Ask what your {domain} product offers that cannot be summarised into an answer &mdash; interaction, state, personal data, a thing that happens &mdash; because summarisable value is the part being taken.</p>
+              <p class="impact-variant" data-variant="design-lead">Feature bets aimed at capturing search intent are depreciating assets; bets aimed at being the place work actually happens are not, and roadmaps should reflect that asymmetry.</p>
+              <p class="impact-variant" data-variant="strategist">Microsoft&rsquo;s own internal warning is the cautionary tale: building an answer engine on top of an ecosystem you also depend on is a strategy that can succeed and still destroy its own inputs.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="differentiation,critique" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Pick the three highest-traffic surfaces in your {focus} area and ask of each: could a good model answer this well enough that nobody needs to open it? For the ones where the answer is yes, write what the surface would have to become to be worth visiting. The three-line verdict plus one rewrite is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Sit down with whoever owns growth or analytics and ask for the referral trend on your top surfaces over the last eighteen months. Map what your team would redesign first if that line dropped 50%, and what it would redesign if it dropped 90%. The two-scenario plan is the artefact &mdash; and the conversation itself is half the value.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Write a one-paragraph memo on what your {domain} business does if answer-layer intermediation removes most of its discovery traffic within two years. Pick one position &mdash; license the content, build a direct relationship, move value into interaction, or accept the shrink and cut cost &mdash; name the trade-off, and recommend the first irreversible decision it implies.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-09-20-oversight-board-deepfake-ruling"
+                 data-category="policy"
+                 data-published="2026-09-17"
+                 data-tags="meta,deepfakes,labels,moderation,distribution,trust">
+          <div class="head">
+            <h6 class="headline">Meta&rsquo;s Oversight Board calls its deepfake safeguards fundamentally inadequate &mdash; and asks for distribution changes, not just labels</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-17">Published September 17, 2026</time></p>
+          <p class="summary">Meta&rsquo;s Oversight Board ordered Facebook to remove two AI-generated videos &mdash; one falsely showing a Scottish Labour councillor making inflammatory remarks about refugees, another manipulating the image of a young Muslim campaign volunteer &mdash; finding the first breached hateful-conduct rules and the second bullying and harassment policy. The board called Meta&rsquo;s existing deepfake safeguards fundamentally inadequate and issued nine recommendations that go well past labelling: lower the threshold for high-risk AI labels, add click-through warning screens, demote and demonetise flagged material, escalate penalties for repeat distributors, publish annual labelling data, and widen the definition of unwanted manipulated imagery to cover private individuals. Meta has 60 days to respond, and recommendations are not binding.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The board is effectively saying a disclosure label is a design failure when the ranking system keeps distributing the content anyway. Every trust and transparency pattern you ship faces the same test: does it change what happens, or does it just cover the product?</p>
+          <p class="source"><a href="https://thenextweb.com/news/meta-oversight-board-deepfakes-uk-councillor-muslim-campaigner" target="_blank" rel="noopener">Source &mdash; The Next Web</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If your {focus} work includes any AI-content disclosure, the standard just moved from &ldquo;is it visible&rdquo; to &ldquo;does it change behaviour&rdquo; &mdash; which means labels now need evidence, not just placement.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team should stop treating disclosure as a UI component and start treating it as a system that includes ranking, friction and consequences &mdash; three of which sit outside the design file.</p>
+              <p class="impact-variant" data-variant="strategist">Trust and safety is becoming a design-owned surface with regulatory exposure attached; at org level that is a staffing and accountability question, not a component library question.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs shipping AI-content labels have never tested whether anyone notices them, because the label was the requirement and noticing was nobody&rsquo;s metric.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads on platform teams are starting to pair every disclosure pattern with a distribution decision, having learned that the two get judged together whatever the spec said.</p>
+              <p class="impact-variant" data-variant="strategist">Design-aware execs read the nine recommendations as a preview of where regulators go next, and are using them as a checklist well before anything becomes binding.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Disclosure design is not new, but the bar for what counts as adequate is rising sharply &mdash; same craft, considerably less tolerance for a label that only satisfies a checklist.</p>
+              <p class="impact-variant" data-variant="design-lead">The work shifts from designing the warning to designing the consequence, which pulls design into ranking and enforcement conversations it has historically stayed out of.</p>
+              <p class="impact-variant" data-variant="strategist">The existing frame &mdash; transparency plus user choice &mdash; survives, but it is being forced to carry real enforcement weight rather than functioning as a compliance gesture.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Any {domain} feature that generates or hosts synthetic media needs its abuse case designed alongside its happy path, not documented afterwards in a risk register nobody reads.</p>
+              <p class="impact-variant" data-variant="design-lead">Generation is now cheap and review is not, which makes throughput asymmetry a product constraint your roadmap has to price in rather than a moderation problem to escalate.</p>
+              <p class="impact-variant" data-variant="strategist">Platforms that treat synthetic-media governance as a cost centre are accumulating a liability; the ones treating it as product differentiation may end up with the more defensible position.</p>
+            </div>
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Find an AI-content disclosure in a product you use daily and critique it honestly: would you notice it mid-scroll, does it change what you do, and what would have to change for it to matter? Then redesign it once under the constraint that it must alter behaviour rather than inform. The critique plus redesign is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="advocacy,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Walk your team through the board&rsquo;s nine recommendations and audit your own {domain} product against them in one sitting. Mark each as already covered, partially covered, or not applicable, and be strict about the middle column. Take the top gap to whoever owns policy or trust and safety. The audit plus one escalation is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Advocacy</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo arguing either that your {domain} org should adopt the board&rsquo;s stricter standard voluntarily, or that it should wait for binding regulation. Make the strongest version of whichever case you pick, name what it costs, acknowledge the best counterargument, and end with a recommendation and a date.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </section>
+
   <section class="month-section" data-month="2026-07">
     <h3 class="month">July 2026</h3>
-    <section class="day-section" id="today" data-date="2026-07-19">
+    <section class="day-section" data-date="2026-07-19">
       <h4 class="day">Sunday, July 19 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
