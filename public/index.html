@@ -1127,7 +1127,421 @@
 
   <section class="month-section" data-month="2026-09">
     <h3 class="month">September 2026</h3>
-    <section class="day-section" id="today" data-date="2026-09-24">
+        <section class="day-section" id="today" data-date="2026-09-26">
+      <h4 class="day">Saturday, September 26 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="video-gen">
+        <h5 class="category-label">Video gen</h5>
+
+        <article class="entry"
+                 data-id="2026-09-26-gemini-live-avatar"
+                 data-category="video-gen"
+                 data-published="2026-09-24"
+                 data-tags="google,gemini,avatar,video-gen,enterprise,voice-ui">
+          <div class="head">
+            <h6 class="headline">Gemini 3.8 Live gets a talking face &mdash; real-time avatar video lands in Gemini Enterprise</h6>
+            <span class="badge video-gen">Video gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-24">Published September 24, 2026</time></p>
+          <p class="summary">Google shipped Live Avatar inside Gemini 3.8 Live on September 24, adding real-time video generation with lip-sync, expressions and turn-taking to Gemini's voice mode. It's available now through Gemini Enterprise for customer service and interactive walkthroughs, supports 97 languages with dynamic lip-sync, and lets enterprises build custom avatars from reference images (allowlisted). Every frame carries an invisible SynthID watermark, and tool calls run asynchronously in the background so the avatar keeps talking while the system fetches data.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If a synthetic face becomes the default front door for customer service and onboarding, product designers who've only ever designed chat bubbles now need opinions on gaze, pacing, and what an avatar should visibly do while it's "thinking."</p>
+          <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/" target="_blank" rel="noopener">Source &mdash; Google</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Any {focus} flow you've prototyped as text-in-bubbles-out now has a face-and-voice alternative to test against &mdash; you need a way to storyboard silence, listening, and "still working" states that isn't just a spinner.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's usability testing protocol was built around screens and clicks; running a session with a talking avatar means scripting interruption handling and recording what the avatar does with its face while the backend is still fetching.</p>
+              <p class="impact-variant" data-variant="strategist">If {domain} sells into support or onboarding, the question is whether a synthetic presenter changes the buy decision for customers who currently pay for a human-staffed chat widget.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still treating avatar output as a novelty demo reel rather than a state they have to design &mdash; very few have mapped what the face does during a five-second tool call.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads who've touched voice UI are pulling in motion or game-adjacent designers for facial timing, because most product design hires have never had to art-direct a synthetic face.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching enterprise pilots in support and onboarding closely before committing budget, since the watermarking and consent story is still unsettled for customer-facing synthetic humans.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This isn't a passing demo &mdash; once video generation is fast enough to run live in a conversation, "design the reply" becomes "design the performance," and that's a durable shift in what an IC ships.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should expect facial and vocal performance to join copy and layout as things a review gate has to check, not a one-off addition to the voice-UI backlog.</p>
+              <p class="impact-variant" data-variant="strategist">It reshapes the craft rather than reframes the business: the jobs-to-be-done stay the same &mdash; support, onboarding &mdash; but the medium your team has to have taste in just expanded.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Building a {focus} feature now means asking whether the interaction should default to a face at all, or whether a face is a costlier, higher-stakes choice than voice alone.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should push back on "add an avatar" requests until there's a stated reason the task needs a face &mdash; most won't survive that question.</p>
+              <p class="impact-variant" data-variant="strategist">In {domain}, avatar-fronted support is a differentiation lever only until it's table stakes; the strategic question is how fast that clock is running for your category.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} support or onboarding flow you already have a chat script for. Rewrite it as a 90-second avatar script: what the face does during the three-second tool-call gap, how it signals it heard you, and how it hands off to a human. Read it aloud at pace and note where the timing breaks. The script plus the timing notes is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 60-minute team session: two people prototype the same {domain} task, one as a text chatbot, one as a scripted avatar performance (low-fi is fine &mdash; a person reading lines on video works). Compare where trust and irritation show up differently. Write three rules for when your team defaults to a face versus text. That's the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo recommending whether {domain} should pilot avatar-fronted support this quarter. State the specific job it would replace, the cost of the synthetic-human trust problem if it goes wrong, and a fallback if the pilot underperforms text-only support. One clear recommendation, not three options.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-09-26-copilot-home-code-autopilot"
+                 data-category="industry"
+                 data-published="2026-09-25"
+                 data-tags="microsoft,copilot,agents,enterprise,redesign">
+          <div class="head">
+            <h6 class="headline">Microsoft rebuilds Copilot around Home, Code and Autopilot &mdash; chat becomes one mode among three</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-25">Published September 25, 2026</time></p>
+          <p class="summary">Microsoft relaunched Copilot on September 25 around three surfaces: Home (merging Chat and Cowork, with Word, Excel and PowerPoint editable inline and role-based "Skills"), Code Builder (natural-language app and dashboard generation on GitHub Copilot technology, running sandboxed inside the customer's tenant), and Autopilot &mdash; a persistent, named agent, formerly called Scout, that monitors channels and picks up multi-day tasks without being re-prompted. Autopilot goes to private preview this month; Code Builder gets frontier access at month's end with a broader preview later in 2026. Billing splits between unchanged subscription tiers and new usage-based Copilot Credits for agentic work.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is Microsoft betting that "chat" was never the real interface &mdash; the product now has to account for a background-running, multi-day agent with a name and a goal, which is a different design problem than a conversation window.</p>
+          <p class="source"><a href="https://www.unite.ai/microsoft-copilot-overhaul-adds-home-hub-code-builder-and-autopilot-agent/" target="_blank" rel="noopener">Source &mdash; Unite.AI</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for Autopilot means designing a status object that persists across days, not a session &mdash; your {focus} mockups need a "what is it doing right now, and how did I find out" pattern that survives the user closing the tab.</p>
+              <p class="impact-variant" data-variant="design-lead">Review rituals built around single sessions don't cover an agent that resumes work three days later; your team needs a critique format for "did the agent pick the right thread back up" as its own reviewable moment.</p>
+              <p class="impact-variant" data-variant="strategist">If {domain} competes with Microsoft-native workflows, the strategic bet is whether your product's agent needs a persistent identity too, or whether that's a Microsoft-specific pattern users won't expect elsewhere.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still prototyping agent status as a progress bar; almost none have designed what it looks like when an agent has quietly been working for two days and you need to catch up.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at Microsoft-adjacent shops are already writing guidelines for naming and "personality" on persistent agents, because usage-based billing means a badly-scoped agent now shows up as a cost line, not just a UX complaint.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating Copilot Credits as a signal: agentic work getting metered separately from subscriptions means enterprise buyers will start asking every vendor for the same cost transparency.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This isn't a UI refresh &mdash; a named, persistent agent that resumes work unprompted breaks the request/response frame the IC craft has run on since chatbots started; you're designing a colleague's behavior, not a screen.</p>
+              <p class="impact-variant" data-variant="design-lead">The team implication is structural: someone now owns "agent behavior design" as a discipline, separate from interaction design, and most orgs don't have that role yet.</p>
+              <p class="impact-variant" data-variant="strategist">Positioning shifts from "AI assistant embedded in Office" to "staffed by agents with names" &mdash; that's a different pitch to the board than a feature list, and it changes what your own roadmap has to answer to.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Every {focus} feature you ship into a Microsoft-integrated product should now assume a background agent might trigger it without a human present &mdash; build the audit trail first, not the happy-path screen.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should add "can this run correctly if nobody's watching" to the definition of done for any feature that touches Copilot integrations.</p>
+              <p class="impact-variant" data-variant="strategist">In {domain}, the product-thinking shift is from "who clicks the button" to "who's accountable when the agent clicked it" &mdash; that's a governance question product now owns, not just legal.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Design a status artifact for a task that runs across three days &mdash; pick a real {focus} workflow (a report, a migration, a review cycle) and sketch what a user sees when they check in on day one, day two, and day three, including what changed and why they should trust it. The three-screen sketch plus a one-line rule for when to interrupt the user versus stay quiet is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Bring your team a real multi-day process in {domain} (onboarding, a review cycle, a migration). Run a 45-minute workshop mapping every point a persistent agent could silently make a wrong call, and who'd notice first. Write the three highest-risk points and a recovery pattern for each. The map plus recovery patterns is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on whether {domain}'s product needs a persistent, named agent identity of its own, or whether riding inside Microsoft's agent layer is the better bet for the next 12 months. State the trade-off in build cost versus differentiation loss explicitly.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="image-gen">
+        <h5 class="category-label">Image gen</h5>
+
+        <article class="entry"
+                 data-id="2026-09-26-midjourney-live-edit"
+                 data-category="image-gen"
+                 data-published="2026-09-24"
+                 data-tags="midjourney,image-gen,editing,design-tools">
+          <div class="head">
+            <h6 class="headline">Midjourney's editor gets live style previews and pixel-precise inpainting &mdash; less guessing, more control</h6>
+            <span class="badge image-gen">Image gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-24">Published September 24, 2026</time></p>
+          <p class="summary">Midjourney shipped three editor updates on September 24: live thumbnail previews in the Styles sidebar so you can see a style applied before generating, targeted inpainting and outpainting that changes only the pixels you select so repeated edits don't degrade quality, and seamless <code>--tile</code> blending for V8.1/8.2 that removes visible seams at tile edges. The features are rolling out first on alpha.midjourney.com using fast models.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The gap between "generate and hope" and "generate and direct" keeps closing &mdash; targeted, non-destructive edits mean a generated image is closer to a layer you control than a lottery ticket you re-roll.</p>
+          <p class="source"><a href="https://updates.midjourney.com/edit-updates-thumbnail-previews-and-more/" target="_blank" rel="noopener">Source &mdash; Midjourney</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Non-destructive, pixel-targeted edits mean you can treat a generated image as a working file in {focus} rather than a final output to accept or discard &mdash; that changes what "iteration" looks like in your process.</p>
+              <p class="impact-variant" data-variant="design-lead">If edits no longer degrade quality on repeat, your team's review cycle can move from "pick the best of nine" to "refine one toward the brief," a different critique rhythm to plan for.</p>
+              <p class="impact-variant" data-variant="strategist">Less regeneration waste means lower per-asset cost in {domain} production pipelines &mdash; worth modeling against your current stock-and-generate budget.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still treating Midjourney output as disposable drafts to trace over in Figma rather than final layers, because targeted editing wasn't reliable enough to trust until now.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads running production pipelines are the ones testing whether targeted inpainting is consistent enough to skip the manual retouch step entirely &mdash; most aren't there yet.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists evaluating image tools are starting to price editing precision, not just generation quality, as the differentiator between vendors.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This is craft-level tooling maturing, not a new paradigm &mdash; the IC's job (direct, select, refine) stays the same, but the tool finally does what you ask instead of what it guesses.</p>
+              <p class="impact-variant" data-variant="design-lead">For leads, it reshapes production timelines more than team structure &mdash; expect fewer generate-and-discard cycles and tighter turnaround expectations from stakeholders.</p>
+              <p class="impact-variant" data-variant="strategist">It's an incremental capability jump, not a new business model &mdash; treat it as a cost and speed lever in {domain}, not a reason to rethink creative strategy.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If you're building {focus} features that generate imagery, targeted editing means users will expect to fix one element without regenerating the whole composition &mdash; plan the interaction for partial edits, not just prompt-and-regenerate.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads shipping AI image features should reconsider whether "regenerate" is still the primary interaction, or whether "select and edit" should be the default now.</p>
+              <p class="impact-variant" data-variant="strategist">In {domain}, precise editing lowers the bar for AI-generated assets to reach production quality &mdash; worth revisiting which asset categories you still insist on sourcing from photographers or illustrators.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Generate a base image for a real {focus} asset (hero banner, icon set, texture), then use targeted inpainting to change exactly one element three separate times without regenerating the rest. Write a critique: where did the edit hold up, where did it introduce artifacts a client would catch? The three edited versions plus the critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Audit your team's last five AI-generated assets in {domain} and count how many needed full regeneration versus a targeted fix. Propose a revised production workflow that assumes targeted editing works, and identify which role owns the edit step now. The workflow doc is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a memo comparing your current per-asset cost (stock, photography, or generate-and-discard) against a targeted-editing workflow for {domain}. Recommend one asset category to pilot the switch on first, with a specific cost or time-savings claim you'd want to validate.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-09-26-devin-billion-run-rate"
+                 data-category="coding-agents"
+                 data-published="2026-09-25"
+                 data-tags="cognition,devin,coding-agents,enterprise,revenue">
+          <div class="head">
+            <h6 class="headline">Devin's coding-agent business hits $1B annualized revenue &mdash; under two years after launch</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-25">Published September 25, 2026</time></p>
+          <p class="summary">Cognition announced on September 25 that its AI software engineering agent Devin has crossed $1 billion in annualized revenue run rate, reached less than two years after general availability. Named enterprise customers include GE Aerospace, Rivian, Rohlik and Exa, with "many more" unnamed. Cognition frames the milestone around a capacity gap &mdash; "the world needs far more software than it can build" &mdash; rather than internal efficiency metrics.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A coding agent generating this much revenue this fast means the engineer on the other end of your handoff is increasingly an agent, not just a person &mdash; that changes what a clean, unambiguous spec needs to cover.</p>
+          <p class="source"><a href="https://cognition.com/blog/1b-run-rate" target="_blank" rel="noopener">Source &mdash; Cognition</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If the engineer on the other end of your handoff might be Devin, your {focus} specs need to be explicit about states and edge cases you'd normally leave to a human's judgment call in a hallway conversation.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's design-to-dev handoff process was built assuming a human asks clarifying questions; you need a process for when the "engineer" just builds what's literally written, gaps included.</p>
+              <p class="impact-variant" data-variant="strategist">If engineering capacity effectively grows because of agents like Devin, {domain}'s constraint shifts from "can we build it" to "do we have the design judgment to specify it well" &mdash; a resourcing conversation worth having now.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs haven't changed their spec-writing habits yet, because the agent-built features they've seen still get a human review pass before shipping &mdash; the slack hasn't run out.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at Devin-adopting orgs are the ones already rewriting design-review checklists to catch agent-literal interpretations of ambiguous specs before they ship.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching where the $1B in revenue is concentrated &mdash; aerospace, auto, logistics &mdash; as a signal for which industries are furthest along in trusting agent-built software.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This reshapes the craft of specification more than it reshapes design itself &mdash; the IC skill that matters more now is writing unambiguous intent, not new visual craft.</p>
+              <p class="impact-variant" data-variant="design-lead">For leads, it's a capacity multiplier on engineering, which means design becomes the bottleneck sooner than before &mdash; plan headcount and process around that, not around agents replacing designers.</p>
+              <p class="impact-variant" data-variant="strategist">It's not a new way of thinking about product strategy yet &mdash; it's proof the existing "agents write code" thesis has real enterprise revenue behind it, which raises the cost of ignoring it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">When specifying a {focus} feature, write the acceptance criteria as if the builder can't ask a follow-up question &mdash; that discipline pays off whether the builder is human or agent.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should treat "spec ambiguity that only a human would catch" as a defect category worth tracking, since it's the failure mode that scales worst with agent-built code.</p>
+              <p class="impact-variant" data-variant="strategist">In {domain}, faster agent-driven build cycles mean differentiation increasingly comes from what you choose to build and how well you specify it, not how fast you ship &mdash; a strategic case for investing more in design judgment, not less.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Take a spec you wrote for a real {focus} feature and hand it, unedited, to an AI coding agent (Claude Code, Cursor, or Devin if you have access) with no follow-up conversation allowed. Review what it built against what you meant. Write a critique listing every ambiguity the agent resolved wrong or arbitrarily. The critique is the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute session with your team: pick two recent design handoffs in {domain} and rewrite their acceptance criteria assuming zero clarifying questions are allowed. Compare against the original specs and list what was implicit before. Publish the rewritten specs as a template for the team.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo on how growing agent-built engineering capacity should change {domain}'s roadmap prioritization &mdash; specifically, whether this year's bottleneck is build capacity or design/spec capacity, with a clear recommendation on where to add headcount.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-09-26-nyc-ai-kill-switch-bill"
+                 data-category="policy"
+                 data-published="2026-09-25"
+                 data-tags="policy,nyc,regulation,ai-safety,compliance">
+          <div class="head">
+            <h6 class="headline">NYC Council proposes AI kill-switch mandates, 24-hour incident reporting, and paid whistleblowers</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-25">Published September 25, 2026</time></p>
+          <p class="summary">NYC Council Speaker Julie Menin unveiled a package of AI bills on September 25 requiring outside validation of AI systems sold in the city for bias, privacy and security; mandatory human override ("kill switch") capability; 24-hour incident reporting for city contractors; a whistleblower bounty funded by violation fines; and a private right for New Yorkers to sue AI companies when third parties bypass safety controls and cause foreseeable harm. Penalties run $25,000 per violation. The package heads to a Committee of the Whole hearing on October 5 &mdash; the council's first such full hearing since 2022 &mdash; with major AI company leaders invited but not confirmed to testify.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Mandatory human-override and 24-hour incident reporting aren't legal abstractions &mdash; if your product ships in or sells into NYC, "kill switch" and "incident" become design requirements you'll need a working UI for, not just a legal clause.</p>
+          <p class="source"><a href="https://fortune.com/2026/09/25/new-york-city-council-speaker-ai-regulation-bills-openai-anthropic/" target="_blank" rel="noopener">Source &mdash; Fortune</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If this passes, any {focus} feature with an autonomous action needs a visible, working human-override control designed in from the start &mdash; not a hidden admin toggle added after legal flags it.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's process needs an explicit "incident" definition and a designed reporting flow a human can trigger within 24 hours &mdash; that's a new deliverable type, not a footnote in the spec.</p>
+              <p class="impact-variant" data-variant="strategist">If {domain} operates in or sells into NYC, compliance review needs a seat in the roadmap conversation now, before a kill-switch requirement becomes a late, expensive retrofit.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Very few ICs have designed a "stop this AI system" control that's genuinely usable under pressure &mdash; most kill switches that exist today are buried in settings menus nobody has tested in a crisis.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads at regulated-industry companies (finance, health) are ahead here, already treating override controls and incident logging as core to their design system, not compliance bolt-ons.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching NYC as a bellwether &mdash; a patchwork of city- and state-level AI rules is coming whether or not federal legislation passes, and building for the strictest jurisdiction first is cheaper than retrofitting fifty times.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing a kill switch that works under real pressure is a genuinely new problem for most product designers &mdash; closer to safety-critical UX (medical devices, industrial controls) than anything in a typical app.</p>
+              <p class="impact-variant" data-variant="design-lead">This isn't a checklist addition to existing review &mdash; teams need expertise, probably borrowed from safety-critical or regulated-industry design, that most product teams don't currently have in-house.</p>
+              <p class="impact-variant" data-variant="strategist">The frame shifts from "ship fast, patch later" to "prove control before you ship" for any product with autonomous AI behavior &mdash; a different operating model, not a tweak to the current one.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">When scoping a {focus} feature with any autonomous action, ask now who can stop it, how fast, and what they see when they do &mdash; treat that as a required user story, not an edge case.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should budget design time for incident-reporting flows the same way they budget for onboarding &mdash; it's becoming a standard product surface, not a one-off request.</p>
+              <p class="impact-variant" data-variant="strategist">In {domain}, a working, tested override and incident process may become a sales differentiator with enterprise and government buyers well before it's legally required everywhere.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one AI-driven feature in {focus} that takes an autonomous action (sends something, changes a record, triggers a process). Design a human-override control for it that would survive a stressed, time-pressured user trying to stop it in under 10 seconds. Write a critique of your own first draft: where would it fail under pressure? Both are the artefact.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a tabletop exercise with your team: simulate an AI incident in a real {domain} product (wrong action taken, data exposed, harmful output shown). Walk through who notices, who's notified, and what gets reported within 24 hours. Document the gaps you find and assign owners to close them.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-paragraph memo assessing {domain}'s current exposure if NYC-style kill-switch and incident-reporting rules became mandatory in your primary market within 12 months. Name the single highest-risk product surface and a recommended first investment to close the gap.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="day-section" data-date="2026-09-24">
       <h4 class="day">Thursday, September 24 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="tools">
