@@ -1127,7 +1127,447 @@
 
   <section class="month-section" data-month="2026-09">
     <h3 class="month">September 2026</h3>
-        <section class="day-section" id="today" data-date="2026-09-28">
+        <section class="day-section" id="today" data-date="2026-09-29">
+      <h4 class="day">Tuesday, September 29 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-09-29-claude-sonnet-5-5"
+                 data-category="models"
+                 data-published="2026-09-28"
+                 data-tags="anthropic,claude,sonnet,pricing,coding-agents">
+          <div class="head">
+            <h6 class="headline">Anthropic ships Claude Sonnet 5.5 at unchanged $2/$10 pricing, with a large agentic-coding jump</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-28">Published September 28, 2026</time></p>
+          <p class="summary">Anthropic released Claude Sonnet 5.5 on September 28 at the same $2 input / $10 output per million tokens as Sonnet 5. Anthropic reports 70.6% on Terminal-Bench 4.0 (versus 10.3% for Sonnet 5) and 1,844 on GDPval-AA v2.1, close to Opus 5.5's 1,846, plus outputs 30%+ faster and up to 30% lower cost per task. These are vendor-reported numbers and have not been independently reproduced.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The mid-tier model now does polished documents, slides and scoped coding work that used to need the flagship, so the cost of generating a first draft of almost anything just dropped again. Your value moves further toward deciding which draft is worth keeping.</p>
+          <p class="source"><a href="https://www.anthropic.com/claude-sonnet-5-5" target="_blank" rel="noopener">Source &mdash; Anthropic</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Generating a working {focus} prototype or a full first-pass spec becomes cheap enough to do three times instead of once, so your bottleneck becomes evaluating options rather than producing them.</p>
+              <p class="impact-variant" data-variant="design-lead">When a mid-tier model can batch tool calls and finish scoped tasks, agent-assisted handoff and redline checks become affordable to run on every {domain} ticket, which changes what you ask your team to review by hand.</p>
+              <p class="impact-variant" data-variant="strategist">Falling cost per completed task means AI-assisted design work can be budgeted as routine capacity rather than a special pilot; the planning question becomes where human judgement is worth its premium.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are defaulting to whichever model their tool picked for them and haven't compared tiers; the ones paying attention are moving repetitive work to the cheaper model and keeping the flagship for ambiguous problems.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly still on tool subscriptions and haven't revisited which model powers their team's agents; few have a written policy for when to escalate from mid-tier to flagship.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching price-per-task more than benchmark scores, and are starting to renegotiate AI line items now that the mid-tier is close to the flagship on knowledge work.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Cheaper near-flagship models change how often you can afford to iterate, which reshapes the craft's rhythm without replacing the underlying judgement work.</p>
+              <p class="impact-variant" data-variant="design-lead">The team-level change is volume: more explorations per sprint, so review and critique rituals, not generation, become the constraint on quality.</p>
+              <p class="impact-variant" data-variant="strategist">Model tiers compressing toward each other is a durable pattern this year; the vendor benchmark claims are unverified, but the direction of falling cost for equal quality is well established.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} features, you can propose model-heavy interactions that were previously too expensive to ship, but you need to specify failure states because cheaper does not mean more reliable.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should push PM and engineering partners to put cost-per-successful-task, not just per-token price, into {domain} feature briefs.</p>
+              <p class="impact-variant" data-variant="strategist">Unit economics of AI features improve when the mid-tier suffices; strategy work shifts to which parts of the {domain} product justify flagship-level spend and which don't.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run the same {focus} design task (a screen spec plus edge cases) on Sonnet 5.5 and on whichever flagship model you use. Write a one-page critique naming three places each output looked confident but was wrong or generic, and decide which tier you'd use for which kind of task.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">List every recurring AI-assisted task on your team (specs, redlines, copy variants, research summaries). Mark each as 'mid-tier is enough' or 'needs flagship', with a one-line reason, and draft a single-page model-selection guideline for the {domain} team.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo to your {domain} leadership arguing whether to switch default AI usage to the cheaper tier. Include one specific risk, one measurable check (e.g. rework rate), and a clear recommendation.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-09-29-wabi-2-multiplayer-messenger"
+                 data-category="generative-ui"
+                 data-published="2026-09-28"
+                 data-tags="wabi,generative-ui,agents,chat,mini-apps">
+          <div class="head">
+            <h6 class="headline">Wabi 2.0 turns chat into a multiplayer surface where agents render mini-apps inline</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-28">Published September 28, 2026</time></p>
+          <p class="summary">Wabi 2.0 launched as a messenger where agents can book appointments, handle refunds and plan meals, and where multi-person threads can include small generated interface elements rather than only text. The evidence so far is the App Store listing and coverage in The Neuron's digest; there is no independent usability data.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is a live example of chat as the container and generated UI as the content, which shifts your job from designing fixed screens to designing the components and rules an agent composes on the fly.</p>
+          <p class="source"><a href="https://apps.apple.com/us/app/wabi/id6747768928" target="_blank" rel="noopener">Source &mdash; Wabi on the App Store</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Instead of drawing every screen for {focus}, you design a small set of inline components plus the rules for when an agent may render each, which is closer to writing a grammar than composing a layout.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads need to decide who owns the component vocabulary agents draw from and how generated states get reviewed, since no one can screenshot every possible output.</p>
+              <p class="impact-variant" data-variant="strategist">The org-level question is whether the product's interface is a fixed set of screens or a governed set of parts, which changes what design headcount and tooling get funded.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still mocking chat-plus-cards as static frames and haven't yet specified behavior under multiple users editing the same thread.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are experimenting with agent-rendered cards in internal tools, but few have defined rules for confirmation, undo, or who is accountable when an agent completes a purchase or refund.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are mostly treating this as a consumer curiosity and tracking it against messaging platforms' plans rather than acting on it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing components an agent assembles, not screens a user navigates, is a different problem from polishing layouts; the existing frame of 'screen as deliverable' is the wrong one.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads will need new artefacts (component contracts, allowed-state matrices) because reviewing individual screens no longer covers the product.</p>
+              <p class="impact-variant" data-variant="strategist">Chat with embedded UI reframes the product surface itself; competitors will design around conversations, not apps, and the shift is structural rather than a fad.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus}, start specs from user intent and the agent's permitted actions, then derive the UI parts, rather than starting from screens.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should require that any {domain} agent action touching money or commitments has a designed confirmation and reversal path.</p>
+              <p class="impact-variant" data-variant="strategist">Multi-person threads with agents introduce shared-liability questions; strategy must settle who approves what before the {domain} product scales this pattern.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick a {focus} task that a user does across three screens today and redesign it as a chat thread with at most four inline components. Write the component list, the trigger rule for each, and the failure state when the agent picks the wrong one.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="judgement,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute session with your PM and an engineer listing every agent action in your {domain} product that should require explicit user confirmation. Produce a table of action, risk level, confirmation pattern and undo path.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a half-page memo on what a chat-first, generated-UI version of your {domain} product would make commodity and the one thing your brand or data could still make defensible. End with a recommend / don't-recommend on prototyping it.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-09-29-anthropic-ipo-prospectus"
+                 data-category="industry"
+                 data-published="2026-09-28"
+                 data-tags="anthropic,ipo,economics,compute,vendor-risk">
+          <div class="head">
+            <h6 class="headline">Anthropic's IPO prospectus puts compute at 58% of operating costs, with $518B in cloud obligations</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-28">Published September 28, 2026</time></p>
+          <p class="summary">Per a Reuters report summarised in The Neuron's September 28 digest, Anthropic's prospectus shows 2025 revenue of $4.59B (up 1,088%) against an $8.06B operating loss, with compute and infrastructure at $7.33B and roughly $518B in future cloud commitments. We could not open the Reuters article directly, so treat these figures as secondhand until you have read the filing.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Whatever your design workflow depends on is priced against a very expensive infrastructure bet, so pricing, limits and terms of the AI tools you build on can change. That is a vendor-risk judgement, not just a finance story.</p>
+          <p class="source"><a href="https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/" target="_blank" rel="noopener">Source &mdash; Reuters (via The Neuron digest; not independently verified)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Nothing changes in your hands today, but it's a reminder to keep {focus} work portable across models so a price or limit change doesn't stall you.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should check which team workflows are locked to one vendor's agents or plugins and note the switching cost before it becomes urgent.</p>
+              <p class="impact-variant" data-variant="strategist">Vendors with heavy fixed compute obligations tend to push for revenue growth, so expect pricing tiers and usage caps to keep moving.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs use whichever assistant is embedded in their tools and don't track vendor finances; that is reasonable for now.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are generally running on individual seats and haven't modelled what a 2x price change would do to the {domain} team's budget.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are starting to add vendor-concentration lines to AI risk registers, though few have acted beyond that.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Interesting context, but it doesn't change how you design; file it and move on unless your tools' pricing changes.</p>
+              <p class="impact-variant" data-variant="design-lead">For leads it's background: worth a note in the vendor review, not a process change.</p>
+              <p class="impact-variant" data-variant="strategist">The prospectus is a financing event, not a change in practice; the durable takeaway is vendor concentration, which you should track but not overreact to.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">If you ship {focus} features on one model API, design graceful degradation so a cheaper fallback model doesn't break the experience.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should ask engineering whether {domain} features are abstracted from a single model provider.</p>
+              <p class="impact-variant" data-variant="strategist">Unit-cost assumptions in a {domain} business case should carry a sensitivity range, since provider pricing is not fixed.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List the AI tools in your {focus} workflow and mark which model vendor each depends on. Pick the one you would find hardest to replace and write down, in five sentences, what you would do if its price doubled next quarter.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,strategy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Audit your team's AI tool stack for vendor concentration. Produce a one-page table of tool, vendor, seat cost, switching effort (low/med/high) and an owner for each high-effort row in the {domain} team.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph note for your {domain} leadership recommending whether to add vendor-concentration to the AI risk register, with one concrete mitigation and one trigger that would prompt action.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+
+        <article class="entry"
+                 data-id="2026-09-29-team-gain-1-8x"
+                 data-category="jobs-industry"
+                 data-published="2026-09-28"
+                 data-tags="productivity,teams,workflow,code-review,bottlenecks">
+          <div class="head">
+            <h6 class="headline">Newsletter analysis: top users see 10x from AI, median teams only 1.8x, with review as the bottleneck</h6>
+            <span class="badge jobs-industry">Jobs &amp; industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-28">Published September 28, 2026</time></p>
+          <p class="summary">An essay in Nate's Newsletter, summarised in Artificially Intimidating's September 28 brief, argues that top-percentile AI users get around 10x productivity while median teams see about 1.8x, with code review and coordination as the main bottlenecks. This is an opinion piece with figures we could not trace to a published dataset, so treat the numbers as directional.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If individual speedups don't compound at team level, the design work that matters shifts to review, handoff and decision rituals, which is where designers already have leverage.</p>
+          <p class="source"><a href="https://artificiallyintimidating.com/p/ai-brief-september-28-2026" target="_blank" rel="noopener">Source &mdash; Artificially Intimidating (summarising Nate's Newsletter; figures unverified)</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your own drafting gets faster, but your queue of things waiting on someone else's review doesn't, so the {focus} work that stalls is now the handoff, not the making.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should map where design output waits (critique, PM sign-off, engineering review) and treat those waits as the actual capacity limit.</p>
+              <p class="impact-variant" data-variant="strategist">At org level, faster individuals without redesigned review paths just build larger queues; planning needs to fund the coordination layer.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Strong ICs are using AI heavily and quietly, and their teammates aren't; the gap is visible in output volume but not in shared process.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads report that reviewing more AI-assisted output takes more of their week, and few have changed critique formats to cope.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are hearing 'we adopted AI' claims and starting to ask for throughput and rework data instead of usage counts.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Your speedup is real, but it reshapes where your time goes rather than removing work.</p>
+              <p class="impact-variant" data-variant="design-lead">This reshapes the lead's job toward triage and review design, which is a craft of its own.</p>
+              <p class="impact-variant" data-variant="strategist">The pattern, individual gains that don't scale, is likely to persist until orgs redesign workflows; the specific numbers are unverified.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">When scoping {focus}, estimate review and integration time separately from build time; AI mostly shrinks the latter.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should ask for review turnaround as a metric in {domain} planning, not just delivery velocity.</p>
+              <p class="impact-variant" data-variant="strategist">Roadmap forecasts that assume team-wide 5-10x speedups in {domain} are likely to miss; plan on a modest multiple until review paths change.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Track your last five {focus} deliverables and record time spent making versus time waiting on review or decisions. Write three sentences on where AI helped and where the delay sits.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 45-minute session with your engineering and PM counterparts mapping the review path for a typical {domain} change. Identify the longest wait, and propose one change to the critique or sign-off format to shorten it.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Draft a one-paragraph proposal for your {domain} org to measure rework rate and review turnaround alongside AI usage. Name the metric owner and the first decision it would inform.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-09-29-momentic-mo-scriptless-qa"
+                 data-category="coding-agents"
+                 data-published="2026-09-28"
+                 data-tags="momentic,qa,testing,agents,design-qa">
+          <div class="head">
+            <h6 class="headline">Momentic launches Mo, an agent for scriptless QA that finds and verifies bugs on its own</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-28">Published September 28, 2026</time></p>
+          <p class="summary">Momentic introduced Mo, an AI agent that tests software without hand-written scripts, finding bugs and verifying fixes autonomously. The company claims more than 117,000 bugs caught across deployments; that figure is Momentic's own and has not been independently checked.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Automated QA that explores your product like a user will start surfacing the state, spacing and flow issues that designers usually catch late, so your acceptance criteria need to be explicit enough for an agent to test.</p>
+          <p class="source"><a href="https://momentic.ai/blog/mo-launch" target="_blank" rel="noopener">Source &mdash; Momentic</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Vague specs for {focus} fail quietly when an agent tests them; writing testable expected behavior for each state becomes part of your handoff.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads can use agent-run QA to check design-system conformance on {domain} releases, if the system's rules are written precisely enough.</p>
+              <p class="impact-variant" data-variant="strategist">Post-launch quality becomes less dependent on manual passes, which frees design review time but exposes any ambiguity in the spec.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Few ICs are involved in QA tooling choices; most still file design bugs by hand after engineering marks a ticket done.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are starting to ask engineering whether agent testing can cover visual and interaction regressions, with mixed results so far.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists see it mainly as an engineering cost story, and rarely connect it to design quality.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">It reshapes handoff: specs become the input to a test, not just a build.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads gain a new lever on consistency, provided the system rules are machine-checkable.</p>
+              <p class="impact-variant" data-variant="strategist">QA agents are becoming standard tooling; the claims here are vendor-reported, but the category is not a passing fad.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Write {focus} acceptance criteria as observable behaviors an agent could verify, including empty, error and loading states.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should add 'testable by an agent' as a check in {domain} spec reviews.</p>
+              <p class="impact-variant" data-variant="strategist">If QA cost falls, release cadence for {domain} can rise, which puts pressure on design to decide faster.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} flow and write acceptance criteria for it as a numbered list of observable behaviors, including three edge states. Then mark which items a testing agent could not verify from the UI alone and why.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Ask an engineer on your {domain} team how design bugs are currently found and filed. Write a one-page proposal for which categories of design QA (spacing, states, copy, accessibility) an agent should own and which need human review.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph case to your {domain} leadership for or against piloting an agent QA tool on one release, naming the metric that would tell you it worked and the risk of false confidence.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+    </section>
+
+        <section class="day-section" data-date="2026-09-28">
       <h4 class="day">Monday, September 28 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="design-tools">
