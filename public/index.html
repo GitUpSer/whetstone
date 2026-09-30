@@ -1127,7 +1127,441 @@
 
   <section class="month-section" data-month="2026-09">
     <h3 class="month">September 2026</h3>
-        <section class="day-section" id="today" data-date="2026-09-29">
+        <section class="day-section" id="today" data-date="2026-09-30">
+      <h4 class="day">Wednesday, September 30 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+
+        <article class="entry"
+                 data-id="2026-09-30-openai-dots-agents"
+                 data-category="tools"
+                 data-published="2026-09-29"
+                 data-tags="openai,dots,agents,always-on,chatgpt">
+          <div class="head">
+            <h6 class="headline">OpenAI launches 'dots', always-on agents with their own cloud computers, to Pro and Business Premium users</h6>
+            <span class="badge tools">Tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">OpenAI introduced dots on September 29: persistent agents powered by GPT-6 Astra that each get a cloud computer and browser, connect to 4,000+ apps, work across projects 24/7, and are reachable from ChatGPT, Slack and Teams (texting is listed as coming soon). The first dot is included in Pro and Business Premium plans in eligible markets, with beta access for Enterprise, Education and Healthcare via workspace admins. Controls include custom allow/require/block rules, an Activity View, and auto-review of account-affecting actions. The capability claims are OpenAI's own, and the launch post itself says dots can still make mistakes.</p>
+          <p class="why"><strong>Why this matters for you:</strong> An agent that works while you are away shifts design review from 'check the output' to 'audit a trail of decisions you did not watch being made'. Knowing which actions to gate is now a design problem you can own.</p>
+          <p class="source"><a href="https://openai.com/index/introducing-dots" target="_blank" rel="noopener">Source &mdash; OpenAI</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a dot can revise marketing assets or analysis overnight, your {focus} work starts with reviewing what changed while you were gone, so you need habits for diffing and rejecting work you never saw produced.</p>
+              <p class="impact-variant" data-variant="design-lead">Persistent agents touching shared files mean your team's review ritual has to cover agent-authored changes; decide who signs off on a dot's edits to {domain} artefacts before anyone connects one.</p>
+              <p class="impact-variant" data-variant="strategist">Always-on agents turn design from a sequence of handoffs into continuous background change, so the planning question becomes which surfaces an agent may modify without a human in the loop.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still using agents in a single session; very few have handed a long-running task to something that keeps working unattended, and those who have mostly report spending the saved time on checking.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly blocking or ignoring this category because permission and audit questions are unresolved; few teams have a written rule for what an agent may touch in the design file or the ticket tracker.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are reading this as a procurement and risk question first, and are asking IT about credentials and data access before anyone asks about design quality.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The interface you design stops being the screen the user watches and becomes the control and review layer around work done out of sight, which is a different craft, not a faster one.</p>
+              <p class="impact-variant" data-variant="design-lead">For a team, the unit of design shifts from the flow to the delegation: what the agent may decide, what it must ask, and how it reports back.</p>
+              <p class="impact-variant" data-variant="strategist">Autonomy with its own computer, identity and permissions changes who the 'user' of your product is, so the existing frame of a human driving a screen is the wrong one to plan around.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} features, specify the approval points, the read-only fallback and the undo path up front; OpenAI's own Activity View and rule controls are a useful pattern to critique.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should ask product and engineering partners for an explicit list of actions a {domain} agent can take without confirmation, and push back on vague 'it will ask when needed' answers.</p>
+              <p class="impact-variant" data-variant="strategist">Persistent agents make trust and liability part of the product strategy for {domain}; decide whether you are building agents, hosting other people's, or designing for being acted on by them.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take a real {focus} task an always-on agent could plausibly run overnight. Write the exact permission rules you would set (allow, require approval, block) and then a one-page critique of the gaps: three actions the rules would wrongly permit and one they would wrongly block.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Map one recurring {domain} workflow on your team (for example asset updates after a scope change) and mark every step an always-on agent could take over. For each, write who reviews it, where the trail lives, and what happens if the review is skipped for a week.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo to {domain} leadership recommending whether to pilot always-on agents now or wait. Name one specific data-access risk, one measurable pilot check (for example reviewer time per agent change), and a clear recommendation.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-09-30-gpt-6-1-sol-pricing"
+                 data-category="models"
+                 data-published="2026-09-29"
+                 data-tags="openai,gpt-6-1-sol,pricing,codex,opus">
+          <div class="head">
+            <h6 class="headline">OpenAI's GPT-6.1 Sol lands at $2/$10 per million tokens and claims to beat Claude Opus 5.5 at roughly a third of the cost</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">GPT-6.1 Sol launched at DevDay at $2 per million input tokens, $0.10 cached input and $10 output, about one-fifth the token price of GPT-6 Astra. OpenAI says it beats Opus 5.5 on AutomationBench by 2.2 points at roughly one-third the cost, and scores higher on GDP.pdf at under half the cost per task. It is available to Plus, Pro, Business, Enterprise and Edu users in ChatGPT Work and Codex, with API id gpt-6.1-sol; an Ultrafast tier with up to 8x faster generation is coming. The benchmarks are vendor-reported with no independent verification in the announcement, and it was in GitHub Copilot, Devin and Vercel's AI Gateway within hours.</p>
+          <p class="why"><strong>Why this matters for you:</strong> This is the second mid-tier price cut in two days, so model choice is becoming a per-task cost decision you will be asked to justify. Build your own small test set rather than trusting a launch chart.</p>
+          <p class="source"><a href="https://openai.com/index/introducing-gpt-6-1-sol" target="_blank" rel="noopener">Source &mdash; OpenAI</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">With a capable model this cheap, running several full {focus} explorations through it costs little, so the real work is writing the evaluation criteria you will use to pick one.</p>
+              <p class="impact-variant" data-variant="design-lead">Fast availability across Copilot, Devin and gateways means teammates may switch models without telling you; set a shared sample task so the team notices when output quality changes.</p>
+              <p class="impact-variant" data-variant="strategist">Falling per-task cost changes what AI assistance you can put in every {domain} workflow by default, so planning moves to where a human check is still worth paying for.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still on whatever model their tool defaults to and have not compared Sol against the model they use; a few are keeping a personal bake-off file of their own prompts.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are getting pricing pitches from several vendors in the same week and mostly lack an internal benchmark, so they are deciding on launch-day charts.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are renegotiating or reconsidering AI spend and starting to ask for cost per successful task rather than per-token rates.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Cheaper near-frontier models reshape how often you iterate and what you delegate, but the work of judging output stays yours.</p>
+              <p class="impact-variant" data-variant="design-lead">The team-level effect is volume: more options and more drafts, so critique capacity becomes the limiting factor rather than generation.</p>
+              <p class="impact-variant" data-variant="strategist">A price war between labs is a durable direction, although any single vendor-reported win should be treated as unproven until someone reproduces it.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} features that were too expensive to run per-interaction, re-cost them, but write failure states first because cheap does not mean accurate.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should ask engineering for cost per successful task on {domain} features, since retries and fallbacks can erase a lower token price.</p>
+              <p class="impact-variant" data-variant="strategist">Model-agnostic architecture becomes a strategic advantage when prices move this fast; plan {domain} products so the model can be swapped without redesigning the experience.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick three real {focus} prompts you use weekly. Run them on Sol and on your current model, then write a critique scoring each output on the criteria you actually care about and naming one place where the cheaper result is good enough.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft a one-page model-selection rule for your {domain} team: list five recurring AI tasks, assign each to a model tier with a one-line reason, and define the sample test the team reruns whenever a new model appears.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo arguing for or against switching your {domain} team's default model because of this price. Include cost per successful task as the metric, one risk of relying on vendor benchmarks, and a recommendation.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry"
+                 data-id="2026-09-30-chatgpt-space-slides"
+                 data-category="pm-tools"
+                 data-published="2026-09-29"
+                 data-tags="openai,chatgpt-space,collaboration,slides,mcp">
+          <div class="head">
+            <h6 class="headline">ChatGPT Space adds shared Pages, real-time collaborative slides and team tasks, with @ChatGPT inside Slack and Teams</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">Among 20-plus DevDay announcements, OpenAI introduced ChatGPT Space: team workspaces with Pages for human-and-agent document work, collaborative slides with real-time multi-user editing, and team tasks for recurring delegated work. Teams can invoke @ChatGPT from Slack and Microsoft Teams. OpenAI also announced an MCP Events specification for automation triggers, plugins that render interactive sidebars in ChatGPT, and Sign in with ChatGPT across 16-plus partner platforms. These are announcements from OpenAI's recap; how well the collaborative features work has not been independently tested.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The place where a team drafts decks, briefs and specs is becoming an agent-native workspace, which competes directly with where designers currently present and debate work. Expect stakeholders to start in it.</p>
+          <p class="source"><a href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener">Source &mdash; OpenAI DevDay 2026 recap</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If PMs draft specs and decks with an agent in a shared Page, your {focus} work will increasingly start from a document you did not write, so learn to critique and redirect it early.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should expect briefs to arrive pre-shaped by an agent; add a step where your team checks the problem framing before design starts.</p>
+              <p class="impact-variant" data-variant="strategist">Workspace-level agents mean strategy documents get co-authored by models, so planning needs a clear owner for the assumptions inside them.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs still build decks and specs in Figma, Slides or Notion and use chat separately; few have worked inside a shared human-agent document.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly tolerating multiple tools and have not decided where design decisions should be recorded once agents can edit them.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are the early adopters here because slides and memos are their core output, and they are already asking for agent-drafted first versions.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This reshapes the craft of communicating design work: the artefact is a living shared page, not a file you hand over.</p>
+              <p class="impact-variant" data-variant="design-lead">For teams, the change is that review happens inside a workspace where an agent can also edit, which calls for clear rules on authorship.</p>
+              <p class="impact-variant" data-variant="strategist">It is a consolidation move by one vendor, so watch whether it sticks; the durable part is agents as participants in team documents.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} work, the spec your engineers read may be agent-edited, so write acceptance criteria that survive paraphrase.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should ask that decisions and their rationale be captured explicitly in {domain} docs, since agent-edited pages blur who decided what.</p>
+              <p class="impact-variant" data-variant="strategist">Plugin sidebars and MCP Events suggest integrating your {domain} product into these workspaces is becoming a distribution question, not just a feature one.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Ask an AI assistant to draft a one-page brief for a {focus} feature from three sentences of context. Write a critique marking what it assumed, what it invented and what it skipped, then rewrite the problem statement yourself in five lines.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Draft a team rule for {domain} docs that agents can edit: who owns each section, how human versus agent changes are marked, and where final decisions live. Share it with one PM or engineer and record their objection.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">List three documents your team produces that a shared agent workspace will make commodity, then write one sentence on what a designer with taste still adds that a drafted page lacks for {domain}.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-09-30-third-circuit-ross-fair-use"
+                 data-category="policy"
+                 data-published="2026-09-29"
+                 data-tags="copyright,fair-use,training-data,thomson-reuters,ross">
+          <div class="head">
+            <h6 class="headline">Third Circuit affirms Thomson Reuters win over Ross Intelligence, the first US appellate ruling on fair use in AI training</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">On September 29 the Third Circuit affirmed that Ross Intelligence infringed Westlaw headnotes and failed its fair use defense, the first federal appellate decision on fair use in AI training. The key caveat is that Ross's tool was not generative AI, and the court's reasoning is not yet public: the opinion is sealed and only a one-word judgment, 'AFFIRMED', was released. Dozens of generative AI copyright cases will look at the eventual reasoning, so how far it reaches is unknown. This summary relies on a legal-blog report of the filing rather than the opinion itself.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Image and text tools your work depends on were trained on scraped material, so the legal status of that data can change which tools are safe to ship in a client deliverable. It is worth knowing what this ruling does and does not settle.</p>
+          <p class="source"><a href="https://copyrightlately.com/thomson-reuters-v-ross-third-circuit/" target="_blank" rel="noopener">Source &mdash; Copyright Lately</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Nothing in your {focus} tool choices has to change today, since the ruling concerns non-generative AI and the reasoning is sealed, but start noting which assets in client work came from which model.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should make sure the team records which generators produced which {domain} assets, so a later ruling does not force an audit from memory.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists should treat this as a signal to track, not a reason to change tooling, and assign someone to read the full opinion when it is unsealed.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs ignore training-data provenance and pick tools by output quality; a minority of client-facing designers now ask vendors about indemnity.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly relying on vendor indemnity statements without reading them and have no record of which tools generated which assets.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists working with legal are the ones tracking this, typically by asking whether enterprise agreements cover training-data claims.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">For the craft this is a passing trend until the opinion is public: it affects your work only if it is extended to generative models.</p>
+              <p class="impact-variant" data-variant="design-lead">For a team this is a file-and-watch item; the practical step is provenance records, not a change in process.</p>
+              <p class="impact-variant" data-variant="strategist">The litigation trend is durable, but this specific ruling is narrow and sealed, so it does not yet justify a strategic change.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} features built on generative assets, avoid assuming the training-data question is settled in either direction.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should ask {domain} product partners which vendors provide indemnity and what it covers before generated assets ship.</p>
+              <p class="impact-variant" data-variant="strategist">If your {domain} product depends on a model vendor, training-data risk is a supplier risk worth a line in the roadmap.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Read a summary of the Ross ruling and write a half-page note separating what it decides, what it leaves open (generative models, sealed reasoning), and what you would still avoid doing with generated {focus} assets in client work.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Create a provenance log template for your {domain} team recording tool, model, date and use for any generated asset. Ask someone in legal or procurement one specific question about indemnity, and write down the answer.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo for {domain} leadership recommending whether to change generative-tool policy in response to this ruling, including the case for doing nothing yet and what new fact would change your advice.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-09-30-cloudflare-cf-agent-cli"
+                 data-category="coding-agents"
+                 data-published="2026-09-28"
+                 data-tags="cloudflare,cli,agents,api,typescript">
+          <div class="head">
+            <h6 class="headline">Cloudflare ships 'cf', a CLI that mirrors its entire API for agents, and open-sources its SDK generator Forge</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-28">Published September 28, 2026</time></p>
+          <p class="summary">Cloudflare's September 28 post introduces cf, a command-line tool that mirrors the whole Cloudflare API and supports programmatic TypeScript configuration, built for both human developers and AI agents. A secondary report puts it at roughly 3,000 API operations versus about 280 for Wrangler; that figure is not in the post excerpt we could verify. Cloudflare is also open-sourcing Forge, the internal SDK generator behind it. The design intent is that an agent can discover and call any operation from one consistent interface.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The pattern of exposing an entire product as one agent-friendly interface is coming for design tools and design systems too. If an agent cannot find and call your components consistently, it will invent them.</p>
+          <p class="source"><a href="https://blog.cloudflare.com/cloudflare-cf-cli-launch/" target="_blank" rel="noopener">Source &mdash; Cloudflare blog</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If agents can call every operation in a tool, your {focus} work includes deciding which operations should be scriptable and how they are named, because naming becomes the interface.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should ask whether the team's design system and tooling expose a consistent, searchable surface an agent can use, rather than relying on tribal knowledge.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists should note that completeness of an API, not polish of its UI, is becoming a competitive trait for tools aimed at agent use.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs interact with tools through GUIs and only a few script them; the ones using MCP servers or CLIs with agents report faster repetitive work and more time spent fixing wrong calls.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads mostly have no agent-readable documentation for their design system; components are described for humans in Storybook or Figma.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists see this as an infrastructure story and rarely connect it to design, although it sets the expectation for design-system interfaces.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This reshapes the craft for system designers: the interface of a component library now has a non-human reader.</p>
+              <p class="impact-variant" data-variant="design-lead">For teams, a design system becomes something agents query, so naming, metadata and examples need to be treated as product surface.</p>
+              <p class="impact-variant" data-variant="strategist">The bet that agents are a primary consumer of every platform is a structural shift, but this specific CLI is an example, not the change itself.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} work, consider how an agent would discover your component or flow, not just how a person would find it.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads should push {domain} engineering to keep JSON output, search and stable names in any internal tool designers rely on.</p>
+              <p class="impact-variant" data-variant="strategist">Agent-friendly surfaces are becoming a platform expectation; decide whether your {domain} product needs one.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Choose ten components from your {focus} design system and write what an agent would need to pick the right one without a human: name, when to use, when not to, and a machine-readable example. Note which ones are ambiguous.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="agent-orchestration,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Give an agent access to your {domain} design-system docs and ask it to assemble one screen. Record every wrong component or token it chose and trace each error to a missing or unclear piece of documentation.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo proposing that your {domain} design system publish an agent-readable interface. Name the owner, one measurable outcome such as fewer wrong-component errors, and the cost you are asking for.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+      </div>
+    </section>
+
+        <section class="day-section" data-date="2026-09-29">
       <h4 class="day">Tuesday, September 29 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
