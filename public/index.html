@@ -1125,9 +1125,448 @@
 <section class="year-section" data-year="2026">
   <h2 class="year">2026</h2>
 
+  <section class="month-section" data-month="2026-10">
+    <h3 class="month">October 2026</h3>
+        <section class="day-section" id="today" data-date="2026-10-01">
+      <h4 class="day">Thursday, October 1 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-10-01-gemini-4-argon"
+                 data-category="models"
+                 data-published="2026-09-30"
+                 data-tags="google,gemini-4,argon,pricing,long-context,multimodal">
+          <div class="head">
+            <h6 class="headline">Google's Gemini 4 Argon opens to a limited cyber-defender cohort with a 1M-token output limit and $2/$10 introductory pricing</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-30">Published September 30, 2026</time></p>
+          <p class="summary">Google DeepMind announced Gemini 4 Argon on September 30. Access starts with trusted defenders in the Fairwind Program, with wider developer and consumer availability to follow after a voluntary U.S. government pre-release review. Google lists a 1M output-token limit (up from 64K), introductory pricing of $2 input / $10 output per million tokens with a 95% cached-input discount, rising to $4/$20 later, and claims 77.9% on DeepSWE v1.1 and 91.7% on LVBench. All benchmark figures are Google's own and not independently verified.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A 1M-token output ceiling means a model can emit an entire app, spec or design-system audit in one pass, which moves the scarce skill from producing volume to judging it. The gated rollout also means you cannot plan around it yet, so treat this as a signal about direction, not a tool to adopt this week.</p>
+          <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener">Source &mdash; Google</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When one model call can return a full {focus} prototype or a whole-library audit, your day shifts from drafting to triaging a very large output, so you need a fast method for finding the three things in it that are wrong.</p>
+              <p class="impact-variant" data-variant="design-lead">Output at this scale breaks line-by-line review; decide as a lead what your team samples, what gets automated checks, and what a human must read in full for {domain} work.</p>
+              <p class="impact-variant" data-variant="strategist">Cheap long output plus a gated rollout means planning for capability you cannot yet buy: sequence {domain} pilots so they start the week access opens, not the quarter after.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are still prompting for single screens or components; very few are asking a model for an entire flow set and then critiquing coverage, which is where long output actually helps.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly watching model launches without changing rituals, and the few experimenting have no agreed rule for how much generated material counts as 'reviewed'.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are comparing price per million tokens across vendors in spreadsheets, mostly because it is the one number that is easy to compare.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The skill that gets harder to fake is evaluating a very large artefact against intent, which reshapes craft without replacing it.</p>
+              <p class="impact-variant" data-variant="design-lead">For a team this reshapes review, not the brief: the unit you inspect gets bigger while your time does not.</p>
+              <p class="impact-variant" data-variant="strategist">This is a reshaping rather than a reframe because the buyer, the problem and the product are the same; the cost curve for output is what moved, and Google's benchmark claims have not been replicated outside Google.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} work, ask engineering what the model can now produce in one call and design the review step before the generation step.</p>
+              <p class="impact-variant" data-variant="design-lead">Ask product and engineering partners to put a per-task cost ceiling on {domain} experiments now, since the $2/$10 rate is introductory and doubles later.</p>
+              <p class="impact-variant" data-variant="strategist">Treat the government pre-release review as a planning variable: capability that arrives gated and late rewards organisations that already have an evaluation harness for {domain}.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one real {focus} deliverable and ask any current long-context model for a complete version in a single pass (all states, empty and error cases included). Write a one-page critique listing the five most consequential errors or omissions you find and which of them a reviewer skimming quickly would have missed.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">List the review steps your team runs on {domain} output today and mark which ones assume a human can read everything. Rewrite the ritual for output 20 times larger: what is sampled, what is checked automatically, what is read in full, and who signs off.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo to {domain} leadership on whether to budget for long-output models this quarter given that Google's $2/$10 rate is introductory and access is gated. State a cost ceiling per experiment, one measurable success check, and the date you will revisit the decision.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-10-01-ag-ui-1-0"
+                 data-category="generative-ui"
+                 data-published="2026-09-30"
+                 data-tags="ag-ui,copilotkit,generative-ui,protocol,agents,mcp">
+          <div class="head">
+            <h6 class="headline">AG-UI 1.0 stabilises the open protocol that connects agents to user-facing apps</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-30">Published September 30, 2026</time></p>
+          <p class="summary">CopilotKit released AG-UI 1.0 on September 30, with a JSON Schema-backed spec and TypeScript, Python and .NET SDKs. It adds subagent tracking, multimodal tool results (images, audio, video, documents), human-in-the-loop interrupts that pause a run, and token usage reporting. CopilotKit says Google, Microsoft, Amazon and Oracle have adopted it; that adoption claim comes from the project itself.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If agent-to-UI traffic standardises, the interface becomes a set of events your design has to handle: interrupted runs, parallel subagents, streaming media. Those states now have names, which means they can be specified, and unspecified ones will be defaulted by engineering.</p>
+          <p class="source"><a href="https://www.copilotkit.ai/blog/ag-ui-1.0" target="_blank" rel="noopener">Source &mdash; CopilotKit</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Your {focus} spec needs to cover states the protocol now defines: a paused run waiting for approval, three subagents progressing in parallel, a tool result that is an image rather than text.</p>
+              <p class="impact-variant" data-variant="design-lead">Add agent-event states to the checklist your team uses before handoff, and decide who owns the design of an interrupt, since it falls between product design and engineering today.</p>
+              <p class="impact-variant" data-variant="strategist">A stable protocol makes it plausible that one agent backs several surfaces, so plan {domain} design as a set of surfaces over one event stream rather than separate screens.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs designing agent features are drawing a chat panel and a happy path; interrupts, partial failure and parallel work usually appear only after engineering asks about them.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly leaving agent-state design to whichever engineer wires up the stream, which is how inconsistent pause-and-approve patterns ship.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating protocols like MCP, A2A and AG-UI as plumbing for engineering to choose, and not yet asking what each one decides about the user experience.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for a stream of typed agent events rather than a fixed screen is a different mental model from page-based design, and it is the frame that 1.0 makes concrete.</p>
+              <p class="impact-variant" data-variant="design-lead">The team's design artefact shifts from flows to event vocabularies: what can an agent emit, and what does each emission look like.</p>
+              <p class="impact-variant" data-variant="strategist">If agent output becomes portable across web, mobile, terminal and chat, the surface stops being the product and the existing frame of 'design the app' is the wrong one to plan around; the open question is whether AG-UI wins over MCP Apps or A2UI.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus}, write down every event an agent might send and give each one a designed state before the first build.</p>
+              <p class="impact-variant" data-variant="design-lead">Ask engineering for the list of AG-UI event types your {domain} product will receive and review the interrupt and error ones first.</p>
+              <p class="impact-variant" data-variant="strategist">Standards choice is a product decision with design consequences; ask which of AG-UI, MCP Apps or A2UI your {domain} stack is betting on and what you would lose by switching.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one {focus} agent task and sketch its event stream as a table: every event type (progress, interrupt, tool result with media, subagent start/finish, error, token usage) with a designed UI state for each. Mark the three states most likely to be left to engineering defaults.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Run a 30-minute session with one engineer from your {domain} team and list which agent states have no owner today. Produce a one-page ownership table: who designs interrupts, who designs partial failure, and who reviews them before release.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph recommendation for {domain} leadership on whether to align with AG-UI now or wait for the standards picture to settle. Name one cost of switching later, one risk of adopting early, and what evidence would change your mind.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="image-gen">
+        <h5 class="category-label">Image gen</h5>
+
+        <article class="entry"
+                 data-id="2026-10-01-ideogram-4-5"
+                 data-category="image-gen"
+                 data-published="2026-09-30"
+                 data-tags="ideogram,image-editing,iteration,text-in-image,high-resolution">
+          <div class="head">
+            <h6 class="headline">Ideogram 4.5 targets the drift that ruins images after repeated edits</h6>
+            <span class="badge image-gen">Image gen</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-30">Published September 30, 2026</time></p>
+          <p class="summary">Ideogram released 4.5, an editing-focused image model that it says reduces pixel shifts, colour changes and texture artefacts across multiple rounds of refinement. Listed features include text edits inside images, style references, reframing, depth-based generation and in-place edits up to 4,016 by 6,016 pixels with blended edges. Ideogram claims it beats GPT Image 2.5 Sunburst and Nano Banana variants on staying clean edit after edit; that comparison is the vendor's own and the page gives no release date or pricing.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Design work is iterative by nature, so a model that holds still while you change one thing is more useful than one that produces a prettier first image. The test is whether you can run ten rounds of art-direction notes and still ship the result.</p>
+          <p class="source"><a href="https://ideogram.ai/models/4.5" target="_blank" rel="noopener">Source &mdash; Ideogram</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If edits stop degrading the rest of the image, you can work in the {focus} loop the way you do in a layered file: change one thing, keep everything else, and compare versions.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads can start setting an explicit edit-round budget for generated assets in {domain} work, since stability makes longer refinement chains realistic and reviewable.</p>
+              <p class="impact-variant" data-variant="strategist">Stable edits shift cost from regenerating to directing, so planning for {domain} should count art-direction time rather than render time.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs still regenerate from scratch when a small change goes wrong because repeated edits wander; they keep a folder of near-identical variants as insurance.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly allowing generated imagery only for early exploration, partly because nobody trusts it to survive revisions.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are hearing 'it edits cleanly' as a vendor promise and mostly waiting for a peer to confirm it on real brand assets.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The craft moves toward directing and specifying precise changes, which reshapes image work inside the existing frame of brief, review and revise.</p>
+              <p class="impact-variant" data-variant="design-lead">For a team, edit stability turns image generation from a slot-machine into something with a version history you can review.</p>
+              <p class="impact-variant" data-variant="strategist">This is a reshaping rather than a new frame: the workflow is the familiar iterate-and-approve loop; the claim that competitors fail within a few edits is unverified.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} features that let users edit generated images, drift across rounds is a product bug to test for, not an edge case.</p>
+              <p class="impact-variant" data-variant="design-lead">Ask product partners to define an acceptable-drift test (ten sequential edits, then compare) before {domain} commits to any image editing model.</p>
+              <p class="impact-variant" data-variant="strategist">If editing is reliable, the product question becomes who is allowed to make the tenth edit and who approves it, which is a workflow decision for {domain}, not a model one.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one {focus} image and run ten sequential edit instructions on it (change colour, swap text, reframe, adjust lighting) in Ideogram 4.5 or any rival. After each round note what else changed that you did not ask for, then write a one-page critique that says which round you would stop at and why.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Define a drift test your {domain} team can reuse: ten fixed edit instructions, a checklist of what must not change (logo, brand colour, text, proportions), and a pass/fail rule. Write it up as a one-page procedure and say who runs it.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo to {domain} leadership recommending whether generated-image editing is ready for production assets. Cite the drift test result you would require, one brand risk, and the condition under which you would reverse the decision.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Case-making</span>
+              <span class="skill-chip">Strategy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+
+        <article class="entry"
+                 data-id="2026-10-01-ftc-agent-probe"
+                 data-category="policy"
+                 data-published="2026-09-30"
+                 data-tags="ftc,openai,anthropic,agents,consumer-protection,safety-claims">
+          <div class="head">
+            <h6 class="headline">FTC reportedly opens a consumer-protection probe into OpenAI, Anthropic and METR over AI agent incidents</h6>
+            <span class="badge policy">Policy</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-30">Published September 30, 2026</time></p>
+          <p class="summary">Multiple outlets reported on September 30 that the Federal Trade Commission has opened a broad investigation into OpenAI, Anthropic and the evaluation group METR, examining consumer-protection questions around AI agent incidents and the companies' safety claims. The reporting traces to the Wall Street Journal and Washington Post, and the FTC had not published details in the sources we could reach, so scope and timeline are unconfirmed.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Agent safety claims are becoming something regulators can test against what actually shipped, and the interface is where those claims live: permission prompts, activity logs and approval screens. Designers who built those surfaces may be asked to show they work.</p>
+          <p class="source"><a href="https://siliconangle.com/2026/09/30/ftc-reportedly-investigating-openai-anthropic-over-potential-consumer-risks/" target="_blank" rel="noopener">Source &mdash; SiliconANGLE</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Keep a dated record of the design decisions behind {focus} permission, consent and undo flows, since 'why did the agent get to do that' may now be a question someone has to answer.</p>
+              <p class="impact-variant" data-variant="design-lead">Add an evidence step to your review ritual: for each agent control in {domain}, can your team show it was tested and what it actually prevents.</p>
+              <p class="impact-variant" data-variant="strategist">Treat safety copy and control design as one deliverable, because a claim on a marketing page that the UI does not back up is the exposure.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs ship permission and confirmation flows without recording why they were designed that way, so the rationale lives in someone's head or a Slack thread.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads mostly handle agent safety as an engineering and legal topic and bring design in late, if at all.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are mostly waiting to see where the investigation lands and few have asked which of their own product claims about agents would survive a test.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Design decisions about what an agent may do without asking stop being UX preference and become something you may need to defend, which changes what the work is for.</p>
+              <p class="impact-variant" data-variant="design-lead">For a team, the design of control surfaces becomes part of how a company demonstrates safety, not only how it ships features.</p>
+              <p class="impact-variant" data-variant="strategist">The existing frame treats safety as a model property; scrutiny of agent incidents moves it to the product experience, though the probe's scope is unconfirmed and could narrow.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} features with agent actions, define up front which actions are irreversible and design a confirmation that you could show to a regulator.</p>
+              <p class="impact-variant" data-variant="design-lead">Ask legal and product partners to list every public safety claim about {domain} agents and map each to the control that backs it.</p>
+              <p class="impact-variant" data-variant="strategist">Plan for audit-ready agent behaviour in {domain}: logs, approvals and rollback are product features with owners, not afterthoughts.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one agent action in {focus} that is hard to reverse and review its current confirmation and undo flow as if you had to defend it to a regulator. Write a one-page critique: what a user is told, what they can actually undo, and the two gaps you would fix first.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Ask one legal or compliance colleague which public claims about {domain} agent safety exist today. Produce a table mapping each claim to the UI control that backs it, and mark the claims with no matching control.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo for {domain} leadership recommending whether to start a design-decision log for agent controls now. Name the specific records to keep, who owns them, and the cost of starting late.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+      <div class="category-group" data-category="pm-tools">
+        <h5 class="category-label">PM tools</h5>
+
+        <article class="entry"
+                 data-id="2026-10-01-ando-agent-workspace"
+                 data-category="pm-tools"
+                 data-published="2026-09-30"
+                 data-tags="ando,agents,messaging,workspace,funding,collaboration">
+          <div class="head">
+            <h6 class="headline">Ando raises $20M for a team messaging app where agents are members, not integrations</h6>
+            <span class="badge pm-tools">PM tools</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-30">Published September 30, 2026</time></p>
+          <p class="summary">Ando launched a Slack and Teams alternative in which AI agents are workspace members that can join channels, take part in group conversations and accept work assignments. It supports agents from Claude, Codex, Grok Bot and other harnesses, offers a hosted native harness, and prices per human seat with agents not metered. The company reports a $20 million Series A from Accel, Index Ventures and Emergence Capital; its claims about team productivity are the vendor's own.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Where agents are addressable as colleagues, assigning them design work becomes a team-structure question, not a prompt. It forces you to decide what a design task needs before it can be handed to something that does not attend crit.</p>
+          <p class="source"><a href="https://www.ando.so/blog/introducing-ando" target="_blank" rel="noopener">Source &mdash; Ando</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If agents sit in your channels and take assignments, your {focus} requests need to be written as briefs with acceptance criteria, because an agent cannot read the room.</p>
+              <p class="impact-variant" data-variant="design-lead">Decide which design tasks on your team can be assigned to an agent member, and write the handoff format (brief, constraints, review owner) before anyone tries it.</p>
+              <p class="impact-variant" data-variant="strategist">Agents as named members make capacity planning for {domain} messier; decide whether they count as headcount, tooling or something else in your plans.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs use agents in a private chat or editor; assigning one work visibly in a shared channel is rare and mostly experimental.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly keeping agents in individual workflows and have not defined what a teammate-agent is allowed to see in shared channels.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching these products as a category, but few have a view on whether the chat app is the right home for agents at all.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Treating an agent as a channel member is an interaction metaphor that may not survive; most teams will end up with agents embedded in their existing tools.</p>
+              <p class="impact-variant" data-variant="design-lead">The tool is new but the lead's problem is old: unclear briefs and unclear ownership, now with a participant who never asks a clarifying question.</p>
+              <p class="impact-variant" data-variant="strategist">Tagged a passing trend because the product's pitch is a new chat app competing with Slack and Teams, and the underlying idea (agents with identities and permissions) is likely to be absorbed by incumbents; the claimed productivity gains are unverified.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus} products, notice that users may soon expect to @-mention an agent like a colleague; consider what identity and permissions that implies.</p>
+              <p class="impact-variant" data-variant="design-lead">Ask product partners whether {domain} agents need an identity, an inbox and a permission scope, and who sets each.</p>
+              <p class="impact-variant" data-variant="strategist">The strategic question for {domain} is whether to build on an agent-native workspace or wait for incumbents to add the same; neither choice is obviously safe at this stage.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Take one {focus} request you would normally give a teammate verbally and rewrite it as an agent-ready brief: goal, constraints, what done looks like, what it must not touch. Then critique your own brief by listing three assumptions a human would have filled in that an agent will not.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Choose three recurring {domain} tasks and decide which an agent member could take. For each write the handoff format, the review owner and the failure that would worry you most, then summarise as a one-page table.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a short memo on whether {domain} should pilot an agent-native workspace or wait for Slack and Teams to add the feature. List one thing a dedicated product does better than an add-on, one reason it might not last, and your recommendation.</p>
+            <div class="action-meta">
+
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </section>
+
   <section class="month-section" data-month="2026-09">
     <h3 class="month">September 2026</h3>
-        <section class="day-section" id="today" data-date="2026-09-30">
+        <section class="day-section" data-date="2026-09-30">
       <h4 class="day">Wednesday, September 30 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="tools">
