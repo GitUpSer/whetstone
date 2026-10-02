@@ -1127,7 +1127,345 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-        <section class="day-section" id="today" data-date="2026-10-01">
+        <section class="day-section" id="today" data-date="2026-10-02">
+      <h4 class="day">Friday, October 2 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="mcp">
+        <h5 class="category-label">MCP</h5>
+
+        <article class="entry"
+                 data-id="2026-10-02-chatgpt-plugin-extensions"
+                 data-category="mcp"
+                 data-published="2026-09-29"
+                 data-tags="openai,chatgpt,plugins,mcp-events,sidebar,devday">
+          <div class="head">
+            <h6 class="headline">ChatGPT plugins get sidebar panels, file viewers, and MCP Events triggers</h6>
+            <span class="badge mcp">MCP</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">At DevDay, OpenAI said ChatGPT plugin extensions can now ship a dedicated sidebar home, interactive panels, and custom file viewers, and that ChatGPT will support the proposed MCP Events specification so a plugin can fire automations when something changes in a connected app. MCP Events is a proposal, not a ratified part of MCP, and OpenAI has not published detail on availability or review rules in the coverage we could find.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Your interface is no longer only the product; it is also a panel rendered inside someone else's assistant, and the trigger for it may be an event rather than a click.</p>
+          <p class="source"><a href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener">Source &mdash; OpenAI, DevDay 2026 recap</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing for a sidebar panel inside ChatGPT means working within a host-controlled frame: fixed width, host typography, no control over entry or exit. Your {focus} work starts from the constraint, not the blank canvas.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team will be asked to ship a panel version of {domain} features. That needs a decision on which flows survive a narrow, host-framed surface and who owns quality when the host changes its chrome.</p>
+              <p class="impact-variant" data-variant="strategist">Plan {domain} as a product with two front doors: your own app and a guest surface in assistants. The design question becomes which moments deserve your full UI and which are fine as a panel.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are not designing for these panels yet; the ones who are tend to reuse existing mobile components shrunk down, and discover the result has no empty, error, or permission states.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly watching. A few are assigning one designer to prototype a panel and learning that the real work is event design: what should the product do unprompted, and when does that become noise.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are treating it as a distribution question, asking whether being inside ChatGPT adds users or hands the relationship to OpenAI. Few have a clear answer, and the spec is still a proposal.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">An event-triggered, host-embedded surface changes what a screen is for in {focus}. You design the moment of arrival and the reaction to a system event, not a navigable page. That is a reframe, not a new tool.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's deliverables shift from screens to behaviours: what fires, what shows, what is silent. Existing review rituals built around flows will miss it. It is a different frame, though it depends on MCP Events being adopted.</p>
+              <p class="impact-variant" data-variant="strategist">If events become the standard trigger, the product competes on being the right interrupt, not on having the best destination. That reframes engagement strategy, with the caveat that adoption of the proposal is unproven.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Write down what your {domain} feature should do when it is triggered without the user asking. Most specs only cover the user-initiated case.</p>
+              <p class="impact-variant" data-variant="design-lead">Add automation-triggered states to your definition of done, including how a user reviews, pauses, or undoes what an event-driven plugin did.</p>
+              <p class="impact-variant" data-variant="strategist">Decide whether {domain} is a destination or a capability others invoke. The roadmap, the metrics, and the design investment differ sharply between the two.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Pick one {domain} feature and design its sidebar-panel version at roughly 360px wide, including empty, loading, permission-denied, and event-triggered states. Then write a half-page critique naming what you had to cut and what the host frame forced you to give up.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute team session: list every {domain} flow and mark each as destination, panel-suitable, or event-triggered. Then write the one rule your team will use to decide which flows get a panel, and who signs off when the host changes its layout.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo for {focus} arguing either to build a ChatGPT plugin extension or to wait for MCP Events to be ratified. State the distribution upside, the loss of control over the experience, and a clear recommendation with a date to revisit.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          </article>
+      </div>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+
+        <article class="entry"
+                 data-id="2026-10-02-openai-decisions-api"
+                 data-category="models"
+                 data-published="2026-09-29"
+                 data-tags="openai,decisions-api,luna,classification,routing,agents">
+          <div class="head">
+            <h6 class="headline">OpenAI Decisions API narrows a model to fixed answers for routing and classification</h6>
+            <span class="badge models">Models</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">OpenAI's Decisions API, in limited preview, points its Luna model at a user-defined set of questions with a finite list of allowed answers, for classification, request routing, and choosing an agent's next action. OpenAI says it is faster than calling a large model with a JSON schema; that comparison is the vendor's claim and was not independently tested. Luna is priced at $0.10 input and $0.50 output per million tokens, with broader release promised "in the coming days."</p>
+          <p class="why"><strong>Why this matters for you:</strong> Cheap, constrained decisions are the layer where product behaviour gets set, and someone has to define the answer list. That is a design decision whether or not anyone calls it one.</p>
+          <p class="source"><a href="https://dev.to/axrisi/openai-devday-2026-every-announcement-with-prices-and-availability-1mbh" target="_blank" rel="noopener">Source &mdash; DEV Community, DevDay 2026 announcements with prices</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When a feature routes or labels input, the finite answer list is the design: its categories, names, and the fallback when nothing fits. You can prototype that list in an afternoon and test it on real {domain} inputs.</p>
+              <p class="impact-variant" data-variant="design-lead">Treat the answer lists behind your {domain} product as design artefacts with owners, review, and versioning, the way you treat a component library.</p>
+              <p class="impact-variant" data-variant="strategist">These classifiers decide what users are shown and who gets escalated. Put them on the design roadmap for {domain} instead of leaving them as an engineering detail.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Few ICs touch classification logic today. Those who do are writing category lists in a doc and handing them to engineers, with no way to see where real inputs land.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly unaware that routing decisions are being made by small models inside the product. The ones who found out usually did so after a misrouted-case complaint.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists see cost: a small model for routing is a margin lever. Few connect it to experience quality, where a wrong route is a failed interaction.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The craft extends one layer down, from what the screen says to what the system decides before any screen appears. Judging a taxonomy is a design skill you already have, aimed somewhere new.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's remit grows to include the decision layer. The existing frame of screens and flows holds, but it now has to cover invisible choices.</p>
+              <p class="impact-variant" data-variant="strategist">It changes how work is done within the existing frame, and the claim of speed over schema-constrained large-model calls is unverified. File it as a capability to test, not a bet.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Define what happens when the model's fixed answers do not fit the input. The "none of these" path is where trust is lost.</p>
+              <p class="impact-variant" data-variant="design-lead">Add a review loop where designers see samples of misclassified {domain} inputs each sprint. Without it the answer list quietly rots.</p>
+              <p class="impact-variant" data-variant="strategist">Decide which product decisions are cheap enough to automate with a fixed-answer model and which carry enough risk to need a human, and write the line down.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take 30 real or realistic {domain} inputs and invent the answer list a Decisions-style classifier would use: 5 to 8 categories plus a fallback. Sort the inputs by hand, then write down which ones broke your categories and how you would rename or split them.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Judgement</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Audit your team's {domain} product for places where something is already being routed, ranked, or labelled automatically. List each decision, who defined its categories, and who reviews its errors. Then draft a one-page ownership proposal for the lists nobody owns.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a short memo on which {focus} decisions could move to a fixed-answer small model. Give three candidates, the cost saving you assume, the failure that would hurt most, and a recommendation on which to pilot first.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-10-02-codex-cloud-security"
+                 data-category="coding-agents"
+                 data-published="2026-09-29"
+                 data-tags="openai,codex,cloud,security-cloud,code-review,voice">
+          <div class="head">
+            <h6 class="headline">Codex moves to cloud tasks, voice steering, and scheduled repository security scans</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">OpenAI's DevDay updates to Codex let paid-plan users run tasks remotely and start them from another device, steer the refreshed CLI by voice, and use an /agents view to delegate. Code Review analyses GitHub pull requests and GitLab merge requests, and Security Cloud scans entire repositories on demand or on a schedule and prepares fixes in the cloud. These are OpenAI's descriptions; the quality of the fixes is untested here.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When designers ship through coding agents, the review step is where taste gets enforced, and an agent that works while you are away needs rules written before it starts.</p>
+          <p class="source"><a href="https://www.infoq.com/news/2026/10/openai-devday-2026/" target="_blank" rel="noopener">Source &mdash; InfoQ, OpenAI DevDay 2026 recap for developers</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If you push UI changes through Codex, a task running in the cloud while you are elsewhere means your spec has to stand on its own. Write {focus} acceptance criteria a reviewer can check without asking you.</p>
+              <p class="impact-variant" data-variant="design-lead">Agents that open pull requests on their own put design review in the same queue as code review. Decide whether your team reviews visual and interaction changes there or somewhere else.</p>
+              <p class="impact-variant" data-variant="strategist">Background agents turn design-system conformance from a guideline into something that can be checked automatically on every pull request. Decide whether {domain} should invest in that.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designers who use coding agents mostly supervise a single live session. Cloud and remote tasks are new, and most have not yet written instructions for work they cannot watch.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads report review as the bottleneck: agent output arrives faster than anyone checks it against the design system.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching engineering throughput claims and asking what it means for design headcount. Few have evidence either way yet.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The craft moves toward specifying and checking, with less time spent producing. Your judgement about what is off in a rendered result becomes the scarce input.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's leverage comes from encoding standards the agent can be held to, not from reviewing each change by eye.</p>
+              <p class="impact-variant" data-variant="strategist">Delegated, asynchronous agents change who does the work, but the existing frame of design owning quality still holds. Reshapes how, not why.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Write the review checklist you would apply to an agent-built {domain} screen before it ships, and notice how much of it is taste you have never written down.</p>
+              <p class="impact-variant" data-variant="design-lead">Set a policy for what an agent may merge without a designer and what must wait for one.</p>
+              <p class="impact-variant" data-variant="strategist">Decide how much unattended agent work {domain} is willing to ship, and what quality signals would make you raise or lower that limit.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,agent-orchestration" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Take one recent {domain} UI change and write the instruction you would give a cloud Codex task to build it while you are away. Then list three ways the result could look right in a screenshot and still be wrong, and add a check for each.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Agent orchestration</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Draft your team's one-page rule for agent pull requests that touch {domain} UI: what an agent may merge alone, what needs a designer, and what evidence (screenshots, token diffs) must be attached. Run it past one engineer for feasibility.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Cross-functional</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a memo for {focus} on whether to invest in automated design-system checks on agent pull requests. Estimate the review time saved, name what such checks would miss, and give a clear yes or no with the condition that would change it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          </article>
+      </div>
+
+      <div class="category-group" data-category="industry">
+        <h5 class="category-label">Industry</h5>
+
+        <article class="entry"
+                 data-id="2026-10-02-sign-in-with-chatgpt"
+                 data-category="industry"
+                 data-published="2026-09-29"
+                 data-tags="openai,sign-in-with-chatgpt,marketplace,pro-500,distribution">
+          <div class="head">
+            <h6 class="headline">Sign in with ChatGPT lets users spend their ChatGPT allowance inside 16 partner products</h6>
+            <span class="badge industry">Industry</span>
+          </div>
+          <p class="meta"><time datetime="2026-09-29">Published September 29, 2026</time></p>
+          <p class="summary">OpenAI launched Sign in with ChatGPT with 16 launch partners, including Notion and Vercel, letting users apply their ChatGPT usage allowance to those products. It also announced an OpenAI Marketplace where enterprise customers can put existing commitments toward approved partner software, and a Pro 500 tier at 25 times the usage of ChatGPT Plus with faster generation. Pricing and terms for partners were not detailed in the coverage we found.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If the user's AI budget travels with their login, your product's inference cost and onboarding change, and so does what a free trial means.</p>
+          <p class="source"><a href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener">Source &mdash; OpenAI, DevDay 2026 recap</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">A "bring your own allowance" sign-in changes the first-run flow you design: no card form, but a permission and usage-limit moment you have not drawn before. Prototype it for {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team will be asked to design the states where a user's allowance runs out mid-task in {domain}. Nobody owns that moment yet, so claim it.</p>
+              <p class="impact-variant" data-variant="strategist">Plan {domain} onboarding around identity that arrives already carrying an AI budget. The funnel, the pricing page, and the upgrade prompts all change.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Few ICs have designed an out-of-allowance state. The common workaround is a generic error, which loses the user at the worst moment.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are waiting to see which partners report results before committing. Several are quietly asking whether this makes them dependent on a platform they compete with.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are split: some read it as free distribution, others as OpenAI becoming the billing layer for everyone else's AI features.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The unit of onboarding moves from account creation to granting access to a budget. That changes what you design first when someone arrives at {focus}.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team can no longer treat cost and experience as separate. A product that spends someone else's allowance owes them visibility and restraint.</p>
+              <p class="impact-variant" data-variant="strategist">If users carry their AI spend across products, pricing and lock-in logic is rewritten around the login. That is a structural reframe for {domain}, though adoption beyond 16 partners is unproven.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Design how your product shows what it spent on the user's behalf. Cost transparency becomes part of the interaction.</p>
+              <p class="impact-variant" data-variant="design-lead">Add allowance-exhausted and allowance-revoked cases to your edge-case inventory, and decide what degrades gracefully.</p>
+              <p class="impact-variant" data-variant="strategist">Weigh the acquisition upside of being a partner against owning your pricing and customer relationship. Write down the trade for {domain} before the platform sets terms for you.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Sketch the three screens a first-time {domain} user sees under "sign in and spend your ChatGPT allowance": the permission request, the usage meter, and the allowance-ran-out state. Then write a critique of which of the three is most likely to lose the user and why.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,advocacy" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Hold a 30-minute team conversation on one question: if our users' AI usage were paid by their login, what in {domain} would we have to be more honest about? Write the three changes you would make to how the product shows cost and effort.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Advocacy</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation,case-making" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Write a one-page memo on whether {focus} should join a platform allowance programme like this. Lay out the distribution gain, the pricing control you give up, and a recommendation with one condition under which you would reverse it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          </article>
+      </div>
+
+    </section>
+
+        <section class="day-section" data-date="2026-10-01">
       <h4 class="day">Thursday, October 1 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
