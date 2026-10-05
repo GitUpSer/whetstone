@@ -1127,7 +1127,253 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-        <section class="day-section" id="today" data-date="2026-10-02">
+        <section class="day-section" id="today" data-date="2026-10-05">
+      <h4 class="day">Monday, October 5 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+
+        <article class="entry"
+                 data-id="2026-10-05-claude-code-mods"
+                 data-category="coding-agents"
+                 data-published="2026-10-01"
+                 data-tags="anthropic,claude-code,mods,plugins,permissions,typescript">
+          <div class="head">
+            <h6 class="headline">Anthropic ships Claude Code Mods: small TypeScript functions that rewrite prompts, block tool calls, and replace parts of the UI</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-10-01">Published October 1, 2026</time></p>
+          <p class="summary">Anthropic says Mods became available October 1 in the Claude Code CLI and desktop app. A mod is a short TypeScript function that can rewrite a prompt before it reaches the model, block, rewrite or retry tool calls, approve or deny permission requests, redact tool output, and add or replace interface elements such as buttons and inputs. Mods are not sandboxed and run with full machine access; on Team and Enterprise plans a built-in <code>sec-default</code> mod loads first so user-installed mods cannot override security permissions.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The agent you work alongside is now something your team can reshape in a few lines of code, which makes the review and permission moments in agent work a design surface you can actually edit.</p>
+          <p class="source"><a href="https://claude.com/blog/claude-code-mods" target="_blank" rel="noopener">Source &mdash; Anthropic, Claude Code Mods</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Mods let you change the approval prompt, the redaction behaviour and the shape of the tool UI you work in. Your {focus} workflow can be tuned to your own habits, but only if you write down what you want the agent to ask you about.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team can now standardise how its coding agent behaves: what it must ask before touching {domain} code, what it never sees. That is process design, and someone has to own the mod set like a shared config.</p>
+              <p class="impact-variant" data-variant="strategist">Customisable agent behaviour means each team's AI workflow will diverge unless someone sets a baseline. Decide where {domain} standardises and where teams may deviate.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most designers using Claude Code run it as shipped. The early adopters writing mods are engineers and a few design technologists, mostly for permission shortcuts and secret redaction, and the rest of the team does not know they exist.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly unaware of the security trade-off: mods are unsandboxed code. Teams that install community mods without review are repeating the old browser-extension mistake.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are watching the enterprise angle. The <code>sec-default</code> mod signals that Anthropic expects admins to hold the line on permissions while individuals customise everything else.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">This reshapes how you work inside {focus}: the agent becomes configurable infrastructure rather than a fixed collaborator. The craft shifts toward specifying behaviour precisely.</p>
+              <p class="impact-variant" data-variant="design-lead">It changes how your team's tooling is governed, not what design is. Expect a shared-mods repo and a review ritual, the way design systems got contribution rules.</p>
+              <p class="impact-variant" data-variant="strategist">Extension ecosystems tend to become moats. Whether {domain} benefits depends on whether your org writes mods or just consumes other people's.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Treat the agent's permission prompts and failure messages as UX you can fix. Spec what a good approval request looks like for {domain}.</p>
+              <p class="impact-variant" data-variant="design-lead">Add an agent-config review to your definition of done: which mods are installed, who audited them, what they can reach.</p>
+              <p class="impact-variant" data-variant="strategist">Decide who owns agent customisation in {domain}: individuals, a platform team, or nobody. The unowned default is the risky one.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Open the permission prompts your coding agent shows during one {domain} task and rewrite the three that confuse you most as if you were writing a mod's approve/deny copy. Write a half-page critique of what the default prompts hide from you.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Critique</span>
+              <span class="skill-chip">Craft</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Run a 45-minute session listing every action your team's agent can take on {domain} work. Mark each as always allow, ask, or block, and write the one-page policy a shared mod would enforce, including who reviews new mods.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Design ops</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo recommending whether {domain} should adopt a locked-down mod baseline or let teams customise freely. Name the security risk of unsandboxed mods and the productivity cost of restricting them, then pick one.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+
+        <article class="entry"
+                 data-id="2026-10-05-pi-1-0-mcp"
+                 data-category="coding-agents"
+                 data-published="2026-10-01"
+                 data-tags="pi,earendil,mcp,coding-agents,durable-agents,open-source">
+          <div class="head">
+            <h6 class="headline">Pi coding agent reaches 1.0 and reverses course on MCP; Pi Durable adds experimental long-running agents</h6>
+            <span class="badge coding-agents">Coding agents</span>
+          </div>
+          <p class="meta"><time datetime="2026-10-01">Published October 1, 2026</time></p>
+          <p class="summary">Earendil, which acquired the minimalist Pi terminal agent in April, released Pi 1.0 on October 1. It adds native MCP support through a feature called Codemode, extensions for virtual models, deferred tool loading and a full-screen TUI by default. The Register reports Pi had previously refused MCP, and Earendil says MCP has since improved. Pi Durable, a separate package for long-running agentic applications with checkpointing, is explicitly experimental. Both are MIT-licensed.</p>
+          <p class="why"><strong>Why this matters for you:</strong> When a deliberately minimal agent gives in on MCP, it tells you which integration layer is winning, and which tools your design and product systems will need to expose.</p>
+          <p class="source"><a href="https://earendil.com/posts/pi-1-0/" target="_blank" rel="noopener">Source &mdash; Earendil, Pi 1.0</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">If a minimal terminal agent now speaks MCP, an MCP server for your design tokens or component docs reaches more agents than any single plugin. Your {focus} assets are only as usable as their machine interface.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's design system will be queried by agents you did not pick. Someone needs to own an MCP-facing version of it and test it against more than one client.</p>
+              <p class="impact-variant" data-variant="strategist">MCP consolidating across agents lowers the cost of exposing {domain} capabilities once and reaching many tools. The strategic question moves to what you expose and on what terms.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most designers are not running Pi. The ones who are tend to be engineers using it for scripting, and designers hear about MCP through whichever agent their team already uses.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly picking one agent and standardising. A few are discovering that their design-system MCP server works in one client and misbehaves in another.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists see it as a signal of protocol convergence, though the long-running agent layer in Pi Durable is too early and too experimental to plan around.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Protocol convergence reshapes where effort goes in {focus}: less per-tool plugin work, more on a clean, well-described interface. Craft moves into naming and documenting what agents can call.</p>
+              <p class="impact-variant" data-variant="design-lead">It changes how your team invests in tooling, from many bespoke integrations to one maintained server. The craft of the design system itself is unchanged.</p>
+              <p class="impact-variant" data-variant="strategist">A single dominant integration layer would reshape distribution for {domain}, but Pi's adoption is small, so treat it as a signal, not a verdict.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Write the description of one {domain} capability as an agent would read it. If you cannot say when to use it and when not to, the interface is not ready.</p>
+              <p class="impact-variant" data-variant="design-lead">Add a cross-client test to your MCP server release checklist so a design-system change does not silently break one agent.</p>
+              <p class="impact-variant" data-variant="strategist">Decide which {domain} capabilities you would expose over MCP and which you would keep inside your own product. That is a pricing and control decision.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Pick one {domain} asset your agent could use, such as a component list or token set, and write its MCP tool description in under 80 words. Test it by asking an agent three questions and write down where the description misled it.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Tool mastery</span>
+              <span class="skill-chip">Critique</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">Ask an engineer on your team which agents they actually use and which MCP servers those agents load. Map where your design system appears in that list, and write down the one gap you will close this quarter.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Cross-functional</span>
+              <span class="skill-chip">Systems thinking</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a short memo: of the {domain} capabilities an agent could call over MCP, which three would you expose openly, which would you hold back, and why? End with a clear recommendation.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Differentiation</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+
+        <article class="entry"
+                 data-id="2026-10-05-opendots-copilotkit"
+                 data-category="generative-ui"
+                 data-published="2026-10-01"
+                 data-tags="copilotkit,opendots,ag-ui,agents,human-review,open-source">
+          <div class="head">
+            <h6 class="headline">CopilotKit releases OpenDots, an open-source alpha template for persistent AI coworkers with human review before saving</h6>
+            <span class="badge generative-ui">Generative UI</span>
+          </div>
+          <p class="meta"><time datetime="2026-10-01">Published October 1, 2026</time></p>
+          <p class="summary">CopilotKit published OpenDots on GitHub, a self-hostable template for always-on agents built on CopilotKit and the AG-UI protocol. Each configurable agent has defined instructions and tool permissions, its own persistent browser environment, shared document workspaces, and a human approval step before it saves work. It runs across web, mobile and Slack, with voice calls handled by a separate agent. The project is alpha and a starting point, not a finished product.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The interface here is less a screen than a set of rules: when the agent acts, what it shows you, and where a human signs off.</p>
+          <p class="source"><a href="https://github.com/CopilotKit/OpenDots" target="_blank" rel="noopener">Source &mdash; CopilotKit, OpenDots on GitHub</a></p>
+
+          <section class="impact-analysis">
+            <h6 class="impact-title">Impact analysis</h6>
+
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designing a persistent agent means designing the approval moment, the handoff between text, voice and Slack, and what the agent shows after being away. Your {focus} deliverables shift from screens to those states.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team needs a shared vocabulary for agent states: working, waiting for review, blocked, done. Without one, every {domain} agent feature invents its own.</p>
+              <p class="impact-variant" data-variant="strategist">Persistent coworkers turn product scope into a staffing question: which roles do agents hold in {domain}, and with what permissions.</p>
+            </div>
+
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designers are mostly prototyping agent UIs as chat plus a side panel and finding that the review step, not the chat, is where users get stuck or approve blindly.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are experimenting with AG-UI and similar protocols but few have a design standard for what an agent must disclose before saving. Alpha templates like this are where those standards get tested.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are asking whether persistent agents are a feature or a new product category. OpenDots being alpha means the evidence is thin.</p>
+            </div>
+
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">The surface of {focus} moves from pages to behaviours over time: when to interrupt, when to wait, what to summarise. That reshapes the craft within a recognisable discipline.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's critique ritual has to cover timing and consent, not just layout, because an agent's worst failures are unseen actions.</p>
+              <p class="impact-variant" data-variant="strategist">Agents with their own computers and roles change what a product is. It is a different frame than app-with-AI, though this template alone proves little.</p>
+            </div>
+
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Spec the review step for one {domain} agent action: what the user sees, what they can edit, and what happens if they ignore it for a day.</p>
+              <p class="impact-variant" data-variant="design-lead">Add an approval-quality check to your definition of done so review screens cannot be a rubber stamp.</p>
+              <p class="impact-variant" data-variant="strategist">Decide which {domain} work an agent may do unattended and which always needs a human. Write it as policy before any feature ships.</p>
+            </div>
+
+          </section>
+
+          <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="60">
+            <h6 class="action-title">Try this &mdash; 60 min</h6>
+            <p class="action-text">Design the review screen for a {domain} agent about to save work on your behalf. Then write a critique naming the three ways a tired user would approve something wrong, and what your design does about each.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Craft</span>
+              <span class="skill-chip">Judgement</span>
+              <span class="time-chip">~60 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+            <h6 class="action-title">Try this &mdash; 45 min</h6>
+            <p class="action-text">With your team, list the states a persistent {domain} agent can be in and what each shows across web, mobile and Slack. Write the one-page state vocabulary and mark the states nobody owns yet.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Systems thinking</span>
+              <span class="skill-chip">Design ops</span>
+              <span class="time-chip">~45 min</span>
+            </div>
+          </section>
+
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+            <h6 class="action-title">Try this &mdash; 30 min</h6>
+            <p class="action-text">Write a one-paragraph memo on whether {domain} should treat agents as coworkers with roles or as features inside existing screens. State the trade-off in trust and accountability and recommend one.</p>
+            <div class="action-meta">
+              <span class="skill-chip">Strategy</span>
+              <span class="skill-chip">Case-making</span>
+              <span class="time-chip">~30 min</span>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+        <section class="day-section" data-date="2026-10-02">
       <h4 class="day">Friday, October 2 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="mcp">
