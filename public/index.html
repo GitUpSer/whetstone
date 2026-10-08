@@ -1127,7 +1127,291 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-        <section class="day-section" id="today" data-date="2026-10-07">
+        <section class="day-section" id="today" data-date="2026-10-08">
+      <h4 class="day">Thursday, October 8 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="generative-ui">
+        <h5 class="category-label">Generative UI</h5>
+        <article class="entry" data-id="2026-10-08-chatgpt-intelligent-ui" data-category="generative-ui" data-published="2026-10-08" data-tags="openai,chatgpt,gpt-6,generative-ui,interactive-answers">
+          <div class="head">
+    <h6 class="headline">OpenAI ships GPT-6 with Intelligent UI: ChatGPT answers now arrive as interactive widgets</h6>
+    <span class="badge generative-ui">Generative UI</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-08">Published October 8, 2026</time></p>
+          <p class="summary">OpenAI began rolling out GPT-6 to ChatGPT on October 7 with a new interface mode that places tappable buttons, interactive charts, calculators, forms and editable diagrams inline in answers. Pro, Plus, Business and Enterprise users get it first, with Free and Go tiers following about a week later, and users can dial the amount of visuals down. TechCrunch's report mentions no developer API for this, so it is a first-party product surface for now.</p>
+          <p class="why"><strong>Why this matters for you:</strong> The model is now choosing the interface, not just the words. That moves a slice of interaction design from a designer's file into a runtime decision you did not review.</p>
+          <p class="source"><a href="https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When {domain} answers are rendered as widgets by a model, your hands-on job shifts from drawing the screen to specifying the component vocabulary and failure cases the model may draw from. Expect to author constraints, not comps.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's design reviews now need a way to review behaviour that is generated per query, not a fixed screen. Decide what a sampled-output review looks like before a stakeholder asks why a widget looked wrong.</p>
+              <p class="impact-variant" data-variant="strategist">A competitor's default surface just became generated UI, which resets user expectations for what an answer looks like in {domain}. The org question is which interactions you want to own versus delegate to a model.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs will meet this as a user first and poke at where the generated widgets break: wrong units, misleading charts, controls with no undo. The honest practice today is screenshotting failures, not shipping against it.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly watching and collecting examples rather than changing process. Few teams have a written position on generated UI yet, and vendor claims that it improves comprehension are unverified.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are asking whether to build on a vendor's generated surface or keep a bespoke one. With no API mentioned in the launch coverage, most are waiting rather than committing.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">It reshapes the craft: the unit of design moves from screen to component grammar plus guardrails, but the discipline of judging interaction quality stays.</p>
+              <p class="impact-variant" data-variant="design-lead">It reshapes the craft of leading: critique and QA must cover distributions of outputs, not single artefacts.</p>
+              <p class="impact-variant" data-variant="strategist">It reshapes the craft at org level, as long as the surface stays inside one vendor's app. It becomes a new way of thinking only if an API opens it to every product.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Product thinking starts from 'what should the answer be shaped like' rather than 'which screen do we build'. For {focus}, that means defining the states and error cases a generated widget must never skip.</p>
+              <p class="impact-variant" data-variant="design-lead">Specs will need to cover allowed components, fallbacks to plain text, and who owns a bad generated output. Push for these in the brief before engineering assumes they are free.</p>
+              <p class="impact-variant" data-variant="strategist">Roadmaps should separate surfaces where a model composing the UI is acceptable from ones where consistency is the product. That boundary is a strategic call, not a design preference.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft,judgement" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Ask a current assistant three {domain} questions that should produce interactive output (a calculator, a comparison, a diagram). Screenshot each result and write a one-page critique: what is the right component, what is wrong or misleading, and which control would you refuse to ship for {focus}.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking,cross-functional" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Draft a one-page review protocol for generated UI on your team: what you sample, how many outputs per prompt, who signs off, and what counts as a blocker. Walk it past one engineer and one PM and record the single objection that changed it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,differentiation" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo for {domain}: should we let a model compose our answer surface, or hold a fixed one? Name two interactions to delegate, two to keep, the trade-off on each, and a recommendation.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+        <article class="entry" data-id="2026-10-08-ts-rust-claude-port" data-category="coding-agents" data-published="2026-10-08" data-tags="claude,opus,typescript,rust,agentic-coding,cost">
+          <div class="head">
+    <h6 class="headline">Claude-written Rust port of the TypeScript compiler passes all 181,711 baseline tests, at a reported $24K in API spend</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-08">Published October 8, 2026</time></p>
+          <p class="summary">Theo Browne's ts-rust (tsc-rs) is an experimental Rust port of Microsoft's Go-based TypeScript 7 compiler, written by LLMs. Its README says it passes all 181,711 ported Go tests, with the Opus-based effort costing about $24,047 in API spend over two weeks. Speed figures (about half Go's type-check time across 60 projects) are the author's own measurements on an M4 Pro, and the author calls it early, with editor features unported and known output differences in some monorepos.</p>
+          <p class="why"><strong>Why this matters for you:</strong> A big, test-gated rewrite is now a two-week, five-figure job for one person. The scarce skill is writing the test suite and judging what 'passing' leaves out, which is a designer's evaluation instinct too.</p>
+          <p class="source"><a href="https://github.com/pingdotgg/ts-rust" target="_blank" rel="noopener">Source &mdash; GitHub — pingdotgg/ts-rust README</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">The lesson for your own work is that agents succeed when a pass/fail oracle exists. Before handing {focus} to an agent, write the acceptance checks first, whether that is visual diffs, token audits or a rubric.</p>
+              <p class="impact-variant" data-variant="design-lead">Your team's bottleneck moves from producing to verifying. Build review habits around rubrics and regression checks rather than eyeballing every output.</p>
+              <p class="impact-variant" data-variant="strategist">Large migrations, such as a design-system rewrite, are priced differently when an agent plus a strong test suite can do the bulk. The cost to plan for is the test suite and the review, not the typing.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Designers using coding agents mostly work on small UI tasks and review by looking at the result. Few have a machine-checkable definition of done, which is why their agent output drifts.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads who have tried agent-built front-end work report the same pattern: the demo looks right and the edge cases are untested. Test-first agent runs are still rare in design teams.</p>
+              <p class="impact-variant" data-variant="strategist">Execs are reading headlines like this as proof that rewrites are cheap. The self-reported cost and the unported editor features are exactly what gets dropped in that retelling.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">It reshapes the craft: implementation gets cheaper, so the differentiator for an IC is specifying and verifying quality.</p>
+              <p class="impact-variant" data-variant="design-lead">It reshapes the craft of leading, because review and acceptance criteria become the team's main product.</p>
+              <p class="impact-variant" data-variant="strategist">It reshapes how migrations are scoped, but it is one author's self-reported result, so it is not yet a reframe.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Treat the oracle as part of the product: for {domain}, decide what 'done' is measurably before anyone builds, human or agent.</p>
+              <p class="impact-variant" data-variant="design-lead">Expect engineering to ask design for machine-checkable criteria such as tokens, spacing rules and accessibility checks. Teams that have them get agent leverage; teams that do not will not.</p>
+              <p class="impact-variant" data-variant="strategist">Re-ask old 'not worth rewriting' decisions in {domain}, but put the validation budget in the plan up front, since it is where the cost actually lands.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="judgement,craft,automation" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Pick one component in {domain}. Write 8 to 10 machine-checkable acceptance rules for it (tokens, states, contrast, spacing) and then list the three qualities from {focus} that no rule can capture. The second list is your artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Automation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking,agent-orchestration" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Map where your team verifies work today (who checks what, and when). Mark the three steps an agent-built change would skip, and write the one check you would automate first.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Agent orchestration</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,judgement" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a half-page memo: if a rewrite of one {domain} system cost 5% of its historical estimate, which rewrite would you commission, and what validation spend would you require before trusting the result?</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+        </article>
+        <article class="entry" data-id="2026-10-08-pwn2own-codex-litellm" data-category="coding-agents" data-published="2026-10-08" data-tags="security,codex,litellm,pwn2own,agents,gateways">
+          <div class="head">
+    <h6 class="headline">Pwn2Own Ireland day one: OpenAI Codex and LiteLLM exploited, $388,500 paid for 32 zero-days</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-08">Published October 8, 2026</time></p>
+          <p class="summary">On the first day of Pwn2Own Ireland (October 6), researchers exploited OpenAI Codex through an argument-injection flaw ($40,000) and LiteLLM through chains of input validation and code injection issues. The day totalled 32 unique zero-days and $388,500 per the report. Trend Micro's ZDI did not publish exploit steps, affected versions or CVE IDs in its day-one report, so real-world exposure is not yet known.</p>
+          <p class="why"><strong>Why this matters for you:</strong> If your design workflow runs an agent or an LLM gateway with access to files and shells, it is an attack surface. Tool permissions and sandboxing are now part of workflow design, not just IT's concern.</p>
+          <p class="source"><a href="https://cybersecuritynews.com/32-0-days-pwn2own-2026/" target="_blank" rel="noopener">Source &mdash; Cybersecurity News</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Before pasting {focus} files, tokens or client assets into an agent, check what it can read and run. Prefer a scoped folder and no standing credentials.</p>
+              <p class="impact-variant" data-variant="design-lead">Set a team rule for which agents may touch which repos and files, and who approves new tools. Treat each MCP server or plugin as an install, not a bookmark.</p>
+              <p class="impact-variant" data-variant="strategist">Tool adoption now carries security review as a gating cost. Expect procurement and legal to ask design for an inventory of the AI tools in use.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs run agents with whatever permissions the default setup grants and rarely read the settings. That is a habit, not a policy.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads mostly have no inventory of which agents and plugins their designers have installed. Shadow tooling is the default.</p>
+              <p class="impact-variant" data-variant="strategist">Security teams are starting to ask for agent inventories, while design orgs are the least likely to have one.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">It reshapes the craft's hygiene: sandboxes and permission prompts become part of how you work.</p>
+              <p class="impact-variant" data-variant="design-lead">It reshapes team operations, since tool choice now has an owner and an audit trail.</p>
+              <p class="impact-variant" data-variant="strategist">It reshapes vendor evaluation, but it is not yet a new frame because the underlying exposure is long-standing software risk.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Product decisions about agent features for {domain} should assume tool access gets attacked, so permission design, confirmations and logs are product scope.</p>
+              <p class="impact-variant" data-variant="design-lead">Add 'what can this agent touch' to your design reviews of any agentic feature, and put the answer on the screen the user sees.</p>
+              <p class="impact-variant" data-variant="strategist">Agent features that act on user data need a security story at launch. Build it into the plan, not the post-mortem.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery,craft" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">List every AI tool, plugin and MCP server you currently use for {domain} work. For each, write what it can read and run, and mark any you could not defend in front of a client. Remove or restrict one today.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Tool mastery</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Draft a one-page 'approved agent tools' policy for your team, covering what is allowed, who approves additions, and where the inventory lives. Ask a security contact for the one clause they would add.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,advocacy" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a short memo on how security review should change AI tool adoption in {domain}: which tools get a fast lane, which get a slow lane, and what evidence each needs.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+        <article class="entry" data-id="2026-10-08-australia-ai-safety-standards" data-category="policy" data-published="2026-10-08" data-tags="policy,australia,regulation,ai-safety,compliance">
+          <div class="head">
+    <h6 class="headline">Australia outlines mandatory AI safety proof-of-testing standards, with legislation planned for 2027</h6>
+    <span class="badge policy">Policy</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-08">Published October 8, 2026</time></p>
+          <p class="summary">Assistant Minister Andrew Charlton outlined mandatory AI safety standards modelled on banking and aviation frameworks, requiring developers to continuously test for risks and demonstrate working safety systems. National standards are due by the end of 2026, with legislation planned for 2027, per ABC News. Details of scope and thresholds were not given in the coverage.</p>
+          <p class="why"><strong>Why this matters for you:</strong> 'Show your testing' is becoming a regulatory shape. Design teams that can document how an AI feature was evaluated, and what happens when it fails, will be asked for that evidence before long.</p>
+          <p class="source"><a href="https://www.abc.net.au/news/2026-10-08/federal-politics-ai-regulation-andrew-charlton-speech/107241674" target="_blank" rel="noopener">Source &mdash; ABC News (Australia)</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">Keep a dated record of how you tested {focus} behaviours: prompts tried, failures seen and what you changed. Your design rationale becomes evidence.</p>
+              <p class="impact-variant" data-variant="design-lead">Add a lightweight evaluation log to your team's definition of done for any AI-powered feature. Make it a ritual, not a scramble at launch.</p>
+              <p class="impact-variant" data-variant="strategist">Compliance-by-testing favours organisations that already evaluate continuously. Design research and QA practices become part of the regulatory story.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Few ICs document AI behaviour testing beyond ad hoc screenshots. When asked, they reconstruct it from memory.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads who ship AI features typically rely on engineering evals and rarely on design-owned ones. User-facing failure modes are the gap.</p>
+              <p class="impact-variant" data-variant="strategist">Most strategists are tracking the EU and US regimes and treating Australia as a footnote. A third template for testing evidence is forming.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">For an individual designer this is a watch item. Standards are not yet drafted and legislation is a year away.</p>
+              <p class="impact-variant" data-variant="design-lead">For a lead, a watch item: note it, and do not rebuild process until the standards text exists.</p>
+              <p class="impact-variant" data-variant="strategist">For a strategist, file it with the broader regulatory convergence. It becomes more than a passing item once the national standards land at the end of 2026.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">Plan for AI features in {domain} that carry a test record from the start, including edge cases users will actually hit.</p>
+              <p class="impact-variant" data-variant="design-lead">Ask engineering what is already evaluated and where design-owned evaluation, such as failure and recovery flows, would add coverage.</p>
+              <p class="impact-variant" data-variant="strategist">Market entry in {domain} may soon depend on demonstrable testing. Cost that in before committing to a region.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="critique,craft,judgement" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">Pick one AI behaviour in {domain}. Write a mini test log for it: five inputs, expected output, actual output, and the design change each failure would trigger.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Add an 'AI behaviour evidence' line to your definition of done. Draft the template (inputs, failures, decisions) and test it on the last AI feature your team shipped.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,differentiation" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a one-page note on whether demonstrable testing could be a differentiator in {domain} before regulators require it. Include the cost and one risk.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+        </article>
+      </div>
+    </section>
+
+        <section class="day-section" data-date="2026-10-07">
       <h4 class="day">Wednesday, October 7 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="tools">
