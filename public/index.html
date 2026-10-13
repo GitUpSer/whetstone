@@ -1127,7 +1127,296 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-        <section class="day-section" id="today" data-date="2026-10-12">
+        <section class="day-section" id="today" data-date="2026-10-13">
+      <h4 class="day">Tuesday, October 13 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+          <article class="entry" data-id="2026-10-12-ai-code-outages-survey" data-category="coding-agents" data-published="2026-10-12" data-tags="coding-agents,production,debugging,verification,survey">
+          <div class="head">
+    <h6 class="headline">Undo survey: 81% of senior engineering leaders report an AI-coding-tool-linked production incident in six months</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-12">Published October 12, 2026</time></p>
+          <p class="summary">LeadDev reported on October 12 on a survey by debugging vendor Undo of 300 senior engineering leaders at large US and UK firms, run in July and August 2026. 81% said AI coding tools were linked to a production incident or outage in six months, 93% said an AI hallucination led to a wrong root-cause diagnosis, and 79% said release cycles are no faster. Engineers reportedly spend 16.9 hours a week debugging versus 9.8 producing code. This is a vendor-run survey with a debugging product to sell, so treat the figures as indicative, not independent.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Faster generation moves the bottleneck to verification and understanding, which is where design-specified behaviour, states and acceptance criteria either exist or do not. If you ship AI-assisted UI in {domain}, the spec is now a load-bearing safety layer.</p>
+          <p class="source"><a href="https://leaddev.com/ai/ai-code-causes-real-world-production-outages" target="_blank" rel="noopener">Source &mdash; LeadDev</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When you hand off AI-assisted work for {focus}, include the states and edge cases an agent will not infer: empty, error, offline, partial-failure. These are the things that surface as production incidents later.</p>
+              <p class="impact-variant" data-variant="design-lead">Add a verification step to your team's design process, not only a review step: who checks that the built behaviour matches the spec, and with what evidence. Generation speed has made that check the slow part.</p>
+              <p class="impact-variant" data-variant="strategist">Plan design capacity around the verification end of delivery in {domain}, not the generation end. Faster mockups and code do not shorten release cycles if 79% of teams see no improvement downstream.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">Most ICs are using agents to generate screens and front-end code and reviewing the output visually. Few are writing behavioural acceptance criteria, so the first time a defect appears is in production.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly encouraging AI use and measuring adoption. Few have changed what they measure; the survey's suggestion of defect rate and time to resolution is rarely on a design dashboard.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are mostly reading AI productivity claims at face value from vendors. Few are asking for downstream metrics like escaped defects and mean time to resolution before approving budgets.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: your deliverable shifts from the picture to the testable behaviour behind it. The frame of design handoff stays, but its contents change.</p>
+              <p class="impact-variant" data-variant="design-lead">It reshapes how you lead: review is no longer the quality gate when 35% of generated code reportedly ships before it is understood. You need verification rituals alongside critique.</p>
+              <p class="impact-variant" data-variant="strategist">It reshapes planning, not the strategy frame. Investment decisions on AI tooling should be justified by delivery outcomes, and this data argues generation speed alone is a weak proxy.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus}, write three behavioural assertions per screen that an engineer or test could check, and attach them to the design. That is the part an agent will not produce for you.</p>
+              <p class="impact-variant" data-variant="design-lead">Ask engineering for the last three AI-linked incidents and trace each to a missing or ambiguous design decision. Fold the pattern into your definition of done.</p>
+              <p class="impact-variant" data-variant="strategist">Roadmap trade-off: spending on faster generation versus on verification and debugging capability. For {domain}, the survey suggests the second is currently under-funded, though the sample is vendor-selected.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement,craft" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Take a screen or flow in {domain} you recently built or prototyped with an AI tool. Write a list of every state and failure case the generated version does not handle, then pick the three most likely to cause a production incident and write the behavioural acceptance criterion for each. The list is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional,systems-thinking" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Ask an engineering partner for your team's last three production incidents linked to AI-assisted code. For each, write one line on whether a design decision was missing, ambiguous or ignored, then propose one change to your handoff template that would have caught it. Record the three lines and the change.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,judgement" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo for {domain}: should the next AI-tooling budget go to faster generation or to verification and debugging? Name the metric you would use to decide (for example escaped defects or time to resolution), cite the Undo figures with the vendor-survey caveat, and give a clear recommendation.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="design-tools">
+        <h5 class="category-label">Design tools</h5>
+          <article class="entry" data-id="2026-10-12-diagram-design-skill" data-category="design-tools" data-published="2026-10-11" data-tags="agent-skills,diagrams,svg,design-systems,claude-code">
+          <div class="head">
+    <h6 class="headline">Open-source Diagram Design skill has coding agents draw 44 diagram types as single HTML and SVG files, styled from your brand</h6>
+    <span class="badge design-tools">Design tools</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-11">Published October 11, 2026</time></p>
+          <p class="summary">Diagram Design, an MIT-licensed Agent Skill by Cathryn Lavery, trended on GitHub on October 11. It lets Claude Code, Codex, Copilot, Cursor and other Agent Skills hosts write diagrams as one self-contained HTML and SVG file, with 44 diagram types in minimal light, minimal dark and full-editorial variants. An onboarding flow extracts colours and fonts from a website URL, maps them to semantic roles and runs WCAG AA contrast checks. It can also import and restyle Mermaid, draw.io and Excalidraw files. The star count shown on the repository is large and unverified by us.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Diagrams are a place where designers' taste has usually been missing because Mermaid output looks generic. A skill that encodes a house style turns that taste into a reusable, versioned asset, which is a pattern you can apply to your own design rules.</p>
+          <p class="source"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener">Source &mdash; GitHub, cathrynlavery/diagram-design</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus}, you can now ask your agent for an architecture, flow or swimlane diagram in your own brand tokens instead of redrawing by hand. The time saved is in iteration; your job is to check that the diagram says the right thing.</p>
+              <p class="impact-variant" data-variant="design-lead">Diagrams for reviews and documentation can be generated to a shared style, so the team spends review time on the content. Decide whether the style file lives with the design system or with the doc.</p>
+              <p class="impact-variant" data-variant="strategist">Agent skills are becoming the way house style is distributed. A skill that bakes brand tokens into output is a cheap proof of concept for how {domain} could encode design rules for any agent.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are mostly still drawing diagrams in Figma or FigJam or accepting default Mermaid output. A few are starting to install skills and expect the diagram to look like the product.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly not governing how agents output visuals. Brand drift in AI-generated docs and decks is already showing up and rarely has an owner.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists see diagrams as communication overhead and rarely as an asset. Few are asking who owns the visual standard for AI-generated internal and client material.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: the design decision moves from drawing boxes to defining the rules the agent draws by. Taste becomes a file.</p>
+              <p class="impact-variant" data-variant="design-lead">It reshapes your systems work: your design system now needs a machine-readable edge for non-product outputs like diagrams and docs, not only components.</p>
+              <p class="impact-variant" data-variant="strategist">Reshaping rather than reframing, because the underlying choice, who owns visual standards, is old. What is new is that an agent can enforce them cheaply.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus}, treat the diagram as a thinking tool: generate three framings of the same system and pick the one that exposes the real dependency.</p>
+              <p class="impact-variant" data-variant="design-lead">Add 'agent-readable style rules' to your system roadmap for {domain}. Start with the outputs that leak out of product, such as docs, diagrams and decks.</p>
+              <p class="impact-variant" data-variant="strategist">Cheap, on-brand diagrams lower the cost of showing the system to executives. The constraint becomes whether anyone has verified the diagram is true.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique,craft" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Install the skill (or use any agent you have) and generate a diagram of one real flow in {domain} in two variants. Write a critique of each: what is the diagram claiming that is not true, what did the agent omit, and which of the 44 types would have been better. The critique is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Tool mastery</span>
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking,automation" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Draft a one-page 'agent style brief' for your team: the colours, type and spacing rules an agent must follow when producing diagrams and docs in {domain}, mapped to semantic roles. Test it by generating one diagram and note every place it violated your rules.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Automation</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="differentiation,strategy,case-making" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">List three things this skill makes commodity in {domain} (for example on-brand diagrams, restyling Mermaid, WCAG-checked colours), then write one sentence on what only a designer with taste can still contribute. End with a recommendation on whether your org should standardise on a shared skill.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Differentiation</span>
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="research">
+        <h5 class="category-label">Research</h5>
+          <article class="entry" data-id="2026-10-12-sakana-mass-self-supervision" data-category="research" data-published="2026-10-12" data-tags="sakana,multi-agent,self-improvement,open-weights,evaluation">
+          <div class="head">
+    <h6 class="headline">Sakana AI's MASS lets one open 27B model act as solver, workflow optimizer and judge, with mixed results on coding</h6>
+    <span class="badge research">Research</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-12">Published October 12, 2026</time></p>
+          <p class="summary">Sakana AI published MASS (Multi-Agent Self-Supervision) on October 12, using a single open-weights model, Qwen3.6-27B, as task solver, workflow optimizer and evaluator with no external supervisor. Reported score per output token reached 1.60x the base on MLR-Bench and 1.35x on DSBench, but fell to 0.94x on SWE-bench Verified and 0.96x on Terminal-Bench 2.0. The authors name a shared-blind-spot risk, where a homogeneous loop accepts a flawed result as an improvement. These are the authors' own benchmark results, not independently replicated.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Systems that grade their own work will arrive in the tools you use. The design question is what evidence a human sees when the judge and the generator share the same blind spots.</p>
+          <p class="source"><a href="https://pub.sakana.ai/mass/" target="_blank" rel="noopener">Source &mdash; Sakana AI</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">When an AI tool shows you a result it has already evaluated, treat the self-score as a claim. For {focus}, keep your own check on the one dimension the tool cannot see, such as whether it solves the right problem.</p>
+              <p class="impact-variant" data-variant="design-lead">If your team adopts self-improving or multi-agent pipelines, define where a human sees disagreement between agents. A design decision on what to surface is now part of the workflow design.</p>
+              <p class="impact-variant" data-variant="strategist">Self-supervised loops cut cost per result, so more internal automation becomes affordable in {domain}. The strategic risk is correlated error: one model judging itself fails in the same places it generates.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs mostly encounter this as 'the agent checked its own work' in coding and design tools. Few are testing whether those self-checks catch anything the generator would not.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly judging agent tools by demo quality. Very few have a standard for how an agent's self-evaluation is audited.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are being pitched recursive self-improvement as a cost story. Few are asking about the mixed coding results the authors themselves report.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">New way of thinking, tentatively: the unit of quality control moves from your review of output to the design of the evaluator. Partial evidence only, since the results are mixed and unreplicated.</p>
+              <p class="impact-variant" data-variant="design-lead">For leads it reframes review: you are less checking artefacts and more checking how artefacts get graded. That is a different skill from critique.</p>
+              <p class="impact-variant" data-variant="strategist">It is a structural question for strategy because a shared blind spot is an organisational risk, not just a technical one. I would hold the tag loosely until independent replication.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus}, when you build prototypes with agent loops, add an external check, a person or a different model, on the criterion that matters most to users.</p>
+              <p class="impact-variant" data-variant="design-lead">Make 'who or what judges the output' a standing question in your project kickoffs for {domain}.</p>
+              <p class="impact-variant" data-variant="strategist">Roadmap trade-off: cheaper self-supervised automation versus the governance cost of auditing it. Fund the audit with the savings.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="critique,judgement,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Pick an AI feature or tool you use for {focus} that evaluates its own output. Write down what it checks, what it cannot check, and design one external check (a human prompt, a different model, a user signal) for the failure it would miss. The written check is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional,agent-orchestration" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Ask an engineer or ML colleague how any agent loop your team uses is evaluated and by what. Draft a one-page 'who judges the judge' checklist for {domain} and run it on one real workflow, recording the gaps found.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Agent orchestration</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,judgement" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo: should {domain} adopt self-supervised agent workflows for internal tasks given mixed coding results? Name the trade-off between cost and correlated error, the audit you would require, and a clear recommendation.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+        </article>
+      </div>
+
+      <div class="category-group" data-category="policy">
+        <h5 class="category-label">Policy</h5>
+          <article class="entry" data-id="2026-10-12-nadella-assume-compromised" data-category="policy" data-published="2026-10-11" data-tags="microsoft,safety,audit-logs,governance,agents">
+          <div class="head">
+    <h6 class="headline">Nadella says AI models should be assumed compromised and proposes an emergency brake, tamper-proof audit logs and pausable tasks</h6>
+    <span class="badge policy">Policy</span>
+  </div>
+          <p class="meta"><time datetime="2026-10-11">Published October 11, 2026</time></p>
+          <p class="summary">Per The Verge as summarised by AI Weekly on October 11 (we could not open the original), Microsoft CEO Satya Nadella argued that AI models should be assumed compromised. He proposed a mandatory emergency brake, tamper-proof audit logs, and the ability to pause any model mid-task. We have not seen the full remarks or any implementation detail, so treat this as a stated position, not a product commitment.</p>
+          <p class="why"><strong>Why this matters for you:</strong> Pause, audit and undo are interface features before they are policy. If this framing spreads, designers of agent products in {domain} will be asked for stop controls and readable logs as table stakes.</p>
+          <p class="source"><a href="https://theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised" target="_blank" rel="noopener">Source &mdash; The Verge (via AI Weekly summary; original not opened)</a></p>
+          <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+            <div class="impact-block" data-impact="design-process">
+              <h6 class="impact-block-title">Impact on your design process</h6>
+              <p class="impact-variant" data-variant="ic-designer">For agent flows in {focus}, design the pause and stop states explicitly: what the user sees mid-task, what is already done, what can be undone. These are rarely drawn today.</p>
+              <p class="impact-variant" data-variant="design-lead">Add 'stop, inspect, resume' to your design review checklist for any agentic feature, and give the audit log a designed, human-readable form instead of leaving it to engineering.</p>
+              <p class="impact-variant" data-variant="strategist">If the CEO of a major platform vendor says to assume compromise, expect customers and regulators in {domain} to ask for brakes and logs. Position those as product features now.</p>
+            </div>
+            <div class="impact-block" data-impact="designers-now">
+              <h6 class="impact-block-title">How designers are working now</h6>
+              <p class="impact-variant" data-variant="ic-designer">ICs are mostly designing the happy path of agent tasks, with a cancel button at best. Mid-task pause with partial state is largely undesigned.</p>
+              <p class="impact-variant" data-variant="design-lead">Leads are mostly leaving logging and audit to engineering. Few have a design-owned view of what a user or admin can actually read.</p>
+              <p class="impact-variant" data-variant="strategist">Strategists are mostly treating this as a compliance topic. Few are connecting it to trust and sales in enterprise deals.</p>
+            </div>
+            <div class="impact-block" data-impact="trend">
+              <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+              <p class="impact-variant" data-variant="ic-designer">New way of thinking: designing for a component you cannot trust, rather than one you can tune, changes what the interface owes the user. Evidence here is a statement, not shipped product, so the tag is a judgement call.</p>
+              <p class="impact-variant" data-variant="design-lead">It reframes leadership of agent products from 'make the agent good' to 'make the agent stoppable and inspectable', a different quality bar.</p>
+              <p class="impact-variant" data-variant="strategist">At strategy level it moves trust controls from a feature list to a precondition for adoption. Hold loosely until vendors ship the controls.</p>
+            </div>
+            <div class="impact-block" data-impact="product-thinking">
+              <h6 class="impact-block-title">Impact on product development thinking</h6>
+              <p class="impact-variant" data-variant="ic-designer">For {focus}, spec the worst-case: the agent is wrong and confident. Design what the user can see and do in the first ten seconds.</p>
+              <p class="impact-variant" data-variant="design-lead">Put reversibility and observability into the definition of done for agent features in {domain}.</p>
+              <p class="impact-variant" data-variant="strategist">Roadmap trade-off: autonomy versus controllability. Decide per surface what the maximum unattended duration is.</p>
+            </div>
+          </section>
+          <section class="action" data-variant="ic-designer" data-skills="critique,systems-thinking,craft" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Pick an agent task in {domain} that runs for more than a minute. Sketch the paused state: what is done, what is pending, what can be rolled back, and what the user can say next. Write a short critique of where the sketch exposes a missing capability.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional,advocacy" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Meet one engineer and inventory what your agent features log today. Rewrite one log entry in plain language a non-technical admin could act on, and agree who owns the format. Record the before and after.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+          <section class="action" data-variant="strategist" data-skills="strategy,case-making,advocacy" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo for {domain}: if customers start requiring an emergency brake and tamper-proof logs, which of our agent surfaces fail first? Name the trade-off with autonomy and a recommendation on what to build first.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+        </article>
+      </div>
+
+    </section>
+
+        <section class="day-section" data-date="2026-10-12">
       <h4 class="day">Monday, October 12 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="research">
