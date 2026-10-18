@@ -1127,7 +1127,283 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-        <section class="day-section" id="today" data-date="2026-10-16">
+        <section class="day-section" id="today" data-date="2026-10-18">
+      <h4 class="day">Sunday, October 18 <span class="day-date">&mdash; today's briefing</span></h4>
+
+      <div class="category-group" data-category="models">
+        <h5 class="category-label">Models</h5>
+            <article class="entry" data-id="2026-10-18-muse-spark-open" data-category="models" data-published="2026-10-15" data-tags="meta,open-weights,multimodal,local-models,agents">
+              <div class="head">
+                <h6 class="headline">Meta releases Muse Spark Open, an 816B open-weights multimodal model</h6>
+                <span class="badge models">Models</span>
+              </div>
+              <p class="meta"><time datetime="2026-10-15">Published October 15, 2026</time></p>
+              <p class="summary">Meta released Muse Spark Open, a sparse mixture-of-experts model with 816B total and about 42B active parameters per token. It takes text, image, video and audio input, has a 1M-token context window, and ships under Meta&#x27;s Muse Model License with day-one support in vLLM, SGLang, llama.cpp and MLX. Meta says two 512GB M5 Ultra Mac Studios can run it locally; it reportedly trails Kimi K3 and GLM 5.3 on GDPVal-AA. Specs come from a secondary digest of Meta&#x27;s developer blog and are not independently verified.</p>
+              <p class="why"><strong>Why this matters for you:</strong> A frontier-sized multimodal model you can host yourself changes what a design team can do with confidential screens, research video and unreleased product work. The judgement call is whether the data-control gain is worth a model that is not the benchmark leader.</p>
+              <p class="source"><a href="https://developer.meta.com/ai/resources/blog/build-with-muse-spark-open/" target="_blank" rel="noopener">Source &mdash; Meta Developer Blog</a></p>
+              <section class="impact-analysis">
+                <h6 class="impact-title">Impact analysis</h6>
+                <div class="impact-block" data-impact="design-process">
+                  <h6 class="impact-block-title">Impact on your design process</h6>
+                  <p class="impact-variant" data-variant="ic-designer">Multimodal input means you can feed it {domain} prototype recordings and research footage without sending them to a vendor API, which makes video critique a realistic daily step rather than a legal negotiation.</p>
+                  <p class="impact-variant" data-variant="design-lead">The question for your team shifts from which hosted tool is approved to which workflows are sensitive enough to justify running a model in-house, and who maintains it.</p>
+                  <p class="impact-variant" data-variant="strategist">Open weights at this scale let you treat the model as infrastructure you can fine-tune on your own design language, not a service you rent, which moves differentiation from prompts to data.</p>
+                </div>
+                <div class="impact-block" data-impact="designers-now">
+                  <h6 class="impact-block-title">How designers are working now</h6>
+                  <p class="impact-variant" data-variant="ic-designer">Most ICs still use whatever hosted model their company licenses and have never run a local one; the few who have use small models for private note and transcript work.</p>
+                  <p class="impact-variant" data-variant="design-lead">Leads are mostly blocked by security reviews on hosted tools, so a self-hostable option is being quietly priced by platform teams rather than adopted by design.</p>
+                  <p class="impact-variant" data-variant="strategist">Strategists are treating open weights as a negotiating lever with hosted vendors more than as a real deployment plan, since the hardware bill is still large.</p>
+                </div>
+                <div class="impact-block" data-impact="trend">
+                  <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+                  <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: the work stays the same, but private video and screen analysis becomes allowed, which changes how thoroughly you can check {focus} flows.</p>
+                  <p class="impact-variant" data-variant="design-lead">The frame holds. Your team still critiques and ships, but the constraint of what you may upload to a model loosens, so expect review practices to change before roles do.</p>
+                  <p class="impact-variant" data-variant="strategist">Open frontier-class models reshape vendor power more than product strategy; plan for optionality, not for a rewrite.</p>
+                </div>
+                <div class="impact-block" data-impact="product-thinking">
+                  <h6 class="impact-block-title">Impact on product development thinking</h6>
+                  <p class="impact-variant" data-variant="ic-designer">Features that analyse user video or screens become feasible to prototype on-device, so privacy stops being the first reason to say no.</p>
+                  <p class="impact-variant" data-variant="design-lead">Planning should add a build-versus-rent line for model access, with data sensitivity as the deciding input, not cost alone.</p>
+                  <p class="impact-variant" data-variant="strategist">Open weights make model access a commodity input, so durable advantage has to come from workflow, data and taste around the model.</p>
+                </div>
+              </section>
+              <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+                <h6 class="action-title">Try this &mdash; 45 min</h6>
+                <p class="action-text">Pick one 2-minute recording of a {domain} usability session and ask any multimodal model to list usability problems. Then write a critique of what it missed or invented, marking each claim as verified or not against the footage. The annotated critique is the artefact.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Judgement</span>
+                  <span class="skill-chip">Critique</span>
+                  <span class="time-chip">~45 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60">
+                <h6 class="action-title">Try this &mdash; 60 min</h6>
+                <p class="action-text">List every place your team currently sends screens, recordings or research data to a hosted AI tool. Classify each by sensitivity and write one line on whether a self-hosted model would change your answer, then bring the table to your security partner.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Systems thinking</span>
+                  <span class="skill-chip">Design ops</span>
+                  <span class="time-chip">~60 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+                <h6 class="action-title">Try this &mdash; 30 min</h6>
+                <p class="action-text">Write a one-paragraph memo recommending hosted versus self-hosted multimodal models for {domain} design work. Name the trade-off between capability and data control, the hardware cost you are assuming, and end with a clear recommendation.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Strategy</span>
+                  <span class="skill-chip">Case-making</span>
+                  <span class="time-chip">~30 min</span>
+                </div>
+              </section>
+            </article>
+      </div>
+
+      <div class="category-group" data-category="tools">
+        <h5 class="category-label">Tools</h5>
+            <article class="entry" data-id="2026-10-18-chatgpt-chrome-tabs" data-category="tools" data-published="2026-10-15" data-tags="openai,chatgpt,browser-agents,chrome,workflows">
+              <div class="head">
+                <h6 class="headline">ChatGPT can now read and act on your Chrome tabs</h6>
+                <span class="badge tools">Tools</span>
+              </div>
+              <p class="meta"><time datetime="2026-10-15">Published October 15, 2026</time></p>
+              <p class="summary">OpenAI added Chrome tab access to ChatGPT. Chat mode answers questions about open tabs and synthesises across pages; Work mode, after setup, can fill forms, send messages, download files and group tabs. It needs the ChatGPT desktop app and a browser extension, works with Chrome, Edge, Brave, Opera and Vivaldi, and asks before acting on a new site by default. It competes directly with Gemini in Chrome.</p>
+              <p class="why"><strong>Why this matters for you:</strong> Your reference research, competitor teardowns and form-heavy admin are the tasks most exposed to a browser agent. Deciding what to delegate, and what to keep because it builds your taste, is now a daily call.</p>
+              <p class="source"><a href="https://fourweekmba.com/ai-chatgpt-can-now-control-your-chrome-tabs-in-work-and-codex/" target="_blank" rel="noopener">Source &mdash; FourWeekMBA (reporting OpenAI)</a></p>
+              <section class="impact-analysis">
+                <h6 class="impact-title">Impact analysis</h6>
+                <div class="impact-block" data-impact="design-process">
+                  <h6 class="impact-block-title">Impact on your design process</h6>
+                  <p class="impact-variant" data-variant="ic-designer">Competitive and inspiration research across a dozen {domain} tabs can be synthesised in one pass, but you lose the incidental noticing that comes from looking yourself.</p>
+                  <p class="impact-variant" data-variant="design-lead">Browser agents make research a delegable step, so your team needs a rule for what must still be looked at by a human before it enters a critique.</p>
+                  <p class="impact-variant" data-variant="strategist">Cross-tab synthesis lowers the cost of market scanning, which raises the bar: a competitive summary is no longer a differentiating deliverable.</p>
+                </div>
+                <div class="impact-block" data-impact="designers-now">
+                  <h6 class="impact-block-title">How designers are working now</h6>
+                  <p class="impact-variant" data-variant="ic-designer">ICs are using these agents for tedious tasks like collecting screenshots and filling spec forms, and mostly not trusting them with anything that sends messages.</p>
+                  <p class="impact-variant" data-variant="design-lead">Leads are drafting informal rules about which sites and accounts agents may touch, usually after a near-miss rather than before.</p>
+                  <p class="impact-variant" data-variant="strategist">Strategists are watching permission models closely, since an agent logged into every internal tool is a new access path nobody designed.</p>
+                </div>
+                <div class="impact-block" data-impact="trend">
+                  <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+                  <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: the research step of your {focus} work gets faster, while the judgement about what the research means stays yours.</p>
+                  <p class="impact-variant" data-variant="design-lead">The frame holds, but the permission prompt itself becomes a design problem your team owns, since users will hit it constantly.</p>
+                  <p class="impact-variant" data-variant="strategist">Browser agents reshape interface assumptions: if an agent is a primary user of your product, your pages need to be legible to it.</p>
+                </div>
+                <div class="impact-block" data-impact="product-thinking">
+                  <h6 class="impact-block-title">Impact on product development thinking</h6>
+                  <p class="impact-variant" data-variant="ic-designer">Design for two users on every page: the person and the agent acting for them, which affects labels, forms and confirmation steps.</p>
+                  <p class="impact-variant" data-variant="design-lead">Review your flows for agent-hostile patterns such as unlabelled controls and modal traps, and log where an agent stalls.</p>
+                  <p class="impact-variant" data-variant="strategist">Products whose value depends on a human visiting the page face pressure when an agent can summarise it, so reassess where your value actually lives.</p>
+                </div>
+              </section>
+              <section class="action" data-variant="ic-designer" data-skills="tool-mastery,judgement" data-time="30">
+                <h6 class="action-title">Try this &mdash; 30 min</h6>
+                <p class="action-text">Run a browser agent on a real {domain} competitor comparison across five tabs. Then open the tabs yourself and write down three things the agent&#x27;s summary got wrong, flattened or omitted. The error list is the artefact.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Tool mastery</span>
+                  <span class="skill-chip">Judgement</span>
+                  <span class="time-chip">~30 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+                <h6 class="action-title">Try this &mdash; 45 min</h6>
+                <p class="action-text">Draft a one-page agent-permissions rule for your team: which sites an agent may read, which it may act on, and what always needs a human click. Review it with someone from security and record their objections.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Design ops</span>
+                  <span class="skill-chip">Cross-functional</span>
+                  <span class="time-chip">~45 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="30">
+                <h6 class="action-title">Try this &mdash; 30 min</h6>
+                <p class="action-text">Write a one-paragraph memo on what happens to your product if users increasingly reach it through a browser agent rather than directly. Name one flow that breaks, one that improves, and recommend a first change.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Strategy</span>
+                  <span class="skill-chip">Differentiation</span>
+                  <span class="time-chip">~30 min</span>
+                </div>
+              </section>
+            </article>
+      </div>
+
+      <div class="category-group" data-category="jobs-industry">
+        <h5 class="category-label">Jobs &amp; industry</h5>
+            <article class="entry" data-id="2026-10-18-anthropic-junior-hiring" data-category="jobs-industry" data-published="2026-10-16" data-tags="hiring,juniors,agents,careers,anthropic">
+              <div class="head">
+                <h6 class="headline">Anthropic report: junior technical hires fell from 27% to 9%, agents work six times human hours</h6>
+                <span class="badge jobs-industry">Jobs &amp; industry</span>
+              </div>
+              <p class="meta"><time datetime="2026-10-16">Published October 16, 2026</time></p>
+              <p class="summary">Anthropic&#x27;s own workforce data says junior technical hires dropped from 27% to 9% of hires. Counting only agents directed by individual employees, agents logged six times as many hours as their human handlers by August. This is a single company&#x27;s self-reported data, reported via a secondary roundup, and Anthropic has an interest in showing agents at work.</p>
+              <p class="why"><strong>Why this matters for you:</strong> If the entry-level rung thins out at companies building these tools, the path by which designers learn craft changes too. Your own development plan, and your team&#x27;s, can no longer assume juniors will absorb the grunt work.</p>
+              <p class="source"><a href="https://fourweekmba.com/ai-anthropics-junior-tech-hires-fell-to-9-as-agents-hit-6x/" target="_blank" rel="noopener">Source &mdash; FourWeekMBA (reporting Anthropic)</a></p>
+              <section class="impact-analysis">
+                <h6 class="impact-title">Impact analysis</h6>
+                <div class="impact-block" data-impact="design-process">
+                  <h6 class="impact-block-title">Impact on your design process</h6>
+                  <p class="impact-variant" data-variant="ic-designer">The grunt work you used to learn on, such as resizing, redlines and state coverage, is what agents absorb first, so you need deliberate practice on it or you lose the intuition behind it.</p>
+                  <p class="impact-variant" data-variant="design-lead">You may be leading fewer juniors and more agents, which means your reviews shift from teaching toward specifying and checking.</p>
+                  <p class="impact-variant" data-variant="strategist">Org design assumes a pyramid of juniors feeding seniors; if the base shrinks, where {domain} craft knowledge comes from is a strategic question.</p>
+                </div>
+                <div class="impact-block" data-impact="designers-now">
+                  <h6 class="impact-block-title">How designers are working now</h6>
+                  <p class="impact-variant" data-variant="ic-designer">ICs are quietly using agents for production tasks and worrying that they are skipping the repetition that built their eye.</p>
+                  <p class="impact-variant" data-variant="design-lead">Leads report hiring bars for juniors rising to judgement and taste, because agents already handle execution.</p>
+                  <p class="impact-variant" data-variant="strategist">Strategists are modelling headcount with agent hours as a line item, usually without a plan for developing future seniors.</p>
+                </div>
+                <div class="impact-block" data-impact="trend">
+                  <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+                  <p class="impact-variant" data-variant="ic-designer">New way of thinking: the career ladder assumption is wrong. Plan {focus} skill-building outside production work, because production no longer teaches.</p>
+                  <p class="impact-variant" data-variant="design-lead">The frame of junior-to-senior apprenticeship needs replacing; you need explicit teaching structures, not osmosis.</p>
+                  <p class="impact-variant" data-variant="strategist">Treating agent hours as capacity changes workforce planning, and the first firms to solve talent development will hold the advantage.</p>
+                </div>
+                <div class="impact-block" data-impact="product-thinking">
+                  <h6 class="impact-block-title">Impact on product development thinking</h6>
+                  <p class="impact-variant" data-variant="ic-designer">With fewer people doing execution, product ideas get tested faster but with less breadth of viewpoint, so you must seek out dissent on purpose.</p>
+                  <p class="impact-variant" data-variant="design-lead">Planning rituals built around human capacity, such as sprint sizing, need rethinking when agent throughput varies by task.</p>
+                  <p class="impact-variant" data-variant="strategist">Roadmaps should account for review capacity, since senior attention, not production, becomes the scarce resource.</p>
+                </div>
+              </section>
+              <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45">
+                <h6 class="action-title">Try this &mdash; 45 min</h6>
+                <p class="action-text">Pick a task you now hand to an agent and do it by hand once, then write what you noticed that the agent output never shows you. Decide in writing which tasks you will keep doing manually to protect your eye.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Judgement</span>
+                  <span class="skill-chip">Craft</span>
+                  <span class="time-chip">~45 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60">
+                <h6 class="action-title">Try this &mdash; 60 min</h6>
+                <p class="action-text">Design a six-month development path for a junior designer that does not rely on production work: list three practice exercises, who reviews them, and what &#x27;ready&#x27; looks like. Share it with your manager.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Design ops</span>
+                  <span class="skill-chip">Advocacy</span>
+                  <span class="time-chip">~60 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+                <h6 class="action-title">Try this &mdash; 30 min</h6>
+                <p class="action-text">Write a one-paragraph memo arguing for or against hiring juniors next quarter given agent capacity. Name the trade-off between short-term cost and long-term craft pipeline, and end with a recommendation.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Strategy</span>
+                  <span class="skill-chip">Case-making</span>
+                  <span class="time-chip">~30 min</span>
+                </div>
+              </section>
+            </article>
+      </div>
+
+      <div class="category-group" data-category="coding-agents">
+        <h5 class="category-label">Coding agents</h5>
+            <article class="entry" data-id="2026-10-18-claude-code-90-percent" data-category="coding-agents" data-published="2026-10-16" data-tags="claude-code,agents,code-review,reverts,quality">
+              <div class="head">
+                <h6 class="headline">Claude Code team says Claude now writes about 90% of Claude Code</h6>
+                <span class="badge coding-agents">Coding agents</span>
+              </div>
+              <p class="meta"><time datetime="2026-10-16">Published October 16, 2026</time></p>
+              <p class="summary">Anthropic&#x27;s Claude Code team says Claude writes roughly 90% of Claude Code&#x27;s own code. From June to September, merged pull requests more than doubled and the share reverted fell by more than 40%. These are the vendor&#x27;s own figures, with no independent audit, and revert rate is a narrow proxy for quality.</p>
+              <p class="why"><strong>Why this matters for you:</strong> The metric that matters here is revert rate, not output volume. It points to the practice designers need when agents build their designs: define what counts as an acceptable change and measure whether it sticks.</p>
+              <p class="source"><a href="https://fourweekmba.com/ai-claude-writes-90-of-claude-code-as-reverts-fall-over-40/" target="_blank" rel="noopener">Source &mdash; FourWeekMBA (reporting Anthropic)</a></p>
+              <section class="impact-analysis">
+                <h6 class="impact-title">Impact analysis</h6>
+                <div class="impact-block" data-impact="design-process">
+                  <h6 class="impact-block-title">Impact on your design process</h6>
+                  <p class="impact-variant" data-variant="ic-designer">If agents build most of the code, your {domain} designs are implemented faster, so spec ambiguity shows up as a shipped bug within a day rather than a week.</p>
+                  <p class="impact-variant" data-variant="design-lead">Your team&#x27;s handoff has to become checkable, with explicit acceptance criteria an agent and a reviewer can both verify.</p>
+                  <p class="impact-variant" data-variant="strategist">A falling revert rate suggests review and tests matter more than generation; the same will hold for design review of agent-built UI.</p>
+                </div>
+                <div class="impact-block" data-impact="designers-now">
+                  <h6 class="impact-block-title">How designers are working now</h6>
+                  <p class="impact-variant" data-variant="ic-designer">ICs are increasingly opening pull requests themselves for small UI fixes, which works until a change touches shared components.</p>
+                  <p class="impact-variant" data-variant="design-lead">Leads are adding design checks to the review step, often informally and with no agreed bar for what blocks a merge.</p>
+                  <p class="impact-variant" data-variant="strategist">Strategists are asking whether design needs its own quality metric analogous to reverts, and few have one.</p>
+                </div>
+                <div class="impact-block" data-impact="trend">
+                  <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+                  <p class="impact-variant" data-variant="ic-designer">Reshaping the craft: your {focus} work stays, but the unit of value shifts from producing screens to specifying and verifying them.</p>
+                  <p class="impact-variant" data-variant="design-lead">The frame holds, but ownership of verification moves; decide whether design or engineering owns UI correctness.</p>
+                  <p class="impact-variant" data-variant="strategist">Self-authoring tooling is reshaping how fast products improve, so expect competitors&#x27; iteration cycles to shorten.</p>
+                </div>
+                <div class="impact-block" data-impact="product-thinking">
+                  <h6 class="impact-block-title">Impact on product development thinking</h6>
+                  <p class="impact-variant" data-variant="ic-designer">Faster implementation means the bottleneck becomes deciding what to build, which raises the value of research and judgement upstream.</p>
+                  <p class="impact-variant" data-variant="design-lead">Track a design-quality revert metric, such as UI changes later undone, to see whether faster shipping is actually working.</p>
+                  <p class="impact-variant" data-variant="strategist">Roadmaps should price review capacity and rework rate, not just build time.</p>
+                </div>
+              </section>
+              <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+                <h6 class="action-title">Try this &mdash; 45 min</h6>
+                <p class="action-text">Take an agent-built {domain} UI change and review it against your design intent. Write a pass/fail review with three specific defects and one acceptance criterion that would have caught each earlier.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Critique</span>
+                  <span class="skill-chip">Judgement</span>
+                  <span class="time-chip">~45 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+                <h6 class="action-title">Try this &mdash; 60 min</h6>
+                <p class="action-text">Ask an engineer how your team&#x27;s UI pull requests get reviewed and how often they are reverted. Draft a one-page design-acceptance checklist with them, and agree who can block a merge.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Design ops</span>
+                  <span class="skill-chip">Cross-functional</span>
+                  <span class="time-chip">~60 min</span>
+                </div>
+              </section>
+              <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+                <h6 class="action-title">Try this &mdash; 30 min</h6>
+                <p class="action-text">Write a one-paragraph memo proposing one measurable design-quality metric that works like a revert rate. State what it would reward, what it could distort, and recommend whether to adopt it.</p>
+                <div class="action-meta">
+                  <span class="skill-chip">Strategy</span>
+                  <span class="skill-chip">Case-making</span>
+                  <span class="time-chip">~30 min</span>
+                </div>
+              </section>
+            </article>
+      </div>
+    </section>
+
+        <section class="day-section" data-date="2026-10-16">
       <h4 class="day">Friday, October 16 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="design-systems">
