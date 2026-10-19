@@ -1127,7 +1127,200 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-        <section class="day-section" id="today" data-date="2026-10-18">
+<section class="day-section" id="today" data-date="2026-10-19">
+<h4 class="day">Monday, October 19 <span class="day-date">&mdash; today's briefing</span></h4>
+<div class="category-group" data-category="case-studies"><h5 class="category-label">Case studies</h5>
+<article class="entry" data-id="2026-10-19-muse-always-allow" data-category="case-studies" data-published="2026-10-19" data-tags="meta,agents,permissions,trust,consent-design">
+<div class="head"><h6 class="headline">Meta Muse shared a seller&#x27;s home address under &quot;always allow&quot; permissions</h6><span class="badge case-studies">Case studies</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">A Toronto seller let Meta&#x27;s Muse agent run a Facebook Marketplace listing. Muse accepted an offer, agreed a pickup, shared his home address with the buyer and sent an automated &quot;Yep, I&#x27;m here!&quot; message from his account when the buyer arrived late at night. He says he had expected a check before the address went out; Meta says Muse prompts for permissions and that agents can &quot;make mistakes or take unexpected actions.&quot; The account is a single user&#x27;s report as covered by Fortune; Meta has not detailed what the permission screen showed.</p>
+<p class="why"><strong>Why this matters for you:</strong> This is a consent-design failure, not a model failure: one broad grant covered address sharing, price acceptance and impersonated messages. Whoever designs the permission surface for an agent owns outcomes like this.</p>
+<p class="source"><a href="https://fortune.com/2026/10/19/meta-muse-ai-agent-facebook-marketplace-home-address-privacy/" target="_blank" rel="noopener">Source &mdash; Fortune</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Permission screens for agents are now core product UI. You can no longer design the happy path and leave grant scoping to a settings page.</p>
+<p class="impact-variant" data-variant="design-lead">Your team probably has no pattern for tiered agent permissions yet, so the first review to add is whether any grant bundles reversible actions with irreversible ones.</p>
+<p class="impact-variant" data-variant="strategist">Agent autonomy needs an explicit risk ladder before launch, because the cost of one over-broad grant lands on the brand, not the user.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Most ICs ship agent features with one onboarding consent step and a toggle in settings, because that is what the platform templates give them.</p>
+<p class="impact-variant" data-variant="design-lead">Leads mostly handle this through legal review of copy, which catches wording but not whether the scope of the grant matches what a user imagines.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are asking for incident playbooks for agent mistakes, but few have decided who can pause an agent product when one goes wrong.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">Reshaping the craft: the work is still interaction design, but the object being designed is delegated authority, with per-action limits, previews and undo.</p>
+<p class="impact-variant" data-variant="design-lead">The frame holds but the review checklist changes: scope of grant, reversibility of each action and what the user sees afterwards become standard crit questions.</p>
+<p class="impact-variant" data-variant="strategist">Agent trust is a durable product category, and the winners will be those who make limits legible; treat it as a lasting design problem, not a news cycle.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product thinking has to start from what the agent should never do without asking, such as disclosing {domain} personal data, then work backward to the minimum grant.</p>
+<p class="impact-variant" data-variant="design-lead">Roadmaps should carry a line for post-action transparency, meaning a log the user can read, not only a pre-action prompt.</p>
+<p class="impact-variant" data-variant="strategist">Metrics need to include harm events per thousand delegated actions, not only task completion, or the incentive is to widen grants.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Take an agent flow you know, or sketch a {domain} one, and list every action it could take under a single &quot;always allow&quot; grant. Mark each action reversible or not, then redesign the permission screen so the three riskiest actions need their own prompt. The annotated action list plus the revised screen is the artefact.</p><div class="action-meta"><span class="skill-chip">Judgement</span><span class="skill-chip">Critique</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Run a 45-minute session with your team where each person brings one agent or automation feature in flight and answers: what is the worst thing it can do on a broad grant? Turn the answers into a one-page permission-review checklist your crits will use from now on.</p><div class="action-meta"><span class="skill-chip">Systems thinking</span><span class="skill-chip">Design ops</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60"><h6 class="action-title">Try this &mdash; 60 min</h6><p class="action-text">Write a one-page memo for your exec team proposing an agent-autonomy policy for {focus}: three action tiers, who approves moving an action up a tier, and one incident trigger that pauses the feature. State the trade-off in launch speed explicitly.</p><div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~60 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="design-tools"><h5 class="category-label">Design tools</h5>
+<article class="entry" data-id="2026-10-19-claude-design-standalone-sunset" data-category="design-tools" data-published="2026-10-17" data-tags="claude,anthropic,claude-design,artifacts,design-systems,migration">
+<div class="head"><h6 class="headline">Standalone Claude Design closes December 14 and moves into Claude artifacts</h6><span class="badge design-tools">Design tools</span></div>
+<p class="meta"><time datetime="2026-10-17">Published October 17, 2026</time></p>
+<p class="summary">Anthropic says Claude Design now lives inside Claude, where new designs, design systems and slide decks are created as artifacts. The standalone site at claude.ai/design closes on December 14, 2026 and then redirects. Design systems can be migrated now from the Artifacts page, but projects only move later (&quot;coming soon&quot;), chats and comments are not carried over, public project links stop working, and chats still in standalone are deleted in December. The Claude Code 2.1.302 release notes also began warning about the closure.</p>
+<p class="why"><strong>Why this matters for you:</strong> If your design systems or project history live in standalone Claude Design, you have a hard deadline and some of it will not migrate on its own. It is also a signal that Anthropic sees design as one output type of a general assistant, not a separate product.</p>
+<p class="source"><a href="https://support.claude.com/en/articles/17440474-migrate-from-standalone-claude-design-to-claude" target="_blank" rel="noopener">Source &mdash; Claude Help Center</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">You need to export projects as HTML archives and save any chat context that explains your decisions, because that reasoning will not carry over.</p>
+<p class="impact-variant" data-variant="design-lead">Design systems your team shares are owned in the old product, so someone has to run the migration and check each system, including the ones listed as couldn&#x27;t be migrated.</p>
+<p class="impact-variant" data-variant="strategist">A tool you standardised on has a shutdown date nine weeks out, which is a reminder to price migration risk into every AI tooling choice.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Most designers using it as a scratchpad will do nothing until the banner nags them, and then discover that chats and comments are gone.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are in the awkward middle: design systems migrate now, but projects wait for a move that has no date, so most will export manually.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are quietly treating this as evidence that standalone AI design tools are consolidating into general assistants and suites.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">Reshaping the craft: design generation becomes an artifact inside a general assistant rather than a destination tool, so the workflow shifts but the work remains.</p>
+<p class="impact-variant" data-variant="design-lead">The frame holds, but ownership of design-system source of truth matters more now, since editing migrated systems is done by asking Claude, not by direct edit.</p>
+<p class="impact-variant" data-variant="strategist">Consolidation of AI design tools into general platforms is a structural pattern; expect more shutdowns and bundle moves, so avoid single-vendor lock on source files.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Treat generated designs as disposable drafts and keep the canonical version in a system you control, with the AI tool as a front end.</p>
+<p class="impact-variant" data-variant="design-lead">Planning should include an export-and-archive step in every project close-out, so work survives product changes.</p>
+<p class="impact-variant" data-variant="strategist">Vendor roadmap risk is a product input: any workflow dependent on a pre-1.0 AI surface needs a documented exit path.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="craft,design-ops" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">Pick your three most important projects in standalone Claude Design and export each as a Project HTML archive, then write a short README per archive listing the decisions and rejected options that lived only in chat. The README set is the artefact.</p><div class="action-meta"><span class="skill-chip">Craft</span><span class="skill-chip">Design ops</span><span class="time-chip">~30 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Inventory every design system, deck and public link your team has in standalone Claude Design. For each, decide migrate, export, or abandon before December 14, assign an owner and write the plan in one table you can share with the team.</p><div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Systems thinking</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Write a short memo on tool-exit risk for {focus}: list the AI design tools your org depends on, the migration path for each if it shut down in 60 days, and one rule for adopting the next one, such as mandatory export format.</p><div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~45 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="3d-gen"><h5 class="category-label">3D gen</h5>
+<article class="entry" data-id="2026-10-19-scene-designer-critic" data-category="3d-gen" data-published="2026-10-19" data-tags="3d,agents,critique,research,scene-generation,zju">
+<div class="head"><h6 class="headline">Zhejiang University&#x27;s Scene-Designer trains an agent to design and critique 3D rooms</h6><span class="badge 3d-gen">3D gen</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">Zhejiang University researchers released Scene-Designer, an agentic framework that generates 3D indoor scenes from natural language and is trained on both design actions and critique. It uses a critic-guided GRPO training method (Scene-GRPO) and two datasets, 35K design-correction examples and 15K critique examples. The paper says the learned critic beats general-purpose models at judging scenes; a submitter comment cites 89% pairwise accuracy against GPT-5.2, a figure that is not in the abstract. A GitHub repo and project page exist; release of weights and datasets is unconfirmed.</p>
+<p class="why"><strong>Why this matters for you:</strong> The research finding to note is that training the critic and the designer together improved both. If generation gets cheaper, the scarce skill is evaluation, which is where your judgement still has to be better than a model&#x27;s.</p>
+<p class="source"><a href="https://huggingface.co/papers/2610.23121" target="_blank" rel="noopener">Source &mdash; Hugging Face Papers (arXiv 2610.23121)</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Expect 3D layout tools that propose, critique and fix a scene on their own, so your role shifts to setting the criteria the critic uses for {focus}.</p>
+<p class="impact-variant" data-variant="design-lead">Your team may soon get critique agents as part of generation tools, and someone has to decide whose standards they enforce.</p>
+<p class="impact-variant" data-variant="strategist">Automated critique of spatial design means quality gates can be scripted, which changes where a design org spends senior time.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Few designers touch agentic 3D generation yet; most spatial work is still manual in Blender, Unity or Figma-adjacent tools with AI as a texture or asset helper.</p>
+<p class="impact-variant" data-variant="design-lead">Leads in spatial and game-adjacent teams are watching research like this but have not changed review processes, since the tools are not production ready.</p>
+<p class="impact-variant" data-variant="strategist">Strategists treat it as an early signal rather than a roadmap item, because the evidence is a paper and benchmarks, not shipped product.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">Reshaping the craft: generation and critique become one loop, and the human moves to defining what good means and reviewing exceptions.</p>
+<p class="impact-variant" data-variant="design-lead">The existing review frame holds, but critique becomes a thing you can partly automate, which will change what junior designers practise.</p>
+<p class="impact-variant" data-variant="strategist">Learned critics are a durable pattern that will spread beyond 3D to layouts and UI, so it deserves strategic attention even if this paper does not ship.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product development gains a cheap automatic reviewer, so teams can run more design variants before a human sees any of them.</p>
+<p class="impact-variant" data-variant="design-lead">Process planning should ask which checks can be handed to a critic and which need a person, with the line drawn explicitly.</p>
+<p class="impact-variant" data-variant="strategist">If critique commoditises, differentiation moves to taste, data and domain constraints the critic was not trained on.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Generate a room or screen layout for {domain} with any AI tool, then write your own critique in the paper&#x27;s terms: physical validity, functional correctness and layout coherence. Add one failure a model critic would likely miss and why. The written critique is the artefact.</p><div class="action-meta"><span class="skill-chip">Critique</span><span class="skill-chip">Judgement</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Pick one design review your team runs weekly and split its checklist into items a critic model could score and items that need human taste. Share the split with one engineer and ask what it would take to automate the first group.</p><div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Cross-functional</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">List three design quality checks in {focus} that a trained critic would make commodity within two years, then write one paragraph on what your team contributes that a critic trained on public data cannot.</p><div class="action-meta"><span class="skill-chip">Differentiation</span><span class="skill-chip">Strategy</span><span class="time-chip">~45 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="jobs-industry"><h5 class="category-label">Jobs &amp; industry</h5>
+<article class="entry" data-id="2026-10-19-anthropic-public-benefit-fund" data-category="jobs-industry" data-published="2026-10-18" data-tags="anthropic,labor,ai-policy,jobs,governance">
+<div class="head"><h6 class="headline">Anthropic commits 5% of its shares to a public benefit fund aimed partly at AI labor impact</h6><span class="badge jobs-industry">Jobs &amp; industry</span></div>
+<p class="meta"><time datetime="2026-10-18">Published October 18, 2026</time></p>
+<p class="summary">Anthropic announced on October 18 that it will put 5% of its shares into a new Anthropic Public Benefit Fund, subject to stockholder approval, with the board able to add 2% for each 50% rise in company value above a baseline. The fund is a wholly-owned LLC and none of its equity may be used for lobbying or political giving. Anthropic cites labor-market impacts of AI as one example use and says it has separately committed $200 million to that issue. Structure, governance and valuation milestones are still to be detailed in the coming months.</p>
+<p class="why"><strong>Why this matters for you:</strong> A leading AI lab is publicly budgeting for labor displacement, which tells you how seriously it models the effect on design and knowledge work. It is also a pledge with unresolved governance, so judge it by what is actually funded.</p>
+<p class="source"><a href="https://www.anthropic.com/news/public-benefit-fund" target="_blank" rel="noopener">Source &mdash; Anthropic</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Nothing changes in your tools tomorrow, but the framing matters: a lab planning for job disruption is a data point for how you choose skills to build.</p>
+<p class="impact-variant" data-variant="design-lead">Leads should expect team members to raise displacement anxiety and need a straight answer on how your team is using AI and where roles are changing.</p>
+<p class="impact-variant" data-variant="strategist">Strategists get a reference point for how AI vendors talk about labor impact, which will shape customer and regulator expectations.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Designers in the field are mostly anxious or indifferent, and conversation rarely goes beyond whether juniors will be hired.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are mostly holding hiring flat for junior roles while experimenting with AI, and few have said so openly to their teams.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are being asked by boards about AI workforce plans and often answer with productivity targets, not transition commitments.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+<p class="impact-variant" data-variant="ic-designer">A passing trend as news, but a sign of a structural frame: labs now treat labor impact as a cost to be managed alongside the product.</p>
+<p class="impact-variant" data-variant="design-lead">The frame of AI as a tool inside existing roles is weakening in public statements; plan for role redefinition, not just faster output.</p>
+<p class="impact-variant" data-variant="strategist">Corporate pledges for AI-linked labor transition are likely to become normal, but the details here are not yet defined, so avoid reading it as a policy shift.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product thinking should consider the user-facing side of this: tools that affect jobs will be judged on transition support, not just capability.</p>
+<p class="impact-variant" data-variant="design-lead">Add a question to planning about which roles change if a feature succeeds, and what support the team will offer.</p>
+<p class="impact-variant" data-variant="strategist">Expect procurement and public-sector buyers to ask vendors about workforce impact commitments in 2027.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="judgement,strategy" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">Write a one-page honest audit of which parts of your {domain} work a current AI tool already does acceptably, which it does badly and which you would not hand over. End with the two skills you will deliberately practise this quarter.</p><div class="action-meta"><span class="skill-chip">Judgement</span><span class="skill-chip">Strategy</span><span class="time-chip">~30 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="advocacy,cross-functional" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Draft the 10-minute talking points you would give your team on how AI changes roles in {focus}, including what you do not know. Test them on one trusted peer or HR partner and note what they challenge.</p><div class="action-meta"><span class="skill-chip">Advocacy</span><span class="skill-chip">Cross-functional</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="60"><h6 class="action-title">Try this &mdash; 60 min</h6><p class="action-text">Write a one-page internal position on AI labor transition for {focus}: what the org will commit to for retraining and hiring, what it will not, and the metric you would publish. Compare it with the Anthropic fund as a reference, noting what it leaves unspecified.</p><div class="action-meta"><span class="skill-chip">Case-making</span><span class="skill-chip">Strategy</span><span class="time-chip">~60 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="industry"><h5 class="category-label">Industry</h5>
+<article class="entry" data-id="2026-10-19-meta-claude-no-kings-ban" data-category="industry" data-published="2026-10-19" data-tags="meta,anthropic,agents,bot-detection,policy">
+<div class="head"><h6 class="headline">Meta says a Claude-linked tool triggered bot detection and a No Kings Instagram suspension</h6><span class="badge industry">Industry</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">Meta suspended the No Kings Coalition&#x27;s Instagram account on October 17 for about 90 minutes. After first citing high activity, Meta VP Andy Stone said on Sunday a tool linked to Anthropic&#x27;s Claude read profiles, posts and hashtags at about four times normal speed in bursts, resembling bot traffic. Stone did not say which tool, who ran it or what it did, and an automated review about an hour in found the removal was wrong. The explanation comes from Meta and is not independently confirmed.</p>
+<p class="why"><strong>Why this matters for you:</strong> Agents that browse on a user&#x27;s behalf look like bots to platforms, and the platform&#x27;s defences do not know intent. If you design agentic features, rate and identity signals are part of the experience.</p>
+<p class="source"><a href="https://thenextweb.com/news/meta-claude-no-kings-instagram-suspension" target="_blank" rel="noopener">Source &mdash; The Next Web</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Anything you design that has an agent browse or act on behalf of a user needs a visible identity and pacing story, or the platform will treat it as abuse.</p>
+<p class="impact-variant" data-variant="design-lead">Your team&#x27;s agent features may hit platform rate limits and bans that nobody scoped, so add platform-compliance review to launch criteria.</p>
+<p class="impact-variant" data-variant="strategist">Dependence on third-party platforms for agent actions is a business risk that can end in a lockout, with the user as the casualty.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Designers rarely see this failure mode because it happens in the integration layer, after the design is signed off.</p>
+<p class="impact-variant" data-variant="design-lead">Leads usually learn about it when support tickets arrive, since error states for blocked agents are almost never designed.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are starting to ask how agent traffic will be authenticated, but most plans assume platforms will adapt.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">Reshaping the craft: failure and error design for agents becomes real work, including what the user sees when a platform blocks the agent.</p>
+<p class="impact-variant" data-variant="design-lead">The frame holds, but designing for lockout, appeal and recovery joins the scope of agent products.</p>
+<p class="impact-variant" data-variant="strategist">A broader reframe is coming in how platforms authenticate agents; this event is one early example, and the facts here remain disputed.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product thinking should treat third-party enforcement as a dependency, with fallback paths when an agent is blocked on {domain} platforms.</p>
+<p class="impact-variant" data-variant="design-lead">Planning needs an explicit owner for platform relationships and abuse appeals.</p>
+<p class="impact-variant" data-variant="strategist">Expect platforms to demand declared agent identity, which affects partnership and compliance strategy.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Design the three error states a user sees when a platform blocks their agent in {domain}: detected as a bot, temporary lockout and permanent suspension. For each, write the message, the recovery action and who is told. The three annotated screens are the artefact.</p><div class="action-meta"><span class="skill-chip">Craft</span><span class="skill-chip">Judgement</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Ask one engineer which third-party platforms your agent features touch and what rate or identity rules apply. Map each to the user-facing failure it could cause and write the three that have no designed state today.</p><div class="action-meta"><span class="skill-chip">Systems thinking</span><span class="skill-chip">Cross-functional</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60"><h6 class="action-title">Try this &mdash; 60 min</h6><p class="action-text">Write a one-page risk memo for {focus}: which platform could block your agent traffic, the revenue or user impact, and your recommendation between declared agent identity, official APIs or reduced automation. Flag that Meta&#x27;s account of this incident is unverified.</p><div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~60 min</span></div></section>
+</article>
+</div>
+</section>
+        <section class="day-section" data-date="2026-10-18">
       <h4 class="day">Sunday, October 18 <span class="day-date">&mdash; today's briefing</span></h4>
 
       <div class="category-group" data-category="models">
