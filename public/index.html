@@ -1127,7 +1127,180 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-<section class="day-section" id="today" data-date="2026-10-19">
+<section class="day-section" id="today" data-date="2026-10-20">
+<h4 class="day">Tuesday, October 20 <span class="day-date">&mdash; today's briefing</span></h4>
+<div class="category-group" data-category="industry"><h5 class="category-label">Industry</h5>
+<article class="entry" data-id="2026-10-20-microsoft-agent-risk" data-category="industry" data-published="2026-10-19" data-tags="microsoft,agents,governance,enterprise,trust">
+<div class="head"><h6 class="headline">Microsoft adds risk scoring and kill switches for enterprise AI agents</h6><span class="badge industry">Industry</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">Microsoft announced controls in Microsoft 365 E7 and its Project Perception security system that give each AI agent a running risk score based on the data it can reach and whether it drifts from its assigned task. When risk rises, admins can strip an agent&#x27;s write access, require human approval for high-stakes steps, or shut it down. Detection of agents on employee machines expands from 25 to 60 types, including Claude Code, Codex and GitHub Copilot. It is in private preview, with wider availability planned for Ignite on November 17-19.</p>
+<p class="why"><strong>Why this matters for you:</strong> Agent permissions, approvals and revoke states are becoming product surfaces someone has to design. If you ship agentic features, the read-only, ask-first and stopped states are now a design brief rather than an engineering afterthought.</p>
+<p class="source"><a href="https://www.geekwire.com/2026/microsoft-unveils-tools-to-monitor-and-corral-rogue-ai-agents/" target="_blank" rel="noopener">Source &mdash; GeekWire</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process"><h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">When you design {focus} with agent behaviour in it, you now need explicit states for &#x27;agent downgraded to read-only&#x27; and &#x27;agent waiting for approval&#x27;, not just the happy path. Sketch those before the success screen.</p>
+<p class="impact-variant" data-variant="design-lead">Add an &#x27;agent permission states&#x27; checklist to your team&#x27;s definition of done for {domain} features, so downgrade, approval and shutdown are reviewed the same way error states are.</p>
+<p class="impact-variant" data-variant="strategist">Treat revocable, scored autonomy as a product requirement in {domain} planning; enterprise buyers will increasingly ask for it in procurement, and retrofitting it is expensive.</p>
+</div>
+<div class="impact-block" data-impact="designers-now"><h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Most ICs still design agent flows as a single autonomous path with one confirmation dialog. The field is only starting to draw graduated trust levels.</p>
+<p class="impact-variant" data-variant="design-lead">Most leads have no shared pattern for approvals and kill switches; each squad invents its own, and the inconsistencies show up in security review.</p>
+<p class="impact-variant" data-variant="strategist">Strategists in enterprise software are already hearing &#x27;show me the agent controls&#x27; in sales cycles, mostly answered with a slide rather than a designed experience.</p>
+</div>
+<div class="impact-block" data-impact="trend"><h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">This reshapes the craft: permissioning and approval UX move from admin settings into core interaction design. Your existing tools still apply, but the scope of what counts as a screen grows.</p>
+<p class="impact-variant" data-variant="design-lead">It reshapes how you staff and review work: someone on the team needs to own agent-trust patterns the way someone owns accessibility. The frame is the same, the surface area is bigger.</p>
+<p class="impact-variant" data-variant="strategist">It reshapes the product frame rather than replacing it: autonomy becomes something customers meter and revoke. That changes packaging and differentiation, not the fundamentals of who you serve.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking"><h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Ask of every agent feature: what is the smallest permission it needs, and what does the user see when that is taken away? That question belongs in the first sketch.</p>
+<p class="impact-variant" data-variant="design-lead">Push the team to define a risk vocabulary (read, propose, act, act with approval) so product, design and security argue about the same words.</p>
+<p class="impact-variant" data-variant="strategist">Expect autonomy to be sold in tiers with governance as the premium. Decide early whether trust controls are a differentiator you build or a checkbox you buy.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Pick one agent-driven flow in {focus}. Design three states of the same screen: agent acting freely, agent downgraded to read-only, and agent paused for human approval. Then write a short critique of which state a real user would most misread and why.</p><div class="action-meta"><span class="skill-chip">Judgement</span><span class="skill-chip">Craft</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="60"><h6 class="action-title">Try this &mdash; 60 min</h6><p class="action-text">List every place your team&#x27;s {domain} product lets an agent change something. For each, mark whether a user can see, pause or revoke it. Bring the gaps to your next critique and agree on one shared pattern for approvals.</p><div class="action-meta"><span class="skill-chip">Systems thinking</span><span class="skill-chip">Design ops</span><span class="time-chip">~60 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">Write a one-paragraph memo: should agent governance controls in {domain} be a built-in differentiator or bought from a platform like Microsoft&#x27;s? State the trade-off in cost, trust and lock-in, and give a clear recommendation.</p><div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~30 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="jobs-industry"><h5 class="category-label">Jobs & industry</h5>
+<article class="entry" data-id="2026-10-20-anthropic-junior-hiring" data-category="jobs-industry" data-published="2026-10-19" data-tags="hiring,juniors,careers,anthropic,labor">
+<div class="head"><h6 class="headline">Anthropic report: juniors are 9% of new technical hires, down from 27%</h6><span class="badge jobs-industry">Jobs &amp; industry</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">Anthropic&#x27;s October 16 report &#x27;Employment at Anthropic&#x27; says junior employees made up 9% of its technical hires, down from 27%, while overall technical hiring kept growing. Juniors were 14% of technical staff, down from 21% in early 2025. A share is not a headcount, the staff figure also reflects promotions and departures, and the report does not show AI caused the shift. It is one heavy-AI-use employer&#x27;s own data, so treat it as a signal rather than a market measure.</p>
+<p class="why"><strong>Why this matters for you:</strong> If entry-level roles are shrinking where AI use is deepest, the path from junior to senior is changing. Your judgement, taste and ability to teach it are the scarce parts, and juniors on your team may need a different apprenticeship.</p>
+<p class="source"><a href="https://www.theneuron.ai/news/anthropic-junior-technical-hiring-ai/" target="_blank" rel="noopener">Source &mdash; The Neuron (summarising Anthropic&#x27;s report)</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process"><h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">If the routine production work juniors used to absorb now goes to AI, you become the person who both generates and reviews it. Your review skill matters more than your output speed in {focus}.</p>
+<p class="impact-variant" data-variant="design-lead">Without junior hands on first drafts, the usual apprenticeship loop breaks. Redesign where juniors get reps in {domain}: critique pairing, owning small decisions, reviewing AI output with a senior.</p>
+<p class="impact-variant" data-variant="strategist">Workforce planning for {domain} can no longer assume a junior pyramid. Model what a flatter team shipping the same roadmap looks like, and where quality review sits.</p>
+</div>
+<div class="impact-block" data-impact="designers-now"><h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Many ICs report the entry-level tasks they learned on, such as resizing, variants and spec cleanup, are now one prompt. Some juniors compensate by showing process and judgement in portfolios.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are quietly split: some freeze junior reqs and lean on seniors with AI, others use juniors as AI-output reviewers. Few have written down which they chose.</p>
+<p class="impact-variant" data-variant="strategist">Strategists see the cost saving first and the capability gap later; the seniors of 2030 are the juniors not being hired in 2026, and few org plans account for that.</p>
+</div>
+<div class="impact-block" data-impact="trend"><h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+<p class="impact-variant" data-variant="ic-designer">This is a new way of thinking about a career: the ladder&#x27;s bottom rungs are being rebuilt, so &#x27;get good at production, then judgement&#x27; may invert to judgement first. One employer&#x27;s data is thin, but the direction is plausible.</p>
+<p class="impact-variant" data-variant="design-lead">It reframes team building: you hire for taste and review ability early, and you have to manufacture learning situations that production work used to provide for free.</p>
+<p class="impact-variant" data-variant="strategist">It reframes talent strategy: capability pipelines become a deliberate investment instead of a by-product of staffing. The caveat is real, since one company&#x27;s hiring share is not the market.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking"><h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product work leans toward fewer, more senior hands. Practise writing the rationale for decisions, because that is what survives automation of the artefact.</p>
+<p class="impact-variant" data-variant="design-lead">Expect pressure for smaller teams. Protect time for mentoring and critique, and define what a junior-level contribution looks like when drafts are cheap.</p>
+<p class="impact-variant" data-variant="strategist">Roadmaps assume capacity. Re-test yours against a team that is leaner and more senior, and decide what you will invest in to keep a future talent bench.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Take a task a junior would have done in {focus} and do it with AI. Then write down every decision the AI made that you had to overrule or approve, and why. That list is the part of the job a junior needs to learn.</p><div class="action-meta"><span class="skill-chip">Judgement</span><span class="skill-chip">Critique</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60"><h6 class="action-title">Try this &mdash; 60 min</h6><p class="action-text">Redesign one junior onboarding path for {domain} assuming first drafts are AI-generated. Write the three review skills you will explicitly teach, and the first small decision a new hire will own in week two.</p><div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Advocacy</span><span class="time-chip">~60 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">Write a half-page memo on what your org loses in five years if it stops hiring juniors in {domain}. Name the specific capability, the cost to replace it, and one cheap mitigation you would pilot now.</p><div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~30 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="video-gen"><h5 class="category-label">Video gen</h5>
+<article class="entry" data-id="2026-10-20-flux-3-max-video" data-category="video-gen" data-published="2026-10-19" data-tags="video,flux,fal,image-to-video,speed">
+<div class="head"><h6 class="headline">fal and Black Forest Labs launch FLUX 3 Max, claiming 10-second video in about 11 seconds</h6><span class="badge video-gen">Video gen</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">fal launched FLUX 3 Max, an image-to-video model post-trained with Black Forest Labs, available from October 19 through fal&#x27;s API for text-to-video, image-to-video and keyframes-to-video. fal reports 1,139 Elo on the Artificial Analysis Video Arena and a 10-second clip in 10.95 seconds, roughly 22 times faster than Seedance 2.5 at the same reported rating. Those figures are fal&#x27;s own preliminary results, and the launch price is 75% off for three weeks with the standard price not stated.</p>
+<p class="why"><strong>Why this matters for you:</strong> Video that renders faster than you can think of the next prompt turns motion exploration into something you can do live in a review. The skill that matters is choosing which of the twenty options is right.</p>
+<p class="source"><a href="https://www.prnewswire.com/news-releases/fal-launches-flux-3-max-delivering-1-tier-image-to-video-quality-at-industry-leading-speeds-302913033.html" target="_blank" rel="noopener">Source &mdash; fal press release via PR Newswire (vendor claims)</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process"><h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Motion studies for {focus} can move from a day-long After Effects detour to a dozen takes in a sitting. Use that to explore more, then pick one and craft it properly.</p>
+<p class="impact-variant" data-variant="design-lead">Near-instant video lets you put motion options into a design review rather than describing them. Set a rule for how many options are allowed so reviews do not drown.</p>
+<p class="impact-variant" data-variant="strategist">Faster, cheaper video shifts what is worth producing in {domain}: product storytelling and onboarding motion become low-cost bets that can be tested.</p>
+</div>
+<div class="impact-block" data-impact="designers-now"><h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">ICs are using image-to-video to animate static key frames for pitches and prototypes, and are still hand-fixing motion that breaks brand rules or physics.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are mostly allowing it for exploration and keeping final motion human-made, with no written line between the two.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are watching video unit cost fall and asking whether motion belongs in marketing and product surfaces that never had budget for it.</p>
+</div>
+<div class="impact-block" data-impact="trend"><h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">This reshapes the craft: motion exploration is fast, so taste in selecting and refining is where your value sits. The frame of motion design stays.</p>
+<p class="impact-variant" data-variant="design-lead">It reshapes the team&#x27;s process: review and selection become the bottleneck, so you need clear criteria for good motion in {domain}.</p>
+<p class="impact-variant" data-variant="strategist">It reshapes the cost curve of content. Treat the speed figures as preliminary vendor claims, and wait for independent benchmarks before planning around them.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking"><h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Ask where a short clip would explain {focus} better than a screen, then prototype it in minutes rather than debating it.</p>
+<p class="impact-variant" data-variant="design-lead">Add motion criteria (brand, accessibility, reduced-motion) to design review so generated clips pass the same bar as hand-built ones.</p>
+<p class="impact-variant" data-variant="strategist">Test whether cheaper video changes conversion or comprehension in {domain} before standardising it; the model&#x27;s cost drop is not evidence users want more video.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Generate five short clips for one moment in {focus} from a single keyframe. Pick the best, and write a critique of what is wrong with it for your brand: timing, physics, or off-model details. The critique is the deliverable.</p><div class="action-meta"><span class="skill-chip">Critique</span><span class="skill-chip">Craft</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Draft a one-page team rule for using generated video in {domain}: where it is fine for exploration, where it must be human-made, and who signs off. Test the rule against two real recent projects.</p><div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Judgement</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">Pick one {domain} surface that has no motion today because it was too costly. Write a short case for or against adding generated video, including what you would measure and the vendor-claim risk.</p><div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~30 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="mcp"><h5 class="category-label">MCP</h5>
+<article class="entry" data-id="2026-10-20-sunra-mcp-media" data-category="mcp" data-published="2026-10-19" data-tags="mcp,image-gen,video-gen,pricing,assistants">
+<div class="head"><h6 class="headline">Sunra MCP puts image, video and audio models inside Claude and ChatGPT at provider API prices</h6><span class="badge mcp">MCP</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">Sunra launched an MCP service that exposes image, video and audio generation models inside assistants such as Claude and ChatGPT. It says each model is billed at its maker&#x27;s own API price with no markup, and a promotional post lists GPT Image 2.5 at $0.004 per image as a launch price. Those prices come from Sunra&#x27;s own announcement and have not been independently checked.</p>
+<p class="why"><strong>Why this matters for you:</strong> Media generation is becoming a tool call inside your assistant rather than a separate app. Your workflow shifts to briefing and selecting, and the choice of which model to call turns into a design decision.</p>
+<p class="source"><a href="https://x.com/sunra_ai/status/2112212015045296395" target="_blank" rel="noopener">Source &mdash; Sunra on X (vendor announcement)</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process"><h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">You can ask your assistant for assets for {focus} inline and keep the conversation, instead of bouncing between generator tabs. Write briefs as reusable prompts so results are comparable across models.</p>
+<p class="impact-variant" data-variant="design-lead">Agree on which models the team may call and what gets logged, since tool calls through an assistant can be invisible in your usual asset tracking.</p>
+<p class="impact-variant" data-variant="strategist">Aggregators reduce vendor lock-in for {domain} but add another intermediary to vet for data handling and licensing.</p>
+</div>
+<div class="impact-block" data-impact="designers-now"><h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">ICs are wiring MCP servers into their assistants one by one and still mostly pick models by feel rather than by a documented comparison.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are fielding questions about which generation tools are approved, and most do not yet have a list that keeps up with launches.</p>
+<p class="impact-variant" data-variant="strategist">Strategists see per-image prices collapsing and are starting to treat generation as a utility cost rather than a vendor relationship.</p>
+</div>
+<div class="impact-block" data-impact="trend"><h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">This reshapes the craft: the generator becomes a callable tool within the conversation, so briefing and selection skill matters more than tool-specific interface skill.</p>
+<p class="impact-variant" data-variant="design-lead">It reshapes toolchain governance: the team&#x27;s stack is now whatever the assistant can reach, which is a moving target you need a policy for.</p>
+<p class="impact-variant" data-variant="strategist">It is closer to a passing pricing play than a reframe; the lasting shift is MCP as the distribution layer for models, not this vendor.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking"><h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Decide per asset whether it is explored with generation or built by hand; do not default to the cheapest call.</p>
+<p class="impact-variant" data-variant="design-lead">Add a step to your process: which model was used, with what licence terms, and who reviewed it.</p>
+<p class="impact-variant" data-variant="strategist">Cheap, uniform access to media models commoditises output for {domain}. Plan where your differentiation lives instead: taste, system and brand coherence.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="tool-mastery,critique" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Run the same brief for {focus} through two different image models available via MCP or any assistant tool. Write a short critique ranking them against your brand, and record the brief that made the difference.</p><div class="action-meta"><span class="skill-chip">Tool mastery</span><span class="skill-chip">Critique</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60"><h6 class="action-title">Try this &mdash; 60 min</h6><p class="action-text">Audit which generation tools your team already uses in {domain}. Produce a one-page approved-tools list with licence and data-handling notes, and name an owner who updates it monthly.</p><div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Systems thinking</span><span class="time-chip">~60 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="differentiation,strategy" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">List three asset types in {domain} that this pricing makes commodity, then one thing only a designer with taste can still contribute. Close with a one-line recommendation on what to stop paying a vendor for.</p><div class="action-meta"><span class="skill-chip">Differentiation</span><span class="skill-chip">Strategy</span><span class="time-chip">~30 min</span></div></section>
+</article>
+</div>
+<div class="category-group" data-category="policy"><h5 class="category-label">Policy</h5>
+<article class="entry" data-id="2026-10-20-ai-agents-hacker-breach" data-category="policy" data-published="2026-10-19" data-tags="security,agents,policy,risk,reuters">
+<div class="head"><h6 class="headline">Reuters: one hacker used AI agents to break into scores of company sites for a few thousand dollars</h6><span class="badge policy">Policy</span></div>
+<p class="meta"><time datetime="2026-10-19">Published October 19, 2026</time></p>
+<p class="summary">Reuters reports that a Chinese-speaking hacker used AI agents to breach the websites of more than 100 companies, with agents doing much of the work and little human involvement, at an estimated cost of a few thousand dollars. The details come from the reporting and researchers it cites, and the full scope has not been independently confirmed here. Separately, the same day Microsoft announced agent risk controls and DHS ordered DeepSeek removed from federal civilian systems.</p>
+<p class="why"><strong>Why this matters for you:</strong> The cost of attacking the products you design just fell. Security-adjacent decisions, such as what a form accepts and what a session exposes, become part of design quality, and your threat model needs to assume cheap, tireless agents.</p>
+<p class="source"><a href="https://www.reuters.com/legal/government/how-one-hacker-used-ai-agents-few-thousand-dollars-break-into-scores-sites-2026-10-19/" target="_blank" rel="noopener">Source &mdash; Reuters</a></p>
+<section class="impact-analysis"><h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process"><h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Add an &#x27;agent attacker&#x27; pass to {focus}: what would a tireless script do with this form, this upload, this reset flow? Cheap to ask, expensive to skip.</p>
+<p class="impact-variant" data-variant="design-lead">Make abuse cases a standing part of design review in {domain}, owned jointly with security rather than handed over after launch.</p>
+<p class="impact-variant" data-variant="strategist">Plan for a world where low-skill attackers have high throughput; security UX and recovery flows in {domain} become competitive, not just compliance items.</p>
+</div>
+<div class="impact-block" data-impact="designers-now"><h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Most ICs still treat security as someone else&#x27;s review at the end. The field is slowly adding abuse cases to flows with logins, payments and uploads.</p>
+<p class="impact-variant" data-variant="design-lead">Leads rarely have a designer in threat-modelling sessions, so friction decisions get made by engineering alone.</p>
+<p class="impact-variant" data-variant="strategist">Strategists see breach costs and regulation rising together, and are starting to fold trust and recovery into product positioning.</p>
+</div>
+<div class="impact-block" data-impact="trend"><h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+<p class="impact-variant" data-variant="ic-designer">This is a new way of thinking for craft: you design for adversaries that are automated and cheap, which changes what &#x27;edge case&#x27; means.</p>
+<p class="impact-variant" data-variant="design-lead">It reframes team scope: security-relevant UX decisions need a design voice, since friction and clarity are the main defences users actually meet.</p>
+<p class="impact-variant" data-variant="strategist">It reframes risk: attacker cost collapsing changes who is a target. Treat the single report with care, but the direction is consistent with other recent agent-security news.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking"><h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Write the abuse case alongside each user story for {focus}, so the failure mode is as visible as the goal.</p>
+<p class="impact-variant" data-variant="design-lead">Ask security to join discovery, not just release review, and share what attackers are likely to automate against {domain}.</p>
+<p class="impact-variant" data-variant="strategist">Budget for resilience and recovery UX as part of the product, not as an incident-response afterthought.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="45"><h6 class="action-title">Try this &mdash; 45 min</h6><p class="action-text">Take one flow in {focus} with a form or login. Write five ways an automated agent would abuse it, then redesign one step to blunt the most likely abuse without harming a real user. Note the cost to legitimate users.</p><div class="action-meta"><span class="skill-chip">Judgement</span><span class="skill-chip">Systems thinking</span><span class="time-chip">~45 min</span></div></section>
+<section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">Invite one security engineer to a 30-minute review of a recent {domain} feature. Bring a list of friction decisions the team made, and agree on which ones need a joint owner going forward.</p><div class="action-meta"><span class="skill-chip">Cross-functional</span><span class="skill-chip">Advocacy</span><span class="time-chip">~30 min</span></div></section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30"><h6 class="action-title">Try this &mdash; 30 min</h6><p class="action-text">Write a short memo: how does cheap automated attack capability change the risk profile of {domain}, and what one trust or recovery investment would you prioritise this quarter? Give the trade-off explicitly.</p><div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~30 min</span></div></section>
+</article>
+</div>
+</section>
+<section class="day-section" data-date="2026-10-19">
 <h4 class="day">Monday, October 19 <span class="day-date">&mdash; today's briefing</span></h4>
 <div class="category-group" data-category="case-studies"><h5 class="category-label">Case studies</h5>
 <article class="entry" data-id="2026-10-19-muse-always-allow" data-category="case-studies" data-published="2026-10-19" data-tags="meta,agents,permissions,trust,consent-design">
