@@ -1127,7 +1127,265 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-<section class="day-section" id="today" data-date="2026-10-21">
+<section class="day-section" id="today" data-date="2026-10-22">
+<h4 class="day">Thursday, October 22 <span class="day-date">&mdash; today's briefing</span></h4>
+<div class="category-group" data-category="mcp"><h5 class="category-label">MCP</h5>
+<article class="entry" data-id="2026-10-22-walmart-agent-gateway" data-category="mcp" data-published="2026-10-21" data-tags="mcp,walmart,agentic-commerce,agent-profiles,checkout">
+<div class="head"><h6 class="headline">Walmart opens an MCP server for approved shopping agents</h6><span class="badge mcp">MCP</span></div>
+<p class="meta"><time datetime="2026-10-21">Published October 21, 2026</time></p>
+<p class="summary">Walmart announced Agent Gateway on Oct 21, an MCP server that lets approved AI agents search inventory and buy on a customer&#x27;s behalf, extending to Sam&#x27;s Club. A companion &#x27;Agent Profiles&#x27; feature lets shoppers set spending caps and per-purchase approvals, and agents cannot see payment details or purchase history. TechCrunch frames it as a contrast with Amazon, which blocks third-party agents.</p>
+<p class="why"><strong>Why this matters for you:</strong> A major retailer has just defined the interface an agent sees instead of the one a human sees. The caps and approval prompts are design decisions, and someone has to own them.</p>
+<p class="source"><a href="https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/" target="_blank" rel="noopener">Source &mdash; TechCrunch</a></p>
+<section class="impact-analysis">
+<h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Your product now has a second user that never sees your screens. In {focus}, list which flows an agent would hit through a tool schema and what your visual design contributes to them (nothing, unless you design the approval moments).</p>
+<p class="impact-variant" data-variant="design-lead">You need to decide who on your team owns the agent-facing surface: tool descriptions, error states, approval prompts. Right now that work usually falls between design and engineering and gets done by whoever is nearest.</p>
+<p class="impact-variant" data-variant="strategist">The design org&#x27;s scope in {domain} now includes the contract an agent negotiates against. If design is not at that table, the retailer&#x27;s version of &#x27;brand experience&#x27; gets set by API naming and default limits.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Most ICs I&#x27;d expect to see are still designing only for human checkout. The few engaging with agents are writing tool descriptions as an afterthought, usually alongside an engineer rather than as a design deliverable.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are mostly watching this from the side. The pragmatic ones are asking for agent-flow audits of their top three journeys before anyone asks them to.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are split between Walmart&#x27;s open-door approach and Amazon&#x27;s blocking one. Few have a written position for their own {domain}, which is the real gap.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+<p class="impact-variant" data-variant="ic-designer">Walmart&#x27;s own framing makes this a reshaping of the craft: the approval prompt, spending cap and receipt are classic interaction design, moved into a delegated context. The skills carry over, the canvas does not.</p>
+<p class="impact-variant" data-variant="design-lead">As a lead you are being asked to extend the craft to a non-visual surface. That reshapes hiring and critique, because you cannot review a tool schema in a Figma frame.</p>
+<p class="impact-variant" data-variant="strategist">For a strategist this is a reframe: distribution through agents means your product is judged by how well it can be operated by software acting for a person, not only by how it looks.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Start the product spec from &#x27;what may an agent do unattended?&#x27; rather than &#x27;what does the user click?&#x27;. The permission model becomes a first-order design object.</p>
+<p class="impact-variant" data-variant="design-lead">Add an agent-permission review to your definition of done, next to accessibility and content review.</p>
+<p class="impact-variant" data-variant="strategist">Decide whether {domain} opens or blocks agents. Amazon and Walmart are placing opposite bets, and neither has public results yet, so treat both as unproven.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking,critique" data-time="45">
+<h6 class="action-title">Try this &mdash; 45 min</h6>
+<p class="action-text">Pick one purchase-like flow in {focus}. Write the three tool descriptions an agent would see (search, propose, confirm) and the exact text of the approval prompt shown to the human. Then write what could go wrong if the agent misreads each description.</p>
+<div class="action-meta"><span class="skill-chip">Craft</span><span class="skill-chip">Systems thinking</span><span class="skill-chip">Critique</span><span class="time-chip">~45 min</span></div>
+</section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+<h6 class="action-title">Try this &mdash; 45 min</h6>
+<p class="action-text">Run a 30-minute session with your team: list every place in your product where a human decision is implicitly delegated to the interface (defaults, confirmations, limits). Mark which ones an agent would silently inherit, and write the owner&#x27;s name next to each.</p>
+<div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Systems thinking</span><span class="time-chip">~45 min</span></div>
+</section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making,judgement" data-time="30">
+<h6 class="action-title">Try this &mdash; 30 min</h6>
+<p class="action-text">Write a one-paragraph memo for {domain}: open to agents or block them. Name two concrete risks, one metric you would watch in the first 60 days, and the condition under which you&#x27;d reverse the decision.</p>
+<div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="skill-chip">Judgement</span><span class="time-chip">~30 min</span></div>
+</section>
+</article>
+</div>
+<div class="category-group" data-category="research"><h5 class="category-label">Research</h5>
+<article class="entry" data-id="2026-10-22-redwood-openai-monitor" data-category="research" data-published="2026-10-22" data-tags="research,agent-safety,red-teaming,openai,monitoring">
+<div class="head"><h6 class="headline">METR and Redwood find ways around OpenAI&#x27;s internal agent monitor</h6><span class="badge research">Research</span></div>
+<p class="meta"><time datetime="2026-10-22">Published October 22, 2026</time></p>
+<p class="summary">Staff from METR and Redwood Research spent three weeks embedded at OpenAI and published a 61-page report on Oct 22 describing roughly ten vulnerability classes in the company&#x27;s internal agent monitor. These include sandbox bypasses and request headers that can switch monitoring off. OpenAI says it has patched the findings that affected production; that claim has not been independently verified.</p>
+<p class="why"><strong>Why this matters for you:</strong> Many teams are adopting the same pattern: an AI watching another AI as the safety layer. This report is evidence about how far to trust that layer, which matters when you design review and approval UI around it.</p>
+<p class="source"><a href="https://blog.redwoodresearch.org/p/red-teaming-openais-internal-agent" target="_blank" rel="noopener">Source &mdash; Redwood Research</a></p>
+<section class="impact-analysis">
+<h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">If you design any &#x27;agent did X, approve?&#x27; surface, assume the monitor behind it can be wrong or bypassed. Show the human the raw action and its target, not only the monitor&#x27;s verdict.</p>
+<p class="impact-variant" data-variant="design-lead">Ask your team where a &#x27;safe&#x27; label from a model is shown as a green tick without exposing what was checked. Those are the screens to revisit first.</p>
+<p class="impact-variant" data-variant="strategist">Your design process should include a threat model for the oversight UI itself, not just the feature. That is new work for most design functions in {domain}.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Most designers I&#x27;d expect to see treat the safety check as an engineering black box and design the happy path around a &#x27;verified&#x27; badge. The report suggests that badge deserves less visual weight than it usually gets.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are mostly not part of safety reviews. The ones who are have started asking for failure-mode states to be designed, such as &#x27;monitor unavailable&#x27; and &#x27;monitor disagrees&#x27;.</p>
+<p class="impact-variant" data-variant="strategist">Strategists tend to cite &#x27;AI oversight&#x27; in roadmaps as a solved layer. A published red-team of a frontier lab&#x27;s own monitor makes that line harder to defend.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">This reshapes the craft rather than replacing it: confirmation design, audit trails and &#x27;show your work&#x27; patterns become more important, not less, when automated oversight is known to be fallible.</p>
+<p class="impact-variant" data-variant="design-lead">For a lead this reshapes critique: add &#x27;what if the checker is wrong&#x27; as a standard question in design reviews for agent features.</p>
+<p class="impact-variant" data-variant="strategist">Strategically it shifts from &#x27;we have a monitor&#x27; to &#x27;we have layered oversight with a human in the loop where it counts&#x27;, which is a positioning and cost question.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product requirements for agent features should state what happens when the monitor fails open, not only what it catches.</p>
+<p class="impact-variant" data-variant="design-lead">Treat oversight latency and false-positive friction as design inputs. A monitor that blocks too much gets disabled by users.</p>
+<p class="impact-variant" data-variant="strategist">Budget for human review on high-impact actions in {domain} and be explicit about which actions those are.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="critique,craft,judgement" data-time="45">
+<h6 class="action-title">Try this &mdash; 45 min</h6>
+<p class="action-text">Take an agent feature in {focus} that shows a &#x27;checked&#x27; or &#x27;safe&#x27; indicator. Redesign the confirmation so it shows the raw action, target and what was actually verified, and write a critique of what your original version would hide from a user.</p>
+<div class="action-meta"><span class="skill-chip">Critique</span><span class="skill-chip">Craft</span><span class="skill-chip">Judgement</span><span class="time-chip">~45 min</span></div>
+</section>
+<section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional,judgement" data-time="45">
+<h6 class="action-title">Try this &mdash; 45 min</h6>
+<p class="action-text">List the five highest-impact actions an agent can take in your product. For each, decide: automated check only, human confirm, or blocked. Bring the table to your next design review and get engineering to challenge two rows.</p>
+<div class="action-meta"><span class="skill-chip">Systems thinking</span><span class="skill-chip">Cross-functional</span><span class="skill-chip">Judgement</span><span class="time-chip">~45 min</span></div>
+</section>
+<section class="action" data-variant="strategist" data-skills="case-making,strategy,advocacy" data-time="30">
+<h6 class="action-title">Try this &mdash; 30 min</h6>
+<p class="action-text">Write a half-page note to the exec sponsor of {domain}: what oversight claims we make about our agents today, which of them rest on a single automated monitor, and what we would say if a report like this were written about us.</p>
+<div class="action-meta"><span class="skill-chip">Case-making</span><span class="skill-chip">Strategy</span><span class="skill-chip">Advocacy</span><span class="time-chip">~30 min</span></div>
+</section>
+</article>
+</div>
+<div class="category-group" data-category="industry"><h5 class="category-label">Industry</h5>
+<article class="entry" data-id="2026-10-22-mollick-30-months" data-category="industry" data-published="2026-10-20" data-tags="agents,mollick,progress,metr,delegation">
+<div class="head"><h6 class="headline">Mollick charts 30 months of AI progress and a shift to delegation</h6><span class="badge industry">Industry</span></div>
+<p class="meta"><time datetime="2026-10-20">Published October 20, 2026</time></p>
+<p class="summary">Ethan Mollick&#x27;s Oct 20 essay, timed to his book Co-Existence, charts progress since early 2024: about 180 models now beat the original GPT-4, METR&#x27;s long-horizon task measure doubled eight times from 4-minute to 17-hour tasks before becoming hard to measure, and cost per answer has fallen sharply. He argues work is moving from chatbot-style collaboration to delegating tasks to orchestrating agents.</p>
+<p class="why"><strong>Why this matters for you:</strong> If the unit of work shifts from &#x27;a prompt&#x27; to &#x27;a delegated task running for hours&#x27;, your job moves toward specifying, reviewing and judging output. That is where design taste either matters or doesn&#x27;t.</p>
+<p class="source"><a href="https://www.oneusefulthing.org/p/30-months-on-the-exponential-in-charts" target="_blank" rel="noopener">Source &mdash; One Useful Thing</a></p>
+<section class="impact-analysis">
+<h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">The practical change is writing better briefs and reviewing longer outputs. A task that runs for hours returns a lot to critique, so your review method matters more than your prompt tricks.</p>
+<p class="impact-variant" data-variant="design-lead">Your team&#x27;s rituals assume humans produce the artefacts. If agents produce a first pass overnight, critique, handoff and QA have to be rewritten around reviewing rather than making.</p>
+<p class="impact-variant" data-variant="strategist">Org design questions follow: who is accountable for work an agent did, and where does design sit relative to the people writing agent briefs in {domain}.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Many ICs are still in chat mode and treating each output as a draft to hand-edit. A smaller group delegates whole tasks and spends the time on review, and they describe the review as the hard part.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are experimenting with agents on production-support work such as spec checking and asset prep, and hesitating on anything judged on taste.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are mostly re-forecasting headcount and speed. Fewer are redefining what a design deliverable is.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+<p class="impact-variant" data-variant="ic-designer">Mollick&#x27;s &#x27;conjurer&#x27; framing is closer to a new way of thinking than a tool upgrade: you direct and judge rather than operate. Treat the METR numbers with some care, since long-task measures are a narrow proxy for real product work.</p>
+<p class="impact-variant" data-variant="design-lead">Leading means building review capacity. Agent throughput without reviewer capacity just moves the bottleneck.</p>
+<p class="impact-variant" data-variant="strategist">The strategic frame is delegation economics: what is cheap to generate, what is expensive to verify, and where does {domain} want to hold its quality bar.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product development gets organised around specification and acceptance criteria, which designers can contribute to far more than before.</p>
+<p class="impact-variant" data-variant="design-lead">Plan for work arriving in larger, less frequent batches that need staged review.</p>
+<p class="impact-variant" data-variant="strategist">Verification, not generation, becomes the scarce input to planning and cost models.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="agent-orchestration,critique,judgement" data-time="60">
+<h6 class="action-title">Try this &mdash; 60 min</h6>
+<p class="action-text">Choose a design task in {focus} you&#x27;d normally spend two hours on. Write the brief you&#x27;d hand an agent, including acceptance criteria and three things it will probably get wrong. After running it, write your critique as the artefact.</p>
+<div class="action-meta"><span class="skill-chip">Agent orchestration</span><span class="skill-chip">Critique</span><span class="skill-chip">Judgement</span><span class="time-chip">~60 min</span></div>
+</section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+<h6 class="action-title">Try this &mdash; 45 min</h6>
+<p class="action-text">Map one of your team&#x27;s rituals (critique, handoff or QA) and rewrite it for a world where the first pass is produced by an agent overnight. Write down who reviews, what they look at first, and what gets rejected on sight.</p>
+<div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Systems thinking</span><span class="time-chip">~45 min</span></div>
+</section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making,differentiation" data-time="30">
+<h6 class="action-title">Try this &mdash; 30 min</h6>
+<p class="action-text">Write a short memo for {domain}: list three design tasks that are cheap to generate but expensive to verify, and one where the verification cost makes delegation a bad idea. Recommend a pilot.</p>
+<div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="skill-chip">Differentiation</span><span class="time-chip">~30 min</span></div>
+</section>
+</article>
+</div>
+<div class="category-group" data-category="models"><h5 class="category-label">Models</h5>
+<article class="entry" data-id="2026-10-22-gemini-4-capacity" data-category="models" data-published="2026-10-21" data-tags="gemini,google,capacity,tokens,pichai">
+<div class="head"><h6 class="headline">Pichai says Gemini 4 Argon used about 25 trillion tokens in 72 hours</h6><span class="badge models">Models</span></div>
+<p class="meta"><time datetime="2026-10-21">Published October 21, 2026</time></p>
+<p class="summary">In an interview with Sources published Oct 21, Sundar Pichai said Gemini 4 Argon processed roughly 25 trillion tokens in its first 72 hours, about three times Gemini 3&#x27;s volume in the equivalent window a year earlier. He also said Google is capacity-constrained and is working on more efficient variants. The figures come from Google and have not been independently verified.</p>
+<p class="why"><strong>Why this matters for you:</strong> Demand is outrunning supply at a frontier lab. For anyone shipping AI features, that points to rate limits, tiered models and latency as design constraints, not backend details.</p>
+<p class="source"><a href="https://sources.news/p/sundar-pichai-gemini-4-google-other-bets" target="_blank" rel="noopener">Source &mdash; Sources (Alex Heath)</a></p>
+<section class="impact-analysis">
+<h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Design for the case where the best model is slow or rate-limited: loading states, partial results and graceful fallbacks to a smaller model are now part of the interaction design.</p>
+<p class="impact-variant" data-variant="design-lead">Ask your team to name the fallback behaviour of each AI feature. If the answer is &#x27;an error toast&#x27;, that is a gap.</p>
+<p class="impact-variant" data-variant="strategist">Capacity limits mean your vendor roadmap can change your product experience. That belongs in {domain} risk reviews.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Designers who ship AI features are quietly building around quotas: caching, shorter outputs and a &#x27;fast&#x27; mode toggle.</p>
+<p class="impact-variant" data-variant="design-lead">Leads are learning to ask for latency and failure budgets before approving a flow.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are diversifying across providers, partly for price and partly to avoid a single capacity bottleneck.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+<p class="impact-variant" data-variant="ic-designer">I&#x27;d tag this a passing trend: a launch-week capacity squeeze is normal and the specific numbers will date quickly. The durable point, that compute supply shapes UX, is already covered by earlier entries.</p>
+<p class="impact-variant" data-variant="design-lead">Same for a lead: note it, add a fallback check to reviews, and move on.</p>
+<p class="impact-variant" data-variant="strategist">For strategy, treat it as a signal to watch, not a reason to change plans on its own.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Include model tiering and fallback in the product spec.</p>
+<p class="impact-variant" data-variant="design-lead">Treat latency as a requirement with owners.</p>
+<p class="impact-variant" data-variant="strategist">Avoid roadmap commitments that assume unlimited top-tier model access in {domain}.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="30">
+<h6 class="action-title">Try this &mdash; 30 min</h6>
+<p class="action-text">For one AI feature in {focus}, design the three states that appear when the best model is unavailable: queued, degraded (smaller model), and failed. Write the exact copy for each and note what the user can still do.</p>
+<div class="action-meta"><span class="skill-chip">Craft</span><span class="skill-chip">Judgement</span><span class="time-chip">~30 min</span></div>
+</section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+<h6 class="action-title">Try this &mdash; 45 min</h6>
+<p class="action-text">Audit your team&#x27;s AI features for fallback behaviour. Produce a one-page table with feature, model dependency, what the user sees on a rate limit, and a proposed fix. Share it with the engineer who owns each.</p>
+<div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Cross-functional</span><span class="time-chip">~45 min</span></div>
+</section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+<h6 class="action-title">Try this &mdash; 30 min</h6>
+<p class="action-text">Write a short note on single-vendor model dependency in {domain}: what experience breaks if the primary provider throttles us for a week, and what it would cost to avoid that.</p>
+<div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="time-chip">~30 min</span></div>
+</section>
+</article>
+</div>
+<div class="category-group" data-category="policy"><h5 class="category-label">Policy</h5>
+<article class="entry" data-id="2026-10-22-openai-disclosure-framework" data-category="policy" data-published="2026-10-22" data-tags="policy,security,disclosure,openai,vulnerabilities">
+<div class="head"><h6 class="headline">OpenAI proposes a five-stage disclosure process for AI-found vulnerabilities</h6><span class="badge policy">Policy</span></div>
+<p class="meta"><time datetime="2026-10-22">Published October 22, 2026</time></p>
+<p class="summary">OpenAI published a framework on Oct 22 for disclosing vulnerabilities found by AI models, prompted by its handling of PHP remote-code-execution flaws discovered with GPT-5.6 Sol. The stages run from building a fix, to giving distributors a head start, engaging governments, notifying more broadly, and public release, with triggers to compress the timeline if exploits appear. It is a proposal, not a standard.</p>
+<p class="why"><strong>Why this matters for you:</strong> Software that finds its own flaws changes the release cadence for everything built on top. Designers shipping through that stack inherit patch timing and the user communication that goes with it.</p>
+<p class="source"><a href="https://www.helpnetsecurity.com/2026/10/22/openai-vulnerability-disclosure-plan/" target="_blank" rel="noopener">Source &mdash; Help Net Security</a></p>
+<section class="impact-analysis">
+<h6 class="impact-title">Impact analysis</h6>
+<div class="impact-block" data-impact="design-process">
+<h6 class="impact-block-title">Impact on your design process</h6>
+<p class="impact-variant" data-variant="ic-designer">Security update and incident messaging is a design surface. Faster, more frequent disclosures mean more moments where a user has to understand and act on a notice.</p>
+<p class="impact-variant" data-variant="design-lead">Plan how your team handles an urgent &#x27;update now&#x27; flow. Most teams have never designed one properly.</p>
+<p class="impact-variant" data-variant="strategist">AI-discovered vulnerabilities shorten the gap between finding and exploiting, which makes patch communication a brand issue in {domain}.</p>
+</div>
+<div class="impact-block" data-impact="designers-now">
+<h6 class="impact-block-title">How designers are working now</h6>
+<p class="impact-variant" data-variant="ic-designer">Few designers are involved in security communication. Where they are, it is usually a late request for a banner.</p>
+<p class="impact-variant" data-variant="design-lead">Leads who work with security teams are creating template patterns for urgent notices.</p>
+<p class="impact-variant" data-variant="strategist">Strategists are mostly reading this as compliance news rather than a UX dependency.</p>
+</div>
+<div class="impact-block" data-impact="trend">
+<h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+<p class="impact-variant" data-variant="ic-designer">This reshapes how the craft handles trust moments: urgent, jargon-heavy and consequential, exactly where design is usually missing.</p>
+<p class="impact-variant" data-variant="design-lead">For a lead, it adds a standing pattern library item: severity levels, plain-language explanations and clear next steps.</p>
+<p class="impact-variant" data-variant="strategist">At org level, disclosure timelines become an input to release planning.</p>
+</div>
+<div class="impact-block" data-impact="product-thinking">
+<h6 class="impact-block-title">Impact on product development thinking</h6>
+<p class="impact-variant" data-variant="ic-designer">Product plans need slack for unplanned security releases.</p>
+<p class="impact-variant" data-variant="design-lead">Include update flows in the core experience rather than treating them as edge cases.</p>
+<p class="impact-variant" data-variant="strategist">Expect the cadence of dependency patches to increase in {domain}.</p>
+</div>
+</section>
+<section class="action" data-variant="ic-designer" data-skills="craft,critique,judgement" data-time="45">
+<h6 class="action-title">Try this &mdash; 45 min</h6>
+<p class="action-text">Design the &#x27;critical update needed&#x27; screen for {focus}: severity, plain-language explanation of risk, one primary action, and what happens if the user delays. Then critique it for scare tactics versus clarity.</p>
+<div class="action-meta"><span class="skill-chip">Craft</span><span class="skill-chip">Critique</span><span class="skill-chip">Judgement</span><span class="time-chip">~45 min</span></div>
+</section>
+<section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="30">
+<h6 class="action-title">Try this &mdash; 30 min</h6>
+<p class="action-text">Gather your team and ask: when did we last ship an urgent security notice, who designed it, and what did users do? Turn the answers into a short template and an owner.</p>
+<div class="action-meta"><span class="skill-chip">Design ops</span><span class="skill-chip">Cross-functional</span><span class="time-chip">~30 min</span></div>
+</section>
+<section class="action" data-variant="strategist" data-skills="strategy,case-making,cross-functional" data-time="30">
+<h6 class="action-title">Try this &mdash; 30 min</h6>
+<p class="action-text">Write a short memo on how faster vulnerability disclosure affects release planning in {domain}: what slack to reserve, who decides user messaging, and what we need from security.</p>
+<div class="action-meta"><span class="skill-chip">Strategy</span><span class="skill-chip">Case-making</span><span class="skill-chip">Cross-functional</span><span class="time-chip">~30 min</span></div>
+</section>
+</article>
+</div>
+</section>
+<section class="day-section" data-date="2026-10-21">
 <h4 class="day">Wednesday, October 21 <span class="day-date">&mdash; today's briefing</span></h4>
 <div class="category-group" data-category="pm-tools"><h5 class="category-label">PM tools</h5>
 <article class="entry" data-id="2026-10-21-notion-agent-harness" data-category="pm-tools" data-published="2026-10-20" data-tags="notion,agents,long-running,cost,pm-tools">
