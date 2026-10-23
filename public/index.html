@@ -1127,7 +1127,362 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-<section class="day-section" id="today" data-date="2026-10-22">
+<section class="day-section" id="today" data-date="2026-10-23">
+  <h4 class="day">Friday, October 23 <span class="day-date">— today's briefing</span></h4>
+  <div class="category-group" data-category="tools">
+    <h5 class="category-label">Tools</h5>
+    <article class="entry"
+             data-id="2026-10-23-claude-duet-preview"
+             data-category="tools"
+             data-published="2026-10-21"
+             data-tags="anthropic,claude-duet,agents,proactive-ai,approvals">
+      <div class="head">
+        <h6 class="headline">Anthropic launches Claude Duet, a proactive agent that works while you are away</h6>
+        <span class="badge tools">Tools</span>
+      </div>
+      <p class="meta"><time datetime="2026-10-21">Published October 21, 2026</time></p>
+      <p class="summary">On October 21 Anthropic opened a research preview of Claude Duet, a separate iOS, Android and claude.ai app built on Opus 5.5. It sends a morning brief, checks connected accounts every few hours, and runs tasks in a cloud VM with its own browser. It must show proposed actions and wait for approval before sending messages, paying, signing or deleting. Access is by waitlist for US Pro and Max subscribers; Anthropic says more safety design detail is coming.</p>
+      <p class="why"><strong>Why this matters for you:</strong> The interface moves from you opening a tool to a tool interrupting you. Designing the brief, the interruption and the approval card is now the product, and Anthropic's own caveats (misjudged urgency, no visible browser) are exactly the design gaps.</p>
+      <p class="source"><a href="https://claude.com/blog/claude-duet" target="_blank" rel="noopener">Source — Anthropic (Claude blog)</a></p>
+      <section class="impact-analysis">
+        <h6 class="impact-title">Impact analysis</h6>
+        <div class="impact-block" data-impact="design-process">
+          <h6 class="impact-block-title">Impact on your design process</h6>
+          <p class="impact-variant" data-variant="ic-designer">Your approval-card and notification patterns now need to work for an agent that acts on your user's behalf, not just a user who taps through screens. Your {focus} flows should assume the first touch is a push, not a launch.</p>
+          <p class="impact-variant" data-variant="design-lead">Your team's usual screen-by-screen review misses the highest-stakes surface here: the moment an agent asks permission. Make approval states a first-class review item.</p>
+          <p class="impact-variant" data-variant="strategist">Proactive agents change what the product is: an ongoing relationship rather than a session. Design investment shifts from navigation to trust, timing and interruption policy.</p>
+        </div>
+        <div class="impact-block" data-impact="designers-now">
+          <h6 class="impact-block-title">How designers are working now</h6>
+          <p class="impact-variant" data-variant="ic-designer">Most ICs are still designing chat panels and dashboards; few have shipped a real approval step or a morning-brief pattern. Expect the early work to be copied from Duet's own screens.</p>
+          <p class="impact-variant" data-variant="design-lead">Leads I see are borrowing Duet's approve-before-act framing as a vocabulary, but few have written down which actions in their own product are reversible and which are not.</p>
+          <p class="impact-variant" data-variant="strategist">Strategists in {domain} are asking whether an always-on agent from a model lab becomes the front door, and whether their product is a destination or a connector behind it.</p>
+        </div>
+        <div class="impact-block" data-impact="trend">
+          <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+          <p class="impact-variant" data-variant="ic-designer">Approval, urgency and interruption are interaction-design problems with real craft in them, but they sit inside the existing discipline. The medium changes more than the principles.</p>
+          <p class="impact-variant" data-variant="design-lead">Your critique rituals need a new object: the agent's decision log and approval prompts, not only the final UI. That is a reshaping of how the team reviews work.</p>
+          <p class="impact-variant" data-variant="strategist">This is reshaping rather than a reframe: the product still needs onboarding, trust and retention, but the unit of value is now a delegated outcome.</p>
+        </div>
+        <div class="impact-block" data-impact="product-thinking">
+          <h6 class="impact-block-title">Impact on product development thinking</h6>
+          <p class="impact-variant" data-variant="ic-designer">Product specs for {focus} should list what the agent may do unprompted, what needs approval and what is banned outright, the way Duet's prohibited-actions list does.</p>
+          <p class="impact-variant" data-variant="design-lead">Roadmaps need an owner for agent behaviour: who decides urgency ranking, and who audits when it is wrong. Right now that sits between design, PM and ML with no named owner.</p>
+          <p class="impact-variant" data-variant="strategist">Distribution thinking changes: if an agent reads and acts on connected apps, your product competes on being a reliable connector as much as on its own interface.</p>
+        </div>
+      </section>
+      <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Pick one action in {focus} that an agent could take for a user (send, pay, delete, share). Design the approval card for it, then write a half-page critique listing three ways a rushed user could approve something they did not intend, and what the card does about each.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Critique</span>
+        <span class="skill-chip">Craft</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="design-lead" data-skills="systems-thinking,design-ops" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Run a 45-minute session with your team: list every action in your {domain} product on a whiteboard and sort it into reversible, hard to reverse, and never-delegate. Write down the policy that falls out and who owns it going forward.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Systems thinking</span>
+        <span class="skill-chip">Design ops</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+        <h6 class="action-title">Try this — 60 min</h6>
+        <p class="action-text">Write a one-page memo: if an always-on agent like Duet becomes the first place your {domain} customers meet your service, does your product become a connector, a destination or both? Give a recommendation, the two metrics you would watch, and what you would stop doing.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Strategy</span>
+        <span class="skill-chip">Case-making</span>
+          <span class="time-chip">~60 min</span>
+        </div>
+      </section>
+    </article>
+    <article class="entry"
+             data-id="2026-10-23-perplexity-local-computer"
+             data-category="tools"
+             data-published="2026-10-20"
+             data-tags="perplexity,on-device,privacy,local-models,agents">
+      <div class="head">
+        <h6 class="headline">Perplexity Computer can now run fully on-device on Apple silicon Macs</h6>
+        <span class="badge tools">Tools</span>
+      </div>
+      <p class="meta"><time datetime="2026-10-20">Published October 20, 2026</time></p>
+      <p class="summary">On October 20 Perplexity added a fully local mode to its Mac app for Pro, Max and Enterprise subscribers. Inference, planning and file processing run on-device with Qwen 3.6 or PPLX Pro, a post-trained Qwen, and code runs in sandboxes. MacRumors reports 36GB of memory or more is recommended; a Hybrid Compute option mixes local and cloud models from 24GB. Browsing and cloud-connected apps still require authorizing cloud access.</p>
+      <p class="why"><strong>Why this matters for you:</strong> Privacy stops being a policy page and becomes an architecture choice you can design around. If a capable agent can run locally, 'your data never leaves the device' is a differentiator, and a design constraint, for your own work.</p>
+      <p class="source"><a href="https://macrumors.com/2026/10/20/perplexity-computer-local-mac" target="_blank" rel="noopener">Source — MacRumors</a></p>
+      <section class="impact-analysis">
+        <h6 class="impact-title">Impact analysis</h6>
+        <div class="impact-block" data-impact="design-process">
+          <h6 class="impact-block-title">Impact on your design process</h6>
+          <p class="impact-variant" data-variant="ic-designer">Local models mean latency, memory limits and degraded capability are now UX states you must design for, including the moment a task has to escape to the cloud and ask permission.</p>
+          <p class="impact-variant" data-variant="design-lead">Your team needs a shared pattern for 'this stayed on your device' versus 'this left your device', applied consistently, instead of each feature inventing its own wording.</p>
+          <p class="impact-variant" data-variant="strategist">A local-first option reframes privacy claims from legal copy to product capability, which affects positioning, pricing tiers and what you can credibly promise in {domain}.</p>
+        </div>
+        <div class="impact-block" data-impact="designers-now">
+          <h6 class="impact-block-title">How designers are working now</h6>
+          <p class="impact-variant" data-variant="ic-designer">Few ICs are designing for a model that runs on the user's hardware yet. The practical work today is mocking up the hand-off between local and cloud, which no tool makes easy.</p>
+          <p class="impact-variant" data-variant="design-lead">Leads are mostly waiting: local agents sit on the 'interesting, not our roadmap' list, though privacy-conscious enterprise customers are starting to ask.</p>
+          <p class="impact-variant" data-variant="strategist">Strategists in regulated areas are quietly checking whether a local-first mode would unblock deals that stall on data residency review.</p>
+        </div>
+        <div class="impact-block" data-impact="trend">
+          <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+          <p class="impact-variant" data-variant="ic-designer">The 36GB recommendation limits this to a small slice of Macs for now, and the vendor's privacy claims are not independently verified. Worth filing, not worth redesigning around yet.</p>
+          <p class="impact-variant" data-variant="design-lead">As a lead, treat this as a signal to watch hardware requirements and independent privacy audits before committing team time. File it and revisit in a quarter.</p>
+          <p class="impact-variant" data-variant="strategist">At a strategy level it is a notable positioning move but not yet a market shift; the economics depend on hardware most customers do not own.</p>
+        </div>
+        <div class="impact-block" data-impact="product-thinking">
+          <h6 class="impact-block-title">Impact on product development thinking</h6>
+          <p class="impact-variant" data-variant="ic-designer">Specs for {focus} should state where each step runs, device or cloud, because that now changes what you can promise and how fast it feels.</p>
+          <p class="impact-variant" data-variant="design-lead">Product reviews should ask which features degrade gracefully offline or on weaker hardware, rather than assuming a frontier model is always one call away.</p>
+          <p class="impact-variant" data-variant="strategist">Product thinking should treat 'runs locally' as a tier or option with its own cost and capability trade-offs, not a free upgrade.</p>
+        </div>
+      </section>
+      <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="30">
+        <h6 class="action-title">Try this — 30 min</h6>
+        <p class="action-text">Sketch the hand-off screen for {focus} when a local agent needs the cloud (browsing or a connected app). Write the exact permission copy, then critique it: what would a cautious user assume it means, and what does it fail to say?</p>
+        <div class="action-meta">
+        <span class="skill-chip">Craft</span>
+        <span class="skill-chip">Judgement</span>
+          <span class="time-chip">~30 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Ask your engineering partner which {domain} features could run on-device within a year and which cannot. Write a one-page 'where does it run' map the team can use to label privacy states consistently.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Cross-functional</span>
+        <span class="skill-chip">Systems thinking</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="strategist" data-skills="differentiation,case-making" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">List three privacy claims your {domain} competitors make that a local-first mode would make commodity, then write one paragraph on whether you would invest in local capability or double down on trust elsewhere.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Differentiation</span>
+        <span class="skill-chip">Case-making</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+    </article>
+  </div>
+  <div class="category-group" data-category="coding-agents">
+    <h5 class="category-label">Coding agents</h5>
+    <article class="entry"
+             data-id="2026-10-23-anthropic-api-sdk-gcp"
+             data-category="coding-agents"
+             data-published="2026-10-22"
+             data-tags="anthropic,api,sdk,google-cloud,apache-2">
+      <div class="head">
+        <h6 class="headline">Anthropic ships API version 2026-10-21, SDK majors with breaking changes, and Claude on Google Cloud</h6>
+        <span class="badge coding-agents">Coding agents</span>
+      </div>
+      <p class="meta"><time datetime="2026-10-22">Published October 22, 2026</time></p>
+      <p class="summary">Anthropic released API version 2026-10-21 on October 21, with new SDK majors (Python 2.0.0, TypeScript 1.0.0, Go 2.0.0 and others) and `ant` CLI 2.0.0 that default to it; the releases carry breaking changes and move from MIT to Apache 2.0. On October 22 it also launched Claude Models on Google Cloud (Anthropic managed), with access via Google Cloud IAM, billing through Marketplace, and Opus 5.5 fast mode. Claude Code 2.1.307 adds a command to migrate code to the new API version.</p>
+      <p class="why"><strong>Why this matters for you:</strong> If you ship prototypes or internal tools built on the Claude SDKs, a routine dependency bump can now break them. It is also a reminder that your vibe-coded prototypes have owners and maintenance costs.</p>
+      <p class="source"><a href="https://docs.claude.com/en/release-notes/overview.md" target="_blank" rel="noopener">Source — Anthropic release notes</a></p>
+      <section class="impact-analysis">
+        <h6 class="impact-title">Impact analysis</h6>
+        <div class="impact-block" data-impact="design-process">
+          <h6 class="impact-block-title">Impact on your design process</h6>
+          <p class="impact-variant" data-variant="ic-designer">Any prototype you built against an older SDK may break on upgrade. Pin versions in design-engineering prototypes and note which ones you still need to run.</p>
+          <p class="impact-variant" data-variant="design-lead">Your team's AI prototypes are quietly accumulating dependencies. A breaking SDK release is the moment to ask which ones are still in use and who maintains them.</p>
+          <p class="impact-variant" data-variant="strategist">Procurement through Google Cloud billing makes it easier for enterprises to adopt Claude under existing commitments, which affects which AI tools your org standardises on.</p>
+        </div>
+        <div class="impact-block" data-impact="designers-now">
+          <h6 class="impact-block-title">How designers are working now</h6>
+          <p class="impact-variant" data-variant="ic-designer">Designers who prototype with code are discovering that a working demo is a maintenance commitment. Most are not pinning versions.</p>
+          <p class="impact-variant" data-variant="design-lead">Leads whose teams prototype with Claude are mostly handling this ad hoc, with whoever built the prototype fixing it when it breaks.</p>
+          <p class="impact-variant" data-variant="strategist">Strategists are seeing cloud marketplaces become the route by which AI tooling gets approved, because spend counts against existing commitments.</p>
+        </div>
+        <div class="impact-block" data-impact="trend">
+          <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+          <p class="impact-variant" data-variant="ic-designer">An SDK major version is routine plumbing for most designers. The point to take is the maintenance lesson, not a shift in practice.</p>
+          <p class="impact-variant" data-variant="design-lead">This does not change how you lead design; it changes who you need to ask about prototype upkeep. File it.</p>
+          <p class="impact-variant" data-variant="strategist">For strategy, the cloud-marketplace route matters a little more, but the news itself is an incremental distribution step.</p>
+        </div>
+        <div class="impact-block" data-impact="product-thinking">
+          <h6 class="impact-block-title">Impact on product development thinking</h6>
+          <p class="impact-variant" data-variant="ic-designer">Treat prototypes as products with a lifecycle: decide up front whether {focus} prototypes are throwaway or maintained.</p>
+          <p class="impact-variant" data-variant="design-lead">Handoff conversations with engineering should include dependencies and versions, not only screens.</p>
+          <p class="impact-variant" data-variant="strategist">Platform choice for AI features is increasingly driven by where the enterprise already buys cloud, not by model preference alone.</p>
+        </div>
+      </section>
+      <section class="action" data-variant="ic-designer" data-skills="automation,design-ops" data-time="30">
+        <h6 class="action-title">Try this — 30 min</h6>
+        <p class="action-text">List every code prototype you have built for {focus} that depends on an AI SDK. For each, write its SDK version, whether anyone still uses it, and whether to archive, pin or migrate it. Keep the list where your team can see it.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Automation</span>
+        <span class="skill-chip">Design ops</span>
+          <span class="time-chip">~30 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Ask engineering who owns AI prototypes built by designers on your team. Draft a one-paragraph policy covering naming, version pinning and a retirement date, and bring it to your next team meeting.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Design ops</span>
+        <span class="skill-chip">Cross-functional</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Write a short memo for your {domain} org: should AI vendor access go through your existing cloud marketplace or be bought directly? Give two trade-offs, a recommendation and the risk you are accepting.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Strategy</span>
+        <span class="skill-chip">Case-making</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+    </article>
+  </div>
+  <div class="category-group" data-category="industry">
+    <h5 class="category-label">Industry</h5>
+    <article class="entry"
+             data-id="2026-10-23-anthropic-s1-leak"
+             data-category="industry"
+             data-published="2026-10-20"
+             data-tags="anthropic,ipo,s-1,compute,leak">
+      <div class="head">
+        <h6 class="headline">Leaked Anthropic S-1 reportedly shows compute strain and an $80.7B half-year loss</h6>
+        <span class="badge industry">Industry</span>
+      </div>
+      <p class="meta"><time datetime="2026-10-20">Published October 20, 2026</time></p>
+      <p class="summary">TechCrunch reported on October 20, citing an S-1 filing leaked to The Wall Street Journal, that Anthropic is struggling to secure enough capacity from AWS, Google and Microsoft, and could spend over $750 billion on cloud contracts. The filing reportedly shows an $80.7 billion net loss on $16.3 billion of revenue in the first half, with two customers about a fifth of sales. Anthropic did not comment, and none of the figures are confirmed.</p>
+      <p class="why"><strong>Why this matters for you:</strong> The model you design around is supplied by a company with capacity constraints and a possible IPO. That is a supplier-risk question for any product that depends on one lab, and it bears on pricing and rate-limit assumptions in your designs.</p>
+      <p class="source"><a href="https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+      <section class="impact-analysis">
+        <h6 class="impact-title">Impact analysis</h6>
+        <div class="impact-block" data-impact="design-process">
+          <h6 class="impact-block-title">Impact on your design process</h6>
+          <p class="impact-variant" data-variant="ic-designer">Design for model swaps: avoid interaction patterns that only work with one model's speed or quirks, since capacity limits can show up as latency, throttling or price changes.</p>
+          <p class="impact-variant" data-variant="design-lead">Ask your team which features would break if your model provider rate-limited or raised prices, and design the fallback states now.</p>
+          <p class="impact-variant" data-variant="strategist">Single-vendor dependence is a business risk your design strategy inherits. Reliability and cost assumptions deserve a seat in roadmap discussions for {domain}.</p>
+        </div>
+        <div class="impact-block" data-impact="designers-now">
+          <h6 class="impact-block-title">How designers are working now</h6>
+          <p class="impact-variant" data-variant="ic-designer">ICs mostly assume the model is a stable utility. Few have designed a degraded or slower mode for when it is not.</p>
+          <p class="impact-variant" data-variant="design-lead">Leads are starting to hear 'we should be multi-model' from engineering, but the design implications are rarely spelled out.</p>
+          <p class="impact-variant" data-variant="strategist">Strategists are reading leaked financials for signals about pricing and vendor staying power, while treating the numbers as unconfirmed.</p>
+        </div>
+        <div class="impact-block" data-impact="trend">
+          <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+          <p class="impact-variant" data-variant="ic-designer">Designing for a supplier that may throttle or reprice means loading, fallback and degraded states become core craft, not afterthoughts.</p>
+          <p class="impact-variant" data-variant="design-lead">As a lead you reshape review checklists to include provider-failure states for every AI feature your team ships.</p>
+          <p class="impact-variant" data-variant="strategist">Supplier concentration reshapes strategy: vendor diversification is now part of product planning, not only procurement.</p>
+        </div>
+        <div class="impact-block" data-impact="product-thinking">
+          <h6 class="impact-block-title">Impact on product development thinking</h6>
+          <p class="impact-variant" data-variant="ic-designer">Treat model capacity and cost as product constraints in specs for {focus}, with explicit behaviour for slow or unavailable states.</p>
+          <p class="impact-variant" data-variant="design-lead">Product reviews should ask what happens at 2x latency and at 2x price, and whether the experience still holds.</p>
+          <p class="impact-variant" data-variant="strategist">Product strategy should assume the model layer will change under you and keep the differentiating value in your data, workflow and judgement.</p>
+        </div>
+      </section>
+      <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="30">
+        <h6 class="action-title">Try this — 30 min</h6>
+        <p class="action-text">Pick one AI feature in {focus} and design its degraded state for when the model is slow, rate-limited or unavailable. Write a short critique of what the user would conclude was wrong and whether your copy tells the truth.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Judgement</span>
+        <span class="skill-chip">Craft</span>
+          <span class="time-chip">~30 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Ask engineering which of your team's AI features depend on one provider and what the fallback is. Write a one-page table of feature, provider, fallback, and the design work needed to make the fallback acceptable.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Systems thinking</span>
+        <span class="skill-chip">Cross-functional</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+        <h6 class="action-title">Try this — 60 min</h6>
+        <p class="action-text">Write a memo on supplier risk for your {domain} product: if your model provider raised prices 3x or throttled you, what would you do in 30 days? Recommend one hedge and name what it costs. Treat the S-1 figures as unconfirmed.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Strategy</span>
+        <span class="skill-chip">Case-making</span>
+          <span class="time-chip">~60 min</span>
+        </div>
+      </section>
+    </article>
+  </div>
+  <div class="category-group" data-category="design-tools">
+    <h5 class="category-label">Design tools</h5>
+    <article class="entry"
+             data-id="2026-10-23-figma-enterprise-ai-credits"
+             data-category="design-tools"
+             data-published="2026-10-22"
+             data-tags="figma,enterprise,ai-credits,scim,governance">
+      <div class="head">
+        <h6 class="headline">Figma adds Enterprise controls for AI credit limits via SCIM and blocks external plan creation</h6>
+        <span class="badge design-tools">Design tools</span>
+      </div>
+      <p class="meta"><time datetime="2026-10-22">Published October 22, 2026</time></p>
+      <p class="summary">On October 22 Figma began rolling out Enterprise admin controls: through SCIM, admins can block AI credit use per user, allow it without limit or set a cap, managed from the identity provider. Admins can also stop members from creating Starter or Professional plans under non-organization domains with work emails. Rollout to Enterprise plans continues over the coming days.</p>
+      <p class="why"><strong>Why this matters for you:</strong> AI usage in design tools is now metered and governed like any other seat cost. Knowing who gets credits, and why, becomes part of how design leaders justify their tooling.</p>
+      <p class="source"><a href="https://www.figma.com/release-notes/" target="_blank" rel="noopener">Source — Figma release notes</a></p>
+      <section class="impact-analysis">
+        <h6 class="impact-title">Impact analysis</h6>
+        <div class="impact-block" data-impact="design-process">
+          <h6 class="impact-block-title">Impact on your design process</h6>
+          <p class="impact-variant" data-variant="ic-designer">If your org caps AI credits, your exploration habits matter: spending credits on forty throwaway variants may be harder to justify than five considered ones.</p>
+          <p class="impact-variant" data-variant="design-lead">You may now be deciding which of your team gets unlimited AI credits and which are capped. That is a resourcing call, not an IT footnote.</p>
+          <p class="impact-variant" data-variant="strategist">Metered AI use turns design tooling into a variable cost you can tie to output, which strengthens or weakens the case for design investment depending on what you can show.</p>
+        </div>
+        <div class="impact-block" data-impact="designers-now">
+          <h6 class="impact-block-title">How designers are working now</h6>
+          <p class="impact-variant" data-variant="ic-designer">Designers are already rationing prompts when credits run low and finishing the exploration by hand, not always telling anyone.</p>
+          <p class="impact-variant" data-variant="design-lead">Leads are negotiating credit allocations ad hoc, often by who asks loudest. Few have written criteria.</p>
+          <p class="impact-variant" data-variant="strategist">Strategists are being asked to show return on AI tool spend and are mostly working from anecdotes, not data.</p>
+        </div>
+        <div class="impact-block" data-impact="trend">
+          <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+          <p class="impact-variant" data-variant="ic-designer">Credit limits change how designers explore, favouring fewer, more deliberate generations. It reshapes working habits within the same craft.</p>
+          <p class="impact-variant" data-variant="design-lead">Governance of AI tooling becomes part of design operations, reshaping the lead's job toward allocation and measurement.</p>
+          <p class="impact-variant" data-variant="strategist">Budgeting AI usage reshapes how design proves value; the underlying frame of seats and outcomes stays the same.</p>
+        </div>
+        <div class="impact-block" data-impact="product-thinking">
+          <h6 class="impact-block-title">Impact on product development thinking</h6>
+          <p class="impact-variant" data-variant="ic-designer">Product discovery in {focus} should say how much AI exploration is worth paying for, instead of treating generation as free.</p>
+          <p class="impact-variant" data-variant="design-lead">Team planning should include an AI usage budget alongside headcount and licences.</p>
+          <p class="impact-variant" data-variant="strategist">Resource planning for {domain} design should tie AI spend to specific outcomes such as cycle time or defect rate.</p>
+        </div>
+      </section>
+      <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="30">
+        <h6 class="action-title">Try this — 30 min</h6>
+        <p class="action-text">For one {focus} task, decide in advance how many AI generations you will allow yourself. Do the task within that budget and write down which generations you kept, which you discarded, and what your selection criteria reveal about your taste.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Judgement</span>
+        <span class="skill-chip">Craft</span>
+          <span class="time-chip">~30 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Draft allocation criteria for AI credits on your team (who gets unlimited, who gets a cap, why). Share them with your team and write down the first objection you get.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Design ops</span>
+        <span class="skill-chip">Advocacy</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+      <section class="action" data-variant="strategist" data-skills="case-making,strategy" data-time="45">
+        <h6 class="action-title">Try this — 45 min</h6>
+        <p class="action-text">Write a one-page case for your {domain} design team's AI credit budget: three outcomes you would measure, a number you would defend, and the point at which you would cut it.</p>
+        <div class="action-meta">
+        <span class="skill-chip">Case-making</span>
+        <span class="skill-chip">Strategy</span>
+          <span class="time-chip">~45 min</span>
+        </div>
+      </section>
+    </article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-10-22">
 <h4 class="day">Thursday, October 22 <span class="day-date">&mdash; today's briefing</span></h4>
 <div class="category-group" data-category="mcp"><h5 class="category-label">MCP</h5>
 <article class="entry" data-id="2026-10-22-walmart-agent-gateway" data-category="mcp" data-published="2026-10-21" data-tags="mcp,walmart,agentic-commerce,agent-profiles,checkout">
