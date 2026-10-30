@@ -1127,7 +1127,405 @@
 
   <section class="month-section" data-month="2026-10">
     <h3 class="month">October 2026</h3>
-<section class="day-section" id="today" data-date="2026-10-29">
+<section class="day-section" id="today" data-date="2026-10-30">
+  <h4 class="day">Friday, October 30 <span class="day-date">— today's briefing</span></h4>
+  <div class="category-group" data-category="tools">
+    <h5 class="category-label">Tools</h5>
+<article class="entry"
+         data-id="2026-10-30-dedica-agent-checker"
+         data-category="tools"
+         data-published="2026-10-29"
+         data-tags="agents,accessibility,web,testing,agent-ux">
+  <div class="head">
+    <h6 class="headline">Dedica checks whether AI browsing agents can actually use your site</h6>
+    <span class="badge tools">Tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-10-29">Published October 29, 2026</time></p>
+  <p class="summary">Dedica, a new Product Hunt launch, runs 125 checks against a website to find tasks that AI browsing agents cannot complete, then proposes repairs. Free checks are offered. The 125-check figure and the repair quality are the vendor&#x27;s own claims and have not been independently verified.</p>
+  <p class="why"><strong>Why this matters for you:</strong> If agents become a real share of your traffic, &quot;can an agent finish the checkout&quot; becomes a design-quality question alongside &quot;can a human&quot;. Someone has to decide which failures are worth fixing.</p>
+  <p class="source"><a href="https://www.producthunt.com/products/dedica" target="_blank" rel="noopener">Source — Product Hunt (Dedica)</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Add an agent pass to your review: run your own critical flow through a browsing agent and note where it stalls. Unlabelled controls, hover-only menus and modal traps are usually the culprits, and they overlap with accessibility debt.</p>
+      <p class="impact-variant" data-variant="design-lead">Agent-completability becomes a line in your definition of done for flows in {domain}. Decide who owns it, because it falls between design, front end and QA.</p>
+      <p class="impact-variant" data-variant="strategist">Treat agent-readable interfaces as a product surface with its own requirements, not a side effect of accessibility work. Budget for it explicitly.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Few ICs test with agents yet; most discover failures when a stakeholder pastes a screenshot of an agent getting stuck.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are mostly reusing accessibility audits as a proxy, which catches some failures and misses agent-specific ones like bot-detection walls.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are asking the question in planning meetings, but few have data on how much agent traffic reaches their product.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The tool is minor, but &quot;design for a non-human operator&quot; is a durable constraint that changes how you write labels and structure flows.</p>
+      <p class="impact-variant" data-variant="design-lead">The craft shift is real: your team&#x27;s patterns need to hold up for two kinds of users, and checks like these will become routine.</p>
+      <p class="impact-variant" data-variant="strategist">Expect the vendor to churn; the requirement will not. A 125-item checklist is a symptom of a missing design standard.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Flows get judged by whether the goal is reachable by an agent acting on a human&#x27;s behalf, not just whether the UI is pleasant.</p>
+      <p class="impact-variant" data-variant="design-lead">Roadmap debates will include whether to block, permit or actively support agents in {focus}.</p>
+      <p class="impact-variant" data-variant="strategist">Agent access is a distribution and risk decision as much as a UX one; it belongs in the product strategy, not just the backlog.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">Pick one critical flow in {domain}. Run it through a browsing agent of your choice and write a short log of every point where it stalls or guesses. For each, classify it as a design fix, a markup fix or something you would deliberately leave blocked.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Hold a 45-minute conversation with your front-end and QA counterparts: who owns agent-completability today? Write a one-page proposal for where the check sits in your review ritual and what blocks a release.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo recommending whether {focus} should block, tolerate or actively support AI browsing agents. Name one trade-off on fraud or support load and one on reach, and commit to a recommendation.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="mcp">
+    <h5 class="category-label">MCP</h5>
+<article class="entry"
+         data-id="2026-10-30-google-connected-apps"
+         data-category="mcp"
+         data-published="2026-10-29"
+         data-tags="mcp,google,gemini,integrations,distribution">
+  <div class="head">
+    <h6 class="headline">Google opens a Connected Apps Platform preview built on MCP and AppFunctions</h6>
+    <span class="badge mcp">MCP</span>
+  </div>
+  <p class="meta"><time datetime="2026-10-29">Published October 29, 2026</time></p>
+  <p class="summary">Google&#x27;s Connected Apps Platform preview lets developers register, test and submit integrations that surface in Search, Gemini or both. The two routes are a cloud-hosted MCP server or Android AppFunctions, with access opening in phases. Documentation is at developers.google.com/connected-apps.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Your product&#x27;s capabilities may soon be invoked from inside Gemini or Search with no screen of yours in the loop. Deciding what to expose, and how it renders elsewhere, is a design decision.</p>
+  <p class="source"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/" target="_blank" rel="noopener">Source — Google blog</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You will design capabilities and their response shapes, not only screens: what a Gemini card shows when your app answers a query is now your problem.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team needs a shared inventory of actions that can be called without your UI, and a review step for how each one reads out of context.</p>
+      <p class="impact-variant" data-variant="strategist">Planning moves from &quot;which screens&quot; to &quot;which actions and in which hosts&quot;, with design owning the quality bar for the latter.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs have not touched MCP; those who have are prototyping tool descriptions as copy, since the model reads them like UX writing.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are being asked by engineering to approve tool names and descriptions, often without a framework for judging them.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are weighing platform dependence: showing up in Gemini is reach, but also cedes the front door to Google.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Calling it a new way of thinking is justified: your product is partly consumed through someone else&#x27;s interface, so a screen-first mindset undersells the work.</p>
+      <p class="impact-variant" data-variant="design-lead">The frame changes for leads too: your design system stops at the edge of your app, but your brand now appears outside it.</p>
+      <p class="impact-variant" data-variant="strategist">Strategically this is structural. Distribution shifts toward whichever assistant surface users stay in, as with app stores, only faster.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Define the smallest useful actions in {domain} and what a good, bad and ambiguous response looks like for each.</p>
+      <p class="impact-variant" data-variant="design-lead">Product specs need an &quot;invoked by an assistant&quot; section covering permissions, confirmation and failure states.</p>
+      <p class="impact-variant" data-variant="strategist">Decide which capabilities are differentiating enough to keep inside your own app and which to publish as commodity actions.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Pick three actions in {domain} that could be called by an assistant. Write the tool name, one-sentence description and the exact response a user would see in a Gemini card. Then critique your own description: where could a model misread it?</p>
+    <div class="action-meta">
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Map every place your product&#x27;s data or actions would appear outside your UI if exposed via MCP. Bring the map to an engineer and ask which actions are safe to call without confirmation; record the answers.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo on which capabilities of {focus} you would publish through Connected Apps and which you would withhold. For each, state what you gain in reach and what you give up in customer relationship.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="coding-agents">
+    <h5 class="category-label">Coding agents</h5>
+<article class="entry"
+         data-id="2026-10-30-copilot-fusion-octoverse"
+         data-category="coding-agents"
+         data-published="2026-10-29"
+         data-tags="github,copilot,coding-agents,pull-requests,engineering">
+  <div class="head">
+    <h6 class="headline">GitHub says agents originated over 40% of pull requests in September; ships Copilot Fusion routing</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-10-29">Published October 29, 2026</time></p>
+  <p class="summary">GitHub launched Copilot Fusion, a model-routing system for coding agents, and Copilot code review Max. Its Octoverse report says agents originated more than 40% of pull requests in September, up from 17% in March. Enterprise access moves to an AI-credit model. The percentages are GitHub&#x27;s own and depend on how it counts agent-originated work.</p>
+  <p class="why"><strong>Why this matters for you:</strong> If a growing share of code reaches review through agents, the specs, design tokens and acceptance criteria you hand over are what shapes the result. Design review moves upstream.</p>
+  <p class="source"><a href="https://thenextweb.com/news/github-universe-copilot-fusion-octoverse-agents" target="_blank" rel="noopener">Source — The Next Web</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Your design spec is increasingly read by an agent first. Write acceptance criteria concrete enough that a pull request can be checked against them.</p>
+      <p class="impact-variant" data-variant="design-lead">Add a design check to the loop that reviews agent-authored pull requests; otherwise visual drift ships unnoticed.</p>
+      <p class="impact-variant" data-variant="strategist">Plan for engineering throughput outrunning design review capacity, and decide where design must still sign off.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs who can read a diff and leave a precise review comment are gaining influence over what ships.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are experimenting with design tokens and component docs written as agent-readable instructions.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are noticing that cost shifts from headcount to credits, and asking what design capacity should be funded the same way.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">It reshapes the craft: the unit of delivery is a reviewed pull request, and your skill is specifying and judging, not only drawing.</p>
+      <p class="impact-variant" data-variant="design-lead">For leads, review rituals have to be redesigned around volume rather than around a few hand-built changes.</p>
+      <p class="impact-variant" data-variant="strategist">The statistic will vary by definition, but the direction is clear enough to plan around.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Smaller changes ship faster, so experiments in {focus} get cheaper and the bottleneck becomes deciding what to test.</p>
+      <p class="impact-variant" data-variant="design-lead">Specs become the product&#x27;s control surface; vague ones produce confident but wrong implementations.</p>
+      <p class="impact-variant" data-variant="strategist">Capacity planning must treat credits and review attention, not engineers, as the scarce inputs.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Take a recent small change in {domain} and write the acceptance criteria as if an agent will implement it. Then list three ways a plausible-but-wrong pull request could satisfy your wording, and rewrite the criteria to close them.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Sketch where design review sits when 40% of pull requests come from agents. Decide what gets auto-checked against tokens, what needs a human eye, and write the rule for each in one line.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo to your head of product arguing how much of the design budget should move toward spec and review capacity versus screen production in {focus}. Include one risk of getting it wrong.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="pm-tools">
+    <h5 class="category-label">PM tools</h5>
+<article class="entry"
+         data-id="2026-10-30-claude-smart-reports"
+         data-category="pm-tools"
+         data-published="2026-10-28"
+         data-tags="anthropic,claude-enterprise,cost,workflows,governance">
+  <div class="head">
+    <h6 class="headline">Anthropic adds &quot;smart reports&quot; and pooled budgets to Claude Enterprise</h6>
+    <span class="badge pm-tools">PM tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-10-28">Published October 28, 2026</time></p>
+  <p class="summary">Anthropic added cost visibility for Claude Enterprise. Smart reports analyse samples of transcripts, group work into workflows, and show spending, deliverables and friction, with pooled monthly group budgets alongside individual limits. Anthropic says the reports are not suitable for evaluating individual performance.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Your team&#x27;s AI usage is about to become legible to finance. How you describe design workflows, and what friction the reports surface, will shape what gets funded.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Expect your AI use to be summarised as workflows. Be ready to explain which of your sessions are exploration versus production.</p>
+      <p class="impact-variant" data-variant="design-lead">Pooled budgets mean your team shares a pot; decide which design uses deserve priority before the cap forces a rule.</p>
+      <p class="impact-variant" data-variant="strategist">Usage data gives you evidence about where AI helps design and where it creates rework, if you use it that way.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs do not know how their usage is categorised, and some will change habits once they learn a report exists.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are being asked to justify spend and mostly lack a vocabulary for design workflows.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are using these reports to compare functions, which can mislead when design value is not in the volume.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">It is a reshaping of the craft&#x27;s economics: tooling choices now come with a visible cost per deliverable.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads need to own the narrative of what design does with AI before the report writes it for them.</p>
+      <p class="impact-variant" data-variant="strategist">Visibility of spend will normalise across vendors; the lasting change is accountability for AI use.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Friction findings from real usage are a cheap source of tooling problems to design around in {domain}.</p>
+      <p class="impact-variant" data-variant="design-lead">Use pooled budgets and workflow groupings to decide which design tasks to standardise.</p>
+      <p class="impact-variant" data-variant="strategist">Cost per deliverable enters roadmap trade-offs; be cautious about reading usage as productivity, which Anthropic itself warns against for individuals.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">List the five AI sessions you ran this week on {domain} and label each as exploration, production or rework. Write one paragraph on which of them a transcript-sampling report would misjudge, and why.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Draft a half-page description of your team&#x27;s three main AI-assisted workflows in plain terms, with outputs and what counts as friction. This is what you hand finance before a report defines them for you.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,advocacy" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a memo arguing for how design should be measured in an AI-spend review of {focus}. Name two metrics you would reject because they reward volume, and one you would accept.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="industry">
+    <h5 class="category-label">Industry</h5>
+<article class="entry"
+         data-id="2026-10-30-mosseri-ai-backlash"
+         data-category="industry"
+         data-published="2026-10-29"
+         data-tags="instagram,backlash,creative,ai-slop,trust">
+  <div class="head">
+    <h6 class="headline">Instagram&#x27;s Mosseri expects AI backlash to grow, especially among creatives</h6>
+    <span class="badge industry">Industry</span>
+  </div>
+  <p class="meta"><time datetime="2026-10-29">Published October 29, 2026</time></p>
+  <p class="summary">Instagram head Adam Mosseri said he expects negativity toward AI to grow, particularly in creative industries. He questioned how Instagram ranks AI-made content and said &quot;AI slop&quot; is applied too freely as a label.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Whether people read your AI-assisted work as craft or slop depends on perceived intent and disclosure. That is a design judgement, and it affects how you present your own process.</p>
+  <p class="source"><a href="https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity" target="_blank" rel="noopener">Source — The Verge</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Decide in advance where AI output stays in the visible result and where it is only a thinking aid, and be able to say why.</p>
+      <p class="impact-variant" data-variant="design-lead">Set a team norm for disclosing AI use to clients and users, so individuals are not improvising under pressure.</p>
+      <p class="impact-variant" data-variant="strategist">Positioning matters: choosing where human authorship is a product promise is a strategic call, not just a style one.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs are split between hiding AI use and flaunting it; both are being tested in public.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are drafting informal rules, often after an incident with a client or a social post.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are quietly weighing brand risk against production savings.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The backlash is a reframe: quality is judged partly by perceived effort and honesty, which new tools do not remove.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads must manage morale and reputation together, since designers are part of the audience that dislikes slop.</p>
+      <p class="impact-variant" data-variant="strategist">Expect segmentation: some markets reward visible craft, others reward speed; the label &quot;slop&quot; will keep being contested.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Features that generate content for users need defaults that avoid the generic look, especially in {domain}.</p>
+      <p class="impact-variant" data-variant="design-lead">Teams should test how users perceive AI-made outputs, not just whether they can produce them.</p>
+      <p class="impact-variant" data-variant="strategist">Platform ranking and labelling decisions can change distribution overnight; plan for that exposure.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,differentiation" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">Take one AI-assisted deliverable from {domain}. Write what a sceptical viewer would see as slop, then name two specific edits only a person with taste would make. Make those edits or write why you would not.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="advocacy,cross-functional" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Run a 45-minute team conversation on when AI use should be disclosed. Produce a one-page draft rule with two examples that pass and two that fail.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Advocacy</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a memo on whether {focus} should position human authorship as a selling point. State the audience, the evidence you would need, and the cost if you are wrong.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-10-29">
   <h4 class="day">Thursday, October 29 <span class="day-date">— today's briefing</span></h4>
   <div class="category-group" data-category="tools">
     <h5 class="category-label">Tools</h5>
