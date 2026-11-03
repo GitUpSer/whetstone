@@ -1127,7 +1127,410 @@
 
   <section class="month-section" data-month="2026-11">
     <h3 class="month">November 2026</h3>
-<section class="day-section" id="today" data-date="2026-11-02">
+<section class="day-section" id="today" data-date="2026-11-03">
+  <h4 class="day">Tuesday, November 3 <span class="day-date">&mdash; today's briefing</span></h4>
+  <div class="category-group" data-category="generative-ui">
+    <h5 class="category-label">Generative UI</h5>
+<article class="entry"
+         data-id="2026-11-03-qwen-generated-ui"
+         data-category="generative-ui"
+         data-published="2026-11-01"
+         data-tags="qwen,generative-ui,coding-agents,defaults">
+  <div class="head">
+    <h6 class="headline">Qwen Code 0.26.5 turns Generated UI on by default</h6>
+    <span class="badge generative-ui">Generative UI</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-01">Published November 1, 2026</time></p>
+  <p class="summary">Alibaba&#x27;s open-source Qwen Code agent shipped v0.26.5 on November 1 with &quot;Generated UI&quot; enabled by default, plus an experimental one-command Helm deployment for a managed agent. The release notes are terse and do not describe what the generated UI looks like or how it is constrained. It is a small release, but it moves generated interfaces from an opt-in experiment to what every new user sees first.</p>
+  <p class="why"><strong>Why this matters for you:</strong> When a coding agent renders interface for the user by default, someone has to decide what that interface is allowed to look like; that is a design decision currently being made by release-note toggles.</p>
+  <p class="source"><a href="https://github.com/QwenLM/qwen-code/releases/tag/v0.26.5" target="_blank" rel="noopener">Source &mdash; Qwen Code release notes (v0.26.5, via Munder Difflin)</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You will increasingly meet interfaces you did not draw, produced by an agent inside {focus} flows, so your job includes specifying the constraints that keep them usable.</p>
+      <p class="impact-variant" data-variant="design-lead">Ask your team which agent-rendered surfaces already ship in your product or tooling, because defaults like this reach users before anyone reviews them.</p>
+      <p class="impact-variant" data-variant="strategist">A default-on generated UI means the first impression of an agent product is set by whoever configures the toggle; make sure that is a deliberate owner, not a release engineer.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most designers have not touched generated UI in production; they treat it as a demo category, so the defaults are being set by engineers.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads mostly learn about these features from developers after they ship, not from a design review.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are tracking generative UI as a roadmap line item but few have a position on who governs its output.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The craft shifts from drawing every state to authoring the rules and component vocabulary an agent can compose in {domain}.</p>
+      <p class="impact-variant" data-variant="design-lead">It reshapes review: you critique a distribution of possible screens, not one comp, which changes how you run design critique.</p>
+      <p class="impact-variant" data-variant="strategist">It reshapes the unit of design work from screens to constraints, which is a staffing and tooling question, not a one-off feature.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Product thinking moves from &quot;what is the screen&quot; to &quot;what is the envelope of acceptable screens,&quot; and you need to be able to state that envelope.</p>
+      <p class="impact-variant" data-variant="design-lead">Roadmaps that assume every UI is pre-designed will need a category for interfaces that are assembled at runtime.</p>
+      <p class="impact-variant" data-variant="strategist">Treat runtime-assembled UI as a product-risk surface: accessibility, brand and error states all need an owner before the default flips for customers.</p>
+    </div>
+
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="40">
+    <h6 class="action-title">Try this &mdash; 40 min</h6>
+    <p class="action-text">Open Qwen Code 0.26.5 (or any agent with a generated-UI mode) and ask for a UI for a {domain} task. Write a one-page critique: three things it got wrong about hierarchy, state or accessibility, and the one constraint you would add to stop each. The critique is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~40 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">List every place on your team where an agent can render UI the user sees without a design review. For each, write who owns its constraints today. Bring the list to your next team sync and agree on one owner per surface.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">Write a one-paragraph memo for your product lead: should {focus} work allow default-on generated UI? State the trade-off between speed and brand/accessibility risk, and recommend one guardrail that must exist before it ships.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+</article>
+  </div>
+  <div class="category-group" data-category="coding-agents">
+    <h5 class="category-label">Coding agents</h5>
+<article class="entry"
+         data-id="2026-11-03-postman-agent-hooks"
+         data-category="coding-agents"
+         data-published="2026-11-03"
+         data-tags="postman,claude-code,codex,hooks,trust">
+  <div class="head">
+    <h6 class="headline">Report: Postman desktop writes hooks into Claude Code and Codex configs without asking</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-03">Published November 3, 2026</time></p>
+  <p class="summary">A GitHub issue (#14370) on Postman&#x27;s support repo alleges that Postman desktop 12.33.4 edits ~/.claude/settings.json and ~/.codex/config.toml, adds a startup hook that routes API tasks through a postman:api-engineer skill, and writes its own hook trust approval. The claim comes from one issue report and the thread has drawn heavy attention on Hacker News; Postman has not confirmed the behaviour in what we could read, so treat it as an allegation. It is separate from the Claude Code extension trojan covered yesterday.</p>
+  <p class="why"><strong>Why this matters for you:</strong> If ordinary desktop apps can install skills and hooks into your agent configs, then your agent setup is part of your attack and brand surface, and a designer who prototypes with these tools should know what is in there.</p>
+  <p class="source"><a href="https://github.com/postmanlabs/postman-app-support/issues/14370" target="_blank" rel="noopener">Source &mdash; GitHub issue #14370, postmanlabs/postman-app-support (unverified user report)</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Before your next prototyping session, audit ~/.claude and ~/.codex so you know which skills and hooks are steering the agent that touches {focus} files.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team&#x27;s agent configs are shared infrastructure; one unreviewed hook can quietly change how everyone&#x27;s agent behaves.</p>
+      <p class="impact-variant" data-variant="strategist">Agent config is becoming a vendor-contested surface, and your organisation needs a policy before vendors fill the vacuum.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most designers who use coding agents never open the config directory and assume the setup is what they installed.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads who let designers run agents locally mostly have no inventory of what skills or hooks those agents load.</p>
+      <p class="impact-variant" data-variant="strategist">Few strategy owners have an agent-configuration policy; security reviews cover apps, not the skills those apps install into other apps.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Working with agents now includes hygiene of the agent&#x27;s own environment, much like keeping a design library clean.</p>
+      <p class="impact-variant" data-variant="design-lead">You will add an &quot;agent environment&quot; check to onboarding for designers who prototype with coding agents.</p>
+      <p class="impact-variant" data-variant="strategist">It reshapes procurement: vendors that touch agent configs need review the way browser extensions do, even for design-adjacent tools.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Product trust now depends on what your tools silently change on a developer machine, so treat integrations as product decisions, not conveniences.</p>
+      <p class="impact-variant" data-variant="design-lead">If you ship a desktop app or plugin that integrates with agents, design the consent moment explicitly; this report shows what the absence of one looks like.</p>
+      <p class="impact-variant" data-variant="strategist">Consent for agent integrations is a product design problem with brand consequences; decide your standard before you ship an integration of your own.</p>
+    </div>
+
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">Inspect your ~/.claude and ~/.codex directories. Write down each skill, hook and setting you did not knowingly add, and decide keep or remove for each with one sentence of reasoning.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Ask a security or platform engineer one specific question: who approves skills and hooks that appear in designers&#x27; agent configs? Write their answer and a one-paragraph proposal for a lightweight review step.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="advocacy,case-making" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">Draft the consent flow you would require for any app that installs a skill into a user&#x27;s coding agent: wording, what is shown, what can be reversed. Put it in a one-page standard you could hand to a partner team.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Advocacy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+</article>
+  </div>
+  <div class="category-group" data-category="tools">
+    <h5 class="category-label">Tools</h5>
+<article class="entry"
+         data-id="2026-11-03-apple-siri-app-intents"
+         data-category="tools"
+         data-published="2026-11-03"
+         data-tags="apple,siri,app-intents,agents,ios">
+  <div class="head">
+    <h6 class="headline">Apple opens Siri AI to all developers through App Intents in the 27.3 betas</h6>
+    <span class="badge tools">Tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-03">Published November 3, 2026</time></p>
+  <p class="summary">Apple announced a developer preview in the iOS, iPadOS, macOS and visionOS 27.3 betas that lets any app expose content and actions to Siri through App Intents, including personal context, onscreen awareness, custom actions and multi-action Skills. Languages at launch are English, French, Japanese, Korean, Portuguese and Spanish, and App Store submissions open in spring 2027. Capabilities beyond the announcement are not independently tested yet.</p>
+  <p class="why"><strong>Why this matters for you:</strong> If Siri performs actions in your app without opening it, your interface is no longer the only place your product is experienced, and what you expose as an intent becomes a design decision.</p>
+  <p class="source"><a href="https://developer.apple.com/news/?id=gdk2umrf" target="_blank" rel="noopener">Source &mdash; Apple Developer News</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Your design work gains a second surface: the set of actions and answers your product exposes to Siri in {focus} flows, with no screen attached.</p>
+      <p class="impact-variant" data-variant="design-lead">Plan a design review for the intents your app exposes, because they define behaviour users will meet by voice and from other apps first.</p>
+      <p class="impact-variant" data-variant="strategist">Intents are Apple&#x27;s distribution channel for agent access, so what your product offers there is a positioning decision.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most iOS designers treat App Intents as an engineering add-on for shortcuts, not as a designed experience.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads on Apple platforms are scoping this as an engineering ticket and have not yet assigned a design owner.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are reading the announcement for competitive implications; few have mapped which of their own actions belong behind an intent.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The frame of &quot;design the screen&quot; is wrong when the user&#x27;s request is fulfilled across apps with no UI; you design capabilities and their confirmation moments.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team needs a vocabulary for headless experiences: what is confirmed, what is previewed, what happens on failure.</p>
+      <p class="impact-variant" data-variant="strategist">Products compete on what an assistant can do through them, which reframes the roadmap around actions and data, not just screens.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Product thinking starts from the task the user states to an assistant and works back to what your app must expose, rather than from navigation.</p>
+      <p class="impact-variant" data-variant="design-lead">Define the five actions users would most want done without opening the app, and design their confirmation and error states first.</p>
+      <p class="impact-variant" data-variant="strategist">Decide which actions you want assistants to complete for users and which you want to keep inside your own UI for brand or revenue reasons.</p>
+    </div>
+
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Pick one {domain} product. List five actions a user might ask Siri to do. For each, write the confirmation message, what you show if it fails, and what data leaves the app.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Run a 45-minute session with an iOS engineer to choose which three intents your app should expose first. Produce a one-page spec with owner, confirmation behaviour and a review date.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="40">
+    <h6 class="action-title">Try this &mdash; 40 min</h6>
+    <p class="action-text">Write a memo of one page: which of our actions become commodity once any assistant can trigger them, and which one thing should stay inside our own UI because only a designed experience delivers it?</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~40 min</span>
+    </div>
+  </section>
+
+</article>
+  </div>
+  <div class="category-group" data-category="industry">
+    <h5 class="category-label">Industry</h5>
+<article class="entry"
+         data-id="2026-11-03-shopify-agent-traffic"
+         data-category="industry"
+         data-published="2026-11-03"
+         data-tags="shopify,agentic-commerce,meta,shop-pay,metrics">
+  <div class="head">
+    <h6 class="headline">Shopify says AI-attributed orders are up 3.3x and Meta&#x27;s Muse agent can buy through Shop Pay</h6>
+    <span class="badge industry">Industry</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-03">Published November 3, 2026</time></p>
+  <p class="summary">In its Q3 report Shopify cited revenue of $3.74B (up 32%) and GMV of $119.15B, slightly below the $120.03B estimate, and said AI-attributed traffic grew 2.6x and AI-attributed orders 3.3x. It also disclosed a live integration that lets Meta&#x27;s consumer agent Muse browse and complete purchases via Shop Pay. The attribution method is Shopify&#x27;s own and not independently audited, and AI-attributed orders start from a small base.</p>
+  <p class="why"><strong>Why this matters for you:</strong> If a growing share of purchases is completed by an agent, the product page is a data source as much as a layout, and conversion work shifts toward what an agent can read and trust.</p>
+  <p class="source"><a href="https://www.cnbc.com/2026/11/03/shopify-q3-2026-earnings-gmv.html" target="_blank" rel="noopener">Source &mdash; CNBC (Shopify Q3 2026 earnings)</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Product pages in {focus} work have a new reader: an agent that parses structure, specs and policies, so clear information hierarchy matters beyond human eyes.</p>
+      <p class="impact-variant" data-variant="design-lead">Audit whether your team&#x27;s product and checkout patterns are legible as structured data, not just visually clear.</p>
+      <p class="impact-variant" data-variant="strategist">Agent-mediated checkout puts a gatekeeper between you and the customer; decide where you need to remain visible to the user.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most commerce designers still optimise funnels for humans clicking; agent referrals show up as a traffic source they have not designed for.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads in retail are mostly watching the metric, but few have a test plan for how an agent-driven session differs from a human one.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are being asked about agentic commerce by boards, usually without data on their own agent-attributed share.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The work remains conversion and trust design, but a share of the audience is software that values structured, honest information over persuasion.</p>
+      <p class="impact-variant" data-variant="design-lead">You will need a view on which parts of the experience an agent skips, and what is lost when it does.</p>
+      <p class="impact-variant" data-variant="strategist">It reshapes where brand lives: in data quality, policies and returns clarity as much as visual identity.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Product thinking should ask what happens to brand, upsell and trust when the customer never sees the page the agent visited.</p>
+      <p class="impact-variant" data-variant="design-lead">Track agent-referred sessions separately and define what a good outcome looks like for them before optimising anything.</p>
+      <p class="impact-variant" data-variant="strategist">Position for a world where an agent compares you on price and policies; decide what you compete on when visual persuasion is bypassed.</p>
+    </div>
+
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,systems-thinking" data-time="40">
+    <h6 class="action-title">Try this &mdash; 40 min</h6>
+    <p class="action-text">Take one {domain} product page and read it as an agent would: strip it to text and structured fields. Write what an agent could not learn from it and what you would add or fix.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~40 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Ask your analytics lead how agent-referred sessions are tagged today. Draft a three-metric dashboard spec for agent-referred versus human sessions and agree who owns it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a one-page memo: if 10 percent of our orders were completed by an agent, what would we lose that a human page delivered, and what is the one thing we should build so the agent recommends us anyway?</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+</article>
+  </div>
+  <div class="category-group" data-category="research">
+    <h5 class="category-label">Research</h5>
+<article class="entry"
+         data-id="2026-11-03-anthropic-flashprove"
+         data-category="research"
+         data-published="2026-11-02"
+         data-tags="anthropic,provenance,zksnark,verification,trust">
+  <div class="head">
+    <h6 class="headline">Anthropic publishes FlashProve, a proof that a reply came from a specific model</h6>
+    <span class="badge research">Research</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-02">Published November 2, 2026</time></p>
+  <p class="summary">With EPFL and MIT, Anthropic released open-source research on provable inference: a zkSNARK system that shows a response came from a committed set of model weights without revealing them. On a 400B-parameter mixture-of-experts model the prover runs at about 110 tokens per second on one GPU and produces roughly 19 MB of proof per 1,024-token request, at about 70 to 95 times the GPU cost of running the model. The overhead makes it impractical for everyday use today; the numbers are the authors&#x27; own.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Showing users which model said what, and proving it, could become a product feature, so designers will be asked how provenance should look when it is verifiable rather than merely claimed.</p>
+  <p class="source"><a href="https://www.anthropic.com/research/provable-inference" target="_blank" rel="noopener">Source &mdash; Anthropic Research</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You may soon design provenance indicators that reflect a verifiable fact, not a label, so work out now what you would show in {focus} contexts and what you would hide.</p>
+      <p class="impact-variant" data-variant="design-lead">Provenance will need patterns your team has not drawn yet: verified, unverified and unverifiable states with honest wording.</p>
+      <p class="impact-variant" data-variant="strategist">Verifiable model identity could become a differentiator in regulated contexts, so decide whether it belongs in your trust story.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most designers treat &quot;powered by&quot; badges as decoration, because nothing behind them can be checked.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads working on AI features mostly show model attribution as a footer line and have no state design for failed or missing provenance.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists in regulated industries are asking whether provenance claims will be required; few have costed the compute.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">At 70 to 95 times the compute, this will not change your daily craft this year; file it and watch for cost curves.</p>
+      <p class="impact-variant" data-variant="design-lead">Keep a note of it as a future state in your trust patterns, but do not design for it yet.</p>
+      <p class="impact-variant" data-variant="strategist">It is a research milestone with unusable economics today; revisit when the overhead falls by an order of magnitude.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Product thinking should note that verification is moving from policy to mathematics, but only for high-stakes cases while costs stay this high.</p>
+      <p class="impact-variant" data-variant="design-lead">Identify which of your AI outputs would justify a proof if it were cheap, and write that down as a long-range requirement.</p>
+      <p class="impact-variant" data-variant="strategist">Track it as an option on trust differentiation, and avoid committing roadmap time until a cheaper variant exists.</p>
+    </div>
+
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,case-making" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">List three AI outputs in a {domain} product where proof of model identity would change user behaviour. For each, write whether the user would care, and why a plain label would or would not suffice.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="advocacy,design-ops" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">Draft the three provenance states (verified, unverified, unknown) with the exact wording your team would use. Share them with a legal or trust partner and capture their one objection.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Advocacy</span>
+      <span class="skill-chip">Design ops</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="30">
+    <h6 class="action-title">Try this &mdash; 30 min</h6>
+    <p class="action-text">Write a short memo: at 70x compute cost, what is the highest-value use of verifiable model identity for us, and what price point would make it viable? End with a clear watch-or-ignore recommendation.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+</article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-11-02">
   <h4 class="day">Monday, November 2 <span class="day-date">&mdash; today's briefing</span></h4>
   <div class="category-group" data-category="design-tools">
     <h5 class="category-label">Design tools</h5>
