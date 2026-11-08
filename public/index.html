@@ -1127,7 +1127,291 @@
 
   <section class="month-section" data-month="2026-11">
     <h3 class="month">November 2026</h3>
-<section class="day-section" id="today" data-date="2026-11-07">
+<section class="day-section" id="today" data-date="2026-11-08">
+  <h4 class="day">Sunday, November 8 <span class="day-date">&mdash; today's briefing</span></h4>
+  <div class="category-group" data-category="coding-agents">
+    <h5 class="category-label">Coding agents</h5>
+<article class="entry"
+         data-id="2026-11-08-claude-code-2-1-319"
+         data-category="coding-agents"
+         data-published="2026-11-06"
+         data-tags="claude-code,permissions,auto-mode,mcp,security">
+  <div class="head">
+    <h6 class="headline">Claude Code 2.1.319 tightens auto mode, adds deny-instead-of-prompt and backgrounds MCP tasks</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-06">Published November 6, 2026</time></p>
+  <p class="summary">Anthropic shipped Claude Code 2.1.319 on November 6. Auto mode no longer falls back to the built-in classifier when telemetry or feature flags are off (including behind an LLM gateway); calls the server cannot check are now asked about or denied. A new permissions.denyInsteadOfPrompting setting denies would-be prompts and lets the turn continue, and MCP tasks now run in the background in the terminal. The release notes also list fixes for a sed command that skipped the permission check and for Bash deny rules that missed quoted-word commands.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Designers who run agents against their own repos or design-system files are now choosing a permission posture, not just a prompt. That posture decides whether an agent can touch tokens and components unattended.</p>
+  <p class="source"><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.319" target="_blank" rel="noopener">Source &mdash; Anthropic Claude Code release notes (via aggregator summary)</a></p>
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Agents that edit your components or tokens now ask less by default only if you configure them to. Decide per repo which files an agent may change without you watching.</p>
+      <p class="impact-variant" data-variant="design-lead">Permission settings are becoming a team convention like a linting config. Someone on your team needs to own what agents may do unattended in the design-system repo.</p>
+      <p class="impact-variant" data-variant="strategist">Autonomy levels are a governance choice that sits between design quality and security. Treat them as a policy decision, not a developer preference.</p>
+    </div>
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Designers using Claude Code mostly accept the defaults and approve prompts one by one, which trains them to click through. Few have written down what they would never allow.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads I would expect are letting each person pick settings individually, which means the team has no shared definition of a safe agent run.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists see agent permissions mostly through security reviews, rarely through a product or design lens, so the trade-off between speed and oversight gets decided without design in the room.</p>
+    </div>
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The tag fits because permissions are a new layer of the work, but the underlying task of directing and reviewing agent output is the same one designers already do with {focus} work.</p>
+      <p class="impact-variant" data-variant="design-lead">Reviewing what an agent was allowed to do becomes part of design review for {domain}, which reshapes the ritual without replacing it.</p>
+      <p class="impact-variant" data-variant="strategist">This reshapes how oversight is built into agentic workflows. It is not a new product strategy, but it does determine how safely teams can move fast.</p>
+    </div>
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Prototypes built by agents run unattended will behave differently from ones you watched. Know which kind of prototype you are showing before you call it validated.</p>
+      <p class="impact-variant" data-variant="design-lead">Ask what the team verified by hand versus what an agent produced under auto mode before a prototype goes into a review.</p>
+      <p class="impact-variant" data-variant="strategist">Shipping speed with agents depends on trust boundaries. Plan the product process around where humans must stay in the loop, not where the tool happens to prompt.</p>
+    </div>
+  </section>
+  <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Open a repo or design-system folder you work in and write the permission rules you would give a coding agent for {focus} work: three things it may do unattended, three it must always ask about, three it must never do. For each, write one sentence on the worst realistic failure. The rule list is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Run a 20-minute conversation with one engineer on your team about agent permissions in the shared {domain} repo. Bring a one-page draft of who may run agents unattended and on which files, and record what they change. Rewrite the page afterwards and note the disagreements.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Write a one-paragraph memo for {domain} leadership recommending a default autonomy level for agents touching design and product code. Name the cost of too many prompts, the cost of too few, your recommendation, and the one incident that would make you reverse it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+<article class="entry"
+         data-id="2026-11-08-microsoft-apm"
+         data-category="coding-agents"
+         data-published="2026-11-07"
+         data-tags="microsoft,apm,agent-skills,mcp,supply-chain">
+  <div class="head">
+    <h6 class="headline">Microsoft open-sources APM, a package manager for agent skills, prompts and MCP servers</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-07">Published November 7, 2026</time></p>
+  <p class="summary">Microsoft released Agent Package Manager (APM) under the MIT licence on November 7. Skills, prompts, instructions, plugins and MCP servers are declared in a single apm.yml and installed with apm install, then deployed to nine agent harnesses including GitHub Copilot, Claude Code and Cursor. A lockfile pins versions and content hashes, installs scan for hidden Unicode, and undeclared transitive MCP servers are blocked by default. Details come from the project's own description; independent testing is thin so far.</p>
+  <p class="why"><strong>Why this matters for you:</strong> If design systems and brand rules are going to reach agents as skills, someone has to version them like code. APM is an early attempt at that plumbing, and design teams are the ones with the knowledge to put in it.</p>
+  <p class="source"><a href="https://github.com/microsoft/apm" target="_blank" rel="noopener">Source &mdash; Microsoft APM on GitHub</a></p>
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Your craft knowledge, such as spacing rules, tone and component do's and don'ts, can be packaged as a dependency that agents install. Writing it clearly becomes a design deliverable.</p>
+      <p class="impact-variant" data-variant="design-lead">A shared, versioned design-system skill means every agent on your team starts from the same rules. You then own changelogs and breaking changes for guidance, not just components.</p>
+      <p class="impact-variant" data-variant="strategist">Design standards turn into an installable asset. Whoever publishes the canonical package decides what every agent in the org believes about the brand.</p>
+    </div>
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most designers paste guidelines into prompts or keep a personal rules file. Almost nobody versions or shares them across a team.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads I would expect are keeping guideline files in scattered repos and wikis, so agents get inconsistent instructions depending on who set them up.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are mostly seeing this as an engineering supply-chain story, not noticing that brand and design rules will travel the same route.</p>
+    </div>
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The frame changes from documenting a system for people to publishing it for agents as well. That is a different audience with different failure modes in {focus} work.</p>
+      <p class="impact-variant" data-variant="design-lead">Design systems get a second consumer. Teams that treat the agent-facing package as a first-class output will lead, because the human-facing docs alone no longer define the system.</p>
+      <p class="impact-variant" data-variant="strategist">Governance of design intent becomes a dependency-management problem, with trust, provenance and update policy. That is a different frame from brand guidelines in a PDF.</p>
+    </div>
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Products will increasingly ship with agent-readable design rules next to their code. Plan where in your process those rules get written and reviewed.</p>
+      <p class="impact-variant" data-variant="design-lead">Add 'update the agent skill' to the definition of done when a component or pattern changes in {domain}.</p>
+      <p class="impact-variant" data-variant="strategist">Supply-chain security applies to design guidance too. A poisoned skill can quietly steer an agent's output, so provenance belongs in product risk planning.</p>
+    </div>
+  </section>
+  <section class="action" data-variant="ic-designer" data-skills="craft,systems-thinking" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Take five rules from your own {focus} practice (spacing, tone, empty states, error copy, whatever you actually enforce) and write them as an agent skill: plain instructions with one good and one bad example each. Run an agent against a small task with and without it and write down where the skill still failed.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60">
+    <h6 class="action-title">Try this &mdash; 60 min</h6>
+    <p class="action-text">Map who writes, reviews and publishes agent-facing design guidance on your team today, and draw where it breaks when a component changes. Propose an owner, a review step and a versioning rule, and write them as a half-page ritual for {domain}.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a short memo arguing whether {domain} should treat agent-facing design rules as a governed product with an owner and release process. Include the supply-chain risk, one cost, and a recommendation on who owns it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="generative-ui">
+    <h5 class="category-label">Generative UI</h5>
+<article class="entry"
+         data-id="2026-11-08-lobehub-mcp-apps"
+         data-category="generative-ui"
+         data-published="2026-11-06"
+         data-tags="lobehub,mcp-apps,generative-ui,chat,interactive">
+  <div class="head">
+    <h6 class="headline">LobeHub 2.3.2 renders interactive MCP Apps views inside the chat</h6>
+    <span class="badge generative-ui">Generative UI</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-06">Published November 6, 2026</time></p>
+  <p class="summary">LobeHub shipped version 2.3.2 on November 6, adding support for rendering interactive views from MCP Apps directly in the conversation, plus GitHub Copilot CLI as an additional agent type. It is a small open-source release rather than a major vendor move, but it is one more client treating a server-supplied interface as something that appears inline in a chat.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Server-defined UI inside a chat means the screen your user sees may be designed by a tool author, not by you. The design question moves to what you constrain and what you let through.</p>
+  <p class="source"><a href="https://github.com/lobehub/lobehub/releases/tag/v2.3.2" target="_blank" rel="noopener">Source &mdash; LobeHub v2.3.2 release notes</a></p>
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You may be designing components that a third-party tool renders inside someone else's chat. Think about how they behave at narrow widths, in dark mode and with no surrounding context.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's patterns will be embedded in host apps you do not control. Decide what an embedded view must guarantee and what you are willing to let the host restyle.</p>
+      <p class="impact-variant" data-variant="strategist">Interfaces become distributable across clients. The product surface is partly whichever chat a customer happens to use.</p>
+    </div>
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most designers have not built an MCP App view yet and still think of chat output as text plus markdown. Early adopters are mostly engineers testing in open-source clients.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads I would expect are waiting for a major client to normalise this before assigning anyone to it, which leaves the first patterns to engineers.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are tracking MCP Apps as a distribution channel question, not yet as a design one.</p>
+    </div>
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">It reshapes interface work rather than replacing it: you still design views, but the container, theme and host behaviour are someone else's.</p>
+      <p class="impact-variant" data-variant="design-lead">The craft shifts toward designing for unknown hosts, closer to email or embedded widgets than to a full app.</p>
+      <p class="impact-variant" data-variant="strategist">This extends where product UI can live, which changes distribution more than it changes what good UI is.</p>
+    </div>
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Treat the chat client as a platform with its own constraints, then decide which flows in {focus} are worth surfacing there at all.</p>
+      <p class="impact-variant" data-variant="design-lead">Add host-variance testing to your review checklist for any embedded view.</p>
+      <p class="impact-variant" data-variant="strategist">Ask whether your product's value survives being used through someone else's chat surface, and who owns the relationship if so.</p>
+    </div>
+  </section>
+  <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Pick one task in {focus} that could appear as an interactive view inside a chat. Sketch the view at 320px and 640px with no surrounding context, then write a critique of what breaks when the host changes colours, fonts and spacing.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">List every place your team's UI could now appear inside a host you do not control. For each, write what must stay fixed, what the host may change and who on your team checks it. Share the list with one engineer and capture their objections.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a half-page note for {domain} on whether showing up inside third-party chat clients helps or erodes your position. Name what you gain in reach, what you lose in control, and one product flow you would never embed.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="models">
+    <h5 class="category-label">Models</h5>
+<article class="entry"
+         data-id="2026-11-08-meta-muse-voice-avatars"
+         data-category="models"
+         data-published="2026-11-06"
+         data-tags="meta,muse,voice,avatar,agents">
+  <div class="head">
+    <h6 class="headline">Meta adds real-time voice and animated avatars to Muse for US users</h6>
+    <span class="badge models">Models</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-06">Published November 6, 2026</time></p>
+  <p class="summary">Meta's Muse assistant now supports real-time voice conversation with an animated avatar for US users on mobile, web and Mac, according to secondary reports dated November 6 and 7. The avatar model streams video with low latency. Meta also added Spaces for organising ongoing projects, with connected apps keeping background trackers, and rolled out models retrained from its Muse Wonder series with claimed memory gains. Those benchmark figures are Meta's own and unverified.</p>
+  <p class="why"><strong>Why this matters for you:</strong> A face and a voice change what users expect from an assistant's personality, timing and mistakes. Designing for conversation and presence is becoming part of product design, not only content design.</p>
+  <p class="source"><a href="https://www.techbooky.com/meta-adds-voice-and-expressive-avatars-to-muse-ai-agent" target="_blank" rel="noopener">Source &mdash; TechBooky (reporting Meta Muse update)</a></p>
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Voice with an avatar adds timing, interruption and facial expression to your toolkit. Design what the agent does while it thinks, not just what it says.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team will need conversation and presence guidelines, including when the avatar should not smile. Decide who owns that voice before several features invent their own.</p>
+      <p class="impact-variant" data-variant="strategist">Presence is a brand decision. An avatar makes the assistant a character that customers will judge and attach to.</p>
+    </div>
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most designers have worked on text chat and a few on voice. Expression and latency design for avatars is new for almost everyone.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads I would expect are borrowing from game and animation practice because product design has no established patterns here.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are watching whether users accept avatars from large consumer brands before committing {domain} to anything similar.</p>
+    </div>
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">It reshapes interface work by adding a social layer to assistants, but it does not replace the core question of whether the agent is useful.</p>
+      <p class="impact-variant" data-variant="design-lead">The craft expands into character and conversational timing, adjacent to existing content design.</p>
+      <p class="impact-variant" data-variant="strategist">It reshapes expectations for assistant products, though adoption outside Meta's consumer surface is unproven.</p>
+    </div>
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Test whether an avatar helps or distracts for {focus} tasks. Expressive faces can make errors feel more personal.</p>
+      <p class="impact-variant" data-variant="design-lead">Add emotional-register review to your agent QA, because a confident-looking avatar will make wrong answers more persuasive.</p>
+      <p class="impact-variant" data-variant="strategist">Weigh the trust gain against the risk that a human-like face overstates the product's capability.</p>
+    </div>
+  </section>
+  <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Watch or use a voice assistant for ten minutes and log every moment where tone, timing or expression misled you about its confidence. Write a one-page critique naming three rules you would set for a {focus} assistant.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Draft a short presence guideline for an assistant in {domain}: when it speaks, when it stays quiet, how it shows uncertainty. Review it with a content designer and an engineer and note where they disagree.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this &mdash; 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo recommending whether {domain} should give its assistant a face and voice. Include the trust risk, the user group most likely to benefit, and the evidence that would change your mind.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-11-07">
   <h4 class="day">Saturday, November 7 <span class="day-date">&mdash; today's briefing</span></h4>
   <div class="category-group" data-category="image-gen">
     <h5 class="category-label">Image gen</h5>
