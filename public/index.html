@@ -1625,6 +1625,240 @@
     </div>
   </section>
 </article>
+<article class="entry"
+         data-id="2026-11-11-new-york-raise-act"
+         data-category="policy"
+         data-published="2026-11-10"
+         data-tags="new-york,raise-act,regulation,frontier-models,transparency,incident-reporting">
+  <div class="head">
+    <h6 class="headline">New York opens RAISE Act registration: frontier labs must register by January 1 and report critical incidents within 72 hours</h6>
+    <span class="badge policy">Policy</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-10">Published November 10, 2026</time></p>
+  <p class="summary">New York opened the registration portal for its RAISE Act on November 10. Frontier developers with more than $500 million in annual revenue — TechCrunch names OpenAI and Anthropic — must register with the new Office of Digital Innovation, Governance, Integrity, and Trust (DIGIT) by January 1, 2027, publish their safety frameworks, report critical safety incidents within 72 hours, and issue model transparency reports. Penalties run to $1 million per violation and $3 million for repeat violations. The state also launched a research centre at SUNY Binghamton to evaluate advanced systems. This sits alongside California's SB 53, in force since January 2026 with a 15-day incident window, so two states now run different clocks on the same labs.</p>
+  <p class="why"><strong>Why this matters for you:</strong> The models behind your AI features will have published, legally required safety frameworks and incident reports. "What did the vendor actually disclose about this model's limits" becomes a question you can answer with a primary source, and a constraint on what your product promises.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Published safety frameworks give you a primary source for what a model is and is not rated to do; read the relevant one before you design a {focus} flow that leans on the model's judgement.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's vendor-selection checklist should now include "has this lab filed under RAISE or SB 53, and what does its framework say about agentic use in {domain}?"</p>
+      <p class="impact-variant" data-variant="strategist">Regulatory asymmetry between states is now a product fact: if you ship AI features nationally, your compliance posture is set by the strictest state you touch, not your home state.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs are not reading safety frameworks; the few who do are turning them into one-page "what this model cannot be trusted with" cards for their squads.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are adding a model-disclosure row to design reviews for AI features — so far mostly as a checkbox rather than a design input.</p>
+      <p class="impact-variant" data-variant="strategist">Policy-aware product leads are mapping vendor incident-reporting obligations onto their own escalation paths, because a lab's 72-hour clock becomes their customers' question within hours.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Compliance disclosures become design inputs the way accessibility standards did: the craft adapts and cites them, but is not reframed by them.</p>
+      <p class="impact-variant" data-variant="design-lead">The frame holds — you still design and review features — but the review now has a regulatory input you can point to when pushing back on an over-promised AI feature.</p>
+      <p class="impact-variant" data-variant="strategist">It is a reshape until a reportable incident involves your product; then the question becomes whether you shipped knowing the published limits, which is a different conversation.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Treat a vendor's published framework like an API contract: design {focus} within its stated limits and surface those limits to users where they matter.</p>
+      <p class="impact-variant" data-variant="design-lead">Roadmaps need an incident path, not just a happy path: any feature that depends on agentic model behaviour should have a "the vendor just reported an incident" response designed in advance.</p>
+      <p class="impact-variant" data-variant="strategist">Transparency is becoming a competitive surface; products that can state exactly what their model is rated for will beat products that cannot, in regulated {domain} markets first.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,critique" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Find the published safety framework or system card for the model behind one AI feature in your {domain} product. Write a one-page card: three things the vendor says the model is not rated or recommended to do, and for each, whether your {focus} flow currently relies on exactly that. Flag every mismatch and propose the smallest UI change that closes it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Draft a model-disclosure row for your team's design-review template: what the designer must cite (vendor framework, model version, stated limits relevant to {domain}) and who signs off. Run it on one in-flight AI feature with your PM and write down what it changed about the review — if nothing, the row is theatre and needs rewriting.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Design ops</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page memo for leadership: how New York's RAISE Act and California's SB 53 affect your {domain} products, which vendor disclosures you will require before any AI launch, and whether to treat transparency about {focus} as a marketing asset or a liability. One clear recommendation, two trade-offs stated plainly.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="coding-agents">
+    <h5 class="category-label">Coding agents</h5>
+<article class="entry"
+         data-id="2026-11-11-gemini-carbon-developers"
+         data-category="coding-agents"
+         data-published="2026-11-10"
+         data-tags="google,gemini,antigravity,pricing,front-end,agentic-coding">
+  <div class="head">
+    <h6 class="headline">Google opens Gemini 4 Carbon to all paying API developers and Antigravity, with prices doubling after November 30</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-10">Published November 10, 2026</time></p>
+  <p class="summary">Google moved Gemini 4 Carbon from its cybersecurity-only release to general paid access on November 10: the Gemini API paid tier in AI Studio and Android Studio, Gemini for business, and Google Antigravity for AI Ultra subscribers. Introductory pricing stays at $2 per million input and $10 per million output tokens until November 30, 2026, then doubles to $4 and $20. Google says Carbon burns more tokens than Gemini 4 Argon because it runs longer verification loops, and still pitches Argon as the default for most engineering work. The post claims "improved front end taste and motion design skills" in Antigravity and that Carbon checks the rendered UI, not just the code, during web builds. Those are vendor claims; no UI or front-end benchmark was published.</p>
+  <p class="why"><strong>Why this matters for you:</strong> A frontier model is now being sold on design judgement — taste, motion, checking the rendered screen. That is a direct claim on your territory, and the pay-more-to-verify pricing turns "how much verification is this surface worth" into a product decision designers will be asked to make.</p>
+  <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener">Source — Google</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You can hand Antigravity a rough brief for {focus} and get back a working front end the model has visually self-checked; your job shifts from building the first version to auditing it for what the check cannot see — hierarchy, edge states, brand restraint.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's prototyping budget becomes a token line item. Decide which {domain} work gets the Carbon tier (verification-heavy, high-stakes surfaces) and which stays on Argon or a human before the price doubles on December 1 and finance asks.</p>
+      <p class="impact-variant" data-variant="strategist">Google is positioning taste as a model feature. Your org's design differentiation argument now has to survive a vendor claiming it ships taste at $20 per million output tokens.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs on Antigravity are generating two or three divergent front-end directions in an afternoon and throwing most of them away; the output is a critique target, not a deliverable.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are pairing a designer and an engineer in one shared Antigravity session instead of handing off a spec, and the session transcript is quietly becoming the artefact of record.</p>
+      <p class="impact-variant" data-variant="strategist">Exec buyers are reading the Argon-versus-Carbon split as a tiering strategy and asking whether the "better taste" tier is worth twice the price, mostly without any way to measure taste.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Front-end generation that verifies itself against the rendered screen compresses the design-build loop but keeps the frame: someone still has to decide what good looks like.</p>
+      <p class="impact-variant" data-variant="design-lead">It reshapes roles — fewer handoffs, more joint review — but defining quality for your team stays a human job, and now a more visible one.</p>
+      <p class="impact-variant" data-variant="strategist">A reshape, not a reframe: a pricing model that charges extra for verification tells you vendors still cannot guarantee the output without burning tokens.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Every feature gains a "how much verification is this worth" dimension; you will be asked to define what "rendered correctly" means for {focus}, and that definition is a design spec.</p>
+      <p class="impact-variant" data-variant="design-lead">Product teams will start costing features in tokens as well as sprints; your team's acceptance criteria need to be concrete enough that an agent's verification loop can actually check them.</p>
+      <p class="impact-variant" data-variant="strategist">Argon as default and Carbon for hard tasks is a template for your own {domain} product: a cheap good-enough path and a premium verified path, with the premium justified by evidence rather than adjectives.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Take one existing {focus} screen from your {domain} product. Write a one-paragraph brief and have an agentic coding tool (Antigravity with Carbon if you have Ultra, otherwise whatever you have) build it as a working front end. Then write a ten-point critique listing exactly where a "rendered UI check" would pass but a designer would fail it: spacing rhythm, type hierarchy, state coverage, motion restraint. The critique is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Draft a one-page tiering policy for your team: which kinds of {domain} work get a premium, verification-heavy model tier, which get the default tier, and which stay fully human. Use the December 1 price doubling as the forcing function. Send it to your engineering counterpart for a reaction before the end of the week and record what they push back on.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page memo titled "Google now sells front-end taste as a model feature — what is our design differentiation if taste is a commodity?" List three things this makes commodity for {focus}, one thing only your team's judgement still contributes, and a recommendation on whether to lean into or away from AI-generated front ends in {domain}, with the trade-off stated.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="research">
+    <h5 class="category-label">Research</h5>
+<article class="entry"
+         data-id="2026-11-11-decision-models"
+         data-category="research"
+         data-published="2026-11-10"
+         data-tags="hugging-face,decision-models,classification,product-logic,transformers,structured-output">
+  <div class="head">
+    <h6 class="headline">Hugging Face formalises "decision models": AI that returns typed choices and probabilities instead of text</h6>
+    <span class="badge research">Research</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-10">Published November 10, 2026</time></p>
+  <p class="summary">Hugging Face published a specification and Transformers support for what it calls decision models on November 10: models that take a state, a set of questions and the allowed answers, and return a typed choice, an ordered score or a yes/no probability — no generated text. Transformers adds DecisionPipeline, AutoModelForDecision and a /v1/systemone serving endpoint; llama.cpp serves the same API. The post argues this beats prompting an LLM for JSON because there are no schema violations and no decoding cost, with ticket routing, urgency scoring and yes/no classification as the example uses. No benchmarks were published and the worked examples are single illustrative runs, so treat the quality claims as unverified.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Most AI product logic designers touch is "generate text". This is a different primitive — a model that decides, with a confidence number you can design around — and it makes thresholds, fallbacks and "ask the user when unsure" a first-class design problem rather than an engineering afterthought.</p>
+  <p class="source"><a href="https://huggingface.co/blog/decision" target="_blank" rel="noopener">Source — Hugging Face</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You can spec a {focus} decision ("should this be flagged?") as a probability with a threshold instead of a prompt and a parser, and your design work now includes deciding what the user sees at 0.55 versus 0.95.</p>
+      <p class="impact-variant" data-variant="design-lead">Push your team to separate "the model decides" from "the model writes" in every AI flow; the two need different review criteria and different failure UI.</p>
+      <p class="impact-variant" data-variant="strategist">Decision models are cheaper and more auditable than generative ones for routing and scoring; expect product leaders to move high-volume {domain} logic onto them and ask design for confidence-aware interfaces.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Few ICs have touched this yet; the ones who have are prototyping threshold UIs in code because Figma has no good way to express "show this only when confidence is above 0.8".</p>
+      <p class="impact-variant" data-variant="design-lead">Leads shipping AI features are discovering that most of their "AI" is actually classification, and are quietly re-scoping generative features into decisions with a confidence display.</p>
+      <p class="impact-variant" data-variant="strategist">Platform and ML teams are already adopting typed-decision interfaces; design is usually brought in after the thresholds are set, which is the wrong order and worth fighting.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Separating deciding from generating changes what you design: not a conversation, but a probabilistic control surface with explicit uncertainty states.</p>
+      <p class="impact-variant" data-variant="design-lead">It reframes the AI-feature brief from "what should the model say" to "what should the model decide and how sure must it be", and that brief shape is new for most teams.</p>
+      <p class="impact-variant" data-variant="strategist">It relocates value: the interface to a model's confidence, not the model's prose, becomes the product, and that is a different thing to build a {domain} business on.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Every decision-model output is a design decision about thresholds, defaults and what the user sees when confidence is low for {focus}; none of that is set by the model.</p>
+      <p class="impact-variant" data-variant="design-lead">Ask engineering for the confidence distribution, not just accuracy, when they propose a decision model; the distribution tells you how often your "unsure" UI will actually appear.</p>
+      <p class="impact-variant" data-variant="strategist">Typed decisions with probabilities are auditable, which matters under the disclosure regimes arriving in New York and California; building on them is a compliance story as much as a product one.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Pick one {focus} flow in your {domain} product where the system already makes a hidden yes/no call (flagging, sorting, routing). Rewrite it as a decision-model spec: state, question, allowed answers. Then design the three states — confident yes, confident no, unsure — as wireframes or written UI copy, and mark exactly where "unsure" should hand the decision back to the user.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Audit your team's live and in-flight AI features in {domain}: which are real generation, and which are decisions wearing a chat interface? Produce a one-page table (feature, what it actually decides, current confidence handling) and take it to your ML or engineering lead with one question: which of these should be decision models with explicit thresholds?</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page memo arguing for or against moving one high-volume {domain} workflow from generative to decision-model logic: cost, auditability, the UX of showing confidence for {focus}, and what it does to your AI narrative with customers. End with a recommendation and the single metric you would watch for the first quarter.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
   </div>
 </section>
 <section class="day-section" data-date="2026-11-08">
