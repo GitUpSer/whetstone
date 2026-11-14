@@ -1127,7 +1127,399 @@
 
   <section class="month-section" data-month="2026-11">
     <h3 class="month">November 2026</h3>
-<section class="day-section" id="today" data-date="2026-11-11">
+<section class="day-section" id="today" data-date="2026-11-14">
+  <h4 class="day">Saturday, November 14 <span class="day-date">&mdash; today's briefing</span></h4>
+  <div class="category-group" data-category="generative-ui">
+    <h5 class="category-label">Generative UI</h5>
+<article class="entry"
+         data-id="2026-11-14-google-tabletop"
+         data-category="generative-ui"
+         data-published="2026-11-11"
+         data-tags="google-labs,tabletop,generative-ui,collaboration,malleable-software,planning-tools">
+  <div class="head">
+    <h6 class="headline">Google Labs tests Tabletop: groups ask an agent to build editable planning tools, then rework them in place</h6>
+    <span class="badge generative-ui">Generative UI</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-11">Published November 11, 2026</time></p>
+  <p class="summary">Google Labs opened a US-only waitlist on November 11 for Tabletop, a shared space where a group drops in links, files and ideas and asks @tabletop to generate a working tool — a trip itinerary, a dinner poll, an expense splitter, a tournament bracket — that everyone then edits at the same time, Google Docs-style. The tools are not fixed templates: the demos show a seating chart turned into one with draggable name badges and a Pong clone turned into "Pickle Pong" with a live scoreboard by asking for the change. Roman Nurik, design and engineering lead at Labs, wrote the announcement; Google has not said which Gemini model runs it, and access is for adults over 18 admitted weekly from a waitlist.</p>
+  <p class="why"><strong>Why this matters for you:</strong> This is generative UI aimed at ordinary groups rather than developers, and the design unit is "a tool the users keep changing", not a screen. If people get used to asking for the interface they want in a group chat, the fixed planning features in {domain} apps start to look like the slow option.</p>
+  <p class="source"><a href="https://siliconangle.com/2026/11/11/google-tests-tabletop-letting-groups-build-planning-tools-with-an-ai-agent/" target="_blank" rel="noopener">Source — SiliconANGLE</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You stop designing the one right itinerary screen and start designing the constraints a generated {focus} tool must respect — shared state, who can change what, what "undo" means when a teammate just rewrote the rules.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's process needs a review step for generated interfaces that no one on the team drew: what are the guardrails, and who signs off on a tool the model invented at 11pm for a wedding party?</p>
+      <p class="impact-variant" data-variant="strategist">Planning features you were going to spec and ship one at a time are now a single capability a competitor can offer wholesale; the org-level question is which {domain} workflows are too high-stakes to leave to user-generated tools.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs are still prototyping generative UI as a chat panel that spits out a card; very few have designed for a tool that several people mutate live, and the collaboration edge cases are where the actual work is.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are mostly watching from the waitlist; the ones running consumer planning or productivity products are asking engineering what it would take to let users re-shape a feature with a sentence.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are treating this as a Labs experiment and not a threat yet, which is reasonable this week; the ones paying attention note that Google chose group chat, not the Gemini app, as the entry point.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Malleable software — users asking for and changing their own tools — replaces "design the feature" with "design the space the features get made in", and that is a different craft, not a faster version of the old one.</p>
+      <p class="impact-variant" data-variant="design-lead">If this sticks, your team's roadmap of planning features collapses into a few primitives plus an agent, and the team's value shifts to quality standards for what the agent produces.</p>
+      <p class="impact-variant" data-variant="strategist">Google is testing whether the product is the generated tool or the shared space around it; if it is the space, every {domain} collaboration product is a candidate for the same reframe.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Requirements become examples: instead of specifying the expense splitter, you collect the ten ways real groups ask for one and design for the variance in {focus}.</p>
+      <p class="impact-variant" data-variant="design-lead">Feature prioritisation gets strange when users can build the feature themselves; your team needs a way to learn from what users generate and promote the good ones.</p>
+      <p class="impact-variant" data-variant="strategist">The moat moves from the feature set to the data about how groups actually plan and what they ask for, which Google is now collecting at the chat layer where your product is not.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="systems-thinking,critique" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Pick one planning or coordination flow in your {domain} product and write it as a Tabletop-style request a user would type ("make us a tool that..."). Then sketch, on paper or in Figma, the three collaboration states a generated tool must handle: two people editing at once, one person asking the agent to change a rule mid-use, and someone joining late. Write a half-page critique of what a generic generated tool would get wrong about {focus} that your designed version gets right.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,divergent-thinking" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Run a one-hour session with your team: list every "lightweight tool" feature in your {domain} roadmap (polls, trackers, splitters, schedulers) and sort them into "users could generate this" versus "needs a designed, guaranteed experience". For the first pile, draft the quality bar a generated version would have to meet. Output is a two-column list and a paragraph on what the team does with the time it no longer spends on the first pile.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Divergent thinking</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo answering: if users in {domain} can ask a group chat for the planning tool they need, what does our product still own? Name three things Tabletop-style generation makes commodity, one thing only a designed product with domain knowledge can still guarantee, and a recommendation on whether to build generation into your product, integrate with someone else's, or deliberately stay fixed-form.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="models">
+    <h5 class="category-label">Models</h5>
+<article class="entry"
+         data-id="2026-11-14-gemini-4-hydrogen"
+         data-category="models"
+         data-published="2026-11-12"
+         data-tags="google,gemini-4-hydrogen,models,pricing,agentic,antigravity,search">
+  <div class="head">
+    <h6 class="headline">Google ships Gemini 4 Hydrogen, a $1.50-per-million "everyday" agentic model with four thinking levels, into the API, Search and Antigravity</h6>
+    <span class="badge models">Models</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-12">Published November 12, 2026</time></p>
+  <p class="summary">Google released Gemini 4 Hydrogen on November 12 as its everyday coding and agentic model, two days after opening Gemini 4 Carbon to developers. It is priced at $1.50 per million input tokens and $7.50 per million output across a 1M-token window, roughly twice Gemini 3.8 Flash, with four thinking levels (low, medium, high, xhigh) and Google-reported claims of 2.5x faster task completion than Flash and a fivefold drop in hallucinations. It is rolling out to the Gemini API, AI Studio, Android Studio, the Gemini app, Google Search and Antigravity for paying subscribers, where an orchestrator switches between Carbon and Hydrogen within a session. Independent Artificial Analysis scores put it at 51 on its Intelligence Index at the default level, ahead of the larger Argon's 50 but behind Claude Sonnet 5.5 and GPT-6.1 Sol on terminal-agent benchmarks.</p>
+  <p class="why"><strong>Why this matters for you:</strong> The "thinking level" dial is now a product decision in your hands: the same model costs $0.29 or $3.16 per task depending on the setting, and someone has to decide which {focus} interactions deserve which level. That is a design-and-PM call, not an infrastructure one.</p>
+  <p class="source"><a href="https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/" target="_blank" rel="noopener">Source — The Decoder</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">When you prototype a {focus} flow against Hydrogen you should test it at two thinking levels, not one; a design that only works at xhigh is a design that costs ten times what the PM assumed.</p>
+      <p class="impact-variant" data-variant="design-lead">Add "which model tier and thinking level" to your team's AI feature spec template, next to latency budget; leaving it to engineering means the experience gets tuned for cost after the design is signed off.</p>
+      <p class="impact-variant" data-variant="strategist">Google now has three Gemini 4 tiers with overlapping scores and prices changing after November 30 and again in January 2027; model selection is an org-level cost strategy that design should have a seat in.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs mostly use whatever model the engineering team defaulted to and never see the thinking-level setting; the few who do are discovering that "low" is fine for most UI-copy and classification tasks.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads in Antigravity shops are noticing that the orchestrator's Carbon-to-Hydrogen handoffs are invisible to the team, and asking for a way to see which model made which change.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are reading the vendor benchmark tables with scepticism, since Google's own numbers and Artificial Analysis disagree on Terminal-Bench, and are waiting for third-party cost-per-task data before switching defaults.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Mid-tier models matching last quarter's frontier at a third of the price is now the pattern every month; it changes what you can afford to put in a {focus} interaction, not how you design it.</p>
+      <p class="impact-variant" data-variant="design-lead">The thinking-level dial becomes a standard knob your team tunes per feature, like image compression; the craft absorbs it rather than being redefined by it.</p>
+      <p class="impact-variant" data-variant="strategist">Price-performance leapfrogging between Google, Anthropic and OpenAI is the steady state; the strategic move is to keep model choice swappable rather than to pick a winner.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Design for degradation: the same {focus} feature will run at different thinking levels for different users or budgets, and the interface should not fall apart when the model is in "low" mode.</p>
+      <p class="impact-variant" data-variant="design-lead">Cost-per-task is now a legible number ($0.29 to $3.16 for one model) that your team can put next to each feature in {domain}; make it part of the prioritisation conversation.</p>
+      <p class="impact-variant" data-variant="strategist">Google is bundling Hydrogen into Search for everyone, which means the baseline quality users expect from "AI in a product" rises again this quarter whether your roadmap moved or not.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">Take one {focus} task your product (or a prototype) sends to a model — summarising, rewriting, classifying — and run the same input through Gemini 4 Hydrogen in AI Studio at low, medium and xhigh. Write a short table: output quality on your own 1–5 scale, visible latency, and the Artificial Analysis cost-per-task for that level. End with one sentence recommending a level and the UI consequence (what you show the user while waiting at that level).</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Tool mastery</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Sit down with the engineer who owns your team's model config and map every AI feature in {domain} to the model and thinking level it actually runs on today. For each, mark whether anyone deliberately chose that setting or it was a default. Produce a one-page table and agree on which two features to re-test at a cheaper level next sprint, with the design acceptance criteria for "still good enough".</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Design ops</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo on model portability for your {domain} product: given that Google's prices change on November 30 and in January 2027 and a mid-tier model just matched a frontier tier, what would it cost your team to swap providers in a quarter? Name the two features where lock-in is highest, one concrete step to reduce it, and a recommendation on whether to standardise on a single vendor or keep two live.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="industry">
+    <h5 class="category-label">Industry</h5>
+<article class="entry"
+         data-id="2026-11-14-sierra-poppy-1-0"
+         data-category="industry"
+         data-published="2026-11-13"
+         data-tags="sierra,poppy,personal-agent-protocol,shopify,meta-muse,agentic-commerce,protocols">
+  <div class="head">
+    <h6 class="headline">Sierra releases Personal Agent Protocol 1.0: every Shopify store now publishes a Poppy file, and Meta's Muse looks for it first</h6>
+    <span class="badge industry">Industry</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-13">Published November 13, 2026</time></p>
+  <p class="summary">Sierra published version 1.0 of its Personal Agent Protocol ("Poppy") on November 13, a standard for how a customer's personal AI agent discovers a company, signs in on the customer's behalf and finds out what it is allowed to do. Companies publish a file at /.well-known/poppy.json describing channels (website, APIs via OpenAPI and MCP, or the company's own agent), sign-in via OAuth and permitted actions; Shopify has turned it on for every merchant automatically, with a commerce extension co-authored by Shopify that makes the agent ask before certain actions. Sierra says Meta's Muse now checks for a Poppy file on every site it visits, and lists more than 100 design partners including Delta, Intuit, Cisco, Zoom, Wayfair and Salesforce. Mercury, Synchrony and Turkish Airlines are described as going live; all of this is Sierra's own account and no independent adoption numbers exist yet.</p>
+  <p class="why"><strong>Why this matters for you:</strong> A second audience is arriving at your product that reads a JSON file instead of your UI. What a company declares in its Poppy file — what an agent may do, when it must ask — is a product and permissions design problem that will land on someone, and it is better if that someone has thought about {focus} consent flows before.</p>
+  <p class="source"><a href="https://sierra.ai/blog/releasing-poppy" target="_blank" rel="noopener">Source — Sierra</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Every {focus} flow you design now has a parallel question: what does the agent version of this look like, and where does the human have to confirm? The "ask before" rule in the commerce extension is a design surface you can draw.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team needs an owner for the agent-facing contract — the permissions, the confirmation points, the error cases — because if design does not claim it, it gets written by whoever edits the JSON.</p>
+      <p class="impact-variant" data-variant="strategist">Agent access is becoming a published policy, not an afterthought; the org has to decide for {domain} which actions it exposes to personal agents, which it gates, and which it refuses, the way United just did.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Almost no ICs have seen a Poppy file; Shopify merchants got one without doing anything, which means the agent-facing version of thousands of stores shipped with no designer involved.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads at the named design partners are being pulled into permissions workshops with security and legal; elsewhere, leads are hearing about this from PMs who read the Shopify announcement.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are comparing this with Google's UCP (which handles the shopping itself) and OpenAI's merchant playbook, and noticing that three protocol layers are now competing for the same agent-to-business handshake.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Designing for a user who never sees your screens is a reframe, not a new component; the artefact is a permissions contract and a set of confirmation moments, not a layout.</p>
+      <p class="impact-variant" data-variant="design-lead">The team's definition of "the product" has to expand to include the machine-readable version, and that changes who is in the room for design reviews.</p>
+      <p class="impact-variant" data-variant="strategist">If personal agents become the front door for a meaningful share of {domain} customers, differentiation moves from interface quality to the quality of what you let agents do, which is a different competitive game.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Confirmation design becomes central: the agent will ask the customer "may I?" at the points your company declares, and the wording and frequency of those asks decide whether people trust the whole thing.</p>
+      <p class="impact-variant" data-variant="design-lead">Scope a feature as two deliverables from now on — the human flow and the declared agent flow — and estimate both; the agent one is smaller but has sharper failure modes.</p>
+      <p class="impact-variant" data-variant="strategist">Staged adoption is built into v1.0, which means the strategic question is sequencing: which low-risk {domain} actions to expose first to learn from, before exposing the ones that move money.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Draft the Poppy file for your {domain} product as a plain-language table: five actions a personal agent could take, whether each is allowed as a guest or needs sign-in, and whether the agent must ask the customer first. Then design the confirmation moment for the riskiest one — the exact words the agent shows the customer and what the customer can change before saying yes. The table plus one confirmation screen is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Book an hour with your security or platform lead and walk through the Sierra 1.0 post together. Agree on who in the org would own the agent-permissions contract if a PM asked for Poppy support next quarter, and write a half-page RACI-style note: design owns confirmation moments and error states, security owns scopes, product owns which actions ship first. The point is to claim design's part before the file gets written without you.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo recommending one of three stances for your {domain} business toward personal agents: open (publish a Poppy file with broad permissions), staged (guest read access now, transactions later), or closed (United's position). Name the specific trade-off each stance makes on acquisition, support cost and fraud exposure, and say which customers you would lose under each. Pick one and defend it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+<article class="entry"
+         data-id="2026-11-14-chatgpt-wallet"
+         data-category="industry"
+         data-published="2026-11-13"
+         data-tags="openai,chatgpt-wallet,agentic-commerce,payments,consent,dots">
+  <div class="head">
+    <h6 class="headline">OpenAI launches ChatGPT Wallet: "dots" agents buy for US Pro users with a biometric approval on every purchase</h6>
+    <span class="badge industry">Industry</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-13">Published November 13, 2026</time></p>
+  <p class="summary">OpenAI announced ChatGPT Wallet on November 13, built with American Express, Mastercard and Visa. A user adds a card once; before each purchase the dots agent shows the items, total and card, the user approves with Face ID or a fingerprint, and the network issues a single-use payment token so neither the merchant nor the agent sees the real card. It is limited to US ChatGPT Pro subscribers aged 18 and over, OpenAI says it is not taking a cut for now, and it published a merchant playbook because its own fraud-screening partners can flag legitimate agent purchases as fraud and some sites block agents without meaning to. OpenAI says the long-term aim is users handing purchases to the agent entirely with spending, category or time limits; that is a stated intention, not a shipped feature.</p>
+  <p class="why"><strong>Why this matters for you:</strong> The per-purchase approval screen is now one of the most consequential pieces of consent UI in consumer software, and OpenAI chose "review every time" over "set a limit and trust". Which of those your {domain} product should ask for is a judgement call you can practise now.</p>
+  <p class="source"><a href="https://thenextweb.com/news/chatgpt-wallet-openai-dots-agents-payments" target="_blank" rel="noopener">Source — The Next Web</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">If your {domain} product sells anything, you now design the checkout twice: the one humans see and the one an agent walks through, where your fraud rules, product feed and firewall settings are the interface.</p>
+      <p class="impact-variant" data-variant="design-lead">Add agent checkout to your team's QA path; OpenAI is warning that risk systems decline legitimate agent purchases, and your team will not see those failures unless someone goes looking.</p>
+      <p class="impact-variant" data-variant="strategist">Agent-initiated purchases are small today (Uber reported four agent-booked rides last quarter) but the payment rails just got built by the three card networks, so the org-level planning horizon is quarters, not years.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs on commerce teams are mostly reading the merchant playbook and discovering that their product feeds are incomplete, which is a content problem before it is a UI one.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are running the "what does our checkout look like to a bot" exercise with engineering and finding that half the trust cues they designed (badges, reviews, urgency banners) are invisible or counterproductive to an agent.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are watching the divergence: Walmart gives agents their own spending-limited profiles, Amazon and United block them, OpenAI launches a wallet; nobody has settled on a posture and most are copying the nearest competitor.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Consent-per-action with a biometric is a pattern you will be asked to design in {focus} flows repeatedly this year; it is a new standard component for an existing job, not a reframe of what checkout is.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's checkout and trust patterns need an agent variant, the way they needed a mobile variant; the craft expands, the frame holds.</p>
+      <p class="impact-variant" data-variant="strategist">Tokenised agent payments make the agent a legitimate purchasing channel alongside web and app; the business model does not change, the channel mix does.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Design the approval screen as if it will be seen 20 times a week: what gets skimmed, what must never be skimmable, and what the user can change in {focus} before approving.</p>
+      <p class="impact-variant" data-variant="design-lead">Treat "legitimate purchase declined as fraud" as a tracked product metric for agent traffic, because it is a silent conversion leak your dashboards were not built to show.</p>
+      <p class="impact-variant" data-variant="strategist">Visa's own test had 22 agent models failing 42.8 percent of shopping tasks; the honest planning assumption for {domain} is that agents will arrive, make mistakes, and your support team will inherit them.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">Design the agent purchase-approval screen for a {domain} purchase in your product in two versions: OpenAI's "review every item, biometric each time" and the alternative "set a monthly limit and category, approve silently inside it". Then write a one-page critique of your own two designs: which one a tired user actually reads, where each fails under a wrong-item mistake, and which you would ship for {focus}. The critique is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Walk your product's checkout with an engineer as if you were an agent: no visuals, only what is in the product feed, the DOM and the fraud rules. Produce a list of every point where the agent would be blocked, mis-flagged or misled, and a note on which trust cues your team designed that an agent cannot read. End with three fixes ranked by effort and one decision on whether your team wants agent purchases at all.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo on agent purchasing for your {domain} product: given that OpenAI takes no cut today but says users will eventually delegate purchases entirely, what happens to your margin, your upsell flows and your brand when the buyer is a bot optimising for price? Recommend one of: welcome agents and redesign for them, allow but limit them, or block them, with the specific revenue trade-off you are accepting.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+<article class="entry"
+         data-id="2026-11-14-united-blocks-agents"
+         data-category="industry"
+         data-published="2026-11-12"
+         data-tags="united-airlines,ai-agents,travel,policy,agentic-commerce,trust">
+  <div class="head">
+    <h6 class="headline">United Airlines blocks third-party AI agents from booking and managing reservations; Delta, American and JetBlue let customers take the risk</h6>
+    <span class="badge industry">Industry</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-12">Published November 12, 2026</time></p>
+  <p class="summary">United said on November 12 it will prohibit unauthorised third-party personal AI agents from booking flights and managing reservations, both on its own digital platforms and indirectly through travel agencies and aggregators, with changes to its booking, ticketing and distribution policies. Its stated reasons are credential sharing, unintended purchases or use of MileagePlus miles, and check-in steps where a human must personally attest (for example that bags contain no banned items), which it says automation could put in conflict with FAA and DOT rules. Delta allows agents that authenticate with the customer's login and puts responsibility on the customer, American says it is still evaluating, and JetBlue's president said the airline should meet customers where they are. United was listed as a Poppy design partner in October, so this is a company that sat at the protocol table and still chose to close the door for now.</p>
+  <p class="why"><strong>Why this matters for you:</strong> This is the first large consumer brand to publish a clear "no" to personal agents, and its reasons are design reasons: consent that cannot be delegated, and actions with consequences the user did not see. Expect to be asked which actions in your own {domain} product fall in that category.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You now have a concrete test for any {focus} step: is this an attestation only the human can make, or a task an agent could do? Marking that distinction on your flows is new, cheap and useful.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's flows need an "agent-delegable" annotation the way they have accessibility annotations; United's reasoning gives you the three categories to use (security, unintended consequence, regulatory attestation).</p>
+      <p class="impact-variant" data-variant="strategist">United has shown that "closed" is a defensible public position for a regulated consumer business; the org needs its own written stance for {domain} before a journalist or a partner asks for it.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs in travel and finance are being asked to redesign check-in and confirmation steps so the human attestation is unmistakable, which is mostly copy and sequencing work rather than new screens.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are discovering that nobody on the team knows which of their flows an agent currently completes successfully, and are commissioning a quick audit before any policy discussion.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are split: some read United as protecting its direct channel and upsells (the hotel CEO quoted by Forbes said so openly), others as a liability call, and the honest answer is probably both.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Separating delegable actions from human-only attestations becomes a routine part of flow design in {focus}; it sharpens the existing craft rather than replacing it.</p>
+      <p class="impact-variant" data-variant="design-lead">Agent policy will be revised as incidents happen and protocols mature; your team's job is to keep the flows annotated so the policy can change without a redesign.</p>
+      <p class="impact-variant" data-variant="strategist">Blocking is a 2026 position, not a permanent one; United sat on the Poppy partner list a month ago, and the likely path is "closed, then staged" as permissions standards firm up.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Every action in a {focus} flow should carry an answer to "what if the user did not actually see this happen", because that is the failure United is pricing in.</p>
+      <p class="impact-variant" data-variant="design-lead">Add "agent exposure" to the risk column of your team's feature reviews; features that move money or miles get a different bar from ones that read information.</p>
+      <p class="impact-variant" data-variant="strategist">United is betting customers will accept friction for safety; Delta is betting on convenience with liability pushed to the customer. Which bet fits your {domain} customers is a product strategy decision with a shelf life of about two quarters.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">Take one end-to-end {focus} flow in your {domain} product and label every step with one of United's three categories: safe to delegate to an agent, risky because of unintended consequences, or a human-only attestation. Write a short justification for each "human-only" label. The labelled flow plus justifications is the artefact; if you end up with none in the human-only column, write a paragraph on why that is fine.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Send your legal or compliance contact the TechCrunch piece with one specific question: which steps in our {domain} product carry a regulatory or contractual requirement that the customer personally performs them? Turn their answer into a one-page list your team can annotate flows against, and bring it to your next design review as the first "agent-delegability" check.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo taking United's side for your {domain} business, then a second paragraph taking Delta's. Each must name the customer segment it wins, the one it loses, and the incident that would make the position look wrong in hindsight. Close with your recommendation and the single metric you would watch to know when to switch stances.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-11-11">
   <h4 class="day">Wednesday, November 11 <span class="day-date">&mdash; today's briefing</span></h4>
   <div class="category-group" data-category="design-tools">
     <h5 class="category-label">Design tools</h5>
