@@ -1127,7 +1127,481 @@
 
   <section class="month-section" data-month="2026-11">
     <h3 class="month">November 2026</h3>
-<section class="day-section" id="today" data-date="2026-11-17">
+<section class="day-section" id="today" data-date="2026-11-18">
+  <h4 class="day">Wednesday, November 18 <span class="day-date">&mdash; today's briefing</span></h4>
+  <div class="category-group" data-category="models">
+    <h5 class="category-label">Models</h5>
+<article class="entry"
+         data-id="2026-11-18-gpt-6-2-astra-sol"
+         data-category="models"
+         data-published="2026-11-17"
+         data-tags="openai,gpt-6-2,models,pricing,frontend,computer-use">
+  <div class="head">
+    <h6 class="headline">OpenAI ships GPT-6.2 Astra and Sol: Astra 20% cheaper than GPT-6 Astra, Sol unchanged at $2/$10, and the pitch leans on front-end and 3D design quality</h6>
+    <span class="badge models">Models</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-17">Published November 17, 2026</time></p>
+  <p class="summary">OpenAI released GPT-6.2 Astra and GPT-6.2 Sol on November 17 across ChatGPT (Plus, Pro, Enterprise and Edu), Codex and the API. Astra is the frontier model at $8 input / $40 output per million tokens, 20% below GPT-6 Astra; Sol is the everyday model at $2 / $10, unchanged from GPT-6.1 Sol. OpenAI's own positioning is unusually design-flavoured: it says Astra "builds frontends that look and work better, particularly for websites, gaming and 3D design", reaches individual parts in CAD tools via computer use, and scores 1,318 Elo on its human-judged AA-3D design comparison against 1,271 for Claude Fable 5.2. Independent numbers are more mixed: Artificial Analysis places Astra second to Fable 5.2 (62 vs 65) on its Intelligence Index, flat against GPT-6 Astra on its Coding Agent Index, with a 59% hallucination rate on its hardest factual questions; Epoch AI says Astra barely improved on real-world research tasks. Both models are rated "Critical" for cyber under OpenAI's Preparedness Framework, and Astra is the first released model rated "High" for AI self-improvement.</p>
+  <p class="why"><strong>Why this matters for you:</strong> This is the second frontier release in a week (after Fable 5.2 and Gemini 4 Hydrogen) and the first to market itself on front-end quality with a design Elo. Whether a generated {focus} interface is actually better is a judgement your tooling will not make for you, and vendors are now competing on claiming it does.</p>
+  <p class="source"><a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/" target="_blank" rel="noopener">Source — The Decoder</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Your front-end prototypes from Codex or any Astra-backed tool will look more finished out of the box, which makes the gap between "looks right" and "is right for {focus}" harder to see at a glance and more important to check deliberately.</p>
+      <p class="impact-variant" data-variant="design-lead">Model choice is now a design-quality variable your team should own, not an engineering default: Sol at a fifth of Astra's cost is good enough for most {domain} prototyping, and the team needs a rule for when the extra spend on Astra is justified.</p>
+      <p class="impact-variant" data-variant="strategist">A 20% price cut on the frontier tier a week after competitors shipped is a pricing war, and it means the cost of a generated first draft of any screen is approaching zero; plan on the assumption that your org's design capacity is no longer bounded by production time.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs are swapping models inside Codex, Claude Code or Cursor without a method — they try the new one for a day, form an impression, and rarely compare the same prompt across two models side by side.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are mostly not tracking which model their team's prototypes came from, so when a prototype misleads a stakeholder nobody can say whether it was the model, the prompt or the brief.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are reading the Artificial Analysis and Epoch numbers rather than the vendor charts, and noticing that the independent deltas between frontier models are now small enough that switching cost, not capability, decides the vendor.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The frames you make do not change; what changes is that the first version of almost any {focus} screen is generated and visually competent, so the craft moves to critique, intent and the details a model cannot know about your users.</p>
+      <p class="impact-variant" data-variant="design-lead">Model releases every few weeks are now the normal cadence, and a team that re-litigates its tooling on each one will lose a day a month; the durable change is building an evaluation habit, not picking a winner.</p>
+      <p class="impact-variant" data-variant="strategist">Vendors competing on "design Elo" is a signal that design quality has become a measurable, marketable model attribute; the frame of design as a differentiator still holds, but the bar for what counts as differentiated just rose.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">When the model can produce a plausible front-end for a {focus} feature in minutes, the scarce input to a spec is the decision about what the feature should do and for whom — write that first, and let the screen follow.</p>
+      <p class="impact-variant" data-variant="design-lead">Discovery and delivery compress: a team can now test three fully-built directions in the time it used to take to wireframe one, which shifts the bottleneck to how fast you can learn from users, not how fast you can build.</p>
+      <p class="impact-variant" data-variant="strategist">If every competitor's {domain} product can generate competent interfaces at near-zero cost, roadmap bets on "better UI" are weak; bets on proprietary data, workflow depth and opinionated defaults are where differentiation survives.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Take one {focus} screen you know well and prompt two models (GPT-6.2 Astra or Sol and whichever you used last week) with the identical brief to build it as working front-end code. Put the two results side by side and write a one-page critique with three sections: what each got wrong that a user would notice, what each got wrong that only someone who knows your {domain} users would notice, and which one you would actually ship after fixes. The second section is the artefact — it is the part no Elo score measures.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page "model policy" for your team: which model tier is the default for {domain} prototyping, what justifies stepping up to a frontier model, and what metadata every shared prototype must carry (model, date, prompt link). Then run a 30-minute conversation with the team on the one question the policy cannot answer — how you will know when a cheaper model is quietly producing worse {focus} work — and record the detection method you agree on.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo for your product leadership answering: if the cost of a competent generated interface for any {domain} feature is now effectively zero for us and every competitor, what are the three things our {focus} product should stop investing in and the one thing it should double down on? Use the independent benchmark picture (small deltas between labs, mixed real-world gains) rather than the vendor charts to argue that model choice is not the moat, and name what is.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="tools">
+    <h5 class="category-label">Tools</h5>
+<article class="entry"
+         data-id="2026-11-18-ignite-autopilot-copilot-code"
+         data-category="tools"
+         data-published="2026-11-17"
+         data-tags="microsoft,ignite,autopilot,copilot-code,agent-365,governance,mai-code-2">
+  <div class="head">
+    <h6 class="headline">Microsoft Ignite: Autopilot gives every employee a persistent agent with its own identity, Copilot Code builds apps from a sentence, and Agent 365 becomes the governance layer</h6>
+    <span class="badge tools">Tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-17">Published November 17, 2026</time></p>
+  <p class="summary">At Ignite (November 17–20, San Francisco) Microsoft announced Autopilot, a long-running personal agent with its own Entra identity, memory and tool access inside the tenant that can be @mentioned in Teams and runs recurring work, rolling out to Frontier-program customers. Copilot Code lets non-developers build dashboards, trackers and apps from natural language, run in a tenant sandbox and published through the now-GA Copilot Managed Runtime, with GA promised for December. Agent 365 is positioned as the control plane for all of it: cost management for usage-based AI spend (preview), MCP governance through Azure AI Gateway (preview), Entra Agent ID for local agents including GitHub Copilot CLI and Claude Code (preview), and Defender runtime protection for those same local agents (GA). Microsoft IQ — Work IQ, Fabric IQ, Foundry IQ and Web IQ — is GA as the shared context layer for Copilot, GitHub Copilot, Foundry and any MCP-compatible harness, with no new SKU. The same day Microsoft AI released MAI Code 2 and MAI Code 2 Flash in GitHub Copilot, claiming 98% of GPT-6.1 Sol's coding performance at 40% of the cost and that 258 blind annotators preferred its front-ends over GPT-6 Sol 67% of the time; those are Microsoft's figures and have not been independently verified.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Copilot Code is the Microsoft-tenant version of Gemini Notebook sites and Tabletop — the third "describe it and it exists" internal-tools layer to ship in a week, and it will exist inside most enterprise {domain} customers by the new year. Agent 365 is the first serious attempt to make agent governance a product category, which will shape what enterprise buyers demand of any agentic {focus} feature you ship.</p>
+  <p class="source"><a href="https://news.microsoft.com/events/ignite/2026/book-of-news/" target="_blank" rel="noopener">Source — Microsoft Ignite 2026 Book of News</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">If your users live in Microsoft 365, the "user" of your {focus} feature is about to be a person plus their Autopilot, and you need to design for the case where the agent, not the human, is the one reading your screen or calling your API.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's internal tooling requests — dashboards, trackers, intake forms — will increasingly be built by the requesters themselves in Copilot Code, which frees design time but also removes the design review that used to catch bad data presentation.</p>
+      <p class="impact-variant" data-variant="strategist">Microsoft just defined the enterprise checklist for agents (identity, cost cap, MCP gateway, runtime protection, risk score), and any agentic capability in your {domain} product will be evaluated against that checklist by IT before a designer ever meets the end user.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Few ICs are designing for agent-as-user yet; the ones at Microsoft-shop customers are starting to see Autopilot-style agents in usage logs and have no personas, journeys or error states for them.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads in large enterprises are being pulled into governance conversations about which agents can touch which data, usually as the person who understands the workflow rather than as a designer, and mostly without a seat at the table where the rules are set.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are watching Microsoft, Google and Anthropic converge on the same shape — a work OS with chat, co-working, documents, code and agents — and asking whether their {domain} product is a layer inside one of these or a destination competing with them.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">A persistent agent with its own identity per employee breaks the one-human-one-session assumption behind most of your {focus} flows; the frame of "a user on a screen" is no longer the right starting frame for enterprise work.</p>
+      <p class="impact-variant" data-variant="design-lead">When half the actions in a product are taken by agents on behalf of people, your team's deliverables shift from screens to policies, permissions and explanations of what an agent did — a different craft, not a faster version of the old one.</p>
+      <p class="impact-variant" data-variant="strategist">Governance as a product category (Agent 365, CrowdStrike's kill switch, Entra Agent ID) tells you the market has accepted that agents are the new workforce; the planning unit shifts from seats and features to agents, budgets and blast radius.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Specs for enterprise {focus} features now need an "agent path" alongside the human path — what an Autopilot can do without a person present, what it must escalate, and how the person sees what happened afterwards.</p>
+      <p class="impact-variant" data-variant="design-lead">Prioritisation should assume internal-tool requests are self-serve by default, and redirect the freed capacity toward the customer-facing {domain} work where the design judgement is still scarce.</p>
+      <p class="impact-variant" data-variant="strategist">The product that wins inside a Microsoft shop is the one that shows up as a well-governed capability for Autopilot and Copilot — exposed via MCP, with a clear cost model and risk posture — not the one with the best standalone UI.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="systems-thinking,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Pick one {focus} flow in your {domain} product and redraw it as a sequence diagram with three lanes: the human, their Autopilot-style agent, and your product. Mark every step where the agent could act without the human present, and for each one write the single sentence your product would show the human afterwards to explain what the agent did. The set of those sentences is the artefact — it is the audit UI you do not have yet.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,advocacy" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Book 30 minutes with whoever owns security or IT governance in your org and ask them one question: which of the Agent 365 controls (identity, cost cap, MCP gateway, runtime protection, risk score) would they require before letting an agent in our {domain} product act for a customer? Then write a one-page summary for your team translating their answer into design requirements — what the user must be able to see, set and revoke — and propose who on the team owns each one.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page memo answering whether your {domain} product should be a destination or a capability inside the Microsoft, Google and Anthropic work-OS layers. List what you would expose via MCP to an Autopilot, what you would keep behind your own UI because the {focus} judgement lives there, and what the cost model would look like when the customer's Agent 365 dashboard shows your usage next to everyone else's. End with a clear recommendation and the one assumption that would change it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="coding-agents">
+    <h5 class="category-label">Coding agents</h5>
+<article class="entry"
+         data-id="2026-11-18-replit-missions"
+         data-category="coding-agents"
+         data-published="2026-11-17"
+         data-tags="replit,missions,agent-swarm,budgets,approval-gates,autonomy">
+  <div class="head">
+    <h6 class="headline">Replit launches Missions: state an outcome and a budget, and an agent swarm plans, builds and tests toward it, with human sign-off gated on anything that touches the outside world</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-17">Published November 17, 2026</time></p>
+  <p class="summary">Replit released Missions on November 17. Instead of a prompt, the user states an outcome — Replit's example is "land the first 10 paying enterprise customers" with a $1,000 cap — and Missions first negotiates what counts as success, then runs several agents in parallel (one researching buyers while another builds a demo) round by round, re-planning after each. A human must approve before the system contacts prospects, sends proposals, edits sales material or makes product commitments. A separate AI reviewer judges the result against the agreed criteria; if the budget runs out first the mission ends unresolved. Progress arrives as instant updates, a daily digest or a weekly report. Replit says it used Missions to build DataCat, an open-source monitoring platform, in two days on a $3,000 budget, and that on 13 NumPy optimisation tasks one agent reached up to 4x speedups, 16 agents 17x and 32 agents 19x on its Max tier (2x, 7x, 9x on Power). Pricing and per-plan swarm limits were not published, and the comparison it ran against a Claude Code build used an undisclosed budget and prompts.</p>
+  <p class="why"><strong>Why this matters for you:</strong> This is a product whose primary interface is a success definition, a budget and an approval queue rather than a canvas or a chat. Somebody has to design what "approve" means when the thing being approved is a mission step with money and reputation attached, and there are no established patterns for that yet.</p>
+  <p class="source"><a href="https://x.com/Replit/status/2122754933367955951" target="_blank" rel="noopener">Source — Replit (announcement)</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Writing the success criteria for a {focus} build is now a design deliverable in its own right — if you cannot state what "done" looks like in terms a reviewer agent can check, the swarm will decide for you.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's prototyping budget becomes literal: a mission with a dollar cap is a sprint with a wallet, and you need a view on what a {domain} prototype is worth before you can tell the team how much to spend on one.</p>
+      <p class="impact-variant" data-variant="strategist">Outcome-plus-budget is the purchasing model enterprise buyers will expect from any agentic product within a year; if your {domain} product sells seats or per-task credits, the packaging conversation starts now.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Almost no ICs are writing machine-checkable success criteria for their prototypes; the few experimenting with swarm tools report that the hardest part is not the prompt but deciding, in advance, what they would reject.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are treating swarm tools as an engineering experiment and have not yet had to answer the question Missions forces — which of their team's decisions should require a human and which can run on a budget.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are noticing that Replit, Cognition, OpenAI and Anthropic all shipped "manager of agents" products inside two months, and reading it as the autonomy frontier moving from the task to the project.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The interaction model is not a better chat — it is a contract: criteria in, result out, approvals in between; designing the contract and the approval moments is a different skill from designing screens.</p>
+      <p class="impact-variant" data-variant="design-lead">When work is scoped as an outcome with a cap rather than as tasks with owners, the team ritual that matters is defining success and risk up front, which is closer to how you run a client engagement than a sprint.</p>
+      <p class="impact-variant" data-variant="strategist">If the speedup numbers hold even roughly outside Replit's own tests, the unit of software production shifts from the engineer-week to the budgeted mission, and org planning built on headcount is the wrong frame.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">The product requirement document for a {focus} feature starts to look like a mission brief: outcome, acceptance checks, what the system may never do without a person, and what it costs to find out — write one in that shape and see what it exposes.</p>
+      <p class="impact-variant" data-variant="design-lead">Approval gates are a product surface your team will be asked to design inside your own {domain} product soon; Missions' list (contact, send, edit materials, commit) is a reasonable starting taxonomy for which actions need a human.</p>
+      <p class="impact-variant" data-variant="strategist">Vendor benchmarks against competitors built under undisclosed conditions are becoming the norm for agent products; decide now that your org will only act on comparisons where both sides' budgets and prompts are known.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Take a {focus} feature you are working on and write it as a mission brief, not a spec: one sentence of outcome, five success checks a reviewer agent could verify without talking to you, a list of the actions that must never happen without a human, and a budget in hours or dollars. Then write a short critique of your own brief — which of the five checks could pass while the feature is still wrong for your {domain} users? That gap is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Run a one-hour session with your team on approval gates: list every kind of action your {domain} product (or your own design process) could delegate to an agent, then sort them into "runs on a budget", "needs one person to approve" and "needs a conversation". Write the result up as a one-page policy and note the three actions the team could not agree on — those are the ones worth a design exploration of what the approval moment should look like.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo on whether your {domain} product should offer an outcome-and-budget mode — the customer states a {focus} goal and a spend cap and your product works toward it with approval gates. Name the one outcome your product could credibly take responsibility for, the actions you would gate behind a human, how you would prove the result to the customer, and the pricing change it would force. Recommend go, no-go or pilot, and say what evidence would flip it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+<article class="entry"
+         data-id="2026-11-18-devin-bots"
+         data-category="coding-agents"
+         data-published="2026-11-17"
+         data-tags="cognition,devin,agent-manager,slack,oversight,auto-merge">
+  <div class="head">
+    <h6 class="headline">Cognition launches Devin Bots: a persistent manager-agent that runs teams of Devins for weeks, joins Slack as a colleague, and auto-merges whatever your team marks low-risk</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-17">Published November 17, 2026</time></p>
+  <p class="summary">Fortune reported on November 17 that Cognition has launched Devin Bots in early access with "dozens" of customers including Decagon, Fireworks AI and Reducto. A Bot takes a multi-week project — Cognition's example is building an Android version of an iPhone app and keeping it in sync as the iPhone version changes — breaks it into tasks, assigns them to Devin agents, picks a model per task (its own cheaper models for routine code, frontier models for planning and design), joins the team's Slack as its own member and pings people when blocked or when it needs a decision. Admins scope which repos and tools each Bot can touch; Bots run on separate cloud machines away from engineers' credentials; and teams decide which changes need human review — Cognition's CEO gave "changing a button's colour" as the kind of edit that can be set to auto-approve and auto-merge. Cognition says Bot usage grew tenfold in two weeks and its annualised revenue passed $1 billion in September; pricing and a GA date are not published. Fortune frames it against OpenAI's Dots and Anthropic's Duet, both general-purpose, with Cognition's pitch being model-agnosticism.</p>
+  <p class="why"><strong>Why this matters for you:</strong> "Changing a button's colour" is the example the industry reaches for when it wants an edit so low-risk no human needs to see it. That is a precise statement about where the market believes UI judgement is not needed, and your job is to be able to say, specifically, when it is wrong about your {focus} surface.</p>
+  <p class="source"><a href="https://fortune.com/2026/11/17/exclusive-cognition-bets-on-devin-bots-coding-agents-in-challenge-to-anthropics-duet-and-openais-dots/" target="_blank" rel="noopener">Source — Fortune</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Visual changes to your {focus} surface will increasingly ship without a human reviewing the diff, so your design system's tokens, constraints and lint rules become the only review those changes get — make them say what you would have said.</p>
+      <p class="impact-variant" data-variant="design-lead">The "which changes need review" policy Cognition describes is a design policy wearing an engineering hat, and if your team does not write it, the engineering lead will write it with colour changes in the auto-merge bucket.</p>
+      <p class="impact-variant" data-variant="strategist">A port-and-keep-in-sync project that used to justify a platform team is now a Bot with a budget, which changes the economics of multi-platform {domain} products and the case for native-per-platform design.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs at early-access shops report that the Bot's Slack questions are the new design review: it asks a scoping question, someone answers in a sentence, and that sentence becomes the spec, usually without the designer in the thread.</p>
+      <p class="impact-variant" data-variant="design-lead">Most leads have not yet been asked to define auto-merge criteria for visual changes and do not have a written position on it; the ones who have are drawing the line at anything that touches hierarchy, copy or state, not colour.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are tracking that four "manager of agents" products shipped since late September and treating model-agnosticism versus lab lock-in as a real procurement question, not a marketing line.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">The work — deciding what the {focus} interface should be — does not change; what changes is that the implementation of your decision happens without you, so encoding decisions into systems and constraints becomes the craft's centre.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's leverage shifts from reviewing output to setting the rules the Bot runs under; that is a reshaping of how design quality is enforced, within the existing frame of a team that owns the product's look and behaviour.</p>
+      <p class="impact-variant" data-variant="strategist">Persistent agents as team members is a labour change more than a strategy change for now; the org frame of product teams still holds, but each team's capacity and cost curve look different.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">When a Bot can keep a second platform in sync indefinitely, the question for a {focus} feature is no longer "can we afford it on Android too" but "should it be the same on Android", and that is a design question nobody else will ask.</p>
+      <p class="impact-variant" data-variant="design-lead">Risk tiering of changes — what merges automatically, what gets a glance, what gets a conversation — becomes a standing part of how your team ships, and it needs a {domain}-specific answer rather than a default.</p>
+      <p class="impact-variant" data-variant="strategist">Vendor claims about tenfold usage growth and revenue say nothing about output quality; before betting a roadmap on agent-managed teams, insist on seeing the defect and rollback rates, which no vendor is publishing.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="systems-thinking,critique" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write the auto-merge rule for your {focus} surface as if a Bot would enforce it tomorrow: list ten kinds of visual change (colour token swap, spacing change, copy edit, icon replacement, state added, order changed, and so on) and for each write "auto-merge", "human glance" or "conversation" with one sentence of reasoning tied to your {domain} users. Then find the two cases where "changing a button's colour" would actually be high-risk in your product and write them up as the counter-examples you would hand an engineering lead.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Rewrite your team's design review ritual for a world where an agent asks scoping questions in Slack at 2am: draft a one-page "how to answer a Bot" guide for engineers and PMs covering which questions must be routed to a designer, what a good one-sentence answer contains, and how decisions made in those threads get back into the {domain} design system. Share it with your engineering counterpart and record the one point they push back on.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo on what changes for your {domain} product if keeping a second platform in sync costs a Bot budget instead of a team: list three things that become commodity (parity, port speed, maintenance), then name the one platform-specific {focus} decision that only a designer with taste for that platform can make, and argue whether it is worth keeping a human on it. End with a recommendation on where the freed budget should go.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="image-gen">
+    <h5 class="category-label">Image gen</h5>
+<article class="entry"
+         data-id="2026-11-18-pics-nano-banana-2-1"
+         data-category="image-gen"
+         data-published="2026-11-16"
+         data-tags="google,nano-banana,google-pics,image-gen,docs,slides,text-rendering">
+  <div class="head">
+    <h6 class="headline">Google Pics moves to Nano Banana 2.1 inside Docs and Slides: fewer unrequested edits, better text rendering, same speed, no opt-out for the upgrade</h6>
+    <span class="badge image-gen">Image gen</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-16">Published November 16, 2026</time></p>
+  <p class="summary">Google Workspace Updates announced on November 16 that Google Pics — the image generation and editing layer in Workspace, including directly inside Google Docs and Slides — has been upgraded to Nano Banana 2.1 across all existing generation and editing features. Google claims improved realism, "significantly fewer unrequested changes" to surrounding content when editing, and better text rendering, at speed comparable to the previous model; it published no numbers. Rollout is full (one to three days to visibility) from November 16 for Business Standard and Plus, Enterprise Standard and Plus, consumer Google AI Plus, Pro and Ultra, Google AI Pro for Education and the AI Expanded Access add-on. There is no admin control for the model upgrade itself; Pics as a whole stays on by default and can be disabled at domain, OU or group level. The post says nothing about the Gemini API, AI Studio, SynthID or pricing.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Every deck and doc in a Workspace organisation now has a near-production image generator one click away, and edit precision was the main reason people still exported to a real tool. Illustration and marketing imagery inside collaboration tools is becoming a default behaviour, not a request that reaches a designer.</p>
+  <p class="source"><a href="https://workspaceupdates.googleblog.com/2026/11/google-pics-upgrades-to-nano-banana-21-for-higher-quality-image-generation-and-editing.html" target="_blank" rel="noopener">Source — Google Workspace Updates</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Stakeholders will now arrive at {focus} reviews with generated imagery already placed in the deck, so your role shifts from producing the image to deciding whether an image belongs there at all and whether the generated one says the wrong thing about the product.</p>
+      <p class="impact-variant" data-variant="design-lead">Brand consistency in {domain} decks and docs is about to degrade quietly, one well-rendered off-brand image at a time, and your team needs a lightweight visual standard that non-designers can apply to generated images before you are asked to police every slide.</p>
+      <p class="impact-variant" data-variant="strategist">Image generation embedded in the document, not in a creative tool, means the creative-suite seat is no longer where most of your org's imagery gets made; plan tooling spend and brand governance around that reality.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs have already stopped making deck imagery by hand and use whichever generator is nearest; the ones paying attention are keeping a reference set of generated images that went wrong in a way nobody noticed until a customer did.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are being asked for "image guidelines" by marketing and sales who are generating freely, and most are improvising a one-pager rather than treating it as a design-system component.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are watching Google, Adobe and Canva each put their model into the document surface and noticing that the fight is for the default, since nobody switches tools to generate a picture.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Making the image was never the valuable part of a {focus} deck; deciding what to show was, and that remains yours — but the artefact now arrives generated, so the craft is editing and art direction rather than production.</p>
+      <p class="impact-variant" data-variant="design-lead">Brand and illustration standards become enforcement artefacts applied by non-designers, which reshapes how your team maintains visual quality without changing what quality means.</p>
+      <p class="impact-variant" data-variant="strategist">This is an incremental model upgrade in an existing surface, not a reframe; the strategic shift — generation living in the document — already happened and this release makes it good enough to stop fighting.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">If your {domain} product has any surface where users place images — profiles, listings, reports — assume they will soon be generated in-place and design the constraints (size, subject, text-in-image) that keep your {focus} surface coherent.</p>
+      <p class="impact-variant" data-variant="design-lead">Features that depended on users not having imagery — stock libraries, templates with placeholder art — lose value quickly, while features that constrain or validate imagery against a brand gain it.</p>
+      <p class="impact-variant" data-variant="strategist">The "no admin control for the model upgrade" detail is the product lesson: Google treats model swaps as invisible infrastructure, and your customers will expect the same from your {domain} product — model changes that never require their attention.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">Take a real {focus} slide from a recent deck that had a hand-made or stock image. Regenerate the image three times inside Slides (or any current image model) with the brief you would give a junior illustrator. Write a short art-direction critique of all three: which one a stakeholder would pick, which one you would pick, and the one sentence of brief that would have closed the gap. Keep the critique — it is the start of an image standard for your {domain} work.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page "generated imagery standard" for your {domain} org as a design-system component, not a memo: five rules a non-designer can check in ten seconds (subject, style, text-in-image, people, brand colour), two example prompts that produce on-standard results, and one example of an image that looks fine but is off-standard, with the reason. Share it with the marketing or sales lead who generates the most and ask them to break it; log what they found.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Inventory every place in your {domain} product where a user supplies or sees an image, and sort them into "will be generated in-place within a year" and "must stay authentic" (photos of real things, evidence, identity). Write a one-paragraph memo recommending what your product should do about the first pile — constrain, generate for them, or ignore — and how it will signal authenticity in the second, naming the {focus} surface where getting this wrong costs trust.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="pm-tools">
+    <h5 class="category-label">PM tools</h5>
+<article class="entry"
+         data-id="2026-11-18-claude-linked-billing"
+         data-category="pm-tools"
+         data-published="2026-11-17"
+         data-tags="anthropic,claude-platform,billing,pricing,monetisation,linear,warp">
+  <div class="head">
+    <h6 class="headline">Anthropic's Linked billing lets a customer pay for a third-party app's Claude usage from their own Anthropic account: no API key changes hands, spend caps per app, 19 launch partners including Linear, Asana and Warp</h6>
+    <span class="badge pm-tools">PM tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-17">Published November 17, 2026</time></p>
+  <p class="summary">Anthropic launched Linked billing in beta on the Claude Platform on November 17. A third-party product that embeds Claude can send a customer through an Anthropic-hosted flow that links the customer's Claude Platform organisation once; the customer then approves each platform, sets a monthly spend limit per platform (or a default), sees per-platform spend in the Console, and can unlink at any time. Usage can draw down an existing Anthropic commitment or run pay-as-you-go. The platform decides per request, via a billing_policy field, whether it or the customer pays, and can see per-customer request counts, tokens and models. Launch partners are Asana, ClickHouse, Factory, Gumloop, Harness, Higgsfield AI, Kilo Code, Linear, Major, Mintlify, Omni, OpenArt, Niteshift, Railway, Ramp, Runlayer, Tessera, Tines and Warp. The caveat Anthropic states plainly: requests run in the platform's organisation, so the customer's own IP allowlists, encryption keys and data-retention settings do not apply.</p>
+  <p class="why"><strong>Why this matters for you:</strong> This is the beginning of the end of "AI credits" as the billing UX for a large class of B2B tools — the model cost moves to the customer's own Anthropic bill. Pricing pages, upgrade nudges and usage meters designed around credits in your {domain} product need rethinking, and so does the trust story around that data-retention caveat.</p>
+  <p class="source"><a href="https://claude.com/resources/articles/linked-billing-on-claude-platform" target="_blank" rel="noopener">Source — Anthropic (claude.com)</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">If your {focus} feature calls a model, you may soon be designing a "link your Anthropic account" moment, a per-app spend cap, and an explanation of why the customer's data settings do not apply — all trust-sensitive flows that credits hid from you.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's pricing-page and paywall work gets a new branch: customers who bring their own model billing versus customers on your bundled credits, and the two groups will see different upgrade prompts, meters and limits.</p>
+      <p class="impact-variant" data-variant="strategist">Model cost moving to the customer's bill changes your {domain} product's margin structure and its competitive story: you no longer mark up tokens, so you must charge for the workflow, which is a packaging redesign, not a feature.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs on AI features have mostly been designing credit meters and "you're out of generations" states; almost none have designed a bring-your-own-billing flow, and the early ones are copying OAuth connect patterns without addressing the spend-cap and data-settings questions.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads at the launch partners are learning that the hard design problem is not the link flow but explaining to a customer's admin why usage shows up on their Anthropic bill under the platform's name with the platform's data policy.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are reading the partner list — coding agents, workflow tools, project management, finance ops — as the categories where customers already push back on AI credit mark-ups, and asking whether their {domain} is next.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Monetisation UX for AI features is being rebuilt around the customer's own model account rather than your credits; the screens are different but the job — making cost legible and controllable — is the same craft.</p>
+      <p class="impact-variant" data-variant="design-lead">Expect bring-your-own-billing to become a standard enterprise requirement across labs within a year, which reshapes how your team designs pricing and account surfaces without changing what the product is.</p>
+      <p class="impact-variant" data-variant="strategist">This is Anthropic's answer to the enterprise habit of consolidating AI spend with one lab; it is a market-structure move that reshapes vendor packaging, not a new way of thinking about products.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Specs for AI features in your {domain} product should state who pays for each call and what the user sees about it; "it uses credits" is no longer a complete answer.</p>
+      <p class="impact-variant" data-variant="design-lead">Prioritise the account and billing surfaces you have been deferring: when the customer can cap your app's spend from someone else's console, your product's own usage views need to be at least as clear as Anthropic's.</p>
+      <p class="impact-variant" data-variant="strategist">If customers pay the lab directly for tokens, the value your {focus} product can charge for is exactly the judgement, workflow and data it adds on top; that is a sharper test of your roadmap than any competitor analysis.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Design the three screens of a bring-your-own-billing flow for a {focus} feature in your {domain} product: the moment you ask the customer to link their model account, the spend-cap setting, and the one screen that explains honestly that your data-retention settings — not theirs — apply to those requests. Then write a short critique of your own third screen: what would a customer's security admin still not understand after reading it? Fix the copy until that critique is empty.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Map every surface in your {domain} product where AI cost is visible to the user — meters, limits, upgrade prompts, invoices — on one page. Then book 30 minutes with the PM or finance partner who owns pricing and ask one question: if a customer paid the model vendor directly, which of these surfaces would we delete, which would we keep and what would we charge for instead? Write up their answer as a one-page proposal for how the team's pricing UX should change in the next two quarters.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo recommending whether your {domain} product should support bring-your-own model billing. State the margin you currently make on marked-up model usage, the enterprise deals you have lost or slowed over AI pricing, the trust cost of the "our data policy applies, not yours" caveat, and what you would charge for once tokens are off your bill. Recommend adopt, wait or decline, and name the {focus} capability that justifies your price if tokens are free to you.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-11-17">
   <h4 class="day">Tuesday, November 17 <span class="day-date">&mdash; today's briefing</span></h4>
   <div class="category-group" data-category="generative-ui">
     <h5 class="category-label">Generative UI</h5>
