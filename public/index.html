@@ -1127,7 +1127,484 @@
 
   <section class="month-section" data-month="2026-11">
     <h3 class="month">November 2026</h3>
-<section class="day-section" id="today" data-date="2026-11-18">
+<section class="day-section" id="today" data-date="2026-11-19">
+  <h4 class="day">Thursday, November 19 <span class="day-date">&mdash; today's briefing</span></h4>
+  <div class="category-group" data-category="models">
+    <h5 class="category-label">Models</h5>
+<article class="entry"
+         data-id="2026-11-19-gemini-4-neon"
+         data-category="models"
+         data-published="2026-11-18"
+         data-tags="google,gemini-4-neon,models,pricing,benchmarks">
+  <div class="head">
+    <h6 class="headline">Google ships Gemini 4 Neon, a $3/$15 middle tier between Carbon and Hydrogen and its fourth Gemini 4 model in under two months</h6>
+    <span class="badge models">Models</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Google released Gemini 4 Neon on November 18 into the Gemini API, AI Studio and its enterprise products, and into the Gemini app and Antigravity for AI Pro and Ultra subscribers. It costs $3 per million input tokens and $15 output with a 1M-token context, sitting between Carbon ($4/$20 standard, $2/$10 until November 30) and Hydrogen ($1.50/$7.50). Google's model card shows Neon ahead of Claude Opus 5.5 and GPT-6.2 Sol in 13 of the 16 benchmark rows all three share, with the widest gap on GraphWalks (95.2 vs 66.8 and 80.1); Opus leads on Terminal-Bench 4.1 and FrontierCode 2.0, Sol on Chartography. Artificial Analysis' independent measurement puts Neon at 61 on its Intelligence Index, one to two points above Opus 5.5 and Sol, with time per task rising from 14.8 to 21.5 minutes at the highest thinking level. Google's own materials say it "can still hallucinate". 9to5Google reports Neon replaces Argon and Gemini 3.1 Pro in the app's model picker, which Google has not confirmed.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Four Gemini 4 tiers in eight weeks means "which model" is now a product decision with a visible cost and latency curve, not a setting engineering picks once. The independent deltas between Neon, Opus 5.5 and Sol are small enough that your {focus} prototypes will differ more by prompt and context than by vendor.</p>
+  <p class="source"><a href="https://www.therundown.ai/news/google-gemini-4-neon-release" target="_blank" rel="noopener">Source — The Rundown AI</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">With four Google tiers plus the OpenAI and Anthropic ones, the model menu in Antigravity, Cursor or Claude Code is now longer than most component libraries; pick a default for {domain} work and switch only when a specific task fails, not because a new name appeared.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team will spend real money trying Neon at $15 output on work Hydrogen does for half; set a team default and an escalation rule rather than leaving tier choice to each designer.</p>
+      <p class="impact-variant" data-variant="strategist">Google is segmenting the frontier into price tiers the way cloud compute was segmented; budget design tooling as a variable cost that scales with usage rather than a per-seat licence.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs are reading the vendor benchmark table rather than Artificial Analysis, and treating "leads 13 of 16 rows" as "better for my work", which it is not for UI generation, where none of those benchmarks apply.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are mostly not recording which model produced which prototype, so when a Neon-built {focus} flow misleads a stakeholder nobody can attribute the problem.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are noticing that Neon's one-to-two-point lead over Opus 5.5 and Sol on independent indices is within noise, and are shifting vendor conversations from capability to context window, data residency and price lock-in.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Tiered models change how you work (cheap draft, expensive review) without changing what design is; it is a workflow reshaping, not a reframe.</p>
+      <p class="impact-variant" data-variant="design-lead">Running a design team now includes a cost-and-quality routing policy, which is new ops work inside the existing frame.</p>
+      <p class="impact-variant" data-variant="strategist">Price-tiered frontier models are AI normalising into infrastructure; that reshapes procurement and planning rather than rethinking what design delivers.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">"Good enough and five times cheaper" is a decision you make in your own tooling before you make it in your product, and practising it on your own work is the fastest way to learn to make it for users.</p>
+      <p class="impact-variant" data-variant="design-lead">Teams shipping AI features need a tier-selection story in their specs: which user tasks justify Neon-class latency and cost, and which must stay on a Hydrogen-class budget.</p>
+      <p class="impact-variant" data-variant="strategist">Model tiering makes unit economics legible per feature; the org's AI roadmap should be priced per user task, not per vendor contract.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Take one {focus} screen brief and run it through two tiers (Neon and Hydrogen, or the equivalents on your stack) with an identical prompt. Write a 150-word comparison naming three concrete differences in the output and whether any of them would be worth twice the cost to a user in {domain}. The comparison, not the screens, is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Tool mastery</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Draft a one-page model-routing policy for your team: a default tier for {domain} prototyping, the two conditions that justify escalating to the frontier tier, and how prototypes record which model made them. Circulate it for comment before the end of the week.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo for your finance or platform partner estimating your org's design-tooling model spend under two assumptions: everything on a frontier tier versus a routed mid-tier default. Use the published $3/$15 and $1.50/$7.50 prices and your team's realistic weekly volume, and recommend one.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="industry">
+    <h5 class="category-label">Industry</h5>
+<article class="entry"
+         data-id="2026-11-19-anthropic-ipo-ant"
+         data-category="industry"
+         data-published="2026-11-18"
+         data-tags="anthropic,ipo,nasdaq,funding,industry">
+  <div class="head">
+    <h6 class="headline">Anthropic prices its IPO at $83 a share, above the $70–78 range, and begins trading on Nasdaq as ANT at a reported $1.5 trillion fully diluted valuation</h6>
+    <span class="badge industry">Industry</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Anthropic reportedly priced its initial public offering at $83 per share on November 18, above its $70–78 range, with shares due to start trading on Nasdaq on November 19 under the ticker ANT. TechCrunch puts the fully diluted valuation at roughly $1.5 trillion, up from $965 billion at its May private round and below the $2 trillion it had reportedly aimed for. Reports on the total raise conflict: Bloomberg says $107.3 billion including an upsized offering and a $26 billion private placement of non-voting shares to AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC Partners, while the FT reports $81 billion. Amazon holds nearly 15% and Google almost 14% after the offering, and each of the seven co-founders reportedly sold about 3.4 million shares. It is the first frontier lab to go public.</p>
+  <p class="why"><strong>Why this matters for you:</strong> The company behind Claude Code, Claude Design and the models inside half your tooling now reports quarterly to public shareholders, which changes how it prices, gates and deprecates. Vendor stability just became more legible and more exposed to market pressure at the same time.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Nothing in Claude changes this week, but a public company's roadmap is shaped by quarterly numbers; expect faster monetisation of features you have used free and plan your {focus} tooling around paid tiers.</p>
+      <p class="impact-variant" data-variant="design-lead">Procurement conversations about Anthropic will now cite filings and earnings calls instead of blog posts; your team's dependency on Claude-based tools becomes a line in a risk register, not a preference.</p>
+      <p class="impact-variant" data-variant="strategist">A $1.5 trillion public AI lab is a counterparty your org can evaluate like any other vendor, with disclosed revenue, concentration and governance; use that to renegotiate or diversify.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs are mostly treating this as finance news, which is wrong in one respect: the free-tier and usage-cap decisions of the next two quarters will land on their workflows first.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads at larger orgs are being asked by legal and finance whether design tooling depends on a single lab, and most cannot answer precisely because tool sprawl hides it.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are reading the S-1 for revenue concentration and compute commitments, since those predict pricing behaviour better than any product announcement.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="passing-trend">Passing trend</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">An IPO does not change a single thing about how you design; it changes who your vendor answers to. File it and watch the pricing pages.</p>
+      <p class="impact-variant" data-variant="design-lead">For team process this is background noise; the one lasting effect is that vendor risk becomes a standing agenda item, which is governance, not craft.</p>
+      <p class="impact-variant" data-variant="strategist">Public-market discipline on frontier labs matters for procurement, but it does not alter the shape of design work; a real reframe would need the business model to change, not the cap table.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Watch how a product company behaves once it has to show margin: feature gating, usage tiers and deprecation notices are product decisions you will soon study as a user.</p>
+      <p class="impact-variant" data-variant="design-lead">Public disclosure of a lab's economics gives your team real numbers for the cost of intelligence; use them when debating whether an AI feature can afford its inference bill.</p>
+      <p class="impact-variant" data-variant="strategist">With disclosed revenue and compute costs, "what does an AI feature cost to serve" stops being a guess; product strategy can price agentic features against a known supplier margin.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="systems-thinking,judgement" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">List every tool in your daily {domain} workflow and mark which depend on Anthropic, OpenAI or Google models. Write a 100-word note on which single dependency would hurt most if its price doubled or its free tier vanished, and one concrete fallback.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,advocacy" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Build a one-page vendor-dependency map for your team's design tooling: tool, underlying model provider, contract type, replacement cost. Send it to your engineering or procurement counterpart with one specific question about shared risk.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Advocacy</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo arguing for or against standardising your org's design and prototyping stack on a single frontier lab now that one is public. Name the specific trade-off between negotiating leverage and switching cost, and recommend a position.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="coding-agents">
+    <h5 class="category-label">Coding agents</h5>
+<article class="entry"
+         data-id="2026-11-19-snap-easy-lens-cli"
+         data-category="coding-agents"
+         data-published="2026-11-18"
+         data-tags="snapchat,ar,claude-code,cursor,codex,cli">
+  <div class="head">
+    <h6 class="headline">Snap ships Easy Lens CLI: Claude Code, Cursor and Codex can now build, preview and publish Snapchat AR Lenses end to end from a plain-language description</h6>
+    <span class="badge coding-agents">Coding agents</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Snap announced Easy Lens CLI on November 18, a command-line tool that lets AI coding assistants — Snap names Claude Code, Cursor and Codex — build Snapchat Lenses without the developer writing code. The assistant can draw on more than 100 AR building blocks and 50 AI asset generators, generate previews, push updated builds straight to the creator's phone, publish to Snapchat and track performance. Snap says the scope covers Web Lens games with leaderboards, camera effects and beauty filters, and that a game can go from idea to published Lens in a day. It runs on Mac, Windows and Linux. Lenses made this way qualify for Lens+ Payouts, which Snap says paid creators $1.8 million last month. Snap has not said whether the CLI is an MCP server, an SDK or a skills package, and the idea-to-published-in-a-day claim is Snap's own.</p>
+  <p class="why"><strong>Why this matters for you:</strong> A platform just made its creative tool the coding agent you already use rather than a bespoke editor. If AR authoring collapses into "describe it to Claude Code", the designer's value moves from knowing Lens Studio to knowing what a good {focus} Lens is.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-coding-assistants-like-claude-code-and-cursor/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You can now prototype an AR interaction for {domain} in the same terminal session as your web prototype, with a preview on your phone in minutes, which makes AR something you try rather than a specialist handoff.</p>
+      <p class="impact-variant" data-variant="design-lead">The specialist AR role on your team becomes a review-and-taste role; plan for generalists producing Lens drafts and one person who knows what makes them worth shipping.</p>
+      <p class="impact-variant" data-variant="strategist">Platforms are shipping agent-first creator tooling instead of GUI editors; evaluate whether your own platform's extension surface should be a CLI for agents before it is a canvas for humans.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most product designers have never opened Lens Studio and will now try a Lens through Claude Code because the barrier dropped to one prompt; the first results will look like every other generated Lens.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are not yet treating AR as part of the {domain} design surface and have no critique vocabulary for it, so generated Lenses ship or die on novelty.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists at consumer brands are asking whether an agent-built Lens is a cheap enough marketing surface to run as a weekly experiment instead of a quarterly agency project.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Agent-built AR changes the tooling for a niche craft without changing what makes an AR effect good; the taste work survives, the tool knowledge does not.</p>
+      <p class="impact-variant" data-variant="design-lead">It reshapes team composition for creative-platform work, but within the existing frame of designers directing output and critiquing it.</p>
+      <p class="impact-variant" data-variant="strategist">Agent-first creator tooling is a distribution shift for platforms, significant but incremental; the frame of "platform provides tools, creators provide ideas" holds.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">When the tool is the agent, the product's real interface is its building blocks and asset generators; think about which primitives your own product exposes to agents.</p>
+      <p class="impact-variant" data-variant="design-lead">Snap is betting that lowering the floor grows the creator base more than it erodes quality; watch Lens quality and payouts over the next quarter as a case study in that bet.</p>
+      <p class="impact-variant" data-variant="strategist">A CLI for agents is a decision about who the customer is: the human creator or the agent acting for them. Decide which your platform optimises for before a competitor does.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Describe a {focus}-themed Lens to your coding agent through Easy Lens CLI, or if you cannot install it, write the exact prompt you would give. Then write a 200-word critique of the result (or the result you expect) naming three things a generated Lens will get wrong about timing, framing or restraint that a designer with taste would fix.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,design-ops" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Run a 30-minute conversation with your marketing or growth counterpart: if a branded AR effect for {domain} now costs a day instead of a quarter, what would you test weekly? Write down the three experiments you agree on and who owns critique of the output.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Design ops</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo on whether your product should expose an agent-first creator surface (CLI, MCP or skills) before or instead of a visual editor. Name three things a generated artefact would commoditise and the one thing your platform's taste or data uniquely adds.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="3d-gen">
+    <h5 class="category-label">3D gen</h5>
+<article class="entry"
+         data-id="2026-11-19-genie-4-project-genie"
+         data-category="3d-gen"
+         data-published="2026-11-18"
+         data-tags="google,genie-4,world-models,3d,audio,synthid">
+  <div class="head">
+    <h6 class="headline">Google rolls Genie 4 into Project Genie for AI Ultra subscribers, with a creation agent that builds worlds from conversation, mid-session edits, native audio and a remix gallery</h6>
+    <span class="badge 3d-gen">3D gen</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Google began rolling out Genie 4, its interactive world model, to eligible Google AI Ultra subscribers inside the browser-based Project Genie on November 18, with AI Pro members on a waitlist. New in this release: a creation agent that builds a world through a back-and-forth conversation rather than a single prompt, mid-session prompts that change the weather, add a character or redirect events, native audio from ambience to character dialogue, and a community gallery where users share and remix each other's worlds. Genie 3 stays available for longer runs, now up to three minutes rather than 60 seconds. Google calls both research systems: details drift in long sessions, readable text and complex physics remain hard, and all output carries SynthID watermarks. Genie 4 was first shown to testers in October.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Interactive environments you can steer in real time are now a consumer-tier creative surface, not a research demo. For {domain} work that involves spatial, game-like or narrative experiences, the prototype medium just moved from video to something a stakeholder can walk through and change.</p>
+  <p class="source"><a href="https://thenextweb.com/news/google-genie-4-project-genie-ai-ultra-world-model" target="_blank" rel="noopener">Source — The Next Web</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You can prototype an environment or scenario for {focus} as a playable world and edit it live in a review instead of re-rendering a video; the catch is that text and physics will not be reliable, so use it for mood and flow, not for UI.</p>
+      <p class="impact-variant" data-variant="design-lead">Reviews of spatial or narrative concepts can become interactive sessions; decide as a team which {domain} questions a steerable world answers better than a storyboard, and which it muddles.</p>
+      <p class="impact-variant" data-variant="strategist">Google is positioning world models as a creative subscription feature alongside image and video generation; treat it as a signal that "interactive" joins "image" and "video" in the standard generative stack within a year.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">A small number of game and spatial designers are using Project Genie for blockout-style mood exploration; most product designers have not touched it and are not sure what they would use it for.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are not budgeting Ultra-tier seats for world models, which is sensible until a project needs environmental prototyping; a few teams in automotive, retail and gaming are running pilots.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are watching whether the remix gallery produces a creator community the way image models did, because that is what would turn a research system into a platform.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">A medium you converse with and change while inside it is not an upgrade to video or 3D tooling; it is a different kind of artefact, and your critique skills for it do not exist yet.</p>
+      <p class="impact-variant" data-variant="design-lead">Steerable worlds collapse the distinction between prototype, demo and test environment, which is a reframe of what a review session is.</p>
+      <p class="impact-variant" data-variant="strategist">World models are the first generative output that is itself interactive software; if they become reliable, "generate the product, not a picture of it" stops being a metaphor.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Mid-session editing by prompt is a product pattern worth studying for any {domain} tool: the user changes the thing while using it, with no mode switch.</p>
+      <p class="impact-variant" data-variant="design-lead">Google shipped its limits plainly (drift, text, physics, watermarks); copy that disclosure pattern when your team ships generative features with known failure modes.</p>
+      <p class="impact-variant" data-variant="strategist">The gallery-and-remix loop is Google's community strategy for world models; any org planning generative features should decide early whether outputs are private artefacts or shareable, remixable objects.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="craft,critique" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">If you have Ultra access, build a small {focus} environment with the creation agent and change it three times mid-session; otherwise storyboard the conversation you would have with it. Then write a 200-word critique of what a steerable world does for understanding a {domain} scenario that a video or clickable prototype cannot, and what it gets wrong.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Map your team's current review formats (static, clickable, video, live demo) against the kinds of questions each answers. Add "steerable world" as a row and write half a page on which {domain} questions it should own and what new critique vocabulary the team would need.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo for leadership on whether interactive world generation is relevant to your product in the next 18 months. Name the one {domain} use case that would justify Ultra seats and a pilot, the limits Google itself lists (text, physics, drift), and a recommendation.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="tools">
+    <h5 class="category-label">Tools</h5>
+<article class="entry"
+         data-id="2026-11-19-gemini-tasks-free-hydrogen"
+         data-category="tools"
+         data-published="2026-11-18"
+         data-tags="google,gemini,agents,tasks,commerce,ucp">
+  <div class="head">
+    <h6 class="headline">Google makes Gemini's agentic Task mode free in six countries, moves it to Gemini 4 Hydrogen, adds per-step feedback and confirmation before purchases, and commits to the Universal Commerce Protocol</h6>
+    <span class="badge tools">Tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Google's Josh Woodward announced on November 18 that Gemini's agentic Task mode, the renamed Spark assistant, is now free in the US, Japan, Korea, Canada, Australia and India, where Anthropic and OpenAI charge for comparable agents. It now runs on Gemini 4 Hydrogen, which Google says completes some tasks 2.8x faster than its previous entry model by running in parallel steps that used to run in sequence. Users can give feedback after each step, and the agent asks before sensitive actions such as purchases. Payments go through Google Wallet today; Google is working with American Express, Mastercard and Visa on tokenised card details for merchants and plans to adopt the Universal Commerce Protocol. Each task runs in a hardware-isolated VM on Google Cloud's Agent Compute Engine tied to the user's account, and Task mode can use Gmail data such as past purchases without moving it off Google infrastructure. The Verge reports extra US features including business calls and Google Pay checkout. The speed figure is Google's.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Per-step feedback and confirm-before-purchase are the first mainstream UI answers to "how does a user supervise an agent", shipped free to hundreds of millions of people. Whatever {focus} agent you design will be compared to this pattern by default.</p>
+  <p class="source"><a href="https://siliconangle.com/2026/11/18/google-upgrades-geminis-agentic-task-mode-with-new-model-e-commerce-features/" target="_blank" rel="noopener">Source — SiliconANGLE</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">You now have a free, widely used reference for agent supervision UI; study its per-step feedback and confirmation moments before designing your own {focus} agent's checkpoints, then decide where you would diverge and why.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's agentic flows will be judged by users against a free Google default; make "how does our supervision model compare" a standing critique question.</p>
+      <p class="impact-variant" data-variant="strategist">Google is pricing agentic tasks at zero to own the consumer habit and the commerce rails (Wallet, tokenisation, UCP); if your {domain} has a purchase step, your agent strategy is now a distribution question, not a feature one.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs designing agents are still inventing supervision UI from scratch in Figma; very few have run a real multi-step agent task end to end and noted where they wanted to intervene.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are discovering their teams have no shared language for agent checkpoints (confirm, review, undo, abort) and are borrowing it from whichever product shipped first.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists in retail and travel are watching UCP and the card networks' tokenisation work, since United's block last week and Google's free agent this week show the rules of agent commerce being set by platforms and networks, not merchants.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Supervision UI for agents is a new pattern library inside the existing craft of interaction design; it reshapes what you design, not what design is.</p>
+      <p class="impact-variant" data-variant="design-lead">Teams need agent-checkpoint patterns the way they once needed form-validation patterns; that is a vocabulary expansion, a reshaping rather than a reframe.</p>
+      <p class="impact-variant" data-variant="strategist">Free agents plus standard commerce protocols reshape distribution economics; the structural reframe would come only if agents, not apps, became the primary customer surface, which is not yet shown.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">"Ask before sensitive actions" is a product decision about where trust is cheap and where it is expensive; map that line for your own {domain} before you draw a single screen.</p>
+      <p class="impact-variant" data-variant="design-lead">Google's hardware-isolated per-task VM is a trust architecture presented as a product feature; your specs for agentic features should state the isolation story, not leave it to engineering.</p>
+      <p class="impact-variant" data-variant="strategist">Zero-price agentic tasks mean the margin is in commerce take-rates and data gravity, not subscriptions; product strategy for any agent in {domain} should name where the money actually is.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Run one multi-step Gemini task that involves a choice and a purchase-like step, or walk through one closely from the coverage if you are outside the six countries. Write a 200-word critique of its supervision UI: where per-step feedback helped, where the confirmation came too late or too early, and one checkpoint you would design differently for {focus}.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Draft a one-page agent-checkpoint vocabulary for your team (confirm, review, edit, undo, abort, escalate) with a {domain} example of each. Share it with your PM and engineering leads and ask which ones the current roadmap lacks.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo on how your org should respond to free consumer agents with commerce rails: build your own agent, expose your {domain} to Google's and others' through UCP-style protocols, or block them as United did. Name the trade-off and recommend one.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="case-studies">
+    <h5 class="category-label">Case studies</h5>
+<article class="entry"
+         data-id="2026-11-19-airbnb-cost-per-task"
+         data-category="case-studies"
+         data-published="2026-11-18"
+         data-tags="airbnb,bedrock,coding-agents,cost,evals,model-routing">
+  <div class="head">
+    <h6 class="headline">Airbnb publishes how it runs coding agents on cost per task: evals set a default model and an effort ceiling per tool, and two-thirds of requests moved to eight new models within five weeks</h6>
+    <span class="badge case-studies">Case studies</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">In an AWS Machine Learning blog post on November 18, Airbnb engineers describe how they operate AirChat, the internal tool thousands of engineers use each week to run coding agents on Amazon Bedrock through the company's LLM gateway. The core metric is cost per task: the list-price cost of every token (uncached input, cache reads, cache writes and output) an agent uses to finish one task. Each new model runs through seven eval suites with first results in hours; score and cost per task at each reasoning effort then set a default model and effort for each tool and an effort ceiling the gateway enforces, blocking any setting that costs more and scores less than a cheaper one. Eight new models arrived in about five weeks, and by mid-October roughly two-thirds of requests ran on them. One anonymised model scored three points higher at the same cost per task, yet in production each request cost about 3x and users sent about 3x as many, so weekly spend per user rose several-fold until heavy users were moved to a newer model at about a sixth of the cost. Raising one model from low to high effort gained 0.8 points for 2.5x the cost. The post gives no company-wide savings total.</p>
+  <p class="why"><strong>Why this matters for you:</strong> This is the most concrete public account yet of how a product company decides which model does which work, and it is a design problem: the metric, the ceiling and the default are choices about what "good enough" means for a task. Your {focus} tooling and your product's AI features both need this kind of rule.</p>
+  <p class="source"><a href="https://aws.amazon.com/blogs/machine-learning/how-airbnb-uses-cost-per-task-to-operate-coding-agents-on-amazon-bedrock" target="_blank" rel="noopener">Source — AWS Machine Learning Blog</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Airbnb's rule that higher effort must earn its cost is one you can apply by hand to your own {focus} prototyping today: before turning a model up to high thinking, ask what the extra quality buys the user.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's AI tooling has defaults and ceilings whether or not anyone set them; Airbnb shows what it looks like to set them deliberately, with evals instead of opinions.</p>
+      <p class="impact-variant" data-variant="strategist">Cost per task turns AI spend into a unit economic the org can forecast per workflow; adopt it as the shared metric across design, engineering and finance for any agentic {domain} feature.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most designers using agents do not know what a task costs them and have never seen the token breakdown; a few are starting to notice that a "better model" tripled their usage, which is exactly the behaviour Airbnb measured.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are negotiating seat counts with vendors when the real variable is per-task cost at each effort level, and almost none have evals that would let them set a ceiling.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists at platform companies are building LLM gateways and routing policies as infrastructure; the design org is usually not at that table and should be, because the ceilings decide what quality users get.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Measuring cost per task changes how you choose tools, not what you make; it is operational discipline added to the craft.</p>
+      <p class="impact-variant" data-variant="design-lead">Eval-driven defaults and ceilings are new design-ops work that sits inside the existing frame of running a team well.</p>
+      <p class="impact-variant" data-variant="strategist">Cost per task is AI's equivalent of cost per acquisition: a maturity step that reshapes planning, not a reframe of what product development is.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Airbnb's finding that a better model made users send 3x more requests is a behaviour-design insight: quality changes demand, so a feature's cost model has to assume the usage it induces.</p>
+      <p class="impact-variant" data-variant="design-lead">Every agentic feature spec should state its target cost per task and the ceiling the gateway enforces, or the feature's quality will be set by whoever manages the bill.</p>
+      <p class="impact-variant" data-variant="strategist">Model routing by eval score and cost per task is a product capability, not plumbing; orgs that treat it as a platform investment will ship agentic {domain} features competitors cannot afford to serve.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,tool-mastery" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">For one recurring {focus} task you give an agent, record the token usage and list price for the next three runs and estimate your cost per task. Write a 100-word note on whether a cheaper model or lower effort would have produced an acceptable result, and what "acceptable" means for that task.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Tool mastery</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Ask your engineering or platform counterpart how your org's AI tooling currently chooses models and effort levels, and whether any ceiling exists. Write a half-page proposal for a default-and-ceiling policy for your design team's tools, naming the eval you would use to set it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo proposing cost per task as the standard metric for every agentic feature on your {domain} roadmap. Include a worked example using Airbnb's figures (3x requests, 2.5x cost for 0.8 points) and recommend who owns the ceiling.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-11-18">
   <h4 class="day">Wednesday, November 18 <span class="day-date">&mdash; today's briefing</span></h4>
   <div class="category-group" data-category="models">
     <h5 class="category-label">Models</h5>
