@@ -1127,7 +1127,484 @@
 
   <section class="month-section" data-month="2026-11">
     <h3 class="month">November 2026</h3>
-<section class="day-section" id="today" data-date="2026-11-19">
+<section class="day-section" id="today" data-date="2026-11-20">
+  <h4 class="day">Friday, November 20 <span class="day-date">&mdash; today's briefing</span></h4>
+  <div class="category-group" data-category="pm-tools">
+    <h5 class="category-label">PM tools</h5>
+<article class="entry"
+         data-id="2026-11-20-stitch-loop"
+         data-category="pm-tools"
+         data-published="2026-11-18"
+         data-tags="google,stitch,product-agent,metrics,mcp,antigravity">
+  <div class="head">
+    <h6 class="headline">Google Labs opens a waitlist for Stitch Loop, a long-running product agent that reads your codebase and live metrics, proposes fixes, opens pull requests and then watches what the change did</h6>
+    <span class="badge pm-tools">PM tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Google Labs announced Stitch Loop on November 18 as an experiment in what it calls a "product agent": you connect a GitHub repository plus product context (logs, user behaviour, feedback, via what Google says are over 180 integrations, custom MCP servers or local CLI uploads) and the agent runs a four-step loop against a goal. Suggestions surfaces candidate improvements; Solutions lays out options with trade-offs and, where relevant, visual design options; Build writes the code in an isolated cloud sandbox and opens a pull request with screenshots or video; Reflect monitors live metrics after the change lands. It ships with three default loops (cybersecurity, pairing Gemini 4 Carbon with DeepMind's CodeMender agent; latency; accessibility) and supports custom loops such as "improve checkout conversion". It plugs into Antigravity and other coding agents through the Stitch CLI and MCP, and into Slack for daily digests. The waitlist opened globally on November 18, with Google AI Ultra subscribers getting priority; no pricing was given. Google's line that it "keeps working 24/7 until your goals are met" is a vendor claim with no independent results behind it yet.</p>
+  <p class="why"><strong>Why this matters for you:</strong> This is the post-launch optimisation loop, the part of product work designers most often hand to analytics and growth teams, run by an agent that also generates its own "visual design options". It will decide what changes in your {focus} product based on a metric unless someone puts a designer, and a set of guardrails, into the loop on purpose.</p>
+  <p class="source"><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/" target="_blank" rel="noopener">Source — Google Labs blog</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">The "Solutions" step produces design options with trade-offs attached, which is the deliverable you used to own; your job shifts to writing the goal and the guardrails well enough that the options it produces for {focus} are ones you would have considered.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's review ritual assumes a designer proposes and engineering builds; a loop that opens pull requests daily with screenshots inverts that, so design review has to move to where the PRs land, not where the Figma file lives.</p>
+      <p class="impact-variant" data-variant="strategist">Stitch Loop makes "continuous improvement" a thing you can switch on per product, which turns design's claim on post-launch quality into something you have to argue for explicitly in the goal and guardrail definitions.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs are not in the room when a product's optimisation goals are set, and the few who have tried agent-driven A/B tooling report that the agent hits the metric with changes they would never have shipped (bigger buttons, more urgency copy).</p>
+      <p class="impact-variant" data-variant="design-lead">Leads at companies already running growth agents are adding a "brand and coherence" veto to the PR template rather than trying to review every change, because the volume is too high for a design critique per PR.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are treating Stitch Loop as the first credible vendor move into the ground Optimizely, Amplitude Experiment and Statsig occupy, and asking whether the experimentation budget or the design budget pays for it.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Once an agent proposes, builds and measures the change, "design" is no longer a stage in a pipeline; it is the set of constraints the pipeline runs under, which is a different frame for what you produce.</p>
+      <p class="impact-variant" data-variant="design-lead">Running a team whose output is reviewed by a metric loop rather than a release train is a structural change to how design work is scheduled and judged, not a tooling upgrade.</p>
+      <p class="impact-variant" data-variant="strategist">A product that improves itself against stated goals forces the org to say what the goals are; most orgs have never written them down precisely enough for a machine, and doing so changes the strategy conversation.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">The metric you hand the loop is the design brief; practising writing a goal with guardrails (what must not degrade) is now a core skill, because a loop will optimise exactly what you asked for and nothing else.</p>
+      <p class="impact-variant" data-variant="design-lead">Teams need an explicit list of changes an agent may make without human sign-off versus those that need a designer, and that list is a product decision your team should draft before the PM does.</p>
+      <p class="impact-variant" data-variant="strategist">Roadmaps assume a fixed cost per improvement; a running loop makes small improvements near-free and shifts scarce human attention to deciding which goals are worth a loop at all.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="judgement,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Pick one live metric in a {domain} product that an agent could plausibly be told to improve (checkout completion, time to first {focus} action). Write a one-page loop brief: the goal metric, three guardrail metrics it must not degrade, and three kinds of change it may not make without a human. Then write a 150-word critique of your own brief: how could an agent hit the goal while making the product worse? The critique is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Judgement</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,cross-functional" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Run a 30-minute conversation with your engineering lead and PM on one question: if an agent opened pull requests against your {domain} product every day, each with screenshots, where in your current review ritual would design sign-off sit? Write the revised ritual as a one-page doc naming who sees which PRs, within what time, and what a design veto looks like.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page memo for your product leadership: should the org treat continuous agent-driven optimisation as a platform capability to adopt now, or hold until governance exists? Name the trade-offs (velocity, accountability, metric gaming, brand coherence), recommend one position, and propose a single {focus} loop as the pilot with its goal and guardrails spelled out.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="tools">
+    <h5 class="category-label">Tools</h5>
+<article class="entry"
+         data-id="2026-11-20-gemini-mac-computer-use"
+         data-category="tools"
+         data-published="2026-11-19"
+         data-tags="google,gemini,computer-use,apple,macos,agents">
+  <div class="head">
+    <h6 class="headline">Google turns on computer use in the Gemini Mac app for US subscribers, the same day Bloomberg reports Apple is building its own Mac agent and adding macOS 27.3 warnings against third-party ones</h6>
+    <span class="badge tools">Tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-19">Published November 19, 2026</time></p>
+  <p class="summary">On November 19 Google added "computer use" to the Gemini desktop app for macOS: the agent navigates native Mac apps and websites in the background while the user watches a live preview inside the chat, keeping their own screen and cursor free, with pause, stop and approve-before-acting controls. Google's suggested uses are filling forms, repeating a task across many files, organising files into folders by criteria and building slideshows from files or dashboard data. It is English and US only and requires a Google AI Plus, Pro or Ultra subscription; Google gave no timeline for other markets or Windows. The same day Bloomberg reported, based on an Apple job posting for a senior engineering manager in agentic AI ("Imagine an AI agent that can use a computer the way a capable person does"), that Apple is building its own agent for device control, app use, browsing and coding, with a possible release as soon as the end of 2027 and progress "in the early stages". Bloomberg also reports macOS 27.3 will show warnings discouraging users from granting full access to third-party agents, following Apple's October note to developers that only "very explicit user action" will grant it. Apple did not comment.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Your Mac app is now something a Gemini agent operates on a user's behalf, and the platform owner is about to make granting that access feel dangerous while it builds a first-party alternative. Designing a {focus} flow for a user who delegates to Gemini and one who heeds Apple's warning is a real fork, not a hypothetical.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Any desktop {focus} flow you design now has a second user: an agent reading your screens through accessibility labels and pixels, so unlabelled icon buttons and clever custom controls become agent failures, not just a11y debt.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team needs an "operable by agent" pass alongside the accessibility pass, and a decision on whether agent-driven sessions are something you instrument and design for or something you try to detect and block.</p>
+      <p class="impact-variant" data-variant="strategist">Two platform owners are now competing for the role of "the agent that uses your software", which means the distribution of your {domain} product partly depends on how well agents can operate it rather than on how it looks.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">A few ICs are running Gemini or Claude's computer use against their own prototypes to see where the agent gets stuck, and finding it stalls on the same places a screen-reader user would; most have not tried.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are mostly waiting for a platform guideline from Apple before committing design time, which the macOS 27.3 warning language suggests will arrive as a restriction, not a pattern library.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are watching the Apple warning as a precedent: if the OS discourages third-party agents, the "agent uses your app" channel narrows to the platform's own agent, which changes who you negotiate with.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Designing screens an agent can operate is a new constraint set inside the same craft of designing screens; it changes checklists, not what a designer is for.</p>
+      <p class="impact-variant" data-variant="design-lead">Agent-operability joins accessibility and localisation as a review gate, which reshapes the team's process without replacing it.</p>
+      <p class="impact-variant" data-variant="strategist">Platform agents competing to operate third-party software reshapes distribution, but the frame (platform owner sets the rules, apps adapt) is the one mobile taught us already.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Approval-before-action in Gemini's preview is the interaction pattern to study: it is how a user keeps agency over an agent, and your {focus} product will need its own version.</p>
+      <p class="impact-variant" data-variant="design-lead">Product teams should decide now whether a task completed by an agent counts as a successful user session, because analytics, onboarding and retention logic all assume a human at the keyboard.</p>
+      <p class="impact-variant" data-variant="strategist">If Apple ships a first-party agent in 2027, "works with the Mac agent" becomes a platform compliance item with a cost; budget for it the way you budgeted for Apple Intelligence integration.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Take one {focus} task in a desktop product you work on and write the instruction a user would give an agent to complete it ("file this expense", "export last month's report"). Walk through your screens as that agent would, noting every control it could not identify from a label or role alone. Produce a list of the failures and a 100-word note on which ones are design debt versus deliberate friction.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Draft a one-page "agent-operable" review checklist for your team covering labels, roles, confirmation steps and error states, and decide in writing whether it becomes a gate in your design review or a separate audit. Circulate it to one engineer and one PM for a reaction before the end of the week.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a memo answering: if 20% of sessions in your {domain} product were driven by Gemini or an Apple agent within two years, what in your current differentiation survives? List three things that become commodity when an agent operates the product, and one thing a human-facing design decision still wins on. Recommend one investment.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="design-tools">
+    <h5 class="category-label">Design tools</h5>
+<article class="entry"
+         data-id="2026-11-20-figma-multi-image"
+         data-category="design-tools"
+         data-published="2026-11-18"
+         data-tags="figma,image-gen,model-comparison,design-tools,weave,mcp">
+  <div class="head">
+    <h6 class="headline">Figma's Make image and Edit image now return two, four or six options from one prompt, or run the same prompt through three image models side by side</h6>
+    <span class="badge design-tools">Design tools</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">A Figma release note dated November 18 says Make image and Edit image now generate multiple candidates per prompt: either two, four or six images from a single model, or the same prompt run across up to three image models at once so you can compare each model's interpretation and keep the best. Figma frames the goal as reaching a usable image with less re-prompting. The note does not name the models or a plan tier; Figma's October note said Weave's video and image models (Seedance, Kling, Nano Banana) are reachable via Figma MCP and consume Weave credits, so it is reasonable to expect that six candidates cost six times one, though Figma has not said so. A separate November 17 note adds an admin allowlist for approved OAuth apps, explicitly including MCP clients such as Cursor and Claude Code, with request reviews in a new Extensions tab for Organization and Enterprise plans, rolling out "over the coming days".</p>
+  <p class="why"><strong>Why this matters for you:</strong> Picking between models becomes a visible, in-canvas decision rather than something buried in a settings menu, and the comparison grid is a critique surface. The OAuth allowlist is the quieter story: your admin can now decide which coding agents are allowed to read your {focus} files at all.</p>
+  <p class="source"><a href="https://www.figma.com/release-notes/" target="_blank" rel="noopener">Source — Figma release notes</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Generating six candidates and three model readings of one prompt turns image generation into a selection task, which is where your taste does the work; the risk is choosing the least bad rather than articulating what a good {focus} image needs.</p>
+      <p class="impact-variant" data-variant="design-lead">Six-up grids will show up in critique as "which one do you like", so your team needs a shared vocabulary for why an image works before the grid, or critique becomes a vote.</p>
+      <p class="impact-variant" data-variant="strategist">The MCP allowlist means design tooling access is now an admin policy decision; whoever owns the Figma admin console now decides which AI coding tools your designers can wire up.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs are already pasting the same prompt into two or three tools in separate tabs to compare; this moves that habit into the canvas and will mostly change how fast credits disappear.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads report that model-comparison features get used heavily for a week and then settle on one default model per team, with the comparison kept for hard cases.</p>
+      <p class="impact-variant" data-variant="strategist">IT and security teams are the ones reading the November 17 note, and several are using the allowlist to block Cursor and Claude Code from Figma until a data-handling review is done.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Comparing model outputs side by side is a workflow improvement inside the existing craft of choosing and refining imagery; it does not change what an image is for.</p>
+      <p class="impact-variant" data-variant="design-lead">Team critique adapting to many-candidate grids is a process adjustment, not a new discipline.</p>
+      <p class="impact-variant" data-variant="strategist">Admin control over MCP clients reshapes governance of design tooling in the existing IT frame; it is important but familiar.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">"Show several and let the user pick" is a product pattern you can borrow for your own {focus} AI features, and Figma's two/four/six choice is a small lesson in constraining the count.</p>
+      <p class="impact-variant" data-variant="design-lead">Features that multiply candidates multiply cost; the product thinking is in deciding when the user is better served by one confident answer than by a grid.</p>
+      <p class="impact-variant" data-variant="strategist">Figma is positioning as a neutral host for other companies' models, which tells you where it thinks differentiation lives: the canvas and the admin layer, not the model.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,judgement" data-time="30">
+    <h6 class="action-title">Try this — 30 min</h6>
+    <p class="action-text">Before generating anything, write five criteria a hero image for a {focus} screen in {domain} must meet. Then generate a six-up grid (in Figma or any tool) from one prompt and score each candidate against your criteria. Write a 100-word note on which criteria none of the six met; that gap is your brief for the next prompt, and the note is the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~30 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,critique" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Rewrite your team's critique format for many-candidate work: a one-page template where the presenter states criteria first, shows the grid second, and the group argues about criteria rather than favourites. Pilot it in your next critique and note what changed in the conversation.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Critique</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="advocacy,cross-functional" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Find out who administers your org's Figma plan and ask them one specific question: which MCP clients will be on the allowlist, and on what basis? Write a one-paragraph position on which coding agents design should be able to connect to {domain} files and why, and send it to that admin before the allowlist is set without you.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Advocacy</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="image-gen">
+    <h5 class="category-label">Image gen</h5>
+<article class="entry"
+         data-id="2026-11-20-kling-image-4"
+         data-category="image-gen"
+         data-published="2026-11-18"
+         data-tags="kuaishou,kling,image-gen,8k,typography,ecommerce">
+  <div class="head">
+    <h6 class="headline">Kuaishou's Kling Image 4.0 claims native 8K output, up to ten style-coordinated images from one prompt and 2,000 characters of legible in-image text in seven languages</h6>
+    <span class="badge image-gen">Image gen</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Kuaishou launched Kling Image 4.0 on the night of November 17, with an API for developers and enterprise customers, according to TechNode. The model combines visual understanding and image generation in one architecture and is aimed squarely at advertising, storyboards and e-commerce design. Kuaishou's claims: native 8K generation; up to ten images from a single prompt, each planned for content while sharing one visual style; up to 2,000 characters rendered inside an image across seven languages with more than 70 preset commercial fonts; reference uploads that steer typography, lighting and colour; and "long image" output for product pages and website layouts. Every one of those figures is the company's own, with no independent benchmark, pricing, API rates or regional availability dates in the report.</p>
+  <p class="why"><strong>Why this matters for you:</strong> A "long image for a product page" is a layout, not an illustration, and ten coordinated images is a campaign system. The model is producing something that looks like your {focus} deliverable, which makes the question of what you add beyond it sharper than it was last week.</p>
+  <p class="source"><a href="https://technode.com/2026/11/18/kuaishou-launches-kling-image-4-0-with-native-8k-generation/" target="_blank" rel="noopener">Source — TechNode</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">If the typography claims hold, the step where you drop generated art into Figma to set the type yourself gets shorter; the step where you check that the rendered text, hierarchy and spacing are actually right gets longer and more important.</p>
+      <p class="impact-variant" data-variant="design-lead">Ten coordinated images from one prompt is a campaign-system generator, so your team's role on {focus} marketing work shifts from producing the set to defining the system the set must obey and rejecting what violates it.</p>
+      <p class="impact-variant" data-variant="strategist">Image generation with native layout and typography moves the commodity line further into what agencies and in-house brand teams charge for; plan for that conversation with marketing before they have it without you.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs on e-commerce teams in China are already shipping Kling-generated product-page imagery with light retouching; Western ICs mostly have not tried Kling Image and treat it as a video brand.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads are discovering that in-image text generation still produces errors that pass a glance and fail a proofread, and are adding a copy-check step rather than trusting the claim.</p>
+      <p class="impact-variant" data-variant="strategist">Procurement teams are asking where Kling runs and what happens to uploaded reference images, since Kuaishou is a Chinese company and the report gives no data-handling details.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Image models absorbing layout and typography changes which tasks are worth your hands; it does not change that someone has to decide what the page is for.</p>
+      <p class="impact-variant" data-variant="design-lead">Teams keep producing campaign systems; the production step compresses and the definition and QA steps expand, which is a reshaping of the team's time.</p>
+      <p class="impact-variant" data-variant="strategist">Commercial imagery becoming near-free reshapes brand economics inside the existing frame of brands needing imagery; the frame holds.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Kuaishou shipped a model with a vertical (advertising and e-commerce) and specific features for it (fonts, long images) instead of a general one; that is a product decision worth copying in your own {focus} AI features.</p>
+      <p class="impact-variant" data-variant="design-lead">Claims without benchmarks are the norm in this category; your team's product thinking should include a standard evaluation set of your own before adopting any image model.</p>
+      <p class="impact-variant" data-variant="strategist">Vertical-specific generation models are how Chinese vendors are competing with Google and OpenAI; expect the same pattern in {domain}, and ask which vertical your product's AI features actually serve.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Using any image model you have access to, generate a product-page "long image" for a {focus} product in {domain} with at least 200 characters of real copy. Then critique it as you would a junior's layout: hierarchy, spacing, type pairing, legibility, and whether the copy is rendered correctly. Write the critique as a 200-word note; that note, not the image, is what you keep.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="design-ops,judgement" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Build your team's image-model evaluation set: ten prompts representative of {domain} work, each with three pass/fail criteria (including one for text accuracy). Write it as a one-page doc your team runs against any new model before adopting it, so vendor claims like 8K and 2,000 characters get tested rather than believed.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Design ops</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="differentiation,case-making" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write a one-paragraph memo for your marketing lead listing three things Kling-class models make commodity in {domain} brand work (volume, localisation, variants) and one thing only a designer with taste still contributes. End with a recommendation on what the brand team should stop doing by hand in Q1.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Differentiation</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="industry">
+    <h5 class="category-label">Industry</h5>
+<article class="entry"
+         data-id="2026-11-20-muse-cross-user-leak"
+         data-category="industry"
+         data-published="2026-11-19"
+         data-tags="meta,muse,privacy,agent-memory,trust,context">
+  <div class="head">
+    <h6 class="headline">Meta employees report Muse surfacing other people's bank balances, orders and messages inside unrelated chats, Reuters says</h6>
+    <span class="badge industry">Industry</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-19">Published November 19, 2026</time></p>
+  <p class="summary">Reuters reported on November 18, based on internal Meta employee posts, that the Muse agent has been mixing up conversations: employees described it surfacing childcare requests, career advice, product orders and bank balances that did not belong to the user. One employee said Muse appended "BTW, two bank updates" with Capital One and Charles Schwab balances to a chat about weather and tides; another said it reminded her to answer a Signal message from her sister and called it "an extreme privacy violation". TechCrunch picked the story up on November 19. Muse launched in September and has passed 10 million downloads. These are employee-reported incidents, not independently verified, and Meta did not respond to requests for comment. It follows the earlier incidents already in this archive: the home address shared under "always allow" permissions, the virtual-machine exposure flaw, and Amazon blocking Muse over credential handling.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Persistent cross-app memory is the feature your {focus} product is being compared against, and this is what it looks like when the context boundary fails. Where memory is scoped, what it may volunteer unprompted and how the user sees what it holds are design decisions, and Meta's shipped them as backend defaults.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Any {focus} feature that remembers across sessions needs a visible model of what it knows and where it may bring it up; "BTW" injections of unrelated data are an interaction pattern you should explicitly design against, not leave to the model.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's spec template for AI features probably has no section on memory scope and proactive disclosure; add one, because engineering will otherwise inherit the model vendor's defaults.</p>
+      <p class="impact-variant" data-variant="strategist">Trust failures in the category leader set user expectations for everyone; a {domain} product that can show exactly what it remembers and why it mentioned something now has a differentiator Meta has handed it.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">ICs building assistant features are mostly designing the happy path of memory ("it remembered my preference") and are not prototyping the failure path where the wrong memory surfaces in the wrong place.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads at companies with assistant products are quietly auditing whether their own memory layer has per-conversation isolation, and finding that the answer lives with the backend team and nobody in design knows it.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are noting that Muse's growth has not slowed through four separate trust incidents, and drawing the uncomfortable conclusion that distribution beats trust in the short run.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="reshaping-the-craft">Reshaping the craft</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">Designing memory scope, disclosure and recall is a new body of patterns inside interaction design, in the way permissions design was; the craft expands rather than reframes.</p>
+      <p class="impact-variant" data-variant="design-lead">Memory and context isolation become a standing review item for assistant features, which reshapes the checklist, not the team.</p>
+      <p class="impact-variant" data-variant="strategist">Agent trust incidents are the privacy scandals of the previous decade in a new form; the regulatory and reputational frame already exists and is being reapplied.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">Proactive disclosure ("BTW, your balance is...") is a feature Meta chose to build; the lesson is that an agent volunteering information needs a relevance test the user can understand, and that test is yours to write.</p>
+      <p class="impact-variant" data-variant="design-lead">Teams should define, before building, what an assistant may say unprompted and in which contexts, and treat a violation as a P1 bug rather than a model quirk.</p>
+      <p class="impact-variant" data-variant="strategist">A product with persistent memory carries liability the moment it crosses a context boundary; the roadmap should fund memory inspection and deletion before it funds more proactive features.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="critique,craft" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Sketch the "what I know about you" screen for a {focus} assistant in {domain}: every category of remembered data, where each may be surfaced, and the control to forget it. Then write three concrete failure scenarios in the style of the Reuters report (wrong data, wrong context, wrong person) and annotate which element of your screen would have prevented each. The annotated failures are the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Critique</span>
+      <span class="skill-chip">Craft</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="cross-functional,systems-thinking" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Ask the engineer who owns your assistant's memory or context layer two specific questions: is memory isolated per conversation or per user, and what decides when the assistant volunteers something unprompted? Write up the answers as a one-page memory map for your team and mark every point where a design decision is currently being made by a default.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Cross-functional</span>
+      <span class="skill-chip">Systems thinking</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,differentiation" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page memo arguing for or against making "you can see and delete everything we remember" a headline positioning for your {domain} product's assistant. Weigh it against Muse's evidence that four trust incidents have not dented growth, name the trade-off honestly, and recommend one position with the first feature it implies.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Differentiation</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+  <div class="category-group" data-category="policy">
+    <h5 class="category-label">Policy</h5>
+<article class="entry"
+         data-id="2026-11-20-banks-agent-liability"
+         data-category="policy"
+         data-published="2026-11-18"
+         data-tags="banking,agents,liability,terms,policy,fintech">
+  <div class="head">
+    <h6 class="headline">Citi, PNC and Citizens join JPMorgan and Bank of America in making customers liable for whatever a third-party AI agent does with their account, hacked or not</h6>
+    <span class="badge policy">Policy</span>
+  </div>
+  <p class="meta"><time datetime="2026-11-18">Published November 18, 2026</time></p>
+  <p class="summary">Citibank updated its Online User Agreement the week of November 16 so that customers who give third-party AI tools access to their accounts are responsible for the activity those agents conduct, including what hackers do if the tool leaks credentials or is compromised. A Citi spokesperson told TechCrunch the change gives "greater clarity" on those risks. JPMorgan and Bank of America announced similar positions in October, PNC changed its terms on November 18, and Citizens emailed customers that they are liable for their AI assistant's actions. Citi's terms exempt AI agents Citi itself provides. TechCrunch notes Anthropic's personal finance tool, launched earlier this month, is read-only and cannot move money, and frames the bank moves as both a security defence and a response to the competitive threat agents pose to bank franchises. No actual hacking incidents are verified in the report; this is about policy text and customer emails.</p>
+  <p class="why"><strong>Why this matters for you:</strong> Liability allocation is now part of the interaction model. If a {focus} product in {domain} connects to a bank through an agent, the consent flow has to tell users that their own bank will hold them responsible, and that is a design problem, not a legal footnote.</p>
+  <p class="source"><a href="https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/" target="_blank" rel="noopener">Source — TechCrunch</a></p>
+
+  <section class="impact-analysis">
+    <h6 class="impact-title">Impact analysis</h6>
+
+    <div class="impact-block" data-impact="design-process">
+      <h6 class="impact-block-title">Impact on your design process</h6>
+      <p class="impact-variant" data-variant="ic-designer">Any {focus} flow that connects an agent to a financial account now needs a consent step that explains a shift in liability in plain language, and the usual "I agree" pattern is not honest enough for it.</p>
+      <p class="impact-variant" data-variant="design-lead">Your team's content and legal review for connected-account flows needs a new question: what does the user's own institution say about this, and have we told them?</p>
+      <p class="impact-variant" data-variant="strategist">Banks are using terms of service to decide who carries agent risk, and the answer is the customer; a {domain} product that wants to act on accounts has to decide whether to absorb some of that risk as a feature.</p>
+    </div>
+
+    <div class="impact-block" data-impact="designers-now">
+      <h6 class="impact-block-title">How designers are working now</h6>
+      <p class="impact-variant" data-variant="ic-designer">Most ICs on fintech and assistant products have not read their users' bank agreements and are designing connection flows as if Plaid-style read access and agentic write access carried the same risk.</p>
+      <p class="impact-variant" data-variant="design-lead">Leads at companies shipping money-moving agents are adding "read-only by default" as a product principle, following Anthropic's and OpenAI's explicit "cannot move money" boundaries rather than fighting the banks.</p>
+      <p class="impact-variant" data-variant="strategist">Strategists are reading the Citi exemption for its own agents as the real move: banks intend to be the agent, and third parties are being priced out by liability rather than by API access.</p>
+    </div>
+
+    <div class="impact-block" data-impact="trend">
+      <h6 class="impact-block-title">Trend prediction <span class="trend-tag" data-trend="new-way-of-thinking">New way of thinking</span></h6>
+      <p class="impact-variant" data-variant="ic-designer">When the institution behind a flow shifts risk onto the user for choosing your product, the design brief includes who pays when the agent is wrong; that is outside the frame most interaction design has worked in.</p>
+      <p class="impact-variant" data-variant="design-lead">Designing a team's AI features now requires reading other companies' terms of service as a constraint on your own product, which is a different kind of input than user research.</p>
+      <p class="impact-variant" data-variant="strategist">Liability, not capability, is becoming the gating resource for agentic products in regulated domains, and most AI strategy conversations are still about capability.</p>
+    </div>
+
+    <div class="impact-block" data-impact="product-thinking">
+      <h6 class="impact-block-title">Impact on product development thinking</h6>
+      <p class="impact-variant" data-variant="ic-designer">A "cannot move money" boundary is a product feature with a UI, not an absence of one; study how Anthropic and OpenAI show it and design the equivalent boundary for your {focus} agent.</p>
+      <p class="impact-variant" data-variant="design-lead">Teams should map every external institution their agent touches and what its terms say about agent access, and treat a change in those terms as a product event, not a legal one.</p>
+      <p class="impact-variant" data-variant="strategist">The pattern from United blocking agents in flight booking is repeating in banking: incumbents control agent access through terms, and the strategic question is whether to partner, comply or route around.</p>
+    </div>
+  </section>
+
+  <section class="action" data-variant="ic-designer" data-skills="craft,judgement" data-time="45">
+    <h6 class="action-title">Try this — 45 min</h6>
+    <p class="action-text">Write the consent screen copy for a {focus} agent in {domain} that asks to connect a bank account, in under 80 words, including the fact that the user's bank may hold them responsible for the agent's actions. Then write a 100-word critique of your own copy: where does it soften the truth to protect conversion? Revise once. Both versions and the critique are the artefact.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Craft</span>
+      <span class="skill-chip">Judgement</span>
+      <span class="time-chip">~45 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="design-lead" data-skills="systems-thinking,cross-functional" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Map every external institution or platform your {domain} product's agent features touch (banks, airlines, marketplaces, app stores) and, with your legal or compliance partner, record what each one's terms currently say about third-party agents. Produce a one-page table and mark which flows in your product would need a redesign if the terms tightened the way Citi's did.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Systems thinking</span>
+      <span class="skill-chip">Cross-functional</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+
+  <section class="action" data-variant="strategist" data-skills="strategy,case-making" data-time="60">
+    <h6 class="action-title">Try this — 60 min</h6>
+    <p class="action-text">Write a one-page memo on whether your {domain} product should ship agentic account actions at all under the current bank terms, or hold at read-only like Anthropic and OpenAI. Name the three trade-offs (user value, liability exposure, bank partnership prospects), estimate who bears the cost of the first bad incident, and recommend one position with a trigger for revisiting it.</p>
+    <div class="action-meta">
+      <span class="skill-chip">Strategy</span>
+      <span class="skill-chip">Case-making</span>
+      <span class="time-chip">~60 min</span>
+    </div>
+  </section>
+</article>
+  </div>
+</section>
+<section class="day-section" data-date="2026-11-19">
   <h4 class="day">Thursday, November 19 <span class="day-date">&mdash; today's briefing</span></h4>
   <div class="category-group" data-category="models">
     <h5 class="category-label">Models</h5>
